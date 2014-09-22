@@ -31,32 +31,10 @@ namespace Capa_Datos
             this.nombre = nombre;
         }
 
-        public void Insertar_D()
-        {
-            if (this._errores.Count == 0)
-            {
-                string query = "";
-                MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@Nombre", this.nombre);
-                
-                try
-                {
-                    _comando.Connection.Open();
-                    _comando.ExecuteNonQuery();
-                    _comando.Connection.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    Error _error = new Error(ex.Message + "" + ex.Number, 2);
-                    _errores.Add(_error);
-                }
-            }
-        }
-
         public List<_Departamento> Obtener_D()
         {
             List<_Departamento> Lista_D = new List<_Departamento>();
-            MySqlCommand _comando = new MySqlCommand("SELECT * FROM Departamento", _conexion);
+            MySqlCommand _comando = new MySqlCommand("SELECT * FROM departamento", _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();

@@ -32,33 +32,10 @@ namespace Capa_Datos
             this.idDepartamento = idDepartamento;
         }
 
-        public void Insertar_M() 
-        {
-            if (this._errores.Count == 0)
-            {
-                string query = "";
-                MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@Nombre", this.nombre);
-                _comando.Parameters.AddWithValue("@Departamento_idDepartamento",this.idDepartamento);
-
-                try
-                {
-                    _comando.Connection.Open();
-                    _comando.ExecuteNonQuery();
-                    _comando.Connection.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    Error _error = new Error(ex.Message + "" + ex.Number, 2);
-                    _errores.Add(_error);
-                }
-            }
-        }
-
-        public List<_Municipio> Obtener_M()
+        public List<_Municipio> Obtener_M(int idDepartamento)
         {
             List<_Municipio> Lista_M = new List<_Municipio>();
-            MySqlCommand _comando = new MySqlCommand("SELECT * FROM Municipio", _conexion);
+            MySqlCommand _comando = new MySqlCommand("SELECT municipio.Nombre FROM municipio where municipio.Departamento_idDepartamento="+idDepartamento, _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="428" d:DesignWidth="512">
+             d:DesignHeight="428" d:DesignWidth="512" Loaded="UserControl_Loaded">
     <Grid Height="406" Width="491">
         <Label Content="Nombre:" FontSize="14.667" Margin="12,56,382,317" Name="lblNombreC" Style="{DynamicResource SimpleLabel}" />
         <ComboBox FontSize="14.667" Margin="130,95,21,289" Name="cmbDepartamento" Style="{DynamicResource SimpleComboBox}" Width="324" />
@@ -13,7 +13,7 @@
         <Label Content="Municipio:" FontSize="14.667" HorizontalAlignment="Left" Margin="12,118,0,257" Name="label1" Style="{DynamicResource SimpleLabel}" Width="112" />
         <DataGrid AutoGenerateColumns="False" Height="184" HorizontalAlignment="Left" Margin="41,170,0,0" Name="dgComunidades" VerticalAlignment="Top" Width="413" />
         <Label Content="Mantenimiento comunidades" FontSize="26.667" Foreground="#FF626465" Margin="10,10,101,356" Name="lblTitle" Style="{DynamicResource SimpleLabel}" />
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="26" Margin="41,368,367,12" Name="btnGuardar" Style="{DynamicResource SimpleButton}" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="26" Margin="41,368,367,12" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" />
         <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="Eliminar" FontSize="14.667" Foreground="White" Height="26" Margin="0,368,29,12" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Width="88" HorizontalAlignment="Right" />
         <TextBox FontSize="14.667" Margin="138,61,29,317" Name="txtNombre" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" />
         <Button Background="#FF009240" BorderBrush="{x:Null}" Content="Modificar" FontSize="14.667" Foreground="White" Height="26" Margin="210,368,198,12" Name="btnModificar" Style="{DynamicResource SimpleButton}" />

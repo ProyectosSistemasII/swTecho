@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_Logica;
 
 namespace TechoCeiva
 {
@@ -22,6 +23,20 @@ namespace TechoCeiva
         public UC_Comunidad()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            _DepartamentoLN depto = new _DepartamentoLN();
+            depto.Obtener_D();
+            cmbDepartamento.DisplayMemberPath = depto.nombre;
+            cmbDepartamento.SelectedValue = depto.idDepartamento;
+
         }
     }
 }
