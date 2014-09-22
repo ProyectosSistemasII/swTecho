@@ -59,7 +59,7 @@ namespace Capa_Datos
         {
             if (this._errores.Count == 0)
             {
-                string query = "";
+                string query = "INSERT INTO Voluntarios(Nombres, Apellidos, Telefono, Direccion, Correo, Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia) VALUES";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@Nombres", this.nombres);
                 _comando.Parameters.AddWithValue("@Apellidos",this.apellidos);
