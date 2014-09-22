@@ -70,6 +70,7 @@
     <Compile Include="S1_Integrantes.cs" />
     <Compile Include="S2_Demografica.cs" />
     <Compile Include="S3_Educacion.cs" />
+    <Compile Include="S4_Salud.cs" />
     <Compile Include="S5_Trabajo.cs" />
     <Compile Include="S611_Ingresos.cs" />
     <Compile Include="S6_Ingresos.cs" />
