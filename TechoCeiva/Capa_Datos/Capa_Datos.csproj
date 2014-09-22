@@ -83,6 +83,7 @@
     <Compile Include="S8_Servicios.cs" />
     <Compile Include="S9_Propiedad.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="_Comunidad.cs" />
     <Compile Include="_Herramientas.cs" />
     <Compile Include="_Voluntarios.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
