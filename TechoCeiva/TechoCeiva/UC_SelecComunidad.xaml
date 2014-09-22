@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="TechoCeiva.UC_SelecComunidad"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="152" Width="485">
+    <Grid Height="205">
+        <ComboBox FontSize="14.667" Margin="110,66,51,117" Name="cmbComunidad" Style="{DynamicResource SimpleComboBox}" />
+        <Label Content="Comunidad:" FontSize="14.667" HorizontalAlignment="Left" Margin="17,57,0,117" Name="lblComunidad" Style="{DynamicResource SimpleLabel}" Width="112" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Continuar" FontSize="14.667" Foreground="White" Height="26" Margin="340,106,51,73" Name="btnGuardar" Style="{DynamicResource SimpleButton}" />
+        <Label Content="Seleccione comunidad" FontSize="26.667" Foreground="#FF626465" Margin="10,10,193,155" Name="lblTitle" Style="{DynamicResource SimpleLabel}" />
+    </Grid>
+</UserControl>

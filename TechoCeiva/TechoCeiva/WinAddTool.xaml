@@ -1,0 +1,23 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="TechoCeiva.WinAddTool"
+	x:Name="Window"
+	Title="Agregar Herramienta"
+	Width="379" Height="168" ResizeMode="CanMinimize">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Simple Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Label x:Name="lblHerramienta" Content="Herramienta:" HorizontalAlignment="Left" Margin="23,22,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<TextBox x:Name="txtHerramienta" Margin="110.516,23.876,22.931,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667"/>
+		<Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Right" Margin="0,76,22.931,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="160" Height="26" BorderBrush="{x:Null}" Click="btnAgregar_Click" />
+		<Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="23,76,0,0" Style="{DynamicResource SimpleButton}" Width="160" VerticalAlignment="Top" Height="26" d:LayoutOverrides="HorizontalAlignment" BorderBrush="{x:Null}" Click="btnCancelar_Click" />
+	</Grid>
+</Window>
