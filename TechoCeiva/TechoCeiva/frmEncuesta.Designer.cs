@@ -817,10 +817,10 @@
             this.tbcDatos.Controls.Add(this.tabPage11);
             this.tbcDatos.Controls.Add(this.tabPage12);
             this.tbcDatos.Controls.Add(this.tabPage1);
-            this.tbcDatos.Location = new System.Drawing.Point(12, 12);
+            this.tbcDatos.Location = new System.Drawing.Point(-1, 1);
             this.tbcDatos.Name = "tbcDatos";
             this.tbcDatos.SelectedIndex = 0;
-            this.tbcDatos.Size = new System.Drawing.Size(1352, 548);
+            this.tbcDatos.Size = new System.Drawing.Size(1340, 559);
             this.tbcDatos.TabIndex = 1;
             // 
             // tbpInfo
@@ -834,7 +834,7 @@
             this.tbpInfo.Location = new System.Drawing.Point(4, 22);
             this.tbpInfo.Name = "tbpInfo";
             this.tbpInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpInfo.Size = new System.Drawing.Size(1344, 522);
+            this.tbpInfo.Size = new System.Drawing.Size(1357, 533);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
             this.tbpInfo.UseVisualStyleBackColor = true;
@@ -1256,7 +1256,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1344, 522);
+            this.tabPage2.Size = new System.Drawing.Size(1332, 533);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sección 1";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1342,7 +1342,7 @@
             this.tbpS2.Location = new System.Drawing.Point(4, 22);
             this.tbpS2.Name = "tbpS2";
             this.tbpS2.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpS2.Size = new System.Drawing.Size(1344, 522);
+            this.tbpS2.Size = new System.Drawing.Size(1357, 533);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
             this.tbpS2.UseVisualStyleBackColor = true;
@@ -1452,7 +1452,7 @@
             this.tbpS3.Location = new System.Drawing.Point(4, 22);
             this.tbpS3.Name = "tbpS3";
             this.tbpS3.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpS3.Size = new System.Drawing.Size(1344, 522);
+            this.tbpS3.Size = new System.Drawing.Size(1357, 533);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
             this.tbpS3.UseVisualStyleBackColor = true;
@@ -1633,7 +1633,7 @@
             this.tbpS4.Location = new System.Drawing.Point(4, 22);
             this.tbpS4.Name = "tbpS4";
             this.tbpS4.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpS4.Size = new System.Drawing.Size(1344, 522);
+            this.tbpS4.Size = new System.Drawing.Size(1357, 533);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
             this.tbpS4.UseVisualStyleBackColor = true;
@@ -1794,7 +1794,7 @@
             this.tbpS5.Location = new System.Drawing.Point(4, 22);
             this.tbpS5.Name = "tbpS5";
             this.tbpS5.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpS5.Size = new System.Drawing.Size(1344, 522);
+            this.tbpS5.Size = new System.Drawing.Size(1357, 533);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
             this.tbpS5.UseVisualStyleBackColor = true;
@@ -1991,7 +1991,7 @@
             this.tbpS6.Location = new System.Drawing.Point(4, 22);
             this.tbpS6.Name = "tbpS6";
             this.tbpS6.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpS6.Size = new System.Drawing.Size(1344, 522);
+            this.tbpS6.Size = new System.Drawing.Size(1357, 533);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
             this.tbpS6.UseVisualStyleBackColor = true;
@@ -2469,7 +2469,7 @@
             this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
             this.tbpS7.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpS7.Size = new System.Drawing.Size(1344, 522);
+            this.tbpS7.Size = new System.Drawing.Size(1357, 533);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
             this.tbpS7.UseVisualStyleBackColor = true;
@@ -3921,7 +3921,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1344, 522);
+            this.tabPage9.Size = new System.Drawing.Size(1357, 533);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Sección 8";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -4819,7 +4819,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1344, 522);
+            this.tabPage10.Size = new System.Drawing.Size(1357, 533);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Sección 9";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -5171,7 +5171,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1344, 522);
+            this.tabPage11.Size = new System.Drawing.Size(1357, 533);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "Sección 10";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -6633,17 +6633,19 @@
             // 
             // tabPage12
             // 
+            this.tabPage12.AutoScroll = true;
             this.tabPage12.Controls.Add(this.groupBox98);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1344, 522);
+            this.tabPage12.Size = new System.Drawing.Size(1357, 533);
             this.tabPage12.TabIndex = 11;
             this.tabPage12.Text = "Cont. Sección 10";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // groupBox98
             // 
+            this.groupBox98.AutoSize = true;
             this.groupBox98.Controls.Add(this.groupBox108);
             this.groupBox98.Controls.Add(this.groupBox107);
             this.groupBox98.Controls.Add(this.groupBox106);
@@ -6656,7 +6658,7 @@
             this.groupBox98.Controls.Add(this.groupBox109);
             this.groupBox98.Location = new System.Drawing.Point(8, 8);
             this.groupBox98.Name = "groupBox98";
-            this.groupBox98.Size = new System.Drawing.Size(1328, 507);
+            this.groupBox98.Size = new System.Drawing.Size(1301, 507);
             this.groupBox98.TabIndex = 5;
             this.groupBox98.TabStop = false;
             this.groupBox98.Text = "...CONTINUACIÓN DE COMUNIDAD";
@@ -7153,7 +7155,7 @@
             this.tabPage1.Controls.Add(this.groupBox102);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1344, 522);
+            this.tabPage1.Size = new System.Drawing.Size(1357, 533);
             this.tabPage1.TabIndex = 12;
             this.tabPage1.Text = "Sección 11";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -7378,7 +7380,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 559);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1339, 561);
             this.Controls.Add(this.tbcDatos);
             this.Name = "frmEncuesta";
             this.Text = "frmEncuesta";
@@ -7592,6 +7595,7 @@
             this.groupBox97.ResumeLayout(false);
             this.groupBox97.PerformLayout();
             this.tabPage12.ResumeLayout(false);
+            this.tabPage12.PerformLayout();
             this.groupBox98.ResumeLayout(false);
             this.groupBox108.ResumeLayout(false);
             this.groupBox108.PerformLayout();
