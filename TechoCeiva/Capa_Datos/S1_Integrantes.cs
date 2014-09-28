@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class S1_Integrantes
+    public class S1_Integrantes
     {
         public int CodigoS1 { get; set; }
         public string NombreCompleto { get; set; }

@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class S3_Educacion
+    public class S3_Educacion
     {
         public int CodigoS3 { get; set; }
         public string LeerEscribir { get; set; }
