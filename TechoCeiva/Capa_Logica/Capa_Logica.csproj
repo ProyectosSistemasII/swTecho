@@ -55,6 +55,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="S11_MovilidadLN.cs" />
+    <Compile Include="S4_SaludLN.cs" />
+    <Compile Include="S5_TrabajoLN.cs" />
+    <Compile Include="S6_IngresosLN.cs" />
+    <Compile Include="S7_ViviendaLN.cs" />
     <Compile Include="S8_ServiciosLN.cs" />
     <Compile Include="S9_PropiedadLN.cs" />
     <Compile Include="UsuarioLN.cs" />
