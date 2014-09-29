@@ -317,6 +317,8 @@ namespace TechoCeiva
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS7.Parent = null;
+                tbpS8.Parent = tbcDatos;
             }
             else
             {
@@ -327,10 +329,12 @@ namespace TechoCeiva
         private void pbS5_Siguiente_Click(object sender, EventArgs e)
         {
             S5_TrabajoLN S5 = new S5_TrabajoLN();
-            Boolean correcto = true;//S5.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            Boolean correcto = true;//S5.Insertar_EncuS5(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS5.Parent = null;
+                tbpS6.Parent = tbcDatos;
             }
             else
             {
@@ -341,10 +345,12 @@ namespace TechoCeiva
         private void pbS6_Siguiente_Click(object sender, EventArgs e)
         {
             S6_IngresosLN S6 = new S6_IngresosLN();
-            Boolean correcto = true;//S6.Insertar_EncuS6(txtS8_
+            Boolean correcto = true;// S6.Insertar_EncuS6(cbxS6_1_IngEstado.Text, Convert.ToInt32(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, Convert.ToInt32(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, Convert.ToInt32(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, cbxS6_6_IngresoTotal.Text, cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, Convert.ToInt32(txtS6_9_CantiAhorro.Text), Convert.ToInt32(txtS6_10_CantiGastosaIngresos.Text), ENCUESTA, IDS611);
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS6.Parent = null;
+                tbpS7.Parent = tbcDatos;
             }
             else
             {
@@ -355,7 +361,7 @@ namespace TechoCeiva
         private void pbS7_Siguiente_Click(object sender, EventArgs e)
         {
             S7_ViviendaLN S7 = new S7_ViviendaLN();
-            Boolean correcto = true;//S7.Insertar_EncuS7(txtS8_
+            Boolean correcto = true;// S7.Insertar_EncuS7(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, ENCUESTA, IDS706, IDS707, IDS708);
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
@@ -373,6 +379,8 @@ namespace TechoCeiva
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS4.Parent = null;
+                tbpS5.Parent = tbcDatos;
             }
             else
             {

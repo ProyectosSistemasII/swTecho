@@ -9,7 +9,8 @@ namespace Capa_Datos
 {
     public class S7_Vivienda
     {
-        public string DimensionesVivienda { get; set; }
+        public int Ancho { get; set; }
+        public int Largo { get; set; }
         public string Cuartos { get; set; }
         public string Dormitorio { get; set; }
         public string Camas { get; set; }
@@ -27,7 +28,8 @@ namespace Capa_Datos
 
         public S7_Vivienda()
         {
-            this.DimensionesVivienda = "";
+            this.Ancho = 0;
+            this.Largo = 0;
             this.Cuartos = "";
             this.Dormitorio = "";
             this.Camas = "";
@@ -41,10 +43,11 @@ namespace Capa_Datos
             this.S708_Viv_idS708 = 0;
         }
 
-        public S7_Vivienda(string DimensionesVivienda, string Cuartos, string Dormitorio, string Camas, string ProblemaVivienda,
+        public S7_Vivienda(int Ancho, int Largo, string Cuartos, string Dormitorio, string Camas, string ProblemaVivienda,
             string ProblemaA, string ProblemaB, string Problemac, int Encuents_idEncuestas, int S706_Viv_ids706, int S707_Viv_ids707, int S708_Viv_ids708)
         {
-            this.DimensionesVivienda = DimensionesVivienda;
+            this.Ancho = Ancho;
+            this.Largo = Largo;
             this.Cuartos = Cuartos;
             this.Dormitorio = Dormitorio;
             this.Camas = Camas;
@@ -63,9 +66,10 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S7_Viv(DimensionesVivienda,Cuartos,Dormitorio,Camas,ProblemaVivienda,ProblemaA,ProblemaB,ProblemaC,Encuestas_idEncuestas,S706_Viv_ids706,S707_Viv_ids707,S708_Viv_ids708) VALUES(@CodigoS7,@DimensionesVivienda,@Cuartos,@Dormitorio,@Camas,@ProblemaVivienda,@ProblemaA,@ProblemaB,@ProblemaC,@Encuestas_idEncuestas,@S706_Viv_ids706,@S707_Viv_ids707,@S708_Viv_ids708)";
+                string consulta = ""; //= "INSERT INTO S7_Viv(Ancho,Largo,Cuartos,Dormitorio,Camas,ProblemaVivienda,ProblemaA,ProblemaB,ProblemaC,Encuestas_idEncuestas,S706_Viv_ids706,S707_Viv_ids707,S708_Viv_ids708) VALUES(@CodigoS7,@Ancho,@Largo,@Cuartos,@Dormitorio,@Camas,@ProblemaVivienda,@ProblemaA,@ProblemaB,@ProblemaC,@Encuestas_idEncuestas,@S706_Viv_ids706,@S707_Viv_ids707,@S708_Viv_ids708)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
-                comando.Parameters.AddWithValue("@DimensionesVivienda", this.DimensionesVivienda);
+                comando.Parameters.AddWithValue("@Ancho", this.Ancho);
+                comando.Parameters.AddWithValue("@Largo", this.Largo);
                 comando.Parameters.AddWithValue("@Cuartos", this.Cuartos);
                 comando.Parameters.AddWithValue("@Dormitorio", this.Dormitorio);
                 comando.Parameters.AddWithValue("@Camas", this.Camas);
