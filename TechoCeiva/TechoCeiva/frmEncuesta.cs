@@ -248,7 +248,7 @@ namespace TechoCeiva
 
         private void cbxS6_1_IngEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxS6_1_IngEstado.SelectedIndex.Equals(1))
+            if (cbxS6_1_IngEstado.SelectedIndex.Equals(0))
             {
                 lblS6_1_QEstado.Enabled = true;
                 txtS6_1_CantidadIngEstado.Enabled = true;
@@ -262,7 +262,7 @@ namespace TechoCeiva
 
         private void cbxS6_2_IngRemesas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxS6_2_IngRemesas.SelectedIndex.Equals(1))
+            if (cbxS6_2_IngRemesas.SelectedIndex.Equals(0))
             {
                 lblS6_2_QRemesas.Enabled = true;
                 txtS6_2_CantidadRemesas.Enabled = true;
@@ -290,7 +290,7 @@ namespace TechoCeiva
 
         private void cbsS7_5_ProbViv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbsS7_5_ProbViv.SelectedIndex.Equals(1))
+            if (cbsS7_5_ProbViv.SelectedIndex.Equals(0))
             {
                 lblS7_5_A.Enabled = true;
                 lblS7_5_B.Enabled = true;

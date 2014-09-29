@@ -2543,6 +2543,7 @@
             // 
             // txtS6_2_CantidadRemesas
             // 
+            this.txtS6_2_CantidadRemesas.Enabled = false;
             this.txtS6_2_CantidadRemesas.Location = new System.Drawing.Point(244, 90);
             this.txtS6_2_CantidadRemesas.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_2_CantidadRemesas.Multiline = true;
@@ -2553,6 +2554,7 @@
             // lblS6_2_QRemesas
             // 
             this.lblS6_2_QRemesas.AutoSize = true;
+            this.lblS6_2_QRemesas.Enabled = false;
             this.lblS6_2_QRemesas.Location = new System.Drawing.Point(217, 94);
             this.lblS6_2_QRemesas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS6_2_QRemesas.Name = "lblS6_2_QRemesas";
@@ -2600,6 +2602,7 @@
             // 
             // txtS6_1_CantidadIngEstado
             // 
+            this.txtS6_1_CantidadIngEstado.Enabled = false;
             this.txtS6_1_CantidadIngEstado.Location = new System.Drawing.Point(244, 90);
             this.txtS6_1_CantidadIngEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_1_CantidadIngEstado.Multiline = true;
@@ -2610,6 +2613,7 @@
             // lblS6_1_QEstado
             // 
             this.lblS6_1_QEstado.AutoSize = true;
+            this.lblS6_1_QEstado.Enabled = false;
             this.lblS6_1_QEstado.Location = new System.Drawing.Point(217, 94);
             this.lblS6_1_QEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS6_1_QEstado.Name = "lblS6_1_QEstado";
@@ -4040,6 +4044,7 @@
             // 
             // txtS7_5_ProblemaC
             // 
+            this.txtS7_5_ProblemaC.Enabled = false;
             this.txtS7_5_ProblemaC.Location = new System.Drawing.Point(71, 188);
             this.txtS7_5_ProblemaC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_5_ProblemaC.Multiline = true;
@@ -4050,6 +4055,7 @@
             // lblS7_5_C
             // 
             this.lblS7_5_C.AutoSize = true;
+            this.lblS7_5_C.Enabled = false;
             this.lblS7_5_C.Location = new System.Drawing.Point(43, 193);
             this.lblS7_5_C.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS7_5_C.Name = "lblS7_5_C";
@@ -4059,6 +4065,7 @@
             // 
             // txtS7_5_ProblemaB
             // 
+            this.txtS7_5_ProblemaB.Enabled = false;
             this.txtS7_5_ProblemaB.Location = new System.Drawing.Point(71, 153);
             this.txtS7_5_ProblemaB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_5_ProblemaB.Multiline = true;
@@ -4069,6 +4076,7 @@
             // lblS7_5_B
             // 
             this.lblS7_5_B.AutoSize = true;
+            this.lblS7_5_B.Enabled = false;
             this.lblS7_5_B.Location = new System.Drawing.Point(43, 158);
             this.lblS7_5_B.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS7_5_B.Name = "lblS7_5_B";
@@ -4092,6 +4100,7 @@
             // 
             // txtS7_5_ProblemaA
             // 
+            this.txtS7_5_ProblemaA.Enabled = false;
             this.txtS7_5_ProblemaA.Location = new System.Drawing.Point(71, 117);
             this.txtS7_5_ProblemaA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_5_ProblemaA.Multiline = true;
@@ -4102,6 +4111,7 @@
             // lblS7_5_A
             // 
             this.lblS7_5_A.AutoSize = true;
+            this.lblS7_5_A.Enabled = false;
             this.lblS7_5_A.Location = new System.Drawing.Point(43, 122);
             this.lblS7_5_A.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS7_5_A.Name = "lblS7_5_A";
@@ -8131,7 +8141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1340, 756);
+            this.ClientSize = new System.Drawing.Size(1340, 777);
             this.Controls.Add(this.tbcDatos);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEncuesta";

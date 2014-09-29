@@ -5,12 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Capa_Datos;
 
-
 namespace Capa_Logica_Negocio
 {
     public class UsuarioLN : Usuario
     {
-        
         public UsuarioLN()
         {
             this.idUsuarios=0;
