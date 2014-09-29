@@ -305,5 +305,6 @@ namespace TechoCeiva
                 MessageBox.Show(S7.obtenerError());
             }
         }
+
     }
 }
