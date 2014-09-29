@@ -108,5 +108,12 @@ namespace TechoCeiva
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nComuidad);
         }
+
+        private void btnUsuariosIngresar_Click(object sender, RoutedEventArgs e)
+        {
+            UC_User nUsuario = new UC_User();
+            canvasMenu.Children.Clear();
+            canvasMenu.Children.Add(nUsuario);
+        }
 	}
 }

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="TechoCeiva.UC_User"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="354" d:DesignWidth="627">
+    <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Canvas.Left="376" Canvas.Top="282" Content="Guardar" FontSize="14.667" Foreground="White" Height="26" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Width="160" />
+        <Button Background="#FFC52023" BorderBrush="{x:Null}" Canvas.Left="142" Canvas.Top="282" Content="Cancelar" FontSize="14.667" Foreground="White" Height="26" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Width="160" />
+        <Label Canvas.Left="12" Canvas.Top="20" Content="Nuevo Usuario" FontSize="26.667" Foreground="#FF626465" Style="{DynamicResource SimpleLabel}" />
+        <TextBox Canvas.Left="332" Canvas.Top="93" Height="23" Name="txtNombre" Width="160" />
+        <Label Canvas.Left="196" Canvas.Top="88" Content="Nombre de usuario" FontSize="14" Height="28" Name="label1" />
+        <Label Canvas.Left="196" Canvas.Top="132" Content="Contraseña" FontSize="14" Height="28" Name="label2" />
+        <ComboBox Canvas.Left="332" Canvas.Top="180" Height="23" Name="cmbTipo" Width="160" />
+        <Label Canvas.Left="196" Canvas.Top="175" Content="Tipo de usuario" FontSize="14" Height="28" Name="label4" />
+        <ComboBox Canvas.Left="332" Canvas.Top="222" Height="23" Name="cmbVoluntario" Width="160" />
+        <Label Canvas.Left="196" Canvas.Top="217" Content="Voluntario" FontSize="14" Height="28" Name="label5" />
+        <PasswordBox Canvas.Left="332" Canvas.Top="137" Height="23" Name="pswContrasenia" Width="160" />
+    </Canvas>
+</UserControl>

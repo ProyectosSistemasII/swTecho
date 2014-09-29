@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DesarrolloTecho">
+      <HintPath>..\..\..\..\Visual Studio 2010\Projects\DesarrolloTecho\DesarrolloTecho\bin\Debug\DesarrolloTecho.exe</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -116,6 +119,9 @@
     </Compile>
     <Compile Include="UC_Tools.xaml.cs">
       <DependentUpon>UC_Tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC_User.xaml.cs">
+      <DependentUpon>UC_User.xaml</DependentUpon>
     </Compile>
     <Compile Include="UC_Voluntarios.xaml.cs">
       <DependentUpon>UC_Voluntarios.xaml</DependentUpon>
@@ -205,6 +211,10 @@
     <Page Include="UC_Tools.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UC_User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UC_Voluntarios.xaml">
       <Generator>MSBuild:Compile</Generator>
