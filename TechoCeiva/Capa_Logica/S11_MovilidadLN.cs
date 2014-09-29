@@ -49,7 +49,5 @@ namespace Capa_Logica
             Error error = errores[0];
             return error.mensaje;
         }
-        
-
     }
 }

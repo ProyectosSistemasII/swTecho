@@ -306,5 +306,61 @@ namespace TechoCeiva
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            S4_SaludLN S4 = new S4_SaludLN();
+            Boolean correcto = true;//S4.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show(S4.obtenerError());
+            }
+        }
+
+        private void pbS5_Siguiente_Click(object sender, EventArgs e)
+        {
+            S5_TrabajoLN S5 = new S5_TrabajoLN();
+            Boolean correcto = true;//S5.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show(S5.obtenerError());
+            }
+        }
+
+        private void pbS6_Siguiente_Click(object sender, EventArgs e)
+        {
+            S6_IngresosLN S6 = new S6_IngresosLN();
+            Boolean correcto = true;//S6.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show(S6.obtenerError());
+            }
+        }
+
+        private void pbS7_Siguiente_Click(object sender, EventArgs e)
+        {
+            S7_ViviendaLN S7 = new S7_ViviendaLN();
+            Boolean correcto = true;//S7.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show(S7.obtenerError());
+            }
+        }
+
     }
 }
