@@ -7,7 +7,7 @@ using Capa_Datos;
 namespace Capa_Logica
 {
 
-    class S1_IntegrantesLN : S1_Integrantes
+    public class S1_IntegrantesLN : S1_Integrantes
     {
         public S1_IntegrantesLN()
         {

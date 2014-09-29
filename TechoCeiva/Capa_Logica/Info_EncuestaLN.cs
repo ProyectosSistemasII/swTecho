@@ -6,7 +6,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    class Info_EncuestaLN : Info_Encuesta
+    public class Info_EncuestaLN : Info_Encuesta
     {
         public Info_EncuestaLN()
         {

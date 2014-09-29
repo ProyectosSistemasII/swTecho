@@ -6,7 +6,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    class S2_DemograficaLN : S2_Demografica
+    public class S2_DemograficaLN : S2_Demografica
     {
         public S2_DemograficaLN()
         {

@@ -6,7 +6,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    class S3_EducacionLN : S3_Educacion
+    public class S3_EducacionLN : S3_Educacion
     {
         public S3_EducacionLN()
         {

@@ -380,5 +380,82 @@ namespace TechoCeiva
             }
         }
 
+        private void frmEncuesta_Load(object sender, EventArgs e)
+        {
+            //tbpInfo.Parent = null;
+            tbpS1.Parent = null;
+            tbpS2.Parent = null;
+            tbpS3.Parent = null;
+            tbpS4.Parent = null;
+            tbpS5.Parent = null;
+            tbpS6.Parent = null;
+            tbpS7.Parent = null;
+            tbpS8.Parent = null;
+            tbpS9.Parent = null;
+            tbpS10.Parent = null;
+            tbpS10Cont.Parent = null;
+            tbpS11.Parent = null;
+        }
+        //Informacion
+        private void pbNext_Click(object sender, EventArgs e)
+        {
+            Info_EncuestaLN InfoEnc = new Info_EncuestaLN();
+            Boolean correcto = true;// InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
+                  //txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+                tbpInfo.Parent = null;
+                tbpS1.Parent = tbcDatos;
+            }
+            else
+            {
+                MessageBox.Show(InfoEnc.obtenerError());
+            }
+        }
+        int iS1 = 1;
+        private void btnAddS1_Click(object sender, EventArgs e)
+        {
+            dgvS1.Rows.Add();
+            dgvS1.Rows[iS1 - 1].Cells[0].Value = iS1;
+            iS1++;
+        }
+
+        private void btnRemS1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvS1.Rows.RemoveAt(dgvS1.Rows.Count - 1);
+                iS1--;
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        //Seccion 1
+        private void pbNextS1_Click(object sender, EventArgs e)
+        {
+            S1_IntegrantesLN S1 = new S1_IntegrantesLN();
+            Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
+            // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
+            foreach (DataGridViewRow row in dgvS1.Rows)
+            {
+                if (correcto)
+                {
+                    MessageBox.Show("Ingresado Correctamente");
+
+                }
+                else
+                {
+                    MessageBox.Show(S1.obtenerError());
+                }
+            }
+            if (correcto)
+            {
+                tbpS1.Parent = null;
+                tbpS2.Parent = tbcDatos;
+            }
+        }
+
     }
 }
