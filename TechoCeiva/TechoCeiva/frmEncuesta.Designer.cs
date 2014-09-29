@@ -71,15 +71,11 @@
             this.txtCodigoHogar = new System.Windows.Forms.TextBox();
             this.lblCodigoHogar = new System.Windows.Forms.Label();
             this.tbpS1 = new System.Windows.Forms.TabPage();
+            this.btnRemS1 = new System.Windows.Forms.Button();
+            this.btnAddS1 = new System.Windows.Forms.Button();
             this.pbNextS1 = new System.Windows.Forms.PictureBox();
             this.gbS1 = new System.Windows.Forms.GroupBox();
             this.dgvS1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tbpS2 = new System.Windows.Forms.TabPage();
             this.pbNextS2 = new System.Windows.Forms.PictureBox();
             this.gbS2 = new System.Windows.Forms.GroupBox();
@@ -664,8 +660,12 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.btnRemS1 = new System.Windows.Forms.Button();
-            this.btnAddS1 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -846,7 +846,7 @@
             this.tbpInfo.Controls.Add(this.lblCodigoHogar);
             this.tbpInfo.Location = new System.Drawing.Point(4, 22);
             this.tbpInfo.Name = "tbpInfo";
-            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tbpInfo.Size = new System.Drawing.Size(1332, 549);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
@@ -1226,11 +1226,31 @@
             this.tbpS1.Controls.Add(this.gbS1);
             this.tbpS1.Location = new System.Drawing.Point(4, 22);
             this.tbpS1.Name = "tbpS1";
-            this.tbpS1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS1.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS1.Size = new System.Drawing.Size(1332, 549);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
             this.tbpS1.UseVisualStyleBackColor = true;
+            // 
+            // btnRemS1
+            // 
+            this.btnRemS1.Location = new System.Drawing.Point(922, 76);
+            this.btnRemS1.Name = "btnRemS1";
+            this.btnRemS1.Size = new System.Drawing.Size(26, 23);
+            this.btnRemS1.TabIndex = 11;
+            this.btnRemS1.Text = "-";
+            this.btnRemS1.UseVisualStyleBackColor = true;
+            this.btnRemS1.Click += new System.EventHandler(this.btnRemS1_Click);
+            // 
+            // btnAddS1
+            // 
+            this.btnAddS1.Location = new System.Drawing.Point(922, 47);
+            this.btnAddS1.Name = "btnAddS1";
+            this.btnAddS1.Size = new System.Drawing.Size(26, 23);
+            this.btnAddS1.TabIndex = 10;
+            this.btnAddS1.Text = "+";
+            this.btnAddS1.UseVisualStyleBackColor = true;
+            this.btnAddS1.Click += new System.EventHandler(this.btnAddS1_Click);
             // 
             // pbNextS1
             // 
@@ -1270,62 +1290,13 @@
             this.dgvS1.Size = new System.Drawing.Size(907, 448);
             this.dgvS1.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "¿Cuál es la fecha de nacimiento?";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 175;
-            // 
-            // dataGridViewComboBoxColumn1
-            // 
-            this.dataGridViewComboBoxColumn1.HeaderText = "¿Es hombre, mujer o futuro hijo?";
-            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
-            "Hombre",
-            "Mujer",
-            "Futuro hijo/a"});
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn1.Width = 175;
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.HeaderText = "¿Está embarazada?";
-            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
-            "01. Si",
-            "02. No",
-            "03. No aplica",
-            "04. NS/NR"});
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn2.Width = 175;
-            // 
             // tbpS2
             // 
             this.tbpS2.Controls.Add(this.pbNextS2);
             this.tbpS2.Controls.Add(this.gbS2);
             this.tbpS2.Location = new System.Drawing.Point(4, 22);
             this.tbpS2.Name = "tbpS2";
-            this.tbpS2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS2.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS2.Size = new System.Drawing.Size(1332, 549);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
@@ -1340,6 +1311,7 @@
             this.pbNextS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNextS2.TabIndex = 7;
             this.pbNextS2.TabStop = false;
+            this.pbNextS2.Click += new System.EventHandler(this.pbNextS2_Click);
             // 
             // gbS2
             // 
@@ -1353,6 +1325,7 @@
             // 
             // dgvS2
             // 
+            this.dgvS2.AllowUserToAddRows = false;
             this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -1446,7 +1419,7 @@
             this.tbpS3.Controls.Add(this.gbS3);
             this.tbpS3.Location = new System.Drawing.Point(4, 22);
             this.tbpS3.Name = "tbpS3";
-            this.tbpS3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS3.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS3.Size = new System.Drawing.Size(1332, 549);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
@@ -1461,6 +1434,7 @@
             this.pbNextS3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNextS3.TabIndex = 8;
             this.pbNextS3.TabStop = false;
+            this.pbNextS3.Click += new System.EventHandler(this.pbNextS3_Click);
             // 
             // gbS3
             // 
@@ -1474,6 +1448,7 @@
             // 
             // dgvS3
             // 
+            this.dgvS3.AllowUserToAddRows = false;
             this.dgvS3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
@@ -1638,7 +1613,7 @@
             this.tbpS4.Controls.Add(this.groupBox4);
             this.tbpS4.Location = new System.Drawing.Point(4, 22);
             this.tbpS4.Name = "tbpS4";
-            this.tbpS4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS4.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS4.Size = new System.Drawing.Size(1332, 549);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
@@ -1667,6 +1642,7 @@
             // 
             // dgvS4
             // 
+            this.dgvS4.AllowUserToAddRows = false;
             this.dgvS4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
@@ -1811,7 +1787,7 @@
             this.tbpS5.Controls.Add(this.gbS5);
             this.tbpS5.Location = new System.Drawing.Point(4, 22);
             this.tbpS5.Name = "tbpS5";
-            this.tbpS5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS5.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS5.Size = new System.Drawing.Size(1332, 549);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
@@ -1840,6 +1816,7 @@
             // 
             // dgvS5
             // 
+            this.dgvS5.AllowUserToAddRows = false;
             this.dgvS5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column25,
@@ -2020,7 +1997,7 @@
             this.tbpS6.Controls.Add(this.gbS6);
             this.tbpS6.Location = new System.Drawing.Point(4, 22);
             this.tbpS6.Name = "tbpS6";
-            this.tbpS6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS6.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS6.Size = new System.Drawing.Size(1332, 549);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
@@ -2515,7 +2492,7 @@
             this.tbpS7.Controls.Add(this.gbS7);
             this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
-            this.tbpS7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS7.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS7.Size = new System.Drawing.Size(1332, 549);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
@@ -3986,7 +3963,7 @@
             this.tbpS8.Controls.Add(this.groupBox47);
             this.tbpS8.Location = new System.Drawing.Point(4, 22);
             this.tbpS8.Name = "tbpS8";
-            this.tbpS8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS8.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS8.Size = new System.Drawing.Size(1332, 549);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
@@ -4884,7 +4861,7 @@
             this.tbpS9.Controls.Add(this.groupBox67);
             this.tbpS9.Location = new System.Drawing.Point(4, 22);
             this.tbpS9.Name = "tbpS9";
-            this.tbpS9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS9.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS9.Size = new System.Drawing.Size(1332, 549);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
@@ -5236,7 +5213,7 @@
             this.tbpS10.Controls.Add(this.groupBox68);
             this.tbpS10.Location = new System.Drawing.Point(4, 22);
             this.tbpS10.Name = "tbpS10";
-            this.tbpS10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS10.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
@@ -6703,7 +6680,7 @@
             this.tbpS10Cont.Controls.Add(this.groupBox98);
             this.tbpS10Cont.Location = new System.Drawing.Point(4, 22);
             this.tbpS10Cont.Name = "tbpS10Cont";
-            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS10Cont.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
@@ -7442,25 +7419,54 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido\r\n    en esta comunidad du" +
                 "rante toda su VIDA FAMILIAR?\r\n";
             // 
-            // btnRemS1
+            // dataGridViewTextBoxColumn1
             // 
-            this.btnRemS1.Location = new System.Drawing.Point(922, 76);
-            this.btnRemS1.Name = "btnRemS1";
-            this.btnRemS1.Size = new System.Drawing.Size(26, 23);
-            this.btnRemS1.TabIndex = 11;
-            this.btnRemS1.Text = "-";
-            this.btnRemS1.UseVisualStyleBackColor = true;
-            this.btnRemS1.Click += new System.EventHandler(this.btnRemS1_Click);
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
-            // btnAddS1
+            // dataGridViewTextBoxColumn2
             // 
-            this.btnAddS1.Location = new System.Drawing.Point(922, 47);
-            this.btnAddS1.Name = "btnAddS1";
-            this.btnAddS1.Size = new System.Drawing.Size(26, 23);
-            this.btnAddS1.TabIndex = 10;
-            this.btnAddS1.Text = "+";
-            this.btnAddS1.UseVisualStyleBackColor = true;
-            this.btnAddS1.Click += new System.EventHandler(this.btnAddS1_Click);
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "¿Cuál es la fecha de nacimiento?";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 175;
+            // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.HeaderText = "¿Es hombre, mujer o futuro hijo?";
+            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer",
+            "Futuro hijo/a"});
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn1.Width = 175;
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "¿Está embarazada?";
+            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "No aplica",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn2.Width = 175;
             // 
             // frmEncuesta
             // 
@@ -8334,12 +8340,6 @@
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.CheckedListBox chlbS6_11_CubrirFaltaDinero;
         private System.Windows.Forms.PictureBox pbNext;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.PictureBox pbNextS1;
         private System.Windows.Forms.PictureBox pbNextS2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
@@ -8370,6 +8370,12 @@
         private System.Windows.Forms.PictureBox pbS7_Siguiente;
         private System.Windows.Forms.Button btnRemS1;
         private System.Windows.Forms.Button btnAddS1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
 
     }
 }

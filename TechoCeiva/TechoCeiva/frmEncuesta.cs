@@ -325,7 +325,7 @@ namespace TechoCeiva
                 MessageBox.Show(S7.obtenerError());
             }
         }
-
+        //seccion 5
         private void pbS5_Siguiente_Click(object sender, EventArgs e)
         {
             S5_TrabajoLN S5 = new S5_TrabajoLN();
@@ -372,9 +372,10 @@ namespace TechoCeiva
             }
         }
 
+        //seccion 4
         private void pbS4_Siguiente_Click(object sender, EventArgs e)
         {
-            S4_SaludLN S4 = new S4_SaludLN();
+            /*S4_SaludLN S4 = new S4_SaludLN();
             Boolean correcto = true;//S4.Insertar_EncuS4(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
             if (correcto)
             {
@@ -386,6 +387,32 @@ namespace TechoCeiva
             {
                 MessageBox.Show(S4.obtenerError());
             }
+            */
+            S4_SaludLN S4 = new S4_SaludLN();
+            Boolean correcto = true;//S4.Insertar_EncuS4(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show(S4.obtenerError());
+            }
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
+            if (correcto)
+            {
+                tbpS4.Parent = null;
+                tbpS5.Parent = tbcDatos;
+                //para s2
+                int iS5 = 1;
+                for (iS5 = 1; iS5 < iS1; iS5++)
+                {
+                    dgvS5.Rows.Add();
+                    dgvS5.Rows[iS5 - 1].Cells[0].Value = iS5;
+                }
+            }
+
+
         }
 
         private void frmEncuesta_Load(object sender, EventArgs e)
@@ -403,6 +430,11 @@ namespace TechoCeiva
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
+            dgvS1.Columns[0].ReadOnly = true;
+            dgvS2.Columns[0].ReadOnly = true;
+            dgvS3.Columns[0].ReadOnly = true;
+            dgvS4.Columns[0].ReadOnly = true;
+            dgvS5.Columns[0].ReadOnly = true;
         }
         //Informacion
         private void pbNext_Click(object sender, EventArgs e)
@@ -462,6 +494,75 @@ namespace TechoCeiva
             {
                 tbpS1.Parent = null;
                 tbpS2.Parent = tbcDatos;
+                //para s2
+                int iS2 = 1;
+                for (iS2 = 1; iS2 < iS1; iS2++)
+                {
+                    dgvS2.Rows.Add();
+                    dgvS2.Rows[iS2 - 1].Cells[0].Value = iS2;
+                }
+            }
+        }
+        //seccion 2
+        private void pbNextS2_Click(object sender, EventArgs e)
+        {
+            S2_DemograficaLN S2 = new S2_DemograficaLN();
+            Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
+            // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
+            foreach (DataGridViewRow row in dgvS2.Rows)
+            {
+                if (correcto)
+                {
+                    //MessageBox.Show("Ingresado Correctamente");
+
+                }
+                else
+                {
+                    MessageBox.Show(S2.obtenerError());
+                }
+            }
+            if (correcto)
+            {
+                tbpS2.Parent = null;
+                tbpS3.Parent = tbcDatos;
+                //para s2
+                int iS3 = 1;
+                for (iS3 = 1; iS3 < iS1; iS3++)
+                {
+                    dgvS3.Rows.Add();
+                    dgvS3.Rows[iS3 - 1].Cells[0].Value = iS3;
+                }
+            }
+        }
+        //secccion 3
+        private void pbNextS3_Click(object sender, EventArgs e)
+        {
+            S3_EducacionLN S3 = new S3_EducacionLN();
+            Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
+            // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
+            foreach (DataGridViewRow row in dgvS3.Rows)
+            {
+                if (correcto)
+                {
+                    //MessageBox.Show("Ingresado Correctamente");
+
+                }
+                else
+                {
+                    MessageBox.Show(S3.obtenerError());
+                }
+            }
+            if (correcto)
+            {
+                tbpS3.Parent = null;
+                tbpS4.Parent = tbcDatos;
+                //para s2
+                int iS4 = 1;
+                for (iS4 = 1; iS4 < iS1; iS4++)
+                {
+                    dgvS4.Rows.Add();
+                    dgvS4.Rows[iS4 - 1].Cells[0].Value = iS4;
+                }
             }
         }
 
