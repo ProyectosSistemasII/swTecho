@@ -76,6 +76,12 @@
             this.pbNextS1 = new System.Windows.Forms.PictureBox();
             this.gbS1 = new System.Windows.Forms.GroupBox();
             this.dgvS1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tbpS2 = new System.Windows.Forms.TabPage();
             this.pbNextS2 = new System.Windows.Forms.PictureBox();
             this.gbS2 = new System.Windows.Forms.GroupBox();
@@ -330,11 +336,8 @@
             this.lblS7_1_X = new System.Windows.Forms.Label();
             this.lblS7_1_Dimensiones = new System.Windows.Forms.TextBox();
             this.tbpS8 = new System.Windows.Forms.TabPage();
+            this.pbS8_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.groupBox62 = new System.Windows.Forms.GroupBox();
-            this.txtS8_CodigoS8 = new System.Windows.Forms.TextBox();
-            this.label155 = new System.Windows.Forms.Label();
-            this.btnS8_Siguiente = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.groupBox64 = new System.Windows.Forms.GroupBox();
             this.rbtS808_OtroEspecificar = new System.Windows.Forms.TextBox();
@@ -414,11 +417,8 @@
             this.cbxS8_AccesoAgua = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
             this.tbpS9 = new System.Windows.Forms.TabPage();
+            this.pbS9_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox67 = new System.Windows.Forms.GroupBox();
-            this.groupBox115 = new System.Windows.Forms.GroupBox();
-            this.txtS9_CodigoS9 = new System.Windows.Forms.TextBox();
-            this.label154 = new System.Windows.Forms.Label();
-            this.btnS9_Siguiente = new System.Windows.Forms.Button();
             this.groupBox80 = new System.Windows.Forms.GroupBox();
             this.label102 = new System.Windows.Forms.Label();
             this.txtS9_OtraPropiedadC = new System.Windows.Forms.TextBox();
@@ -448,6 +448,7 @@
             this.cbxS9_1_Propio = new System.Windows.Forms.ComboBox();
             this.label99 = new System.Windows.Forms.Label();
             this.tbpS10 = new System.Windows.Forms.TabPage();
+            this.pbS10_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox68 = new System.Windows.Forms.GroupBox();
             this.groupBox90 = new System.Windows.Forms.GroupBox();
             this.label121 = new System.Windows.Forms.Label();
@@ -589,6 +590,7 @@
             this.label89 = new System.Windows.Forms.Label();
             this.tbpS10Cont = new System.Windows.Forms.TabPage();
             this.groupBox98 = new System.Windows.Forms.GroupBox();
+            this.pbS10Cont_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox108 = new System.Windows.Forms.GroupBox();
             this.label148 = new System.Windows.Forms.Label();
             this.txtS10_ComentarioEstadoFuturo = new System.Windows.Forms.TextBox();
@@ -642,7 +644,6 @@
             this.groupBox50 = new System.Windows.Forms.GroupBox();
             this.txtCodigoS11 = new System.Windows.Forms.TextBox();
             this.label151 = new System.Windows.Forms.Label();
-            this.btnFinS11 = new System.Windows.Forms.Button();
             this.groupBox111 = new System.Windows.Forms.GroupBox();
             this.txt_S11_ComentarioFinal = new System.Windows.Forms.TextBox();
             this.label140 = new System.Windows.Forms.Label();
@@ -660,12 +661,7 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.pbS11_Siguiente = new System.Windows.Forms.PictureBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -738,8 +734,8 @@
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.tbpS8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS8_Siguiente)).BeginInit();
             this.groupBox47.SuspendLayout();
-            this.groupBox62.SuspendLayout();
             this.groupBox56.SuspendLayout();
             this.groupBox64.SuspendLayout();
             this.groupBox65.SuspendLayout();
@@ -759,14 +755,15 @@
             this.groupBox49.SuspendLayout();
             this.groupBox48.SuspendLayout();
             this.tbpS9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS9_Siguiente)).BeginInit();
             this.groupBox67.SuspendLayout();
-            this.groupBox115.SuspendLayout();
             this.groupBox80.SuspendLayout();
             this.groupBox81.SuspendLayout();
             this.groupBox83.SuspendLayout();
             this.groupBox84.SuspendLayout();
             this.groupBox85.SuspendLayout();
             this.tbpS10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS10_Siguiente)).BeginInit();
             this.groupBox68.SuspendLayout();
             this.groupBox90.SuspendLayout();
             this.groupBox89.SuspendLayout();
@@ -794,6 +791,7 @@
             this.groupBox97.SuspendLayout();
             this.tbpS10Cont.SuspendLayout();
             this.groupBox98.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS10Cont_Siguiente)).BeginInit();
             this.groupBox108.SuspendLayout();
             this.groupBox107.SuspendLayout();
             this.groupBox106.SuspendLayout();
@@ -812,6 +810,7 @@
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS11_Siguiente)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -1290,6 +1289,55 @@
             this.dgvS1.Size = new System.Drawing.Size(907, 448);
             this.dgvS1.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "¿Cuál es la fecha de nacimiento?";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 175;
+            // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.HeaderText = "¿Es hombre, mujer o futuro hijo?";
+            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer",
+            "Futuro hijo/a"});
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn1.Width = 175;
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "¿Está embarazada?";
+            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "No aplica",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn2.Width = 175;
+            // 
             // tbpS2
             // 
             this.tbpS2.Controls.Add(this.pbNextS2);
@@ -1568,7 +1616,7 @@
             // dataGridViewComboBoxColumn10
             // 
             this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
-                "entro educativo?\t\t\t\t\t\t";
+    "entro educativo?\t\t\t\t\t\t";
             this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
             "Actualmente asiste\t\t\t\t\t",
             "No está en edad escolar aún\t\t\t\t\t",
@@ -1705,7 +1753,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
-                "nar?";
+    "nar?";
             this.Column3.Items.AddRange(new object[] {
             "01. Si (especificar)",
             "02. No",
@@ -1870,7 +1918,7 @@
             // Column13
             // 
             this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
-                "ropia recientemente?";
+    "ropia recientemente?";
             this.Column13.Items.AddRange(new object[] {
             "01. Que haceres domésticos",
             "02. Cuidado de los hijo/as",
@@ -1960,7 +2008,7 @@
             // Column20
             // 
             this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
-                "ipal?";
+    "ipal?";
             this.Column20.Items.AddRange(new object[] {
             "01. Si (especificar)",
             "02. No",
@@ -1988,7 +2036,7 @@
             // Column24
             // 
             this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
-                "";
+    "";
             this.Column24.Name = "Column24";
             // 
             // tbpS6
@@ -2089,7 +2137,7 @@
             this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(249, 57);
             this.lblS6_11_FaltaDinero.TabIndex = 0;
             this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero en los últimos doce meses?  [" +
-                "MARCAR TODAS LAS OPCIONES NECESARIAS] ";
+    "MARCAR TODAS LAS OPCIONES NECESARIAS] ";
             // 
             // groupBox15
             // 
@@ -2127,7 +2175,7 @@
             this.lblS6_10_Gastos.Size = new System.Drawing.Size(249, 75);
             this.lblS6_10_Gastos.TabIndex = 0;
             this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido suficientes para cubrir sus ga" +
-                "stos. Mensualmente, ¿Por cuánto dinero superan esos gastos a los ingresos?";
+    "stos. Mensualmente, ¿Por cuánto dinero superan esos gastos a los ingresos?";
             // 
             // groupBox14
             // 
@@ -2196,7 +2244,7 @@
             this.lblS6_8_Ahorro.Size = new System.Drawing.Size(249, 53);
             this.lblS6_8_Ahorro.TabIndex = 0;
             this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han sido suficientes. ¿Han lograd" +
-                "o en ese caso generar un ahorro mensual?";
+    "o en ese caso generar un ahorro mensual?";
             // 
             // groupBox12
             // 
@@ -2229,7 +2277,7 @@
             this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(249, 57);
             this.lblS6_7_CubrirGastos.TabIndex = 0;
             this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del hogar han sido suficientes" +
-                " para cubrir su gastos?";
+    " para cubrir su gastos?";
             // 
             // groupBox11
             // 
@@ -2267,7 +2315,7 @@
             this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(249, 55);
             this.lblS6_6_IngresoTotal.TabIndex = 0;
             this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el trabajo de todos los integran" +
-                "tes, apoyos gubernamentales, remesas y otras ayudas?";
+    "tes, apoyos gubernamentales, remesas y otras ayudas?";
             // 
             // groupBox10
             // 
@@ -2485,7 +2533,7 @@
             this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(249, 42);
             this.lblS6_1_IngresosEstado.TabIndex = 0;
             this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero por apoyo del Estado (progra" +
-                "mas)? ¿qué cantidad?";
+    "mas)? ¿qué cantidad?";
             // 
             // tbpS7
             // 
@@ -3960,6 +4008,7 @@
             // 
             // tbpS8
             // 
+            this.tbpS8.Controls.Add(this.pbS8_Siguiente);
             this.tbpS8.Controls.Add(this.groupBox47);
             this.tbpS8.Location = new System.Drawing.Point(4, 22);
             this.tbpS8.Name = "tbpS8";
@@ -3969,10 +4018,19 @@
             this.tbpS8.Text = "Sección 8";
             this.tbpS8.UseVisualStyleBackColor = true;
             // 
+            // pbS8_Siguiente
+            // 
+            this.pbS8_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS8_Siguiente.Location = new System.Drawing.Point(1101, 493);
+            this.pbS8_Siguiente.Name = "pbS8_Siguiente";
+            this.pbS8_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS8_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS8_Siguiente.TabIndex = 14;
+            this.pbS8_Siguiente.TabStop = false;
+            this.pbS8_Siguiente.Click += new System.EventHandler(this.pbS8_Siguiente_Click);
+            // 
             // groupBox47
             // 
-            this.groupBox47.Controls.Add(this.groupBox62);
-            this.groupBox47.Controls.Add(this.btnS8_Siguiente);
             this.groupBox47.Controls.Add(this.groupBox56);
             this.groupBox47.Controls.Add(this.groupBox55);
             this.groupBox47.Controls.Add(this.groupBox54);
@@ -3983,45 +4041,10 @@
             this.groupBox47.Controls.Add(this.groupBox48);
             this.groupBox47.Location = new System.Drawing.Point(8, 8);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(1328, 507);
+            this.groupBox47.Size = new System.Drawing.Size(1328, 479);
             this.groupBox47.TabIndex = 1;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "SERVICIOS BASICOS";
-            // 
-            // groupBox62
-            // 
-            this.groupBox62.Controls.Add(this.txtS8_CodigoS8);
-            this.groupBox62.Controls.Add(this.label155);
-            this.groupBox62.Location = new System.Drawing.Point(1078, 19);
-            this.groupBox62.Name = "groupBox62";
-            this.groupBox62.Size = new System.Drawing.Size(296, 95);
-            this.groupBox62.TabIndex = 11;
-            this.groupBox62.TabStop = false;
-            // 
-            // txtS8_CodigoS8
-            // 
-            this.txtS8_CodigoS8.Location = new System.Drawing.Point(18, 32);
-            this.txtS8_CodigoS8.Name = "txtS8_CodigoS8";
-            this.txtS8_CodigoS8.Size = new System.Drawing.Size(243, 20);
-            this.txtS8_CodigoS8.TabIndex = 2;
-            // 
-            // label155
-            // 
-            this.label155.AutoSize = true;
-            this.label155.Location = new System.Drawing.Point(16, 16);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(88, 13);
-            this.label155.TabIndex = 1;
-            this.label155.Text = "Codigo Encuesta\r\n";
-            // 
-            // btnS8_Siguiente
-            // 
-            this.btnS8_Siguiente.Location = new System.Drawing.Point(1132, 442);
-            this.btnS8_Siguiente.Name = "btnS8_Siguiente";
-            this.btnS8_Siguiente.Size = new System.Drawing.Size(75, 23);
-            this.btnS8_Siguiente.TabIndex = 10;
-            this.btnS8_Siguiente.Text = "Siguiente";
-            this.btnS8_Siguiente.UseVisualStyleBackColor = true;
             // 
             // groupBox56
             // 
@@ -4036,7 +4059,7 @@
             this.groupBox56.Controls.Add(this.groupBox61);
             this.groupBox56.Controls.Add(this.gbxS808_Refrigerador);
             this.groupBox56.Controls.Add(this.groupBox63);
-            this.groupBox56.Location = new System.Drawing.Point(700, 19);
+            this.groupBox56.Location = new System.Drawing.Point(700, 0);
             this.groupBox56.Name = "groupBox56";
             this.groupBox56.Size = new System.Drawing.Size(362, 482);
             this.groupBox56.TabIndex = 9;
@@ -4109,7 +4132,7 @@
             this.label77.Size = new System.Drawing.Size(304, 52);
             this.label77.TabIndex = 15;
             this.label77.Text = "8. ¿Cuáles artículos de la siguiente lista posee y en qué estado\r\n    se encuentr" +
-                "an (bueno / regular / malo)? \r\n    [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
+    "an (bueno / regular / malo)? \r\n    [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
             // 
             // groupBox65
             // 
@@ -4589,7 +4612,7 @@
             this.label66.Size = new System.Drawing.Size(266, 26);
             this.label66.TabIndex = 1;
             this.label66.Text = "7. ¿Cuenta con algún otro servicio adicional?\r\n    [MARCAR TODAS LAS OPCIONES NEC" +
-                "ESARIAS] ";
+    "ESARIAS] ";
             // 
             // groupBox54
             // 
@@ -4636,7 +4659,7 @@
             this.label65.Size = new System.Drawing.Size(252, 65);
             this.label65.TabIndex = 1;
             this.label65.Text = "6. ¿Qué hacen habitualmente con la basura que se \r\n    genera en el hogar?\t\t\t\t\t\t\r" +
-                "\n\t\t\t\t\r\n\r\n\t\t\t\t\r\n";
+    "\n\t\t\t\t\r\n\r\n\t\t\t\t\r\n";
             // 
             // groupBox53
             // 
@@ -4728,7 +4751,7 @@
             this.label63.Size = new System.Drawing.Size(220, 65);
             this.label63.TabIndex = 1;
             this.label63.Text = "4. ¿Qué tipo de combustible o energía utiliza \r\n     PREDOMINANTEMENTE para cocin" +
-                "ar?\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n";
+    "ar?\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n";
             // 
             // groupBox51
             // 
@@ -4858,6 +4881,7 @@
             // 
             // tbpS9
             // 
+            this.tbpS9.Controls.Add(this.pbS9_Siguiente);
             this.tbpS9.Controls.Add(this.groupBox67);
             this.tbpS9.Location = new System.Drawing.Point(4, 22);
             this.tbpS9.Name = "tbpS9";
@@ -4867,10 +4891,19 @@
             this.tbpS9.Text = "Sección 9";
             this.tbpS9.UseVisualStyleBackColor = true;
             // 
+            // pbS9_Siguiente
+            // 
+            this.pbS9_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS9_Siguiente.Location = new System.Drawing.Point(615, 467);
+            this.pbS9_Siguiente.Name = "pbS9_Siguiente";
+            this.pbS9_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS9_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS9_Siguiente.TabIndex = 15;
+            this.pbS9_Siguiente.TabStop = false;
+            this.pbS9_Siguiente.Click += new System.EventHandler(this.pbS9_Siguiente_Click);
+            // 
             // groupBox67
             // 
-            this.groupBox67.Controls.Add(this.groupBox115);
-            this.groupBox67.Controls.Add(this.btnS9_Siguiente);
             this.groupBox67.Controls.Add(this.groupBox80);
             this.groupBox67.Controls.Add(this.groupBox81);
             this.groupBox67.Controls.Add(this.groupBox83);
@@ -4878,45 +4911,10 @@
             this.groupBox67.Controls.Add(this.groupBox85);
             this.groupBox67.Location = new System.Drawing.Point(8, 8);
             this.groupBox67.Name = "groupBox67";
-            this.groupBox67.Size = new System.Drawing.Size(1328, 507);
+            this.groupBox67.Size = new System.Drawing.Size(1328, 443);
             this.groupBox67.TabIndex = 3;
             this.groupBox67.TabStop = false;
             this.groupBox67.Text = "PROPIEDAD";
-            // 
-            // groupBox115
-            // 
-            this.groupBox115.Controls.Add(this.txtS9_CodigoS9);
-            this.groupBox115.Controls.Add(this.label154);
-            this.groupBox115.Location = new System.Drawing.Point(664, 19);
-            this.groupBox115.Name = "groupBox115";
-            this.groupBox115.Size = new System.Drawing.Size(296, 95);
-            this.groupBox115.TabIndex = 10;
-            this.groupBox115.TabStop = false;
-            // 
-            // txtS9_CodigoS9
-            // 
-            this.txtS9_CodigoS9.Location = new System.Drawing.Point(18, 32);
-            this.txtS9_CodigoS9.Name = "txtS9_CodigoS9";
-            this.txtS9_CodigoS9.Size = new System.Drawing.Size(243, 20);
-            this.txtS9_CodigoS9.TabIndex = 2;
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(16, 16);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(88, 13);
-            this.label154.TabIndex = 1;
-            this.label154.Text = "Codigo Encuesta\r\n";
-            // 
-            // btnS9_Siguiente
-            // 
-            this.btnS9_Siguiente.Location = new System.Drawing.Point(726, 342);
-            this.btnS9_Siguiente.Name = "btnS9_Siguiente";
-            this.btnS9_Siguiente.Size = new System.Drawing.Size(163, 36);
-            this.btnS9_Siguiente.TabIndex = 8;
-            this.btnS9_Siguiente.Text = "Siguiente";
-            this.btnS9_Siguiente.UseVisualStyleBackColor = true;
             // 
             // groupBox80
             // 
@@ -5009,7 +5007,7 @@
             this.label94.Size = new System.Drawing.Size(257, 39);
             this.label94.TabIndex = 1;
             this.label94.Text = "5. ¿Posee usted o algún miembro de su familia algún \r\n     otro tipo de bien o de" +
-                " propiedad?\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n";
+    " propiedad?\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n";
             // 
             // groupBox81
             // 
@@ -5086,7 +5084,7 @@
             this.label95.Size = new System.Drawing.Size(253, 65);
             this.label95.TabIndex = 1;
             this.label95.Text = "4. ¿Conoce usted al propietario del terreno y alguna \r\n    forma de contacto?\t\t\t\t" +
-                "\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\r\n\t\t\t\t\r\n";
+    "\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\r\n\t\t\t\t\r\n";
             // 
             // groupBox83
             // 
@@ -5173,7 +5171,7 @@
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(15, 16);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(253, 26);
+            this.label98.Size = new System.Drawing.Size(257, 26);
             this.label98.TabIndex = 1;
             this.label98.Text = "2. En el caso de que sea usted propietario:      ►   (5)\t\r\n\t\t\r\n";
             // 
@@ -5210,6 +5208,7 @@
             // 
             // tbpS10
             // 
+            this.tbpS10.Controls.Add(this.pbS10_Siguiente);
             this.tbpS10.Controls.Add(this.groupBox68);
             this.tbpS10.Location = new System.Drawing.Point(4, 22);
             this.tbpS10.Name = "tbpS10";
@@ -5218,6 +5217,17 @@
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
             this.tbpS10.UseVisualStyleBackColor = true;
+            // 
+            // pbS10_Siguiente
+            // 
+            this.pbS10_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS10_Siguiente.Location = new System.Drawing.Point(1257, 484);
+            this.pbS10_Siguiente.Name = "pbS10_Siguiente";
+            this.pbS10_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS10_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS10_Siguiente.TabIndex = 16;
+            this.pbS10_Siguiente.TabStop = false;
+            this.pbS10_Siguiente.Click += new System.EventHandler(this.pbS10_Siguiente_Click);
             // 
             // groupBox68
             // 
@@ -5234,7 +5244,7 @@
             this.groupBox68.Controls.Add(this.groupBox97);
             this.groupBox68.Location = new System.Drawing.Point(8, 8);
             this.groupBox68.Name = "groupBox68";
-            this.groupBox68.Size = new System.Drawing.Size(1328, 507);
+            this.groupBox68.Size = new System.Drawing.Size(1328, 492);
             this.groupBox68.TabIndex = 6;
             this.groupBox68.TabStop = false;
             this.groupBox68.Text = "COMUNIDAD";
@@ -5330,8 +5340,8 @@
             this.label124.Size = new System.Drawing.Size(281, 39);
             this.label124.TabIndex = 1;
             this.label124.Text = "11. ¿Estaría dispuesto a trabajar junto a sus vecinos para \r\n      mejorar algún " +
-                "aspecto de su comunidad? ¿En cuáles \r\n       proyectos puntuales le gustaría hac" +
-                "erlo?\t";
+    "aspecto de su comunidad? ¿En cuáles \r\n       proyectos puntuales le gustaría hac" +
+    "erlo?\t";
             // 
             // groupBox89
             // 
@@ -5424,7 +5434,7 @@
             this.label120.Size = new System.Drawing.Size(285, 39);
             this.label120.TabIndex = 1;
             this.label120.Text = "10. ¿Considera que existen problemáticas y/o necesidades\r\n      en su comunidad? " +
-                "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
+    "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
             // 
             // groupBox82
             // 
@@ -5517,7 +5527,7 @@
             this.label116.Size = new System.Drawing.Size(298, 39);
             this.label116.TabIndex = 1;
             this.label116.Text = "9. ¿Considera que existe alguna necesidad o problemática\r\n     en su familia? En " +
-                "el caso de que si ¿cuáles considera que \r\n     son las principales?";
+    "el caso de que si ¿cuáles considera que \r\n     son las principales?";
             // 
             // gbxS1008_Com
             // 
@@ -6348,7 +6358,7 @@
             this.groupBox75.Controls.Add(this.label103);
             this.groupBox75.Controls.Add(this.txtS1007_Especificar);
             this.groupBox75.Controls.Add(this.label104);
-            this.groupBox75.Location = new System.Drawing.Point(344, 352);
+            this.groupBox75.Location = new System.Drawing.Point(344, 341);
             this.groupBox75.Name = "groupBox75";
             this.groupBox75.Size = new System.Drawing.Size(254, 149);
             this.groupBox75.TabIndex = 10;
@@ -6379,7 +6389,7 @@
             // 
             // txtS1007_Especificar
             // 
-            this.txtS1007_Especificar.Location = new System.Drawing.Point(18, 129);
+            this.txtS1007_Especificar.Location = new System.Drawing.Point(18, 117);
             this.txtS1007_Especificar.Multiline = true;
             this.txtS1007_Especificar.Name = "txtS1007_Especificar";
             this.txtS1007_Especificar.Size = new System.Drawing.Size(184, 16);
@@ -6436,7 +6446,7 @@
             this.label92.AutoSize = true;
             this.label92.Location = new System.Drawing.Point(15, 16);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(200, 13);
+            this.label92.Size = new System.Drawing.Size(204, 13);
             this.label92.TabIndex = 1;
             this.label92.Text = "6. ¿En cuál o cuáles participa?   ►(10.08)";
             // 
@@ -6470,7 +6480,7 @@
             this.label91.Size = new System.Drawing.Size(248, 39);
             this.label91.TabIndex = 1;
             this.label91.Text = "5. ¿Ha participado usted o algún miembro de su \r\n    familia en algún grupo u org" +
-                "anización que actue \r\n    en beneficio de la comunidad?";
+    "anización que actue \r\n    en beneficio de la comunidad?";
             // 
             // groupBox70
             // 
@@ -6482,7 +6492,7 @@
             this.groupBox70.Controls.Add(this.txtS10_OrganizarA);
             this.groupBox70.Controls.Add(this.cbxS10_OrganizarVecinos);
             this.groupBox70.Controls.Add(this.label83);
-            this.groupBox70.Location = new System.Drawing.Point(27, 352);
+            this.groupBox70.Location = new System.Drawing.Point(27, 341);
             this.groupBox70.Name = "groupBox70";
             this.groupBox70.Size = new System.Drawing.Size(308, 149);
             this.groupBox70.TabIndex = 7;
@@ -6563,7 +6573,7 @@
             this.label83.Size = new System.Drawing.Size(308, 26);
             this.label83.TabIndex = 1;
             this.label83.Text = "4. ¿Podría mencionarme si usted se organiza con sus vecinos? \r\n    ¿En qué situac" +
-                "iones lo hacen?\r\n";
+    "iones lo hacen?\r\n";
             // 
             // groupBox71
             // 
@@ -6689,6 +6699,7 @@
             // groupBox98
             // 
             this.groupBox98.AutoSize = true;
+            this.groupBox98.Controls.Add(this.pbS10Cont_Siguiente);
             this.groupBox98.Controls.Add(this.groupBox108);
             this.groupBox98.Controls.Add(this.groupBox107);
             this.groupBox98.Controls.Add(this.groupBox106);
@@ -6701,10 +6712,21 @@
             this.groupBox98.Controls.Add(this.groupBox109);
             this.groupBox98.Location = new System.Drawing.Point(8, 8);
             this.groupBox98.Name = "groupBox98";
-            this.groupBox98.Size = new System.Drawing.Size(1301, 509);
+            this.groupBox98.Size = new System.Drawing.Size(1301, 523);
             this.groupBox98.TabIndex = 5;
             this.groupBox98.TabStop = false;
             this.groupBox98.Text = "...CONTINUACIÓN DE COMUNIDAD";
+            // 
+            // pbS10Cont_Siguiente
+            // 
+            this.pbS10Cont_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS10Cont_Siguiente.Location = new System.Drawing.Point(1210, 445);
+            this.pbS10Cont_Siguiente.Name = "pbS10Cont_Siguiente";
+            this.pbS10Cont_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS10Cont_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS10Cont_Siguiente.TabIndex = 17;
+            this.pbS10Cont_Siguiente.TabStop = false;
+            this.pbS10Cont_Siguiente.Click += new System.EventHandler(this.pbS10Cont_Siguiente_Click);
             // 
             // groupBox108
             // 
@@ -6758,7 +6780,7 @@
             this.label150.Size = new System.Drawing.Size(245, 26);
             this.label150.TabIndex = 1;
             this.label150.Text = "21. ¿Cómo cree que estará su comunidad en años\r\n      posteriores (en el futuro)?" +
-                " ¿Por qué cree eso?";
+    " ¿Por qué cree eso?";
             // 
             // groupBox107
             // 
@@ -6812,7 +6834,7 @@
             this.label147.Size = new System.Drawing.Size(263, 26);
             this.label147.TabIndex = 1;
             this.label147.Text = "20. ¿Cómo cree que está su comunidad en relación\r\n      a años anteriores (al pas" +
-                "ado)? ¿Por qué cree eso?";
+    "ado)? ¿Por qué cree eso?";
             // 
             // groupBox106
             // 
@@ -6999,7 +7021,7 @@
             this.label143.Size = new System.Drawing.Size(294, 26);
             this.label143.TabIndex = 1;
             this.label143.Text = "15. ¿Usted considera que en la comunidad existe algún\r\n       tipo de discriminac" +
-                "ión? En caso de que si, ¿de qué tipo?";
+    "ión? En caso de que si, ¿de qué tipo?";
             // 
             // groupBox103
             // 
@@ -7056,7 +7078,7 @@
             this.label142.Size = new System.Drawing.Size(300, 26);
             this.label142.TabIndex = 1;
             this.label142.Text = "13. ¿Cuáles son para usted los principales aspectos negativos\r\n      de vivir en " +
-                "esta comunidad?\r\n";
+    "esta comunidad?\r\n";
             // 
             // groupBox100
             // 
@@ -7113,7 +7135,7 @@
             this.label134.Size = new System.Drawing.Size(295, 26);
             this.label134.TabIndex = 1;
             this.label134.Text = "12. ¿Cuáles son para usted los principales aspectos positivos\r\n      de vivir en " +
-                "esta comunidad?\r\n";
+    "esta comunidad?\r\n";
             // 
             // groupBox101
             // 
@@ -7122,7 +7144,7 @@
             this.groupBox101.Controls.Add(this.label138);
             this.groupBox101.Location = new System.Drawing.Point(9, 253);
             this.groupBox101.Name = "groupBox101";
-            this.groupBox101.Size = new System.Drawing.Size(310, 235);
+            this.groupBox101.Size = new System.Drawing.Size(310, 198);
             this.groupBox101.TabIndex = 4;
             this.groupBox101.TabStop = false;
             // 
@@ -7146,7 +7168,7 @@
             // 
             // txtS1014_Especificar
             // 
-            this.txtS1014_Especificar.Location = new System.Drawing.Point(42, 183);
+            this.txtS1014_Especificar.Location = new System.Drawing.Point(0, 145);
             this.txtS1014_Especificar.Multiline = true;
             this.txtS1014_Especificar.Name = "txtS1014_Especificar";
             this.txtS1014_Especificar.Size = new System.Drawing.Size(184, 46);
@@ -7160,7 +7182,7 @@
             this.label138.Size = new System.Drawing.Size(249, 39);
             this.label138.TabIndex = 1;
             this.label138.Text = "14. ¿Cuáles considera usted que es el grupo de su \r\n      comunidad más afectado " +
-                "por los problemas\r\n      de la comunidad?";
+    "por los problemas\r\n      de la comunidad?";
             // 
             // groupBox109
             // 
@@ -7195,6 +7217,7 @@
             // 
             // tbpS11
             // 
+            this.tbpS11.Controls.Add(this.pbS11_Siguiente);
             this.tbpS11.Controls.Add(this.groupBox102);
             this.tbpS11.Location = new System.Drawing.Point(4, 22);
             this.tbpS11.Name = "tbpS11";
@@ -7206,7 +7229,6 @@
             // groupBox102
             // 
             this.groupBox102.Controls.Add(this.groupBox50);
-            this.groupBox102.Controls.Add(this.btnFinS11);
             this.groupBox102.Controls.Add(this.groupBox111);
             this.groupBox102.Controls.Add(this.groupBox110);
             this.groupBox102.Controls.Add(this.groupBox112);
@@ -7214,7 +7236,7 @@
             this.groupBox102.Controls.Add(this.groupBox114);
             this.groupBox102.Location = new System.Drawing.Point(8, 8);
             this.groupBox102.Name = "groupBox102";
-            this.groupBox102.Size = new System.Drawing.Size(1328, 507);
+            this.groupBox102.Size = new System.Drawing.Size(1328, 476);
             this.groupBox102.TabIndex = 3;
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "MOVILIDAD";
@@ -7244,16 +7266,6 @@
             this.label151.Size = new System.Drawing.Size(88, 13);
             this.label151.TabIndex = 1;
             this.label151.Text = "Codigo Encuesta\r\n";
-            // 
-            // btnFinS11
-            // 
-            this.btnFinS11.Location = new System.Drawing.Point(700, 416);
-            this.btnFinS11.Name = "btnFinS11";
-            this.btnFinS11.Size = new System.Drawing.Size(112, 39);
-            this.btnFinS11.TabIndex = 8;
-            this.btnFinS11.Text = "Finalizar";
-            this.btnFinS11.UseVisualStyleBackColor = true;
-            this.btnFinS11.Click += new System.EventHandler(this.btnFinS11_Click);
             // 
             // groupBox111
             // 
@@ -7288,7 +7300,7 @@
             this.groupBox110.Controls.Add(this.label153);
             this.groupBox110.Location = new System.Drawing.Point(27, 387);
             this.groupBox110.Name = "groupBox110";
-            this.groupBox110.Size = new System.Drawing.Size(293, 96);
+            this.groupBox110.Size = new System.Drawing.Size(293, 83);
             this.groupBox110.TabIndex = 7;
             this.groupBox110.TabStop = false;
             // 
@@ -7358,7 +7370,7 @@
             this.label157.Size = new System.Drawing.Size(267, 26);
             this.label157.TabIndex = 1;
             this.label157.Text = "3. ¿En qué año se traslado su familia a esta comunidad\r\n    y por qué el traslado" +
-                "?";
+    "?";
             // 
             // groupBox113
             // 
@@ -7417,56 +7429,18 @@
             this.label159.Size = new System.Drawing.Size(272, 26);
             this.label159.TabIndex = 1;
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido\r\n    en esta comunidad du" +
-                "rante toda su VIDA FAMILIAR?\r\n";
+    "rante toda su VIDA FAMILIAR?\r\n";
             // 
-            // dataGridViewTextBoxColumn1
+            // pbS11_Siguiente
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "¿Cuál es la fecha de nacimiento?";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 175;
-            // 
-            // dataGridViewComboBoxColumn1
-            // 
-            this.dataGridViewComboBoxColumn1.HeaderText = "¿Es hombre, mujer o futuro hijo?";
-            this.dataGridViewComboBoxColumn1.Items.AddRange(new object[] {
-            "Hombre",
-            "Mujer",
-            "Futuro hijo/a"});
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn1.Width = 175;
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.HeaderText = "¿Está embarazada?";
-            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "No aplica",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn2.Width = 175;
+            this.pbS11_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS11_Siguiente.Location = new System.Drawing.Point(826, 487);
+            this.pbS11_Siguiente.Name = "pbS11_Siguiente";
+            this.pbS11_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS11_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS11_Siguiente.TabIndex = 18;
+            this.pbS11_Siguiente.TabStop = false;
+            this.pbS11_Siguiente.Click += new System.EventHandler(this.pbS11_Siguiente_Click);
             // 
             // frmEncuesta
             // 
@@ -7592,9 +7566,8 @@
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             this.tbpS8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbS8_Siguiente)).EndInit();
             this.groupBox47.ResumeLayout(false);
-            this.groupBox62.ResumeLayout(false);
-            this.groupBox62.PerformLayout();
             this.groupBox56.ResumeLayout(false);
             this.groupBox56.PerformLayout();
             this.groupBox64.ResumeLayout(false);
@@ -7632,9 +7605,8 @@
             this.groupBox48.ResumeLayout(false);
             this.groupBox48.PerformLayout();
             this.tbpS9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbS9_Siguiente)).EndInit();
             this.groupBox67.ResumeLayout(false);
-            this.groupBox115.ResumeLayout(false);
-            this.groupBox115.PerformLayout();
             this.groupBox80.ResumeLayout(false);
             this.groupBox80.PerformLayout();
             this.groupBox81.ResumeLayout(false);
@@ -7646,6 +7618,7 @@
             this.groupBox85.ResumeLayout(false);
             this.groupBox85.PerformLayout();
             this.tbpS10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbS10_Siguiente)).EndInit();
             this.groupBox68.ResumeLayout(false);
             this.groupBox90.ResumeLayout(false);
             this.groupBox90.PerformLayout();
@@ -7698,6 +7671,7 @@
             this.tbpS10Cont.ResumeLayout(false);
             this.tbpS10Cont.PerformLayout();
             this.groupBox98.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbS10Cont_Siguiente)).EndInit();
             this.groupBox108.ResumeLayout(false);
             this.groupBox108.PerformLayout();
             this.groupBox107.ResumeLayout(false);
@@ -7732,6 +7706,7 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS11_Siguiente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -8030,15 +8005,10 @@
         private System.Windows.Forms.GroupBox groupBox114;
         private System.Windows.Forms.ComboBox cbxS11_1_VidaFamiliar;
         private System.Windows.Forms.Label label159;
-        private System.Windows.Forms.Button btnFinS11;
         private System.Windows.Forms.GroupBox groupBox50;
         private System.Windows.Forms.TextBox txtCodigoS11;
         private System.Windows.Forms.Label label151;
         private System.Windows.Forms.GroupBox groupBox47;
-        private System.Windows.Forms.GroupBox groupBox62;
-        private System.Windows.Forms.TextBox txtS8_CodigoS8;
-        private System.Windows.Forms.Label label155;
-        private System.Windows.Forms.Button btnS8_Siguiente;
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.GroupBox groupBox64;
         private System.Windows.Forms.TextBox rbtS808_OtroEspecificar;
@@ -8118,10 +8088,6 @@
         private System.Windows.Forms.ComboBox cbxS8_AccesoAgua;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.GroupBox groupBox67;
-        private System.Windows.Forms.GroupBox groupBox115;
-        private System.Windows.Forms.TextBox txtS9_CodigoS9;
-        private System.Windows.Forms.Label label154;
-        private System.Windows.Forms.Button btnS9_Siguiente;
         private System.Windows.Forms.GroupBox groupBox80;
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.TextBox txtS9_OtraPropiedadC;
@@ -8376,6 +8342,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.PictureBox pbS8_Siguiente;
+        private System.Windows.Forms.PictureBox pbS9_Siguiente;
+        private System.Windows.Forms.PictureBox pbS10_Siguiente;
+        private System.Windows.Forms.PictureBox pbS10Cont_Siguiente;
+        private System.Windows.Forms.PictureBox pbS11_Siguiente;
 
     }
 }

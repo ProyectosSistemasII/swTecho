@@ -21,11 +21,18 @@ namespace TechoCeiva
 
         private void btnFinS11_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pbS11_Siguiente_Click(object sender, EventArgs e)
+        {
             S11_MovilidadLN S11 = new S11_MovilidadLN();
-            Boolean correcto = S11.Ingresar_EncS11(Convert.ToInt32(txtCodigoS11.Text), cbxS11_1_VidaFamiliar.SelectedValue.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text,txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedValue.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
+            Boolean correcto = true; //S11.Ingresar_EncS11(Convert.ToInt32(txtCodigoS11.Text), cbxS11_1_VidaFamiliar.SelectedValue.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedValue.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS10Cont.Parent = null;
+                tbpInfo.Parent = tbcDatos;
             }
             else
             {
@@ -34,27 +41,74 @@ namespace TechoCeiva
 
         }
 
-        private void btnS9_Siguiente_Click(object sender, EventArgs e)
+        private void pbS10Cont_Siguiente_Click(object sender, EventArgs e)
         {
-            S9_PropiedadLN S9 = new S9_PropiedadLN();
-            Boolean correcto = S9.Insertar_EncS9(Convert.ToInt32(txtS9_CodigoS9.Text), cbxS9_1_Propio.SelectedValue.ToString(), cbxS9_Propietario.SelectedValue.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedValue.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+
+            S11_MovilidadLN S11 = new S11_MovilidadLN();
+            Boolean correcto = true; //S11.Ingresar_EncS11(Convert.ToInt32(txtCodigoS11.Text), cbxS11_1_VidaFamiliar.SelectedValue.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedValue.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS10Cont.Parent = null;
+                tbpS11.Parent = tbcDatos;
+            }
+            else
+            {
+                MessageBox.Show(S11.obtenerError());
+            }
+
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pbS10_Siguiente_Click(object sender, EventArgs e)
+        {
+            S9_PropiedadLN S10 = new S9_PropiedadLN();
+            Boolean correcto = true;//S10.Insertar_EncS9(0, cbxS9_1_Propio.SelectedValue.ToString(), cbxS9_Propietario.SelectedValue.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedValue.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+                tbpS10.Parent = null;
+                tbpS10Cont.Parent = tbcDatos;
+            }
+            else
+            {
+                MessageBox.Show(S10.obtenerError());
+            }
+        }
+        private void btnS9_Siguiente_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void pbS9_Siguiente_Click(object sender, EventArgs e)
+        {
+            S9_PropiedadLN S9 = new S9_PropiedadLN();
+            Boolean correcto = true;// S9.Insertar_EncS9(0, cbxS9_1_Propio.SelectedValue.ToString(), cbxS9_Propietario.SelectedValue.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedValue.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+                tbpS9.Parent = null;
+                tbpS10.Parent = tbcDatos;
             }
             else
             {
                 MessageBox.Show(S9.obtenerError());
             }
         }
-
         private void btnS8_Siguiente_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {
             S8_ServiciosLN S8 = new S8_ServiciosLN();
             Boolean correcto = true;//S8.Insertar_EncuS8(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS8.Parent = null;
+                tbpS9.Parent = tbcDatos;
             }
             else
             {
@@ -365,6 +419,8 @@ namespace TechoCeiva
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
+                tbpS7.Parent = null;
+                tbpS8.Parent = tbcDatos;
             }
             else
             {
@@ -565,6 +621,6 @@ namespace TechoCeiva
                 }
             }
         }
-
+        
     }
 }
