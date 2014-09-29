@@ -10,7 +10,6 @@ namespace Capa_Logica
     {
         public S6_IngresosLN()
         {
-            this.CodigoS6 = 0;
             this.ApoyoEstado = "";
             this.CantidadApoyo = 0;
             this.Remesas = "";
@@ -27,12 +26,11 @@ namespace Capa_Logica
             this.S611_Ingre_idS611_Ingre = 0;
         }
 
-        public Boolean Insertar_EncuS6(int CodigoS6, String ApoyoEstado, int CantidadApoyo, String Remesas, int CantidadRemesas, String Deuda, int DineroDeuda, String TiempoPagoDeuda, int IngresoTotal, String CubreGastos, String Ahorro, int MontoAhorro, int DineroGasto, int idEncuesta, int idS611)
+        public Boolean Insertar_EncuS6(String ApoyoEstado, int CantidadApoyo, String Remesas, int CantidadRemesas, String Deuda, int DineroDeuda, String TiempoPagoDeuda, int IngresoTotal, String CubreGastos, String Ahorro, int MontoAhorro, int DineroGasto, int idEncuesta, int idS611)
         {
             Boolean correcto = true;
-            S6_Ingresos ingresos = new S6_Ingresos(CodigoS6, ApoyoEstado, CantidadApoyo, Remesas, CantidadRemesas, Deuda, DineroDeuda, TiempoPagoDeuda, IngresoTotal, CubreGastos, Ahorro, MontoAhorro, DineroGasto, Encuestas_idEncuestas, S611_Ingre_idS611_Ingre);
+            S6_Ingresos ingresos = new S6_Ingresos(ApoyoEstado, CantidadApoyo, Remesas, CantidadRemesas, Deuda, DineroDeuda, TiempoPagoDeuda, IngresoTotal, CubreGastos, Ahorro, MontoAhorro, DineroGasto, Encuestas_idEncuestas, S611_Ingre_idS611_Ingre);
 
-            this.CodigoS6 = CodigoS6;
             this.ApoyoEstado = ApoyoEstado;
             this.CantidadApoyo = CantidadApoyo;
             this.Remesas = Remesas;

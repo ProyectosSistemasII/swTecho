@@ -249,17 +249,29 @@ namespace TechoCeiva
         private void cbxS6_1_IngEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS6_1_IngEstado.SelectedIndex.Equals(1))
+            {
+                lblS6_1_QEstado.Enabled = true;
                 txtS6_1_CantidadIngEstado.Enabled = true;
+            }
             else
+            {
+                lblS6_1_QEstado.Enabled = false;
                 txtS6_1_CantidadIngEstado.Enabled = false;
+            }
         }
 
         private void cbxS6_2_IngRemesas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS6_2_IngRemesas.SelectedIndex.Equals(1))
+            {
+                lblS6_2_QRemesas.Enabled = true;
                 txtS6_2_CantidadRemesas.Enabled = true;
+            }
             else
+            {
+                lblS6_2_QRemesas.Enabled = false;
                 txtS6_2_CantidadRemesas.Enabled = false;
+            }
         }
 
         private void btnS6_Siguiente_Click(object sender, EventArgs e)
@@ -280,12 +292,18 @@ namespace TechoCeiva
         {
             if (cbsS7_5_ProbViv.SelectedIndex.Equals(1))
             {
+                lblS7_5_A.Enabled = true;
+                lblS7_5_B.Enabled = true;
+                lblS7_5_C.Enabled = true;
                 txtS7_5_ProblemaA.Enabled = true;
                 txtS7_5_ProblemaB.Enabled = true;
                 txtS7_5_ProblemaC.Enabled = true;
             }
             else
             {
+                lblS7_5_A.Enabled = false;
+                lblS7_5_B.Enabled = false;
+                lblS7_5_C.Enabled = false;
                 txtS7_5_ProblemaA.Enabled = false;
                 txtS7_5_ProblemaB.Enabled = false;
                 txtS7_5_ProblemaC.Enabled = false;
@@ -306,20 +324,6 @@ namespace TechoCeiva
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            S4_SaludLN S4 = new S4_SaludLN();
-            Boolean correcto = true;//S4.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-            }
-            else
-            {
-                MessageBox.Show(S4.obtenerError());
-            }
-        }
-
         private void pbS5_Siguiente_Click(object sender, EventArgs e)
         {
             S5_TrabajoLN S5 = new S5_TrabajoLN();
@@ -337,7 +341,7 @@ namespace TechoCeiva
         private void pbS6_Siguiente_Click(object sender, EventArgs e)
         {
             S6_IngresosLN S6 = new S6_IngresosLN();
-            Boolean correcto = true;//S6.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            Boolean correcto = true;//S6.Insertar_EncuS6(txtS8_
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
@@ -351,7 +355,7 @@ namespace TechoCeiva
         private void pbS7_Siguiente_Click(object sender, EventArgs e)
         {
             S7_ViviendaLN S7 = new S7_ViviendaLN();
-            Boolean correcto = true;//S7.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            Boolean correcto = true;//S7.Insertar_EncuS7(txtS8_
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
@@ -359,6 +363,20 @@ namespace TechoCeiva
             else
             {
                 MessageBox.Show(S7.obtenerError());
+            }
+        }
+
+        private void pbS4_Siguiente_Click(object sender, EventArgs e)
+        {
+            S4_SaludLN S4 = new S4_SaludLN();
+            Boolean correcto = true;//S4.Insertar_EncuS4(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            if (correcto)
+            {
+                MessageBox.Show("Ingresado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show(S4.obtenerError());
             }
         }
 

@@ -9,7 +9,6 @@ namespace Capa_Datos
 {
     public class S6_Ingresos
     {
-        public int CodigoS6 { get; set; }
         public string ApoyoEstado { get; set; }
         public float CantidadApoyo { get; set; }
         public string Remesas { get; set; }
@@ -30,7 +29,6 @@ namespace Capa_Datos
 
         public S6_Ingresos()
         {
-            this.CodigoS6 = 0;
             this.ApoyoEstado = "";
             this.CantidadApoyo = 0;
             this.Remesas = "";
@@ -47,10 +45,9 @@ namespace Capa_Datos
             this.S611_Ingre_idS611_Ingre = 0;
         }
 
-        public S6_Ingresos(int CodigoS6, string ApoyoEstado, float CantidadApoyo, string Remesas, float CantidadRemesas, string Deuda, float DineroDeuda, string TiempoPagoDeuda,
+        public S6_Ingresos(string ApoyoEstado, float CantidadApoyo, string Remesas, float CantidadRemesas, string Deuda, float DineroDeuda, string TiempoPagoDeuda,
             float IngresoTotal, string CubreGastos, string Ahorro, float MontoAhorro, float DineroGasto, int Encuestas_idEncuestas, int S611_Ingre_idS611_Ingre)
         {
-            this.CodigoS6 = CodigoS6;
             this.ApoyoEstado = ApoyoEstado;
             this.CantidadApoyo = CantidadApoyo;
             this.Remesas = Remesas;
@@ -72,9 +69,8 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S6_Ingre(CodigoS6,ApoyoEstado,CantidadApoyo,Remesas,CantidadRemesas,Deuda,DineroDeuda,TiempoPagoDeuda,IngresoTotal,CubreGastos,Ahorro,MontoAhorro,DineroGasto,Encuestas_idEncuestas,S611_Ingre_idS611_Ingre) VALUES(@CodigoS6,@ApoyoEstado,@CantidadApoyo,@Remesas,@CantidadRemesas,@Deuda,@DineroDeuda,@TiempoPagoDeuda,@IngresoTotal,@CubreGastos,@Ahorro,@MontoAhorro,@DineroGasto,@Encuestas_idEncuestas,@S611_Ingre_idS611_Ingre)";
+                string consulta = ""; //= "INSERT INTO S6_Ingre(ApoyoEstado,CantidadApoyo,Remesas,CantidadRemesas,Deuda,DineroDeuda,TiempoPagoDeuda,IngresoTotal,CubreGastos,Ahorro,MontoAhorro,DineroGasto,Encuestas_idEncuestas,S611_Ingre_idS611_Ingre) VALUES(@CodigoS6,@ApoyoEstado,@CantidadApoyo,@Remesas,@CantidadRemesas,@Deuda,@DineroDeuda,@TiempoPagoDeuda,@IngresoTotal,@CubreGastos,@Ahorro,@MontoAhorro,@DineroGasto,@Encuestas_idEncuestas,@S611_Ingre_idS611_Ingre)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
-                comando.Parameters.AddWithValue("@CodigoS6", this.CodigoS6);
                 comando.Parameters.AddWithValue("@ApoyoEstado", this.ApoyoEstado);
                 comando.Parameters.AddWithValue("@CantidadApoyo", this.CantidadApoyo);
                 comando.Parameters.AddWithValue("@Remesas", this.Remesas);

@@ -192,6 +192,7 @@
             this.lblS6_1_IngresosEstado = new System.Windows.Forms.TextBox();
             this.tbpS7 = new System.Windows.Forms.TabPage();
             this.gbS7 = new System.Windows.Forms.GroupBox();
+            this.pbS7_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.gbS7_8_Tierra = new System.Windows.Forms.GroupBox();
             this.rbS7_84_MuyBueno = new System.Windows.Forms.RadioButton();
@@ -663,7 +664,6 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.pbS7_Siguiente = new System.Windows.Forms.PictureBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -707,6 +707,7 @@
             this.groupBox6.SuspendLayout();
             this.tbpS7.SuspendLayout();
             this.gbS7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).BeginInit();
             this.groupBox24.SuspendLayout();
             this.gbS7_8_Tierra.SuspendLayout();
             this.gbS7_8_Madera.SuspendLayout();
@@ -809,7 +810,6 @@
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -831,7 +831,7 @@
             this.tbcDatos.Margin = new System.Windows.Forms.Padding(4);
             this.tbcDatos.Name = "tbcDatos";
             this.tbcDatos.SelectedIndex = 0;
-            this.tbcDatos.Size = new System.Drawing.Size(1787, 734);
+            this.tbcDatos.Size = new System.Drawing.Size(1787, 708);
             this.tbcDatos.TabIndex = 1;
             // 
             // tbpInfo
@@ -847,7 +847,7 @@
             this.tbpInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tbpInfo.Name = "tbpInfo";
             this.tbpInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpInfo.Size = new System.Drawing.Size(1779, 705);
+            this.tbpInfo.Size = new System.Drawing.Size(1779, 679);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
             this.tbpInfo.UseVisualStyleBackColor = true;
@@ -1268,7 +1268,7 @@
             this.tbpS1.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS1.Name = "tbpS1";
             this.tbpS1.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS1.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS1.Size = new System.Drawing.Size(1779, 679);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
             this.tbpS1.UseVisualStyleBackColor = true;
@@ -1370,7 +1370,7 @@
             this.tbpS2.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS2.Name = "tbpS2";
             this.tbpS2.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS2.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS2.Size = new System.Drawing.Size(1779, 679);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
             this.tbpS2.UseVisualStyleBackColor = true;
@@ -1496,7 +1496,7 @@
             this.tbpS3.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS3.Name = "tbpS3";
             this.tbpS3.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS3.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS3.Size = new System.Drawing.Size(1779, 679);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
             this.tbpS3.UseVisualStyleBackColor = true;
@@ -1693,7 +1693,7 @@
             this.tbpS4.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS4.Name = "tbpS4";
             this.tbpS4.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS4.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS4.Size = new System.Drawing.Size(1779, 679);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
             this.tbpS4.UseVisualStyleBackColor = true;
@@ -1708,7 +1708,7 @@
             this.pbS4_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS4_Siguiente.TabIndex = 10;
             this.pbS4_Siguiente.TabStop = false;
-            this.pbS4_Siguiente.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbS4_Siguiente.Click += new System.EventHandler(this.pbS4_Siguiente_Click);
             // 
             // groupBox4
             // 
@@ -1871,7 +1871,7 @@
             this.tbpS5.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS5.Name = "tbpS5";
             this.tbpS5.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS5.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS5.Size = new System.Drawing.Size(1779, 679);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
             this.tbpS5.UseVisualStyleBackColor = true;
@@ -2085,7 +2085,7 @@
             this.tbpS6.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS6.Name = "tbpS6";
             this.tbpS6.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS6.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS6.Size = new System.Drawing.Size(1779, 679);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
             this.tbpS6.UseVisualStyleBackColor = true;
@@ -2154,7 +2154,7 @@
             this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(28, 98);
             this.chlbS6_11_CubrirFaltaDinero.Margin = new System.Windows.Forms.Padding(4);
             this.chlbS6_11_CubrirFaltaDinero.Name = "chlbS6_11_CubrirFaltaDinero";
-            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(331, 140);
+            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(331, 157);
             this.chlbS6_11_CubrirFaltaDinero.TabIndex = 10;
             // 
             // lblS6_11_Especificar
@@ -2635,7 +2635,7 @@
             this.tbpS7.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS7.Name = "tbpS7";
             this.tbpS7.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS7.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS7.Size = new System.Drawing.Size(1779, 679);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
             this.tbpS7.UseVisualStyleBackColor = true;
@@ -2659,6 +2659,18 @@
             this.gbS7.TabIndex = 0;
             this.gbS7.TabStop = false;
             this.gbS7.Text = "VIVIENDA";
+            // 
+            // pbS7_Siguiente
+            // 
+            this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS7_Siguiente.Location = new System.Drawing.Point(1624, 538);
+            this.pbS7_Siguiente.Margin = new System.Windows.Forms.Padding(4);
+            this.pbS7_Siguiente.Name = "pbS7_Siguiente";
+            this.pbS7_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS7_Siguiente.TabIndex = 13;
+            this.pbS7_Siguiente.TabStop = false;
+            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click);
             // 
             // groupBox24
             // 
@@ -4259,7 +4271,7 @@
             this.tbpS8.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS8.Name = "tbpS8";
             this.tbpS8.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS8.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS8.Size = new System.Drawing.Size(1779, 679);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
             this.tbpS8.UseVisualStyleBackColor = true;
@@ -5261,7 +5273,7 @@
             this.tbpS9.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS9.Name = "tbpS9";
             this.tbpS9.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS9.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS9.Size = new System.Drawing.Size(1779, 679);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
             this.tbpS9.UseVisualStyleBackColor = true;
@@ -5654,7 +5666,7 @@
             this.tbpS10.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS10.Name = "tbpS10";
             this.tbpS10.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS10.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS10.Size = new System.Drawing.Size(1779, 679);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
             this.tbpS10.UseVisualStyleBackColor = true;
@@ -7286,7 +7298,7 @@
             this.tbpS10Cont.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS10Cont.Name = "tbpS10Cont";
             this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpS10Cont.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS10Cont.Size = new System.Drawing.Size(1779, 679);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
             this.tbpS10Cont.UseVisualStyleBackColor = true;
@@ -7864,7 +7876,7 @@
             this.tbpS11.Location = new System.Drawing.Point(4, 25);
             this.tbpS11.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS11.Name = "tbpS11";
-            this.tbpS11.Size = new System.Drawing.Size(1779, 705);
+            this.tbpS11.Size = new System.Drawing.Size(1779, 679);
             this.tbpS11.TabIndex = 12;
             this.tbpS11.Text = "Sección 11";
             this.tbpS11.UseVisualStyleBackColor = true;
@@ -8114,24 +8126,12 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido\r\n    en esta comunidad du" +
                 "rante toda su VIDA FAMILIAR?\r\n";
             // 
-            // pbS7_Siguiente
-            // 
-            this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS7_Siguiente.Location = new System.Drawing.Point(1624, 538);
-            this.pbS7_Siguiente.Margin = new System.Windows.Forms.Padding(4);
-            this.pbS7_Siguiente.Name = "pbS7_Siguiente";
-            this.pbS7_Siguiente.Size = new System.Drawing.Size(71, 73);
-            this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbS7_Siguiente.TabIndex = 13;
-            this.pbS7_Siguiente.TabStop = false;
-            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click);
-            // 
             // frmEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1340, 735);
+            this.ClientSize = new System.Drawing.Size(1340, 756);
             this.Controls.Add(this.tbcDatos);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEncuesta";
@@ -8194,6 +8194,7 @@
             this.groupBox6.PerformLayout();
             this.tbpS7.ResumeLayout(false);
             this.gbS7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).EndInit();
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             this.gbS7_8_Tierra.ResumeLayout(false);
@@ -8389,7 +8390,6 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).EndInit();
             this.ResumeLayout(false);
 
         }

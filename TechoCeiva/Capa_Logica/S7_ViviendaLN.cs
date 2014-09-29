@@ -10,7 +10,6 @@ namespace Capa_Logica
     {
         public S7_ViviendaLN()
         {
-            this.CodigoS7 = 0;
             this.DimensionesVivienda = "";
             this.Cuartos = "";
             this.Dormitorio = "";
@@ -25,12 +24,11 @@ namespace Capa_Logica
             this.S708_Viv_idS708 = 0;
         }
         
-        public Boolean Insertar_EncuS7(int CodigoS7, String DimensionesVivienda, String Cuartos, String Dormitorio, String Camas, String ProblemaVivienda, String ProblemaA, String ProblemaB, String ProblemaC, int idEncuesta, int idS706, int idS707, int idS708)
+        public Boolean Insertar_EncuS7(String DimensionesVivienda, String Cuartos, String Dormitorio, String Camas, String ProblemaVivienda, String ProblemaA, String ProblemaB, String ProblemaC, int idEncuesta, int idS706, int idS707, int idS708)
         {
             Boolean correcto = true;
-            S7_Vivienda vivienda = new S7_Vivienda(CodigoS7, DimensionesVivienda, Cuartos, Dormitorio, Camas, ProblemaVivienda, ProblemaA, ProblemaB, ProblemaC, idEncuesta, idS706, idS707, idS708);
+            S7_Vivienda vivienda = new S7_Vivienda(DimensionesVivienda, Cuartos, Dormitorio, Camas, ProblemaVivienda, ProblemaA, ProblemaB, ProblemaC, idEncuesta, idS706, idS707, idS708);
 
-            this.CodigoS7 = CodigoS7;
             this.DimensionesVivienda = DimensionesVivienda;
             this.Cuartos = Cuartos;
             this.Dormitorio = Dormitorio;
