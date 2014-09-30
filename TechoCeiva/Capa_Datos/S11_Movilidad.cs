@@ -10,10 +10,9 @@ namespace Capa_Datos
 {
     public class S11_Movilidad
     {
-        public int idS11_Mov { get; set; }
-        public int CodigoS11 { get; set; }
+        public int idS11_Mov { get; set; }        
         public String VidaFamiliar { get; set; }
-        public String DirecionPasada { get; set; }
+        public String DireccionPasada { get; set; }
         public String AnioTranslado { get; set; }
         public String PorqueTraslado { get; set; }
         public String ViviendaActual { get; set; }
@@ -27,9 +26,9 @@ namespace Capa_Datos
         public S11_Movilidad()
         {
             this.idS11_Mov = 0;
-            this.CodigoS11 = 0;
+            
             this.VidaFamiliar = "";
-            this.DirecionPasada = "";
+            this.DireccionPasada = "";
             this.AnioTranslado = "";
             this.PorqueTraslado = "";
             this.ViviendaActual = "";
@@ -38,11 +37,10 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
-        public S11_Movilidad(int idS11_Mov,int Codigo11, String VidaFamiliar,String DireccionPasada, String AñoTraslado,String PorqueTraslado, String ViviendaActual, String Comentario, int idEncuesta){
-            this.idS11_Mov = idS11_Mov;
-            this.CodigoS11 = Codigo11;
+        public S11_Movilidad(int idS11_Mov, String VidaFamiliar,String DireccionPasada, String AñoTraslado,String PorqueTraslado, String ViviendaActual, String Comentario, int idEncuesta){
+            this.idS11_Mov = idS11_Mov;            
             this.VidaFamiliar = VidaFamiliar;
-            this.DirecionPasada = DireccionPasada;
+            this.DireccionPasada = DireccionPasada;
             this.AnioTranslado = AñoTraslado;
             this.PorqueTraslado = PorqueTraslado; 
             this.ViviendaActual = ViviendaActual;
@@ -57,12 +55,11 @@ namespace Capa_Datos
             
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S11_Mov(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,PorqueTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@PorqueTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
-                    MySqlCommand comando = new MySqlCommand(consulta, conex);
-                    comando.Parameters.AddWithValue("@CodigoS11", this.CodigoS11);
+                string consulta = "INSERT INTO S11_Mov(VidaFamiliar,DireccionPasada,AnioTraslado,PorqueTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@PorqueTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                    MySqlCommand comando = new MySqlCommand(consulta, conex);                    
                     comando.Parameters.AddWithValue("@VidaFamiliar", this.VidaFamiliar);
-                    comando.Parameters.AddWithValue("@DireccionPasada", this.DirecionPasada);
-                    comando.Parameters.AddWithValue("@VidaFamiliar", this.VidaFamiliar);
+                    comando.Parameters.AddWithValue("@DireccionPasada", this.DireccionPasada);
+                    //comando.Parameters.AddWithValue("@VidaFamiliar", this.VidaFamiliar);
                     comando.Parameters.AddWithValue("@AnioTraslado", this.AnioTranslado);
                     comando.Parameters.AddWithValue("@PorqueTraslado", this.PorqueTraslado);
                     comando.Parameters.AddWithValue("@ViviendaActual", this.ViviendaActual);
@@ -98,7 +95,7 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                S11_Movilidad movilidad = new S11_Movilidad(Convert.ToInt32(row["idS11_mov"]),Convert.ToInt32(row["CodigoS11"]), Convert.ToString(row["VidaFamiliar"]), Convert.ToString(row["DireccionPasada"]), Convert.ToString(row["AnioTraslado"]),Convert.ToString(row["PorqueTraslado"]),Convert.ToString(row["ViviendaActual"]),Convert.ToString(row["ComentarioFinal"]),Convert.ToInt32(row["Encuestas_idEncuestas"]));
+                S11_Movilidad movilidad = new S11_Movilidad(Convert.ToInt32(row["idS11_mov"]), Convert.ToString(row["VidaFamiliar"]), Convert.ToString(row["DireccionPasada"]), Convert.ToString(row["AnioTraslado"]),Convert.ToString(row["PorqueTraslado"]),Convert.ToString(row["ViviendaActual"]),Convert.ToString(row["ComentarioFinal"]),Convert.ToInt32(row["Encuestas_idEncuestas"]));
                 ListaMovilidad.Add(movilidad);
             }
             return ListaMovilidad;

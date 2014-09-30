@@ -10,8 +10,7 @@ namespace Capa_Datos
 {
     public class S9_Propiedad
     {
-        public int idS9_Prop { get; set; }
-        public int CodigoS9 { get; set; }
+        public int idS9_Prop { get; set; }       
         public String Propio { get; set; }
         public String Propietario { get; set; }
         public String OtroPropietario { get; set; }
@@ -31,8 +30,7 @@ namespace Capa_Datos
         private static MySqlConnection conex = ConexionBD.conexion;
         public S9_Propiedad()
         {
-            this.idS9_Prop = 0;
-            this.CodigoS9 = 0;
+            this.idS9_Prop = 0;            
             this.Propio = "";
             this.Propietario = "";
             this.OtroPropietario = "";
@@ -48,9 +46,8 @@ namespace Capa_Datos
             this.idEncuestas = 0;
 
         }
-        public S9_Propiedad(int idS9_Prop, int CodigoS9, String Propio, String Propietario, String OtroPropietario, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, String NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas){
-            this.idS9_Prop = idS9_Prop;
-            this.CodigoS9 = CodigoS9;
+        public S9_Propiedad(int idS9_Prop, String Propio, String Propietario, String OtroPropietario, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, String NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas){
+            this.idS9_Prop = idS9_Prop;           
             this.Propio = Propio;
             this.Propietario = Propietario;
             this.OtroPropietario = OtroPropietario;
@@ -72,9 +69,9 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = "" ; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
-                comando.Parameters.AddWithValue("@CodigoS9", this.CodigoS9);
+               
                 comando.Parameters.AddWithValue("@Propio", this.Propio);
                 comando.Parameters.AddWithValue("@Propietario", this.Propietario);
                 comando.Parameters.AddWithValue("@OtroPropietario", this.OtroPropietario);
@@ -118,7 +115,7 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                S9_Propiedad propiedad = new S9_Propiedad(Convert.ToInt32(row["idS9_Prop"]), Convert.ToInt32(row["CodigoS9"]), Convert.ToString(row["Propio"]), Convert.ToString(row["Propietario"]), Convert.ToString(row["OtroPropietario"]), Convert.ToString(row["TipoPropietario"]), Convert.ToString(row["OtroTipoPropietario"]), Convert.ToString(row["PropietarioTerreno"]), Convert.ToString(row["TelefonoPropietarioTerreno"]), Convert.ToString(row["NSNR"]), Convert.ToString(row["OtraPropiedad"]), Convert.ToString(row["OtraPropiedadA"]), Convert.ToString(row["OtraPropiedadB"]), Convert.ToString(row["OtraPropiedadC"]), Convert.ToInt32(row["Encuestas_idEncuestas"]));
+                S9_Propiedad propiedad = new S9_Propiedad(Convert.ToInt32(row["idS9_Prop"]), Convert.ToString(row["Propio"]), Convert.ToString(row["Propietario"]), Convert.ToString(row["OtroPropietario"]), Convert.ToString(row["TipoPropietario"]), Convert.ToString(row["OtroTipoPropietario"]), Convert.ToString(row["PropietarioTerreno"]), Convert.ToString(row["TelefonoPropietarioTerreno"]), Convert.ToString(row["NSNR"]), Convert.ToString(row["OtraPropiedad"]), Convert.ToString(row["OtraPropiedadA"]), Convert.ToString(row["OtraPropiedadB"]), Convert.ToString(row["OtraPropiedadC"]), Convert.ToInt32(row["Encuestas_idEncuestas"]));
                 ListaPropiedad.Add(propiedad);
             }
             return ListaPropiedad;

@@ -16,29 +16,49 @@ namespace TechoCeiva
         public frmEncuesta()
         {
             InitializeComponent();
-
-        }
-
-        private void btnFinS11_Click(object sender, EventArgs e)
-        {
             
-        }
+
+        }     
 
         private void pbS11_Siguiente_Click(object sender, EventArgs e)
         {
-            S11_MovilidadLN S11 = new S11_MovilidadLN();
-            Boolean correcto = true; //S11.Ingresar_EncS11(Convert.ToInt32(txtCodigoS11.Text), cbxS11_1_VidaFamiliar.SelectedValue.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedValue.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS10Cont.Parent = null;
-                tbpInfo.Parent = tbcDatos;
-            }
+            if (cbxS11_1_VidaFamiliar.SelectedIndex == -1)
+                cbxS11_1_VidaFamiliar.BackColor = Color.Red;
+            else if (cbxS11_4_ViviedaActual.SelectedIndex == -1)
+                cbxS11_4_ViviedaActual.BackColor = Color.Red;
+            else if (txtS11_2_DireccionPasada.Text == "")
+                txtS11_2_DireccionPasada.BackColor = Color.Red;
+            else if (txtS11_3a_AñoTraslado.Text == "")
+                txtS11_3a_AñoTraslado.BackColor = Color.Red;
+            else if (txtS11_3b_Porque.Text == "")
+                txtS11_3b_Porque.BackColor = Color.Red;
+            else if (txt_S11_ComentarioFinal.Text == "")
+                txt_S11_ComentarioFinal.BackColor = Color.Red;
+
             else
             {
-                MessageBox.Show(S11.obtenerError());
-            }
+                CodigoEncuesta = 1;
+                S11_MovilidadLN S11 = new S11_MovilidadLN(cbxS11_1_VidaFamiliar.SelectedItem.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedItem.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
+                Boolean correcto = S11.Ingresar_S11();
+                if (correcto)
+                {
+                    DialogResult pregunta = MessageBox.Show("Desea Ingresar una nueva Encuesta?", "Pregunta!", MessageBoxButtons.YesNo);
+                    if (pregunta == DialogResult.Yes)
+                    {
+                        tbpS11.Parent = null;
+                        tbpInfo.Parent = tbcDatos;
+                    }
+                    else if (pregunta == DialogResult.No)
+                    {
+                        this.Close();
+                    }
 
+                }
+                else
+                {
+                    MessageBox.Show(S11.obtenerError());
+                }
+            }
         }
 
         private void pbS10Cont_Siguiente_Click(object sender, EventArgs e)
@@ -51,6 +71,8 @@ namespace TechoCeiva
                 MessageBox.Show("Ingresado Correctamente");
                 tbpS10Cont.Parent = null;
                 tbpS11.Parent = tbcDatos;
+                cbxS11_1_VidaFamiliar.SelectedValue = 0;
+                cbxS11_4_ViviedaActual.SelectedValue = 0;
             }
             else
             {
@@ -58,10 +80,7 @@ namespace TechoCeiva
             }
 
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
             S9_PropiedadLN S10 = new S9_PropiedadLN();
@@ -77,28 +96,54 @@ namespace TechoCeiva
                 MessageBox.Show(S10.obtenerError());
             }
         }
-        private void btnS9_Siguiente_Click(object sender, EventArgs e)
-        {
-            
-        }
+
         private void pbS9_Siguiente_Click(object sender, EventArgs e)
         {
-            S9_PropiedadLN S9 = new S9_PropiedadLN();
-            Boolean correcto = true;// S9.Insertar_EncS9(0, cbxS9_1_Propio.SelectedValue.ToString(), cbxS9_Propietario.SelectedValue.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedValue.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
-            if (correcto)
+            if (cbxS9_1_Propio.SelectedIndex==-1)
+                cbxS9_1_Propio.BackColor = Color.Red;
+            else if (cbxS9_Propietario.SelectedIndex==-1)
+                cbxS9_Propietario.BackColor = Color.Red;            
+            else if (cbxS9_TipoPropietario.SelectedIndex == -1)
+                cbxS9_TipoPropietario.BackColor = Color.Red;
+            else if (cbxS9_OtraPropiedad.SelectedIndex == -1)
+                cbxS9_OtraPropiedad.BackColor = Color.Red;
+            else if (cbxS9_Propietario.SelectedIndex == 3)
             {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS9.Parent = null;
-                tbpS10.Parent = tbcDatos;
+                if (txtS9_OtroPropietario.Text == "")
+                    txtS9_OtroPropietario.BackColor = Color.Red;
+            }
+            else if (ckbS9_NSNR.Checked == false)
+            {
+                if (txtS9_PropietarioTerreno.Text == "")
+                    txtS9_PropietarioTerreno.BackColor = Color.Red;
+                else if (txtS9_TelefonoPropietarioTerreno.Text == "")
+                    txtS9_TelefonoPropietarioTerreno.BackColor = Color.Red;
+            }
+            else if (cbxS9_TipoPropietario.SelectedIndex == 4)
+            {
+                if (txtS9_OtroTipoPropietario.Text == "")
+                    txtS9_OtroTipoPropietario.BackColor = Color.Red;
+            }
+            else if (cbxS9_OtraPropiedad.SelectedIndex == 0)
+            {
+                if (txtS9_OtraPropiedadA.Text == "")
+                    txtS9_OtraPropiedadA.BackColor = Color.Red;
             }
             else
             {
-                MessageBox.Show(S9.obtenerError());
+                S9_PropiedadLN S9 = new S9_PropiedadLN(cbxS9_1_Propio.SelectedItem.ToString(), cbxS9_Propietario.SelectedItem.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedItem.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+                Boolean correcto = S9.Insertar_EncS9();
+                if (correcto)
+                {
+                    MessageBox.Show("Ingresado Correctamente");
+                  //  tbpS9.Parent = null;
+                   // tbpS10.Parent = tbcDatos;
+                }
+                else
+                {
+                    MessageBox.Show(S9.obtenerError());
+                }
             }
-        }
-        private void btnS8_Siguiente_Click(object sender, EventArgs e)
-        {
-            
         }
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {
@@ -473,7 +518,7 @@ namespace TechoCeiva
 
         private void frmEncuesta_Load(object sender, EventArgs e)
         {
-            //tbpInfo.Parent = null;
+            tbpInfo.Parent = null;
             tbpS1.Parent = null;
             tbpS2.Parent = null;
             tbpS3.Parent = null;
@@ -482,7 +527,7 @@ namespace TechoCeiva
             tbpS6.Parent = null;
             tbpS7.Parent = null;
             tbpS8.Parent = null;
-            tbpS9.Parent = null;
+            //tbpS9.Parent = null;
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
