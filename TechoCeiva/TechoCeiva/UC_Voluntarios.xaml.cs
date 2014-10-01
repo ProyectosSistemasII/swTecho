@@ -22,5 +22,12 @@ namespace TechoCeiva
 		{
 			this.InitializeComponent();
 		}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
+            nWinAddVoluntario.Show();
+        }
 	}
 }
