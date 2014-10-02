@@ -14,7 +14,7 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <Utf8Output>true</Utf8Output>
-    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -129,9 +129,6 @@
     <Compile Include="WinAddTool.xaml.cs">
       <DependentUpon>WinAddTool.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WinAddVoluntario.xaml.cs">
-      <DependentUpon>WinAddVoluntario.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WinDevolverHelp.xaml.cs">
       <DependentUpon>WinDevolverHelp.xaml</DependentUpon>
     </Compile>
@@ -228,10 +225,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="WinAddTool.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="WinAddVoluntario.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
