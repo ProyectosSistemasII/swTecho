@@ -17,11 +17,10 @@
 
 	<Grid x:Name="LayoutRoot">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="0.127*"/>
-			<RowDefinition Height="0.873*"/>
+			<RowDefinition/>
 		</Grid.RowDefinitions>
-		<Canvas x:Name="canvasMenu" Margin="160.499,0,0,0" Grid.Row="1"/>
-		<Canvas x:Name="CanvasExpander" HorizontalAlignment="Left" Grid.Row="1" Width="160.499">
+		<Canvas x:Name="canvasMenu" Margin="160.499,83.947,0,0"/>
+		<Canvas x:Name="CanvasExpander" HorizontalAlignment="Left" Width="160.499" Margin="0,83.947,0,0">
 			<Rectangle Fill="#FF77777A" Height="0.5" RenderTransformOrigin="0.5,0.5" Width="565.333" Canvas.Left="-122.182" Canvas.Top="285.956">
 				<Rectangle.RenderTransform>
 					<TransformGroup>
@@ -34,7 +33,7 @@
 			</Rectangle>
 			
 			<!-- INICIO DEL EXPANDER PARA MENÚ -->
-			<Expander x:Name="ExpanderMenu" Header="" Canvas.Top="8" Width="160.499" IsExpanded="True">
+			<Expander x:Name="ExpanderMenu" Header="" Width="160.499" IsExpanded="True">
 				<StackPanel>
 					<Expander x:Name="expndrEncuestas" Header="Encuestas" Background="#FF0092DD" Cursor="Hand" Foreground="White" FontSize="14.667" Margin="0,0,-2,0" Expanded="expndrEncuestas_Expanded">
 						<StackPanel>
@@ -631,7 +630,7 @@
 			<!-- FIN DEL EXPANDER PARA MENÚ -->
 			
 		</Canvas>
-		<Canvas x:Name="CanvasHeader">
+		<Canvas x:Name="CanvasHeader" Height="83.947" VerticalAlignment="Top">
 			<Rectangle Fill="#FF77777A" Height="0.5" Canvas.Left="20" Canvas.Top="75.79" Width="1245"/>
 			<Image Source="img/o.png" Stretch="Fill" Width="57" Height="58.947" Canvas.Left="21.5" Canvas.Top="8"/>
 			<Label Content="- CEHIVA" Style="{DynamicResource SimpleLabel}" Width="308.993" Foreground="#FF0092DD" FontSize="48" Canvas.Left="96" Canvas.Top="8"/>
