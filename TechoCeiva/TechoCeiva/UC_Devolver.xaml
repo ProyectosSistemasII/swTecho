@@ -45,8 +45,8 @@
 			<Button x:Name="btnAddSingle" Content="&gt;" Canvas.Left="474.717" Style="{DynamicResource SimpleButton}" Canvas.Top="151.53" Width="50" Height="26" FontSize="14.667" BorderBrush="{x:Null}" Foreground="#FFF0F0F0" Background="#FF626465" VerticalContentAlignment="Center" Click="btnAddSingle_Click" />
 			<Button x:Name="btnAddAll" Content="&gt;&gt;" Canvas.Left="474.717" Style="{DynamicResource SimpleButton}" Canvas.Top="181.53" Width="50" Height="26" FontSize="14.667" BorderBrush="{x:Null}" Foreground="#FFF0F0F0" Background="#FF626465" VerticalContentAlignment="Center"/>
 			<Button Content="x" Canvas.Left="863.417" Style="{DynamicResource SimpleButton}" Canvas.Top="116.53" Width="37" Height="26" FontSize="14.667" BorderBrush="{x:Null}" Foreground="White" Background="#FFC52023"/>
-			<Button Content="Aceptar" Canvas.Left="699.417" Style="{DynamicResource SimpleButton}" Canvas.Top="328.386" Width="160" Height="26" FontSize="14.667" Foreground="White" BorderBrush="{x:Null}" Background="#FF0092DD"/>
-			<Button Content="Cancelar" Canvas.Left="495.717" Style="{DynamicResource SimpleButton}" Canvas.Top="328.386" Width="160" Height="26" FontSize="14.667" Background="#FFC52023" BorderBrush="{x:Null}" Foreground="White"/>
+			<Button Content="Aceptar" Canvas.Left="570.434" Style="{DynamicResource SimpleButton}" Canvas.Top="318.386" Width="109" Height="36" FontSize="14.667" Foreground="White" BorderBrush="{x:Null}" Background="#FF0092DD"/>
+			<Button Content="Cancelar" Canvas.Left="701.717" Style="{DynamicResource SimpleButton}" Canvas.Top="318.386" Width="109" Height="36" FontSize="14.667" Background="#FFC52023" BorderBrush="{x:Null}" Foreground="White"/>
 		</Canvas>
 	</Grid>
 </UserControl>
