@@ -35,11 +35,11 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Canvas x:Name="CanvasTop" Height="92" VerticalAlignment="Top">
-			<Label x:Name="lblTitle" Content="Gestión de Préstamos" Style="{DynamicResource SimpleLabel}" Foreground="#FF626465" FontSize="26.667" Canvas.Left="38" Canvas.Top="18"/>
-			<Button x:Name="btnPrestar" Content="Prestar" Style="{DynamicResource SimpleButton}" Width="112" Height="26" BorderBrush="{x:Null}" Canvas.Left="38" Canvas.Top="66" Click="btnPrestar_Click" />
-			<Button x:Name="btnDevolver" Content="Devolver" Style="{DynamicResource SimpleButton}" Width="112" Height="26" BorderBrush="{x:Null}" Canvas.Left="146.5" Canvas.Top="66" Click="btnDevolver_Click" />
+		<Canvas x:Name="CanvasTop" Height="57" VerticalAlignment="Top">
+			<Label x:Name="lblTitle" Content="Gestión de Préstamos" Style="{DynamicResource SimpleLabel}" Foreground="#FF626465" FontSize="26.667" Canvas.Top="23" Margin="0" Canvas.Left="23"/>
+			<Button x:Name="btnPrestar" Content="Prestar" Style="{DynamicResource SimpleButton}" Width="109" Height="26" BorderBrush="{x:Null}" Canvas.Left="307.5" Canvas.Top="31" Click="btnPrestar_Click" Background="#FF0092DD" Foreground="White" />
+			<Button x:Name="btnDevolver" Content="Devolver" Style="{DynamicResource SimpleButton}" Width="109" Height="26" BorderBrush="{x:Null}" Canvas.Left="411.5" Canvas.Top="31" Click="btnDevolver_Click" Background="#FF0092DD" Foreground="White" />
 		</Canvas>
-		<Canvas x:Name="CanvasBotton" Margin="0,92,0,0"/>
+		<Canvas x:Name="CanvasBotton" Margin="0,57,0,0"/>
 	</Grid>
 </UserControl>

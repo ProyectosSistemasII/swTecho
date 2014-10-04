@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddTool"
 	x:Name="Window"
 	Title="Agregar Herramienta"
-	Width="379" Height="179" ResizeMode="CanMinimize">
+	Width="379" Height="179" ResizeMode="NoResize">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -17,7 +17,7 @@
 	<Grid x:Name="LayoutRoot">
 		<Label x:Name="lblHerramienta" Content="Herramienta:" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<TextBox x:Name="txtHerramienta" Margin="23,42.507,0,0" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="327" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
-		<Button x:Name="btnAgregar" Content="Agregar" Margin="116,92,148,0" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnAgregar_Click" Height="36" VerticalAlignment="Top" />
-		<Button x:Name="btnCancelar" Content="Cancelar" Margin="241,92,0,0" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnCancelar_Click" HorizontalAlignment="Left" Width="109" Height="36" VerticalAlignment="Top" />
+		<Button x:Name="btnAgregar" Content="Agregar" Margin="23,92,0,0" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnAgregar_Click" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="109" Background="#FF0092DD" Foreground="White" />
+		<Button x:Name="btnCancelar" Content="Cancelar" Margin="155,92,0,0" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnCancelar_Click" HorizontalAlignment="Left" Width="109" Height="36" VerticalAlignment="Top" Foreground="White" Background="#FFC52023" />
 	</Grid>
 </Window>

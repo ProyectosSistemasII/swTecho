@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinDevolverHelp"
 	x:Name="Window"
 	Title="Detalle"
-	Width="364" Height="444" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+	Width="352" Height="605" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -15,20 +15,22 @@
 	</Window.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Label x:Name="lblHerramienta" Content="Herramienta:" HorizontalAlignment="Left" Margin="22.999,22,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<Label x:Name="lblFecha" Content="Fecha:" HorizontalAlignment="Left" Margin="65.969,47.506,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<Label x:Name="lblCantidad" Content="Cantidad:" HorizontalAlignment="Left" Margin="45.233,73.012,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<Label x:Name="lblDañadas" Content="Dañadas:" HorizontalAlignment="Left" Margin="66.902,163,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
-		<Label x:Name="lblBuenEstado" Content="En Buen Estado:" HorizontalAlignment="Left" Margin="22.999,192.506,0,206.534" Style="{DynamicResource SimpleLabel}" d:LayoutOverrides="Height" FontSize="14.667"/>
-		<Label x:Name="lblPendientes" Content="Pendientes:" HorizontalAlignment="Left" Margin="51.528,0,0,173.48" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontSize="14.667"/>
-		<Button x:Name="brnAceptar" Content="Aceptar" Margin="173.071,0,24.929,100.04" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Height="26" Width="160" BorderBrush="{x:Null}" Foreground="White" Background="#FF0092DD" FontSize="14.667"/>
-		<Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="173.071,0,0,58.04" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="160" Height="26" Foreground="White" BorderBrush="{x:Null}" Background="#FFC52023" Click="btnCancelar_Click" FontSize="14.667" />
-		<TextBox x:Name="txtHerramienta" Margin="110.515,22,24.929,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" IsEnabled="False"/>
-		<TextBox x:Name="txtFecha" Margin="110.517,47.506,24.928,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" IsEnabled="False"/>
-		<TextBox x:Name="txtCantidad" Margin="110.516,73.012,24.929,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" IsEnabled="False"/>
-		<TextBox x:Name="txtMalas" Margin="129.915,163,24.928,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667"/>
-		<TextBox x:Name="txtBuenEstado" Margin="129.915,192.506,24.928,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" d:LayoutOverrides="Height" FontSize="14.667" VerticalAlignment="Top"/>
-		<TextBox x:Name="txtPendientes" Margin="129.915,0,24.928,167.48" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="14.667"/>
-		<Separator Margin="8,126,8,0" Height="13" VerticalAlignment="Top"/>
+		<Label x:Name="lblHerramienta" Content="Herramienta:" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label x:Name="lblFecha" Content="Fecha de préstamo:" HorizontalAlignment="Left" Margin="23,93.012,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label x:Name="lblCantidad" Content="Cantidad:" HorizontalAlignment="Left" Margin="23,163.024,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label x:Name="lblDañadas" Content="Dañadas:" HorizontalAlignment="Left" Margin="23,238,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
+		<Label x:Name="lblBuenEstado" Content="Pendientes:" HorizontalAlignment="Left" Margin="23,378.028,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
+		<Label x:Name="lblPendientes" Content="Perdídas:" HorizontalAlignment="Left" Margin="23,308.014,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Separator Margin="8,220.037,8,0" Height="13" VerticalAlignment="Top"/>
+		<TextBox x:Name="txtHerramienta" HorizontalAlignment="Left" Margin="23,42.506,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Width="300" IsEnabled="False"/>
+		<TextBox x:Name="txtFechaPrestamo" Margin="23,112.518,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300" IsEnabled="False"/>
+		<TextBox x:Name="txtCantidad" Margin="23,182.53,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300" IsEnabled="False"/>
+		<TextBox x:Name="txtDañadas" Margin="23,257.507,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300"/>
+		<TextBox x:Name="txtPerdidas" Margin="23,327.521,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300"/>
+		<TextBox x:Name="txtPendientes" Margin="23,397.535,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300"/>
+		<Label Content="En Buen Estado:" HorizontalAlignment="Left" Margin="23,448.042,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<TextBox x:Name="txtBuenEstado" Margin="23,467.549,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300"/>
+		<Button x:Name="btnAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="23,518.056,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="36" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White"/>
+		<Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="152,518.056,0,0" Style="{DynamicResource SimpleButton}" Width="109" Background="#FFC52023" Foreground="White" BorderBrush="{x:Null}" Click="btnCancelar_Click" Height="36" VerticalAlignment="Top"/>
 	</Grid>
 </Window>
