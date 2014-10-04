@@ -22,7 +22,7 @@ namespace TechoCeiva
 			this.InitializeComponent();
 			
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
-            txtMalas.Focus();
+            txtDañadas.Focus();
 		}
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
