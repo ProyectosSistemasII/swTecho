@@ -85,8 +85,10 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="_Comunidad.cs" />
     <Compile Include="_Departamento.cs" />
+    <Compile Include="_DetallePrestamo.cs" />
     <Compile Include="_Herramientas.cs" />
     <Compile Include="_Municipio.cs" />
+    <Compile Include="_Prestamo.cs" />
     <Compile Include="_Voluntarios.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

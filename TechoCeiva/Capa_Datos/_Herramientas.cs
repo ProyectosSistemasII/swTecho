@@ -35,11 +35,19 @@ namespace Capa_Datos
             this.Activo = _activo;
         }
 
+        /// <summary>
+        /// para --> Realizar inserción en tabla Herramientas
+        /// 
+        /// value --> no values
+        /// 
+        /// query --> INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)
+        /// </summary>
+        
         public void _Insertar_H()
         {
-            //if (this._errores.Count == 0)
-            //{
-                string query = "";
+            if (this._errores.Count == 0)
+            {
+                string query = "INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
                 _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
@@ -56,7 +64,7 @@ namespace Capa_Datos
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-            //}
+            }
         }
 
  

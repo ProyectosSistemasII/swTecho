@@ -15,7 +15,7 @@ namespace Capa_Datos
         public int idVoluntario { get; set; }
         public DateTime fechaPrestamo { get; set; }
         public String Observaciones { get; set; }
-        public Boolean Activo { get; set; }
+        public int Activo { get; set; }
         public DateTime fechaFinPrestamo { get; set; }
 
         public List<Error> _errores { get; set; }
@@ -31,12 +31,12 @@ namespace Capa_Datos
             this.idVoluntario = 0;
             this.fechaPrestamo =  DateTime.Parse("YYYY/MM/DD");
             this.Observaciones = "";
-            this.Activo = true;
+            this.Activo = 0;
             this.fechaFinPrestamo = DateTime.Parse("YYYY/MM/DD");
 
         }
 
-        public _Prestamo(int _idPrestamo, int _idDetallePrestamo, int _idUsuario, int _idVoluntario, DateTime _fechaPrestamo, String _Observaciones, Boolean _Activo, DateTime _fechaFinPrestamo)
+        public _Prestamo(int _idPrestamo, int _idDetallePrestamo, int _idUsuario, int _idVoluntario, DateTime _fechaPrestamo, String _Observaciones, int _Activo, DateTime _fechaFinPrestamo)
         {
             this.iDPrestamo = _idPrestamo;
             this.idDetallePrestamo = _idDetallePrestamo;
