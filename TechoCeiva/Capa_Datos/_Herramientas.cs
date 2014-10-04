@@ -40,18 +40,18 @@ namespace Capa_Datos
         /// 
         /// value --> no values
         /// 
-        /// query --> INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)
+        /// query --> INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)
         /// </summary>
         
         public void _Insertar_H()
         {
             if (this._errores.Count == 0)
             {
-                string query = "INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)";
+                string query = @"INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
-                _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
-                _comando.Parameters.AddWithValue("@Activo", this.Activo);
+                _comando.Parameters.AddWithValue("?Nomre", this.Nombre);
+                _comando.Parameters.AddWithValue("?Existencia", this.Existencia);
+                _comando.Parameters.AddWithValue("?Activo", this.Activo);
 
                 try
                 {

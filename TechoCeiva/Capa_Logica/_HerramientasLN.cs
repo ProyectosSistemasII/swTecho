@@ -20,8 +20,7 @@ namespace Capa_Logica
         public Boolean Ingresar_Herramienta(string _nombre, int _existencia, Boolean _activo)
         {
             Boolean _correcto = true;
-            _Herramientas nHerramienta = new _Herramientas(0, _nombre, _existencia, _activo);
-            //nHerramienta._Insertar_H();
+            _Herramientas nHerramienta = new _Herramientas(1, _nombre, _existencia, _activo);
 
             this.idHerramientas = nHerramienta.idHerramientas;
             this.Nombre = nHerramienta.Nombre;
@@ -29,13 +28,18 @@ namespace Capa_Logica
             this.Activo = nHerramienta.Activo;
             this._errores = nHerramienta._errores;
 
-            /*
+            this._errores = new List<Error>();
             if (_errores.Count > 0)
             {
                 _correcto = false;
             }
-             */
+             
             return _correcto;           
+        }
+
+        public void InsertarEn_DB()
+        {
+            this._Insertar_H();
         }
 
         public string _Obtener_Error()

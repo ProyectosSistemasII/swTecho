@@ -34,13 +34,14 @@ namespace TechoCeiva
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
             _HerramientasLN nuevaHerramienta = new _HerramientasLN();
-            Boolean correcto = nuevaHerramienta.Ingresar_Herramienta(txtHerramienta.Text, 0, true);
+            Boolean correcto = nuevaHerramienta.Ingresar_Herramienta(txtHerramienta.Text.ToString(), 0, true);
             txtHerramienta.Clear();
-            txtHerramienta.Focus();
 
             if (correcto)
             {
+                nuevaHerramienta.InsertarEn_DB();
                 MessageBox.Show("Herramienta ingresada correctamente");
+                txtHerramienta.Focus();
             }
             else
             {
