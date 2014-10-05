@@ -25,12 +25,23 @@ namespace TechoCeiva
         /// -----------------------------------------------------------------------------------------------------------
 
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
-           String cbxS8_AccesoAguatxt ="";
-           String cbxS8_FuenteAguatxt="";
+        String cbxS8_AccesoAguatxt ="";
+        String cbxS8_FuenteAguatxt="";
            String cbxS8_EnergiaElectricatxt="";
            String cbxS8_EnergiaCocinatxt="";
            String cbxS8_Sanitariotxt="";
            String cbxS8_BasuraHogartxt = "";
+        ///----------------------------------
+           //selecciones en la pregunta 8.08
+          int rbtS808_Refrigerador = 0;
+          int rbtS808_EquipoDeSonido = 0;
+          int rbtS808_Televisor = 0;
+          int rbtS808_ReproductorDVD = 0;
+          int rbtS808_Motocicleta = 0;
+          int rbtS808_Automovil = 0;
+          int rbtS808_Computadora = 0;
+          int rbtS808_Amueblado = 0;
+          int rbtS808_Otros = 0;
         /// -----------------------------------------------------------------------------------------------------------
 
         Int32 CodigoEncuesta { get; set; }
@@ -246,8 +257,9 @@ namespace TechoCeiva
         }
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {
+            
             this.VerificarCombox_S8();
-            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta,0,0);
+            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta,0,this.IngresarS808().idS808_Serv);
 
             Boolean correcto = S8.Insertar_EncuS8();
             if (correcto)
@@ -265,7 +277,10 @@ namespace TechoCeiva
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S8(S8.errores[i].NumeroPregunta);
             }
+
+            
         }
+        
         private void Comprobar_S8(int pregunta)
         {
             switch (pregunta)
@@ -335,6 +350,93 @@ namespace TechoCeiva
                 cbxS8_Sanitariotxt = cbxS8_Sanitario.SelectedItem.ToString();
             if (cbxS8_BasuraHogar.SelectedIndex != -1)
                 cbxS8_BasuraHogartxt = cbxS8_BasuraHogar.SelectedItem.ToString();
+            
+        }
+        public S808_ServiciosLN IngresarS808()
+        {
+            this.VerificarRadioBtn_S808();
+            S808_ServiciosLN s808 = new S808_ServiciosLN(rbtS808_Refrigerador, rbtS808_EquipoDeSonido, rbtS808_Televisor, rbtS808_ReproductorDVD, rbtS808_Motocicleta, rbtS808_Automovil, rbtS808_Computadora, rbtS808_Amueblado, rbtS808_Otros, rbtS808_OtroEspecificar.Text);
+            Boolean correcto = s808.Insertar_EncuS808();
+            if (!correcto)
+            {
+                MessageBox.Show(s808.obtenerError().mensaje);
+                int cant = s808.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S808(s808.errores[i].NumeroPregunta);
+            }
+            return s808;
+        }
+        private void Comprobar_S808(int pregunta)
+        {
+            switch (pregunta)
+            {
+                case 9:
+                    rbtS808_OtroEspecificar.BackColor = ColorCampsVacios;
+                    rbtS808_OtroEspecificar.Focus();
+                    break;
+                
+            }
+        }
+
+        public void VerificarRadioBtn_S808()
+        {
+            if (rbtS808_Refrigerador_M.Checked)
+                rbtS808_Refrigerador = 1;
+            else if (rbtS808_Refrigerador_R.Checked)
+                rbtS808_Refrigerador = 2;
+            else if (rbtS808_Refrigerador_B.Checked)
+                rbtS808_Refrigerador = 3;
+            if (rbtS808_EquipoSonido_M.Checked)
+                rbtS808_EquipoDeSonido = 1;
+            else if (rbtS808_EquipoSonido_R.Checked)
+                rbtS808_EquipoDeSonido = 2;
+            else if (rbtS808_EquipoSonido_B.Checked)
+                rbtS808_EquipoDeSonido = 3;
+
+            if (rbtS808_Televisor_M.Checked)
+                rbtS808_Televisor = 1;
+            else if (rbtS808_Televisor_R.Checked)
+                rbtS808_Televisor = 2;
+            else if (rbtS808_Televisor_B.Checked)
+                rbtS808_Televisor = 3;
+            if (rbtS808_DVD_M.Checked)
+                rbtS808_ReproductorDVD = 1;
+            else if (rbtS808_DVD_R.Checked)
+                rbtS808_ReproductorDVD = 2;
+            else if (rbtS808_DVD_B.Checked)
+                rbtS808_ReproductorDVD = 3;
+            if(rbtS808_Motocleta_M.Checked)
+                rbtS808_Motocicleta =1;
+            else if(rbtS808_Motocleta_R.Checked)
+                rbtS808_Motocicleta =2;
+            else if(rbtS808_Motocicleta_B.Checked)
+                rbtS808_Motocicleta=3;
+            if(rbtS808_Automovil_M.Checked)
+                rbtS808_Automovil =1;
+            else if(rbtS808_Automovil_R.Checked)
+                rbtS808_Automovil =2;
+            else if(rbtS808_Automovil_B.Checked)
+                rbtS808_Automovil =3;
+            if(rbtS808_Computadora_M.Checked)
+                rbtS808_Computadora =1;
+            else if(rbtS808_Computadora_R.Checked)
+                rbtS808_Computadora =2;
+            else if (rbtS808_Computadora_B.Checked)
+                rbtS808_Computadora=3;
+            if(rbtS808_Amueblado_M.Checked)
+                rbtS808_Amueblado =1;
+            else if(rbtS808_Amueblado_R.Checked)
+                rbtS808_Amueblado =2;
+            else if(rbtS808_Amueblado_B.Checked)
+                rbtS808_Amueblado =3;
+            if (rbtS808_Otros_M.Checked)
+                rbtS808_Otros = 1;
+            else if (rbtS808_Otros_R.Checked)
+                rbtS808_Otros = 2;
+            else if (rbtS808_Otros_B.Checked)
+                rbtS808_Otros = 3;
+
             
         }
         private void cbxS9_Propietario_SelectedIndexChanged(object sender, EventArgs e)
@@ -839,6 +941,31 @@ namespace TechoCeiva
         {
             if (cbxS9_1_Propio.SelectedIndex == 1)
                 MessageBox.Show("Debe continuar con la pregunta 3");
+        }
+
+        
+        private void rbtS808_Otros_B_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtS808_Otros_B.Checked)
+                rbtS808_OtroEspecificar.Enabled = true;
+            else
+                rbtS808_OtroEspecificar.Enabled = false;
+        }
+
+        private void rbtS808_Otros_R_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtS808_Otros_R.Checked)
+                rbtS808_OtroEspecificar.Enabled = true;
+            else
+                rbtS808_OtroEspecificar.Enabled = false;
+        }
+
+        private void rbtS808_Otros_M_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtS808_Otros_M.Checked)
+                rbtS808_OtroEspecificar.Enabled = true;
+            else
+                rbtS808_OtroEspecificar.Enabled = false;
         }
         
     }

@@ -89,18 +89,27 @@ namespace Capa_Datos
             return ListaServicios;
 
         }
-        public Boolean eliminarS807(string id)
+        public Int32 Obtener_Ultima_EncS807()
         {
-            MySqlCommand eliminar = new MySqlCommand("update  S807_Serv set Activo=false where idS807_Serv='" + id + "'", conex);
+            int i = 0;
+            MySqlCommand comando = new MySqlCommand("select max(idS807_Serv) as Contador from S807_Serv", conex);
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            i = Convert.ToInt32(row["Contador"]);
+            if (i == 0)
+            {
+                Error error = new Error("", 41);
+                errores.Add(error);
+            }
+            return i;
 
-            eliminar.Connection.Open();
-            eliminar.ExecuteNonQuery();
-            eliminar.Connection.Close();
-            return true;
         }
-           
-
-
+ 
 
     }
 }
