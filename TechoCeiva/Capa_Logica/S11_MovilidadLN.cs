@@ -62,53 +62,54 @@ namespace Capa_Logica
             Regex regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.VidaFamiliar))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 1", 2);
+                Error error = new Error("Debe seleccionar datos de la pregunta 1", 5000,1);
                 errores.Add(error);
-                goto fin;
+            //    goto fin;
             }
             regex = new Regex(expresion_TextoNumero);
             if (!regex.IsMatch(this.DireccionPasada))
             {
-                Error error = new Error("Debe ingresar datos de la pregunta 2", 2);
+                Error error = new Error("Debe ingresar datos de la pregunta 2", 5000,2);
                 errores.Add(error);
-                goto fin;
+              //  goto fin;
             }
             regex = new Regex(expresion_Año);
             if (!regex.IsMatch(this.AnioTranslado))
             {
-                Error error = new Error("Debe ingresar datos de año en formato 'AAAA'", 2);
+                Error error = new Error("Debe ingresar datos de año en formato 'AAAA'", 5000,3);
                 errores.Add(error);
-                goto fin;
+                //goto fin;
             }
             regex = new Regex(expresion_Texto);
             if (!regex.IsMatch(this.PorqueTraslado))
             {
-                Error error = new Error("Debe ingresar datos de la pregunta 3", 2);
+                Error error = new Error("Debe ingresar datos de la pregunta 3", 5000,301);
                 errores.Add(error);
-                goto fin;
+                //goto fin;
             }
             regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.ViviendaActual))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 4", 2);
+                Error error = new Error("Debe seleccionar datos de la pregunta 4", 5000,4);
                 errores.Add(error);
-                goto fin;
+                //goto fin;
             }
             regex = new Regex(expresion_TextoNumero);
-            if (!regex.IsMatch(this.ViviendaActual))
+            if (!regex.IsMatch(this.ComentarioFinal))
             {
-                Error error = new Error("Debe ingresar algunos comentarios finales", 2);
+                Error error = new Error("Debe ingresar algunos comentarios finales", 5000,5);
                 errores.Add(error);
-                goto fin;
+                //goto fin;
             }
-        fin:
-            return;
+//        fin:
+  //          return;
         }
 
-        public string obtenerError()
+        public Error obtenerError()
         {
             Error error = errores[0];
-            return error.mensaje;
+            return error;
         }
+
     }
 }

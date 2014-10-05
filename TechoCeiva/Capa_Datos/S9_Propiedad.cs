@@ -121,18 +121,6 @@ namespace Capa_Datos
             return ListaPropiedad;
 
         }
-        public Boolean eliminarS9(string id)
-        {
-            MySqlCommand eliminar = new MySqlCommand("update  S9_Prop set Activo=false where idS9_Prop='" + id + "'", conex);
-
-            eliminar.Connection.Open();
-            eliminar.ExecuteNonQuery();
-            eliminar.Connection.Close();
-            return true;
-        }
-
-
-
 
     }
 }

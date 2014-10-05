@@ -583,8 +583,8 @@
             this.txtS10_Ayudo = new System.Windows.Forms.TextBox();
             this.label89 = new System.Windows.Forms.Label();
             this.tbpS10Cont = new System.Windows.Forms.TabPage();
-            this.groupBox98 = new System.Windows.Forms.GroupBox();
             this.pbS10Cont_Siguiente = new System.Windows.Forms.PictureBox();
+            this.groupBox98 = new System.Windows.Forms.GroupBox();
             this.groupBox108 = new System.Windows.Forms.GroupBox();
             this.label148 = new System.Windows.Forms.Label();
             this.txtS10_ComentarioEstadoFuturo = new System.Windows.Forms.TextBox();
@@ -604,6 +604,7 @@
             this.txtS10_LiderA = new System.Windows.Forms.TextBox();
             this.label145 = new System.Windows.Forms.Label();
             this.groupBox105 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtS10_ComentarioConfianza = new System.Windows.Forms.TextBox();
             this.cbxS10_ConfiazaOrganizacion = new System.Windows.Forms.ComboBox();
             this.label135 = new System.Windows.Forms.Label();
@@ -636,8 +637,6 @@
             this.tbpS11 = new System.Windows.Forms.TabPage();
             this.pbS11_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
-            this.groupBox111 = new System.Windows.Forms.GroupBox();
-            this.txt_S11_ComentarioFinal = new System.Windows.Forms.TextBox();
             this.label140 = new System.Windows.Forms.Label();
             this.groupBox110 = new System.Windows.Forms.GroupBox();
             this.cbxS11_4_ViviedaActual = new System.Windows.Forms.ComboBox();
@@ -654,7 +653,8 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txt_S11_ComentarioFinal = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -782,8 +782,8 @@
             this.groupBox72.SuspendLayout();
             this.groupBox97.SuspendLayout();
             this.tbpS10Cont.SuspendLayout();
-            this.groupBox98.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS10Cont_Siguiente)).BeginInit();
+            this.groupBox98.SuspendLayout();
             this.groupBox108.SuspendLayout();
             this.groupBox107.SuspendLayout();
             this.groupBox106.SuspendLayout();
@@ -797,11 +797,11 @@
             this.tbpS11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS11_Siguiente)).BeginInit();
             this.groupBox102.SuspendLayout();
-            this.groupBox111.SuspendLayout();
             this.groupBox110.SuspendLayout();
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -5099,11 +5099,11 @@
             // 
             this.cbxS9_TipoPropietario.FormattingEnabled = true;
             this.cbxS9_TipoPropietario.Items.AddRange(new object[] {
-            "01. Municipal",
-            "02. Colonato / peonía",
-            "03. Alquiler del terreno/vivienda",
-            "04. Ocupación irregular",
-            "05. Otro (especifique)",
+            "Municipal",
+            "Colonato/peonia",
+            "Alquiler del terreno/vivienda",
+            "Ocupación irregular",
+            "Otro (especifique)",
             "NS/NR"});
             this.cbxS9_TipoPropietario.Location = new System.Drawing.Point(23, 45);
             this.cbxS9_TipoPropietario.Name = "cbxS9_TipoPropietario";
@@ -5179,7 +5179,7 @@
             this.cbxS9_1_Propio.FormattingEnabled = true;
             this.cbxS9_1_Propio.Items.AddRange(new object[] {
             "Si",
-            "No\t\t► (3)",
+            "No",
             "NS/NR"});
             this.cbxS9_1_Propio.Location = new System.Drawing.Point(20, 28);
             this.cbxS9_1_Propio.Name = "cbxS9_1_Propio";
@@ -6623,6 +6623,17 @@
             this.tbpS10Cont.Text = "Cont. Sección 10";
             this.tbpS10Cont.UseVisualStyleBackColor = true;
             // 
+            // pbS10Cont_Siguiente
+            // 
+            this.pbS10Cont_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS10Cont_Siguiente.Location = new System.Drawing.Point(878, 487);
+            this.pbS10Cont_Siguiente.Name = "pbS10Cont_Siguiente";
+            this.pbS10Cont_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS10Cont_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS10Cont_Siguiente.TabIndex = 17;
+            this.pbS10Cont_Siguiente.TabStop = false;
+            this.pbS10Cont_Siguiente.Click += new System.EventHandler(this.pbS10Cont_Siguiente_Click);
+            // 
             // groupBox98
             // 
             this.groupBox98.AutoSize = true;
@@ -6642,17 +6653,6 @@
             this.groupBox98.TabIndex = 5;
             this.groupBox98.TabStop = false;
             this.groupBox98.Text = "...CONTINUACIÓN DE COMUNIDAD";
-            // 
-            // pbS10Cont_Siguiente
-            // 
-            this.pbS10Cont_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS10Cont_Siguiente.Location = new System.Drawing.Point(878, 487);
-            this.pbS10Cont_Siguiente.Name = "pbS10Cont_Siguiente";
-            this.pbS10Cont_Siguiente.Size = new System.Drawing.Size(53, 59);
-            this.pbS10Cont_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbS10Cont_Siguiente.TabIndex = 17;
-            this.pbS10Cont_Siguiente.TabStop = false;
-            this.pbS10Cont_Siguiente.Click += new System.EventHandler(this.pbS10Cont_Siguiente_Click);
             // 
             // groupBox108
             // 
@@ -6848,6 +6848,15 @@
             this.groupBox105.Size = new System.Drawing.Size(300, 143);
             this.groupBox105.TabIndex = 13;
             this.groupBox105.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "¿Por qué razón?";
             // 
             // txtS10_ComentarioConfianza
             // 
@@ -7167,7 +7176,7 @@
             // groupBox102
             // 
             this.groupBox102.AutoSize = true;
-            this.groupBox102.Controls.Add(this.groupBox111);
+            this.groupBox102.Controls.Add(this.groupBox1);
             this.groupBox102.Controls.Add(this.groupBox110);
             this.groupBox102.Controls.Add(this.groupBox112);
             this.groupBox102.Controls.Add(this.groupBox113);
@@ -7179,28 +7188,10 @@
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "MOVILIDAD";
             // 
-            // groupBox111
-            // 
-            this.groupBox111.Controls.Add(this.txt_S11_ComentarioFinal);
-            this.groupBox111.Controls.Add(this.label140);
-            this.groupBox111.Location = new System.Drawing.Point(341, 91);
-            this.groupBox111.Name = "groupBox111";
-            this.groupBox111.Size = new System.Drawing.Size(300, 209);
-            this.groupBox111.TabIndex = 4;
-            this.groupBox111.TabStop = false;
-            // 
-            // txt_S11_ComentarioFinal
-            // 
-            this.txt_S11_ComentarioFinal.Location = new System.Drawing.Point(23, 39);
-            this.txt_S11_ComentarioFinal.Multiline = true;
-            this.txt_S11_ComentarioFinal.Name = "txt_S11_ComentarioFinal";
-            this.txt_S11_ComentarioFinal.Size = new System.Drawing.Size(246, 156);
-            this.txt_S11_ComentarioFinal.TabIndex = 3;
-            // 
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(3, 9);
+            this.label140.Location = new System.Drawing.Point(13, 13);
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(266, 26);
             this.label140.TabIndex = 1;
@@ -7210,7 +7201,7 @@
             // 
             this.groupBox110.Controls.Add(this.cbxS11_4_ViviedaActual);
             this.groupBox110.Controls.Add(this.label153);
-            this.groupBox110.Location = new System.Drawing.Point(342, 19);
+            this.groupBox110.Location = new System.Drawing.Point(327, 17);
             this.groupBox110.Name = "groupBox110";
             this.groupBox110.Size = new System.Drawing.Size(300, 70);
             this.groupBox110.TabIndex = 7;
@@ -7244,7 +7235,7 @@
             this.groupBox112.Controls.Add(this.label161);
             this.groupBox112.Controls.Add(this.txtS11_3a_AñoTraslado);
             this.groupBox112.Controls.Add(this.label157);
-            this.groupBox112.Location = new System.Drawing.Point(27, 176);
+            this.groupBox112.Location = new System.Drawing.Point(12, 174);
             this.groupBox112.Name = "groupBox112";
             this.groupBox112.Size = new System.Drawing.Size(300, 124);
             this.groupBox112.TabIndex = 4;
@@ -7298,7 +7289,7 @@
             // 
             this.groupBox113.Controls.Add(this.txtS11_2_DireccionPasada);
             this.groupBox113.Controls.Add(this.label158);
-            this.groupBox113.Location = new System.Drawing.Point(27, 91);
+            this.groupBox113.Location = new System.Drawing.Point(12, 89);
             this.groupBox113.Name = "groupBox113";
             this.groupBox113.Size = new System.Drawing.Size(300, 83);
             this.groupBox113.TabIndex = 3;
@@ -7325,7 +7316,7 @@
             // 
             this.groupBox114.Controls.Add(this.cbxS11_1_VidaFamiliar);
             this.groupBox114.Controls.Add(this.label159);
-            this.groupBox114.Location = new System.Drawing.Point(27, 19);
+            this.groupBox114.Location = new System.Drawing.Point(12, 17);
             this.groupBox114.Name = "groupBox114";
             this.groupBox114.Size = new System.Drawing.Size(300, 70);
             this.groupBox114.TabIndex = 0;
@@ -7355,14 +7346,23 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
     "urante toda su VIDA FAMILIAR?\r\n";
             // 
-            // label2
+            // txt_S11_ComentarioFinal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "¿Por qué razón?";
+            this.txt_S11_ComentarioFinal.Location = new System.Drawing.Point(22, 44);
+            this.txt_S11_ComentarioFinal.Multiline = true;
+            this.txt_S11_ComentarioFinal.Name = "txt_S11_ComentarioFinal";
+            this.txt_S11_ComentarioFinal.Size = new System.Drawing.Size(250, 150);
+            this.txt_S11_ComentarioFinal.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_S11_ComentarioFinal);
+            this.groupBox1.Controls.Add(this.label140);
+            this.groupBox1.Location = new System.Drawing.Point(327, 89);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(300, 209);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
             // 
             // frmEncuesta
             // 
@@ -7590,8 +7590,8 @@
             this.groupBox97.PerformLayout();
             this.tbpS10Cont.ResumeLayout(false);
             this.tbpS10Cont.PerformLayout();
-            this.groupBox98.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS10Cont_Siguiente)).EndInit();
+            this.groupBox98.ResumeLayout(false);
             this.groupBox108.ResumeLayout(false);
             this.groupBox108.PerformLayout();
             this.groupBox107.ResumeLayout(false);
@@ -7616,8 +7616,6 @@
             this.tbpS11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS11_Siguiente)).EndInit();
             this.groupBox102.ResumeLayout(false);
-            this.groupBox111.ResumeLayout(false);
-            this.groupBox111.PerformLayout();
             this.groupBox110.ResumeLayout(false);
             this.groupBox110.PerformLayout();
             this.groupBox112.ResumeLayout(false);
@@ -7626,6 +7624,8 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -7907,8 +7907,6 @@
         private System.Windows.Forms.DataGridView dgvS3;
         private System.Windows.Forms.TabPage tbpS11;
         private System.Windows.Forms.GroupBox groupBox102;
-        private System.Windows.Forms.GroupBox groupBox111;
-        private System.Windows.Forms.TextBox txt_S11_ComentarioFinal;
         private System.Windows.Forms.Label label140;
         private System.Windows.Forms.GroupBox groupBox110;
         private System.Windows.Forms.ComboBox cbxS11_4_ViviedaActual;
@@ -8259,6 +8257,8 @@
         private System.Windows.Forms.PictureBox pbS11_Siguiente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_S11_ComentarioFinal;
+        private System.Windows.Forms.GroupBox groupBox1;
 
     }
 }

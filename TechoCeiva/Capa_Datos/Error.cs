@@ -9,6 +9,7 @@ namespace Capa_Datos
     public class Error
     {
         public int tipoError { get; set; }
+        public int NumeroPregunta { get; set; }
         public string mensaje { get; set; }
 
         public Error(string tabla, int Numero)
@@ -25,7 +26,7 @@ namespace Capa_Datos
                     break;
                 case 2:
                     this.tipoError = 1;
-                    this.mensaje = "El siguiente campo no se ha rellenado correctamente: " + tabla;
+                    this.mensaje = "Error en Campo: " + tabla;
                     break;
                 case 3:
                     this.tipoError = 1;
@@ -48,7 +49,20 @@ namespace Capa_Datos
                     this.mensaje = "La base de datos ha sido modificada, hace falta la siguiente tabla: "+ tabla;
                     break;
             }
+
         }
+       public Error(string tabla, int tipo, int numero )
+        {
+            switch (tipo)
+            {   case 5000:
+                    this.tipoError = tipo;
+                    this.NumeroPregunta = numero;
+                    this.mensaje = "Error en Campo: " + tabla;
+                    break;
+            }
+
+        }
+    
     
     }
 }

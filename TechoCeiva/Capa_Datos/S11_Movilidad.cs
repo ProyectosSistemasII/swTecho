@@ -59,7 +59,6 @@ namespace Capa_Datos
                     MySqlCommand comando = new MySqlCommand(consulta, conex);                    
                     comando.Parameters.AddWithValue("@VidaFamiliar", this.VidaFamiliar);
                     comando.Parameters.AddWithValue("@DireccionPasada", this.DireccionPasada);
-                    //comando.Parameters.AddWithValue("@VidaFamiliar", this.VidaFamiliar);
                     comando.Parameters.AddWithValue("@AnioTraslado", this.AnioTranslado);
                     comando.Parameters.AddWithValue("@PorqueTraslado", this.PorqueTraslado);
                     comando.Parameters.AddWithValue("@ViviendaActual", this.ViviendaActual);
@@ -101,15 +100,5 @@ namespace Capa_Datos
             return ListaMovilidad;
 
         }
-        public Boolean eliminarS11(string id)
-        {
-            MySqlCommand eliminar = new MySqlCommand("update  S11_Mov set Activo=false where idS11_Mov='" + id + "'", conex);
-
-            eliminar.Connection.Open();
-            eliminar.ExecuteNonQuery();
-            eliminar.Connection.Close();
-            return true;
-        }
-
     }
 }
