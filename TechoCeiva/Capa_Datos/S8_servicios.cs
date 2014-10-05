@@ -10,7 +10,6 @@ namespace Capa_Datos
     public class S8_Servicios
     {
         public int idS8_serv { get; set; }
-        public int CodigoS8  { get; set; }
         public String AccesoAgua  { get; set; }
         public String FuenteAgua  { get; set; }
         public String OtraFuente { get; set; }
@@ -33,7 +32,6 @@ namespace Capa_Datos
         public S8_Servicios()
         {
             this.idS8_serv = 0;
-            this.CodigoS8 = 0;
             this.AccesoAgua = "";
             this.FuenteAgua = "";
             this.OtraFuente = "";
@@ -49,9 +47,8 @@ namespace Capa_Datos
             this.idS807_serv = 0;
             this.idS808_serv = 0;
         }
-        public S8_Servicios(int idS8_serv, int codigoS8, String AccesoAgua, String FuenteAgua, String OtraFuente,String Energia, String OtraEnergia, String Cocina, String OtraCocina, String Sanitario, String OtroTipoSanitario, String BasuraHogar, String OtroTipoBasura, int idEncuesta, int idS807, int idS808) {
+        public S8_Servicios(int idS8_serv, String AccesoAgua, String FuenteAgua, String OtraFuente,String Energia, String OtraEnergia, String Cocina, String OtraCocina, String Sanitario, String OtroTipoSanitario, String BasuraHogar, String OtroTipoBasura, int idEncuesta, int idS807, int idS808) {
             this.idS808_serv = idS8_serv;
-            this.CodigoS8 = codigoS8;
             this.AccesoAgua = AccesoAgua;
             this.FuenteAgua = FuenteAgua;
             this.OtraFuente = OtraFuente;
@@ -73,7 +70,6 @@ namespace Capa_Datos
             {
                 string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
-                comando.Parameters.AddWithValue("@CodigoS8", this.CodigoS8);
                 comando.Parameters.AddWithValue("@AccesoAgua", this.AccesoAgua);
                 comando.Parameters.AddWithValue("@FuenteAgua", this.FuenteAgua);
                 comando.Parameters.AddWithValue("@OtraFuente", this.OtraFuente);
@@ -118,21 +114,11 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                S8_Servicios servicios = new S8_Servicios(Convert.ToInt32(row["idS8_Serv"]), Convert.ToInt32(row["CodigoS8"]), Convert.ToString(row["AccesoAgua"]), Convert.ToString(row["FuenteAgua"]), Convert.ToString(row["OtraFuente"]), Convert.ToString(row["EnergiaElectrica"]), Convert.ToString(row["OtraEnergiaElectrica"]), Convert.ToString(row["EnergiaCocina"]), Convert.ToString(row["OtraEnergiaCocina"]), Convert.ToString(row["Sanitario"]), Convert.ToString(row["OtroTipoSanitario"]), Convert.ToString(row["BasuraHogar"]), Convert.ToString(row["OtroTipoBasura"]), Convert.ToInt32(row["Encuestas_idEncuestas"]), Convert.ToInt32(row["S807_Serv_idS807_Serv"]), Convert.ToInt32(row["S808_Serv_idS808_Serv"]));
+                S8_Servicios servicios = new S8_Servicios(Convert.ToInt32(row["idS8_Serv"]), Convert.ToString(row["AccesoAgua"]), Convert.ToString(row["FuenteAgua"]), Convert.ToString(row["OtraFuente"]), Convert.ToString(row["EnergiaElectrica"]), Convert.ToString(row["OtraEnergiaElectrica"]), Convert.ToString(row["EnergiaCocina"]), Convert.ToString(row["OtraEnergiaCocina"]), Convert.ToString(row["Sanitario"]), Convert.ToString(row["OtroTipoSanitario"]), Convert.ToString(row["BasuraHogar"]), Convert.ToString(row["OtroTipoBasura"]), Convert.ToInt32(row["Encuestas_idEncuestas"]), Convert.ToInt32(row["S807_Serv_idS807_Serv"]), Convert.ToInt32(row["S808_Serv_idS808_Serv"]));
                 ListaServicios.Add(servicios);
             }
             return ListaServicios;
 
         }
-        public Boolean eliminarS8(string id)
-        {
-            MySqlCommand eliminar = new MySqlCommand("update  S8_Serv set Activo=false where idS8_Serv='" + id + "'", conex);
-
-            eliminar.Connection.Open();
-            eliminar.ExecuteNonQuery();
-            eliminar.Connection.Close();
-            return true;
-        }
-
     }
 }

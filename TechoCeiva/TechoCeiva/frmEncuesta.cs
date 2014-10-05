@@ -18,12 +18,23 @@ namespace TechoCeiva
         String cbxS9_TipoPropietariotxt = "";
         String cbxS9_OtraPropiedadtxt = "";
        ///---------------------------------------------------------------------------------------------------------
+       
         // variables para que no deje error los combobox cuando estan vacios Seccion 11
         String cbxS11_1_VidaFamiliartxt= "";
         String cbxS11_4_ViviedaActualtxt= "";
         /// -----------------------------------------------------------------------------------------------------------
-       
+
+        // variables para que no deje error los combobox cuando estan vacios Seccion 8
+           String cbxS8_AccesoAguatxt ="";
+           String cbxS8_FuenteAguatxt="";
+           String cbxS8_EnergiaElectricatxt="";
+           String cbxS8_EnergiaCocinatxt="";
+           String cbxS8_Sanitariotxt="";
+           String cbxS8_BasuraHogartxt = "";
+        /// -----------------------------------------------------------------------------------------------------------
+
         Int32 CodigoEncuesta { get; set; }
+        Color ColorCampsVacios = Color.Red;
         public frmEncuesta()
         {
             InitializeComponent();
@@ -62,27 +73,27 @@ namespace TechoCeiva
             switch (pregunta)
             {
                 case 1:
-                    cbxS11_1_VidaFamiliar.BackColor = Color.Red;
+                    cbxS11_1_VidaFamiliar.BackColor = ColorCampsVacios;
                     cbxS11_1_VidaFamiliar.Focus();
                     break;
                 case 2:
-                    txtS11_2_DireccionPasada.BackColor = Color.Red;
+                    txtS11_2_DireccionPasada.BackColor = ColorCampsVacios;
                         txtS11_2_DireccionPasada.Focus();
                     break;     
                 case 3:
-                        txtS11_3a_AñoTraslado.BackColor = Color.Red;
+                    txtS11_3a_AñoTraslado.BackColor = ColorCampsVacios;
                         txtS11_3a_AñoTraslado.Focus();
                     break;
                 case 301:
-                        txtS11_3b_Porque.BackColor = Color.Red;
+                        txtS11_3b_Porque.BackColor = ColorCampsVacios;
                         txtS11_3b_Porque.Focus();
                     break;
                 case 4:
-                        cbxS11_4_ViviedaActual.BackColor = Color.Red;
+                    cbxS11_4_ViviedaActual.BackColor = ColorCampsVacios;
                         cbxS11_4_ViviedaActual.Focus();
                     break;
                 case 5:
-                    txt_S11_ComentarioFinal.BackColor = Color.Red;
+                    txt_S11_ComentarioFinal.BackColor = ColorCampsVacios;
                         txt_S11_ComentarioFinal.Focus();
                         break;
             }
@@ -166,43 +177,43 @@ namespace TechoCeiva
             switch (pregunta)
             {
                 case 1:
-                    cbxS9_1_Propio.BackColor = Color.Red;
+                    cbxS9_1_Propio.BackColor = ColorCampsVacios;
                     cbxS9_1_Propio.Focus();
                     break;
                 case 2:
-                    cbxS9_Propietario.BackColor = Color.Red;
+                    cbxS9_Propietario.BackColor = ColorCampsVacios;
                     cbxS9_Propietario.Focus();
                     break;
                 case 201:
-                    txtS9_OtroPropietario.BackColor = Color.Red;
+                    txtS9_OtroPropietario.BackColor = ColorCampsVacios;
                     txtS9_OtroPropietario.Focus();
                     break;
                 case 5:
-                    cbxS9_OtraPropiedad.BackColor = Color.Red;
+                    cbxS9_OtraPropiedad.BackColor = ColorCampsVacios;
                     cbxS9_OtraPropiedad.Focus();
                     break;
 
                 case 501:
-                    txtS9_OtraPropiedadA.BackColor = Color.Red;
+                    txtS9_OtraPropiedadA.BackColor = ColorCampsVacios;
                     txtS9_OtraPropiedadA.Focus();
                     break;
 
                 case 3:
-                    cbxS9_TipoPropietario.BackColor = Color.Red;
+                    cbxS9_TipoPropietario.BackColor = ColorCampsVacios;
                     cbxS9_TipoPropietario.Focus();
                     break;
 
                 case 301:
-                    txtS9_OtroTipoPropietario.BackColor = Color.Red;
+                    txtS9_OtroTipoPropietario.BackColor = ColorCampsVacios;
                     txtS9_OtroTipoPropietario.Focus();
                     break;
 
                 case 4:
-                    txtS9_PropietarioTerreno.BackColor = Color.Red;
+                    txtS9_PropietarioTerreno.BackColor = ColorCampsVacios;
                     txtS9_PropietarioTerreno.Focus();
                     break;
                 case 401:
-                    txtS9_TelefonoPropietarioTerreno.BackColor = Color.Red;
+                    txtS9_TelefonoPropietarioTerreno.BackColor = ColorCampsVacios;
                     txtS9_TelefonoPropietarioTerreno.Focus();
                     break;
             }
@@ -235,18 +246,96 @@ namespace TechoCeiva
         }
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {
-            S8_ServiciosLN S8 = new S8_ServiciosLN();
-            Boolean correcto = true;//S8.Insertar_EncuS8(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            this.VerificarCombox_S8();
+            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta,0,0);
+
+            Boolean correcto = S8.Insertar_EncuS8();
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
-                tbpS8.Parent = null;
-                tbpS9.Parent = tbcDatos;
+                //tbpS8.Parent = null;
+                //tbpS9.Parent = tbcDatos;
             }
+            
             else
             {
-                MessageBox.Show(S8.obtenerError());
+                MessageBox.Show(S8.obtenerError().mensaje);
+                int cant = S8.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S8(S8.errores[i].NumeroPregunta);
             }
+        }
+        private void Comprobar_S8(int pregunta)
+        {
+            switch (pregunta)
+            {
+                case 1:
+                    cbxS8_AccesoAgua.BackColor = Color.Red;
+                    cbxS8_AccesoAgua.Focus();
+                    break;
+                case 2:
+                    cbxS8_FuenteAgua.BackColor = ColorCampsVacios;
+                    cbxS8_FuenteAgua.Focus();
+                    break;
+                case 201:
+                    txtS8_OtraFuente.BackColor = ColorCampsVacios;
+                    txtS8_OtraFuente.Focus();
+                    break;
+                case 3:
+                    cbxS8_EnergiaElectrica.BackColor = ColorCampsVacios;
+                    cbxS8_EnergiaElectrica.Focus();
+                    break;
+
+                case 301:
+                    txtS8_OtraEnergiaElectrica.BackColor = ColorCampsVacios;
+                    txtS8_OtraEnergiaElectrica.Focus();
+                    break;
+
+                case 4:
+                    cbxS8_EnergiaCocina.BackColor = ColorCampsVacios;
+                    cbxS8_EnergiaCocina.Focus();
+                    break;
+
+                case 401:
+                    txtS8_OtraEnergiaCocina.BackColor = ColorCampsVacios;
+                    txtS8_OtraEnergiaCocina.Focus();
+                    break;
+
+                case 5:
+                    cbxS8_Sanitario.BackColor = ColorCampsVacios;
+                    cbxS8_Sanitario.Focus();
+                    break;
+                case 501:
+                    txtS8_OtroTipoSanitario.BackColor = ColorCampsVacios;
+                    txtS8_OtroTipoSanitario.Focus();
+                    break;
+                case 6:
+                    cbxS8_BasuraHogar.BackColor = ColorCampsVacios;
+                    cbxS8_BasuraHogar.Focus();
+                    break;
+                case 601:
+                    txtS8_OtroTipoBasura.BackColor = ColorCampsVacios;
+                    txtS8_OtroTipoBasura.Focus();
+                    break;
+            }
+        }
+
+        public void VerificarCombox_S8()
+        {
+            if (cbxS8_AccesoAgua.SelectedIndex != -1)
+                cbxS8_AccesoAguatxt = cbxS8_AccesoAgua.SelectedItem.ToString();
+            if (cbxS8_FuenteAgua.SelectedIndex != -1)
+                cbxS8_FuenteAguatxt = cbxS8_FuenteAgua.SelectedItem.ToString();
+            if (cbxS8_EnergiaElectrica.SelectedIndex != -1)
+                cbxS8_EnergiaElectricatxt = cbxS8_EnergiaElectrica.SelectedItem.ToString();
+            if (cbxS8_EnergiaCocina.SelectedIndex != -1)
+                cbxS8_EnergiaCocinatxt = cbxS8_EnergiaCocina.SelectedItem.ToString();
+            if (cbxS8_Sanitario.SelectedIndex != -1)
+                cbxS8_Sanitariotxt = cbxS8_Sanitario.SelectedItem.ToString();
+            if (cbxS8_BasuraHogar.SelectedIndex != -1)
+                cbxS8_BasuraHogartxt = cbxS8_BasuraHogar.SelectedItem.ToString();
+            
         }
         private void cbxS9_Propietario_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -605,11 +694,11 @@ namespace TechoCeiva
             tbpS5.Parent = null;
             tbpS6.Parent = null;
             tbpS7.Parent = null;
-            tbpS8.Parent = null;
+            //tbpS8.Parent = null;
             tbpS9.Parent = null;
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
-            //tbpS11.Parent = null;
+            tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
             dgvS2.Columns[0].ReadOnly = true;
             dgvS3.Columns[0].ReadOnly = true;
