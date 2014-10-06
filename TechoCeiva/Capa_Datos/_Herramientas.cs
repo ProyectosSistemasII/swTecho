@@ -16,8 +16,7 @@ namespace Capa_Datos
         public List<Error> _errores { get; set; }
 
         private static ConexionBD _datos = new ConexionBD();
-        private static MySqlConnection _conexion = ConexionBD.conexion;
-        
+        private static MySqlConnection _conexion = ConexionBD.conexion;        
 
         public _Herramientas()
         {
@@ -45,33 +44,47 @@ namespace Capa_Datos
         
         public void _Insertar_H()
         {
-            if (this._errores.Count == 0)
-            {
-                string query = @"INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)";
-                MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("?Nomre", this.Nombre);
-                _comando.Parameters.AddWithValue("?Existencia", this.Existencia);
-                _comando.Parameters.AddWithValue("?Activo", this.Activo);
-
+            //if (this._errores.Count == 0)
+            //{
+            /*
+                string query = "INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo)";
+                MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
+                _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
+                _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
+                _comando.Parameters.AddWithValue("@Activo", this.Activo);
+            */
                 try
                 {
-                    _comando.Connection.Open();
+                    string query = "INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo);";
+                    MySqlCommand _comando = new MySqlCommand();
+                    
+                    _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
+                    _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
+                    _comando.Parameters.AddWithValue("@Activo", this.Activo);
+
+                    //MySqlDataReader reader;
+                    _comando.Connection = ConexionBD.conexion;
+                    //reader = _comando.ExecuteReader();
+                    _comando.CommandText = query;
                     _comando.ExecuteNonQuery();
                     _comando.Connection.Close();
+                    //_comando.Connection.Close();
+                     
                 }
                 catch (MySqlException ex)
                 {
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-            }
+            //}
         }
 
  
         public List<_Herramientas> _Obtener_H()
         {
-            string query = "Select * FROM Herramientas WHER Activo = true";
+            string query = "Select * FROM Herramientas WHERE Activo = true";
             List<_Herramientas> _listHerramientas = new List<_Herramientas>();
+
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();

@@ -36,7 +36,7 @@
 		<Label x:Name="lblHeader" Content="Devolver Herramienta" HorizontalAlignment="Left" Margin="38,18,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="17.333"/>
 		<Canvas x:Name="CanvasDevTool" Margin="38,53.47,0,0" Height="431.583">
 			<Label Content="Voluntario:" Canvas.Left="68.836" Style="{DynamicResource SimpleLabel}" Canvas.Top="12.947" FontSize="14.667"/>
-			<ComboBox Canvas.Left="143.553" Style="{DynamicResource SimpleComboBox}" Canvas.Top="12.947" Width="348.164" FontSize="14.667"/>
+			<ComboBox Canvas.Left="143.553" Style="{DynamicResource SimpleComboBox}" Canvas.Top="12.947" Width="348.164" FontSize="14.667" Name="cbxVoluntarios" />
 			<Label Content="Fecha Devolución:" Canvas.Left="22.342" Style="{DynamicResource SimpleLabel}" Canvas.Top="52.947" FontSize="14.667"/>
 			<DatePicker Canvas.Left="143.553" Canvas.Top="48.947" FontSize="14.667" Width="184.407"/>
 			<Button Content="Buscar" Canvas.Left="495.717" Style="{DynamicResource SimpleButton}" Canvas.Top="12.947" Width="75" FontSize="14.667" Height="26" BorderBrush="{x:Null}" Background="{x:Null}"/>

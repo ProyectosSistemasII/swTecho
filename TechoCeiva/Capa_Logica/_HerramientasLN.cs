@@ -26,15 +26,16 @@ namespace Capa_Logica
             this.Nombre = nHerramienta.Nombre;
             this.Existencia = nHerramienta.Existencia;
             this.Activo = nHerramienta.Activo;
-            this._errores = nHerramienta._errores;
+            //this._errores = nHerramienta._errores;
 
+            /*
             this._errores = new List<Error>();
             if (_errores.Count > 0)
             {
                 _correcto = false;
-            }
+            }*/
              
-            return _correcto;           
+            return _correcto;
         }
 
         public void InsertarEn_DB()
