@@ -179,6 +179,80 @@ namespace TechoCeiva
             }
         }
 
+        private void Comprobar_S9(int pregunta)
+        {
+            switch (pregunta)
+            {
+                case 1:
+                    txtS10_Ayudo.BackColor = ColorCampsVacios;
+                    txtS10_Ayudo.Focus();
+                    break;
+                case 2:
+                    txtS10_AyudaVecinos.BackColor = ColorCampsVacios;
+                    txtS10_AyudaVecinos.Focus();
+                    break;
+                case 3:
+                    cbxS10_RelacionVecinos.BackColor = ColorCampsVacios;
+                    cbxS10_RelacionVecinos.Focus();
+                    break;
+                case 301:
+                    cbxS9_OtraPropiedad.BackColor = ColorCampsVacios;
+                    cbxS9_OtraPropiedad.Focus();
+                    break;
+
+                case 501:
+                    txtS9_OtraPropiedadA.BackColor = ColorCampsVacios;
+                    txtS9_OtraPropiedadA.Focus();
+                    break;
+
+                case 3:
+                    cbxS9_TipoPropietario.BackColor = ColorCampsVacios;
+                    cbxS9_TipoPropietario.Focus();
+                    break;
+
+                case 301:
+                    txtS9_OtroTipoPropietario.BackColor = ColorCampsVacios;
+                    txtS9_OtroTipoPropietario.Focus();
+                    break;
+
+                case 4:
+                    txtS9_PropietarioTerreno.BackColor = ColorCampsVacios;
+                    txtS9_PropietarioTerreno.Focus();
+                    break;
+                case 401:
+                    txtS9_TelefonoPropietarioTerreno.BackColor = ColorCampsVacios;
+                    txtS9_TelefonoPropietarioTerreno.Focus();
+                    break;
+            }
+        }
+
+        public int VerificarCombox_S10()
+        {
+            int NumeroCaso = 0;
+
+            if (cbxS9_1_Propio.SelectedIndex != -1)
+                cbxS9_Propiotxt = cbxS9_1_Propio.SelectedItem.ToString();
+
+            if (cbxS9_Propietario.SelectedIndex != -1)
+            {
+                cbxS9_Propietariotxt = cbxS9_Propietario.SelectedItem.ToString();
+                NumeroCaso = 1;
+            }
+            if (cbxS9_TipoPropietario.SelectedIndex != -1)
+            {
+                cbxS9_TipoPropietariotxt = cbxS9_TipoPropietario.SelectedItem.ToString();
+
+            }
+            if (cbxS9_OtraPropiedad.SelectedIndex != -1)
+                cbxS9_OtraPropiedadtxt = cbxS9_OtraPropiedad.SelectedItem.ToString();
+            if (cbxS9_1_Propio.SelectedIndex == 1)
+                NumeroCaso = 2;
+            else
+                NumeroCaso = 1;
+
+            return NumeroCaso;
+        }
+
         private void pbS9_Siguiente_Click(object sender, EventArgs e)
         {
             int caso = this.VerificarCombox_S9();

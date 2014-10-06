@@ -55,6 +55,7 @@
     <Compile Include="Info_EncuestaLN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S10_ComunidadLN.cs" />
     <Compile Include="S11_MovilidadLN.cs" />
     <Compile Include="S1_IntegrantesLN.cs" />
     <Compile Include="S2_DemograficaLN.cs" />

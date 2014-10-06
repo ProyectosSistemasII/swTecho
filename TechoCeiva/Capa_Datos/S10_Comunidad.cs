@@ -10,7 +10,6 @@ namespace Capa_Datos
     public class S10_Comunidad
     {
         public int idS10_Com { get; set; }
-        public int CodigoS10 { get; set; }
         public String Ayudo { get; set; }
         public String AyudaVecinos { get; set; }
         public String RelacionVecinos { get; set; }
@@ -66,7 +65,6 @@ namespace Capa_Datos
         public S10_Comunidad()
         {
             this.idS10_Com = 0;
-            this.CodigoS10 =0;
             this.Ayudo = "";
             this.AyudaVecinos = "";
             this.RelacionVecinos = "";
@@ -115,20 +113,11 @@ namespace Capa_Datos
             this.idS1008 = 0;
             this.idS1014 = 0; 
         }
-        public S10_Comunidad(int idS10_Com, int CodigoS10, String Ayudo,String AyudaVecinos, String RelacionVecinos, 
-        String ComentarioRelacion, String OrganizarVecinos, String OrganizarA, String OrganizarB, String OrganizarC, 
-        String ParticipacionGrupo, String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
-        String NecesidadCom, String NecesidadComA, String NecesidadComB, String NecesidadComC, String ProyectosVecinos,
-        String ProyectoA, String ProyectoB, String ProyectoC, String AspectoPositivo, String AspectoPositivoA,
-        String AspectoPositivoB, String AspectoPositivoC, String AspectoNegativo, String AspectoNegativoA,
-        String AspectoNegativoB, String AspectoNegativoC, String Discriminacion, String TipoDiscriminacion,
-        String OrganizacionComunitaria, String TipoOrganizacion, String ConfianzaOrganizacion, String ComentarioConfianza,
-        String LiderA, String LiderB, String LiderC, String EstadoComunidadPasada, String ComentarioEstadoPasado,
-        String EstadoComunidadFuturo, String ComentarioEstadoFuturo, int idEncuestas, int idS1006,
-        int idS1007, int idS1008, int idS1014)
+        public S10_Comunidad(int idS10_Com, String Ayudo, String AyudaVecinos, String RelacionVecinos,
+        String ComentarioRelacion, String OrganizarVecinos, String OrganizarA, String OrganizarB, String OrganizarC,
+        String ParticipacionGrupo, int idEncuestas,int idS1006, int idS1007, int idS1008)
         {
             this.idS10_Com = idS10_Com;
-            this.CodigoS10 = CodigoS10;
             this.Ayudo = Ayudo;
             this.AyudaVecinos = AyudaVecinos;
             this.RelacionVecinos = RelacionVecinos;
@@ -138,6 +127,22 @@ namespace Capa_Datos
             this.OrganizarB = OrganizarB;
             this.OrganizarC = OrganizarC;
             this.ParticipacionGrupo = ParticipacionGrupo;
+            this.idEncuestas = idEncuestas;
+            this.idS1006 = idS1006;
+            this.idS1007 = idS1007;
+            this.idS1008 = idS1008;
+            this.errores = new List<Error>();
+        }
+            
+        public void S10_ComunidadCOnt( String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
+        String NecesidadCom, String NecesidadComA, String NecesidadComB, String NecesidadComC, String ProyectosVecinos,
+        String ProyectoA, String ProyectoB, String ProyectoC, String AspectoPositivo, String AspectoPositivoA,
+        String AspectoPositivoB, String AspectoPositivoC, String AspectoNegativo, String AspectoNegativoA,
+        String AspectoNegativoB, String AspectoNegativoC, String Discriminacion, String TipoDiscriminacion,
+        String OrganizacionComunitaria, String TipoOrganizacion, String ConfianzaOrganizacion, String ComentarioConfianza,
+        String LiderA, String LiderB, String LiderC, String EstadoComunidadPasada, String ComentarioEstadoPasado,
+        String EstadoComunidadFuturo, String ComentarioEstadoFuturo, int idS1014)
+        {
             this.Necesidad = Necesidad;
             this.NecesidadA = NecesidadA;
             this.NecesidadB = NecesidadB;
@@ -171,10 +176,6 @@ namespace Capa_Datos
             this.ComentarioEstadoPasado = ComentarioEstadoPasado;
             this.EstadoComunidadFuturo = EstadoComunidadFuturo;
             this.ComentarioEstadoFuturo = ComentarioEstadoFuturo;
-            this.idEncuestas = idEncuestas;
-            this.idS1006 = idS1006;
-            this.idS1007 = idS1007;
-            this.idS1008 = idS1008;
             this.idS1014 = idS1014;
             this.errores = new List<Error>();
         }
@@ -185,7 +186,6 @@ namespace Capa_Datos
             {
                 string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
-                comando.Parameters.AddWithValue("@CodigoS10", this.CodigoS10);
                 comando.Parameters.AddWithValue("@Ayudo", this.Ayudo);
                 comando.Parameters.AddWithValue("@AyudaVecinos", this.AyudaVecinos);
                 comando.Parameters.AddWithValue("@RelacionVecinos", this.RelacionVecinos);
