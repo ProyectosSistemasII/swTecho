@@ -6,7 +6,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    public class _ComunidadLN:_Comunidad
+    public class _ComunidadLN : _Comunidad
     {
         public _ComunidadLN() 
         {
@@ -14,16 +14,27 @@ namespace Capa_Logica
             this.Nombre = "";
             this.Departamento_idDepartamento = 0;
             this.Municipio_idMunicipio = 0;
+
             this.errores = new List<Error>();
         }
 
-        public Boolean Ingresar_C(string nombre, int municipio, int departamento)
+        public _ComunidadLN(String Nombre, int Departamento_idDepartamento, int Municipio_idMunicipio)
+        {
+            this.Nombre = Nombre;
+            this.Departamento_idDepartamento = Departamento_idDepartamento;
+            this.Municipio_idMunicipio = Municipio_idMunicipio;
+            
+            this.errores = new List<Error>();
+            
+        }
+
+        public Boolean Ingresar_C()
         {
             Boolean _correcto = true;
-            _Comunidad _comunidad = new _Comunidad(0, nombre, municipio, departamento);
+            _Comunidad _comunidad = new _Comunidad(0, this.Nombre,this.Departamento_idDepartamento,this.Municipio_idMunicipio);
             this.idComunidad = _comunidad.idComunidad;
             this.Nombre = _comunidad.Nombre;
-            this.Departamento_idDepartamento = _comunidad..Departamento_idDepartamento;
+            this.Departamento_idDepartamento = _comunidad.Departamento_idDepartamento;
             this.Municipio_idMunicipio = _comunidad.Municipio_idMunicipio;
 
             this.errores = _comunidad.errores;

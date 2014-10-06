@@ -38,7 +38,7 @@ namespace Capa_Datos
         public List<_Comunidad> ObtenerComunidades()
         {
             List<_Comunidad> ListaComunidad = new List<_Comunidad>();
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM Comunidad WHERE Activo = true", conex);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Comunidad", conex);
             comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
@@ -49,7 +49,7 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                _Comunidad Comunidades = new _Comunidad(Convert.ToInt32(row["idComunidad"]), Convert.ToString(row["Nombre"]), Convert.ToInt32(row["Departamento"]), Convert.ToInt32(row["Municipio"]));
+                _Comunidad Comunidades = new _Comunidad(Convert.ToInt32(row["idComunidad"]), Convert.ToString(row["Nombre"]), Convert.ToInt32(row["Departamento_idDepartamento"]), Convert.ToInt32(row["Municipio_idMunicipio"]));
             }
             return ListaComunidad;
         }
@@ -58,7 +58,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO Comunidad(Nombre, Departamento_idDepartamento, Municipio_idMunicipio) VALUES(@Nombre, @Departamento_idDepartamento, @Municipio_idMunicipio)";
+                string consulta = "INSERT INTO comunidad(Nombre, Departamento_idDepartamento, Municipio_idMunicipio) VALUES(@Nombre,@Departamento_idDepartamento,@Municipio_idMunicipio)"; 
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Nombre", this.Nombre);
                 comando.Parameters.AddWithValue("@Departamento_idDepartamento", this.Departamento_idDepartamento);
