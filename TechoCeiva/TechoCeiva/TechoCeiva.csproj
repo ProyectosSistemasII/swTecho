@@ -93,11 +93,14 @@
     <Compile Include="UC_Devolver.xaml.cs">
       <DependentUpon>UC_Devolver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UC_Insumos.xaml.cs">
-      <DependentUpon>UC_Insumos.xaml</DependentUpon>
+    <Compile Include="UC_Insumo.xaml.cs">
+      <DependentUpon>UC_Insumo.xaml</DependentUpon>
     </Compile>
     <Compile Include="UC_Login.xaml.cs">
       <DependentUpon>UC_Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NewInsumo.xaml.cs">
+      <DependentUpon>UC_NewInsumo.xaml</DependentUpon>
     </Compile>
     <Compile Include="UC_Prestar.xaml.cs">
       <DependentUpon>UC_Prestar.xaml</DependentUpon>
@@ -110,6 +113,9 @@
     </Compile>
     <Compile Include="UC_Prestamos.xaml.cs">
       <DependentUpon>UC_Prestamos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SalidaInsumo.xaml.cs">
+      <DependentUpon>UC_SalidaInsumo.xaml</DependentUpon>
     </Compile>
     <Compile Include="UC_SelecComunidad.xaml.cs">
       <DependentUpon>UC_SelecComunidad.xaml</DependentUpon>
@@ -180,11 +186,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UC_Insumos.xaml">
+    <Page Include="UC_Insumo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UC_Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UC_NewInsumo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -201,6 +211,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UC_Prestamos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UC_SalidaInsumo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

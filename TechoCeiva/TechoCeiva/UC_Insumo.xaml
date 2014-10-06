@@ -1,0 +1,128 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TechoCeiva.UC_Insumo"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="1123" Height="485">
+	<UserControl.Resources>
+<!-- Etiqueta simple: esta plantilla es simplemente un ContentPresenter que muestra el contenido de la etiqueta -->
+		<Style x:Key="SimpleLabel" TargetType="{x:Type Label}">
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="VerticalContentAlignment" Value="Top"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Label}">
+						<Grid>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsEnabled" Value="false"/>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	
+	<!-- SimpleButtonFocusVisual se usa para mostrar el foco del teclado alrededor de un control SimpleButton -->
+		<Style x:Key="SimpleButtonFocusVisual">
+			<Setter Property="Control.Template">
+				<Setter.Value>
+					<ControlTemplate>
+						<Border>
+							<Rectangle Margin="2" Stroke="#60000000" StrokeThickness="1" StrokeDashArray="1 2"/>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	
+	<!-- NormalBrush se usa como fondo para SimpleButton y SimpleRepeatButton -->
+		<LinearGradientBrush x:Key="NormalBrush" EndPoint="0,1" StartPoint="0,0">
+			<GradientStop Color="#EEE" Offset="0.0"/>
+			<GradientStop Color="#CCC" Offset="1.0"/>
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="NormalBorderBrush" EndPoint="0,1" StartPoint="0,0">
+			<GradientStop Color="#CCC" Offset="0.0"/>
+			<GradientStop Color="#444" Offset="1.0"/>
+		</LinearGradientBrush>
+	
+	<!-- DefaultedBorderBrush se usa para mostrar KeyBoardFocus -->
+		<LinearGradientBrush x:Key="DefaultedBorderBrush" EndPoint="0,1" StartPoint="0,0">
+			<GradientStop Color="#777" Offset="0.0"/>
+			<GradientStop Color="#000" Offset="1.0"/>
+		</LinearGradientBrush>
+
+	<!-- PressedBrush se usa para Pressed en Button, Radio Button y CheckBox -->
+		<LinearGradientBrush x:Key="PressedBrush" EndPoint="0,1" StartPoint="0,0">
+			<GradientStop Color="#BBB" Offset="0.0"/>
+			<GradientStop Color="#EEE" Offset="0.1"/>
+			<GradientStop Color="#EEE" Offset="0.9"/>
+			<GradientStop Color="#FFF" Offset="1.0"/>
+		</LinearGradientBrush>
+		<LinearGradientBrush x:Key="PressedBorderBrush" EndPoint="0,1" StartPoint="0,0">
+			<GradientStop Color="#444" Offset="0.0"/>
+			<GradientStop Color="#888" Offset="1.0"/>
+		</LinearGradientBrush>
+
+		<SolidColorBrush x:Key="DisabledBackgroundBrush" Color="#EEE"/>
+		<SolidColorBrush x:Key="DisabledBorderBrush" Color="#AAA"/>
+
+	<!-- Los pinceles deshabilitados se usan para el aspecto de los controles cuando están deshabilitados -->
+		<SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888"/>
+	<!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->
+		<Style x:Key="SimpleButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">
+			<Setter Property="FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}"/>
+			<Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
+			<Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+					
+					<!-- Grid se usa como raíz porque resulta sencillo agregarle más elementos para personalizar el botón -->
+						<Grid x:Name="Grid">
+							<Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
+						
+							<!-- Content Presenter es donde el control coloca el contenido de texto, etc. -->
+						<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+						</Grid>
+					
+					<!--Cada estado establece un pincel en el elemento Border de la plantilla -->
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsKeyboardFocused" Value="true">
+								<Setter Property="BorderBrush" Value="{DynamicResource DefaultedBorderBrush}" TargetName="Border"/>
+							</Trigger>
+							<Trigger Property="IsMouseOver" Value="true">
+								<Setter Property="Background" TargetName="Border" Value="#FF0092DD"/>
+							</Trigger>
+							<Trigger Property="IsPressed" Value="true">
+								<Setter Property="Background" Value="{DynamicResource PressedBrush}" TargetName="Border"/>
+								<Setter Property="BorderBrush" Value="{DynamicResource PressedBorderBrush}" TargetName="Border"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="true"/>
+							<Trigger Property="IsEnabled" Value="false">
+								<Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border"/>
+								<Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border"/>
+								<Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	
+	</UserControl.Resources>
+	<Grid x:Name="LayoutRoot" Margin="0,0,-483,-5">
+		<Canvas x:Name="canvasTitulo" Height="82" VerticalAlignment="Top" Background="#FF0092DD">
+			<Label x:Name="lblTitulo" Content="Gestion de Insumos" Canvas.Left="35" Style="{DynamicResource SimpleLabel}" Canvas.Top="20" FontSize="29.333" Foreground="White"/>
+		</Canvas>
+		<Canvas x:Name="canvasOpciones" Width="130" Background="#FF626465" HorizontalAlignment="Left" Margin="0,82,0,1">
+			<Button x:Name="btnAgregar" Height="26" Style="{DynamicResource SimpleButton}" Canvas.Top="30" Width="129.667" Content="Agregar" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="14.667"/>
+			<Button x:Name="btnSalida" Content="Salida" Height="26" Style="{DynamicResource SimpleButton}" Canvas.Top="56" Width="129.667" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Canvas.Left="0.333" FontSize="14.667"/>
+		</Canvas>
+		<Canvas x:Name="canvasContenido" Margin="130,82,0,0"/>
+	</Grid>
+</UserControl>
