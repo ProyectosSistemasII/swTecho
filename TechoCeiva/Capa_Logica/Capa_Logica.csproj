@@ -68,6 +68,7 @@
     <Compile Include="S8_ServiciosLN.cs" />
     <Compile Include="S9_PropiedadLN.cs" />
     <Compile Include="UsuarioLN.cs" />
+    <Compile Include="_ComunidadLN.cs" />
     <Compile Include="_DepartamentoLN.cs" />
     <Compile Include="_HerramientasLN.cs" />
     <Compile Include="_MunicipioLN.cs" />

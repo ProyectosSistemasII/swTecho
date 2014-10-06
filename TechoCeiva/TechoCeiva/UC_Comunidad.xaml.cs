@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
+using System.Data;
+using Capa_Datos;
 
 namespace TechoCeiva
 {
@@ -27,16 +29,27 @@ namespace TechoCeiva
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-
+            _DepartamentoLN depto = new _DepartamentoLN();
+            
+            cmbDepartamento.ItemsSource = depto.Obtener_D();
+            cmbDepartamento.SelectedValuePath = "idDepartamento";
+            cmbDepartamento.DisplayMemberPath = "nombre";
+            
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            _DepartamentoLN depto = new _DepartamentoLN();
-            depto.Obtener_D();
-            cmbDepartamento.DisplayMemberPath = depto.nombre;
-            cmbDepartamento.SelectedValue = depto.idDepartamento;
+            
+            
+        }
 
+        private void cmbDepartamento_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _MunicipioLN mun = new _MunicipioLN();
+
+            cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
+            cmbMunicipio.SelectedValuePath = "idMunicipio";
+            cmbMunicipio.DisplayMemberPath = "nombre";
         }
     }
 }

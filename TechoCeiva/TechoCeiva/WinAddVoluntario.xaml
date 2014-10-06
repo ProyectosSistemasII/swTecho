@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddVoluntario"
 	x:Name="Window"
 	Title="Añadir Voluntario"
-	Width="655" Height="480">
+	Width="655" Height="480" Loaded="Window_Loaded">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>

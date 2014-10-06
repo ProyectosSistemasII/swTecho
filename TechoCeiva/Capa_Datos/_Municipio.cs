@@ -35,7 +35,7 @@ namespace Capa_Datos
         public List<_Municipio> Obtener_M(int idDepartamento)
         {
             List<_Municipio> Lista_M = new List<_Municipio>();
-            MySqlCommand _comando = new MySqlCommand("SELECT municipio.Nombre FROM municipio where municipio.Departamento_idDepartamento="+idDepartamento, _conexion);
+            MySqlCommand _comando = new MySqlCommand("SELECT * FROM municipio where Departamento_idDepartamento="+idDepartamento, _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();

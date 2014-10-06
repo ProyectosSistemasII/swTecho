@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace TechoCeiva
 {
@@ -23,5 +24,10 @@ namespace TechoCeiva
 			
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
 	}
 }
