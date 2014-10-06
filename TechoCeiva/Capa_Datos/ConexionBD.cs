@@ -5,16 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-
-
 namespace Capa_Datos
 {
     class ConexionBD
     {
-
-        public static String ConexionDireccion = "Server=localhost;" + "Database=swtecho2;" + "UID=root;" + "Password=1610;";
-            public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);
-
-        
+        public static String ConexionDireccion = "Server=localhost;" + "Database=techo;" + "UID=root;" + "Password=1303;";
+        public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);        
     }
 }

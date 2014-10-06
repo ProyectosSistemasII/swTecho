@@ -26,11 +26,8 @@ namespace Capa_Logica
             this.S611_Ingre_idS611_Ingre = 0;
         }
 
-        public Boolean Insertar_EncuS6(String ApoyoEstado, int CantidadApoyo, String Remesas, int CantidadRemesas, String Deuda, int DineroDeuda, String TiempoPagoDeuda, int IngresoTotal, String CubreGastos, String Ahorro, int MontoAhorro, int DineroGasto, int idEncuesta, int idS611)
+        public S6_IngresosLN(string ApoyoEstado, float CantidadApoyo, string Remesas, float CantidadRemesas, string Deuda, float DineroDeuda, string TiempoPagoDeuda, float IngresoTotal, string CubreGastos, string Ahorro, float MontoAhorro, float DineroGasto, int idEncuesta, int idS611)
         {
-            Boolean correcto = true;
-            S6_Ingresos ingresos = new S6_Ingresos(ApoyoEstado, CantidadApoyo, Remesas, CantidadRemesas, Deuda, DineroDeuda, TiempoPagoDeuda, IngresoTotal, CubreGastos, Ahorro, MontoAhorro, DineroGasto, Encuestas_idEncuestas, S611_Ingre_idS611_Ingre);
-
             this.ApoyoEstado = ApoyoEstado;
             this.CantidadApoyo = CantidadApoyo;
             this.Remesas = Remesas;
@@ -45,13 +42,95 @@ namespace Capa_Logica
             this.DineroGasto = DineroGasto;
             this.Encuestas_idEncuestas = idEncuesta;
             this.S611_Ingre_idS611_Ingre = idS611;
-
             this.errores = new List<Error>();
+        }
+
+        public Boolean VerificarCampos()
+        {
+            Boolean correcto = true;
+            this.verificarDatos();
+            if (errores.Count > 0)
+            {
+                return false;
+            }
+            return correcto;
+        }
+
+        public Boolean Insertar_EncuS6()
+        {
+            Boolean correcto = true;
+            S6_Ingresos ingresos = new S6_Ingresos(this.ApoyoEstado, this.CantidadApoyo, this.Remesas, this.CantidadRemesas, this.Deuda, this.DineroDeuda, this.TiempoPagoDeuda, this.IngresoTotal, this.CubreGastos, this.Ahorro, this.MontoAhorro, this.DineroGasto, this.Encuestas_idEncuestas, this.S611_Ingre_idS611_Ingre);
+            ingresos.InsertarS();
+            this.errores = ingresos.errores;
             if (errores.Count > 0)
             {
                 correcto = false;
             }
-            return correcto;
+            return correcto;            
+        }
+
+        public void verificarDatos()
+        {
+            if (this.ApoyoEstado.Equals("null"))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 1", 5000, 1);
+                errores.Add(error);
+            }
+            if (this.CantidadApoyo.Equals(0) && this.ApoyoEstado.Equals("Si"))
+            {
+                Error error = new Error("Debe ingresar la cantidad de apoyo en la pregunta 1", 5000, 101);
+                errores.Add(error);
+            }
+            if (this.Remesas.Equals("null"))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 2", 5000, 2);
+                errores.Add(error);
+            }
+            if (this.CantidadRemesas.Equals(0) && this.Remesas.Equals("Si"))
+            {
+                Error error = new Error("Debe ingresar la cantidad de remesas en la pregunta 2", 5000, 201);
+                errores.Add(error);
+            }
+            if (this.Deuda.Equals("null"))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 3", 5000, 3);
+                errores.Add(error);
+            }
+            if (this.Deuda.Equals("Si") &&  this.DineroDeuda.Equals(0))
+            {
+                Error error = new Error("Debe ingresar la cantidad de las deudas en la pregunta 4", 5000, 4);
+                errores.Add(error);
+            }
+            if (this.Deuda.Equals("Si") && this.TiempoPagoDeuda.Equals(""))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 5", 5000, 5);
+                errores.Add(error);
+            }
+            if (this.IngresoTotal.Equals(0))
+            {
+                Error error = new Error("Debe ingresar el ingreso total de la pregunta 6", 5000, 6);
+                errores.Add(error);
+            }
+            if (this.CubreGastos.Equals(""))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 7", 5000, 7);
+                errores.Add(error);
+            }
+            if (!this.CubreGastos.Equals("No") && this.Ahorro.Equals("null") && !this.CubreGastos.Equals("Iguales") && !this.CubreGastos.Equals("NS/NR"))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 8", 5000, 8);
+                errores.Add(error);
+            }
+            if (!this.CubreGastos.Equals("No") && this.MontoAhorro.Equals(0) && !this.CubreGastos.Equals("Iguales") && !this.CubreGastos.Equals("NS/NR"))
+            {
+                Error error = new Error("Debe ingresar el monto del ahorro en la pregunta 9", 5000, 9);
+                errores.Add(error);
+            }
+            if (!this.CubreGastos.Equals("Si") && this.DineroGasto.Equals(0) && !this.CubreGastos.Equals("Iguales") && !this.CubreGastos.Equals("NS/NR"))
+            {
+                Error error = new Error("Debe ingresar la cantidad en la pregunta 10", 5000, 10);
+                errores.Add(error);
+            }
         }
 
         public string obtenerError()

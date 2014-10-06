@@ -1,4 +1,5 @@
 ﻿using Capa_Logica;
+using Capa_Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,13 +12,14 @@ using System.Windows.Forms;
 namespace TechoCeiva
 {
     public partial class frmEncuesta : Form
-    {   // variables para que no deje error los combobox cuando estan vacios cuando la pregunta
+    {   
+        // variables para que no deje error los combobox cuando estan vacios cuando la pregunta
         //salta o otras dejan algunas vacios Seccion 9 
         String cbxS9_Propiotxt = "";
         String cbxS9_Propietariotxt = "";
         String cbxS9_TipoPropietariotxt = "";
         String cbxS9_OtraPropiedadtxt = "";
-       ///---------------------------------------------------------------------------------------------------------
+        ///---------------------------------------------------------------------------------------------------------
        
         // variables para que no deje error los combobox cuando estan vacios Seccion 11
         String cbxS11_1_VidaFamiliartxt= "";
@@ -27,38 +29,52 @@ namespace TechoCeiva
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
         String cbxS8_AccesoAguatxt ="";
         String cbxS8_FuenteAguatxt="";
-           String cbxS8_EnergiaElectricatxt="";
-           String cbxS8_EnergiaCocinatxt="";
-           String cbxS8_Sanitariotxt="";
-           String cbxS8_BasuraHogartxt = "";
-           S807_ServiciosLN NuevaS807 = null;
-           S808_ServiciosLN NuevaS808 = null;
-           Boolean Pregunta807 = false;
-           Boolean Pregunta808 = false;
-           
+        String cbxS8_EnergiaElectricatxt="";
+        String cbxS8_EnergiaCocinatxt="";
+        String cbxS8_Sanitariotxt="";
+        String cbxS8_BasuraHogartxt = "";
+        S807_ServiciosLN NuevaS807 = null;
+        S808_ServiciosLN NuevaS808 = null;
+        Boolean Pregunta807 = false;
+        Boolean Pregunta808 = false;         
         ///----------------------------------
-           //selecciones en la pregunta 8.08
-          int rbtS808_Refrigerador = 0;
-          int rbtS808_EquipoDeSonido = 0;
-          int rbtS808_Televisor = 0;
-          int rbtS808_ReproductorDVD = 0;
-          int rbtS808_Motocicleta = 0;
-          int rbtS808_Automovil = 0;
-          int rbtS808_Computadora = 0;
-          int rbtS808_Amueblado = 0;
-          int rbtS808_Otros = 0;
+          
+        //selecciones en la pregunta 8.08
+        int rbtS808_Refrigerador = 0;
+        int rbtS808_EquipoDeSonido = 0;
+        int rbtS808_Televisor = 0;
+        int rbtS808_ReproductorDVD = 0;
+        int rbtS808_Motocicleta = 0;
+        int rbtS808_Automovil = 0;
+        int rbtS808_Computadora = 0;
+        int rbtS808_Amueblado = 0;
+        int rbtS808_Otros = 0;
         /// -----------------------------------------------------------------------------------------------------------
-          // variable de idComunidad
-          public int idComuni = 0;
-          // ultimo idEncuesta
-          public int idEncu = 0;
+          
+        // variable de idComunidad
+        public int idComuni = 0;
+        // ultimo idEncuesta
+        public int idEncu = 0;
+
+        /// Secciones de la pregunta 6.11
+        Boolean RecorteGastos = false;
+        Boolean Prestamo = false;
+        Boolean VentaMaterial = false;
+        Boolean TrabajoOcasional = false;
+        Boolean Ahorros = false;
+        Boolean AyudaFamiliar = false;
+        Boolean ApoyoEstado = false;
+        Boolean Otro = false;
+        Boolean NSNR = false;
+        /// -----------------------------------
+          
         Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
+
         public frmEncuesta()
         {
             InitializeComponent();
             CodigoEncuesta = 1;
-
         }
 
         private void pbS11_Siguiente_Click(object sender, EventArgs e)
@@ -763,19 +779,133 @@ namespace TechoCeiva
             }
         }
 
+        public void verificarListBoxS6()
+        {
+            foreach (var item in chlbS6_11_CubrirFaltaDinero.CheckedItems)
+            {
+                switch (item.ToString())
+                {
+                    case "Recorte de gastos / Ajuste de presupuesto":
+                        this.RecorteGastos = true;
+                        break;
+                    case "Endeudamiento o préstamo":
+                        this.Prestamo = true;
+                        break;
+                    case "Vendiendo algo del hogar (televisor, radio, etc.)":
+                        this.VentaMaterial = true;
+                        break;
+                    case "Trabajos ocasionales":
+                        this.TrabajoOcasional = true;
+                        break;
+                    case "Ahorros":
+                        this.Ahorros = true;
+                        break;
+                    case "Ayuda familiar":
+                        this.AyudaFamiliar = true;
+                        break;
+                    case "Apoyos del Estado":
+                        this.ApoyoEstado = true;
+                        break;
+                    case "Otro (especifique)":
+                        this.Otro = true;
+                        break;
+                    case "NS/NR":
+                        this.NSNR = true;
+                        break;
+                }
+            }
+        }
+
+        public void IgualarText()
+        {
+            if (txtS6_1_CantidadIngEstado.Text == "")
+            {
+                txtS6_1_CantidadIngEstado.Text = "0";
+            }
+            if (txtS6_2_CantidadRemesas.Text == "")
+            {
+                txtS6_2_CantidadRemesas.Text = "0";
+            }
+            if (txtS6_4_CantiDeuda.Text == "")
+            {
+                txtS6_4_CantiDeuda.Text = "0";
+            }
+            if (txtS6_6_IngresoTotal.Text == "")
+            {
+                txtS6_6_IngresoTotal.Text = "0";
+            }
+            if (txtS6_9_CantiAhorro.Text == "")
+            {
+                txtS6_9_CantiAhorro.Text = "0";
+            }
+            if (txtS6_10_CantiGastosaIngresos.Text == "")
+            {
+                txtS6_10_CantiGastosaIngresos.Text = "0";
+            }
+        }
+
         private void pbS6_Siguiente_Click(object sender, EventArgs e)
         {
-            S6_IngresosLN S6 = new S6_IngresosLN();
-            Boolean correcto = true;// S6.Insertar_EncuS6(cbxS6_1_IngEstado.Text, Convert.ToInt32(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, Convert.ToInt32(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, Convert.ToInt32(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, cbxS6_6_IngresoTotal.Text, cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, Convert.ToInt32(txtS6_9_CantiAhorro.Text), Convert.ToInt32(txtS6_10_CantiGastosaIngresos.Text), ENCUESTA, IDS611);
-            if (correcto)
+            int ids611 = 0;
+            // Ingresar la seccion 6 por completo
+            IgualarText();
+            S6_IngresosLN SDatos = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), 3, ids611);
+            Boolean campos = SDatos.VerificarCampos();
+            if (campos)
             {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS6.Parent = null;
-                tbpS7.Parent = tbcDatos;
+                //Ingresar la pregunta 11 de la seccion 6
+                this.verificarListBoxS6();
+                S611_IngresosLN S611 = new S611_IngresosLN(this.RecorteGastos, this.Prestamo, this.VentaMaterial, this.TrabajoOcasional, this.Ahorros, this.AyudaFamiliar, this.ApoyoEstado, this.Otro, txtS6_11_EspecificarFaltaDinero.Text, this.NSNR);
+                if (cbxS6_7_CubrenGasto.Text.Equals("No"))
+                {
+                    S611.Validar11();
+                }
+                //Por si hay saltos y no tienen q contestar unas preguntas
+                if (cbxS6_7_CubrenGasto.Text.Equals("Iguales") || cbxS6_7_CubrenGasto.Text.Equals("NS/NR") || cbxS6_7_CubrenGasto.Text.Equals("Si"))
+                {
+                    //Ingresar la seccion 6 completa
+                    S6_IngresosLN S6 = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), 3, ids611);
+                    Boolean correcto = S6.Insertar_EncuS6();
+                    if (correcto)
+                    {
+                        tbpS6.Parent = null;
+                        tbpS7.Parent = tbcDatos;
+                    }
+                    else
+                    {
+                        MessageBox.Show(S6.obtenerError());
+                    }
+                }
+                else
+                {
+                    Boolean correctos611 = S611.Insertar_EncuS611();
+                    if (correctos611)
+                    {
+                        S611_Ingresos s611 = new S611_Ingresos();
+                        ids611 = s611.UltimoId();
+                        //Ingresar la seccion 6 completa
+                        S6_IngresosLN S6 = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), 3, ids611);
+                        Boolean correcto = S6.Insertar_EncuS6();
+                        if (correcto)
+                        {
+                            tbpS6.Parent = null;
+                            tbpS7.Parent = tbcDatos;
+                        }
+                        else
+                        {
+                            MessageBox.Show(S6.obtenerError());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(S611.obtenerError());
+                    }
+                    //-------------------------------------------------------------------------------------- 
+                }
             }
             else
             {
-                MessageBox.Show(S6.obtenerError());
+                MessageBox.Show(SDatos.obtenerError());
             }
         }
 
@@ -840,13 +970,13 @@ namespace TechoCeiva
 
         private void frmEncuesta_Load(object sender, EventArgs e)
         {
-            //tbpInfo.Parent = null;
+            tbpInfo.Parent = null;
             tbpS1.Parent = null;
             tbpS2.Parent = null;
             tbpS3.Parent = null;
             tbpS4.Parent = null;
             tbpS5.Parent = null;
-            tbpS6.Parent = null;
+            //tbpS6.Parent = null;
             tbpS7.Parent = null;
             tbpS8.Parent = null;
             tbpS9.Parent = null;

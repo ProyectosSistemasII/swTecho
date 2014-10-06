@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class S611_Ingresos
+    public class S611_Ingresos
     {
         public Boolean RecorteGastos { get; set; }
         public Boolean Prestamo { get; set; }
@@ -56,7 +56,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S611_Ingre(RecorteGastos,Prestamo,VentaMaterial,TrabajoOcasional,Ahorros,AyudaFamiliar,ApoyoEstado,Otro,Especificar,NS/NR) VALUES(@RecorteGastos,@Prestamo,@VentaMaterial,@TrabajoOcasional,@Ahorros,@AyudaFamiliar,@ApoyoEstado,@Otro,@Especificar,@NS/NR)";
+                string consulta = "INSERT INTO s611_ingre(RecorteGastos,Prestamo,VentaMaterial,TrabajoOcasional,Ahorros,AyudaFamiliar,ApoyoEstado,Otro,Especificar,NSNR) VALUES(@RecorteGastos,@Prestamo,@VentaMaterial,@TrabajoOcasional,@Ahorros,@AyudaFamiliar,@ApoyoEstado,@Otro,@Especificar,@NSNR)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@RecorteGastos", this.RecorteGastos);
                 comando.Parameters.AddWithValue("@Prestamo", this.Prestamo);
@@ -67,12 +67,12 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@ApoyoEstado", this.ApoyoEstado);
                 comando.Parameters.AddWithValue("@Otro", this.Otro);
                 comando.Parameters.AddWithValue("@Especificar", this.Especificar);
-                comando.Parameters.AddWithValue("@NS/NR", this.NSNR);
-                
+                comando.Parameters.AddWithValue("@NSNR", this.NSNR);                
                 try
                 {
                     comando.Connection.Open();
-                    comando.ExecuteNonQuery();
+                    //comando.CommandTimeout = 0;
+                    comando.ExecuteNonQuery();                    
                     comando.Connection.Close();
                 }
                 catch (MySqlException ex)
@@ -81,6 +81,25 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
+        }
+
+        public int UltimoId()
+        {
+            int id = 0;
+            String consulta = "SELECT MAX(idS611_Ingre) FROM S611_Ingre";
+            MySqlCommand comando = new MySqlCommand(consulta,conex);
+            try
+                {
+                    comando.Connection.Open();
+                    id = (Int32)comando.ExecuteScalar();
+                    comando.Connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    Error error = new Error(ex.Message + "   " + ex.Number, 0);
+                    errores.Add(error);
+                }
+            return id;
         }
     }
 }

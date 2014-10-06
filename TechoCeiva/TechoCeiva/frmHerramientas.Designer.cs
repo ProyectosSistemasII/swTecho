@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.uC_Tools1 = new TechoCeiva.UC_Tools();
             this.SuspendLayout();
             // 
             // elementHost1
@@ -41,7 +40,6 @@
             this.elementHost1.Size = new System.Drawing.Size(1284, 661);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.uC_Tools1;
             // 
             // frmHerramientas
             // 
@@ -62,7 +60,5 @@
         #endregion
 
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private UC_Tools uC_Tools1;
-
     }
 }

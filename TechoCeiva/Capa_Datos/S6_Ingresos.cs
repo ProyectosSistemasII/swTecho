@@ -69,7 +69,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S6_Ingre(ApoyoEstado,CantidadApoyo,Remesas,CantidadRemesas,Deuda,DineroDeuda,TiempoPagoDeuda,IngresoTotal,CubreGastos,Ahorro,MontoAhorro,DineroGasto,Encuestas_idEncuestas,S611_Ingre_idS611_Ingre) VALUES(@CodigoS6,@ApoyoEstado,@CantidadApoyo,@Remesas,@CantidadRemesas,@Deuda,@DineroDeuda,@TiempoPagoDeuda,@IngresoTotal,@CubreGastos,@Ahorro,@MontoAhorro,@DineroGasto,@Encuestas_idEncuestas,@S611_Ingre_idS611_Ingre)";
+                string consulta = "INSERT INTO s6_ingre(ApoyoEstado,CantidadApoyo,Remesas,CantidadRemesas,Deuda,DineroDeuda,TiempoPagoDeuda,IngresoTotal,CubreGastos,Ahorro,MontoAhorro,DineroGasto,Encuestas_idEncuestas,S611_Ingre_idS611_Ingre) VALUES(@ApoyoEstado,@CantidadApoyo,@Remesas,@CantidadRemesas,@Deuda,@DineroDeuda,@TiempoPagoDeuda,@IngresoTotal,@CubreGastos,@Ahorro,@MontoAhorro,@DineroGasto,@Encuestas_idEncuestas,@S611_Ingre_idS611_Ingre)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@ApoyoEstado", this.ApoyoEstado);
                 comando.Parameters.AddWithValue("@CantidadApoyo", this.CantidadApoyo);
@@ -84,8 +84,10 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@MontoAhorro", this.MontoAhorro);
                 comando.Parameters.AddWithValue("@DineroGasto", this.DineroGasto);
                 comando.Parameters.AddWithValue("@Encuestas_idEncuestas", this.Encuestas_idEncuestas);
-                comando.Parameters.AddWithValue("@S611_Ingre_idS611_Ingre", this.S611_Ingre_idS611_Ingre);
-
+                if(S611_Ingre_idS611_Ingre == 0)
+                    comando.Parameters.AddWithValue("@S611_Ingre_idS611_Ingre", null);
+                else
+                    comando.Parameters.AddWithValue("@S611_Ingre_idS611_Ingre", this.S611_Ingre_idS611_Ingre);
                 try
                 {
                     comando.Connection.Open();
