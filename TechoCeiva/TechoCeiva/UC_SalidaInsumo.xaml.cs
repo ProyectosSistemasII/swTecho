@@ -16,9 +16,9 @@ namespace TechoCeiva
 	/// <summary>
 	/// Lógica de interacción para UC_Manage.xaml
 	/// </summary>
-	public partial class UC_Manage : UserControl
+	public partial class UC_SalidaInsumo : UserControl
 	{
-		public UC_Manage()
+        public UC_SalidaInsumo()
 		{
 			this.InitializeComponent();
 		}

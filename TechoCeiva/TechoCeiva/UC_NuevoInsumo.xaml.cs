@@ -16,9 +16,9 @@ namespace TechoCeiva
 	/// <summary>
 	/// Lógica de interacción para UC_NewTool.xaml
 	/// </summary>
-	public partial class UC_NewTool : UserControl
+	public partial class UC_NuevoInsumo : UserControl
 	{
-		public UC_NewTool()
+        public UC_NuevoInsumo()
 		{
 			this.InitializeComponent();
 		}
