@@ -50,7 +50,7 @@ namespace Capa_Logica
             S808_Servicios servicios = new S808_Servicios(0,this.Refrigerador, this.EquipoSonido, this.Televisor, this.DVD, this.Motocicleta, this.Automovil, this.Computadora, this.Amueblado, this.Otros, this.Especificar);
             servicios.InsertarS808();
             this.errores = servicios.errores;
-            this.idS808_Serv = servicios.Obtener_Ultima_EncS808();
+            ///this.idS808_Serv = servicios.Obtener_Ultima_EncS808();
             //Comprobar errores para la capa de datos
             if (errores.Count > 0)
             {

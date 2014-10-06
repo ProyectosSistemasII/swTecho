@@ -26,7 +26,7 @@ namespace Capa_Logica
             this.idS807_serv = 0;
             this.idS808_serv = 0;
         }
-        public S8_ServiciosLN(String AccesoAgua, String FuenteAgua, String OtraFuente, String EnergiaElectrica, String OtraEnergiaElectrica, String EnergiaCocina, String OtraEnergiaCocina, String Sanitario, String OtroTipoSanitario, String BasuraHogar, String OtroTipoBasura, int idEncuesta, int idS807, int idS808)
+        public S8_ServiciosLN(String AccesoAgua, String FuenteAgua, String OtraFuente, String EnergiaElectrica, String OtraEnergiaElectrica, String EnergiaCocina, String OtraEnergiaCocina, String Sanitario, String OtroTipoSanitario, String BasuraHogar, String OtroTipoBasura, int idEncuesta)
         {
             
             this.AccesoAgua = AccesoAgua;
@@ -41,8 +41,6 @@ namespace Capa_Logica
             this.BasuraHogar = BasuraHogar;
             this.OtroTipoBasura = OtroTipoBasura;
             this.idEncuestas = idEncuestas;
-            this.idS807_serv = idS807;
-            this.idS808_serv = idS808;
             this.errores = new List<Error>();
         }
 

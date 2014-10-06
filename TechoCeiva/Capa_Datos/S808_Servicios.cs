@@ -60,9 +60,9 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S808_Serv(Refrigedor,EquipoSonido,Televisor,DVD,Motocicleta,Automovil,Computadora,Amueblado,Otros,Especificar) VALUES(@Refrigedor,@EquipoSonido,@Televisor,@DVD,@Motocicleta,@Automovil,@Computadora,@Amueblado,@Otros,@Especificar)";
+                string consulta = "INSERT INTO S808_Serv(Refrigerador,EquipoSonido,Televisor,DVD,Motocicleta,Automovil,Computadora,Amueblado,Otros,Especificar) VALUES(@Refrigerador,@EquipoSonido,@Televisor,@DVD,@Motocicleta,@Automovil,@Computadora,@Amueblado,@Otros,@Especificar)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
-                comando.Parameters.AddWithValue("@Refrigedor", this.Refrigerador);
+                comando.Parameters.AddWithValue("@Refrigerador", this.Refrigerador);
                 comando.Parameters.AddWithValue("@EquipoSonido", this.EquipoSonido);
                 comando.Parameters.AddWithValue("@Televisor", this.Televisor);
                 comando.Parameters.AddWithValue("@DVD", this.DVD);

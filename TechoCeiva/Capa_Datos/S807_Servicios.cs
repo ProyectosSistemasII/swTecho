@@ -47,7 +47,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S807_Serv(Ninguno,CableTV,CableTV,TelefonoResid,Internet,NSNR) VALUES(@Ninguno,@CableTV,@TelefonoResid,@Internet,@NSNR)";
+                string consulta = "INSERT INTO S807_Serv(Ninguno,CableTV,TelefonoResid,Internet,NSNR) VALUES(@Ninguno,@CableTV,@TelefonoResid,@Internet,@NSNR)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Ninguno", this.Ninguno);
                 comando.Parameters.AddWithValue("@CableTV", this.CableTV);

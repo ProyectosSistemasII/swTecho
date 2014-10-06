@@ -77,7 +77,7 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@EnergiaElectrica", this.EnergiaElectrica);
                 comando.Parameters.AddWithValue("@OtraEnergiaElectrica", this.OtraEnergiaElectrica);
                 comando.Parameters.AddWithValue("@EnergiaCocina", this.EnergiaCocina);
-                comando.Parameters.AddWithValue("@OtraEnergiaElectrica", this.OtraEnergiaCocina);
+                comando.Parameters.AddWithValue("@OtraEnergiaCocina", this.OtraEnergiaCocina);
                 comando.Parameters.AddWithValue("@Sanitario", this.Sanitario);
                 comando.Parameters.AddWithValue("@otroTipoSanitario", this.OtroTipoSanitario);
                 comando.Parameters.AddWithValue("@BasuraHogar", this.BasuraHogar);
