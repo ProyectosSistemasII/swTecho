@@ -50,6 +50,8 @@ namespace TechoCeiva
         /// -----------------------------------------------------------------------------------------------------------
           // variable de idComunidad
           public int idComuni = 0;
+          // ultimo idEncuesta
+          public int idEncu = 0;
         Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
         public frmEncuesta()
@@ -838,7 +840,7 @@ namespace TechoCeiva
 
         private void frmEncuesta_Load(object sender, EventArgs e)
         {
-            tbpInfo.Parent = null;
+            //tbpInfo.Parent = null;
             tbpS1.Parent = null;
             tbpS2.Parent = null;
             tbpS3.Parent = null;
@@ -846,7 +848,7 @@ namespace TechoCeiva
             tbpS5.Parent = null;
             tbpS6.Parent = null;
             tbpS7.Parent = null;
-            //tbpS8.Parent = null;
+            tbpS8.Parent = null;
             tbpS9.Parent = null;
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
@@ -889,6 +891,7 @@ namespace TechoCeiva
                     MessageBox.Show("Ingresado Correctamente");
                     tbpInfo.Parent = null;
                     tbpS1.Parent = tbcDatos;
+                    idEncu = InfoEnc.UltimoId();
                 }
                 else
                 {
@@ -901,6 +904,11 @@ namespace TechoCeiva
         {
             dgvS1.Rows.Add();
             dgvS1.Rows[iS1 - 1].Cells[0].Value = iS1;
+            dgvS1.Rows[iS1 - 1].Cells[1].Value = "";
+            dgvS1.Rows[iS1 - 1].Cells[2].Value = "";
+            dgvS1.Rows[iS1 - 1].Cells[3].Value = "DD/MM/AAAA";
+            dgvS1.Rows[iS1 - 1].Cells[4].Value = "Hombre";
+            dgvS1.Rows[iS1 - 1].Cells[5].Value = "No";
             iS1++;
         }
 
@@ -919,22 +927,38 @@ namespace TechoCeiva
         private void pbNextS1_Click(object sender, EventArgs e)
         {
             S1_IntegrantesLN S1 = new S1_IntegrantesLN();
-            Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
+            Boolean correcto = false;
+            int Filas = 0;
+            //Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
             // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
+
             foreach (DataGridViewRow row in dgvS1.Rows)
             {
+                dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
+                /*MessageBox.Show(row.Cells[0].Value.ToString());
+                MessageBox.Show(row.Cells[1].Value.ToString());
+                MessageBox.Show(row.Cells[2].Value.ToString());
+                MessageBox.Show(row.Cells[3].Value.ToString());
+                MessageBox.Show(row.Cells[4].Value.ToString());
+                MessageBox.Show(row.Cells[5].Value.ToString());*/
+                correcto = S1.Insertar_EncuS1(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), idEncu, Filas);
                 if (correcto)
                 {
-                    MessageBox.Show("Ingresado Correctamente");
+                    //MessageBox.Show("Ingresado Correctamente");
+                    Filas++;
 
                 }
                 else
                 {
+                    Filas = 0;
                     MessageBox.Show(S1.obtenerError());
+                    break;
+
                 }
             }
             if (correcto)
             {
+                MessageBox.Show("Ingresado Correctamente");
                 tbpS1.Parent = null;
                 tbpS2.Parent = tbcDatos;
                 //para s2
@@ -1038,6 +1062,12 @@ namespace TechoCeiva
                 rbtS808_OtroEspecificar.Enabled = true;
             else
                 rbtS808_OtroEspecificar.Enabled = false;
+        }
+
+        private void dgvS1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvS1.CurrentRow.Cells[3].Value.ToString() == "DD/MM/AAAA")
+                dgvS1.CurrentRow.Cells[3].Value = "";
         }
         
     }

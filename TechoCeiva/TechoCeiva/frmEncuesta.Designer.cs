@@ -1293,6 +1293,7 @@
             this.dgvS1.Name = "dgvS1";
             this.dgvS1.Size = new System.Drawing.Size(907, 448);
             this.dgvS1.TabIndex = 0;
+            this.dgvS1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvS1_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -7387,7 +7388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1005, 603);
+            this.ClientSize = new System.Drawing.Size(1005, 620);
             this.Controls.Add(this.tbcDatos);
             this.Name = "frmEncuesta";
             this.Text = "frmEncuesta";

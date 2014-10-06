@@ -50,6 +50,7 @@ namespace Capa_Datos
             {
                 DataRow row = tabla.Rows[i];
                 _Comunidad Comunidades = new _Comunidad(Convert.ToInt32(row["idComunidad"]), Convert.ToString(row["Nombre"]), Convert.ToInt32(row["Departamento_idDepartamento"]), Convert.ToInt32(row["Municipio_idMunicipio"]));
+                ListaComunidad.Add(Comunidades);
             }
             return ListaComunidad;
         }

@@ -126,5 +126,24 @@ namespace Capa_Datos
                 }
             }
         }
+        // Obtener el idEncuesta ingresado
+        public int UltimoId()
+        {
+            int id = 0;
+            String consulta = "SELECT MAX(idEncuestas) FROM Encuestas";
+            MySqlCommand comando = new MySqlCommand(consulta, conex);
+            try
+            {
+                comando.Connection.Open();
+                id = (Int32)comando.ExecuteScalar();
+                comando.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Error error = new Error(ex.Message + " " + ex.Number, 0);
+                errores.Add(error);
+            }
+            return id;
+        }
     }
 }
