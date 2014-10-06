@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_Logica;
 
 namespace TechoCeiva
 {
@@ -21,6 +22,9 @@ namespace TechoCeiva
 		public UC_NewTool()
 		{
 			this.InitializeComponent();
+            _HerramientasLN Tools = new _HerramientasLN();
+            fillCbox(Tools);
+            fillDataGrid(Tools);
 		}
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
@@ -28,6 +32,18 @@ namespace TechoCeiva
             WinAddTool nWinToAddTool = new WinAddTool();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinToAddTool);
             nWinToAddTool.Show();
+        }
+
+        private void fillCbox(_HerramientasLN Herramientas)
+        {
+            cbxHerramienta.ItemsSource = Herramientas._Obtener_H();
+            cbxHerramienta.SelectedValuePath = "idHerramientas";
+            cbxHerramienta.DisplayMemberPath = "Nombre";
+        }
+
+        private void fillDataGrid(_HerramientasLN Herramientas)
+        {
+            DataGridHerramientas.ItemsSource = Herramientas._Obtener_H();
         }
 	}
 }

@@ -39,8 +39,8 @@ namespace TechoCeiva
 
             if (correcto)
             {
-                nuevaHerramienta.InsertarEn_DB();
-                MessageBox.Show("Herramienta ingresada correctamente");
+                nuevaHerramienta._Insertar_H();
+                //MessageBox.Show("Herramienta ingresada correctamente");
                 txtHerramienta.Focus();
             }
             else
