@@ -43,7 +43,8 @@ namespace TechoCeiva
           int rbtS808_Amueblado = 0;
           int rbtS808_Otros = 0;
         /// -----------------------------------------------------------------------------------------------------------
-
+          // variable de idComunidad
+          public int idComuni = 0;
         Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
         public frmEncuesta()
@@ -806,22 +807,44 @@ namespace TechoCeiva
             dgvS3.Columns[0].ReadOnly = true;
             dgvS4.Columns[0].ReadOnly = true;
             dgvS5.Columns[0].ReadOnly = true;
+            _VoluntariosLN Voluntarios = new _VoluntariosLN();
+
+            cmbEncuestador1.DataSource = Voluntarios.Obtener_VNomCompleto();
+            cmbEncuestador1.Text = null;
+
+            cmbEncuestador2.DataSource = Voluntarios.Obtener_VNomCompleto();
+            cmbEncuestador2.Text = null;
         }
         //Informacion
         private void pbNext_Click(object sender, EventArgs e)
         {
             Info_EncuestaLN InfoEnc = new Info_EncuestaLN();
-            Boolean correcto = true;// InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
-                  //txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpInfo.Parent = null;
-                tbpS1.Parent = tbcDatos;
-            }
+
+            int codVoluntario1 = 0, codVoluntario2 = 0;
+            if (cmbEncuestador1.Text == cmbEncuestador2.Text)
+                MessageBox.Show("no puede ser igual");
             else
             {
-                MessageBox.Show(InfoEnc.obtenerError());
+                if (cmbEncuestador1.Text == "")
+                    codVoluntario1 = 0;
+                else
+                    codVoluntario1 = Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString());
+                if (cmbEncuestador2.Text == "")
+                    codVoluntario2 = 0;
+                else
+                    codVoluntario2 = Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString());
+                Boolean correcto = InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, codVoluntario1, codVoluntario2, Convert.ToDateTime(dtpFecha.Value.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, cmbEstadoEn.Text, txtObservaciones.Text,
+                       txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
+                if (correcto)
+                {
+                    MessageBox.Show("Ingresado Correctamente");
+                    tbpInfo.Parent = null;
+                    tbpS1.Parent = tbcDatos;
+                }
+                else
+                {
+                    MessageBox.Show(InfoEnc.obtenerError());
+                }
             }
         }
         int iS1 = 1;

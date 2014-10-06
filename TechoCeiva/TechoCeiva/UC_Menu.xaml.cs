@@ -91,8 +91,11 @@ namespace TechoCeiva
 
         private void btnEncuestaIngresar_Click(object sender, RoutedEventArgs e)
         {
-            frmEncuesta nEncuenta = new frmEncuesta();
-            nEncuenta.Show();
+            var sComunidad = new UC_SelecComunidad();
+            //frmEncuesta nEncuenta = new frmEncuesta();
+            canvasMenu.Children.Clear();
+            canvasMenu.Children.Add(sComunidad);
+            //nEncuenta.Show();
         }
 
         private void btnVoluntariosIngresar_Click(object sender, RoutedEventArgs e)

@@ -42,6 +42,7 @@ namespace Capa_Datos
             this.HoraInicio = "";
             this.HoraFin = "";
             this.DatosEncuestado = "";
+            this.EstadoEncuesta = "";
             this.ObservacionesEstado = "";
             this.AldeaRuralNoZonaUrbana = "";
             this.CantonCaserioSector = "";
@@ -55,7 +56,7 @@ namespace Capa_Datos
             this.idComunidad = 0;
         }
         public Info_Encuesta(string CodigoHogar, int idVoluntario1, int idVoluntario2, DateTime FechaEncuesta, string HoraInicio, string HoraFin,
-            string DatosEncuestado, string ObservacionesEstado, string AldeaRuralNoZonaUrbana, string CantonCaserioSector, string XGPS, string YGPS,
+            string DatosEncuestado, string EstadoEncuesta, string ObservacionesEstado, string AldeaRuralNoZonaUrbana, string CantonCaserioSector, string XGPS, string YGPS,
             string JefeFamilia, string PrimerTelefono, string SegundoTelefono, string Direccion, string Especificaciones, int idComunidad)
         {
             this.CodigoHogar = CodigoHogar;
@@ -65,6 +66,7 @@ namespace Capa_Datos
             this.HoraInicio = HoraInicio;
             this.HoraFin = HoraFin;
             this.DatosEncuestado = DatosEncuestado;
+            this.EstadoEncuesta = EstadoEncuesta;
             this.ObservacionesEstado = ObservacionesEstado;
             this.AldeaRuralNoZonaUrbana = AldeaRuralNoZonaUrbana;
             this.CantonCaserioSector = CantonCaserioSector;
@@ -77,19 +79,24 @@ namespace Capa_Datos
             this.Especificaciones = Especificaciones;
             this.idComunidad = idComunidad;
             this.errores = new List<Error>();
+            this.InsertarInfoEncuesta();
         }
 
+        // Ingreso de informacion de encuesta
         public void InsertarInfoEncuesta()
         {
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO Encuestas(CodigoHogar, Voluntarios_idVoluntarios, Voluntarios_idVoluntarios1, FechaEncuesta, HoraInicio, HoraFin, DatosEncuestado, EstadoEncuesta, ObservacionesEstado, AldeaRuralNoZonaUrbana, CantonCaserioSector, XGPS, YGPS, JefeFamilia, PrimerTelefono, SegundoTelefono, Direccion, Especificaciones, Comunidad_idComunidad) VALUES(@CodigoHogar, @idVoluntario1, @idVoluntario2, @FechaEncuesta, @HoraInicio, @HoraFin, @DatosEncuestado, @EstadoEncuesta, @ObservacionesEstado, @AldeaRuralNoZonaUrbana, @CantonCaserioSector, @XGPS, @YGPS, @JefeFamilia, @PrimerTelefono, @SegundoTelefono, @Direccion, @Especificaciones, @Comunidad_idComunidad)";
+                string consulta = "INSERT INTO Encuestas(CodigoHogar, Voluntarios_idVoluntarios, Voluntarios_idVoluntarios1, FechaEncuesta, HoraInicio, HoraFin, DatosEncuestado, EstadoEncuesta, ObservacionesEstado, AldeaRuralNoZonaUrbana, CantonCaserioSector, XGPS, YGPS, JefeFamilia, PrimerTelefono, SegundoTelefono, Direccion, Especificaciones, Activo, Comunidad_idComunidad) VALUES(@CodigoHogar, @Voluntarios_idVoluntarios, @Voluntarios_idVoluntarios1, @FechaEncuesta, @HoraInicio, @HoraFin, @DatosEncuestado, @EstadoEncuesta, @ObservacionesEstado, @AldeaRuralNoZonaUrbana, @CantonCaserioSector, @XGPS, @YGPS, @JefeFamilia, @PrimerTelefono, @SegundoTelefono, @Direccion, @Especificaciones, true, @Comunidad_idComunidad)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@CodigoHogar", this.CodigoHogar);
                 comando.Parameters.AddWithValue("@Voluntarios_idVoluntarios", this.idVoluntario1);
-                comando.Parameters.AddWithValue("@Voluntarios_idVoluntarios1", this.idVoluntario2);
-                comando.Parameters.AddWithValue("@FechaEncuesta", this.FechaEncuesta);
+                if (this.idVoluntario2 == 0)
+                    comando.Parameters.AddWithValue("@Voluntarios_idVoluntarios1", null);
+                else
+                    comando.Parameters.AddWithValue("@Voluntarios_idVoluntarios1", this.idVoluntario2);
+                comando.Parameters.AddWithValue("@FechaEncuesta", this.FechaEncuesta.Date);
                 comando.Parameters.AddWithValue("@HoraInicio", this.HoraInicio);
                 comando.Parameters.AddWithValue("@HoraFin", this.HoraFin);
                 comando.Parameters.AddWithValue("@DatosEncuestado", this.DatosEncuestado);
@@ -104,7 +111,7 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@SegundoTelefono", this.SegundoTelefono);
                 comando.Parameters.AddWithValue("@Direccion", this.Direccion);
                 comando.Parameters.AddWithValue("@Especificaciones", this.Especificaciones);
-                comando.Parameters.AddWithValue("@Comunidad", this.idComunidad);
+                comando.Parameters.AddWithValue("@Comunidad_idComunidad", this.idComunidad);
 
                 try
                 {
@@ -119,27 +126,5 @@ namespace Capa_Datos
                 }
             }
         }
-
-        /*public List<Info_Encuesta> ObtenerS9()
-        {
-            List<Info_Encuesta> ListaEncuesta = new List<Info_Encuesta>();
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM Encuesta", conex);
-            comando.CommandTimeout = 12280;
-            DataSet ds = new DataSet();
-            MySqlDataAdapter Adapter = new MySqlDataAdapter();
-            Adapter.SelectCommand = comando;
-            Adapter.Fill(ds);
-            DataTable tabla = new DataTable();
-            tabla = ds.Tables[0];
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                DataRow row = tabla.Rows[i];
-                Info_Encuesta Encuesta = new Info_Encuesta(Convert.ToInt32(row["Encuesta"]), Convert.ToInt32(row["idEncuesta"]), Convert.ToString(row["Propio"]), Convert.ToString(row["Propietario"]), Convert.ToString(row["OtroPropietario"]), Convert.ToString(row["TipoPropietario"]), Convert.ToString(row["OtroTipoPropietario"]), Convert.ToString(row["PropietarioTerreno"]), Convert.ToString(row["TelefonoPropietarioTerreno"]), Convert.ToString(row["NSNR"]), Convert.ToString(row["OtraPropiedad"]), Convert.ToString(row["OtraPropiedadA"]), Convert.ToString(row["OtraPropiedadB"]), Convert.ToString(row["OtraPropiedadC"]), Convert.ToInt32(row["Encuestas_idEncuestas"]));
-                ListaEncuesta.Add(Encuesta);
-            }
-            return ListaEncuesta;
-
-        }*/
-
     }
 }

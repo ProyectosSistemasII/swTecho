@@ -633,7 +633,7 @@
 		<Canvas x:Name="CanvasHeader" Height="83.947" VerticalAlignment="Top">
 			<Rectangle Fill="#FF77777A" Height="0.5" Canvas.Left="20" Canvas.Top="75.79" Width="1245"/>
 			<Image Source="img/o.png" Stretch="Fill" Width="57" Height="58.947" Canvas.Left="21.5" Canvas.Top="8"/>
-			<Label Content="- CEHIVA" Style="{DynamicResource SimpleLabel}" Width="308.993" Foreground="#FF0092DD" FontSize="48" Canvas.Left="96" Canvas.Top="8"/>
+			<Label Content="- CEIVA" Style="{DynamicResource SimpleLabel}" Width="308.993" Foreground="#FF0092DD" FontSize="48" Canvas.Left="96" Canvas.Top="8"/>
 		</Canvas>
     </Grid>
 </UserControl>

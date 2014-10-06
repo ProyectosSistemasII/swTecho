@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_Datos;
 
 namespace TechoCeiva
 {
@@ -23,5 +24,22 @@ namespace TechoCeiva
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            frmEncuesta nEncuesta = new frmEncuesta();
+            nEncuesta.idComuni = Convert.ToInt32(cmbComunidad.SelectedValue.ToString());
+            //MessageBox.Show(cmbComunidad.SelectedValue.ToString());
+            nEncuesta.ShowDialog();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            _Comunidad Comunidades = new _Comunidad();
+            cmbComunidad.ItemsSource = Comunidades.ObtenerComunidades();
+            cmbComunidad.DisplayMemberPath = "Nombre";//.ToString();
+            cmbComunidad.SelectedValuePath = "idComunidad";//.ToString();
+        }
+
     }
 }

@@ -1070,19 +1070,25 @@
             // 
             // cmbEncuestador2
             // 
+            this.cmbEncuestador2.DisplayMember = "Datos";
+            this.cmbEncuestador2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEncuestador2.FormattingEnabled = true;
             this.cmbEncuestador2.Location = new System.Drawing.Point(186, 46);
             this.cmbEncuestador2.Name = "cmbEncuestador2";
             this.cmbEncuestador2.Size = new System.Drawing.Size(302, 21);
             this.cmbEncuestador2.TabIndex = 30;
+            this.cmbEncuestador2.ValueMember = "idVoluntarios";
             // 
             // cmbEncuestador1
             // 
+            this.cmbEncuestador1.DisplayMember = "Datos";
+            this.cmbEncuestador1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEncuestador1.FormattingEnabled = true;
             this.cmbEncuestador1.Location = new System.Drawing.Point(186, 19);
             this.cmbEncuestador1.Name = "cmbEncuestador1";
             this.cmbEncuestador1.Size = new System.Drawing.Size(302, 21);
             this.cmbEncuestador1.TabIndex = 29;
+            this.cmbEncuestador1.ValueMember = "idVoluntarios";
             // 
             // txtObservaciones
             // 
@@ -1103,7 +1109,15 @@
             // 
             // cmbEstadoEn
             // 
+            this.cmbEstadoEn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoEn.FormattingEnabled = true;
+            this.cmbEstadoEn.Items.AddRange(new object[] {
+            "Completa",
+            "Parcial",
+            "Rechazo",
+            "No había nadie en casa",
+            "Vivienda desocupada",
+            "Indisposición"});
             this.cmbEstadoEn.Location = new System.Drawing.Point(576, 34);
             this.cmbEstadoEn.Name = "cmbEstadoEn";
             this.cmbEstadoEn.Size = new System.Drawing.Size(289, 21);
@@ -1607,7 +1621,7 @@
             // dataGridViewComboBoxColumn10
             // 
             this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
-    "entro educativo?\t\t\t\t\t\t";
+                "entro educativo?\t\t\t\t\t\t";
             this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
             "Actualmente asiste\t\t\t\t\t",
             "No está en edad escolar aún\t\t\t\t\t",
@@ -1744,7 +1758,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
-    "nar?";
+                "nar?";
             this.Column3.Items.AddRange(new object[] {
             "01. Si (especificar)",
             "02. No",
@@ -1909,7 +1923,7 @@
             // Column13
             // 
             this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
-    "ropia recientemente?";
+                "ropia recientemente?";
             this.Column13.Items.AddRange(new object[] {
             "01. Que haceres domésticos",
             "02. Cuidado de los hijo/as",
@@ -1999,7 +2013,7 @@
             // Column20
             // 
             this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
-    "ipal?";
+                "ipal?";
             this.Column20.Items.AddRange(new object[] {
             "01. Si (especificar)",
             "02. No",
@@ -2027,7 +2041,7 @@
             // Column24
             // 
             this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
-    "";
+                "";
             this.Column24.Name = "Column24";
             // 
             // tbpS6
@@ -2128,7 +2142,7 @@
             this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(249, 57);
             this.lblS6_11_FaltaDinero.TabIndex = 0;
             this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero en los últimos doce meses?  [" +
-    "MARCAR TODAS LAS OPCIONES NECESARIAS] ";
+                "MARCAR TODAS LAS OPCIONES NECESARIAS] ";
             // 
             // groupBox15
             // 
@@ -2166,7 +2180,7 @@
             this.lblS6_10_Gastos.Size = new System.Drawing.Size(249, 75);
             this.lblS6_10_Gastos.TabIndex = 0;
             this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido suficientes para cubrir sus ga" +
-    "stos. Mensualmente, ¿Por cuánto dinero superan esos gastos a los ingresos?";
+                "stos. Mensualmente, ¿Por cuánto dinero superan esos gastos a los ingresos?";
             // 
             // groupBox14
             // 
@@ -2235,7 +2249,7 @@
             this.lblS6_8_Ahorro.Size = new System.Drawing.Size(249, 53);
             this.lblS6_8_Ahorro.TabIndex = 0;
             this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han sido suficientes. ¿Han lograd" +
-    "o en ese caso generar un ahorro mensual?";
+                "o en ese caso generar un ahorro mensual?";
             // 
             // groupBox12
             // 
@@ -2268,7 +2282,7 @@
             this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(249, 57);
             this.lblS6_7_CubrirGastos.TabIndex = 0;
             this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del hogar han sido suficientes" +
-    " para cubrir su gastos?";
+                " para cubrir su gastos?";
             // 
             // groupBox11
             // 
@@ -2306,7 +2320,7 @@
             this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(249, 55);
             this.lblS6_6_IngresoTotal.TabIndex = 0;
             this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el trabajo de todos los integran" +
-    "tes, apoyos gubernamentales, remesas y otras ayudas?";
+                "tes, apoyos gubernamentales, remesas y otras ayudas?";
             // 
             // groupBox10
             // 
@@ -2524,7 +2538,7 @@
             this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(249, 42);
             this.lblS6_1_IngresosEstado.TabIndex = 0;
             this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero por apoyo del Estado (progra" +
-    "mas)? ¿qué cantidad?";
+                "mas)? ¿qué cantidad?";
             // 
             // tbpS7
             // 
@@ -4127,7 +4141,7 @@
             this.label77.Size = new System.Drawing.Size(358, 39);
             this.label77.TabIndex = 15;
             this.label77.Text = "8. ¿Cuáles artículos de la siguiente lista posee y en qué estado se \r\n    encuent" +
-    "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
+                "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
             // 
             // groupBox65
             // 
@@ -4607,7 +4621,7 @@
             this.label66.Size = new System.Drawing.Size(266, 26);
             this.label66.TabIndex = 1;
             this.label66.Text = "7. ¿Cuenta con algún otro servicio adicional?\r\n    [MARCAR TODAS LAS OPCIONES NEC" +
-    "ESARIAS] ";
+                "ESARIAS] ";
             // 
             // groupBox54
             // 
@@ -4745,7 +4759,7 @@
             this.label63.Size = new System.Drawing.Size(220, 26);
             this.label63.TabIndex = 1;
             this.label63.Text = "4. ¿Qué tipo de combustible o energía utiliza \r\n    PREDOMINANTEMENTE para cocina" +
-    "r?\t\t\t\t";
+                "r?\t\t\t\t";
             // 
             // groupBox51
             // 
@@ -5001,7 +5015,7 @@
             this.label94.Size = new System.Drawing.Size(278, 26);
             this.label94.TabIndex = 1;
             this.label94.Text = "5. ¿Posee usted o algún miembro de su familia algún otro \r\n     tipo de bien o de" +
-    " propiedad?\t";
+                " propiedad?\t";
             // 
             // groupBox81
             // 
@@ -5164,7 +5178,7 @@
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(4, 10);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(269, 13);
+            this.label98.Size = new System.Drawing.Size(265, 13);
             this.label98.TabIndex = 1;
             this.label98.Text = "2. En el caso de que sea usted propietario:          ►   (5)";
             // 
@@ -5333,8 +5347,8 @@
             this.label124.Size = new System.Drawing.Size(281, 39);
             this.label124.TabIndex = 1;
             this.label124.Text = "11. ¿Estaría dispuesto a trabajar junto a sus vecinos para \r\n      mejorar algún " +
-    "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
-    "rlo?\t";
+                "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
+                "rlo?\t";
             // 
             // groupBox89
             // 
@@ -5427,7 +5441,7 @@
             this.label120.Size = new System.Drawing.Size(285, 39);
             this.label120.TabIndex = 1;
             this.label120.Text = "10. ¿Considera que existen problemáticas y/o necesidades\r\n      en su comunidad? " +
-    "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
+                "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
             // 
             // groupBox82
             // 
@@ -5520,7 +5534,7 @@
             this.label116.Size = new System.Drawing.Size(297, 39);
             this.label116.TabIndex = 1;
             this.label116.Text = "9. ¿Considera que existe alguna necesidad o problemática en\r\n    su familia? En e" +
-    "l caso de que si ¿cuáles considera que son\r\n    las principales?";
+                "l caso de que si ¿cuáles considera que son\r\n    las principales?";
             // 
             // gbxS1008_Com
             // 
@@ -6376,7 +6390,7 @@
             this.label92.AutoSize = true;
             this.label92.Location = new System.Drawing.Point(3, 10);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(252, 13);
+            this.label92.Size = new System.Drawing.Size(248, 13);
             this.label92.TabIndex = 1;
             this.label92.Text = "6. ¿En cuál o cuáles participa?                   ►(10.08)";
             // 
@@ -6410,7 +6424,7 @@
             this.label91.Size = new System.Drawing.Size(274, 39);
             this.label91.TabIndex = 1;
             this.label91.Text = "5. ¿Ha participado usted o algún miembro de su familia\r\n    en algún grupo u orga" +
-    "nización que actue en beneficio\r\n    de la comunidad?";
+                "nización que actue en beneficio\r\n    de la comunidad?";
             // 
             // groupBox70
             // 
@@ -6503,7 +6517,7 @@
             this.label83.Size = new System.Drawing.Size(308, 26);
             this.label83.TabIndex = 1;
             this.label83.Text = "4. ¿Podría mencionarme si usted se organiza con sus vecinos? \r\n    ¿En qué situac" +
-    "iones lo hacen?\r\n";
+                "iones lo hacen?\r\n";
             // 
             // groupBox71
             // 
@@ -6710,7 +6724,7 @@
             this.label150.Size = new System.Drawing.Size(299, 26);
             this.label150.TabIndex = 1;
             this.label150.Text = "21. ¿Cómo cree que estará su comunidad en años posteriores\r\n      (en el futuro)?" +
-    " ¿Por qué cree eso?";
+                " ¿Por qué cree eso?";
             // 
             // groupBox107
             // 
@@ -6764,7 +6778,7 @@
             this.label147.Size = new System.Drawing.Size(285, 26);
             this.label147.TabIndex = 1;
             this.label147.Text = "20. ¿Cómo cree que está su comunidad en relación a años\r\n      anteriores (al pas" +
-    "ado)? ¿Por qué cree eso?";
+                "ado)? ¿Por qué cree eso?";
             // 
             // groupBox106
             // 
@@ -6961,7 +6975,7 @@
             this.label143.Size = new System.Drawing.Size(289, 26);
             this.label143.TabIndex = 1;
             this.label143.Text = "15. ¿Usted considera que en la comunidad existe algún tipo\r\n      de discriminaci" +
-    "ón? En caso de que si, ¿de qué tipo?";
+                "ón? En caso de que si, ¿de qué tipo?";
             // 
             // groupBox103
             // 
@@ -7018,7 +7032,7 @@
             this.label142.Size = new System.Drawing.Size(300, 26);
             this.label142.TabIndex = 1;
             this.label142.Text = "13. ¿Cuáles son para usted los principales aspectos negativos\r\n      de vivir en " +
-    "esta comunidad?\r\n";
+                "esta comunidad?\r\n";
             // 
             // groupBox100
             // 
@@ -7075,7 +7089,7 @@
             this.label134.Size = new System.Drawing.Size(295, 26);
             this.label134.TabIndex = 1;
             this.label134.Text = "12. ¿Cuáles son para usted los principales aspectos positivos\r\n      de vivir en " +
-    "esta comunidad?\r\n";
+                "esta comunidad?\r\n";
             // 
             // groupBox101
             // 
@@ -7122,7 +7136,7 @@
             this.label138.Size = new System.Drawing.Size(301, 26);
             this.label138.TabIndex = 1;
             this.label138.Text = "14. ¿Cuáles considera usted que es el grupo de su comunidad\r\n      más afectado p" +
-    "or los problemas de la comunidad?";
+                "or los problemas de la comunidad?";
             // 
             // groupBox109
             // 
@@ -7305,7 +7319,7 @@
             this.label157.Size = new System.Drawing.Size(296, 26);
             this.label157.TabIndex = 1;
             this.label157.Text = "3. ¿En qué año se traslado su familia a esta comunidad y por \r\n    qué el traslad" +
-    "o?";
+                "o?";
             // 
             // groupBox113
             // 
@@ -7366,7 +7380,7 @@
             this.label159.Size = new System.Drawing.Size(282, 26);
             this.label159.TabIndex = 1;
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
-    "urante toda su VIDA FAMILIAR?\r\n";
+                "urante toda su VIDA FAMILIAR?\r\n";
             // 
             // frmEncuesta
             // 

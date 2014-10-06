@@ -153,5 +153,17 @@ namespace Capa_Datos
             }
         }
 
+        // Cargar datos en combobox de encuestas, concatenacion de nombre completo
+        public DataTable Obtener_VNomCompleto()
+        {
+            MySqlCommand _comando = new MySqlCommand("SELECT idVoluntarios, concat(Nombres, ' ', Apellidos) AS Datos FROM VOLUNTARIOS WHERE Activo=true", _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            return _ds.Tables[0];
+        }
+
     }
 }
