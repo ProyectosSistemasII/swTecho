@@ -43,6 +43,7 @@ namespace Capa_Logica
                 return false;
             }
             S11_Movilidad Mobilidad = new S11_Movilidad(0, this.VidaFamiliar, this.DireccionPasada, this.AnioTranslado, this.PorqueTraslado, ViviendaActual, this.ComentarioFinal, this.idEncuestas);
+            Mobilidad.InsertarS11();
             this.errores = Mobilidad.errores;
             //Busca errores de la capa de datos
             if (errores.Count > 0)

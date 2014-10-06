@@ -53,13 +53,14 @@ namespace Capa_Datos
             this.Otros = Otros;
             this.Especificar = Especificar;
             this.errores = new List<Error>();
+            
         }
         public void InsertarS808()
         {
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S808_Serv(Refrigedor,EquipoSonido,Televisor,DVD,Motocicleta,Automovil,Computadora,Amueblado,Otros,Especificar) VALUES(@Refrigedor,@EquipoSonido,@Televisor,@DVD,@Motocicleta,@Automovil,@Computadora,@Amueblado,@Otros,@Especificar)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Refrigedor", this.Refrigerador);
                 comando.Parameters.AddWithValue("@EquipoSonido", this.EquipoSonido);

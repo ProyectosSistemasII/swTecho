@@ -40,13 +40,14 @@ namespace Capa_Datos
             this.Internet = Internet;
             this.NSNR = NSNR;
             this.errores = new List<Error>();
+            
         }
         public void InsertarS807()
         {
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S807_Serv(Ninguno,CableTV,CableTV,TelefonoResid,Internet,NSNR) VALUES(@Ninguno,@CableTV,@TelefonoResid,@Internet,@NSNR)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Ninguno", this.Ninguno);
                 comando.Parameters.AddWithValue("@CableTV", this.CableTV);

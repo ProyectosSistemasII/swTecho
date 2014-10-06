@@ -72,6 +72,7 @@ namespace Capa_Logica
             }
             // se ingresa los datos a la capa de datos
             S9_Propiedad Propiedad = new S9_Propiedad(0, this.Propio, this.Propietario, this.OtroPropietario, this.TipoPropiedad, this.OtroTipoPropiedad, this.PropietarioTerreno, this.TelefonoPropietarioTerreno, this.NSNR, this.OtraPropiedad, this.OtraPropiedadA, this.OtraPropiedadB, this.OtraPropiedadC, idEncuestas);
+            Propiedad.InsertarS9();
             this.errores = Propiedad.errores;
             //Busca errores de la capa de datos
             if (errores.Count > 0)

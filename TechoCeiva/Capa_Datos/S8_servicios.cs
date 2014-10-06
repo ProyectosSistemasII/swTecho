@@ -62,6 +62,7 @@ namespace Capa_Datos
             this.idS807_serv = idS807;
             this.idS808_serv = idS808;
             this.errores = new List<Error>();
+            
         }
         public void InsertarS8()
         {

@@ -47,8 +47,6 @@ namespace Capa_Datos
             this.ComentarioFinal = Comentario;
             this.idEncuestas = idEncuesta;
             this.errores = new List<Error>();
-            this.InsertarS11();
-
 
         }
         public void InsertarS11() {

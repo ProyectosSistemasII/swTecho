@@ -57,6 +57,7 @@ namespace Capa_Logica
             }
             // se ingresa los datos a la capa de datos            
             S8_Servicios servicios = new S8_Servicios(0, this.AccesoAgua, this.FuenteAgua, this.OtraFuente, this.EnergiaElectrica, this.OtraEnergiaElectrica, this.OtraEnergiaCocina,this.OtraEnergiaCocina,this.Sanitario, this.OtroTipoSanitario, this.BasuraHogar, this.OtroTipoBasura, this.idEncuestas, this.idS807_serv, this.idS808_serv);
+            servicios.InsertarS8();
             this.errores = servicios.errores;
             
             //Comprobar errores para la capa de datos

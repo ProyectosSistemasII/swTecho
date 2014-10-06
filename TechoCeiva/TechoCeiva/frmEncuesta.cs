@@ -260,7 +260,7 @@ namespace TechoCeiva
         {
             
             this.VerificarCombox_S8();
-            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta,0,this.IngresarS808().idS808_Serv);
+            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta,this.IngresarS807().idS807_serv,this.IngresarS808().idS808_Serv);
 
             Boolean correcto = S8.Insertar_EncuS8();
             if (correcto)
@@ -437,8 +437,32 @@ namespace TechoCeiva
                 rbtS808_Otros = 2;
             else if (rbtS808_Otros_B.Checked)
                 rbtS808_Otros = 3;
+                       
+        }
+        public S807_ServiciosLN IngresarS807()
+        {
+            S807_ServiciosLN s807 = new S807_ServiciosLN(Convert.ToBoolean(cklS8_S807.GetItemCheckState(0)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(1)),Convert.ToBoolean(cklS8_S807.GetItemCheckState(2)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(3)),Convert.ToBoolean(cklS8_S807.GetItemCheckState(4)));
+            Boolean correcto = s807.Insertar_EncuS807();
+            if (!correcto)
+            {
+                MessageBox.Show(s807.obtenerError().mensaje);
+                int cant = s807.errores.Count - 1;
 
-            
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S807(s807.errores[i].NumeroPregunta);
+            }
+            return s807;
+        }
+        private void Comprobar_S807(int pregunta)
+        {
+            switch (pregunta)
+            {
+                case 1:
+                    cklS8_S807.BackColor = ColorCampsVacios;
+                    cklS8_S807.Focus();
+                    break;
+
+            }
         }
         private void cbxS9_Propietario_SelectedIndexChanged(object sender, EventArgs e)
         {
