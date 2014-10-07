@@ -24,7 +24,23 @@ namespace Capa_Logica
             this._errores = new List<Error>();
         }
 
-        public Boolean Ingresar_V(string nombres, string apellidos, string telefono, string direccion, string correo, bool activo, int municipio, int departamento, string personaEmergencia, string telefonoEmergencia)
+        public _VoluntariosLN(string nombres, string apellidos, string telefon, string direccion, string correo, bool activo, int departamento, int municipio, string personaEm, string telefonoEm)
+        {
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+            this.telefono = telefon;
+            this.direccion = direccion;
+            this.correo = correo;
+            this.activo = activo;
+            this.municipio = municipio;
+            this.departamento = departamento;
+            this.personaEmergencia = personaEm;
+            this.telefonoEmergencia = telefonoEm;
+
+            this._errores = new List<Error>();
+        
+        }
+        public Boolean Ingresar_V()
         {
             Boolean _correcto = true;
             _Voluntarios _voluntario = new _Voluntarios(0,nombres, apellidos, telefono, direccion, correo, activo, municipio, departamento, personaEmergencia, telefonoEmergencia);

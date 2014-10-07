@@ -25,6 +25,8 @@ namespace TechoCeiva
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //UC_AddVoluntario nWinAddVoluntario = new UC_AddVoluntario();
+            
             WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
             nWinAddVoluntario.Show();
