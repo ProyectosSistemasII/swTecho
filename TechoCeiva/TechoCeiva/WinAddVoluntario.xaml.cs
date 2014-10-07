@@ -36,9 +36,9 @@ namespace TechoCeiva
         {
             _MunicipioLN mun = new _MunicipioLN();
 
-            cmbxMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbxDepartamento.SelectedValue));
-            cmbxMunicipio.SelectedValuePath = "idMunicipio";
-            cmbxMunicipio.DisplayMemberPath = "nombre";
+            cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
+            cmbMunicipio.SelectedValuePath = "idMunicipio";
+            cmbMunicipio.DisplayMemberPath = "nombre";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -48,8 +48,8 @@ namespace TechoCeiva
             String direccion = txtDireccion.Text;
             String telefono = txtTelefono.Text;
             String correo = txtCorreo.Text;
-            int dpto = Convert.ToInt32(cmbxDepartamento.SelectedValue);
-            int mun = Convert.ToInt32(cmbxMunicipio.SelectedValue);
+            int dpto = Convert.ToInt32(cmbDepartamento.SelectedValue);
+            int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
             String persEm = txtNombreEmergencia.Text;
             String telEm = txtTelEmergencia.Text;
 
@@ -62,9 +62,9 @@ namespace TechoCeiva
         {
             _DepartamentoLN depto = new _DepartamentoLN();
 
-            cmbxDepartamento.ItemsSource = depto.Obtener_D();
-            cmbxDepartamento.SelectedValuePath = "idDepartamento";
-            cmbxDepartamento.DisplayMemberPath = "nombre";
+            cmbDepartamento.ItemsSource = depto.Obtener_D();
+            cmbDepartamento.SelectedValuePath = "idDepartamento";
+            cmbDepartamento.DisplayMemberPath = "nombre";
         }
 
 	}

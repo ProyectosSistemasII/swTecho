@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddVoluntario"
 	x:Name="Window"
 	Title="Añadir Voluntario"
-	Width="655" Height="480" Activated="Window_Activated">
+	Width="655" Height="480">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -14,7 +14,7 @@
 		</ResourceDictionary>
 	</Window.Resources>
 
-	<Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
+	<Grid x:Name="LayoutRoot">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
@@ -28,8 +28,8 @@
 		<Label x:Name="lblContactoEmergencia" Content="Contacto de Emergencia:" HorizontalAlignment="Left" Margin="23,227.5,0,192.5" Style="{DynamicResource SimpleLabel}" Width="189" FontSize="14.667" FontWeight="Bold"/>
 		<Label x:Name="lblNombreEm" Content="Nombre:" HorizontalAlignment="Left" Margin="23,249.5,0,170.5" Style="{DynamicResource SimpleLabel}" Width="76" FontSize="14.667"/>
 		<Label x:Name="lblTelEm" Content="Teléfono:" HorizontalAlignment="Left" Margin="23,317,0,103" Style="{DynamicResource SimpleLabel}" Width="59" FontSize="14.667"/>
-		<ComboBox x:Name="cmbxDepartamento" Margin="320,181.5,99,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220" LayoutUpdated="cmbDepartamento_LayoutUpdated" />
-		<ComboBox x:Name="cmbxMunicipio" Margin="320,249,99,166.5" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" Width="220" SelectionChanged="cmbMunicipio_SelectionChanged" />
+		<ComboBox x:Name="cmbDepartamento" Margin="320,181.5,99,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220"/>
+		<ComboBox x:Name="cmbMunicipio" Margin="320,249,99,166.5" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" Width="220" SelectionChanged="cmbMunicipio_SelectionChanged" />
 		<TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="26.5" Margin="23,45,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" TextAlignment="Center"/>
 		<TextBox x:Name="txtApellidos" Height="26.5" Margin="320,45,99,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" TextAlignment="Center" Width="220"/>
 		<TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="26.5" Margin="23,113,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" TextAlignment="Center"/>
