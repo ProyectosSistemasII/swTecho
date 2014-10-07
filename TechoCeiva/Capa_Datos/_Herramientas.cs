@@ -32,6 +32,7 @@ namespace Capa_Datos
             this.Nombre = _nombre;
             this.Existencia = _existencia;
             this.Activo = _activo;
+            this._errores = new List<Error>();
         }
 
         /// <summary>
@@ -44,39 +45,27 @@ namespace Capa_Datos
         
         public void _Insertar_H()
         {
-            //if (this._errores.Count == 0)
-            //{
-            /*
-                string query = "INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo)";
-                MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
-                _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
+            if (this._errores.Count == 0)
+            {
+                string query = "INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo);";
+                MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
                 _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
-            */
+            
                 try
                 {
-                    string query = "INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo);";
-                    MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                    
-                    _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
-                    _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
-                    _comando.Parameters.AddWithValue("@Activo", this.Activo);
-
-                    //MySqlDataReader reader;
                     _comando.Connection.Open();
-                    //reader = _comando.ExecuteReader();
-                    //_comando.CommandText = query;
                     _comando.ExecuteNonQuery();
                     _comando.Connection.Close();
-                    //_comando.Connection.Close();
-                     
                 }
                 catch (MySqlException ex)
                 {
+                    int errorcode = ex.Number;
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-            //}
+            }
         }
 
  
@@ -124,14 +113,14 @@ namespace Capa_Datos
             return true;
         }
 
-        public void _Modificar(int _id)
+        public void _Modificar(int _id, int valor)
         {
             if (this._errores.Count == 0)
             {
-                string query = "UPDATE Herramientas WHERE idHerramientas = " + _id;
+                string query = "UPDATE Herramientas SET Existencia = @Existencia WHERE idHerramientas = " + _id;
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
-                _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
+                _comando.Parameters.AddWithValue("@Existencia", valor);
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
 
                 try
