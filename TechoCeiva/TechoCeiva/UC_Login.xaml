@@ -17,7 +17,7 @@
 
 	<Grid x:Name="LayoutRoot">
 		<TextBox x:Name="txt_username" Margin="30,231,35.446,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="User Name" FontSize="13" Background="#FFF0F0F0" BorderBrush="#FFE3E3E8" Foreground="#FF626465" Height="25.96" VerticalAlignment="Top" FontStretch="SemiExpanded" />
-		<PasswordBox x:Name="txt_password" Margin="30,269,35.446,252" FontSize="14.667" Background="#FFF0F0F0" BorderBrush="#FFE3E3E8" Foreground="#FF626465" FontStretch="SemiExpanded" Height="26" />
+		<PasswordBox x:Name="txt_password" Margin="30,269,35.446,252" FontSize="14.667" Background="#FFF0F0F0" BorderBrush="#FFE3E3E8" Foreground="#FF626465" FontStretch="SemiExpanded" Height="26" KeyDown="txt_password_KeyDown" />
 		<Button Content="Login" Margin="30,0,35.446,155" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" Height="30" Background="#FF0092DD" Foreground="White" FontSize="14.667" Name="btn_Login" Click="btn_Login_Click" BorderBrush="{x:Null}">
 			<Button.Resources>
 <!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->

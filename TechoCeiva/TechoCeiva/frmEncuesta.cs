@@ -40,7 +40,6 @@ namespace TechoCeiva
         String cbxS10_ConfiazaOrganizaciontxt ="";
         String cbxS10_EstadoPasadotxt="";
         String cbxS10_estadoFuturotxt = "";
-
         /// -----------------------------------------------------------------------------------------------------------
 
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
@@ -84,6 +83,31 @@ namespace TechoCeiva
         Boolean Otro = false;
         Boolean NSNR = false;
         /// -----------------------------------
+
+        /// Selecciones en la pregunta 706
+        int Concreto = 0;
+        int TejaBarro = 0;
+        int Lamina6 = 0;
+        int TejaDuralita = 0;
+        int Paja = 0;
+        int Desechos6 = 0;
+        ///-----------------------------------
+
+        /// Selecciones en la pregunta 707
+        int BlockLadrilloPrefbr = 0;
+        int Madera7 = 0;
+        int Adobe = 0;
+        int Lamina7 = 0;
+        int BaharequeBambu = 0;
+        int Desechos7 = 0;
+        ///-----------------------------------
+
+        /// Selecciones en la pregunta 708
+        int Encementado = 0;
+        int LadrilloBarro = 0;
+        int Madera8 = 0;
+        int Tierra = 0;
+        ///-----------------------------------
           
         Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
@@ -152,9 +176,9 @@ namespace TechoCeiva
                     txt_S11_ComentarioFinal.BackColor = ColorCampsVacios;
                         txt_S11_ComentarioFinal.Focus();
                         break;
-            }
-            
+            }            
         }
+
         public void VerificarCombobox_S11()
         {
             //comprobar cada combox si no estan vacios
@@ -163,6 +187,7 @@ namespace TechoCeiva
             if (cbxS11_4_ViviedaActual.SelectedIndex != -1)
                 cbxS11_4_ViviedaActualtxt = cbxS11_4_ViviedaActual.SelectedItem.ToString();
         }
+
         /// <summary>
         /// Seccion 10
         /// </summary>
@@ -190,8 +215,9 @@ namespace TechoCeiva
        
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
-            S9_PropiedadLN S10 = new S9_PropiedadLN();
-            Boolean correcto = true;//S10.Insertar_EncS9(0, cbxS9_1_Propio.SelectedValue.ToString(), cbxS9_Propietario.SelectedValue.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedValue.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+            this.VerificarCombox_S10();
+            NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.CodigoEncuesta,0,0,0);
+            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10();
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
@@ -200,15 +226,20 @@ namespace TechoCeiva
             }
             else
             {
-               // MessageBox.Show(S10.obtenerError());
-            }
+                MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
+                int cant = NuevaS10_Comunidad.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+            }    
         }
 
         private void Comprobar_S10(int pregunta)
         {
             switch (pregunta)
             {
-                case 1:
+
+                    case 1:
                     txtS10_Ayudo.BackColor = ColorCampsVacios;
                     txtS10_Ayudo.Focus();
                     break;
@@ -256,6 +287,89 @@ namespace TechoCeiva
                     txtS1007_Especificar.BackColor = ColorCampsVacios;
                     txtS1007_Especificar.Focus();
                     break;
+                case 9:
+                    cbxS10_Necesidad.BackColor = ColorCampsVacios;
+                    cbxS10_Necesidad.Focus();
+                    break;
+
+                case 901:
+                    txtS10_NecesidadA.BackColor = ColorCampsVacios;
+                    txtS10_NecesidadA.Focus();
+                    break;
+                case 10:
+                    cbxS10_NecesidadCom.BackColor = ColorCampsVacios;
+                    cbxS10_NecesidadCom.Focus();
+                    break;
+
+                case 1001:
+                    txtS10_NecesidadComA.BackColor = ColorCampsVacios;
+                    txtS10_NecesidadComA.Focus();
+                    break;
+                case 11:
+                    cbxS10_ProyectosVecinos.BackColor = ColorCampsVacios;
+                    cbxS10_ProyectosVecinos.Focus();
+                    break;
+
+                case 1101:
+                    txtS10_ProyectosVecinosA.BackColor = ColorCampsVacios;
+                    txtS10_ProyectosVecinosA.Focus();
+                    break;
+                case 12:
+                    txtS10_ApectosPositivosA.BackColor = ColorCampsVacios;
+                    txtS10_ApectosPositivosA.Focus();
+                    break;
+                case 13:
+                    txtS10_ApectosNegativosA.BackColor = ColorCampsVacios;
+                    txtS10_ApectosNegativosA.Focus();
+                    break;
+                case 14:
+                    cklS1014_com.BackColor = ColorCampsVacios;
+                    cklS1014_com.Focus();
+                    break;
+                case 15:
+                    cbxS10_Discriminacion.BackColor = ColorCampsVacios;
+                    cbxS10_Discriminacion.Focus();
+                    break;
+                case 1501:
+                    txtS10_TipoDiscriminacion.BackColor = ColorCampsVacios;
+                    txtS10_TipoDiscriminacion.Focus();
+                    break;
+                case 16:
+                    cbxS10_OrganizacionComunitaria.BackColor = ColorCampsVacios;
+                    cbxS10_OrganizacionComunitaria.Focus();
+                    break;
+                case 17:                    
+                    txtS10_TipoOrganizaciones.BackColor = ColorCampsVacios;
+                    txtS10_TipoOrganizaciones.Focus();
+                    break;
+                case 18:
+                    cbxS10_ConfiazaOrganizacion.BackColor = ColorCampsVacios;
+                    cbxS10_ConfiazaOrganizacion.Focus();
+                    break;
+                case 1801:
+                    txtS10_ComentarioConfianza.BackColor = ColorCampsVacios;
+                    txtS10_ComentarioConfianza.Focus();
+                    break;
+                case 19:
+                    txtS10_LiderA.BackColor = ColorCampsVacios;
+                    txtS10_LiderA.Focus();
+                    break;
+                case 20:
+                    cbxS10_EstadoPasado.BackColor = ColorCampsVacios;
+                    cbxS10_EstadoPasado.Focus();
+                    break;
+                case 2001:
+                    txtS10_ComentarioEstadoPasado.BackColor = ColorCampsVacios;
+                    txtS10_ComentarioEstadoPasado.Focus();
+                    break;
+                case 21:
+                    cbxS10_estadoFuturo.BackColor = ColorCampsVacios;
+                    cbxS10_estadoFuturo.Focus();
+                    break;
+                case 2101:
+                    txtS10_ComentarioEstadoFuturo.BackColor = ColorCampsVacios;
+                    txtS10_ComentarioEstadoFuturo.Focus();
+                    break;
 
             }
         }
@@ -263,7 +377,6 @@ namespace TechoCeiva
         public int VerificarCombox_S10()
         {
             int NumeroCaso = 0;
-
             if ( cbxS10_RelacionVecinos.SelectedIndex!= -1)
                 cbxS10_RelacionVecinostxt = cbxS10_RelacionVecinos.SelectedItem.ToString();
             if (cbxS10_OrganizarVecinos.SelectedIndex != -1)
@@ -289,6 +402,7 @@ namespace TechoCeiva
             
             return NumeroCaso;
         }
+
         /// <summary>
         /// Seccion 9
         /// </summary>
@@ -310,7 +424,6 @@ namespace TechoCeiva
                 tbpS9.Parent = null;
                 tbpS10.Parent = tbcDatos;
             }
-
             else
             {
                 MessageBox.Show(S9.obtenerError().mensaje);
@@ -318,9 +431,7 @@ namespace TechoCeiva
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S9(S9.errores[i].NumeroPregunta);
-            }
-        
-            
+            }            
         }
          
         private void Comprobar_S9(int pregunta) 
@@ -343,22 +454,18 @@ namespace TechoCeiva
                     cbxS9_OtraPropiedad.BackColor = ColorCampsVacios;
                     cbxS9_OtraPropiedad.Focus();
                     break;
-
                 case 501:
                     txtS9_OtraPropiedadA.BackColor = ColorCampsVacios;
                     txtS9_OtraPropiedadA.Focus();
                     break;
-
                 case 3:
                     cbxS9_TipoPropietario.BackColor = ColorCampsVacios;
                     cbxS9_TipoPropietario.Focus();
                     break;
-
                 case 301:
                     txtS9_OtroTipoPropietario.BackColor = ColorCampsVacios;
                     txtS9_OtroTipoPropietario.Focus();
                     break;
-
                 case 4:
                     txtS9_PropietarioTerreno.BackColor = ColorCampsVacios;
                     txtS9_PropietarioTerreno.Focus();
@@ -371,38 +478,37 @@ namespace TechoCeiva
         }
 
         public int VerificarCombox_S9()
-        {   int NumeroCaso=0;         
+        {   
+            int NumeroCaso=0; 
+            if (cbxS9_1_Propio.SelectedIndex != -1)
+                cbxS9_Propiotxt = cbxS9_1_Propio.SelectedItem.ToString();
 
-                if (cbxS9_1_Propio.SelectedIndex != -1)
-                    cbxS9_Propiotxt = cbxS9_1_Propio.SelectedItem.ToString();
-
-                if (cbxS9_Propietario.SelectedIndex !=-1)
-                {
-                    cbxS9_Propietariotxt = cbxS9_Propietario.SelectedItem.ToString();
-                    NumeroCaso = 1;
-                }
-                if (cbxS9_TipoPropietario.SelectedIndex != -1)
-                {
-                    cbxS9_TipoPropietariotxt = cbxS9_TipoPropietario.SelectedItem.ToString();
-                    
-                }
-                if (cbxS9_OtraPropiedad.SelectedIndex != -1)
-                    cbxS9_OtraPropiedadtxt = cbxS9_OtraPropiedad.SelectedItem.ToString();
-                if(cbxS9_1_Propio.SelectedIndex == 1)
-                    NumeroCaso = 2;
-                else
-                    NumeroCaso = 1;
+            if (cbxS9_Propietario.SelectedIndex !=-1)
+            {
+                cbxS9_Propietariotxt = cbxS9_Propietario.SelectedItem.ToString();
+                NumeroCaso = 1;
+            }
+            if (cbxS9_TipoPropietario.SelectedIndex != -1)
+            {
+                cbxS9_TipoPropietariotxt = cbxS9_TipoPropietario.SelectedItem.ToString();
+            }
+            if (cbxS9_OtraPropiedad.SelectedIndex != -1)
+                cbxS9_OtraPropiedadtxt = cbxS9_OtraPropiedad.SelectedItem.ToString();
+            if(cbxS9_1_Propio.SelectedIndex == 1)
+                NumeroCaso = 2;
+            else
+                NumeroCaso = 1;
 
             return NumeroCaso;
         }
+
         /// <summary>
         /// Seccion 8
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
-        {
-            
+        {            
             this.VerificarCombox_S8();
             S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta);
             if (Pregunta807 == false)
@@ -430,8 +536,7 @@ namespace TechoCeiva
                 MessageBox.Show("Ingresado Correctamente");
                 //tbpS8.Parent = null;
                 //tbpS9.Parent = tbcDatos;
-            }
-            
+            }            
             else
             {
                 MessageBox.Show(S8.obtenerError().mensaje);
@@ -443,6 +548,7 @@ namespace TechoCeiva
             Fin:
                 return;
         }
+
         private void Comprobar_S8(int pregunta)
         {
             switch (pregunta)
@@ -463,22 +569,18 @@ namespace TechoCeiva
                     cbxS8_EnergiaElectrica.BackColor = ColorCampsVacios;
                     cbxS8_EnergiaElectrica.Focus();
                     break;
-
                 case 301:
                     txtS8_OtraEnergiaElectrica.BackColor = ColorCampsVacios;
                     txtS8_OtraEnergiaElectrica.Focus();
                     break;
-
                 case 4:
                     cbxS8_EnergiaCocina.BackColor = ColorCampsVacios;
                     cbxS8_EnergiaCocina.Focus();
                     break;
-
                 case 401:
                     txtS8_OtraEnergiaCocina.BackColor = ColorCampsVacios;
                     txtS8_OtraEnergiaCocina.Focus();
                     break;
-
                 case 5:
                     cbxS8_Sanitario.BackColor = ColorCampsVacios;
                     cbxS8_Sanitario.Focus();
@@ -511,9 +613,9 @@ namespace TechoCeiva
             if (cbxS8_Sanitario.SelectedIndex != -1)
                 cbxS8_Sanitariotxt = cbxS8_Sanitario.SelectedItem.ToString();
             if (cbxS8_BasuraHogar.SelectedIndex != -1)
-                cbxS8_BasuraHogartxt = cbxS8_BasuraHogar.SelectedItem.ToString();
-            
+                cbxS8_BasuraHogartxt = cbxS8_BasuraHogar.SelectedItem.ToString();            
         }
+
         public Boolean IngresarS808()
         {
             this.VerificarRadioBtn_S808();
@@ -527,10 +629,9 @@ namespace TechoCeiva
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S808(NuevaS808.errores[i].NumeroPregunta);
             }
-            
-
             return correcto;
         }
+
         private void Comprobar_S808(int pregunta)
         {
             switch (pregunta)
@@ -538,8 +639,7 @@ namespace TechoCeiva
                 case 9:
                     rbtS808_OtroEspecificar.BackColor = ColorCampsVacios;
                     rbtS808_OtroEspecificar.Focus();
-                    break;
-                
+                    break;             
             }
         }
 
@@ -599,9 +699,9 @@ namespace TechoCeiva
             else if (rbtS808_Otros_R.Checked)
                 rbtS808_Otros = 2;
             else if (rbtS808_Otros_B.Checked)
-                rbtS808_Otros = 3;
-                       
+                rbtS808_Otros = 3;                       
         }
+
         public Boolean IngresarS807()
         {
             NuevaS807 = new S807_ServiciosLN(Convert.ToBoolean(cklS8_S807.GetItemCheckState(0)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(1)),Convert.ToBoolean(cklS8_S807.GetItemCheckState(2)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(3)),Convert.ToBoolean(cklS8_S807.GetItemCheckState(4)));
@@ -616,6 +716,7 @@ namespace TechoCeiva
             }
             return correcto;
         }
+
         private void Comprobar_S807(int pregunta)
         {
             switch (pregunta)
@@ -624,9 +725,9 @@ namespace TechoCeiva
                     cklS8_S807.BackColor = ColorCampsVacios;
                     cklS8_S807.Focus();
                     break;
-
             }
         }
+
         /// <summary>
         /// Cambios de Indices en Combobox seccion 9
         /// </summary>
@@ -663,6 +764,7 @@ namespace TechoCeiva
                 txtS9_OtraPropiedadC.Enabled = false;
             }
         }
+
         /// <summary>
         /// Cambios de Indices en Combobox seccion 8
         /// </summary>
@@ -707,6 +809,7 @@ namespace TechoCeiva
             else
                 txtS8_OtroTipoBasura.Enabled = false;
         }
+
         /// <summary>
         /// Cambios de Indices en Combobox seccion 10
         /// </summary>
@@ -895,6 +998,7 @@ namespace TechoCeiva
                 MessageBox.Show(S7.obtenerError());
             }
         }
+
         //seccion 5
         private void pbS5_Siguiente_Click(object sender, EventArgs e)
         {
@@ -990,9 +1094,8 @@ namespace TechoCeiva
                 this.verificarListBoxS6();
                 S611_IngresosLN S611 = new S611_IngresosLN(this.RecorteGastos, this.Prestamo, this.VentaMaterial, this.TrabajoOcasional, this.Ahorros, this.AyudaFamiliar, this.ApoyoEstado, this.Otro, txtS6_11_EspecificarFaltaDinero.Text, this.NSNR);
                 if (cbxS6_7_CubrenGasto.Text.Equals("No"))
-                {
                     S611.Validar11();
-                }
+
                 //Por si hay saltos y no tienen q contestar unas preguntas
                 if (cbxS6_7_CubrenGasto.Text.Equals("Iguales") || cbxS6_7_CubrenGasto.Text.Equals("NS/NR") || cbxS6_7_CubrenGasto.Text.Equals("Si"))
                 {
@@ -1005,9 +1108,7 @@ namespace TechoCeiva
                         tbpS7.Parent = tbcDatos;
                     }
                     else
-                    {
                         MessageBox.Show(S6.obtenerError());
-                    }
                 }
                 else
                 {
@@ -1025,37 +1126,14 @@ namespace TechoCeiva
                             tbpS7.Parent = tbcDatos;
                         }
                         else
-                        {
                             MessageBox.Show(S6.obtenerError());
-                        }
                     }
                     else
-                    {
                         MessageBox.Show(S611.obtenerError());
-                    }
-                    //-------------------------------------------------------------------------------------- 
                 }
             }
             else
-            {
                 MessageBox.Show(SDatos.obtenerError());
-            }
-        }
-
-        private void pbS7_Siguiente_Click(object sender, EventArgs e)
-        {
-            S7_ViviendaLN S7 = new S7_ViviendaLN();
-            Boolean correcto = true;// S7.Insertar_EncuS7(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, ENCUESTA, IDS706, IDS707, IDS708);
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS7.Parent = null;
-                tbpS8.Parent = tbcDatos;
-            }
-            else
-            {
-                MessageBox.Show(S7.obtenerError());
-            }
         }
 
         //seccion 4
@@ -1097,8 +1175,6 @@ namespace TechoCeiva
                     dgvS5.Rows[iS5 - 1].Cells[0].Value = iS5;
                 }
             }
-
-
         }
 
         private void frmEncuesta_Load(object sender, EventArgs e)
@@ -1110,10 +1186,10 @@ namespace TechoCeiva
             tbpS4.Parent = null;
             tbpS5.Parent = null;
             tbpS6.Parent = null;
-            tbpS7.Parent = null;
-            //tbpS8.Parent = null;
+            //tbpS7.Parent = null;
+            tbpS8.Parent = null;
             tbpS9.Parent = null;
-            tbpS10.Parent = null;
+            //tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
@@ -1129,6 +1205,7 @@ namespace TechoCeiva
             cmbEncuestador2.DataSource = Voluntarios.Obtener_VNomCompleto();
             cmbEncuestador2.Text = null;
         }
+
         //Informacion
         private void pbNext_Click(object sender, EventArgs e)
         {
@@ -1157,11 +1234,10 @@ namespace TechoCeiva
                     idEncu = InfoEnc.UltimoId();
                 }
                 else
-                {
                     MessageBox.Show(InfoEnc.obtenerError());
-                }
             }
         }
+
         int iS1 = 1;
         private void btnAddS1_Click(object sender, EventArgs e)
         {
@@ -1209,14 +1285,12 @@ namespace TechoCeiva
                 {
                     //MessageBox.Show("Ingresado Correctamente");
                     Filas++;
-
                 }
                 else
                 {
                     Filas = 0;
                     MessageBox.Show(S1.obtenerError());
                     break;
-
                 }
             }
             if (correcto)
@@ -1233,6 +1307,7 @@ namespace TechoCeiva
                 }
             }
         }
+
         //seccion 2
         private void pbNextS2_Click(object sender, EventArgs e)
         {
@@ -1244,12 +1319,9 @@ namespace TechoCeiva
                 if (correcto)
                 {
                     //MessageBox.Show("Ingresado Correctamente");
-
                 }
                 else
-                {
                     MessageBox.Show(S2.obtenerError());
-                }
             }
             if (correcto)
             {
@@ -1264,6 +1336,7 @@ namespace TechoCeiva
                 }
             }
         }
+
         //secccion 3
         private void pbNextS3_Click(object sender, EventArgs e)
         {
@@ -1275,12 +1348,9 @@ namespace TechoCeiva
                 if (correcto)
                 {
                     //MessageBox.Show("Ingresado Correctamente");
-
                 }
                 else
-                {
                     MessageBox.Show(S3.obtenerError());
-                }
             }
             if (correcto)
             {
@@ -1332,6 +1402,251 @@ namespace TechoCeiva
             if (dgvS1.CurrentRow.Cells[3].Value.ToString() == "DD/MM/AAAA")
                 dgvS1.CurrentRow.Cells[3].Value = "";
         }
-        
+
+        public void verificarRBS706()
+        {
+            //Calificacion de concreto
+            if (rbS7_61_MuyMalo.Checked)
+                Concreto = 1;
+            else if (rbS7_61_Malo.Checked)
+                Concreto = 2;
+            else if (rbS7_61_Bueno.Checked)
+                Concreto = 3;
+            else if (rbS7_61_MuyBueno.Checked)
+                Concreto = 4;
+
+            //Calificacion de tejaBarro
+            if (rbS7_62_MuyMalo.Checked)
+                TejaBarro = 1;
+            else if (rbS7_62_Malo.Checked)
+                TejaBarro = 2;
+            else if (rbS7_62_Bueno.Checked)
+                TejaBarro = 3;
+            else if (rbS7_62_MuyBueno.Checked)
+                TejaBarro = 4;
+
+            //Calificacion de lamina
+            if (rbS7_63_MuyMalo.Checked)
+                Lamina6 = 1;
+            else if (rbS7_63_Malo.Checked)
+                Lamina6 = 2;
+            else if (rbS7_63_Bueno.Checked)
+                Lamina6 = 3;
+            else if (rbS7_63_MuyBueno.Checked)
+                Lamina6 = 4;
+
+            //Calificacion de TejaDuralita
+            if (rbS7_64_MuyMalo.Checked)
+                TejaDuralita = 1;
+            else if (rbS7_64_Malo.Checked)
+                TejaDuralita = 2;
+            else if (rbS7_64_Bueno.Checked)
+                TejaDuralita = 3;
+            else if (rbS7_64_MuyBueno.Checked)
+                TejaDuralita = 4;
+
+            //Calificacion de Paja
+            if (rbS7_65_MuyMalo.Checked)
+                Paja = 1;
+            else if (rbS7_65_Malo.Checked)
+                Paja = 2;
+            else if (rbS7_65_Bueno.Checked)
+                Paja = 3;
+            else if (rbS7_65_MuyBueno.Checked)
+                Paja = 4;
+
+            //Calificacion de desechos
+            if (rbS7_66_MuyMalo.Checked)
+                Desechos6 = 1;
+            else if (rbS7_66_Malo.Checked)
+                Desechos6 = 2;
+            else if (rbS7_66_Bueno.Checked)
+                Desechos6 = 3;
+            else if (rbS7_66_MuyBueno.Checked)
+                Desechos6 = 4;
+        }
+
+        public void verificarRBS707()
+        {
+            //Calificacion de blockLadrilloPrefabr
+            if (rbS7_71_MuyMalo.Checked)
+                BlockLadrilloPrefbr = 1;
+            else if (rbS7_71_Malo.Checked)
+                BlockLadrilloPrefbr = 2;
+            else if (rbS7_71_Bueno.Checked)
+                BlockLadrilloPrefbr = 3;
+            else if (rbS7_71_MuyBueno.Checked)
+                BlockLadrilloPrefbr = 4;
+
+            //Calificacion de Madera
+            if (rbS7_72_MuyMalo.Checked)
+                Madera7 = 1;
+            else if (rbS7_72_Malo.Checked)
+                Madera7 = 2;
+            else if (rbS7_72_Bueno.Checked)
+                Madera7 = 3;
+            else if (rbS7_72_MuyBueno.Checked)
+                Madera7 = 4;
+
+            //Calificacion de adobe
+            if (rbS7_73_MuyMalo.Checked)
+                Adobe = 1;
+            else if (rbS7_73_Malo.Checked)
+                Adobe = 2;
+            else if (rbS7_73_Bueno.Checked)
+                Adobe = 3;
+            else if (rbS7_73_MuyBueno.Checked)
+                Adobe = 4;
+
+            //Calificacion de lamina
+            if (rbS7_74_MuyMalo.Checked)
+                Lamina7 = 1;
+            else if (rbS7_74_Malo.Checked)
+                Lamina7 = 2;
+            else if (rbS7_74_Bueno.Checked)
+                Lamina7 = 3;
+            else if (rbS7_74_MuyBueno.Checked)
+                Lamina7 = 4;
+
+            //Calificacion de baharequeBambu
+            if (rbS7_75_MuyMalo.Checked)
+                BaharequeBambu = 1;
+            else if (rbS7_75_Malo.Checked)
+                BaharequeBambu = 2;
+            else if (rbS7_75_Bueno.Checked)
+                BaharequeBambu = 3;
+            else if (rbS7_75_MuyBueno.Checked)
+                BaharequeBambu = 4;
+
+            //Calificacion de desechos
+            if (rbS7_76_MuyMalo.Checked)
+                Desechos7 = 1;
+            else if (rbS7_76_Malo.Checked)
+                Desechos7 = 2;
+            else if (rbS7_76_Bueno.Checked)
+                Desechos7 = 3;
+            else if (rbS7_76_MuyBueno.Checked)
+                Desechos7 = 4;
+        }
+
+        public void verificarRBS708()
+        {
+            //Calificacion de encementado
+            if (rbS7_81_MuyMalo.Checked)
+                Encementado = 1;
+            else if (rbS7_81_Malo.Checked)
+                Encementado = 2;
+            else if (rbS7_81_Bueno.Checked)
+                Encementado = 3;
+            else if (rbS7_81_MuyBueno.Checked)
+                Encementado = 4;
+
+            //Calificacion de LadrillosBarro
+            if (rbS7_82_MuyMalo.Checked)
+                LadrilloBarro = 1;
+            else if (rbS7_82_Malo.Checked)
+                LadrilloBarro = 2;
+            else if (rbS7_82_Bueno.Checked)
+                LadrilloBarro = 3;
+            else if (rbS7_82_MuyBueno.Checked)
+                LadrilloBarro = 4;
+
+            //Calificacion de madera
+            if (rbS7_83_MuyMalo.Checked)
+                Madera8 = 1;
+            else if (rbS7_83_Malo.Checked)
+                Madera8 = 2;
+            else if (rbS7_83_Bueno.Checked)
+                Madera8 = 3;
+            else if (rbS7_83_MuyBueno.Checked)
+                Madera8 = 4;
+
+            //Calificacion de tierra
+            if (rbS7_84_MuyMalo.Checked)
+                Tierra = 1;
+            else if (rbS7_84_Malo.Checked)
+                Tierra = 2;
+            else if (rbS7_84_Bueno.Checked)
+                Tierra = 3;
+            else if (rbS7_84_MuyBueno.Checked)
+                Tierra = 4;
+        }
+
+        public void IgualarTextS7()
+        {
+            if (txtS7_1_AnchoViv.Text == "")
+                txtS7_1_AnchoViv.Text = "0";
+            if (txtS7_1_LargoViv.Text == "")
+                txtS7_1_LargoViv.Text = "0";
+        }
+
+        private void pbS7_Siguiente_Click_1(object sender, EventArgs e)
+        {
+            int ids706 = 0, ids707 = 0, ids708 = 0;
+            // Ingresar la seccion 7 por completo
+            IgualarTextS7();
+            S7_ViviendaLN SDatos = new S7_ViviendaLN(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, 3, ids706, ids707, ids708);
+            Boolean campos = SDatos.VerificarCampos();
+            if (campos)
+            {
+                //Ingresar la pregunta 6 de la seccion 7
+                this.verificarRBS706();
+                if (!this.Concreto.Equals(0) && !this.TejaBarro.Equals(0) && !this.Lamina6.Equals(0) && !this.TejaDuralita.Equals(0) && !this.Paja.Equals(0) && !this.Desechos6.Equals(0))
+                {
+                    S706_ViviendaLN S706 = new S706_ViviendaLN(this.Concreto, this.TejaBarro, this.Lamina6, this.TejaDuralita, this.Paja, this.Desechos6);
+                    Boolean correctos706 = S706.Insertar_EncuS706();
+                    if (correctos706)
+                    {
+                        S706_Vivienda s706 = new S706_Vivienda();
+                        ids706 = s706.UltimoId();
+                    }
+                    else
+                        MessageBox.Show(S706.obtenerError());
+                }
+
+                //Ingresar la pregunta 7 de la seccion 7
+                this.verificarRBS707();
+                if (!this.BlockLadrilloPrefbr.Equals(0) && !this.Madera7.Equals(0) && !this.Adobe.Equals(0) && !this.Lamina7.Equals(0) && !this.BaharequeBambu.Equals(0) && !this.Desechos7.Equals(0))
+                {
+                    S707_ViviendaLN S707 = new S707_ViviendaLN(this.BlockLadrilloPrefbr, this.Madera7, this.Adobe, this.Lamina7, this.BaharequeBambu, this.Desechos7);
+                    Boolean correctos707 = S707.Insertar_EncuS707();
+                    if (correctos707)
+                    {
+                        S707_Vivienda s707 = new S707_Vivienda();
+                        ids707 = s707.UltimoId();
+                    }
+                    else
+                        MessageBox.Show(S707.obtenerError());
+                }
+
+                //Ingresar la pregunta 8 de la seccion 7
+                this.verificarRBS708();
+                if (!this.Encementado.Equals(0) && !this.LadrilloBarro.Equals(0) && !this.Madera8.Equals(0) && !this.Tierra.Equals(0))
+                {
+                    S708_ViviendaLN S708 = new S708_ViviendaLN(this.Encementado, this.LadrilloBarro, this.Madera8, this.Tierra);
+                    Boolean correctos708 = S708.Insertar_EncuS708();
+                    if (correctos708)
+                    {
+                        S708_Vivienda s708 = new S708_Vivienda();
+                        ids708 = s708.UltimoId();
+                    }
+                    else
+                        MessageBox.Show(S708.obtenerError());
+                }
+
+                //Ingresar la seccion 7 completa
+                S7_ViviendaLN S7 = new S7_ViviendaLN(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, 3, ids706, ids707, ids708);
+                Boolean correcto = S7.Insertar_EncuS7();
+                if (correcto)
+                {
+                    tbpS7.Parent = null;
+                    tbpS8.Parent = tbcDatos;
+                }
+                else
+                    MessageBox.Show(S7.obtenerError());
+            }
+            else
+                MessageBox.Show(SDatos.obtenerError());
+        }        
     }
 }

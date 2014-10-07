@@ -30,6 +30,7 @@
         {
             this.tbcDatos = new System.Windows.Forms.TabControl();
             this.tbpInfo = new System.Windows.Forms.TabPage();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.gbContacto = new System.Windows.Forms.GroupBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -146,56 +147,57 @@
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS6 = new System.Windows.Forms.TabPage();
-            this.pbS6_Siguiente = new System.Windows.Forms.PictureBox();
             this.gbS6 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.lblS6_11_FaltaDinero = new System.Windows.Forms.Label();
             this.chlbS6_11_CubrirFaltaDinero = new System.Windows.Forms.CheckedListBox();
             this.lblS6_11_Especificar = new System.Windows.Forms.Label();
             this.txtS6_11_EspecificarFaltaDinero = new System.Windows.Forms.TextBox();
-            this.lblS6_11_FaltaDinero = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.lblS6_10_Gastos = new System.Windows.Forms.Label();
             this.txtS6_10_CantiGastosaIngresos = new System.Windows.Forms.TextBox();
             this.lblS6_10_QGastos = new System.Windows.Forms.Label();
-            this.lblS6_10_Gastos = new System.Windows.Forms.TextBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.lblS6_9_CantidadAhorro = new System.Windows.Forms.Label();
             this.txtS6_9_CantiAhorro = new System.Windows.Forms.TextBox();
             this.lblS6_9_QAhorro = new System.Windows.Forms.Label();
-            this.lblS6_9_CantidadAhorro = new System.Windows.Forms.TextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.lblS6_8_Ahorro = new System.Windows.Forms.Label();
             this.cbxS6_8_AhorroMensual = new System.Windows.Forms.ComboBox();
-            this.lblS6_8_Ahorro = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.lblS6_7_CubrirGastos = new System.Windows.Forms.Label();
             this.cbxS6_7_CubrenGasto = new System.Windows.Forms.ComboBox();
-            this.lblS6_7_CubrirGastos = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.lblS6_6_IngresoTotal = new System.Windows.Forms.Label();
             this.txtS6_6_IngresoTotal = new System.Windows.Forms.TextBox();
             this.lblS6_6_QIngresosTotales = new System.Windows.Forms.Label();
-            this.lblS6_6_IngresoTotal = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.lblS6_5_TiempoDeuda = new System.Windows.Forms.Label();
             this.cbxS6_5_TiempoPagoDeuda = new System.Windows.Forms.ComboBox();
-            this.lblS6_5_TiempoDeuda = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.lblS6_4_CantiDeudas = new System.Windows.Forms.Label();
             this.lblS6_4_Valor0 = new System.Windows.Forms.Label();
             this.txtS6_4_CantiDeuda = new System.Windows.Forms.TextBox();
             this.lblS6_4_QDeuda = new System.Windows.Forms.Label();
-            this.lblS6_4_CantiDeudas = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblS6_3_Deuda = new System.Windows.Forms.Label();
             this.cbxS6_3_Deuda = new System.Windows.Forms.ComboBox();
-            this.lblS6_3_Deuda = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblS6_2_IngresosRemesas = new System.Windows.Forms.Label();
             this.cbxS6_2_IngRemesas = new System.Windows.Forms.ComboBox();
             this.txtS6_2_CantidadRemesas = new System.Windows.Forms.TextBox();
             this.lblS6_2_QRemesas = new System.Windows.Forms.Label();
-            this.lblS6_2_IngresosRemesas = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblS6_1_IngresosEstado = new System.Windows.Forms.Label();
             this.cbxS6_1_IngEstado = new System.Windows.Forms.ComboBox();
             this.txtS6_1_CantidadIngEstado = new System.Windows.Forms.TextBox();
             this.lblS6_1_QEstado = new System.Windows.Forms.Label();
-            this.lblS6_1_IngresosEstado = new System.Windows.Forms.TextBox();
+            this.pbS6_Siguiente = new System.Windows.Forms.PictureBox();
             this.tbpS7 = new System.Windows.Forms.TabPage();
             this.gbS7 = new System.Windows.Forms.GroupBox();
             this.pbS7_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.lblS7_8_MaterialPiso = new System.Windows.Forms.Label();
             this.gbS7_8_Tierra = new System.Windows.Forms.GroupBox();
             this.rbS7_84_MuyBueno = new System.Windows.Forms.RadioButton();
             this.rbS7_84_Bueno = new System.Windows.Forms.RadioButton();
@@ -225,8 +227,8 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.lblS7_8_Piso = new System.Windows.Forms.TextBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.lblS7_7_MaterialParedes = new System.Windows.Forms.Label();
             this.gbS7_7_Desechos = new System.Windows.Forms.GroupBox();
             this.rbS7_76_MuyBueno = new System.Windows.Forms.RadioButton();
             this.rbS7_76_Bueno = new System.Windows.Forms.RadioButton();
@@ -268,8 +270,8 @@
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.lblS7_7_Paredes = new System.Windows.Forms.TextBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.lblS7_6_MaterialTecho = new System.Windows.Forms.Label();
             this.gbS7_6_Desechos = new System.Windows.Forms.GroupBox();
             this.rbS7_66_MuyBueno = new System.Windows.Forms.RadioButton();
             this.rbS7_66_Bueno = new System.Windows.Forms.RadioButton();
@@ -311,8 +313,8 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.lblS7_6_EstadoMaterial = new System.Windows.Forms.TextBox();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.lblS7_5_Problema = new System.Windows.Forms.Label();
             this.txtS7_5_ProblemaC = new System.Windows.Forms.TextBox();
             this.lblS7_5_C = new System.Windows.Forms.Label();
             this.txtS7_5_ProblemaB = new System.Windows.Forms.TextBox();
@@ -320,24 +322,24 @@
             this.cbsS7_5_ProbViv = new System.Windows.Forms.ComboBox();
             this.txtS7_5_ProblemaA = new System.Windows.Forms.TextBox();
             this.lblS7_5_A = new System.Windows.Forms.Label();
-            this.textBox48 = new System.Windows.Forms.TextBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.lblS7_4_Camas = new System.Windows.Forms.Label();
             this.txtS7_4_CantCamas = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.lblS7_3_Dormitorio = new System.Windows.Forms.Label();
             this.txtS7_3_CantDormitorios = new System.Windows.Forms.TextBox();
-            this.lblS7_3_Dormitorios = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.lblS7_2_Cuartos = new System.Windows.Forms.Label();
             this.txtS7_2_Cuartos = new System.Windows.Forms.TextBox();
-            this.lblS7_2_Cuartos = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.lblS7_1_Dimensiones = new System.Windows.Forms.Label();
             this.txtS7_1_AnchoViv = new System.Windows.Forms.TextBox();
             this.txtS7_1_LargoViv = new System.Windows.Forms.TextBox();
             this.lblS7_1_X = new System.Windows.Forms.Label();
-            this.lblS7_1_Dimensiones = new System.Windows.Forms.TextBox();
             this.tbpS8 = new System.Windows.Forms.TabPage();
             this.pbS8_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.groupBox64 = new System.Windows.Forms.GroupBox();
             this.rbtS808_OtroEspecificar = new System.Windows.Forms.TextBox();
@@ -596,6 +598,7 @@
             this.cbxS10_EstadoPasado = new System.Windows.Forms.ComboBox();
             this.label147 = new System.Windows.Forms.Label();
             this.groupBox106 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label146 = new System.Windows.Forms.Label();
             this.txtS10_LiderC = new System.Windows.Forms.TextBox();
             this.label136 = new System.Windows.Forms.Label();
@@ -609,19 +612,20 @@
             this.cbxS10_ConfiazaOrganizacion = new System.Windows.Forms.ComboBox();
             this.label135 = new System.Windows.Forms.Label();
             this.groupBox99 = new System.Windows.Forms.GroupBox();
-            this.txt10_TipoOrganizacion = new System.Windows.Forms.TextBox();
             this.label137 = new System.Windows.Forms.Label();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
             this.txtS10_TipoDiscriminacion = new System.Windows.Forms.TextBox();
             this.cbxS10_Discriminacion = new System.Windows.Forms.ComboBox();
             this.label143 = new System.Windows.Forms.Label();
             this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label131 = new System.Windows.Forms.Label();
             this.txtS10_ApectosNegativosB = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
             this.txtS10_ApectosNegativosA = new System.Windows.Forms.TextBox();
             this.label142 = new System.Windows.Forms.Label();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label132 = new System.Windows.Forms.Label();
             this.txtS10_ApectosPositivosB = new System.Windows.Forms.TextBox();
             this.label133 = new System.Windows.Forms.Label();
@@ -655,11 +659,7 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.txtS10_TipoOrganizaciones = new System.Windows.Forms.TextBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -688,7 +688,6 @@
             this.gbS5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).BeginInit();
             this.tbpS6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).BeginInit();
             this.gbS6.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox15.SuspendLayout();
@@ -701,6 +700,7 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).BeginInit();
             this.tbpS7.SuspendLayout();
             this.gbS7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).BeginInit();
@@ -842,11 +842,19 @@
             this.tbpInfo.Controls.Add(this.lblCodigoHogar);
             this.tbpInfo.Location = new System.Drawing.Point(4, 22);
             this.tbpInfo.Name = "tbpInfo";
-            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpInfo.Size = new System.Drawing.Size(1332, 549);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
             this.tbpInfo.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(370, 486);
+            this.maskedTextBox1.Mask = "78.999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 7;
             // 
             // pbNext
             // 
@@ -1236,7 +1244,7 @@
             this.tbpS1.Controls.Add(this.gbS1);
             this.tbpS1.Location = new System.Drawing.Point(4, 22);
             this.tbpS1.Name = "tbpS1";
-            this.tbpS1.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS1.Size = new System.Drawing.Size(1332, 549);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
@@ -1356,7 +1364,7 @@
             this.tbpS2.Controls.Add(this.gbS2);
             this.tbpS2.Location = new System.Drawing.Point(4, 22);
             this.tbpS2.Name = "tbpS2";
-            this.tbpS2.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS2.Size = new System.Drawing.Size(1332, 549);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
@@ -1479,7 +1487,7 @@
             this.tbpS3.Controls.Add(this.gbS3);
             this.tbpS3.Location = new System.Drawing.Point(4, 22);
             this.tbpS3.Name = "tbpS3";
-            this.tbpS3.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS3.Size = new System.Drawing.Size(1332, 549);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
@@ -1673,7 +1681,7 @@
             this.tbpS4.Controls.Add(this.groupBox4);
             this.tbpS4.Location = new System.Drawing.Point(4, 22);
             this.tbpS4.Name = "tbpS4";
-            this.tbpS4.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS4.Size = new System.Drawing.Size(1332, 549);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
@@ -1847,7 +1855,7 @@
             this.tbpS5.Controls.Add(this.gbS5);
             this.tbpS5.Location = new System.Drawing.Point(4, 22);
             this.tbpS5.Name = "tbpS5";
-            this.tbpS5.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS5.Size = new System.Drawing.Size(1332, 549);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
@@ -2053,26 +2061,15 @@
             // 
             // tbpS6
             // 
-            this.tbpS6.Controls.Add(this.pbS6_Siguiente);
             this.tbpS6.Controls.Add(this.gbS6);
+            this.tbpS6.Controls.Add(this.pbS6_Siguiente);
             this.tbpS6.Location = new System.Drawing.Point(4, 22);
             this.tbpS6.Name = "tbpS6";
-            this.tbpS6.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS6.Size = new System.Drawing.Size(1332, 549);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
             this.tbpS6.UseVisualStyleBackColor = true;
-            // 
-            // pbS6_Siguiente
-            // 
-            this.pbS6_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS6_Siguiente.Location = new System.Drawing.Point(1195, 495);
-            this.pbS6_Siguiente.Name = "pbS6_Siguiente";
-            this.pbS6_Siguiente.Size = new System.Drawing.Size(53, 59);
-            this.pbS6_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbS6_Siguiente.TabIndex = 12;
-            this.pbS6_Siguiente.TabStop = false;
-            this.pbS6_Siguiente.Click += new System.EventHandler(this.pbS6_Siguiente_Click);
             // 
             // gbS6
             // 
@@ -2087,24 +2084,34 @@
             this.gbS6.Controls.Add(this.groupBox8);
             this.gbS6.Controls.Add(this.groupBox7);
             this.gbS6.Controls.Add(this.groupBox6);
-            this.gbS6.Location = new System.Drawing.Point(6, 6);
+            this.gbS6.Location = new System.Drawing.Point(3, 0);
             this.gbS6.Name = "gbS6";
             this.gbS6.Size = new System.Drawing.Size(1328, 487);
-            this.gbS6.TabIndex = 0;
+            this.gbS6.TabIndex = 13;
             this.gbS6.TabStop = false;
             this.gbS6.Text = "INGRESOS DEL HOGAR";
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.lblS6_11_FaltaDinero);
             this.groupBox16.Controls.Add(this.chlbS6_11_CubrirFaltaDinero);
             this.groupBox16.Controls.Add(this.lblS6_11_Especificar);
             this.groupBox16.Controls.Add(this.txtS6_11_EspecificarFaltaDinero);
-            this.groupBox16.Controls.Add(this.lblS6_11_FaltaDinero);
             this.groupBox16.Location = new System.Drawing.Point(975, 177);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(300, 242);
             this.groupBox16.TabIndex = 10;
             this.groupBox16.TabStop = false;
+            // 
+            // lblS6_11_FaltaDinero
+            // 
+            this.lblS6_11_FaltaDinero.AutoSize = true;
+            this.lblS6_11_FaltaDinero.Location = new System.Drawing.Point(19, 26);
+            this.lblS6_11_FaltaDinero.Name = "lblS6_11_FaltaDinero";
+            this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(254, 39);
+            this.lblS6_11_FaltaDinero.TabIndex = 25;
+            this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero \r\n      en los últimos doce m" +
+    "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
             // 
             // chlbS6_11_CubrirFaltaDinero
             // 
@@ -2141,28 +2148,27 @@
             this.txtS6_11_EspecificarFaltaDinero.Size = new System.Drawing.Size(178, 23);
             this.txtS6_11_EspecificarFaltaDinero.TabIndex = 2;
             // 
-            // lblS6_11_FaltaDinero
-            // 
-            this.lblS6_11_FaltaDinero.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_11_FaltaDinero.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_11_FaltaDinero.Multiline = true;
-            this.lblS6_11_FaltaDinero.Name = "lblS6_11_FaltaDinero";
-            this.lblS6_11_FaltaDinero.ReadOnly = true;
-            this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(248, 56);
-            this.lblS6_11_FaltaDinero.TabIndex = 0;
-            this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero en los últimos doce meses?  [" +
-    "MARCAR TODAS LAS OPCIONES NECESARIAS] ";
-            // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.lblS6_10_Gastos);
             this.groupBox15.Controls.Add(this.txtS6_10_CantiGastosaIngresos);
             this.groupBox15.Controls.Add(this.lblS6_10_QGastos);
-            this.groupBox15.Controls.Add(this.lblS6_10_Gastos);
             this.groupBox15.Location = new System.Drawing.Point(975, 29);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(300, 142);
             this.groupBox15.TabIndex = 9;
             this.groupBox15.TabStop = false;
+            // 
+            // lblS6_10_Gastos
+            // 
+            this.lblS6_10_Gastos.AutoSize = true;
+            this.lblS6_10_Gastos.Location = new System.Drawing.Point(18, 19);
+            this.lblS6_10_Gastos.Name = "lblS6_10_Gastos";
+            this.lblS6_10_Gastos.Size = new System.Drawing.Size(262, 52);
+            this.lblS6_10_Gastos.TabIndex = 24;
+            this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido \r\n      suficientes para cubri" +
+    "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
+    "\r\n      ingresos?";
             // 
             // txtS6_10_CantiGastosaIngresos
             // 
@@ -2181,28 +2187,26 @@
             this.lblS6_10_QGastos.TabIndex = 1;
             this.lblS6_10_QGastos.Text = "Q.";
             // 
-            // lblS6_10_Gastos
-            // 
-            this.lblS6_10_Gastos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_10_Gastos.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_10_Gastos.Multiline = true;
-            this.lblS6_10_Gastos.Name = "lblS6_10_Gastos";
-            this.lblS6_10_Gastos.ReadOnly = true;
-            this.lblS6_10_Gastos.Size = new System.Drawing.Size(248, 74);
-            this.lblS6_10_Gastos.TabIndex = 0;
-            this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido suficientes para cubrir sus ga" +
-    "stos. Mensualmente, ¿Por cuánto dinero superan esos gastos a los ingresos?";
-            // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.lblS6_9_CantidadAhorro);
             this.groupBox14.Controls.Add(this.txtS6_9_CantiAhorro);
             this.groupBox14.Controls.Add(this.lblS6_9_QAhorro);
-            this.groupBox14.Controls.Add(this.lblS6_9_CantidadAhorro);
             this.groupBox14.Location = new System.Drawing.Point(669, 279);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(300, 119);
             this.groupBox14.TabIndex = 8;
             this.groupBox14.TabStop = false;
+            // 
+            // lblS6_9_CantidadAhorro
+            // 
+            this.lblS6_9_CantidadAhorro.AutoSize = true;
+            this.lblS6_9_CantidadAhorro.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_9_CantidadAhorro.Name = "lblS6_9_CantidadAhorro";
+            this.lblS6_9_CantidadAhorro.Size = new System.Drawing.Size(247, 26);
+            this.lblS6_9_CantidadAhorro.TabIndex = 23;
+            this.lblS6_9_CantidadAhorro.Text = "9. Mensualmente, ¿cuál es el monto promedio que \r\n    logran ahorrar en el hogar?" +
+    "";
             // 
             // txtS6_9_CantiAhorro
             // 
@@ -2221,26 +2225,25 @@
             this.lblS6_9_QAhorro.TabIndex = 1;
             this.lblS6_9_QAhorro.Text = "Q.";
             // 
-            // lblS6_9_CantidadAhorro
-            // 
-            this.lblS6_9_CantidadAhorro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_9_CantidadAhorro.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_9_CantidadAhorro.Multiline = true;
-            this.lblS6_9_CantidadAhorro.Name = "lblS6_9_CantidadAhorro";
-            this.lblS6_9_CantidadAhorro.ReadOnly = true;
-            this.lblS6_9_CantidadAhorro.Size = new System.Drawing.Size(248, 41);
-            this.lblS6_9_CantidadAhorro.TabIndex = 0;
-            this.lblS6_9_CantidadAhorro.Text = "9. Mensualmente, ¿cuál es el monto promedio que logran ahorrar en el hogar?";
-            // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.cbxS6_8_AhorroMensual);
             this.groupBox13.Controls.Add(this.lblS6_8_Ahorro);
+            this.groupBox13.Controls.Add(this.cbxS6_8_AhorroMensual);
             this.groupBox13.Location = new System.Drawing.Point(669, 154);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(300, 119);
             this.groupBox13.TabIndex = 7;
             this.groupBox13.TabStop = false;
+            // 
+            // lblS6_8_Ahorro
+            // 
+            this.lblS6_8_Ahorro.AutoSize = true;
+            this.lblS6_8_Ahorro.Location = new System.Drawing.Point(19, 23);
+            this.lblS6_8_Ahorro.Name = "lblS6_8_Ahorro";
+            this.lblS6_8_Ahorro.Size = new System.Drawing.Size(261, 39);
+            this.lblS6_8_Ahorro.TabIndex = 22;
+            this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han \r\n    sido suficientes. ¿Han " +
+    "logrado en ese caso generar\r\n    un ahorro mensual?";
             // 
             // cbxS6_8_AhorroMensual
             // 
@@ -2254,27 +2257,25 @@
             this.cbxS6_8_AhorroMensual.Size = new System.Drawing.Size(249, 21);
             this.cbxS6_8_AhorroMensual.TabIndex = 3;
             // 
-            // lblS6_8_Ahorro
-            // 
-            this.lblS6_8_Ahorro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_8_Ahorro.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_8_Ahorro.Multiline = true;
-            this.lblS6_8_Ahorro.Name = "lblS6_8_Ahorro";
-            this.lblS6_8_Ahorro.ReadOnly = true;
-            this.lblS6_8_Ahorro.Size = new System.Drawing.Size(248, 52);
-            this.lblS6_8_Ahorro.TabIndex = 0;
-            this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han sido suficientes. ¿Han lograd" +
-    "o en ese caso generar un ahorro mensual?";
-            // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.cbxS6_7_CubrenGasto);
             this.groupBox12.Controls.Add(this.lblS6_7_CubrirGastos);
+            this.groupBox12.Controls.Add(this.cbxS6_7_CubrenGasto);
             this.groupBox12.Location = new System.Drawing.Point(669, 29);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(300, 119);
             this.groupBox12.TabIndex = 6;
             this.groupBox12.TabStop = false;
+            // 
+            // lblS6_7_CubrirGastos
+            // 
+            this.lblS6_7_CubrirGastos.AutoSize = true;
+            this.lblS6_7_CubrirGastos.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_7_CubrirGastos.Name = "lblS6_7_CubrirGastos";
+            this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(255, 26);
+            this.lblS6_7_CubrirGastos.TabIndex = 21;
+            this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del \r\n     hogar han sido sufi" +
+    "cientes para cubrir su gastos?";
             // 
             // cbxS6_7_CubrenGasto
             // 
@@ -2289,28 +2290,26 @@
             this.cbxS6_7_CubrenGasto.Size = new System.Drawing.Size(249, 21);
             this.cbxS6_7_CubrenGasto.TabIndex = 3;
             // 
-            // lblS6_7_CubrirGastos
-            // 
-            this.lblS6_7_CubrirGastos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_7_CubrirGastos.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_7_CubrirGastos.Multiline = true;
-            this.lblS6_7_CubrirGastos.Name = "lblS6_7_CubrirGastos";
-            this.lblS6_7_CubrirGastos.ReadOnly = true;
-            this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(248, 56);
-            this.lblS6_7_CubrirGastos.TabIndex = 0;
-            this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del hogar han sido suficientes" +
-    " para cubrir su gastos?";
-            // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.lblS6_6_IngresoTotal);
             this.groupBox11.Controls.Add(this.txtS6_6_IngresoTotal);
             this.groupBox11.Controls.Add(this.lblS6_6_QIngresosTotales);
-            this.groupBox11.Controls.Add(this.lblS6_6_IngresoTotal);
             this.groupBox11.Location = new System.Drawing.Point(363, 279);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(300, 119);
             this.groupBox11.TabIndex = 5;
             this.groupBox11.TabStop = false;
+            // 
+            // lblS6_6_IngresoTotal
+            // 
+            this.lblS6_6_IngresoTotal.AutoSize = true;
+            this.lblS6_6_IngresoTotal.Location = new System.Drawing.Point(18, 19);
+            this.lblS6_6_IngresoTotal.Name = "lblS6_6_IngresoTotal";
+            this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(240, 39);
+            this.lblS6_6_IngresoTotal.TabIndex = 20;
+            this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el\r\n     trabajo de todos los in" +
+    "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
             // 
             // txtS6_6_IngresoTotal
             // 
@@ -2329,27 +2328,24 @@
             this.lblS6_6_QIngresosTotales.TabIndex = 1;
             this.lblS6_6_QIngresosTotales.Text = "Q.";
             // 
-            // lblS6_6_IngresoTotal
-            // 
-            this.lblS6_6_IngresoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_6_IngresoTotal.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_6_IngresoTotal.Multiline = true;
-            this.lblS6_6_IngresoTotal.Name = "lblS6_6_IngresoTotal";
-            this.lblS6_6_IngresoTotal.ReadOnly = true;
-            this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(248, 54);
-            this.lblS6_6_IngresoTotal.TabIndex = 0;
-            this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el trabajo de todos los integran" +
-    "tes, apoyos gubernamentales, remesas y otras ayudas?";
-            // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.cbxS6_5_TiempoPagoDeuda);
             this.groupBox10.Controls.Add(this.lblS6_5_TiempoDeuda);
+            this.groupBox10.Controls.Add(this.cbxS6_5_TiempoPagoDeuda);
             this.groupBox10.Location = new System.Drawing.Point(363, 154);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(300, 119);
             this.groupBox10.TabIndex = 4;
             this.groupBox10.TabStop = false;
+            // 
+            // lblS6_5_TiempoDeuda
+            // 
+            this.lblS6_5_TiempoDeuda.AutoSize = true;
+            this.lblS6_5_TiempoDeuda.Location = new System.Drawing.Point(19, 23);
+            this.lblS6_5_TiempoDeuda.Name = "lblS6_5_TiempoDeuda";
+            this.lblS6_5_TiempoDeuda.Size = new System.Drawing.Size(210, 13);
+            this.lblS6_5_TiempoDeuda.TabIndex = 19;
+            this.lblS6_5_TiempoDeuda.Text = "5. ¿Cada cuanto tiempo paga sus deudas?";
             // 
             // cbxS6_5_TiempoPagoDeuda
             // 
@@ -2360,33 +2356,31 @@
             "Una vez cada seis meses",
             "No las paga",
             "NS/NR"});
-            this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(21, 75);
+            this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(21, 73);
             this.cbxS6_5_TiempoPagoDeuda.Name = "cbxS6_5_TiempoPagoDeuda";
             this.cbxS6_5_TiempoPagoDeuda.Size = new System.Drawing.Size(249, 21);
             this.cbxS6_5_TiempoPagoDeuda.TabIndex = 3;
             // 
-            // lblS6_5_TiempoDeuda
-            // 
-            this.lblS6_5_TiempoDeuda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_5_TiempoDeuda.Location = new System.Drawing.Point(21, 26);
-            this.lblS6_5_TiempoDeuda.Multiline = true;
-            this.lblS6_5_TiempoDeuda.Name = "lblS6_5_TiempoDeuda";
-            this.lblS6_5_TiempoDeuda.ReadOnly = true;
-            this.lblS6_5_TiempoDeuda.Size = new System.Drawing.Size(248, 29);
-            this.lblS6_5_TiempoDeuda.TabIndex = 0;
-            this.lblS6_5_TiempoDeuda.Text = "5. ¿Cada cuanto tiempo paga sus deudas?";
-            // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.lblS6_4_CantiDeudas);
             this.groupBox9.Controls.Add(this.lblS6_4_Valor0);
             this.groupBox9.Controls.Add(this.txtS6_4_CantiDeuda);
             this.groupBox9.Controls.Add(this.lblS6_4_QDeuda);
-            this.groupBox9.Controls.Add(this.lblS6_4_CantiDeudas);
             this.groupBox9.Location = new System.Drawing.Point(363, 29);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(300, 119);
             this.groupBox9.TabIndex = 3;
             this.groupBox9.TabStop = false;
+            // 
+            // lblS6_4_CantiDeudas
+            // 
+            this.lblS6_4_CantiDeudas.AutoSize = true;
+            this.lblS6_4_CantiDeudas.Location = new System.Drawing.Point(9, 19);
+            this.lblS6_4_CantiDeudas.Name = "lblS6_4_CantiDeudas";
+            this.lblS6_4_CantiDeudas.Size = new System.Drawing.Size(260, 26);
+            this.lblS6_4_CantiDeudas.TabIndex = 18;
+            this.lblS6_4_CantiDeudas.Text = "4. ¿A cuánto dinero, aproximadamente, equivalen sus\r\n    deudas?";
             // 
             // lblS6_4_Valor0
             // 
@@ -2414,26 +2408,24 @@
             this.lblS6_4_QDeuda.TabIndex = 1;
             this.lblS6_4_QDeuda.Text = "Q.";
             // 
-            // lblS6_4_CantiDeudas
-            // 
-            this.lblS6_4_CantiDeudas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_4_CantiDeudas.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_4_CantiDeudas.Multiline = true;
-            this.lblS6_4_CantiDeudas.Name = "lblS6_4_CantiDeudas";
-            this.lblS6_4_CantiDeudas.ReadOnly = true;
-            this.lblS6_4_CantiDeudas.Size = new System.Drawing.Size(248, 41);
-            this.lblS6_4_CantiDeudas.TabIndex = 0;
-            this.lblS6_4_CantiDeudas.Text = "4. ¿A cuánto dinero, aproximadamente, equivalen sus deudas?";
-            // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.cbxS6_3_Deuda);
             this.groupBox8.Controls.Add(this.lblS6_3_Deuda);
+            this.groupBox8.Controls.Add(this.cbxS6_3_Deuda);
             this.groupBox8.Location = new System.Drawing.Point(57, 279);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(300, 119);
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
+            // 
+            // lblS6_3_Deuda
+            // 
+            this.lblS6_3_Deuda.AutoSize = true;
+            this.lblS6_3_Deuda.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_3_Deuda.Name = "lblS6_3_Deuda";
+            this.lblS6_3_Deuda.Size = new System.Drawing.Size(247, 26);
+            this.lblS6_3_Deuda.TabIndex = 18;
+            this.lblS6_3_Deuda.Text = "3. Actualmente, ¿En su familia se mantiene alguna \r\n    deuda?\r\n";
             // 
             // cbxS6_3_Deuda
             // 
@@ -2447,28 +2439,27 @@
             this.cbxS6_3_Deuda.Size = new System.Drawing.Size(249, 21);
             this.cbxS6_3_Deuda.TabIndex = 3;
             // 
-            // lblS6_3_Deuda
-            // 
-            this.lblS6_3_Deuda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_3_Deuda.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_3_Deuda.Multiline = true;
-            this.lblS6_3_Deuda.Name = "lblS6_3_Deuda";
-            this.lblS6_3_Deuda.ReadOnly = true;
-            this.lblS6_3_Deuda.Size = new System.Drawing.Size(248, 41);
-            this.lblS6_3_Deuda.TabIndex = 0;
-            this.lblS6_3_Deuda.Text = "3. Actualmente, ¿En su familia se mantiene alguna deuda?";
-            // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.lblS6_2_IngresosRemesas);
             this.groupBox7.Controls.Add(this.cbxS6_2_IngRemesas);
             this.groupBox7.Controls.Add(this.txtS6_2_CantidadRemesas);
             this.groupBox7.Controls.Add(this.lblS6_2_QRemesas);
-            this.groupBox7.Controls.Add(this.lblS6_2_IngresosRemesas);
             this.groupBox7.Location = new System.Drawing.Point(57, 154);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(300, 119);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
+            // 
+            // lblS6_2_IngresosRemesas
+            // 
+            this.lblS6_2_IngresosRemesas.AutoSize = true;
+            this.lblS6_2_IngresosRemesas.Location = new System.Drawing.Point(19, 23);
+            this.lblS6_2_IngresosRemesas.Name = "lblS6_2_IngresosRemesas";
+            this.lblS6_2_IngresosRemesas.Size = new System.Drawing.Size(252, 26);
+            this.lblS6_2_IngresosRemesas.TabIndex = 17;
+            this.lblS6_2_IngresosRemesas.Text = "2. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por remesas? ¿qué cant" +
+    "idad?\r\n";
             // 
             // cbxS6_2_IngRemesas
             // 
@@ -2481,7 +2472,6 @@
             this.cbxS6_2_IngRemesas.Name = "cbxS6_2_IngRemesas";
             this.cbxS6_2_IngRemesas.Size = new System.Drawing.Size(125, 21);
             this.cbxS6_2_IngRemesas.TabIndex = 3;
-            this.cbxS6_2_IngRemesas.SelectedIndexChanged += new System.EventHandler(this.cbxS6_2_IngRemesas_SelectedIndexChanged);
             // 
             // txtS6_2_CantidadRemesas
             // 
@@ -2502,28 +2492,27 @@
             this.lblS6_2_QRemesas.TabIndex = 1;
             this.lblS6_2_QRemesas.Text = "Q.";
             // 
-            // lblS6_2_IngresosRemesas
-            // 
-            this.lblS6_2_IngresosRemesas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_2_IngresosRemesas.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_2_IngresosRemesas.Multiline = true;
-            this.lblS6_2_IngresosRemesas.Name = "lblS6_2_IngresosRemesas";
-            this.lblS6_2_IngresosRemesas.ReadOnly = true;
-            this.lblS6_2_IngresosRemesas.Size = new System.Drawing.Size(248, 41);
-            this.lblS6_2_IngresosRemesas.TabIndex = 0;
-            this.lblS6_2_IngresosRemesas.Text = "2. ¿Sus ingresos totales del hogar incluyeron dinero por remesas? ¿qué cantidad?";
-            // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.lblS6_1_IngresosEstado);
             this.groupBox6.Controls.Add(this.cbxS6_1_IngEstado);
             this.groupBox6.Controls.Add(this.txtS6_1_CantidadIngEstado);
             this.groupBox6.Controls.Add(this.lblS6_1_QEstado);
-            this.groupBox6.Controls.Add(this.lblS6_1_IngresosEstado);
             this.groupBox6.Location = new System.Drawing.Point(57, 29);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(300, 119);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
+            // 
+            // lblS6_1_IngresosEstado
+            // 
+            this.lblS6_1_IngresosEstado.AutoSize = true;
+            this.lblS6_1_IngresosEstado.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_1_IngresosEstado.Name = "lblS6_1_IngresosEstado";
+            this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(260, 26);
+            this.lblS6_1_IngresosEstado.TabIndex = 16;
+            this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por apoyo del Estado (" +
+    "programas)? ¿qué cantidad?\r\n";
             // 
             // cbxS6_1_IngEstado
             // 
@@ -2536,7 +2525,6 @@
             this.cbxS6_1_IngEstado.Name = "cbxS6_1_IngEstado";
             this.cbxS6_1_IngEstado.Size = new System.Drawing.Size(125, 21);
             this.cbxS6_1_IngEstado.TabIndex = 3;
-            this.cbxS6_1_IngEstado.SelectedIndexChanged += new System.EventHandler(this.cbxS6_1_IngEstado_SelectedIndexChanged);
             // 
             // txtS6_1_CantidadIngEstado
             // 
@@ -2557,24 +2545,23 @@
             this.lblS6_1_QEstado.TabIndex = 1;
             this.lblS6_1_QEstado.Text = "Q.";
             // 
-            // lblS6_1_IngresosEstado
+            // pbS6_Siguiente
             // 
-            this.lblS6_1_IngresosEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblS6_1_IngresosEstado.Location = new System.Drawing.Point(21, 19);
-            this.lblS6_1_IngresosEstado.Multiline = true;
-            this.lblS6_1_IngresosEstado.Name = "lblS6_1_IngresosEstado";
-            this.lblS6_1_IngresosEstado.ReadOnly = true;
-            this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(248, 41);
-            this.lblS6_1_IngresosEstado.TabIndex = 0;
-            this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero por apoyo del Estado (progra" +
-    "mas)? ¿qué cantidad?";
+            this.pbS6_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS6_Siguiente.Location = new System.Drawing.Point(1195, 490);
+            this.pbS6_Siguiente.Name = "pbS6_Siguiente";
+            this.pbS6_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS6_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS6_Siguiente.TabIndex = 12;
+            this.pbS6_Siguiente.TabStop = false;
+            this.pbS6_Siguiente.Click += new System.EventHandler(this.pbS6_Siguiente_Click);
             // 
             // tbpS7
             // 
             this.tbpS7.Controls.Add(this.gbS7);
             this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
-            this.tbpS7.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS7.Size = new System.Drawing.Size(1332, 549);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
@@ -2591,10 +2578,10 @@
             this.gbS7.Controls.Add(this.groupBox20);
             this.gbS7.Controls.Add(this.groupBox19);
             this.gbS7.Controls.Add(this.groupBox18);
-            this.gbS7.Location = new System.Drawing.Point(6, 6);
+            this.gbS7.Location = new System.Drawing.Point(3, 3);
             this.gbS7.Name = "gbS7";
             this.gbS7.Size = new System.Drawing.Size(1332, 510);
-            this.gbS7.TabIndex = 0;
+            this.gbS7.TabIndex = 1;
             this.gbS7.TabStop = false;
             this.gbS7.Text = "VIVIENDA";
             // 
@@ -2607,21 +2594,31 @@
             this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS7_Siguiente.TabIndex = 13;
             this.pbS7_Siguiente.TabStop = false;
-            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click);
+            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click_1);
             // 
             // groupBox24
             // 
+            this.groupBox24.Controls.Add(this.lblS7_8_MaterialPiso);
             this.groupBox24.Controls.Add(this.gbS7_8_Tierra);
             this.groupBox24.Controls.Add(this.gbS7_8_Madera);
             this.groupBox24.Controls.Add(this.gbS7_8_LadrilloBarro);
             this.groupBox24.Controls.Add(this.gbS7_8_Encementado);
             this.groupBox24.Controls.Add(this.gbS7_8_EstadoPiso);
-            this.groupBox24.Controls.Add(this.lblS7_8_Piso);
             this.groupBox24.Location = new System.Drawing.Point(1005, 19);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(307, 332);
             this.groupBox24.TabIndex = 8;
             this.groupBox24.TabStop = false;
+            // 
+            // lblS7_8_MaterialPiso
+            // 
+            this.lblS7_8_MaterialPiso.AutoSize = true;
+            this.lblS7_8_MaterialPiso.Location = new System.Drawing.Point(10, 23);
+            this.lblS7_8_MaterialPiso.Name = "lblS7_8_MaterialPiso";
+            this.lblS7_8_MaterialPiso.Size = new System.Drawing.Size(269, 26);
+            this.lblS7_8_MaterialPiso.TabIndex = 16;
+            this.lblS7_8_MaterialPiso.Text = "8. OBSERVE y defina el tipo y el estado del material de \r\n    PISO de la vivienda" +
+    ".";
             // 
             // gbS7_8_Tierra
             // 
@@ -2919,17 +2916,9 @@
             this.label59.TabIndex = 0;
             this.label59.Text = "muy malo";
             // 
-            // lblS7_8_Piso
-            // 
-            this.lblS7_8_Piso.Location = new System.Drawing.Point(21, 19);
-            this.lblS7_8_Piso.Multiline = true;
-            this.lblS7_8_Piso.Name = "lblS7_8_Piso";
-            this.lblS7_8_Piso.Size = new System.Drawing.Size(249, 42);
-            this.lblS7_8_Piso.TabIndex = 0;
-            this.lblS7_8_Piso.Text = "8.  OBSERVE y defina el tipo y el estado del material del PISO de la vivienda.";
-            // 
             // groupBox25
             // 
+            this.groupBox25.Controls.Add(this.lblS7_7_MaterialParedes);
             this.groupBox25.Controls.Add(this.gbS7_7_Desechos);
             this.groupBox25.Controls.Add(this.gbS7_7_BaharequeBambu);
             this.groupBox25.Controls.Add(this.gbS7_7_Lamina);
@@ -2937,12 +2926,21 @@
             this.groupBox25.Controls.Add(this.gbS7_7_Madera);
             this.groupBox25.Controls.Add(this.gbS7_7_BlockLadriPrefabr);
             this.groupBox25.Controls.Add(this.gbS7_7_EstadoParedes);
-            this.groupBox25.Controls.Add(this.lblS7_7_Paredes);
             this.groupBox25.Location = new System.Drawing.Point(637, 10);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(362, 341);
             this.groupBox25.TabIndex = 7;
             this.groupBox25.TabStop = false;
+            // 
+            // lblS7_7_MaterialParedes
+            // 
+            this.lblS7_7_MaterialParedes.AutoSize = true;
+            this.lblS7_7_MaterialParedes.Location = new System.Drawing.Point(9, 19);
+            this.lblS7_7_MaterialParedes.Name = "lblS7_7_MaterialParedes";
+            this.lblS7_7_MaterialParedes.Size = new System.Drawing.Size(323, 26);
+            this.lblS7_7_MaterialParedes.TabIndex = 15;
+            this.lblS7_7_MaterialParedes.Text = "7. OBSERVE y defina el tipo y el estado del material de PAREDES \r\n     de la vivi" +
+    "enda.";
             // 
             // gbS7_7_Desechos
             // 
@@ -3364,17 +3362,9 @@
             this.label52.TabIndex = 0;
             this.label52.Text = "muy malo";
             // 
-            // lblS7_7_Paredes
-            // 
-            this.lblS7_7_Paredes.Location = new System.Drawing.Point(21, 19);
-            this.lblS7_7_Paredes.Multiline = true;
-            this.lblS7_7_Paredes.Name = "lblS7_7_Paredes";
-            this.lblS7_7_Paredes.Size = new System.Drawing.Size(317, 42);
-            this.lblS7_7_Paredes.TabIndex = 0;
-            this.lblS7_7_Paredes.Text = "7. OBSERVE y defina el tipo y el estado del material de PAREDES de la vivienda.";
-            // 
             // groupBox23
             // 
+            this.groupBox23.Controls.Add(this.lblS7_6_MaterialTecho);
             this.groupBox23.Controls.Add(this.gbS7_6_Desechos);
             this.groupBox23.Controls.Add(this.gbS7_6_Paja);
             this.groupBox23.Controls.Add(this.gbS7_6_Duralita);
@@ -3382,12 +3372,21 @@
             this.groupBox23.Controls.Add(this.gbS7_6_Barro);
             this.groupBox23.Controls.Add(this.gbS7_6_Concreto);
             this.groupBox23.Controls.Add(this.gbS7_6_EstadoTecho);
-            this.groupBox23.Controls.Add(this.lblS7_6_EstadoMaterial);
             this.groupBox23.Location = new System.Drawing.Point(294, 204);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(336, 284);
             this.groupBox23.TabIndex = 6;
             this.groupBox23.TabStop = false;
+            // 
+            // lblS7_6_MaterialTecho
+            // 
+            this.lblS7_6_MaterialTecho.AutoSize = true;
+            this.lblS7_6_MaterialTecho.Location = new System.Drawing.Point(10, 15);
+            this.lblS7_6_MaterialTecho.Name = "lblS7_6_MaterialTecho";
+            this.lblS7_6_MaterialTecho.Size = new System.Drawing.Size(314, 26);
+            this.lblS7_6_MaterialTecho.TabIndex = 15;
+            this.lblS7_6_MaterialTecho.Text = "6. OBSERVE y defina el tipo y el estado del material del TECHO  \r\n     de la vivi" +
+    "enda.";
             // 
             // gbS7_6_Desechos
             // 
@@ -3809,17 +3808,9 @@
             this.label31.TabIndex = 0;
             this.label31.Text = "muy malo";
             // 
-            // lblS7_6_EstadoMaterial
-            // 
-            this.lblS7_6_EstadoMaterial.Location = new System.Drawing.Point(12, 14);
-            this.lblS7_6_EstadoMaterial.Multiline = true;
-            this.lblS7_6_EstadoMaterial.Name = "lblS7_6_EstadoMaterial";
-            this.lblS7_6_EstadoMaterial.Size = new System.Drawing.Size(301, 39);
-            this.lblS7_6_EstadoMaterial.TabIndex = 0;
-            this.lblS7_6_EstadoMaterial.Text = "6. OBSERVE y defina el tipo y el estado del material del TECHO de la vivienda.";
-            // 
             // groupBox22
             // 
+            this.groupBox22.Controls.Add(this.lblS7_5_Problema);
             this.groupBox22.Controls.Add(this.txtS7_5_ProblemaC);
             this.groupBox22.Controls.Add(this.lblS7_5_C);
             this.groupBox22.Controls.Add(this.txtS7_5_ProblemaB);
@@ -3827,12 +3818,21 @@
             this.groupBox22.Controls.Add(this.cbsS7_5_ProbViv);
             this.groupBox22.Controls.Add(this.txtS7_5_ProblemaA);
             this.groupBox22.Controls.Add(this.lblS7_5_A);
-            this.groupBox22.Controls.Add(this.textBox48);
             this.groupBox22.Location = new System.Drawing.Point(294, 8);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(336, 192);
             this.groupBox22.TabIndex = 5;
             this.groupBox22.TabStop = false;
+            // 
+            // lblS7_5_Problema
+            // 
+            this.lblS7_5_Problema.AutoSize = true;
+            this.lblS7_5_Problema.Location = new System.Drawing.Point(10, 20);
+            this.lblS7_5_Problema.Name = "lblS7_5_Problema";
+            this.lblS7_5_Problema.Size = new System.Drawing.Size(288, 26);
+            this.lblS7_5_Problema.TabIndex = 15;
+            this.lblS7_5_Problema.Text = "5. ¿Cree que su vivienda actual tienen algún problema que \r\n     le gustaría reso" +
+    "lver?";
             // 
             // txtS7_5_ProblemaC
             // 
@@ -3883,7 +3883,6 @@
             this.cbsS7_5_ProbViv.Name = "cbsS7_5_ProbViv";
             this.cbsS7_5_ProbViv.Size = new System.Drawing.Size(225, 21);
             this.cbsS7_5_ProbViv.TabIndex = 3;
-            this.cbsS7_5_ProbViv.SelectedIndexChanged += new System.EventHandler(this.cbsS7_5_ProbViv_SelectedIndexChanged);
             // 
             // txtS7_5_ProblemaA
             // 
@@ -3904,24 +3903,24 @@
             this.lblS7_5_A.TabIndex = 1;
             this.lblS7_5_A.Text = "a)";
             // 
-            // textBox48
-            // 
-            this.textBox48.Location = new System.Drawing.Point(11, 17);
-            this.textBox48.Multiline = true;
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(295, 42);
-            this.textBox48.TabIndex = 0;
-            this.textBox48.Text = "5. ¿Cree que su vivienda actual tienen algún problema que le gustaría resolver?";
-            // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.lblS7_4_Camas);
             this.groupBox21.Controls.Add(this.txtS7_4_CantCamas);
-            this.groupBox21.Controls.Add(this.textBox45);
             this.groupBox21.Location = new System.Drawing.Point(18, 333);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(270, 116);
             this.groupBox21.TabIndex = 4;
             this.groupBox21.TabStop = false;
+            // 
+            // lblS7_4_Camas
+            // 
+            this.lblS7_4_Camas.AutoSize = true;
+            this.lblS7_4_Camas.Location = new System.Drawing.Point(6, 24);
+            this.lblS7_4_Camas.Name = "lblS7_4_Camas";
+            this.lblS7_4_Camas.Size = new System.Drawing.Size(257, 26);
+            this.lblS7_4_Camas.TabIndex = 14;
+            this.lblS7_4_Camas.Text = "4. ¿Cuántas camas o su equivalentes tiene usted en \r\n    su vivienda?";
             // 
             // txtS7_4_CantCamas
             // 
@@ -3931,24 +3930,24 @@
             this.txtS7_4_CantCamas.Size = new System.Drawing.Size(208, 23);
             this.txtS7_4_CantCamas.TabIndex = 3;
             // 
-            // textBox45
-            // 
-            this.textBox45.Location = new System.Drawing.Point(11, 14);
-            this.textBox45.Multiline = true;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(249, 42);
-            this.textBox45.TabIndex = 0;
-            this.textBox45.Text = "4. ¿Cuántas camas o su equivalentes tiene usted en su vivienda? ";
-            // 
             // groupBox20
             // 
+            this.groupBox20.Controls.Add(this.lblS7_3_Dormitorio);
             this.groupBox20.Controls.Add(this.txtS7_3_CantDormitorios);
-            this.groupBox20.Controls.Add(this.lblS7_3_Dormitorios);
             this.groupBox20.Location = new System.Drawing.Point(18, 221);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(270, 106);
             this.groupBox20.TabIndex = 3;
             this.groupBox20.TabStop = false;
+            // 
+            // lblS7_3_Dormitorio
+            // 
+            this.lblS7_3_Dormitorio.AutoSize = true;
+            this.lblS7_3_Dormitorio.Location = new System.Drawing.Point(9, 20);
+            this.lblS7_3_Dormitorio.Name = "lblS7_3_Dormitorio";
+            this.lblS7_3_Dormitorio.Size = new System.Drawing.Size(245, 26);
+            this.lblS7_3_Dormitorio.TabIndex = 15;
+            this.lblS7_3_Dormitorio.Text = "3. Del total de cuartos. ¿Cuántos están destinadas\r\n    a dormitorio?";
             // 
             // txtS7_3_CantDormitorios
             // 
@@ -3958,24 +3957,24 @@
             this.txtS7_3_CantDormitorios.Size = new System.Drawing.Size(208, 23);
             this.txtS7_3_CantDormitorios.TabIndex = 3;
             // 
-            // lblS7_3_Dormitorios
-            // 
-            this.lblS7_3_Dormitorios.Location = new System.Drawing.Point(10, 17);
-            this.lblS7_3_Dormitorios.Multiline = true;
-            this.lblS7_3_Dormitorios.Name = "lblS7_3_Dormitorios";
-            this.lblS7_3_Dormitorios.Size = new System.Drawing.Size(249, 42);
-            this.lblS7_3_Dormitorios.TabIndex = 0;
-            this.lblS7_3_Dormitorios.Text = "3. Del total de cuartos, ¿Cuántos están destinadas a dormitorio?";
-            // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.txtS7_2_Cuartos);
             this.groupBox19.Controls.Add(this.lblS7_2_Cuartos);
+            this.groupBox19.Controls.Add(this.txtS7_2_Cuartos);
             this.groupBox19.Location = new System.Drawing.Point(18, 120);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(270, 95);
             this.groupBox19.TabIndex = 2;
             this.groupBox19.TabStop = false;
+            // 
+            // lblS7_2_Cuartos
+            // 
+            this.lblS7_2_Cuartos.AutoSize = true;
+            this.lblS7_2_Cuartos.Location = new System.Drawing.Point(14, 20);
+            this.lblS7_2_Cuartos.Name = "lblS7_2_Cuartos";
+            this.lblS7_2_Cuartos.Size = new System.Drawing.Size(197, 13);
+            this.lblS7_2_Cuartos.TabIndex = 15;
+            this.lblS7_2_Cuartos.Text = "2. ¿Cuántos cuartos hay en la vivienda?";
             // 
             // txtS7_2_Cuartos
             // 
@@ -3985,30 +3984,30 @@
             this.txtS7_2_Cuartos.Size = new System.Drawing.Size(221, 23);
             this.txtS7_2_Cuartos.TabIndex = 3;
             // 
-            // lblS7_2_Cuartos
-            // 
-            this.lblS7_2_Cuartos.Location = new System.Drawing.Point(11, 17);
-            this.lblS7_2_Cuartos.Multiline = true;
-            this.lblS7_2_Cuartos.Name = "lblS7_2_Cuartos";
-            this.lblS7_2_Cuartos.Size = new System.Drawing.Size(249, 29);
-            this.lblS7_2_Cuartos.TabIndex = 0;
-            this.lblS7_2_Cuartos.Text = "2. ¿Cuántos cuartos hay en la vivienda?";
-            // 
             // groupBox18
             // 
+            this.groupBox18.Controls.Add(this.lblS7_1_Dimensiones);
             this.groupBox18.Controls.Add(this.txtS7_1_AnchoViv);
             this.groupBox18.Controls.Add(this.txtS7_1_LargoViv);
             this.groupBox18.Controls.Add(this.lblS7_1_X);
-            this.groupBox18.Controls.Add(this.lblS7_1_Dimensiones);
             this.groupBox18.Location = new System.Drawing.Point(18, 6);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(270, 108);
             this.groupBox18.TabIndex = 1;
             this.groupBox18.TabStop = false;
             // 
+            // lblS7_1_Dimensiones
+            // 
+            this.lblS7_1_Dimensiones.AutoSize = true;
+            this.lblS7_1_Dimensiones.Location = new System.Drawing.Point(14, 23);
+            this.lblS7_1_Dimensiones.Name = "lblS7_1_Dimensiones";
+            this.lblS7_1_Dimensiones.Size = new System.Drawing.Size(232, 13);
+            this.lblS7_1_Dimensiones.TabIndex = 14;
+            this.lblS7_1_Dimensiones.Text = "1. ¿Cuáles son las dimensiones de su vivienda?\t\t\t";
+            // 
             // txtS7_1_AnchoViv
             // 
-            this.txtS7_1_AnchoViv.Location = new System.Drawing.Point(35, 73);
+            this.txtS7_1_AnchoViv.Location = new System.Drawing.Point(35, 61);
             this.txtS7_1_AnchoViv.Multiline = true;
             this.txtS7_1_AnchoViv.Name = "txtS7_1_AnchoViv";
             this.txtS7_1_AnchoViv.Size = new System.Drawing.Size(87, 23);
@@ -4016,7 +4015,7 @@
             // 
             // txtS7_1_LargoViv
             // 
-            this.txtS7_1_LargoViv.Location = new System.Drawing.Point(156, 73);
+            this.txtS7_1_LargoViv.Location = new System.Drawing.Point(156, 61);
             this.txtS7_1_LargoViv.Multiline = true;
             this.txtS7_1_LargoViv.Name = "txtS7_1_LargoViv";
             this.txtS7_1_LargoViv.Size = new System.Drawing.Size(87, 23);
@@ -4025,20 +4024,11 @@
             // lblS7_1_X
             // 
             this.lblS7_1_X.AutoSize = true;
-            this.lblS7_1_X.Location = new System.Drawing.Point(132, 77);
+            this.lblS7_1_X.Location = new System.Drawing.Point(132, 65);
             this.lblS7_1_X.Name = "lblS7_1_X";
             this.lblS7_1_X.Size = new System.Drawing.Size(14, 13);
             this.lblS7_1_X.TabIndex = 1;
             this.lblS7_1_X.Text = "X";
-            // 
-            // lblS7_1_Dimensiones
-            // 
-            this.lblS7_1_Dimensiones.Location = new System.Drawing.Point(12, 19);
-            this.lblS7_1_Dimensiones.Multiline = true;
-            this.lblS7_1_Dimensiones.Name = "lblS7_1_Dimensiones";
-            this.lblS7_1_Dimensiones.Size = new System.Drawing.Size(249, 42);
-            this.lblS7_1_Dimensiones.TabIndex = 0;
-            this.lblS7_1_Dimensiones.Text = "1. ¿Cuáles son las dimensiones de su vivienda?";
             // 
             // tbpS8
             // 
@@ -4046,7 +4036,7 @@
             this.tbpS8.Controls.Add(this.groupBox47);
             this.tbpS8.Location = new System.Drawing.Point(4, 22);
             this.tbpS8.Name = "tbpS8";
-            this.tbpS8.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS8.Size = new System.Drawing.Size(1332, 549);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
@@ -4080,6 +4070,14 @@
             this.groupBox47.TabIndex = 1;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "SERVICIOS BASICOS";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(321, 444);
+            this.maskedTextBox2.Mask = "000.00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(361, 20);
+            this.maskedTextBox2.TabIndex = 10;
             // 
             // groupBox56
             // 
@@ -4640,7 +4638,7 @@
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
-            this.cklS8_S807.Size = new System.Drawing.Size(250, 79);
+            this.cklS8_S807.Size = new System.Drawing.Size(250, 64);
             this.cklS8_S807.TabIndex = 9;
             // 
             // label66
@@ -4923,7 +4921,7 @@
             this.tbpS9.Controls.Add(this.groupBox67);
             this.tbpS9.Location = new System.Drawing.Point(4, 22);
             this.tbpS9.Name = "tbpS9";
-            this.tbpS9.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS9.Size = new System.Drawing.Size(1332, 549);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
@@ -5249,7 +5247,7 @@
             this.tbpS10.Controls.Add(this.groupBox68);
             this.tbpS10.Location = new System.Drawing.Point(4, 22);
             this.tbpS10.Name = "tbpS10";
-            this.tbpS10.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS10.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
@@ -6350,7 +6348,7 @@
             "NS/NR"});
             this.cklS1007_Com.Location = new System.Drawing.Point(20, 25);
             this.cklS1007_Com.Name = "cklS1007_Com";
-            this.cklS1007_Com.Size = new System.Drawing.Size(250, 79);
+            this.cklS1007_Com.Size = new System.Drawing.Size(250, 64);
             this.cklS1007_Com.TabIndex = 5;
             // 
             // label103
@@ -6412,7 +6410,7 @@
             "NS/NR\t\t\t\t"});
             this.cklS1006_Com.Location = new System.Drawing.Point(19, 28);
             this.cklS1006_Com.Name = "cklS1006_Com";
-            this.cklS1006_Com.Size = new System.Drawing.Size(250, 124);
+            this.cklS1006_Com.Size = new System.Drawing.Size(250, 109);
             this.cklS1006_Com.TabIndex = 9;
             // 
             // label92
@@ -6665,7 +6663,7 @@
             this.tbpS10Cont.Controls.Add(this.groupBox98);
             this.tbpS10Cont.Location = new System.Drawing.Point(4, 22);
             this.tbpS10Cont.Name = "tbpS10Cont";
-            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tbpS10Cont.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
@@ -6826,6 +6824,16 @@
             this.groupBox106.TabIndex = 14;
             this.groupBox106.TabStop = false;
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(27, 105);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(57, 17);
+            this.checkBox3.TabIndex = 12;
+            this.checkBox3.Text = "NSNR";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // label146
             // 
             this.label146.AutoSize = true;
@@ -6940,21 +6948,13 @@
             // 
             // groupBox99
             // 
-            this.groupBox99.Controls.Add(this.txt10_TipoOrganizacion);
+            this.groupBox99.Controls.Add(this.txtS10_TipoOrganizaciones);
             this.groupBox99.Controls.Add(this.label137);
             this.groupBox99.Location = new System.Drawing.Point(316, 220);
             this.groupBox99.Name = "groupBox99";
             this.groupBox99.Size = new System.Drawing.Size(300, 94);
             this.groupBox99.TabIndex = 12;
             this.groupBox99.TabStop = false;
-            // 
-            // txt10_TipoOrganizacion
-            // 
-            this.txt10_TipoOrganizacion.Location = new System.Drawing.Point(26, 40);
-            this.txt10_TipoOrganizacion.Multiline = true;
-            this.txt10_TipoOrganizacion.Name = "txt10_TipoOrganizacion";
-            this.txt10_TipoOrganizacion.Size = new System.Drawing.Size(250, 40);
-            this.txt10_TipoOrganizacion.TabIndex = 8;
             // 
             // label137
             // 
@@ -7022,6 +7022,16 @@
             this.groupBox103.TabIndex = 10;
             this.groupBox103.TabStop = false;
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(22, 91);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(57, 17);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "NSNR";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // label131
             // 
             this.label131.AutoSize = true;
@@ -7079,6 +7089,16 @@
             this.groupBox100.Size = new System.Drawing.Size(300, 115);
             this.groupBox100.TabIndex = 7;
             this.groupBox100.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(21, 91);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(57, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "NSNR";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label132
             // 
@@ -7150,7 +7170,7 @@
             "NS/NR"});
             this.cklS1014_com.Location = new System.Drawing.Point(21, 38);
             this.cklS1014_com.Name = "cklS1014_com";
-            this.cklS1014_com.Size = new System.Drawing.Size(250, 124);
+            this.cklS1014_com.Size = new System.Drawing.Size(250, 109);
             this.cklS1014_com.TabIndex = 4;
             // 
             // txtS1014_Especificar
@@ -7415,51 +7435,13 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
     "urante toda su VIDA FAMILIAR?\r\n";
             // 
-            // maskedTextBox1
+            // txtS10_TipoOrganizaciones
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(370, 486);
-            this.maskedTextBox1.Mask = "78.999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 7;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(321, 444);
-            this.maskedTextBox2.Mask = "000.00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(361, 20);
-            this.maskedTextBox2.TabIndex = 10;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(21, 91);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "NSNR";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(22, 91);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(57, 17);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "NSNR";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(27, 105);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(57, 17);
-            this.checkBox3.TabIndex = 12;
-            this.checkBox3.Text = "NSNR";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.txtS10_TipoOrganizaciones.Location = new System.Drawing.Point(33, 40);
+            this.txtS10_TipoOrganizaciones.Multiline = true;
+            this.txtS10_TipoOrganizaciones.Name = "txtS10_TipoOrganizaciones";
+            this.txtS10_TipoOrganizaciones.Size = new System.Drawing.Size(250, 40);
+            this.txtS10_TipoOrganizaciones.TabIndex = 9;
             // 
             // frmEncuesta
             // 
@@ -7503,7 +7485,6 @@
             this.gbS5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).EndInit();
             this.tbpS6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).EndInit();
             this.gbS6.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
@@ -7527,6 +7508,7 @@
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).EndInit();
             this.tbpS7.ResumeLayout(false);
             this.gbS7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).EndInit();
@@ -7814,191 +7796,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.GroupBox gbS1;
         private System.Windows.Forms.DataGridView dgvS1;
-        private System.Windows.Forms.GroupBox gbS6;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Label lblS6_11_Especificar;
-        private System.Windows.Forms.TextBox txtS6_11_EspecificarFaltaDinero;
-        private System.Windows.Forms.TextBox lblS6_11_FaltaDinero;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.TextBox txtS6_10_CantiGastosaIngresos;
-        private System.Windows.Forms.Label lblS6_10_QGastos;
-        private System.Windows.Forms.TextBox lblS6_10_Gastos;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.TextBox txtS6_9_CantiAhorro;
-        private System.Windows.Forms.Label lblS6_9_QAhorro;
-        private System.Windows.Forms.TextBox lblS6_9_CantidadAhorro;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.ComboBox cbxS6_8_AhorroMensual;
-        private System.Windows.Forms.TextBox lblS6_8_Ahorro;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.ComboBox cbxS6_7_CubrenGasto;
-        private System.Windows.Forms.TextBox lblS6_7_CubrirGastos;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.TextBox txtS6_6_IngresoTotal;
-        private System.Windows.Forms.Label lblS6_6_QIngresosTotales;
-        private System.Windows.Forms.TextBox lblS6_6_IngresoTotal;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.ComboBox cbxS6_5_TiempoPagoDeuda;
-        private System.Windows.Forms.TextBox lblS6_5_TiempoDeuda;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label lblS6_4_Valor0;
-        private System.Windows.Forms.TextBox txtS6_4_CantiDeuda;
-        private System.Windows.Forms.Label lblS6_4_QDeuda;
-        private System.Windows.Forms.TextBox lblS6_4_CantiDeudas;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox cbxS6_3_Deuda;
-        private System.Windows.Forms.TextBox lblS6_3_Deuda;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox cbxS6_2_IngRemesas;
-        private System.Windows.Forms.TextBox txtS6_2_CantidadRemesas;
-        private System.Windows.Forms.Label lblS6_2_QRemesas;
-        private System.Windows.Forms.TextBox lblS6_2_IngresosRemesas;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox cbxS6_1_IngEstado;
-        private System.Windows.Forms.TextBox txtS6_1_CantidadIngEstado;
-        private System.Windows.Forms.Label lblS6_1_QEstado;
-        private System.Windows.Forms.TextBox lblS6_1_IngresosEstado;
-        private System.Windows.Forms.GroupBox gbS7;
-        private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.TextBox lblS7_8_Piso;
-        private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.TextBox lblS7_7_Paredes;
-        private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.TextBox lblS7_6_EstadoMaterial;
-        private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.TextBox txtS7_5_ProblemaA;
-        private System.Windows.Forms.Label lblS7_5_A;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.TextBox txtS7_4_CantCamas;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox txtS7_3_CantDormitorios;
-        private System.Windows.Forms.TextBox lblS7_3_Dormitorios;
-        private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.TextBox txtS7_2_Cuartos;
-        private System.Windows.Forms.TextBox lblS7_2_Cuartos;
-        private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.TextBox txtS7_1_AnchoViv;
-        private System.Windows.Forms.TextBox txtS7_1_LargoViv;
-        private System.Windows.Forms.Label lblS7_1_X;
-        private System.Windows.Forms.TextBox lblS7_1_Dimensiones;
-        private System.Windows.Forms.TextBox txtS7_5_ProblemaB;
-        private System.Windows.Forms.Label lblS7_5_B;
-        private System.Windows.Forms.ComboBox cbsS7_5_ProbViv;
-        private System.Windows.Forms.GroupBox gbS7_6_Barro;
-        private System.Windows.Forms.RadioButton rbS7_62_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_62_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_62_Malo;
-        private System.Windows.Forms.RadioButton rbS7_62_MuyMalo;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.GroupBox gbS7_6_Concreto;
-        private System.Windows.Forms.RadioButton rbS7_61_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_61_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_61_Malo;
-        private System.Windows.Forms.RadioButton rbS7_61_MuyMalo;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.GroupBox gbS7_6_EstadoTecho;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txtS7_5_ProblemaC;
-        private System.Windows.Forms.Label lblS7_5_C;
-        private System.Windows.Forms.GroupBox gbS7_7_Desechos;
-        private System.Windows.Forms.RadioButton rbS7_76_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_76_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_76_Malo;
-        private System.Windows.Forms.RadioButton rbS7_76_MuyMalo;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.GroupBox gbS7_7_BaharequeBambu;
-        private System.Windows.Forms.RadioButton rbS7_75_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_75_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_75_Malo;
-        private System.Windows.Forms.RadioButton rbS7_75_MuyMalo;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.GroupBox gbS7_7_Lamina;
-        private System.Windows.Forms.RadioButton rbS7_74_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_74_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_74_Malo;
-        private System.Windows.Forms.RadioButton rbS7_74_MuyMalo;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.GroupBox gbS7_7_Adobe;
-        private System.Windows.Forms.RadioButton rbS7_73_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_73_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_73_Malo;
-        private System.Windows.Forms.RadioButton rbS7_73_MuyMalo;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.GroupBox gbS7_7_Madera;
-        private System.Windows.Forms.RadioButton rbS7_72_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_72_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_72_Malo;
-        private System.Windows.Forms.RadioButton rbS7_72_MuyMalo;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.GroupBox gbS7_7_BlockLadriPrefabr;
-        private System.Windows.Forms.RadioButton rbS7_71_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_71_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_71_Malo;
-        private System.Windows.Forms.RadioButton rbS7_71_MuyMalo;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.GroupBox gbS7_7_EstadoParedes;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.GroupBox gbS7_6_Desechos;
-        private System.Windows.Forms.RadioButton rbS7_66_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_66_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_66_Malo;
-        private System.Windows.Forms.RadioButton rbS7_66_MuyMalo;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.GroupBox gbS7_6_Paja;
-        private System.Windows.Forms.RadioButton rbS7_65_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_65_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_65_Malo;
-        private System.Windows.Forms.RadioButton rbS7_65_MuyMalo;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.GroupBox gbS7_6_Duralita;
-        private System.Windows.Forms.RadioButton rbS7_64_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_64_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_64_Malo;
-        private System.Windows.Forms.RadioButton rbS7_64_MuyMalo;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.GroupBox gbS7_6_Lamina;
-        private System.Windows.Forms.RadioButton rbS7_63_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_63_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_63_Malo;
-        private System.Windows.Forms.RadioButton rbS7_63_MuyMalo;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.GroupBox gbS7_8_Tierra;
-        private System.Windows.Forms.RadioButton rbS7_84_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_84_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_84_Malo;
-        private System.Windows.Forms.RadioButton rbS7_84_MuyMalo;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.GroupBox gbS7_8_Madera;
-        private System.Windows.Forms.RadioButton rbS7_83_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_83_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_83_Malo;
-        private System.Windows.Forms.RadioButton rbS7_83_MuyMalo;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.GroupBox gbS7_8_LadrilloBarro;
-        private System.Windows.Forms.RadioButton rbS7_82_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_82_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_82_Malo;
-        private System.Windows.Forms.RadioButton rbS7_82_MuyMalo;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.GroupBox gbS7_8_Encementado;
-        private System.Windows.Forms.RadioButton rbS7_81_MuyBueno;
-        private System.Windows.Forms.RadioButton rbS7_81_Bueno;
-        private System.Windows.Forms.RadioButton rbS7_81_Malo;
-        private System.Windows.Forms.RadioButton rbS7_81_MuyMalo;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.GroupBox gbS7_8_EstadoPiso;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
         private System.Windows.Forms.GroupBox gbS2;
         private System.Windows.Forms.DataGridView dgvS2;
         private System.Windows.Forms.GroupBox gbS3;
@@ -8285,7 +8082,6 @@
         private System.Windows.Forms.ComboBox cbxS10_ConfiazaOrganizacion;
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.GroupBox groupBox99;
-        private System.Windows.Forms.TextBox txt10_TipoOrganizacion;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.GroupBox groupBox104;
         private System.Windows.Forms.TextBox txtS10_TipoDiscriminacion;
@@ -8310,7 +8106,6 @@
         private System.Windows.Forms.GroupBox groupBox109;
         private System.Windows.Forms.ComboBox cbxS10_OrganizacionComunitaria;
         private System.Windows.Forms.Label label139;
-        private System.Windows.Forms.CheckedListBox chlbS6_11_CubrirFaltaDinero;
         private System.Windows.Forms.PictureBox pbNext;
         private System.Windows.Forms.PictureBox pbNextS1;
         private System.Windows.Forms.PictureBox pbNextS2;
@@ -8339,7 +8134,6 @@
         private System.Windows.Forms.PictureBox pbS4_Siguiente;
         private System.Windows.Forms.PictureBox pbS5_Siguiente;
         private System.Windows.Forms.PictureBox pbS6_Siguiente;
-        private System.Windows.Forms.PictureBox pbS7_Siguiente;
         private System.Windows.Forms.Button btnRemS1;
         private System.Windows.Forms.Button btnAddS1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -8362,6 +8156,194 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox gbS6;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.Label lblS6_11_FaltaDinero;
+        private System.Windows.Forms.CheckedListBox chlbS6_11_CubrirFaltaDinero;
+        private System.Windows.Forms.Label lblS6_11_Especificar;
+        private System.Windows.Forms.TextBox txtS6_11_EspecificarFaltaDinero;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Label lblS6_10_Gastos;
+        private System.Windows.Forms.TextBox txtS6_10_CantiGastosaIngresos;
+        private System.Windows.Forms.Label lblS6_10_QGastos;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Label lblS6_9_CantidadAhorro;
+        private System.Windows.Forms.TextBox txtS6_9_CantiAhorro;
+        private System.Windows.Forms.Label lblS6_9_QAhorro;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Label lblS6_8_Ahorro;
+        private System.Windows.Forms.ComboBox cbxS6_8_AhorroMensual;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Label lblS6_7_CubrirGastos;
+        private System.Windows.Forms.ComboBox cbxS6_7_CubrenGasto;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label lblS6_6_IngresoTotal;
+        private System.Windows.Forms.TextBox txtS6_6_IngresoTotal;
+        private System.Windows.Forms.Label lblS6_6_QIngresosTotales;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label lblS6_5_TiempoDeuda;
+        private System.Windows.Forms.ComboBox cbxS6_5_TiempoPagoDeuda;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label lblS6_4_CantiDeudas;
+        private System.Windows.Forms.Label lblS6_4_Valor0;
+        private System.Windows.Forms.TextBox txtS6_4_CantiDeuda;
+        private System.Windows.Forms.Label lblS6_4_QDeuda;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label lblS6_3_Deuda;
+        private System.Windows.Forms.ComboBox cbxS6_3_Deuda;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label lblS6_2_IngresosRemesas;
+        private System.Windows.Forms.ComboBox cbxS6_2_IngRemesas;
+        private System.Windows.Forms.TextBox txtS6_2_CantidadRemesas;
+        private System.Windows.Forms.Label lblS6_2_QRemesas;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label lblS6_1_IngresosEstado;
+        private System.Windows.Forms.ComboBox cbxS6_1_IngEstado;
+        private System.Windows.Forms.TextBox txtS6_1_CantidadIngEstado;
+        private System.Windows.Forms.Label lblS6_1_QEstado;
+        private System.Windows.Forms.GroupBox gbS7;
+        private System.Windows.Forms.PictureBox pbS7_Siguiente;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.Label lblS7_8_MaterialPiso;
+        private System.Windows.Forms.GroupBox gbS7_8_Tierra;
+        private System.Windows.Forms.RadioButton rbS7_84_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_84_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_84_Malo;
+        private System.Windows.Forms.RadioButton rbS7_84_MuyMalo;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.GroupBox gbS7_8_Madera;
+        private System.Windows.Forms.RadioButton rbS7_83_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_83_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_83_Malo;
+        private System.Windows.Forms.RadioButton rbS7_83_MuyMalo;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.GroupBox gbS7_8_LadrilloBarro;
+        private System.Windows.Forms.RadioButton rbS7_82_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_82_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_82_Malo;
+        private System.Windows.Forms.RadioButton rbS7_82_MuyMalo;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.GroupBox gbS7_8_Encementado;
+        private System.Windows.Forms.RadioButton rbS7_81_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_81_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_81_Malo;
+        private System.Windows.Forms.RadioButton rbS7_81_MuyMalo;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.GroupBox gbS7_8_EstadoPiso;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.Label lblS7_7_MaterialParedes;
+        private System.Windows.Forms.GroupBox gbS7_7_Desechos;
+        private System.Windows.Forms.RadioButton rbS7_76_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_76_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_76_Malo;
+        private System.Windows.Forms.RadioButton rbS7_76_MuyMalo;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.GroupBox gbS7_7_BaharequeBambu;
+        private System.Windows.Forms.RadioButton rbS7_75_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_75_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_75_Malo;
+        private System.Windows.Forms.RadioButton rbS7_75_MuyMalo;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.GroupBox gbS7_7_Lamina;
+        private System.Windows.Forms.RadioButton rbS7_74_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_74_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_74_Malo;
+        private System.Windows.Forms.RadioButton rbS7_74_MuyMalo;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.GroupBox gbS7_7_Adobe;
+        private System.Windows.Forms.RadioButton rbS7_73_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_73_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_73_Malo;
+        private System.Windows.Forms.RadioButton rbS7_73_MuyMalo;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.GroupBox gbS7_7_Madera;
+        private System.Windows.Forms.RadioButton rbS7_72_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_72_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_72_Malo;
+        private System.Windows.Forms.RadioButton rbS7_72_MuyMalo;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.GroupBox gbS7_7_BlockLadriPrefabr;
+        private System.Windows.Forms.RadioButton rbS7_71_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_71_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_71_Malo;
+        private System.Windows.Forms.RadioButton rbS7_71_MuyMalo;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.GroupBox gbS7_7_EstadoParedes;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.Label lblS7_6_MaterialTecho;
+        private System.Windows.Forms.GroupBox gbS7_6_Desechos;
+        private System.Windows.Forms.RadioButton rbS7_66_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_66_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_66_Malo;
+        private System.Windows.Forms.RadioButton rbS7_66_MuyMalo;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.GroupBox gbS7_6_Paja;
+        private System.Windows.Forms.RadioButton rbS7_65_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_65_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_65_Malo;
+        private System.Windows.Forms.RadioButton rbS7_65_MuyMalo;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.GroupBox gbS7_6_Duralita;
+        private System.Windows.Forms.RadioButton rbS7_64_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_64_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_64_Malo;
+        private System.Windows.Forms.RadioButton rbS7_64_MuyMalo;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.GroupBox gbS7_6_Lamina;
+        private System.Windows.Forms.RadioButton rbS7_63_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_63_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_63_Malo;
+        private System.Windows.Forms.RadioButton rbS7_63_MuyMalo;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.GroupBox gbS7_6_Barro;
+        private System.Windows.Forms.RadioButton rbS7_62_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_62_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_62_Malo;
+        private System.Windows.Forms.RadioButton rbS7_62_MuyMalo;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.GroupBox gbS7_6_Concreto;
+        private System.Windows.Forms.RadioButton rbS7_61_MuyBueno;
+        private System.Windows.Forms.RadioButton rbS7_61_Bueno;
+        private System.Windows.Forms.RadioButton rbS7_61_Malo;
+        private System.Windows.Forms.RadioButton rbS7_61_MuyMalo;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.GroupBox gbS7_6_EstadoTecho;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.Label lblS7_5_Problema;
+        private System.Windows.Forms.TextBox txtS7_5_ProblemaC;
+        private System.Windows.Forms.Label lblS7_5_C;
+        private System.Windows.Forms.TextBox txtS7_5_ProblemaB;
+        private System.Windows.Forms.Label lblS7_5_B;
+        private System.Windows.Forms.ComboBox cbsS7_5_ProbViv;
+        private System.Windows.Forms.TextBox txtS7_5_ProblemaA;
+        private System.Windows.Forms.Label lblS7_5_A;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.Label lblS7_4_Camas;
+        private System.Windows.Forms.TextBox txtS7_4_CantCamas;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Label lblS7_3_Dormitorio;
+        private System.Windows.Forms.TextBox txtS7_3_CantDormitorios;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label lblS7_2_Cuartos;
+        private System.Windows.Forms.TextBox txtS7_2_Cuartos;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Label lblS7_1_Dimensiones;
+        private System.Windows.Forms.TextBox txtS7_1_AnchoViv;
+        private System.Windows.Forms.TextBox txtS7_1_LargoViv;
+        private System.Windows.Forms.Label lblS7_1_X;
+        private System.Windows.Forms.TextBox txtS10_TipoOrganizaciones;
 
     }
 }
