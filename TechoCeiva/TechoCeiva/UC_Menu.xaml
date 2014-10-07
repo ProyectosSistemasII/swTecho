@@ -33,7 +33,7 @@
 			</Rectangle>
 			
 			<!-- INICIO DEL EXPANDER PARA MENÚ -->
-			<Expander x:Name="ExpanderMenu" Header="" Width="160.499" IsExpanded="True">
+			<Expander x:Name="ExpanderMenu" Header="" Width="162" IsExpanded="True" Canvas.Left="-2">
 				<StackPanel>
 					<Expander x:Name="expndrEncuestas" Header="Encuestas" Background="#FF0092DD" Cursor="Hand" Foreground="White" FontSize="14.667" Margin="0,0,-2,0" Expanded="expndrEncuestas_Expanded">
 						<StackPanel>

@@ -23,26 +23,40 @@ namespace TechoCeiva
 		{
 			this.InitializeComponent();
             _HerramientasLN Tools = new _HerramientasLN();
-            fillCbox(Tools);
-            fillDataGrid(Tools);
+            fillComboBox();
+            fillDataGrid();
 		}
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
             WinAddTool nWinToAddTool = new WinAddTool();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinToAddTool);
-            nWinToAddTool.Show();
+            nWinToAddTool.ShowDialog();
+            fillComboBox();
+            fillDataGrid();
         }
 
-        private void fillCbox(_HerramientasLN Herramientas)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            _HerramientasLN herramienta = new _HerramientasLN();
+            herramienta._Modificar(Convert.ToInt32(cbxHerramienta.SelectedValue), Convert.ToInt32(txtCantidad.Text.ToString()));
+
+            txtCantidad.Clear();
+            MessageBox.Show("Existencia de " + cbxHerramienta.Text + " modificada correctamente");
+            fillDataGrid();
+        }
+
+        private void fillComboBox()
+        {
+            _HerramientasLN Herramientas = new _HerramientasLN();
             cbxHerramienta.ItemsSource = Herramientas._Obtener_H();
             cbxHerramienta.SelectedValuePath = "idHerramientas";
             cbxHerramienta.DisplayMemberPath = "Nombre";
         }
 
-        private void fillDataGrid(_HerramientasLN Herramientas)
+        private void fillDataGrid()
         {
+            _HerramientasLN Herramientas = new _HerramientasLN();
             DataGridHerramientas.ItemsSource = Herramientas._Obtener_H();
         }
 	}
