@@ -25,20 +25,15 @@ namespace TechoCeiva
 
             _DepartamentoLN depto = new _DepartamentoLN();
 
-            /*cmbDepartamento.ItemsSource = depto.Obtener_D();
+            cmbDepartamento.ItemsSource = depto.Obtener_D();
             cmbDepartamento.SelectedValuePath = "idDepartamento";
             cmbDepartamento.DisplayMemberPath = "nombre";
-			*/
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
         private void cmbMunicipio_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _MunicipioLN mun = new _MunicipioLN();
-
-            cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
-            cmbMunicipio.SelectedValuePath = "idMunicipio";
-            cmbMunicipio.DisplayMemberPath = "nombre";
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,18 +48,37 @@ namespace TechoCeiva
             String persEm = txtNombreEmergencia.Text;
             String telEm = txtTelEmergencia.Text;
 
-            _VoluntariosLN voluntario = new _VoluntariosLN(nombres,apellidos,telefono,direccion,correo,true,dpto,mun,persEm,telEm);
+            _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
+            Boolean correcto = voluntario.Ingresar_V();
+
+
+            if (correcto)
+            {
+                voluntario.Insertar_V();
+                MessageBox.Show("Ingreso Exitoso");
+                
+            }
+            else
+            {
+                MessageBox.Show(voluntario._obtenerError());
+            }
 
 
         }
 
         private void Button_Loaded(object sender, RoutedEventArgs e)
         {
-            _DepartamentoLN depto = new _DepartamentoLN();
+            
+        }
 
-            cmbDepartamento.ItemsSource = depto.Obtener_D();
-            cmbDepartamento.SelectedValuePath = "idDepartamento";
-            cmbDepartamento.DisplayMemberPath = "nombre";
+
+        private void cmbDepartamento_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _MunicipioLN mun = new _MunicipioLN();
+
+            cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
+            cmbMunicipio.SelectedValuePath = "idMunicipio";
+            cmbMunicipio.DisplayMemberPath = "nombre";
         }
 
 	}

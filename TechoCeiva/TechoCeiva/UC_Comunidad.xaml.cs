@@ -25,19 +25,19 @@ namespace TechoCeiva
         public UC_Comunidad()
         {
             InitializeComponent();
+            
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _ComunidadLN comn = new _ComunidadLN();
             _DepartamentoLN depto = new _DepartamentoLN();
-            
+
             cmbDepartamento.ItemsSource = depto.Obtener_D();
             cmbDepartamento.SelectedValuePath = "idDepartamento";
             cmbDepartamento.DisplayMemberPath = "nombre";
 
-            dgComunidades.ItemsSource = comn.ObtenerComunidades();
-            dgComunidades.DisplayMemberPath = "nombre";
+            fillDataGrid(comn);
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
@@ -46,10 +46,29 @@ namespace TechoCeiva
             int departamento=Convert.ToInt32(cmbDepartamento.SelectedValue);
             int municipio=Convert.ToInt32(cmbMunicipio.SelectedValue);
 
-            _ComunidadLN comunidad = new _ComunidadLN(nombre, departamento, municipio);
+            _ComunidadLN comunidad = new _ComunidadLN(nombre,true, departamento, municipio);
             Boolean correcto = comunidad.Ingresar_C();
+
+
+            if (correcto)
+            {
+                comunidad.InsertarComunidad();
+                MessageBox.Show("Ingreso Exitoso");
+                fillDataGrid(comunidad);
+            }
+            else
+            {
+                MessageBox.Show(comunidad._obtenerError());
+            }
             
-            comunidad.InsertarComunidad();
+        }
+
+        private void fillDataGrid(_ComunidadLN comunidad)
+        {
+            List<_Comunidad> comn = new List<_Comunidad>();
+            comn = comunidad.ObtenerComunidades();
+            dataGridComn.ItemsSource = comn;
+            
             
         }
 

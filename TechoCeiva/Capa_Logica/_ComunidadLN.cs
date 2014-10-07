@@ -12,15 +12,17 @@ namespace Capa_Logica
         {
             this.idComunidad = 0;
             this.Nombre = "";
+            this.Activo = true;
             this.Departamento_idDepartamento = 0;
             this.Municipio_idMunicipio = 0;
 
             this.errores = new List<Error>();
         }
 
-        public _ComunidadLN(String Nombre, int Departamento_idDepartamento, int Municipio_idMunicipio)
+        public _ComunidadLN(String Nombre, bool Activo, int Departamento_idDepartamento, int Municipio_idMunicipio)
         {
             this.Nombre = Nombre;
+            this.Activo = Activo;
             this.Departamento_idDepartamento = Departamento_idDepartamento;
             this.Municipio_idMunicipio = Municipio_idMunicipio;
             
@@ -31,9 +33,10 @@ namespace Capa_Logica
         public Boolean Ingresar_C()
         {
             Boolean _correcto = true;
-            _Comunidad _comunidad = new _Comunidad(0, this.Nombre,this.Departamento_idDepartamento,this.Municipio_idMunicipio);
+            _Comunidad _comunidad = new _Comunidad(0, this.Nombre,this.Activo,this.Departamento_idDepartamento,this.Municipio_idMunicipio);
             this.idComunidad = _comunidad.idComunidad;
             this.Nombre = _comunidad.Nombre;
+            this.Activo = _comunidad.Activo;
             this.Departamento_idDepartamento = _comunidad.Departamento_idDepartamento;
             this.Municipio_idMunicipio = _comunidad.Municipio_idMunicipio;
 

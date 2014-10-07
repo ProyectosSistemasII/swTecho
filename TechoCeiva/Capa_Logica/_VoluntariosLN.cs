@@ -32,8 +32,8 @@ namespace Capa_Logica
             this.direccion = direccion;
             this.correo = correo;
             this.activo = activo;
-            this.municipio = municipio;
             this.departamento = departamento;
+            this.municipio = municipio;
             this.personaEmergencia = personaEm;
             this.telefonoEmergencia = telefonoEm;
 
@@ -58,7 +58,7 @@ namespace Capa_Logica
             
             this._errores = _voluntario._errores;
 
-            if (_errores.Count > 0)
+            if (_errores.Count >0)
             {
                 _correcto = false;
             }
