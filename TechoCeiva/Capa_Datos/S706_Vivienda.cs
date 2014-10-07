@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class S706_Vivienda
+    public class S706_Vivienda
     {
         public int Concreto { get; set; }
         public int TejaBarro { get; set; }
@@ -44,15 +44,14 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S706_Viv(Concreto,TejaBarro,Lamina,TejaDuralita,Paja,Desechos) VALUES(@Concreto,@TejaBarro,@Lamina,@TejaDuralita,@Paja,@Desechos)";
+                string consulta = "INSERT INTO S706_Viv(Concreto,TejaBarro,Lamina,TejaDuralita,Paja,Desechos) VALUES(@Concreto,@TejaBarro,@Lamina,@TejaDuralita,@Paja,@Desechos)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Concreto", this.Concreto);
                 comando.Parameters.AddWithValue("@TejaBarro", this.TejaBarro);
                 comando.Parameters.AddWithValue("@Lamina", this.Lamina);
                 comando.Parameters.AddWithValue("@TejaDuralita", this.TejaDuralita);
                 comando.Parameters.AddWithValue("@Paja", this.Paja);
-                comando.Parameters.AddWithValue("@Desechos", this.Desechos);
-                
+                comando.Parameters.AddWithValue("@Desechos", this.Desechos);                
                 try
                 {
                     comando.Connection.Open();
@@ -65,6 +64,25 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
+        }
+
+        public int UltimoId()
+        {
+            int id = 0;
+            String consulta = "SELECT MAX(idS706_Viv) FROM S706_Viv";
+            MySqlCommand comando = new MySqlCommand(consulta, conex);
+            try
+            {
+                comando.Connection.Open();
+                id = (Int32)comando.ExecuteScalar();
+                comando.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Error error = new Error(ex.Message + "   " + ex.Number, 0);
+                errores.Add(error);
+            }
+            return id;
         }
     }
 }
