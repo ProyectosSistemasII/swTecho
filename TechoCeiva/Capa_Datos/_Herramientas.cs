@@ -56,16 +56,16 @@ namespace Capa_Datos
                 try
                 {
                     string query = "INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo);";
-                    MySqlCommand _comando = new MySqlCommand();
+                    MySqlCommand _comando = new MySqlCommand(query, _conexion);
                     
                     _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
                     _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
                     _comando.Parameters.AddWithValue("@Activo", this.Activo);
 
                     //MySqlDataReader reader;
-                    _comando.Connection = ConexionBD.conexion;
+                    _comando.Connection.Open();
                     //reader = _comando.ExecuteReader();
-                    _comando.CommandText = query;
+                    //_comando.CommandText = query;
                     _comando.ExecuteNonQuery();
                     _comando.Connection.Close();
                     //_comando.Connection.Close();

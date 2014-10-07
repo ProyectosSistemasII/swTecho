@@ -655,6 +655,11 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -827,6 +832,7 @@
             // 
             // tbpInfo
             // 
+            this.tbpInfo.Controls.Add(this.maskedTextBox1);
             this.tbpInfo.Controls.Add(this.pbNext);
             this.tbpInfo.Controls.Add(this.gbContacto);
             this.tbpInfo.Controls.Add(this.gbUbicacion);
@@ -836,7 +842,7 @@
             this.tbpInfo.Controls.Add(this.lblCodigoHogar);
             this.tbpInfo.Location = new System.Drawing.Point(4, 22);
             this.tbpInfo.Name = "tbpInfo";
-            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tbpInfo.Size = new System.Drawing.Size(1332, 549);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
@@ -1230,7 +1236,7 @@
             this.tbpS1.Controls.Add(this.gbS1);
             this.tbpS1.Location = new System.Drawing.Point(4, 22);
             this.tbpS1.Name = "tbpS1";
-            this.tbpS1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS1.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS1.Size = new System.Drawing.Size(1332, 549);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
@@ -1350,7 +1356,7 @@
             this.tbpS2.Controls.Add(this.gbS2);
             this.tbpS2.Location = new System.Drawing.Point(4, 22);
             this.tbpS2.Name = "tbpS2";
-            this.tbpS2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS2.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS2.Size = new System.Drawing.Size(1332, 549);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
@@ -1473,7 +1479,7 @@
             this.tbpS3.Controls.Add(this.gbS3);
             this.tbpS3.Location = new System.Drawing.Point(4, 22);
             this.tbpS3.Name = "tbpS3";
-            this.tbpS3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS3.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS3.Size = new System.Drawing.Size(1332, 549);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
@@ -1667,7 +1673,7 @@
             this.tbpS4.Controls.Add(this.groupBox4);
             this.tbpS4.Location = new System.Drawing.Point(4, 22);
             this.tbpS4.Name = "tbpS4";
-            this.tbpS4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS4.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS4.Size = new System.Drawing.Size(1332, 549);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
@@ -1841,7 +1847,7 @@
             this.tbpS5.Controls.Add(this.gbS5);
             this.tbpS5.Location = new System.Drawing.Point(4, 22);
             this.tbpS5.Name = "tbpS5";
-            this.tbpS5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS5.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS5.Size = new System.Drawing.Size(1332, 549);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
@@ -2051,7 +2057,7 @@
             this.tbpS6.Controls.Add(this.gbS6);
             this.tbpS6.Location = new System.Drawing.Point(4, 22);
             this.tbpS6.Name = "tbpS6";
-            this.tbpS6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS6.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS6.Size = new System.Drawing.Size(1332, 549);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
@@ -2354,7 +2360,7 @@
             "Una vez cada seis meses",
             "No las paga",
             "NS/NR"});
-            this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(21, 73);
+            this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(21, 75);
             this.cbxS6_5_TiempoPagoDeuda.Name = "cbxS6_5_TiempoPagoDeuda";
             this.cbxS6_5_TiempoPagoDeuda.Size = new System.Drawing.Size(249, 21);
             this.cbxS6_5_TiempoPagoDeuda.TabIndex = 3;
@@ -2568,7 +2574,7 @@
             this.tbpS7.Controls.Add(this.gbS7);
             this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
-            this.tbpS7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS7.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS7.Size = new System.Drawing.Size(1332, 549);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
@@ -4040,7 +4046,7 @@
             this.tbpS8.Controls.Add(this.groupBox47);
             this.tbpS8.Location = new System.Drawing.Point(4, 22);
             this.tbpS8.Name = "tbpS8";
-            this.tbpS8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS8.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS8.Size = new System.Drawing.Size(1332, 549);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
@@ -4059,6 +4065,7 @@
             // 
             // groupBox47
             // 
+            this.groupBox47.Controls.Add(this.maskedTextBox2);
             this.groupBox47.Controls.Add(this.groupBox56);
             this.groupBox47.Controls.Add(this.groupBox55);
             this.groupBox47.Controls.Add(this.groupBox54);
@@ -4633,7 +4640,7 @@
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
-            this.cklS8_S807.Size = new System.Drawing.Size(250, 64);
+            this.cklS8_S807.Size = new System.Drawing.Size(250, 79);
             this.cklS8_S807.TabIndex = 9;
             // 
             // label66
@@ -4916,7 +4923,7 @@
             this.tbpS9.Controls.Add(this.groupBox67);
             this.tbpS9.Location = new System.Drawing.Point(4, 22);
             this.tbpS9.Name = "tbpS9";
-            this.tbpS9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS9.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS9.Size = new System.Drawing.Size(1332, 549);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
@@ -5242,7 +5249,7 @@
             this.tbpS10.Controls.Add(this.groupBox68);
             this.tbpS10.Location = new System.Drawing.Point(4, 22);
             this.tbpS10.Name = "tbpS10";
-            this.tbpS10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS10.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
@@ -5353,8 +5360,8 @@
             // 
             this.cbxS10_ProyectosVecinos.FormattingEnabled = true;
             this.cbxS10_ProyectosVecinos.Items.AddRange(new object[] {
-            "01. Si estaría dispuesto a trabajar en:",
-            "02. No estaría dispuesto",
+            "Si estaría dispuesto a trabajar en:",
+            "No estaría dispuesto",
             "NS/NR"});
             this.cbxS10_ProyectosVecinos.Location = new System.Drawing.Point(24, 53);
             this.cbxS10_ProyectosVecinos.Name = "cbxS10_ProyectosVecinos";
@@ -5447,8 +5454,8 @@
             // 
             this.cbxS10_NecesidadCom.FormattingEnabled = true;
             this.cbxS10_NecesidadCom.Items.AddRange(new object[] {
-            "01. Si (especificar)",
-            "02. No existen problemas en mi comunidad",
+            "Si (especificar)",
+            "No existen problemas en mi comunidad",
             "NS/NR"});
             this.cbxS10_NecesidadCom.Location = new System.Drawing.Point(16, 51);
             this.cbxS10_NecesidadCom.Name = "cbxS10_NecesidadCom";
@@ -5540,8 +5547,8 @@
             // 
             this.cbxS10_Necesidad.FormattingEnabled = true;
             this.cbxS10_Necesidad.Items.AddRange(new object[] {
-            "01. Si (especificar)",
-            "02. No existen problemas en mi familia",
+            "Si (especificar)",
+            "No existen problemas en mi familia",
             "NS/NR"});
             this.cbxS10_Necesidad.Location = new System.Drawing.Point(17, 51);
             this.cbxS10_Necesidad.Name = "cbxS10_Necesidad";
@@ -6658,7 +6665,7 @@
             this.tbpS10Cont.Controls.Add(this.groupBox98);
             this.tbpS10Cont.Location = new System.Drawing.Point(4, 22);
             this.tbpS10Cont.Name = "tbpS10Cont";
-            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS10Cont.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
@@ -6805,6 +6812,7 @@
             // 
             // groupBox106
             // 
+            this.groupBox106.Controls.Add(this.checkBox3);
             this.groupBox106.Controls.Add(this.label146);
             this.groupBox106.Controls.Add(this.txtS10_LiderC);
             this.groupBox106.Controls.Add(this.label136);
@@ -7002,14 +7010,15 @@
             // 
             // groupBox103
             // 
+            this.groupBox103.Controls.Add(this.checkBox2);
             this.groupBox103.Controls.Add(this.label131);
             this.groupBox103.Controls.Add(this.txtS10_ApectosNegativosB);
             this.groupBox103.Controls.Add(this.label141);
             this.groupBox103.Controls.Add(this.txtS10_ApectosNegativosA);
             this.groupBox103.Controls.Add(this.label142);
-            this.groupBox103.Location = new System.Drawing.Point(9, 114);
+            this.groupBox103.Location = new System.Drawing.Point(9, 134);
             this.groupBox103.Name = "groupBox103";
-            this.groupBox103.Size = new System.Drawing.Size(300, 97);
+            this.groupBox103.Size = new System.Drawing.Size(300, 112);
             this.groupBox103.TabIndex = 10;
             this.groupBox103.TabStop = false;
             // 
@@ -7059,6 +7068,7 @@
             // 
             // groupBox100
             // 
+            this.groupBox100.Controls.Add(this.checkBox1);
             this.groupBox100.Controls.Add(this.label132);
             this.groupBox100.Controls.Add(this.txtS10_ApectosPositivosB);
             this.groupBox100.Controls.Add(this.label133);
@@ -7066,7 +7076,7 @@
             this.groupBox100.Controls.Add(this.label134);
             this.groupBox100.Location = new System.Drawing.Point(9, 13);
             this.groupBox100.Name = "groupBox100";
-            this.groupBox100.Size = new System.Drawing.Size(300, 100);
+            this.groupBox100.Size = new System.Drawing.Size(300, 115);
             this.groupBox100.TabIndex = 7;
             this.groupBox100.TabStop = false;
             // 
@@ -7119,9 +7129,9 @@
             this.groupBox101.Controls.Add(this.cklS1014_com);
             this.groupBox101.Controls.Add(this.txtS1014_Especificar);
             this.groupBox101.Controls.Add(this.label138);
-            this.groupBox101.Location = new System.Drawing.Point(9, 212);
+            this.groupBox101.Location = new System.Drawing.Point(9, 252);
             this.groupBox101.Name = "groupBox101";
-            this.groupBox101.Size = new System.Drawing.Size(300, 232);
+            this.groupBox101.Size = new System.Drawing.Size(300, 203);
             this.groupBox101.TabIndex = 4;
             this.groupBox101.TabStop = false;
             // 
@@ -7145,10 +7155,10 @@
             // 
             // txtS1014_Especificar
             // 
-            this.txtS1014_Especificar.Location = new System.Drawing.Point(21, 183);
+            this.txtS1014_Especificar.Location = new System.Drawing.Point(21, 171);
             this.txtS1014_Especificar.Multiline = true;
             this.txtS1014_Especificar.Name = "txtS1014_Especificar";
-            this.txtS1014_Especificar.Size = new System.Drawing.Size(250, 40);
+            this.txtS1014_Especificar.Size = new System.Drawing.Size(250, 23);
             this.txtS1014_Especificar.TabIndex = 3;
             // 
             // label138
@@ -7405,6 +7415,52 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
     "urante toda su VIDA FAMILIAR?\r\n";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(370, 486);
+            this.maskedTextBox1.Mask = "78.999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 7;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(321, 444);
+            this.maskedTextBox2.Mask = "000.00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(361, 20);
+            this.maskedTextBox2.TabIndex = 10;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(21, 91);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(57, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "NSNR";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(22, 91);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(57, 17);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "NSNR";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(27, 105);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(57, 17);
+            this.checkBox3.TabIndex = 12;
+            this.checkBox3.Text = "NSNR";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // frmEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7531,6 +7587,7 @@
             this.tbpS8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS8_Siguiente)).EndInit();
             this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
             this.groupBox56.ResumeLayout(false);
             this.groupBox56.PerformLayout();
             this.groupBox64.ResumeLayout(false);
@@ -8300,6 +8357,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_S11_ComentarioFinal;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
 
     }
 }

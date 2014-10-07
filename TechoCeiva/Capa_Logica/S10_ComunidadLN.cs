@@ -33,20 +33,19 @@ namespace Capa_Logica
             this.ProyectoA = "";
             this.ProyectoB = "";
             this.ProyectoC = "";
-            this.AspectoPositivo = "";
+            this.AspectoPositivo = false;
             this.AspectoPositivoA = "";
-            this.AspectoPositivoB = "";
-            this.AspectoPositivoC = "";
-            this.AspectoNegativo = "";
+            this.AspectoPositivoB = "";           
+            this.AspectoNegativo = false;
             this.AspectoNegativoA = "";
-            this.AspectoNegativoB = "";
-            this.AspectoNegativoC = "";
+            this.AspectoNegativoB = "";           
             this.Discriminacion = "";
             this.TipoDiscriminacion = "";
             this.OrganizacionComunitaria = "";
             this.TipoOrganizacion = "";
             this.ConfianzaOrganizacion = "";
             this.ComentarioConfianza = "";
+            this.Lider = false;
             this.LiderA = "";
             this.LiderB = "";
             this.LiderC = "";
@@ -62,7 +61,9 @@ namespace Capa_Logica
         }
         public S10_ComunidadLN( String Ayudo,String AyudaVecinos, String RelacionVecinos, 
         String ComentarioRelacion, String OrganizarVecinos, String OrganizarA, String OrganizarB, String OrganizarC,
-        String ParticipacionGrupo, int idEncuestas, int idS1006,int idS1007, int idS1008)
+        String ParticipacionGrupo, String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
+        String NecesidadCom, String NecesidadComA, String NecesidadComB, String NecesidadComC, String ProyectosVecinos,
+        String ProyectoA, String ProyectoB, String ProyectoC, int idEncuestas, int idS1006, int idS1007, int idS1008)
             
         {
             this.Ayudo = Ayudo;
@@ -74,22 +75,6 @@ namespace Capa_Logica
             this.OrganizarB = OrganizarB;
             this.OrganizarC = OrganizarC;
             this.ParticipacionGrupo = ParticipacionGrupo;
-            this.idS1006 = idS1006;
-            this.idS1007 = idS1007;
-            this.idS1008 = idS1008;
-            this.idEncuestas = idEncuestas;
-            this.errores = new List<Error>();
-        }
-    
-        public void S10_ComunidadLNCont(    String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
-        String NecesidadCom, String NecesidadComA, String NecesidadComB, String NecesidadComC, String ProyectosVecinos,
-        String ProyectoA, String ProyectoB, String ProyectoC, String AspectoPositivo, String AspectoPositivoA,
-        String AspectoPositivoB, String AspectoPositivoC, String AspectoNegativo, String AspectoNegativoA,
-        String AspectoNegativoB, String AspectoNegativoC, String Discriminacion, String TipoDiscriminacion,
-        String OrganizacionComunitaria, String TipoOrganizacion, String ConfianzaOrganizacion, String ComentarioConfianza,
-        String LiderA, String LiderB, String LiderC, String EstadoComunidadPasada, String ComentarioEstadoPasado,
-        String EstadoComunidadFuturo, String ComentarioEstadoFuturo,  int idS1014)
-        {
             this.Necesidad = Necesidad;
             this.NecesidadA = NecesidadA;
             this.NecesidadB = NecesidadB;
@@ -102,20 +87,36 @@ namespace Capa_Logica
             this.ProyectoA = ProyectoA;
             this.ProyectoB = ProyectoB;
             this.ProyectoC = ProyectoC;
+            this.idS1006 = idS1006;
+            this.idS1007 = idS1007;
+            this.idS1008 = idS1008;
+            this.idEncuestas = idEncuestas;
+            this.errores = new List<Error>();
+        }
+    
+        public void S10_ComunidadLNCont(Boolean AspectoPositivo, String AspectoPositivoA,
+        String AspectoPositivoB, Boolean AspectoNegativo, String AspectoNegativoA,
+        String AspectoNegativoB, String Discriminacion, String TipoDiscriminacion,String OrganizacionComunitaria,
+        String TipoOrganizacion, String ConfianzaOrganizacion, String ComentarioConfianza, Boolean Lider,
+        String LiderA, String LiderB, String LiderC, String EstadoComunidadPasada, String ComentarioEstadoPasado,
+        String EstadoComunidadFuturo, String ComentarioEstadoFuturo,  int idS1014)
+        {
+            
             this.AspectoPositivo = AspectoPositivo;
             this.AspectoPositivoA = AspectoPositivoA;
             this.AspectoPositivoB = AspectoPositivoB;
-            this.AspectoPositivoC = AspectoPositivoC;
+           
             this.AspectoNegativo = AspectoNegativo;
             this.AspectoNegativoA = AspectoNegativoA;
             this.AspectoNegativoB = AspectoNegativoB;
-            this.AspectoNegativoC = AspectoNegativoC;
+            
             this.Discriminacion = Discriminacion;
             this.TipoDiscriminacion = TipoDiscriminacion;
             this.OrganizacionComunitaria = OrganizacionComunitaria;
             this.TipoOrganizacion = TipoOrganizacion;
             this.ConfianzaOrganizacion = ConfianzaOrganizacion;
             this.ComentarioConfianza = ComentarioConfianza;
+            this.Lider = Lider;
             this.LiderA = LiderA;
             this.LiderB = LiderB;
             this.LiderC = LiderC;
@@ -130,15 +131,13 @@ namespace Capa_Logica
         {
             Boolean correcto = true;
             //verificar sintaxis de los datos y comprobar errores antes de ser enviado a la capa de datos
-            this.verificarDatos();
+           this.verificarDatos();
             if (errores.Count > 0)
             {
                 return false;
             }
             // se ingresa los datos a la capa de datos            
-            NuevaComS10 = new S10_Comunidad(0, this.Ayudo, this.AyudaVecinos, this.RelacionVecinos, this.ComentarioRelacion, this.OrganizarVecinos, this.OrganizarA, this.OrganizarB, this.OrganizarC, this.ParticipacionGrupo, this.Necesidad, this.NecesidadA, this.NecesidadB, this.NecesidadC, this.NecesidadCom, this.NecesidadComA, this.NecesidadComB, this.NecesidadComC, this.ProyectosVecinos, this.ProyectoA, this.ProyectoB, this.ProyectoC, this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoPositivoC, this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoPositivoC, this.Discriminacion, this.TipoDiscriminacion, this.OrganizacionComunitaria, this.TipoOrganizacion, this.ConfianzaOrganizacion, this.ComentarioConfianza, this.LiderA, this.LiderB, this.LiderC, this.EstadoComunidadPasada, this.ComentarioEstadoPasado, this.EstadoComunidadFuturo, this.ComentarioEstadoFuturo, this.idEncuestas, this.idS1006, this.idS1007, this.idS1008);
-            
-            NuevaComS10.InsertarS10();
+            NuevaComS10 = new S10_Comunidad(0, this.Ayudo, this.AyudaVecinos, this.RelacionVecinos, this.ComentarioRelacion, this.OrganizarVecinos, this.OrganizarA, this.OrganizarB, this.OrganizarC, this.ParticipacionGrupo, this.Necesidad, this.NecesidadA, this.NecesidadB, this.NecesidadC, this.NecesidadCom, this.NecesidadComA, this.NecesidadComB, this.NecesidadComC, this.ProyectosVecinos, this.ProyectoA, this.ProyectoB, this.ProyectoC,  this.idEncuestas, this.idS1006, this.idS1007, this.idS1008);
             this.errores = NuevaComS10.errores;
 
             //Comprobar errores para la capa de datos
@@ -148,17 +147,17 @@ namespace Capa_Logica
             }
             return correcto;
         }
-        public Boolean Insertar_EncuS10()
+        public Boolean Insertar_EncuS10Cont()
         {
             Boolean correcto = true;
             //verificar sintaxis de los datos y comprobar errores antes de ser enviado a la capa de datos
-            this.verificarDatosContS10();
+           this.verificarDatosContS10();
             if (errores.Count > 0)
             {
                 return false;
             }
             // se ingresa los datos a la capa de datos            
-            NuevaComS10.S10_ComunidadCOnt(this.Necesidad, this.NecesidadA, this.NecesidadB, this.NecesidadC, this.NecesidadCom, this.NecesidadComA, this.NecesidadComB, this.NecesidadComC, this.ProyectosVecinos, this.ProyectoA, this.ProyectoB, this.ProyectoC, this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoPositivoC, this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoPositivoC, this.Discriminacion, this.TipoDiscriminacion, this.OrganizacionComunitaria, this.TipoOrganizacion, this.ConfianzaOrganizacion, this.ComentarioConfianza, this.LiderA, this.LiderB, this.LiderC, this.EstadoComunidadPasada, this.ComentarioEstadoPasado, this.EstadoComunidadFuturo, this.ComentarioEstadoFuturo, this.idS1014);
+            NuevaComS10.S10_ComunidadCOnt( this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoNegativo, this.AspectoNegativoA, this.AspectoNegativoB,  this.Discriminacion, this.TipoDiscriminacion, this.OrganizacionComunitaria, this.TipoOrganizacion, this.ConfianzaOrganizacion, this.ComentarioConfianza, this.Lider,this.LiderA, this.LiderB, this.LiderC, this.EstadoComunidadPasada, this.ComentarioEstadoPasado, this.EstadoComunidadFuturo, this.ComentarioEstadoFuturo, this.idS1014);
             NuevaComS10.InsertarS10();
             this.errores = NuevaComS10.errores;
 
@@ -174,72 +173,83 @@ namespace Capa_Logica
             string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
             string expresion_TextoNSNR = @"^[a-zA-Z]{1,50}/|([a-zA-Z]{1,50})|[a-zA-Z]+\s*[a-zA-Z]|/|[a-zA-Z]/*$";
             Regex regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.AccesoAgua))
+            if (!regex.IsMatch(this.Ayudo))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 1", 5000, 1);
                 errores.Add(error);
             }
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.FuenteAgua))
+            if (!regex.IsMatch(this.AyudaVecinos))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 2", 5000, 2);
                 errores.Add(error);
             }
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.OtraFuente) && this.FuenteAgua == "Otro (especifique)")
-            {
-                Error error = new Error("Debe ingresar datos de 'Otro fuente de agua' de la pregunta 2", 5000, 201);
-                errores.Add(error);
-            }
-
-            regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.EnergiaElectrica))
+            if (!regex.IsMatch(this.RelacionVecinos))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 3", 5000, 3);
                 errores.Add(error);
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtraEnergiaElectrica) && this.EnergiaElectrica == "Otro (especifique)")
+            if (!regex.IsMatch(this.ComentarioRelacion))
             {
-                Error error = new Error("Debe ingresar datos sobre  'Otras energia electrica' de la pregunta 3", 5000, 301);
+                Error error = new Error("Debe ingresar datos sobre  'Por que de esta manera' de la pregunta 3", 5000, 301);
                 errores.Add(error);
             }
 
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.EnergiaCocina))
+            if (!regex.IsMatch(this.OrganizarVecinos))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 4", 5000, 4);
                 errores.Add(error);
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtraEnergiaCocina) && this.EnergiaCocina == "Otro (especifique)")
+            if (!regex.IsMatch(this.OrganizarA) && this.OrganizarVecinos == "Si (especificar)")
             {
                 Error error = new Error("Debe ingresar datos de 'Otra energia cocina' de la pregunta 4", 5000, 401);
                 errores.Add(error);
             }
 
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.Sanitario))
+            if (!regex.IsMatch(this.ParticipacionGrupo))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 5", 5000, 5);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtroTipoSanitario) && this.Sanitario == "Otra (especificar)")
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.Necesidad))
             {
-                Error error = new Error("Debe ingresar datos sobre 'Otro tipo de sanitario' de la pregunta 5", 5000, 501);
+                Error error = new Error("Debe seleccionar datos de la pregunta 9", 5000, 9);
+                errores.Add(error);
+            }
+            regex = new Regex(expresion_Texto);
+            if (!regex.IsMatch(this.NecesidadA) && this.Necesidad == "Si (especificar)")
+            {
+                Error error = new Error("Debe ingresar datos de 'Necesidad y Problematica familiar' de la pregunta 9", 5000, 901);
                 errores.Add(error);
             }
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.BasuraHogar))
+            if (!regex.IsMatch(this.NecesidadCom))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 6", 5000, 6);
+                Error error = new Error("Debe seleccionar datos de la pregunta 10", 5000, 10);
                 errores.Add(error);
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtroTipoBasura) && this.BasuraHogar == "Otro (especifique)")
+            if (!regex.IsMatch(this.NecesidadComA) && this.NecesidadCom == "Si (especificar)")
             {
-                Error error = new Error("Debe ingresar datos sobre 'Otro tipo de basura' de la pregunta 6", 5000, 601);
+                Error error = new Error("Debe ingresar datos de 'Problemas o Necesidades de la Comunidad' de la pregunta 10", 5000, 1001);
+                errores.Add(error);
+            }
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.ProyectosVecinos))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 11", 5000, 11);
+                errores.Add(error);
+            }
+            regex = new Regex(expresion_Texto);
+            if (!regex.IsMatch(this.ProyectoA) && this.ProyectosVecinos == "Si (especificar)")
+            {
+                Error error = new Error("Debe ingresar datos de 'Cuales proyecto puntuales' de la pregunta 11", 5000, 1101);
                 errores.Add(error);
             }
         }
@@ -249,76 +259,95 @@ namespace Capa_Logica
             string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
             string expresion_TextoNSNR = @"^[a-zA-Z]{1,50}/|([a-zA-Z]{1,50})|[a-zA-Z]+\s*[a-zA-Z]|/|[a-zA-Z]/*$";
             Regex regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.AccesoAgua))
+            
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.AspectoPositivoA) && this.AspectoPositivo == true)
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 1", 5000, 1);
+                Error error = new Error("Debe ingresar datos de los 'Aspectos positivos' de la pregunta 12", 5000, 1201);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.FuenteAgua))
+
+            
+            regex = new Regex(expresion_Texto);
+            if (!regex.IsMatch(this.AspectoNegativoA) && this.AspectoNegativo == true)
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 2", 5000, 2);
-                errores.Add(error);
-            }
-            regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.OtraFuente) && this.FuenteAgua == "Otro (especifique)")
-            {
-                Error error = new Error("Debe ingresar datos de 'Otro fuente de agua' de la pregunta 2", 5000, 201);
+                Error error = new Error("Debe ingresar datos sobre los 'Aspectos negativos' de la pregunta 13", 5000, 1301);
                 errores.Add(error);
             }
 
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.EnergiaElectrica))
+            if (!regex.IsMatch(this.Discriminacion))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 3", 5000, 3);
+                Error error = new Error("Debe seleccionar datos de la pregunta 15", 5000, 15);
                 errores.Add(error);
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtraEnergiaElectrica) && this.EnergiaElectrica == "Otro (especifique)")
+            if (!regex.IsMatch(this.TipoDiscriminacion) && this.Discriminacion == "Si  (especificar)")
             {
-                Error error = new Error("Debe ingresar datos sobre  'Otras energia electrica' de la pregunta 3", 5000, 301);
+                Error error = new Error("Debe ingresar datos de la 'Discriminacion' de la pregunta 15", 5000, 1501);
                 errores.Add(error);
             }
 
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.EnergiaCocina))
+            if (!regex.IsMatch(this.OrganizacionComunitaria))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 4", 5000, 4);
+                Error error = new Error("Debe seleccionar datos de la pregunta 16", 5000, 16);
                 errores.Add(error);
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtraEnergiaCocina) && this.EnergiaCocina == "Otro (especifique)")
+            if (!regex.IsMatch(this.TipoOrganizacion))
             {
-                Error error = new Error("Debe ingresar datos de 'Otra energia cocina' de la pregunta 4", 5000, 401);
+                Error error = new Error("Debe ingresar datos sobre 'Tipo de organizacion' de la pregunta 17", 5000, 17);
+                errores.Add(error);
+            }
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.ConfianzaOrganizacion))
+            {
+                Error error = new Error("Debe seleccionar datos de la pregunta 18", 5000, 18);
+                errores.Add(error);
+            }
+            regex = new Regex(expresion_Texto);
+            if (!regex.IsMatch(this.ComentarioConfianza))
+            {
+                Error error = new Error("Debe ingresar datos sobre 'Por que razon' de la pregunta 1801", 5000, 1801);
+                errores.Add(error);
+            }
+          
+            regex = new Regex(expresion_Texto);
+            if (!regex.IsMatch(this.LiderA) && this.Lider == false)
+            {
+                Error error = new Error("Debe ingresar datos sobre 'Quienes identifica como lideres' de la pregunta 19", 5000, 19);
                 errores.Add(error);
             }
 
-            regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.Sanitario))
+            if (!regex.IsMatch(this.EstadoComunidadPasada))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 5", 5000, 5);
+                Error error = new Error("Debe seleccionar datos de la pregunta 20", 5000, 20);
                 errores.Add(error);
             }
+
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtroTipoSanitario) && this.Sanitario == "Otra (especificar)")
+            if (!regex.IsMatch(this.ComentarioEstadoPasado)) 
             {
-                Error error = new Error("Debe ingresar datos sobre 'Otro tipo de sanitario' de la pregunta 5", 5000, 501);
+                Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 20", 5000, 2001);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.BasuraHogar))
+
+            if (!regex.IsMatch(this.EstadoComunidadFuturo))
             {
-                Error error = new Error("Debe seleccionar datos de la pregunta 6", 5000, 6);
+                Error error = new Error("Debe seleccionar datos de la pregunta 21", 5000, 21);
                 errores.Add(error);
             }
+
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.OtroTipoBasura) && this.BasuraHogar == "Otro (especifique)")
+            if (!regex.IsMatch(this.ComentarioEstadoFuturo))
             {
-                Error error = new Error("Debe ingresar datos sobre 'Otro tipo de basura' de la pregunta 6", 5000, 601);
+                Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 22", 5000, 2201);
                 errores.Add(error);
             }
+
         }
-
+        
         public Error obtenerError()
         {
             Error error = errores[0];

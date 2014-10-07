@@ -65,6 +65,8 @@ namespace Capa_Datos
             MySqlCommand comando = new MySqlCommand("SELECT Count(Password) AS Contra FROM Usuarios WHERE (username = @Username AND Password = SHA2(@Password,512))", conex);
             comando.Parameters.AddWithValue("@Username", this.username);
             comando.Parameters.AddWithValue("@Password", this.password);
+            comando.CommandTimeout = 12280;
+            
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
             Adapter.SelectCommand = comando;
@@ -83,7 +85,9 @@ namespace Capa_Datos
             int i = 0;
             MySqlCommand comando = new MySqlCommand("SELECT COUNT(idUsuarios) AS Contador FROM Usuarios WHERE username = @usuario", conex);
             comando.Parameters.AddWithValue("@usuario", this.username);
-            DataSet ds = new DataSet();
+            comando.CommandTimeout = 12280;
+            
+             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
             Adapter.SelectCommand = comando;
             Adapter.Fill(ds);
@@ -101,6 +105,8 @@ namespace Capa_Datos
          {
              MySqlCommand comando = new MySqlCommand("SELECT idUsuarios,TipoUsuarios_idTipoUsuarios,Username,Voluntarios_idVoluntarios,activo FROM Usuarios WHERE username = @Username", conex);
              comando.Parameters.AddWithValue("@Username", this.username);
+             comando.CommandTimeout = 12280;
+            
              DataSet ds = new DataSet();
              MySqlDataAdapter Adapter = new MySqlDataAdapter();
              Adapter.SelectCommand = comando;

@@ -31,20 +31,19 @@ namespace Capa_Datos
         public String ProyectoA { get; set; }
         public String ProyectoB { get; set; }
         public String ProyectoC { get; set; }
-        public String AspectoPositivo { get; set; }
+        public Boolean AspectoPositivo { get; set; }
         public String AspectoPositivoA { get; set; }
         public String AspectoPositivoB { get; set; }
-        public String AspectoPositivoC { get; set; }
-        public String AspectoNegativo { get; set; }
+        public Boolean AspectoNegativo { get; set; }
         public String AspectoNegativoA { get; set; }
         public String AspectoNegativoB { get; set; }
-        public String AspectoNegativoC { get; set; }
         public String Discriminacion { get; set; }
         public String TipoDiscriminacion { get; set; }
         public String OrganizacionComunitaria { get; set; }
         public String TipoOrganizacion { get; set; }
         public String ConfianzaOrganizacion { get; set; }
         public String ComentarioConfianza { get; set; }
+        public Boolean Lider { get; set; }
         public String LiderA { get; set; }
         public String LiderB { get; set; }
         public String LiderC { get; set; }
@@ -86,20 +85,19 @@ namespace Capa_Datos
             this.ProyectoA = "";
             this.ProyectoB = "";
             this.ProyectoC = "";
-            this.AspectoPositivo = "";
+            this.AspectoPositivo = false;
             this.AspectoPositivoA = "";
             this.AspectoPositivoB = "";
-            this.AspectoPositivoC = "";
-            this.AspectoNegativo = "";
+            this.AspectoNegativo = false;
             this.AspectoNegativoA = "";
             this.AspectoNegativoB = "";
-            this.AspectoNegativoC = "";
             this.Discriminacion = "";
             this.TipoDiscriminacion = "";
             this.OrganizacionComunitaria = "";
             this.TipoOrganizacion = "";
             this.ConfianzaOrganizacion = "";
             this.ComentarioConfianza = "";
+            this.Lider = false;
             this.LiderA = "";
             this.LiderB = "";
             this.LiderC = "";
@@ -115,7 +113,9 @@ namespace Capa_Datos
         }
         public S10_Comunidad(int idS10_Com, String Ayudo, String AyudaVecinos, String RelacionVecinos,
         String ComentarioRelacion, String OrganizarVecinos, String OrganizarA, String OrganizarB, String OrganizarC,
-        String ParticipacionGrupo, int idEncuestas,int idS1006, int idS1007, int idS1008)
+        String ParticipacionGrupo,String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
+        String NecesidadCom, String NecesidadComA, String NecesidadComB, String NecesidadComC, String ProyectosVecinos,
+        String ProyectoA, String ProyectoB, String ProyectoC, int idEncuestas,int idS1006, int idS1007, int idS1008)
         {
             this.idS10_Com = idS10_Com;
             this.Ayudo = Ayudo;
@@ -127,22 +127,7 @@ namespace Capa_Datos
             this.OrganizarB = OrganizarB;
             this.OrganizarC = OrganizarC;
             this.ParticipacionGrupo = ParticipacionGrupo;
-            this.idEncuestas = idEncuestas;
-            this.idS1006 = idS1006;
-            this.idS1007 = idS1007;
-            this.idS1008 = idS1008;
-            this.errores = new List<Error>();
-        }
-            
-        public void S10_ComunidadCOnt( String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
-        String NecesidadCom, String NecesidadComA, String NecesidadComB, String NecesidadComC, String ProyectosVecinos,
-        String ProyectoA, String ProyectoB, String ProyectoC, String AspectoPositivo, String AspectoPositivoA,
-        String AspectoPositivoB, String AspectoPositivoC, String AspectoNegativo, String AspectoNegativoA,
-        String AspectoNegativoB, String AspectoNegativoC, String Discriminacion, String TipoDiscriminacion,
-        String OrganizacionComunitaria, String TipoOrganizacion, String ConfianzaOrganizacion, String ComentarioConfianza,
-        String LiderA, String LiderB, String LiderC, String EstadoComunidadPasada, String ComentarioEstadoPasado,
-        String EstadoComunidadFuturo, String ComentarioEstadoFuturo, int idS1014)
-        {
+
             this.Necesidad = Necesidad;
             this.NecesidadA = NecesidadA;
             this.NecesidadB = NecesidadB;
@@ -155,20 +140,33 @@ namespace Capa_Datos
             this.ProyectoA = ProyectoA;
             this.ProyectoB = ProyectoB;
             this.ProyectoC = ProyectoC;
+            this.idEncuestas = idEncuestas;
+            this.idS1006 = idS1006;
+            this.idS1007 = idS1007;
+            this.idS1008 = idS1008;
+            this.errores = new List<Error>();
+        }
+            
+        public void S10_ComunidadCOnt( Boolean AspectoPositivo, String AspectoPositivoA,
+        String AspectoPositivoB, Boolean AspectoNegativo, String AspectoNegativoA,
+        String AspectoNegativoB, String Discriminacion, String TipoDiscriminacion,
+        String OrganizacionComunitaria, String TipoOrganizacion, String ConfianzaOrganizacion, String ComentarioConfianza,
+        Boolean Lider,String LiderA, String LiderB, String LiderC, String EstadoComunidadPasada, String ComentarioEstadoPasado,
+        String EstadoComunidadFuturo, String ComentarioEstadoFuturo, int idS1014)
+        {
             this.AspectoPositivo = AspectoPositivo;
             this.AspectoPositivoA = AspectoPositivoA;
             this.AspectoPositivoB = AspectoPositivoB;
-            this.AspectoPositivoC = AspectoPositivoC;
             this.AspectoNegativo = AspectoNegativo;
             this.AspectoNegativoA = AspectoNegativoA;
             this.AspectoNegativoB = AspectoNegativoB;
-            this.AspectoNegativoC = AspectoNegativoC;
             this.Discriminacion = Discriminacion;
             this.TipoDiscriminacion = TipoDiscriminacion;
             this.OrganizacionComunitaria = OrganizacionComunitaria;
             this.TipoOrganizacion = TipoOrganizacion;
             this.ConfianzaOrganizacion = ConfianzaOrganizacion;
             this.ComentarioConfianza = ComentarioConfianza;
+            this.Lider = Lider;
             this.LiderA = LiderA;
             this.LiderB = LiderB;
             this.LiderC = LiderC;
@@ -210,17 +208,16 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@AspectoPositivo", this.AspectoPositivo);
                 comando.Parameters.AddWithValue("@AspectoPositivoA", this.AspectoPositivoA);
                 comando.Parameters.AddWithValue("@AspectoPositivoB", this.AspectoPositivoB);
-                comando.Parameters.AddWithValue("@AspectoPositivoC", this.AspectoPositivoC);
                 comando.Parameters.AddWithValue("@AspectoNegativo", this.AspectoNegativo);
                 comando.Parameters.AddWithValue("@AspectoNegativoA", this.AspectoNegativoA);
                 comando.Parameters.AddWithValue("@AspectoNegativoB", this.AspectoNegativoB);
-                comando.Parameters.AddWithValue("@AspectoNegativoC", this.AspectoNegativoC);
                 comando.Parameters.AddWithValue("@Discriminacion", this.Discriminacion);
                 comando.Parameters.AddWithValue("@TipoDiscriminacion", this.TipoDiscriminacion);
                 comando.Parameters.AddWithValue("@OrganizacionComunitaria", this.OrganizacionComunitaria);
                 comando.Parameters.AddWithValue("@TipoOrganizacion", this.TipoOrganizacion);
                 comando.Parameters.AddWithValue("@ConfianzaOrganizacion", this.ConfianzaOrganizacion);
                 comando.Parameters.AddWithValue("@ComentarioConfianza", this.ComentarioConfianza);
+                comando.Parameters.AddWithValue("@Lider", this.Lider);
                 comando.Parameters.AddWithValue("@LiderA", this.LiderA);
                 comando.Parameters.AddWithValue("@LiderB", this.LiderB);
                 comando.Parameters.AddWithValue("@LiderC", this.LiderC);

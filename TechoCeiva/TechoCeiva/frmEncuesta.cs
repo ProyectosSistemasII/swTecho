@@ -25,6 +25,23 @@ namespace TechoCeiva
         String cbxS11_1_VidaFamiliartxt= "";
         String cbxS11_4_ViviedaActualtxt= "";
         /// -----------------------------------------------------------------------------------------------------------
+        
+        // variables para que no deje error los combobox cuando estan vacios Seccion 10
+        S10_ComunidadLN NuevaS10_Comunidad = null;
+        
+        String cbxS10_RelacionVecinostxt ="";
+        String cbxS10_OrganizarVecinostxt ="";
+        String cbxS10_ParticipacionGrupotxt ="";
+        String cbxS10_Necesidadtxt ="";
+        String cbxS10_NecesidadComtxt ="";
+        String cbxS10_ProyectosVecinostxt ="";
+        String cbxS10_Discriminaciontxt ="";
+        String cbxS10_OrganizacionComunitariatxt = "";
+        String cbxS10_ConfiazaOrganizaciontxt ="";
+        String cbxS10_EstadoPasadotxt="";
+        String cbxS10_estadoFuturotxt = "";
+
+        /// -----------------------------------------------------------------------------------------------------------
 
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
         String cbxS8_AccesoAguatxt ="";
@@ -76,7 +93,11 @@ namespace TechoCeiva
             InitializeComponent();
             CodigoEncuesta = 1;
         }
-
+        /// <summary>
+        /// Seccion 11
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pbS11_Siguiente_Click(object sender, EventArgs e)
         {
             this.VerificarCombobox_S11();            
@@ -142,10 +163,14 @@ namespace TechoCeiva
             if (cbxS11_4_ViviedaActual.SelectedIndex != -1)
                 cbxS11_4_ViviedaActualtxt = cbxS11_4_ViviedaActual.SelectedItem.ToString();
         }
-
+        /// <summary>
+        /// Seccion 10
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pbS10Cont_Siguiente_Click(object sender, EventArgs e)
         {
-
+            this.VerificarCombox_S10();
             S11_MovilidadLN S11 = new S11_MovilidadLN();
             Boolean correcto = true; //S11.Ingresar_EncS11(Convert.ToInt32(txtCodigoS11.Text), cbxS11_1_VidaFamiliar.SelectedValue.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedValue.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
             if (correcto)
@@ -179,7 +204,7 @@ namespace TechoCeiva
             }
         }
 
-        private void Comprobar_S9(int pregunta)
+        private void Comprobar_S10(int pregunta)
         {
             switch (pregunta)
             {
@@ -196,33 +221,42 @@ namespace TechoCeiva
                     cbxS10_RelacionVecinos.Focus();
                     break;
                 case 301:
-                    cbxS9_OtraPropiedad.BackColor = ColorCampsVacios;
-                    cbxS9_OtraPropiedad.Focus();
-                    break;
-
-                case 501:
-                    txtS9_OtraPropiedadA.BackColor = ColorCampsVacios;
-                    txtS9_OtraPropiedadA.Focus();
-                    break;
-
-                case 3:
-                    cbxS9_TipoPropietario.BackColor = ColorCampsVacios;
-                    cbxS9_TipoPropietario.Focus();
-                    break;
-
-                case 301:
-                    txtS9_OtroTipoPropietario.BackColor = ColorCampsVacios;
-                    txtS9_OtroTipoPropietario.Focus();
+                    txtS10_CometarioRelacion.BackColor = ColorCampsVacios;
+                    txtS10_CometarioRelacion.Focus();
                     break;
 
                 case 4:
-                    txtS9_PropietarioTerreno.BackColor = ColorCampsVacios;
-                    txtS9_PropietarioTerreno.Focus();
+                    cbxS10_OrganizarVecinos.BackColor = ColorCampsVacios;
+                    cbxS10_OrganizarVecinos.Focus();
                     break;
+
                 case 401:
-                    txtS9_TelefonoPropietarioTerreno.BackColor = ColorCampsVacios;
-                    txtS9_TelefonoPropietarioTerreno.Focus();
+                    txtS10_OrganizarA.BackColor = ColorCampsVacios;
+                    txtS10_OrganizarA.Focus();
                     break;
+
+                case 5:
+                    cbxS10_ParticipacionGrupo.BackColor = ColorCampsVacios;
+                    cbxS10_ParticipacionGrupo.Focus();
+                    break;
+
+                case 6:
+                    cklS1006_Com.BackColor = ColorCampsVacios;
+                    cklS1006_Com.Focus();
+                    break;
+                case 601:
+                    txtS1006_Especificar.BackColor = ColorCampsVacios;
+                    txtS1006_Especificar.Focus();
+                    break;
+                case 7:
+                    cklS1007_Com.BackColor = ColorCampsVacios;
+                    cklS1007_Com.Focus();
+                        break;
+                case 701:
+                    txtS1007_Especificar.BackColor = ColorCampsVacios;
+                    txtS1007_Especificar.Focus();
+                    break;
+
             }
         }
 
@@ -230,29 +264,36 @@ namespace TechoCeiva
         {
             int NumeroCaso = 0;
 
-            if (cbxS9_1_Propio.SelectedIndex != -1)
-                cbxS9_Propiotxt = cbxS9_1_Propio.SelectedItem.ToString();
-
-            if (cbxS9_Propietario.SelectedIndex != -1)
-            {
-                cbxS9_Propietariotxt = cbxS9_Propietario.SelectedItem.ToString();
-                NumeroCaso = 1;
-            }
-            if (cbxS9_TipoPropietario.SelectedIndex != -1)
-            {
-                cbxS9_TipoPropietariotxt = cbxS9_TipoPropietario.SelectedItem.ToString();
-
-            }
-            if (cbxS9_OtraPropiedad.SelectedIndex != -1)
-                cbxS9_OtraPropiedadtxt = cbxS9_OtraPropiedad.SelectedItem.ToString();
-            if (cbxS9_1_Propio.SelectedIndex == 1)
-                NumeroCaso = 2;
-            else
-                NumeroCaso = 1;
-
+            if ( cbxS10_RelacionVecinos.SelectedIndex!= -1)
+                cbxS10_RelacionVecinostxt = cbxS10_RelacionVecinos.SelectedItem.ToString();
+            if (cbxS10_OrganizarVecinos.SelectedIndex != -1)
+                cbxS10_OrganizarVecinostxt = cbxS10_OrganizarVecinos.SelectedItem.ToString();
+            if (cbxS10_ParticipacionGrupo.SelectedIndex != -1)
+                cbxS10_ParticipacionGrupotxt = cbxS10_ParticipacionGrupo.SelectedItem.ToString();
+            if (cbxS10_Necesidad.SelectedIndex != -1)
+                cbxS10_Necesidadtxt = cbxS10_Necesidad.SelectedItem.ToString();
+            if (cbxS10_NecesidadCom.SelectedIndex != -1)
+                cbxS10_NecesidadComtxt = cbxS10_NecesidadCom.SelectedItem.ToString();
+            if (cbxS10_ProyectosVecinos.SelectedIndex != -1)
+                cbxS10_ProyectosVecinostxt = cbxS10_ProyectosVecinos.SelectedItem.ToString();
+            if (cbxS10_Discriminacion.SelectedIndex != -1)
+                cbxS10_Discriminaciontxt = cbxS10_Discriminacion.SelectedItem.ToString();
+            if (cbxS10_OrganizacionComunitaria.SelectedIndex != -1)
+                cbxS10_OrganizacionComunitariatxt = cbxS10_OrganizacionComunitaria.SelectedItem.ToString();
+            if (cbxS10_ConfiazaOrganizacion.SelectedIndex != -1)
+                cbxS10_ConfiazaOrganizaciontxt = cbxS10_ConfiazaOrganizacion.SelectedItem.ToString();
+            if (cbxS10_EstadoPasado.SelectedIndex != -1)
+                cbxS10_EstadoPasadotxt = cbxS10_EstadoPasado.SelectedItem.ToString();
+            if (cbxS10_estadoFuturo.SelectedIndex != -1)
+                cbxS10_estadoFuturotxt = cbxS10_estadoFuturo.SelectedItem.ToString();
+            
             return NumeroCaso;
         }
-
+        /// <summary>
+        /// Seccion 9
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pbS9_Siguiente_Click(object sender, EventArgs e)
         {
             int caso = this.VerificarCombox_S9();
@@ -354,6 +395,11 @@ namespace TechoCeiva
 
             return NumeroCaso;
         }
+        /// <summary>
+        /// Seccion 8
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {
             
@@ -581,6 +627,11 @@ namespace TechoCeiva
 
             }
         }
+        /// <summary>
+        /// Cambios de Indices en Combobox seccion 9
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxS9_Propietario_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS9_Propietario.SelectedIndex.Equals(3))
@@ -612,7 +663,11 @@ namespace TechoCeiva
                 txtS9_OtraPropiedadC.Enabled = false;
             }
         }
-
+        /// <summary>
+        /// Cambios de Indices en Combobox seccion 8
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxS8_FuenteAgua_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS8_FuenteAgua.SelectedIndex.Equals(7))
@@ -652,7 +707,11 @@ namespace TechoCeiva
             else
                 txtS8_OtroTipoBasura.Enabled = false;
         }
-
+        /// <summary>
+        /// Cambios de Indices en Combobox seccion 10
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxS10_RelacionVecinos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS10_RelacionVecinos.SelectedIndex.Equals(5))
@@ -1050,9 +1109,9 @@ namespace TechoCeiva
             tbpS3.Parent = null;
             tbpS4.Parent = null;
             tbpS5.Parent = null;
-            //tbpS6.Parent = null;
+            tbpS6.Parent = null;
             tbpS7.Parent = null;
-            tbpS8.Parent = null;
+            //tbpS8.Parent = null;
             tbpS9.Parent = null;
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
