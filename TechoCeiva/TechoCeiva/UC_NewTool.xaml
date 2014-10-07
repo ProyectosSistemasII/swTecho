@@ -19,6 +19,9 @@
 	<Grid x:Name="LayoutRoot">
 		<Label Content="Nueva Herramienta" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="26.667"/>
 		<Label x:Name="lblCantidad" Content="Cantidad:" HorizontalAlignment="Left" Margin="25.964,149.482,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label Content="Herramienta:" HorizontalAlignment="Left" Margin="23,81.47,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<ComboBox x:Name="cbxHerramienta" HorizontalAlignment="Left" Margin="23,100.976,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="314" FontSize="14.667" IsTextSearchCaseSensitive="False" BorderBrush="{x:Null}" />
+		<TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="25.964,165.495,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="311.036" FontSize="14.667" KeyDown="txtCantidad_KeyDown" />
 		<Button x:Name="btnAdd" Content="Agregar" HorizontalAlignment="Left" Margin="23,217.495,0,0" Style="{DynamicResource btn_Add}" VerticalAlignment="Top" Width="109" Height="36" FontSize="14.667" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" VerticalContentAlignment="Center" Click="btnAdd_Click">
 			<Button.Resources>
 <!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->
@@ -35,7 +38,7 @@
 									<Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
 						
 									<!-- Content Presenter es donde el control coloca el contenido de texto, etc. -->
-						<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
+		<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
 									<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
 								</Grid>
 					
@@ -65,13 +68,11 @@
 	
 			</Button.Resources>
 		</Button>
-		<TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="25.964,165.495,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="311.036" FontSize="14.667"/>
-		<Label Content="Herramienta:" HorizontalAlignment="Left" Margin="23,81.47,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<ComboBox x:Name="cbxHerramienta" HorizontalAlignment="Left" Margin="23,100.976,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="314" FontSize="14.667" IsTextSearchCaseSensitive="False" BorderBrush="{x:Null}" />
-        <DataGrid Margin="396,81.47,0,25.03" HorizontalAlignment="Left" Width="559" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True">
+        
+		<DataGrid Margin="396,81.47,0,25.03" HorizontalAlignment="Left" Width="559" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="275"/>
-                <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="275"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="275" FontSize="14"/>           
+                <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="275" FontSize="14"/>
             </DataGrid.Columns>
         </DataGrid>
 		<Button x:Name="btnPlus" Content="+" Margin="360,100.976,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="26" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Width="36" FontSize="21.333" FontWeight="Bold" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" />

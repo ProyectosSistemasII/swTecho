@@ -25,6 +25,7 @@ namespace TechoCeiva
             _HerramientasLN Tools = new _HerramientasLN();
             fillComboBox();
             fillDataGrid();
+            cbxHerramienta.Focus();
 		}
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
@@ -38,12 +39,18 @@ namespace TechoCeiva
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            _HerramientasLN herramienta = new _HerramientasLN();
-            herramienta._Modificar(Convert.ToInt32(cbxHerramienta.SelectedValue), Convert.ToInt32(txtCantidad.Text.ToString()));
+            acctionAdd();
+        }
 
-            txtCantidad.Clear();
-            MessageBox.Show("Existencia de " + cbxHerramienta.Text + " modificada correctamente");
-            fillDataGrid();
+        private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                acctionAdd();
+            }
+            else
+            {
+            }
         }
 
         private void fillComboBox()
@@ -58,6 +65,16 @@ namespace TechoCeiva
         {
             _HerramientasLN Herramientas = new _HerramientasLN();
             DataGridHerramientas.ItemsSource = Herramientas._Obtener_H();
+        }
+
+        private void acctionAdd()
+        {
+            _HerramientasLN herramienta = new _HerramientasLN();
+            herramienta._Modificar(Convert.ToInt32(cbxHerramienta.SelectedValue), Convert.ToInt32(txtCantidad.Text.ToString()));
+
+            txtCantidad.Clear();
+            MessageBox.Show("Existencia de " + cbxHerramienta.Text + " modificada correctamente");
+            fillDataGrid();
         }
 	}
 }
