@@ -16,6 +16,12 @@
         <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="Eliminar" FontSize="14.667" Foreground="White" Height="26" Margin="0,368,29,12" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Width="88" HorizontalAlignment="Right" />
         <TextBox FontSize="14.667" Margin="138,61,29,317" Name="txtNombre" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" />
         <Button Background="#FF009240" BorderBrush="{x:Null}" Content="Modificar" FontSize="14.667" Foreground="White" Height="26" Margin="210,368,198,12" Name="btnModificar" Style="{DynamicResource SimpleButton}" />
-        <DataGrid x:Name="dataGridComn" Margin="12,174,29,74"/>
+        <DataGrid x:Name="dataGridComn" Margin="12,174,29,74" AutoGenerateColumns="false">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre de Comunidad" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Municipio" Binding="{Binding MunicipioNombre}"/>
+                <DataGridTextColumn Header="Departamento" Binding="{Binding DepartamentoNombre}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

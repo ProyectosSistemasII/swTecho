@@ -21,7 +21,7 @@ namespace Capa_Logica
             this.telefonoEmergencia = "";
             this.municipio = 0;
             this.departamento = 0;
-            this._errores = new List<Error>();
+            this.errores = new List<Error>();
         }
 
         public _VoluntariosLN(string nombres, string apellidos, string telefon, string direccion, string correo, bool activo, int departamento, int municipio, string personaEm, string telefonoEm)
@@ -37,7 +37,7 @@ namespace Capa_Logica
             this.personaEmergencia = personaEm;
             this.telefonoEmergencia = telefonoEm;
 
-            this._errores = new List<Error>();
+            this.errores = new List<Error>();
         
         }
         public Boolean Ingresar_V()
@@ -56,9 +56,9 @@ namespace Capa_Logica
             this.municipio = _voluntario.municipio;
             this.departamento = _voluntario.departamento;
             
-            this._errores = _voluntario._errores;
+            this.errores = _voluntario.errores;
 
-            if (_errores.Count >0)
+            if (errores.Count >0)
             {
                 _correcto = false;
             }
@@ -67,7 +67,7 @@ namespace Capa_Logica
 
         public string _obtenerError()
         {
-            Error error = _errores[0];
+            Error error = errores[0];
             return error.mensaje;
         }
     }

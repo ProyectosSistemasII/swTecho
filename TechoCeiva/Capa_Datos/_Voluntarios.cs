@@ -15,29 +15,26 @@ namespace Capa_Datos
         public string direccion{get; set;}
         public string correo{get; set;}
         public bool activo{get; set;}
+        public int departamento { get; set; }
+        public int municipio { get; set; }
         public string personaEmergencia{get; set;}
         public string telefonoEmergencia{get; set;}
-        public int municipio{get; set; }
-        public int departamento{ get; set; }
-
-        public List<Error> _errores { get; set; }
-
+        public List<Error> errores { get; set; }
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;
 
         public _Voluntarios()
-        {
-            this.idVoluntarios = 0;
+        {           
             this.nombres = "";
             this.apellidos = "";
             this.telefono = "";
             this.direccion = "";
             this.correo = "";
-            this.activo = true;
+            this.activo = false;
+            this.departamento = 0;
+            this.municipio = 0;
             this.personaEmergencia = "";
             this.telefonoEmergencia = "";
-            this.municipio = 0;
-            this.departamento = 0;
         }
 
         public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, bool activo, int municipio, int departamento, string personaEmergencia, string telefonoEmergencia)
@@ -53,13 +50,14 @@ namespace Capa_Datos
             this.telefonoEmergencia = telefonoEmergencia;
             this.municipio = municipio;
             this.departamento = departamento;
+            this.errores = new List<Error>();
         }
 
         public void Insertar_V()
         {
-            if (this._errores.Count == 0)
+            if (this.errores.Count == 0)
             {
-                string query = "INSERT INTO Voluntarios(Nombres, Apellidos, Telefono, Direccion, Correo, Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia) VALUES";
+                string query = "INSERT INTO Voluntarios(Nombres, Apellidos, Telefono, Direccion, Correo, Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia) VALUES(@Nombres, @Apellidos, @Telefono, @Direccion, @Correo, @Activo, @Departamento_idDepartamento, @Municipio_idMunicipio, @PersonaEmergencia, @TelEmergencia)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@Nombres", this.nombres);
                 _comando.Parameters.AddWithValue("@Apellidos",this.apellidos);
@@ -81,7 +79,7 @@ namespace Capa_Datos
                 catch (MySqlException ex)
                 {
                     Error _error = new Error(ex.Message + "" + ex.Number, 2);
-                    _errores.Add(_error);
+                    errores.Add(_error);
                 }
             }
         }
@@ -119,7 +117,7 @@ namespace Capa_Datos
             catch (MySqlException ex)
             {
                 Error _error = new Error(ex.Message + "" + ex.Number, 2);
-                _errores.Add(_error);
+                errores.Add(_error);
             }
 
             return true;
@@ -149,7 +147,7 @@ namespace Capa_Datos
             catch (MySqlException ex)
             {
                 Error _error = new Error(ex.Message + "" + ex.Number, 2);
-                _errores.Add(_error);
+                errores.Add(_error);
             }
         }
 

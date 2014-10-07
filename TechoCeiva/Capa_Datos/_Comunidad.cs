@@ -14,6 +14,8 @@ namespace Capa_Datos
         public Boolean Activo { get; set; }
         public int Departamento_idDepartamento { get; set; }
         public int Municipio_idMunicipio { get; set; }
+        public string DepartamentoNombre { get; set; }
+        public string MunicipioNombre { get; set; }
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
@@ -36,10 +38,17 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        public _Comunidad(string Nombre, string Municipio, string Departamento)
+        {
+            this.Nombre = Nombre;
+            this.DepartamentoNombre = Departamento;
+            this.MunicipioNombre = Municipio;
+        }
+
         public List<_Comunidad> ObtenerComunidades()
         {
             List<_Comunidad> ListaComunidad = new List<_Comunidad>();
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM comunidad where activo=true", conex);
+            MySqlCommand comando = new MySqlCommand("SELECT Comunidad.Nombre, municipio.NombreM, departamento.NombreD FROM comunidad inner join Departamento on Departamento_idDepartamento = idDepartamento inner join Municipio  on Municipio_idMunicipio = idMunicipio where activo=true group by comunidad.Nombre", conex);
             comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
@@ -50,7 +59,7 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                _Comunidad Comunidades = new _Comunidad(Convert.ToInt32(row["idComunidad"]), Convert.ToString(row["Nombre"]), Convert.ToBoolean(row["Activo"]), Convert.ToInt32(row["Departamento_idDepartamento"]), Convert.ToInt32(row["Municipio_idMunicipio"]));
+                _Comunidad Comunidades = new _Comunidad(Convert.ToString(row["Nombre"]), Convert.ToString(row["NombreM"]), Convert.ToString(row["NombreD"]));
                 ListaComunidad.Add(Comunidades);
             }
             return ListaComunidad;

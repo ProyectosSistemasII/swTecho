@@ -46,7 +46,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Municipio _propiedad = new _Municipio(Convert.ToInt32(_row["idMunicipio"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Departamento_idDepartamento"]));
+                _Municipio _propiedad = new _Municipio(Convert.ToInt32(_row["idMunicipio"]), Convert.ToString(_row["NombreM"]), Convert.ToInt32(_row["Departamento_idDepartamento"]));
                 Lista_M.Add(_propiedad);
             }
             return Lista_M;

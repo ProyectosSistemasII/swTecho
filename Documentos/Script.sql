@@ -60,7 +60,7 @@ DROP TABLE IF EXISTS `Departamento` ;
 
 CREATE TABLE IF NOT EXISTS `Departamento` (
   `idDepartamento` INT NOT NULL AUTO_INCREMENT,
-  `Nombre` VARCHAR(100) NOT NULL,
+  `NombreD` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`idDepartamento`))
 ENGINE = InnoDB;
 
@@ -72,7 +72,7 @@ DROP TABLE IF EXISTS `Municipio` ;
 
 CREATE TABLE IF NOT EXISTS `Municipio` (
   `idMunicipio` INT NOT NULL AUTO_INCREMENT,
-  `Nombre` VARCHAR(100) NOT NULL,
+  `NombreM` VARCHAR(100) NOT NULL,
   `Departamento_idDepartamento` INT NOT NULL,
   PRIMARY KEY (`idMunicipio`),
   INDEX `fk_Municipio_Departamento1_idx` (`Departamento_idDepartamento` ASC),

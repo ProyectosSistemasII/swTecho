@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
+using Capa_Datos;
 
 namespace TechoCeiva
 {
@@ -35,6 +36,8 @@ namespace TechoCeiva
 
         private void fillDataGrid(_VoluntariosLN voluntarios)
         {
+            List<_Voluntarios> vol = new List<_Voluntarios>();
+            vol = voluntarios.Obtener_V();
             datagdVoluntarios.ItemsSource = voluntarios.Obtener_V();
 
         }
