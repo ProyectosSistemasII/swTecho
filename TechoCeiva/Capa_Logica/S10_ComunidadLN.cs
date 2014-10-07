@@ -342,7 +342,7 @@ namespace Capa_Logica
             regex = new Regex(expresion_Texto);
             if (!regex.IsMatch(this.ComentarioEstadoFuturo))
             {
-                Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 22", 5000, 2201);
+                Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 21", 5000, 2201);
                 errores.Add(error);
             }
 

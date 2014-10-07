@@ -215,8 +215,9 @@ namespace TechoCeiva
        
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
-            S9_PropiedadLN S10 = new S9_PropiedadLN();
-            Boolean correcto = true;//S10.Insertar_EncS9(0, cbxS9_1_Propio.SelectedValue.ToString(), cbxS9_Propietario.SelectedValue.ToString(), txtS9_OtroPropietario.Text, cbxS9_TipoPropietario.SelectedValue.ToString(), txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedad.SelectedValue.ToString(), txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+            this.VerificarCombox_S10();
+            NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.CodigoEncuesta,0,0,0);
+            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10();
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
@@ -225,15 +226,20 @@ namespace TechoCeiva
             }
             else
             {
-               // MessageBox.Show(S10.obtenerError());
-            }
+                MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
+                int cant = NuevaS10_Comunidad.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+            }    
         }
 
         private void Comprobar_S10(int pregunta)
         {
             switch (pregunta)
             {
-                case 1:
+
+                    case 1:
                     txtS10_Ayudo.BackColor = ColorCampsVacios;
                     txtS10_Ayudo.Focus();
                     break;
@@ -281,6 +287,90 @@ namespace TechoCeiva
                     txtS1007_Especificar.BackColor = ColorCampsVacios;
                     txtS1007_Especificar.Focus();
                     break;
+                case 9:
+                    cbxS10_Necesidad.BackColor = ColorCampsVacios;
+                    cbxS10_Necesidad.Focus();
+                    break;
+
+                case 901:
+                    txtS10_NecesidadA.BackColor = ColorCampsVacios;
+                    txtS10_NecesidadA.Focus();
+                    break;
+                case 10:
+                    cbxS10_NecesidadCom.BackColor = ColorCampsVacios;
+                    cbxS10_NecesidadCom.Focus();
+                    break;
+
+                case 1001:
+                    txtS10_NecesidadComA.BackColor = ColorCampsVacios;
+                    txtS10_NecesidadComA.Focus();
+                    break;
+                case 11:
+                    cbxS10_ProyectosVecinos.BackColor = ColorCampsVacios;
+                    cbxS10_ProyectosVecinos.Focus();
+                    break;
+
+                case 1101:
+                    txtS10_ProyectosVecinosA.BackColor = ColorCampsVacios;
+                    txtS10_ProyectosVecinosA.Focus();
+                    break;
+                case 12:
+                    txtS10_ApectosPositivosA.BackColor = ColorCampsVacios;
+                    txtS10_ApectosPositivosA.Focus();
+                    break;
+                case 13:
+                    txtS10_ApectosNegativosA.BackColor = ColorCampsVacios;
+                    txtS10_ApectosNegativosA.Focus();
+                    break;
+                case 14:
+                    cklS1014_com.BackColor = ColorCampsVacios;
+                    cklS1014_com.Focus();
+                    break;
+                case 15:
+                    cbxS10_Discriminacion.BackColor = ColorCampsVacios;
+                    cbxS10_Discriminacion.Focus();
+                    break;
+                case 1501:
+                    txtS10_TipoDiscriminacion.BackColor = ColorCampsVacios;
+                    txtS10_TipoDiscriminacion.Focus();
+                    break;
+                case 16:
+                    cbxS10_OrganizacionComunitaria.BackColor = ColorCampsVacios;
+                    cbxS10_OrganizacionComunitaria.Focus();
+                    break;
+                case 17:                    
+                    txtS10_TipoOrganizaciones.BackColor = ColorCampsVacios;
+                    txtS10_TipoOrganizaciones.Focus();
+                    break;
+                case 18:
+                    cbxS10_ConfiazaOrganizacion.BackColor = ColorCampsVacios;
+                    cbxS10_ConfiazaOrganizacion.Focus();
+                    break;
+                case 1801:
+                    txtS10_ComentarioConfianza.BackColor = ColorCampsVacios;
+                    txtS10_ComentarioConfianza.Focus();
+                    break;
+                case 19:
+                    txtS10_LiderA.BackColor = ColorCampsVacios;
+                    txtS10_LiderA.Focus();
+                    break;
+                case 20:
+                    cbxS10_EstadoPasado.BackColor = ColorCampsVacios;
+                    cbxS10_EstadoPasado.Focus();
+                    break;
+                case 2001:
+                    txtS10_ComentarioEstadoPasado.BackColor = ColorCampsVacios;
+                    txtS10_ComentarioEstadoPasado.Focus();
+                    break;
+                case 21:
+                    cbxS10_estadoFuturo.BackColor = ColorCampsVacios;
+                    cbxS10_estadoFuturo.Focus();
+                    break;
+                case 2101:
+                    txtS10_ComentarioEstadoFuturo.BackColor = ColorCampsVacios;
+                    txtS10_ComentarioEstadoFuturo.Focus();
+                    break;
+
             }
         }
 
@@ -1097,9 +1187,9 @@ namespace TechoCeiva
             tbpS5.Parent = null;
             tbpS6.Parent = null;
             //tbpS7.Parent = null;
-            //tbpS8.Parent = null;
+            tbpS8.Parent = null;
             tbpS9.Parent = null;
-            tbpS10.Parent = null;
+            //tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;

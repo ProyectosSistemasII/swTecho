@@ -147,8 +147,195 @@
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS6 = new System.Windows.Forms.TabPage();
+            this.gbS6 = new System.Windows.Forms.GroupBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.lblS6_11_FaltaDinero = new System.Windows.Forms.Label();
+            this.chlbS6_11_CubrirFaltaDinero = new System.Windows.Forms.CheckedListBox();
+            this.lblS6_11_Especificar = new System.Windows.Forms.Label();
+            this.txtS6_11_EspecificarFaltaDinero = new System.Windows.Forms.TextBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.lblS6_10_Gastos = new System.Windows.Forms.Label();
+            this.txtS6_10_CantiGastosaIngresos = new System.Windows.Forms.TextBox();
+            this.lblS6_10_QGastos = new System.Windows.Forms.Label();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.lblS6_9_CantidadAhorro = new System.Windows.Forms.Label();
+            this.txtS6_9_CantiAhorro = new System.Windows.Forms.TextBox();
+            this.lblS6_9_QAhorro = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.lblS6_8_Ahorro = new System.Windows.Forms.Label();
+            this.cbxS6_8_AhorroMensual = new System.Windows.Forms.ComboBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.lblS6_7_CubrirGastos = new System.Windows.Forms.Label();
+            this.cbxS6_7_CubrenGasto = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.lblS6_6_IngresoTotal = new System.Windows.Forms.Label();
+            this.txtS6_6_IngresoTotal = new System.Windows.Forms.TextBox();
+            this.lblS6_6_QIngresosTotales = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.lblS6_5_TiempoDeuda = new System.Windows.Forms.Label();
+            this.cbxS6_5_TiempoPagoDeuda = new System.Windows.Forms.ComboBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.lblS6_4_CantiDeudas = new System.Windows.Forms.Label();
+            this.lblS6_4_Valor0 = new System.Windows.Forms.Label();
+            this.txtS6_4_CantiDeuda = new System.Windows.Forms.TextBox();
+            this.lblS6_4_QDeuda = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblS6_3_Deuda = new System.Windows.Forms.Label();
+            this.cbxS6_3_Deuda = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblS6_2_IngresosRemesas = new System.Windows.Forms.Label();
+            this.cbxS6_2_IngRemesas = new System.Windows.Forms.ComboBox();
+            this.txtS6_2_CantidadRemesas = new System.Windows.Forms.TextBox();
+            this.lblS6_2_QRemesas = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblS6_1_IngresosEstado = new System.Windows.Forms.Label();
+            this.cbxS6_1_IngEstado = new System.Windows.Forms.ComboBox();
+            this.txtS6_1_CantidadIngEstado = new System.Windows.Forms.TextBox();
+            this.lblS6_1_QEstado = new System.Windows.Forms.Label();
             this.pbS6_Siguiente = new System.Windows.Forms.PictureBox();
             this.tbpS7 = new System.Windows.Forms.TabPage();
+            this.gbS7 = new System.Windows.Forms.GroupBox();
+            this.pbS7_Siguiente = new System.Windows.Forms.PictureBox();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.lblS7_8_MaterialPiso = new System.Windows.Forms.Label();
+            this.gbS7_8_Tierra = new System.Windows.Forms.GroupBox();
+            this.rbS7_84_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_84_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_84_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_84_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label34 = new System.Windows.Forms.Label();
+            this.gbS7_8_Madera = new System.Windows.Forms.GroupBox();
+            this.rbS7_83_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_83_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_83_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_83_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label53 = new System.Windows.Forms.Label();
+            this.gbS7_8_LadrilloBarro = new System.Windows.Forms.GroupBox();
+            this.rbS7_82_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_82_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_82_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_82_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label54 = new System.Windows.Forms.Label();
+            this.gbS7_8_Encementado = new System.Windows.Forms.GroupBox();
+            this.rbS7_81_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_81_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_81_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_81_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label55 = new System.Windows.Forms.Label();
+            this.gbS7_8_EstadoPiso = new System.Windows.Forms.GroupBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.lblS7_7_MaterialParedes = new System.Windows.Forms.Label();
+            this.gbS7_7_Desechos = new System.Windows.Forms.GroupBox();
+            this.rbS7_76_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_76_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_76_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_76_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label35 = new System.Windows.Forms.Label();
+            this.gbS7_7_BaharequeBambu = new System.Windows.Forms.GroupBox();
+            this.rbS7_75_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_75_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_75_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_75_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label44 = new System.Windows.Forms.Label();
+            this.gbS7_7_Lamina = new System.Windows.Forms.GroupBox();
+            this.rbS7_74_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_74_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_74_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_74_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label45 = new System.Windows.Forms.Label();
+            this.gbS7_7_Adobe = new System.Windows.Forms.GroupBox();
+            this.rbS7_73_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_73_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_73_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_73_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label46 = new System.Windows.Forms.Label();
+            this.gbS7_7_Madera = new System.Windows.Forms.GroupBox();
+            this.rbS7_72_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_72_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_72_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_72_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label47 = new System.Windows.Forms.Label();
+            this.gbS7_7_BlockLadriPrefabr = new System.Windows.Forms.GroupBox();
+            this.rbS7_71_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_71_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_71_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_71_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label48 = new System.Windows.Forms.Label();
+            this.gbS7_7_EstadoParedes = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.lblS7_6_MaterialTecho = new System.Windows.Forms.Label();
+            this.gbS7_6_Desechos = new System.Windows.Forms.GroupBox();
+            this.rbS7_66_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_66_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_66_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_66_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label43 = new System.Windows.Forms.Label();
+            this.gbS7_6_Paja = new System.Windows.Forms.GroupBox();
+            this.rbS7_65_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_65_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_65_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_65_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label42 = new System.Windows.Forms.Label();
+            this.gbS7_6_Duralita = new System.Windows.Forms.GroupBox();
+            this.rbS7_64_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_64_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_64_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_64_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.gbS7_6_Lamina = new System.Windows.Forms.GroupBox();
+            this.rbS7_63_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_63_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_63_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_63_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label40 = new System.Windows.Forms.Label();
+            this.gbS7_6_Barro = new System.Windows.Forms.GroupBox();
+            this.rbS7_62_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_62_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_62_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_62_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label39 = new System.Windows.Forms.Label();
+            this.gbS7_6_Concreto = new System.Windows.Forms.GroupBox();
+            this.rbS7_61_MuyBueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_61_Bueno = new System.Windows.Forms.RadioButton();
+            this.rbS7_61_Malo = new System.Windows.Forms.RadioButton();
+            this.rbS7_61_MuyMalo = new System.Windows.Forms.RadioButton();
+            this.label33 = new System.Windows.Forms.Label();
+            this.gbS7_6_EstadoTecho = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.lblS7_5_Problema = new System.Windows.Forms.Label();
+            this.txtS7_5_ProblemaC = new System.Windows.Forms.TextBox();
+            this.lblS7_5_C = new System.Windows.Forms.Label();
+            this.txtS7_5_ProblemaB = new System.Windows.Forms.TextBox();
+            this.lblS7_5_B = new System.Windows.Forms.Label();
+            this.cbsS7_5_ProbViv = new System.Windows.Forms.ComboBox();
+            this.txtS7_5_ProblemaA = new System.Windows.Forms.TextBox();
+            this.lblS7_5_A = new System.Windows.Forms.Label();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.lblS7_4_Camas = new System.Windows.Forms.Label();
+            this.txtS7_4_CantCamas = new System.Windows.Forms.TextBox();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.lblS7_3_Dormitorio = new System.Windows.Forms.Label();
+            this.txtS7_3_CantDormitorios = new System.Windows.Forms.TextBox();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.lblS7_2_Cuartos = new System.Windows.Forms.Label();
+            this.txtS7_2_Cuartos = new System.Windows.Forms.TextBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.lblS7_1_Dimensiones = new System.Windows.Forms.Label();
+            this.txtS7_1_AnchoViv = new System.Windows.Forms.TextBox();
+            this.txtS7_1_LargoViv = new System.Windows.Forms.TextBox();
+            this.lblS7_1_X = new System.Windows.Forms.Label();
             this.tbpS8 = new System.Windows.Forms.TabPage();
             this.pbS8_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
@@ -425,7 +612,6 @@
             this.cbxS10_ConfiazaOrganizacion = new System.Windows.Forms.ComboBox();
             this.label135 = new System.Windows.Forms.Label();
             this.groupBox99 = new System.Windows.Forms.GroupBox();
-            this.txt10_TipoOrganizacion = new System.Windows.Forms.TextBox();
             this.label137 = new System.Windows.Forms.Label();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
             this.txtS10_TipoDiscriminacion = new System.Windows.Forms.TextBox();
@@ -473,193 +659,7 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.gbS6 = new System.Windows.Forms.GroupBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.lblS6_11_FaltaDinero = new System.Windows.Forms.Label();
-            this.chlbS6_11_CubrirFaltaDinero = new System.Windows.Forms.CheckedListBox();
-            this.lblS6_11_Especificar = new System.Windows.Forms.Label();
-            this.txtS6_11_EspecificarFaltaDinero = new System.Windows.Forms.TextBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.lblS6_10_Gastos = new System.Windows.Forms.Label();
-            this.txtS6_10_CantiGastosaIngresos = new System.Windows.Forms.TextBox();
-            this.lblS6_10_QGastos = new System.Windows.Forms.Label();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.lblS6_9_CantidadAhorro = new System.Windows.Forms.Label();
-            this.txtS6_9_CantiAhorro = new System.Windows.Forms.TextBox();
-            this.lblS6_9_QAhorro = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.lblS6_8_Ahorro = new System.Windows.Forms.Label();
-            this.cbxS6_8_AhorroMensual = new System.Windows.Forms.ComboBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.lblS6_7_CubrirGastos = new System.Windows.Forms.Label();
-            this.cbxS6_7_CubrenGasto = new System.Windows.Forms.ComboBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.lblS6_6_IngresoTotal = new System.Windows.Forms.Label();
-            this.txtS6_6_IngresoTotal = new System.Windows.Forms.TextBox();
-            this.lblS6_6_QIngresosTotales = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.lblS6_5_TiempoDeuda = new System.Windows.Forms.Label();
-            this.cbxS6_5_TiempoPagoDeuda = new System.Windows.Forms.ComboBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.lblS6_4_CantiDeudas = new System.Windows.Forms.Label();
-            this.lblS6_4_Valor0 = new System.Windows.Forms.Label();
-            this.txtS6_4_CantiDeuda = new System.Windows.Forms.TextBox();
-            this.lblS6_4_QDeuda = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lblS6_3_Deuda = new System.Windows.Forms.Label();
-            this.cbxS6_3_Deuda = new System.Windows.Forms.ComboBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.lblS6_2_IngresosRemesas = new System.Windows.Forms.Label();
-            this.cbxS6_2_IngRemesas = new System.Windows.Forms.ComboBox();
-            this.txtS6_2_CantidadRemesas = new System.Windows.Forms.TextBox();
-            this.lblS6_2_QRemesas = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.lblS6_1_IngresosEstado = new System.Windows.Forms.Label();
-            this.cbxS6_1_IngEstado = new System.Windows.Forms.ComboBox();
-            this.txtS6_1_CantidadIngEstado = new System.Windows.Forms.TextBox();
-            this.lblS6_1_QEstado = new System.Windows.Forms.Label();
-            this.gbS7 = new System.Windows.Forms.GroupBox();
-            this.pbS7_Siguiente = new System.Windows.Forms.PictureBox();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.lblS7_8_MaterialPiso = new System.Windows.Forms.Label();
-            this.gbS7_8_Tierra = new System.Windows.Forms.GroupBox();
-            this.rbS7_84_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_84_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_84_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_84_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label34 = new System.Windows.Forms.Label();
-            this.gbS7_8_Madera = new System.Windows.Forms.GroupBox();
-            this.rbS7_83_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_83_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_83_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_83_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label53 = new System.Windows.Forms.Label();
-            this.gbS7_8_LadrilloBarro = new System.Windows.Forms.GroupBox();
-            this.rbS7_82_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_82_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_82_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_82_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label54 = new System.Windows.Forms.Label();
-            this.gbS7_8_Encementado = new System.Windows.Forms.GroupBox();
-            this.rbS7_81_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_81_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_81_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_81_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label55 = new System.Windows.Forms.Label();
-            this.gbS7_8_EstadoPiso = new System.Windows.Forms.GroupBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.lblS7_7_MaterialParedes = new System.Windows.Forms.Label();
-            this.gbS7_7_Desechos = new System.Windows.Forms.GroupBox();
-            this.rbS7_76_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_76_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_76_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_76_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label35 = new System.Windows.Forms.Label();
-            this.gbS7_7_BaharequeBambu = new System.Windows.Forms.GroupBox();
-            this.rbS7_75_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_75_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_75_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_75_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label44 = new System.Windows.Forms.Label();
-            this.gbS7_7_Lamina = new System.Windows.Forms.GroupBox();
-            this.rbS7_74_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_74_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_74_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_74_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label45 = new System.Windows.Forms.Label();
-            this.gbS7_7_Adobe = new System.Windows.Forms.GroupBox();
-            this.rbS7_73_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_73_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_73_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_73_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label46 = new System.Windows.Forms.Label();
-            this.gbS7_7_Madera = new System.Windows.Forms.GroupBox();
-            this.rbS7_72_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_72_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_72_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_72_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label47 = new System.Windows.Forms.Label();
-            this.gbS7_7_BlockLadriPrefabr = new System.Windows.Forms.GroupBox();
-            this.rbS7_71_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_71_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_71_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_71_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label48 = new System.Windows.Forms.Label();
-            this.gbS7_7_EstadoParedes = new System.Windows.Forms.GroupBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.lblS7_6_MaterialTecho = new System.Windows.Forms.Label();
-            this.gbS7_6_Desechos = new System.Windows.Forms.GroupBox();
-            this.rbS7_66_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_66_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_66_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_66_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label43 = new System.Windows.Forms.Label();
-            this.gbS7_6_Paja = new System.Windows.Forms.GroupBox();
-            this.rbS7_65_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_65_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_65_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_65_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label42 = new System.Windows.Forms.Label();
-            this.gbS7_6_Duralita = new System.Windows.Forms.GroupBox();
-            this.rbS7_64_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_64_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_64_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_64_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label41 = new System.Windows.Forms.Label();
-            this.gbS7_6_Lamina = new System.Windows.Forms.GroupBox();
-            this.rbS7_63_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_63_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_63_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_63_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label40 = new System.Windows.Forms.Label();
-            this.gbS7_6_Barro = new System.Windows.Forms.GroupBox();
-            this.rbS7_62_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_62_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_62_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_62_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label39 = new System.Windows.Forms.Label();
-            this.gbS7_6_Concreto = new System.Windows.Forms.GroupBox();
-            this.rbS7_61_MuyBueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_61_Bueno = new System.Windows.Forms.RadioButton();
-            this.rbS7_61_Malo = new System.Windows.Forms.RadioButton();
-            this.rbS7_61_MuyMalo = new System.Windows.Forms.RadioButton();
-            this.label33 = new System.Windows.Forms.Label();
-            this.gbS7_6_EstadoTecho = new System.Windows.Forms.GroupBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.lblS7_5_Problema = new System.Windows.Forms.Label();
-            this.txtS7_5_ProblemaC = new System.Windows.Forms.TextBox();
-            this.lblS7_5_C = new System.Windows.Forms.Label();
-            this.txtS7_5_ProblemaB = new System.Windows.Forms.TextBox();
-            this.lblS7_5_B = new System.Windows.Forms.Label();
-            this.cbsS7_5_ProbViv = new System.Windows.Forms.ComboBox();
-            this.txtS7_5_ProblemaA = new System.Windows.Forms.TextBox();
-            this.lblS7_5_A = new System.Windows.Forms.Label();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.lblS7_4_Camas = new System.Windows.Forms.Label();
-            this.txtS7_4_CantCamas = new System.Windows.Forms.TextBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.lblS7_3_Dormitorio = new System.Windows.Forms.Label();
-            this.txtS7_3_CantDormitorios = new System.Windows.Forms.TextBox();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.lblS7_2_Cuartos = new System.Windows.Forms.Label();
-            this.txtS7_2_Cuartos = new System.Windows.Forms.TextBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.lblS7_1_Dimensiones = new System.Windows.Forms.Label();
-            this.txtS7_1_AnchoViv = new System.Windows.Forms.TextBox();
-            this.txtS7_1_LargoViv = new System.Windows.Forms.TextBox();
-            this.lblS7_1_X = new System.Windows.Forms.Label();
+            this.txtS10_TipoOrganizaciones = new System.Windows.Forms.TextBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -688,8 +688,49 @@
             this.gbS5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).BeginInit();
             this.tbpS6.SuspendLayout();
+            this.gbS6.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).BeginInit();
             this.tbpS7.SuspendLayout();
+            this.gbS7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).BeginInit();
+            this.groupBox24.SuspendLayout();
+            this.gbS7_8_Tierra.SuspendLayout();
+            this.gbS7_8_Madera.SuspendLayout();
+            this.gbS7_8_LadrilloBarro.SuspendLayout();
+            this.gbS7_8_Encementado.SuspendLayout();
+            this.gbS7_8_EstadoPiso.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.gbS7_7_Desechos.SuspendLayout();
+            this.gbS7_7_BaharequeBambu.SuspendLayout();
+            this.gbS7_7_Lamina.SuspendLayout();
+            this.gbS7_7_Adobe.SuspendLayout();
+            this.gbS7_7_Madera.SuspendLayout();
+            this.gbS7_7_BlockLadriPrefabr.SuspendLayout();
+            this.gbS7_7_EstadoParedes.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.gbS7_6_Desechos.SuspendLayout();
+            this.gbS7_6_Paja.SuspendLayout();
+            this.gbS7_6_Duralita.SuspendLayout();
+            this.gbS7_6_Lamina.SuspendLayout();
+            this.gbS7_6_Barro.SuspendLayout();
+            this.gbS7_6_Concreto.SuspendLayout();
+            this.gbS7_6_EstadoTecho.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox18.SuspendLayout();
             this.tbpS8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS8_Siguiente)).BeginInit();
             this.groupBox47.SuspendLayout();
@@ -766,47 +807,6 @@
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
-            this.gbS6.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.gbS7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).BeginInit();
-            this.groupBox24.SuspendLayout();
-            this.gbS7_8_Tierra.SuspendLayout();
-            this.gbS7_8_Madera.SuspendLayout();
-            this.gbS7_8_LadrilloBarro.SuspendLayout();
-            this.gbS7_8_Encementado.SuspendLayout();
-            this.gbS7_8_EstadoPiso.SuspendLayout();
-            this.groupBox25.SuspendLayout();
-            this.gbS7_7_Desechos.SuspendLayout();
-            this.gbS7_7_BaharequeBambu.SuspendLayout();
-            this.gbS7_7_Lamina.SuspendLayout();
-            this.gbS7_7_Adobe.SuspendLayout();
-            this.gbS7_7_Madera.SuspendLayout();
-            this.gbS7_7_BlockLadriPrefabr.SuspendLayout();
-            this.gbS7_7_EstadoParedes.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.gbS7_6_Desechos.SuspendLayout();
-            this.gbS7_6_Paja.SuspendLayout();
-            this.gbS7_6_Duralita.SuspendLayout();
-            this.gbS7_6_Lamina.SuspendLayout();
-            this.gbS7_6_Barro.SuspendLayout();
-            this.gbS7_6_Concreto.SuspendLayout();
-            this.gbS7_6_EstadoTecho.SuspendLayout();
-            this.groupBox22.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox18.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -824,11 +824,10 @@
             this.tbcDatos.Controls.Add(this.tbpS10);
             this.tbcDatos.Controls.Add(this.tbpS10Cont);
             this.tbcDatos.Controls.Add(this.tbpS11);
-            this.tbcDatos.Location = new System.Drawing.Point(3, 0);
-            this.tbcDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbcDatos.Location = new System.Drawing.Point(2, 0);
             this.tbcDatos.Name = "tbcDatos";
             this.tbcDatos.SelectedIndex = 0;
-            this.tbcDatos.Size = new System.Drawing.Size(1787, 708);
+            this.tbcDatos.Size = new System.Drawing.Size(1340, 575);
             this.tbcDatos.TabIndex = 1;
             // 
             // tbpInfo
@@ -841,31 +840,28 @@
             this.tbpInfo.Controls.Add(this.gbInfo);
             this.tbpInfo.Controls.Add(this.txtCodigoHogar);
             this.tbpInfo.Controls.Add(this.lblCodigoHogar);
-            this.tbpInfo.Location = new System.Drawing.Point(4, 25);
-            this.tbpInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpInfo.Location = new System.Drawing.Point(4, 22);
             this.tbpInfo.Name = "tbpInfo";
-            this.tbpInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpInfo.Size = new System.Drawing.Size(1779, 679);
+            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpInfo.Size = new System.Drawing.Size(1332, 549);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
             this.tbpInfo.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(493, 598);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTextBox1.Location = new System.Drawing.Point(370, 486);
             this.maskedTextBox1.Mask = "78.999";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(132, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox1.TabIndex = 7;
             // 
             // pbNext
             // 
             this.pbNext.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbNext.Location = new System.Drawing.Point(1175, 585);
-            this.pbNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNext.Location = new System.Drawing.Point(881, 475);
             this.pbNext.Name = "pbNext";
-            this.pbNext.Size = new System.Drawing.Size(71, 73);
+            this.pbNext.Size = new System.Drawing.Size(53, 59);
             this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNext.TabIndex = 6;
             this.pbNext.TabStop = false;
@@ -883,103 +879,91 @@
             this.gbContacto.Controls.Add(this.lblDireccion);
             this.gbContacto.Controls.Add(this.lblTelefonos);
             this.gbContacto.Controls.Add(this.lblJefe);
-            this.gbContacto.Location = new System.Drawing.Point(633, 279);
-            this.gbContacto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbContacto.Location = new System.Drawing.Point(475, 227);
             this.gbContacto.Name = "gbContacto";
-            this.gbContacto.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbContacto.Size = new System.Drawing.Size(616, 286);
+            this.gbContacto.Size = new System.Drawing.Size(462, 232);
             this.gbContacto.TabIndex = 4;
             this.gbContacto.TabStop = false;
             this.gbContacto.Text = "CONTACTO DEL HOGAR";
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(201, 101);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Location = new System.Drawing.Point(151, 82);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(387, 22);
+            this.txtDireccion.Size = new System.Drawing.Size(291, 20);
             this.txtDireccion.TabIndex = 39;
             // 
             // txtTelefono2
             // 
-            this.txtTelefono2.Location = new System.Drawing.Point(423, 64);
-            this.txtTelefono2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono2.Location = new System.Drawing.Point(317, 52);
             this.txtTelefono2.Name = "txtTelefono2";
-            this.txtTelefono2.Size = new System.Drawing.Size(169, 22);
+            this.txtTelefono2.Size = new System.Drawing.Size(128, 20);
             this.txtTelefono2.TabIndex = 38;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(388, 68);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(291, 55);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(12, 17);
+            this.label25.Size = new System.Drawing.Size(12, 13);
             this.label25.TabIndex = 37;
             this.label25.Text = "/";
             // 
             // txtTelefono1
             // 
-            this.txtTelefono1.Location = new System.Drawing.Point(201, 64);
-            this.txtTelefono1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono1.Location = new System.Drawing.Point(151, 52);
             this.txtTelefono1.Name = "txtTelefono1";
-            this.txtTelefono1.Size = new System.Drawing.Size(173, 22);
+            this.txtTelefono1.Size = new System.Drawing.Size(131, 20);
             this.txtTelefono1.TabIndex = 35;
             // 
             // txtJefe
             // 
-            this.txtJefe.Location = new System.Drawing.Point(201, 27);
-            this.txtJefe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtJefe.Location = new System.Drawing.Point(151, 22);
             this.txtJefe.Name = "txtJefe";
-            this.txtJefe.Size = new System.Drawing.Size(387, 22);
+            this.txtJefe.Size = new System.Drawing.Size(291, 20);
             this.txtJefe.TabIndex = 34;
             // 
             // txtEspecificaciones
             // 
-            this.txtEspecificaciones.Location = new System.Drawing.Point(28, 161);
-            this.txtEspecificaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEspecificaciones.Location = new System.Drawing.Point(21, 131);
             this.txtEspecificaciones.Multiline = true;
             this.txtEspecificaciones.Name = "txtEspecificaciones";
-            this.txtEspecificaciones.Size = new System.Drawing.Size(560, 101);
+            this.txtEspecificaciones.Size = new System.Drawing.Size(421, 83);
             this.txtEspecificaciones.TabIndex = 30;
             // 
             // lblEspecificaciones
             // 
             this.lblEspecificaciones.AutoSize = true;
-            this.lblEspecificaciones.Location = new System.Drawing.Point(24, 138);
-            this.lblEspecificaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEspecificaciones.Location = new System.Drawing.Point(18, 112);
             this.lblEspecificaciones.Name = "lblEspecificaciones";
-            this.lblEspecificaciones.Size = new System.Drawing.Size(164, 17);
+            this.lblEspecificaciones.Size = new System.Drawing.Size(129, 13);
             this.lblEspecificaciones.TabIndex = 29;
             this.lblEspecificaciones.Text = "18. ESPECIFICACIONES:";
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(24, 101);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(18, 82);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(110, 17);
+            this.lblDireccion.Size = new System.Drawing.Size(87, 13);
             this.lblDireccion.TabIndex = 27;
             this.lblDireccion.Text = "17. DIRECCIÓN:";
             // 
             // lblTelefonos
             // 
             this.lblTelefonos.AutoSize = true;
-            this.lblTelefonos.Location = new System.Drawing.Point(24, 64);
-            this.lblTelefonos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefonos.Location = new System.Drawing.Point(18, 52);
             this.lblTelefonos.Name = "lblTelefonos";
-            this.lblTelefonos.Size = new System.Drawing.Size(120, 17);
+            this.lblTelefonos.Size = new System.Drawing.Size(92, 13);
             this.lblTelefonos.TabIndex = 26;
             this.lblTelefonos.Text = "16. TELÉFONOS:";
             // 
             // lblJefe
             // 
             this.lblJefe.AutoSize = true;
-            this.lblJefe.Location = new System.Drawing.Point(24, 31);
-            this.lblJefe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJefe.Location = new System.Drawing.Point(18, 25);
             this.lblJefe.Name = "lblJefe";
-            this.lblJefe.Size = new System.Drawing.Size(160, 17);
+            this.lblJefe.Size = new System.Drawing.Size(127, 13);
             this.lblJefe.TabIndex = 25;
             this.lblJefe.Text = "15. JEFE/A DE FAMILIA:";
             // 
@@ -992,84 +976,74 @@
             this.gbUbicacion.Controls.Add(this.lblCoordenadas);
             this.gbUbicacion.Controls.Add(this.lblCanton);
             this.gbUbicacion.Controls.Add(this.lblAldea);
-            this.gbUbicacion.Location = new System.Drawing.Point(15, 279);
-            this.gbUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbUbicacion.Location = new System.Drawing.Point(11, 227);
             this.gbUbicacion.Name = "gbUbicacion";
-            this.gbUbicacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbUbicacion.Size = new System.Drawing.Size(616, 286);
+            this.gbUbicacion.Size = new System.Drawing.Size(462, 232);
             this.gbUbicacion.TabIndex = 3;
             this.gbUbicacion.TabStop = false;
             this.gbUbicacion.Text = "UBICACIÓN GEOGRÁFICA DE LA VIVIENDA";
             // 
             // txtYGPS
             // 
-            this.txtYGPS.Location = new System.Drawing.Point(416, 124);
-            this.txtYGPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtYGPS.Location = new System.Drawing.Point(312, 101);
             this.txtYGPS.Name = "txtYGPS";
-            this.txtYGPS.Size = new System.Drawing.Size(105, 22);
+            this.txtYGPS.Size = new System.Drawing.Size(80, 20);
             this.txtYGPS.TabIndex = 37;
             // 
             // txtXGPS
             // 
-            this.txtXGPS.Location = new System.Drawing.Point(301, 124);
-            this.txtXGPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtXGPS.Location = new System.Drawing.Point(226, 101);
             this.txtXGPS.Name = "txtXGPS";
-            this.txtXGPS.Size = new System.Drawing.Size(105, 22);
+            this.txtXGPS.Size = new System.Drawing.Size(80, 20);
             this.txtXGPS.TabIndex = 36;
             // 
             // txtCanton
             // 
-            this.txtCanton.Location = new System.Drawing.Point(300, 92);
-            this.txtCanton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCanton.Location = new System.Drawing.Point(225, 75);
             this.txtCanton.Name = "txtCanton";
-            this.txtCanton.Size = new System.Drawing.Size(259, 22);
+            this.txtCanton.Size = new System.Drawing.Size(195, 20);
             this.txtCanton.TabIndex = 34;
             // 
             // txtAldea
             // 
-            this.txtAldea.Location = new System.Drawing.Point(300, 64);
-            this.txtAldea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAldea.Location = new System.Drawing.Point(225, 52);
             this.txtAldea.Name = "txtAldea";
-            this.txtAldea.Size = new System.Drawing.Size(259, 22);
+            this.txtAldea.Size = new System.Drawing.Size(195, 20);
             this.txtAldea.TabIndex = 33;
             // 
             // lblCoordenadas
             // 
             this.lblCoordenadas.AutoSize = true;
-            this.lblCoordenadas.Location = new System.Drawing.Point(19, 128);
-            this.lblCoordenadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCoordenadas.Location = new System.Drawing.Point(14, 104);
             this.lblCoordenadas.Name = "lblCoordenadas";
-            this.lblCoordenadas.Size = new System.Drawing.Size(176, 17);
+            this.lblCoordenadas.Size = new System.Drawing.Size(136, 13);
             this.lblCoordenadas.TabIndex = 32;
             this.lblCoordenadas.Text = "14. COORDENADAS GPS:";
             // 
             // lblCanton
             // 
             this.lblCanton.AutoSize = true;
-            this.lblCanton.Location = new System.Drawing.Point(17, 96);
-            this.lblCanton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCanton.Location = new System.Drawing.Point(13, 78);
             this.lblCanton.Name = "lblCanton";
-            this.lblCanton.Size = new System.Drawing.Size(219, 17);
+            this.lblCanton.Size = new System.Drawing.Size(174, 13);
             this.lblCanton.TabIndex = 30;
             this.lblCanton.Text = "12. CANTÓN/CASERIO/SECTOR:";
             // 
             // lblAldea
             // 
             this.lblAldea.AutoSize = true;
-            this.lblAldea.Location = new System.Drawing.Point(17, 64);
-            this.lblAldea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAldea.Location = new System.Drawing.Point(13, 52);
             this.lblAldea.Name = "lblAldea";
-            this.lblAldea.Size = new System.Drawing.Size(262, 17);
+            this.lblAldea.Size = new System.Drawing.Size(206, 13);
             this.lblAldea.TabIndex = 29;
             this.lblAldea.Text = "11. ALDEA RURAL/No. ZONA URBANA:";
             // 
             // pbLogo
             // 
             this.pbLogo.Image = global::TechoCeiva.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(33, 4);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Location = new System.Drawing.Point(25, 3);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(173, 50);
+            this.pbLogo.Size = new System.Drawing.Size(130, 41);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo.TabIndex = 5;
             this.pbLogo.TabStop = false;
@@ -1092,21 +1066,18 @@
             this.gbInfo.Controls.Add(this.dtpFecha);
             this.gbInfo.Controls.Add(this.lblFecha);
             this.gbInfo.Controls.Add(this.lblEncuestadores);
-            this.gbInfo.Location = new System.Drawing.Point(15, 62);
-            this.gbInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbInfo.Location = new System.Drawing.Point(11, 50);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbInfo.Size = new System.Drawing.Size(1231, 210);
+            this.gbInfo.Size = new System.Drawing.Size(923, 171);
             this.gbInfo.TabIndex = 2;
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "INFORMACIÓN GENERAL DEL ENCUESTAMIENTO";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(659, 26);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(494, 21);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(76, 55);
+            this.btnBuscar.Size = new System.Drawing.Size(57, 45);
             this.btnBuscar.TabIndex = 31;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -1116,10 +1087,9 @@
             this.cmbEncuestador2.DisplayMember = "Datos";
             this.cmbEncuestador2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEncuestador2.FormattingEnabled = true;
-            this.cmbEncuestador2.Location = new System.Drawing.Point(248, 57);
-            this.cmbEncuestador2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEncuestador2.Location = new System.Drawing.Point(186, 46);
             this.cmbEncuestador2.Name = "cmbEncuestador2";
-            this.cmbEncuestador2.Size = new System.Drawing.Size(401, 24);
+            this.cmbEncuestador2.Size = new System.Drawing.Size(302, 21);
             this.cmbEncuestador2.TabIndex = 30;
             this.cmbEncuestador2.ValueMember = "idVoluntarios";
             // 
@@ -1128,29 +1098,26 @@
             this.cmbEncuestador1.DisplayMember = "Datos";
             this.cmbEncuestador1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEncuestador1.FormattingEnabled = true;
-            this.cmbEncuestador1.Location = new System.Drawing.Point(248, 23);
-            this.cmbEncuestador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEncuestador1.Location = new System.Drawing.Point(186, 19);
             this.cmbEncuestador1.Name = "cmbEncuestador1";
-            this.cmbEncuestador1.Size = new System.Drawing.Size(401, 24);
+            this.cmbEncuestador1.Size = new System.Drawing.Size(302, 21);
             this.cmbEncuestador1.TabIndex = 29;
             this.cmbEncuestador1.ValueMember = "idVoluntarios";
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(768, 107);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObservaciones.Location = new System.Drawing.Point(576, 87);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(384, 79);
+            this.txtObservaciones.Size = new System.Drawing.Size(289, 65);
             this.txtObservaciones.TabIndex = 28;
             // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Location = new System.Drawing.Point(764, 84);
-            this.lblObservaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblObservaciones.Location = new System.Drawing.Point(573, 68);
             this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(279, 17);
+            this.lblObservaciones.Size = new System.Drawing.Size(216, 13);
             this.lblObservaciones.TabIndex = 27;
             this.lblObservaciones.Text = "9. OBSERVACIONES SOBRE EL ESTADO:";
             // 
@@ -1165,120 +1132,107 @@
             "No había nadie en casa",
             "Vivienda desocupada",
             "Indisposición"});
-            this.cmbEstadoEn.Location = new System.Drawing.Point(768, 42);
-            this.cmbEstadoEn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoEn.Location = new System.Drawing.Point(576, 34);
             this.cmbEstadoEn.Name = "cmbEstadoEn";
-            this.cmbEstadoEn.Size = new System.Drawing.Size(384, 24);
+            this.cmbEstadoEn.Size = new System.Drawing.Size(289, 21);
             this.cmbEstadoEn.TabIndex = 26;
             // 
             // lblEstadoEn
             // 
             this.lblEstadoEn.AutoSize = true;
-            this.lblEstadoEn.Location = new System.Drawing.Point(764, 20);
-            this.lblEstadoEn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstadoEn.Location = new System.Drawing.Point(573, 16);
             this.lblEstadoEn.Name = "lblEstadoEn";
-            this.lblEstadoEn.Size = new System.Drawing.Size(207, 17);
+            this.lblEstadoEn.Size = new System.Drawing.Size(161, 13);
             this.lblEstadoEn.TabIndex = 25;
             this.lblEstadoEn.Text = "8. ESTADO DE LA ENCUESTA:";
             // 
             // txtNombreEn
             // 
-            this.txtNombreEn.Location = new System.Drawing.Point(251, 162);
-            this.txtNombreEn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEn.Location = new System.Drawing.Point(188, 132);
             this.txtNombreEn.Name = "txtNombreEn";
-            this.txtNombreEn.Size = new System.Drawing.Size(399, 22);
+            this.txtNombreEn.Size = new System.Drawing.Size(300, 20);
             this.txtNombreEn.TabIndex = 24;
             // 
             // lblNombreEn
             // 
             this.lblNombreEn.AutoSize = true;
-            this.lblNombreEn.Location = new System.Drawing.Point(16, 166);
-            this.lblNombreEn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreEn.Location = new System.Drawing.Point(12, 135);
             this.lblNombreEn.Name = "lblNombreEn";
-            this.lblNombreEn.Size = new System.Drawing.Size(218, 17);
+            this.lblNombreEn.Size = new System.Drawing.Size(170, 13);
             this.lblNombreEn.TabIndex = 23;
             this.lblNombreEn.Text = "7. NOMBRE DEL ENCUESTADO:";
             // 
             // txtHoraF
             // 
-            this.txtHoraF.Location = new System.Drawing.Point(515, 126);
-            this.txtHoraF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraF.Location = new System.Drawing.Point(386, 102);
             this.txtHoraF.Name = "txtHoraF";
-            this.txtHoraF.Size = new System.Drawing.Size(135, 22);
+            this.txtHoraF.Size = new System.Drawing.Size(102, 20);
             this.txtHoraF.TabIndex = 22;
             // 
             // txtHoraI
             // 
-            this.txtHoraI.Location = new System.Drawing.Point(251, 130);
-            this.txtHoraI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraI.Location = new System.Drawing.Point(188, 106);
             this.txtHoraI.Name = "txtHoraI";
-            this.txtHoraI.Size = new System.Drawing.Size(135, 22);
+            this.txtHoraI.Size = new System.Drawing.Size(102, 20);
             this.txtHoraI.TabIndex = 21;
             // 
             // lblHoraF
             // 
             this.lblHoraF.AutoSize = true;
-            this.lblHoraF.Location = new System.Drawing.Point(407, 134);
-            this.lblHoraF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHoraF.Location = new System.Drawing.Point(305, 109);
             this.lblHoraF.Name = "lblHoraF";
-            this.lblHoraF.Size = new System.Drawing.Size(93, 17);
+            this.lblHoraF.Size = new System.Drawing.Size(73, 13);
             this.lblHoraF.TabIndex = 20;
             this.lblHoraF.Text = "6. HORA FIN:";
             // 
             // lblHoraI
             // 
             this.lblHoraI.AutoSize = true;
-            this.lblHoraI.Location = new System.Drawing.Point(17, 134);
-            this.lblHoraI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHoraI.Location = new System.Drawing.Point(13, 109);
             this.lblHoraI.Name = "lblHoraI";
-            this.lblHoraI.Size = new System.Drawing.Size(111, 17);
+            this.lblHoraI.Size = new System.Drawing.Size(88, 13);
             this.lblHoraI.TabIndex = 19;
             this.lblHoraI.Text = "5. HORA INICIO:";
             // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(251, 98);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Location = new System.Drawing.Point(188, 80);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(135, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(102, 20);
             this.dtpFecha.TabIndex = 18;
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(16, 107);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Location = new System.Drawing.Point(12, 87);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(151, 17);
+            this.lblFecha.Size = new System.Drawing.Size(118, 13);
             this.lblFecha.TabIndex = 17;
             this.lblFecha.Text = "4. FECHA ENCUESTA:";
             // 
             // lblEncuestadores
             // 
             this.lblEncuestadores.AutoSize = true;
-            this.lblEncuestadores.Location = new System.Drawing.Point(16, 28);
-            this.lblEncuestadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEncuestadores.Location = new System.Drawing.Point(12, 23);
             this.lblEncuestadores.Name = "lblEncuestadores";
-            this.lblEncuestadores.Size = new System.Drawing.Size(151, 17);
+            this.lblEncuestadores.Size = new System.Drawing.Size(118, 13);
             this.lblEncuestadores.TabIndex = 0;
             this.lblEncuestadores.Text = "1. ENCUESTADORES:";
             // 
             // txtCodigoHogar
             // 
-            this.txtCodigoHogar.Location = new System.Drawing.Point(999, 23);
-            this.txtCodigoHogar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoHogar.Location = new System.Drawing.Point(749, 19);
             this.txtCodigoHogar.Name = "txtCodigoHogar";
-            this.txtCodigoHogar.Size = new System.Drawing.Size(223, 22);
+            this.txtCodigoHogar.Size = new System.Drawing.Size(168, 20);
             this.txtCodigoHogar.TabIndex = 1;
             // 
             // lblCodigoHogar
             // 
             this.lblCodigoHogar.AutoSize = true;
-            this.lblCodigoHogar.Location = new System.Drawing.Point(859, 23);
-            this.lblCodigoHogar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigoHogar.Location = new System.Drawing.Point(644, 19);
             this.lblCodigoHogar.Name = "lblCodigoHogar";
-            this.lblCodigoHogar.Size = new System.Drawing.Size(116, 17);
+            this.lblCodigoHogar.Size = new System.Drawing.Size(87, 13);
             this.lblCodigoHogar.TabIndex = 0;
             this.lblCodigoHogar.Text = "Código del hogar";
             // 
@@ -1288,21 +1242,19 @@
             this.tbpS1.Controls.Add(this.btnAddS1);
             this.tbpS1.Controls.Add(this.pbNextS1);
             this.tbpS1.Controls.Add(this.gbS1);
-            this.tbpS1.Location = new System.Drawing.Point(4, 25);
-            this.tbpS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS1.Location = new System.Drawing.Point(4, 22);
             this.tbpS1.Name = "tbpS1";
-            this.tbpS1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS1.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS1.Size = new System.Drawing.Size(1332, 549);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
             this.tbpS1.UseVisualStyleBackColor = true;
             // 
             // btnRemS1
             // 
-            this.btnRemS1.Location = new System.Drawing.Point(1229, 94);
-            this.btnRemS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemS1.Location = new System.Drawing.Point(922, 76);
             this.btnRemS1.Name = "btnRemS1";
-            this.btnRemS1.Size = new System.Drawing.Size(35, 28);
+            this.btnRemS1.Size = new System.Drawing.Size(26, 23);
             this.btnRemS1.TabIndex = 11;
             this.btnRemS1.Text = "-";
             this.btnRemS1.UseVisualStyleBackColor = true;
@@ -1310,10 +1262,9 @@
             // 
             // btnAddS1
             // 
-            this.btnAddS1.Location = new System.Drawing.Point(1229, 58);
-            this.btnAddS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddS1.Location = new System.Drawing.Point(922, 47);
             this.btnAddS1.Name = "btnAddS1";
-            this.btnAddS1.Size = new System.Drawing.Size(35, 28);
+            this.btnAddS1.Size = new System.Drawing.Size(26, 23);
             this.btnAddS1.TabIndex = 10;
             this.btnAddS1.Text = "+";
             this.btnAddS1.UseVisualStyleBackColor = true;
@@ -1322,10 +1273,9 @@
             // pbNextS1
             // 
             this.pbNextS1.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbNextS1.Location = new System.Drawing.Point(1151, 590);
-            this.pbNextS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNextS1.Location = new System.Drawing.Point(863, 479);
             this.pbNextS1.Name = "pbNextS1";
-            this.pbNextS1.Size = new System.Drawing.Size(71, 73);
+            this.pbNextS1.Size = new System.Drawing.Size(53, 59);
             this.pbNextS1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNextS1.TabIndex = 7;
             this.pbNextS1.TabStop = false;
@@ -1334,11 +1284,9 @@
             // gbS1
             // 
             this.gbS1.Controls.Add(this.dgvS1);
-            this.gbS1.Location = new System.Drawing.Point(8, 7);
-            this.gbS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS1.Location = new System.Drawing.Point(6, 6);
             this.gbS1.Name = "gbS1";
-            this.gbS1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbS1.Size = new System.Drawing.Size(1217, 575);
+            this.gbS1.Size = new System.Drawing.Size(913, 467);
             this.gbS1.TabIndex = 1;
             this.gbS1.TabStop = false;
             this.gbS1.Text = "INTEGRANTES DEL HOGAR";
@@ -1355,10 +1303,9 @@
             this.dataGridViewComboBoxColumn1,
             this.dataGridViewComboBoxColumn2});
             this.dgvS1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS1.Location = new System.Drawing.Point(4, 19);
-            this.dgvS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS1.Location = new System.Drawing.Point(3, 16);
             this.dgvS1.Name = "dgvS1";
-            this.dgvS1.Size = new System.Drawing.Size(1209, 552);
+            this.dgvS1.Size = new System.Drawing.Size(907, 448);
             this.dgvS1.TabIndex = 0;
             this.dgvS1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvS1_CellClick);
             // 
@@ -1415,11 +1362,10 @@
             // 
             this.tbpS2.Controls.Add(this.pbNextS2);
             this.tbpS2.Controls.Add(this.gbS2);
-            this.tbpS2.Location = new System.Drawing.Point(4, 25);
-            this.tbpS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS2.Location = new System.Drawing.Point(4, 22);
             this.tbpS2.Name = "tbpS2";
-            this.tbpS2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS2.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS2.Size = new System.Drawing.Size(1332, 549);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
             this.tbpS2.UseVisualStyleBackColor = true;
@@ -1427,10 +1373,9 @@
             // pbNextS2
             // 
             this.pbNextS2.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbNextS2.Location = new System.Drawing.Point(1169, 577);
-            this.pbNextS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNextS2.Location = new System.Drawing.Point(877, 469);
             this.pbNextS2.Name = "pbNextS2";
-            this.pbNextS2.Size = new System.Drawing.Size(71, 73);
+            this.pbNextS2.Size = new System.Drawing.Size(53, 59);
             this.pbNextS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNextS2.TabIndex = 7;
             this.pbNextS2.TabStop = false;
@@ -1439,11 +1384,9 @@
             // gbS2
             // 
             this.gbS2.Controls.Add(this.dgvS2);
-            this.gbS2.Location = new System.Drawing.Point(8, 7);
-            this.gbS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS2.Location = new System.Drawing.Point(6, 6);
             this.gbS2.Name = "gbS2";
-            this.gbS2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbS2.Size = new System.Drawing.Size(1236, 562);
+            this.gbS2.Size = new System.Drawing.Size(927, 457);
             this.gbS2.TabIndex = 1;
             this.gbS2.TabStop = false;
             this.gbS2.Text = "CARACTERÍSTICAS DEMOGRÁFICAS DE LOS INTEGRANTES DEL HOGAR";
@@ -1462,10 +1405,9 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS2.Location = new System.Drawing.Point(4, 19);
-            this.dgvS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS2.Location = new System.Drawing.Point(3, 16);
             this.dgvS2.Name = "dgvS2";
-            this.dgvS2.Size = new System.Drawing.Size(1228, 539);
+            this.dgvS2.Size = new System.Drawing.Size(921, 438);
             this.dgvS2.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn5
@@ -1543,11 +1485,10 @@
             // 
             this.tbpS3.Controls.Add(this.pbNextS3);
             this.tbpS3.Controls.Add(this.gbS3);
-            this.tbpS3.Location = new System.Drawing.Point(4, 25);
-            this.tbpS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS3.Location = new System.Drawing.Point(4, 22);
             this.tbpS3.Name = "tbpS3";
-            this.tbpS3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS3.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS3.Size = new System.Drawing.Size(1332, 549);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
             this.tbpS3.UseVisualStyleBackColor = true;
@@ -1555,10 +1496,9 @@
             // pbNextS3
             // 
             this.pbNextS3.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbNextS3.Location = new System.Drawing.Point(1181, 580);
-            this.pbNextS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNextS3.Location = new System.Drawing.Point(886, 471);
             this.pbNextS3.Name = "pbNextS3";
-            this.pbNextS3.Size = new System.Drawing.Size(71, 73);
+            this.pbNextS3.Size = new System.Drawing.Size(53, 59);
             this.pbNextS3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNextS3.TabIndex = 8;
             this.pbNextS3.TabStop = false;
@@ -1567,11 +1507,9 @@
             // gbS3
             // 
             this.gbS3.Controls.Add(this.dgvS3);
-            this.gbS3.Location = new System.Drawing.Point(8, 7);
-            this.gbS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS3.Location = new System.Drawing.Point(6, 6);
             this.gbS3.Name = "gbS3";
-            this.gbS3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbS3.Size = new System.Drawing.Size(1261, 565);
+            this.gbS3.Size = new System.Drawing.Size(946, 459);
             this.gbS3.TabIndex = 1;
             this.gbS3.TabStop = false;
             this.gbS3.Text = "EDUCACIÓN (PARA TODOS LOS INTEGRANTES DEL HOGAR)";
@@ -1595,10 +1533,9 @@
             this.dataGridViewComboBoxColumn11,
             this.Column27});
             this.dgvS3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS3.Location = new System.Drawing.Point(4, 19);
-            this.dgvS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS3.Location = new System.Drawing.Point(3, 16);
             this.dgvS3.Name = "dgvS3";
-            this.dgvS3.Size = new System.Drawing.Size(1253, 542);
+            this.dgvS3.Size = new System.Drawing.Size(940, 440);
             this.dgvS3.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn11
@@ -1699,7 +1636,7 @@
             // dataGridViewComboBoxColumn10
             // 
             this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
-                "entro educativo?\t\t\t\t\t\t";
+    "entro educativo?\t\t\t\t\t\t";
             this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
             "Actualmente asiste\t\t\t\t\t",
             "No está en edad escolar aún\t\t\t\t\t",
@@ -1742,11 +1679,10 @@
             // 
             this.tbpS4.Controls.Add(this.pbS4_Siguiente);
             this.tbpS4.Controls.Add(this.groupBox4);
-            this.tbpS4.Location = new System.Drawing.Point(4, 25);
-            this.tbpS4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS4.Location = new System.Drawing.Point(4, 22);
             this.tbpS4.Name = "tbpS4";
-            this.tbpS4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS4.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS4.Size = new System.Drawing.Size(1332, 549);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
             this.tbpS4.UseVisualStyleBackColor = true;
@@ -1754,10 +1690,9 @@
             // pbS4_Siguiente
             // 
             this.pbS4_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS4_Siguiente.Location = new System.Drawing.Point(1673, 593);
-            this.pbS4_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS4_Siguiente.Location = new System.Drawing.Point(1255, 482);
             this.pbS4_Siguiente.Name = "pbS4_Siguiente";
-            this.pbS4_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS4_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS4_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS4_Siguiente.TabIndex = 10;
             this.pbS4_Siguiente.TabStop = false;
@@ -1766,11 +1701,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dgvS4);
-            this.groupBox4.Location = new System.Drawing.Point(8, 7);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(1776, 575);
+            this.groupBox4.Size = new System.Drawing.Size(1332, 467);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SALUD (PARA TODOS LOS INTEGRANTES DEL HOGAR)";
@@ -1792,10 +1725,9 @@
             this.Column6,
             this.Column7});
             this.dgvS4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS4.Location = new System.Drawing.Point(4, 19);
-            this.dgvS4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS4.Location = new System.Drawing.Point(3, 16);
             this.dgvS4.Name = "dgvS4";
-            this.dgvS4.Size = new System.Drawing.Size(1768, 552);
+            this.dgvS4.Size = new System.Drawing.Size(1326, 448);
             this.dgvS4.TabIndex = 0;
             // 
             // Column10
@@ -1841,7 +1773,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
-                "nar?";
+    "nar?";
             this.Column3.Items.AddRange(new object[] {
             "01. Si (especificar)",
             "02. No",
@@ -1921,11 +1853,10 @@
             // 
             this.tbpS5.Controls.Add(this.pbS5_Siguiente);
             this.tbpS5.Controls.Add(this.gbS5);
-            this.tbpS5.Location = new System.Drawing.Point(4, 25);
-            this.tbpS5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS5.Location = new System.Drawing.Point(4, 22);
             this.tbpS5.Name = "tbpS5";
-            this.tbpS5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS5.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS5.Size = new System.Drawing.Size(1332, 549);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
             this.tbpS5.UseVisualStyleBackColor = true;
@@ -1933,10 +1864,9 @@
             // pbS5_Siguiente
             // 
             this.pbS5_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS5_Siguiente.Location = new System.Drawing.Point(1640, 606);
-            this.pbS5_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS5_Siguiente.Location = new System.Drawing.Point(1230, 492);
             this.pbS5_Siguiente.Name = "pbS5_Siguiente";
-            this.pbS5_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS5_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS5_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS5_Siguiente.TabIndex = 11;
             this.pbS5_Siguiente.TabStop = false;
@@ -1945,11 +1875,9 @@
             // gbS5
             // 
             this.gbS5.Controls.Add(this.dgvS5);
-            this.gbS5.Location = new System.Drawing.Point(8, 7);
-            this.gbS5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS5.Location = new System.Drawing.Point(6, 6);
             this.gbS5.Name = "gbS5";
-            this.gbS5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbS5.Size = new System.Drawing.Size(1780, 590);
+            this.gbS5.Size = new System.Drawing.Size(1335, 479);
             this.gbS5.TabIndex = 0;
             this.gbS5.TabStop = false;
             this.gbS5.Text = "TRABAJO (PARA TODOS LOS INTEGRANTES DEL HOGAR)";
@@ -1974,10 +1902,9 @@
             this.Column22,
             this.Column23,
             this.Column24});
-            this.dgvS5.Location = new System.Drawing.Point(8, 23);
-            this.dgvS5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS5.Location = new System.Drawing.Point(6, 19);
             this.dgvS5.Name = "dgvS5";
-            this.dgvS5.Size = new System.Drawing.Size(1768, 535);
+            this.dgvS5.Size = new System.Drawing.Size(1326, 435);
             this.dgvS5.TabIndex = 0;
             // 
             // Column25
@@ -2011,7 +1938,7 @@
             // Column13
             // 
             this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
-                "ropia recientemente?";
+    "ropia recientemente?";
             this.Column13.Items.AddRange(new object[] {
             "01. Que haceres domésticos",
             "02. Cuidado de los hijo/as",
@@ -2101,7 +2028,7 @@
             // Column20
             // 
             this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
-                "ipal?";
+    "ipal?";
             this.Column20.Items.AddRange(new object[] {
             "01. Si (especificar)",
             "02. No",
@@ -2129,29 +2056,501 @@
             // Column24
             // 
             this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
-                "";
+    "";
             this.Column24.Name = "Column24";
             // 
             // tbpS6
             // 
             this.tbpS6.Controls.Add(this.gbS6);
             this.tbpS6.Controls.Add(this.pbS6_Siguiente);
-            this.tbpS6.Location = new System.Drawing.Point(4, 25);
-            this.tbpS6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS6.Location = new System.Drawing.Point(4, 22);
             this.tbpS6.Name = "tbpS6";
-            this.tbpS6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS6.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS6.Size = new System.Drawing.Size(1332, 549);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
             this.tbpS6.UseVisualStyleBackColor = true;
             // 
+            // gbS6
+            // 
+            this.gbS6.Controls.Add(this.groupBox16);
+            this.gbS6.Controls.Add(this.groupBox15);
+            this.gbS6.Controls.Add(this.groupBox14);
+            this.gbS6.Controls.Add(this.groupBox13);
+            this.gbS6.Controls.Add(this.groupBox12);
+            this.gbS6.Controls.Add(this.groupBox11);
+            this.gbS6.Controls.Add(this.groupBox10);
+            this.gbS6.Controls.Add(this.groupBox9);
+            this.gbS6.Controls.Add(this.groupBox8);
+            this.gbS6.Controls.Add(this.groupBox7);
+            this.gbS6.Controls.Add(this.groupBox6);
+            this.gbS6.Location = new System.Drawing.Point(3, 0);
+            this.gbS6.Name = "gbS6";
+            this.gbS6.Size = new System.Drawing.Size(1328, 487);
+            this.gbS6.TabIndex = 13;
+            this.gbS6.TabStop = false;
+            this.gbS6.Text = "INGRESOS DEL HOGAR";
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.lblS6_11_FaltaDinero);
+            this.groupBox16.Controls.Add(this.chlbS6_11_CubrirFaltaDinero);
+            this.groupBox16.Controls.Add(this.lblS6_11_Especificar);
+            this.groupBox16.Controls.Add(this.txtS6_11_EspecificarFaltaDinero);
+            this.groupBox16.Location = new System.Drawing.Point(975, 177);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(300, 242);
+            this.groupBox16.TabIndex = 10;
+            this.groupBox16.TabStop = false;
+            // 
+            // lblS6_11_FaltaDinero
+            // 
+            this.lblS6_11_FaltaDinero.AutoSize = true;
+            this.lblS6_11_FaltaDinero.Location = new System.Drawing.Point(19, 26);
+            this.lblS6_11_FaltaDinero.Name = "lblS6_11_FaltaDinero";
+            this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(254, 39);
+            this.lblS6_11_FaltaDinero.TabIndex = 25;
+            this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero \r\n      en los últimos doce m" +
+    "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
+            // 
+            // chlbS6_11_CubrirFaltaDinero
+            // 
+            this.chlbS6_11_CubrirFaltaDinero.FormattingEnabled = true;
+            this.chlbS6_11_CubrirFaltaDinero.Items.AddRange(new object[] {
+            "Recorte de gastos / Ajuste de presupuesto",
+            "Endeudamiento o préstamo",
+            "Vendiendo algo del hogar (televisor, radio, etc.)",
+            "Trabajos ocasionales",
+            "Ahorros",
+            "Ayuda familiar",
+            "Apoyos del Estado",
+            "Otro (especifique)",
+            "NS/NR"});
+            this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(21, 80);
+            this.chlbS6_11_CubrirFaltaDinero.Name = "chlbS6_11_CubrirFaltaDinero";
+            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(249, 124);
+            this.chlbS6_11_CubrirFaltaDinero.TabIndex = 10;
+            // 
+            // lblS6_11_Especificar
+            // 
+            this.lblS6_11_Especificar.AutoSize = true;
+            this.lblS6_11_Especificar.Location = new System.Drawing.Point(24, 217);
+            this.lblS6_11_Especificar.Name = "lblS6_11_Especificar";
+            this.lblS6_11_Especificar.Size = new System.Drawing.Size(62, 13);
+            this.lblS6_11_Especificar.TabIndex = 4;
+            this.lblS6_11_Especificar.Text = "Especificar:";
+            // 
+            // txtS6_11_EspecificarFaltaDinero
+            // 
+            this.txtS6_11_EspecificarFaltaDinero.Location = new System.Drawing.Point(92, 214);
+            this.txtS6_11_EspecificarFaltaDinero.Multiline = true;
+            this.txtS6_11_EspecificarFaltaDinero.Name = "txtS6_11_EspecificarFaltaDinero";
+            this.txtS6_11_EspecificarFaltaDinero.Size = new System.Drawing.Size(178, 23);
+            this.txtS6_11_EspecificarFaltaDinero.TabIndex = 2;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.lblS6_10_Gastos);
+            this.groupBox15.Controls.Add(this.txtS6_10_CantiGastosaIngresos);
+            this.groupBox15.Controls.Add(this.lblS6_10_QGastos);
+            this.groupBox15.Location = new System.Drawing.Point(975, 29);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(300, 142);
+            this.groupBox15.TabIndex = 9;
+            this.groupBox15.TabStop = false;
+            // 
+            // lblS6_10_Gastos
+            // 
+            this.lblS6_10_Gastos.AutoSize = true;
+            this.lblS6_10_Gastos.Location = new System.Drawing.Point(18, 19);
+            this.lblS6_10_Gastos.Name = "lblS6_10_Gastos";
+            this.lblS6_10_Gastos.Size = new System.Drawing.Size(262, 52);
+            this.lblS6_10_Gastos.TabIndex = 24;
+            this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido \r\n      suficientes para cubri" +
+    "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
+    "\r\n      ingresos?";
+            // 
+            // txtS6_10_CantiGastosaIngresos
+            // 
+            this.txtS6_10_CantiGastosaIngresos.Location = new System.Drawing.Point(42, 100);
+            this.txtS6_10_CantiGastosaIngresos.Multiline = true;
+            this.txtS6_10_CantiGastosaIngresos.Name = "txtS6_10_CantiGastosaIngresos";
+            this.txtS6_10_CantiGastosaIngresos.Size = new System.Drawing.Size(228, 23);
+            this.txtS6_10_CantiGastosaIngresos.TabIndex = 2;
+            // 
+            // lblS6_10_QGastos
+            // 
+            this.lblS6_10_QGastos.AutoSize = true;
+            this.lblS6_10_QGastos.Location = new System.Drawing.Point(18, 105);
+            this.lblS6_10_QGastos.Name = "lblS6_10_QGastos";
+            this.lblS6_10_QGastos.Size = new System.Drawing.Size(18, 13);
+            this.lblS6_10_QGastos.TabIndex = 1;
+            this.lblS6_10_QGastos.Text = "Q.";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.lblS6_9_CantidadAhorro);
+            this.groupBox14.Controls.Add(this.txtS6_9_CantiAhorro);
+            this.groupBox14.Controls.Add(this.lblS6_9_QAhorro);
+            this.groupBox14.Location = new System.Drawing.Point(669, 279);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(300, 119);
+            this.groupBox14.TabIndex = 8;
+            this.groupBox14.TabStop = false;
+            // 
+            // lblS6_9_CantidadAhorro
+            // 
+            this.lblS6_9_CantidadAhorro.AutoSize = true;
+            this.lblS6_9_CantidadAhorro.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_9_CantidadAhorro.Name = "lblS6_9_CantidadAhorro";
+            this.lblS6_9_CantidadAhorro.Size = new System.Drawing.Size(247, 26);
+            this.lblS6_9_CantidadAhorro.TabIndex = 23;
+            this.lblS6_9_CantidadAhorro.Text = "9. Mensualmente, ¿cuál es el monto promedio que \r\n    logran ahorrar en el hogar?" +
+    "";
+            // 
+            // txtS6_9_CantiAhorro
+            // 
+            this.txtS6_9_CantiAhorro.Location = new System.Drawing.Point(52, 73);
+            this.txtS6_9_CantiAhorro.Multiline = true;
+            this.txtS6_9_CantiAhorro.Name = "txtS6_9_CantiAhorro";
+            this.txtS6_9_CantiAhorro.Size = new System.Drawing.Size(218, 23);
+            this.txtS6_9_CantiAhorro.TabIndex = 2;
+            // 
+            // lblS6_9_QAhorro
+            // 
+            this.lblS6_9_QAhorro.AutoSize = true;
+            this.lblS6_9_QAhorro.Location = new System.Drawing.Point(28, 76);
+            this.lblS6_9_QAhorro.Name = "lblS6_9_QAhorro";
+            this.lblS6_9_QAhorro.Size = new System.Drawing.Size(18, 13);
+            this.lblS6_9_QAhorro.TabIndex = 1;
+            this.lblS6_9_QAhorro.Text = "Q.";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.lblS6_8_Ahorro);
+            this.groupBox13.Controls.Add(this.cbxS6_8_AhorroMensual);
+            this.groupBox13.Location = new System.Drawing.Point(669, 154);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(300, 119);
+            this.groupBox13.TabIndex = 7;
+            this.groupBox13.TabStop = false;
+            // 
+            // lblS6_8_Ahorro
+            // 
+            this.lblS6_8_Ahorro.AutoSize = true;
+            this.lblS6_8_Ahorro.Location = new System.Drawing.Point(19, 23);
+            this.lblS6_8_Ahorro.Name = "lblS6_8_Ahorro";
+            this.lblS6_8_Ahorro.Size = new System.Drawing.Size(261, 39);
+            this.lblS6_8_Ahorro.TabIndex = 22;
+            this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han \r\n    sido suficientes. ¿Han " +
+    "logrado en ese caso generar\r\n    un ahorro mensual?";
+            // 
+            // cbxS6_8_AhorroMensual
+            // 
+            this.cbxS6_8_AhorroMensual.FormattingEnabled = true;
+            this.cbxS6_8_AhorroMensual.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "NS/NR"});
+            this.cbxS6_8_AhorroMensual.Location = new System.Drawing.Point(21, 78);
+            this.cbxS6_8_AhorroMensual.Name = "cbxS6_8_AhorroMensual";
+            this.cbxS6_8_AhorroMensual.Size = new System.Drawing.Size(249, 21);
+            this.cbxS6_8_AhorroMensual.TabIndex = 3;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.lblS6_7_CubrirGastos);
+            this.groupBox12.Controls.Add(this.cbxS6_7_CubrenGasto);
+            this.groupBox12.Location = new System.Drawing.Point(669, 29);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(300, 119);
+            this.groupBox12.TabIndex = 6;
+            this.groupBox12.TabStop = false;
+            // 
+            // lblS6_7_CubrirGastos
+            // 
+            this.lblS6_7_CubrirGastos.AutoSize = true;
+            this.lblS6_7_CubrirGastos.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_7_CubrirGastos.Name = "lblS6_7_CubrirGastos";
+            this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(255, 26);
+            this.lblS6_7_CubrirGastos.TabIndex = 21;
+            this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del \r\n     hogar han sido sufi" +
+    "cientes para cubrir su gastos?";
+            // 
+            // cbxS6_7_CubrenGasto
+            // 
+            this.cbxS6_7_CubrenGasto.FormattingEnabled = true;
+            this.cbxS6_7_CubrenGasto.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "Iguales",
+            "NS/NR"});
+            this.cbxS6_7_CubrenGasto.Location = new System.Drawing.Point(21, 82);
+            this.cbxS6_7_CubrenGasto.Name = "cbxS6_7_CubrenGasto";
+            this.cbxS6_7_CubrenGasto.Size = new System.Drawing.Size(249, 21);
+            this.cbxS6_7_CubrenGasto.TabIndex = 3;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.lblS6_6_IngresoTotal);
+            this.groupBox11.Controls.Add(this.txtS6_6_IngresoTotal);
+            this.groupBox11.Controls.Add(this.lblS6_6_QIngresosTotales);
+            this.groupBox11.Location = new System.Drawing.Point(363, 279);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(300, 119);
+            this.groupBox11.TabIndex = 5;
+            this.groupBox11.TabStop = false;
+            // 
+            // lblS6_6_IngresoTotal
+            // 
+            this.lblS6_6_IngresoTotal.AutoSize = true;
+            this.lblS6_6_IngresoTotal.Location = new System.Drawing.Point(18, 19);
+            this.lblS6_6_IngresoTotal.Name = "lblS6_6_IngresoTotal";
+            this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(240, 39);
+            this.lblS6_6_IngresoTotal.TabIndex = 20;
+            this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el\r\n     trabajo de todos los in" +
+    "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
+            // 
+            // txtS6_6_IngresoTotal
+            // 
+            this.txtS6_6_IngresoTotal.Location = new System.Drawing.Point(42, 80);
+            this.txtS6_6_IngresoTotal.Multiline = true;
+            this.txtS6_6_IngresoTotal.Name = "txtS6_6_IngresoTotal";
+            this.txtS6_6_IngresoTotal.Size = new System.Drawing.Size(228, 23);
+            this.txtS6_6_IngresoTotal.TabIndex = 2;
+            // 
+            // lblS6_6_QIngresosTotales
+            // 
+            this.lblS6_6_QIngresosTotales.AutoSize = true;
+            this.lblS6_6_QIngresosTotales.Location = new System.Drawing.Point(18, 83);
+            this.lblS6_6_QIngresosTotales.Name = "lblS6_6_QIngresosTotales";
+            this.lblS6_6_QIngresosTotales.Size = new System.Drawing.Size(18, 13);
+            this.lblS6_6_QIngresosTotales.TabIndex = 1;
+            this.lblS6_6_QIngresosTotales.Text = "Q.";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.lblS6_5_TiempoDeuda);
+            this.groupBox10.Controls.Add(this.cbxS6_5_TiempoPagoDeuda);
+            this.groupBox10.Location = new System.Drawing.Point(363, 154);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(300, 119);
+            this.groupBox10.TabIndex = 4;
+            this.groupBox10.TabStop = false;
+            // 
+            // lblS6_5_TiempoDeuda
+            // 
+            this.lblS6_5_TiempoDeuda.AutoSize = true;
+            this.lblS6_5_TiempoDeuda.Location = new System.Drawing.Point(19, 23);
+            this.lblS6_5_TiempoDeuda.Name = "lblS6_5_TiempoDeuda";
+            this.lblS6_5_TiempoDeuda.Size = new System.Drawing.Size(210, 13);
+            this.lblS6_5_TiempoDeuda.TabIndex = 19;
+            this.lblS6_5_TiempoDeuda.Text = "5. ¿Cada cuanto tiempo paga sus deudas?";
+            // 
+            // cbxS6_5_TiempoPagoDeuda
+            // 
+            this.cbxS6_5_TiempoPagoDeuda.FormattingEnabled = true;
+            this.cbxS6_5_TiempoPagoDeuda.Items.AddRange(new object[] {
+            "Todos los meses",
+            "Una vez cada tres meses",
+            "Una vez cada seis meses",
+            "No las paga",
+            "NS/NR"});
+            this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(21, 73);
+            this.cbxS6_5_TiempoPagoDeuda.Name = "cbxS6_5_TiempoPagoDeuda";
+            this.cbxS6_5_TiempoPagoDeuda.Size = new System.Drawing.Size(249, 21);
+            this.cbxS6_5_TiempoPagoDeuda.TabIndex = 3;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.lblS6_4_CantiDeudas);
+            this.groupBox9.Controls.Add(this.lblS6_4_Valor0);
+            this.groupBox9.Controls.Add(this.txtS6_4_CantiDeuda);
+            this.groupBox9.Controls.Add(this.lblS6_4_QDeuda);
+            this.groupBox9.Location = new System.Drawing.Point(363, 29);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(300, 119);
+            this.groupBox9.TabIndex = 3;
+            this.groupBox9.TabStop = false;
+            // 
+            // lblS6_4_CantiDeudas
+            // 
+            this.lblS6_4_CantiDeudas.AutoSize = true;
+            this.lblS6_4_CantiDeudas.Location = new System.Drawing.Point(9, 19);
+            this.lblS6_4_CantiDeudas.Name = "lblS6_4_CantiDeudas";
+            this.lblS6_4_CantiDeudas.Size = new System.Drawing.Size(260, 26);
+            this.lblS6_4_CantiDeudas.TabIndex = 18;
+            this.lblS6_4_CantiDeudas.Text = "4. ¿A cuánto dinero, aproximadamente, equivalen sus\r\n    deudas?";
+            // 
+            // lblS6_4_Valor0
+            // 
+            this.lblS6_4_Valor0.AutoSize = true;
+            this.lblS6_4_Valor0.Location = new System.Drawing.Point(32, 64);
+            this.lblS6_4_Valor0.Name = "lblS6_4_Valor0";
+            this.lblS6_4_Valor0.Size = new System.Drawing.Size(228, 13);
+            this.lblS6_4_Valor0.TabIndex = 3;
+            this.lblS6_4_Valor0.Text = "SI NO TIENE DEUDAS, COLOCAR VALOR \'0\'";
+            // 
+            // txtS6_4_CantiDeuda
+            // 
+            this.txtS6_4_CantiDeuda.Location = new System.Drawing.Point(56, 84);
+            this.txtS6_4_CantiDeuda.Multiline = true;
+            this.txtS6_4_CantiDeuda.Name = "txtS6_4_CantiDeuda";
+            this.txtS6_4_CantiDeuda.Size = new System.Drawing.Size(206, 23);
+            this.txtS6_4_CantiDeuda.TabIndex = 2;
+            // 
+            // lblS6_4_QDeuda
+            // 
+            this.lblS6_4_QDeuda.AutoSize = true;
+            this.lblS6_4_QDeuda.Location = new System.Drawing.Point(32, 87);
+            this.lblS6_4_QDeuda.Name = "lblS6_4_QDeuda";
+            this.lblS6_4_QDeuda.Size = new System.Drawing.Size(18, 13);
+            this.lblS6_4_QDeuda.TabIndex = 1;
+            this.lblS6_4_QDeuda.Text = "Q.";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblS6_3_Deuda);
+            this.groupBox8.Controls.Add(this.cbxS6_3_Deuda);
+            this.groupBox8.Location = new System.Drawing.Point(57, 279);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(300, 119);
+            this.groupBox8.TabIndex = 2;
+            this.groupBox8.TabStop = false;
+            // 
+            // lblS6_3_Deuda
+            // 
+            this.lblS6_3_Deuda.AutoSize = true;
+            this.lblS6_3_Deuda.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_3_Deuda.Name = "lblS6_3_Deuda";
+            this.lblS6_3_Deuda.Size = new System.Drawing.Size(247, 26);
+            this.lblS6_3_Deuda.TabIndex = 18;
+            this.lblS6_3_Deuda.Text = "3. Actualmente, ¿En su familia se mantiene alguna \r\n    deuda?\r\n";
+            // 
+            // cbxS6_3_Deuda
+            // 
+            this.cbxS6_3_Deuda.FormattingEnabled = true;
+            this.cbxS6_3_Deuda.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "NS/NR"});
+            this.cbxS6_3_Deuda.Location = new System.Drawing.Point(21, 73);
+            this.cbxS6_3_Deuda.Name = "cbxS6_3_Deuda";
+            this.cbxS6_3_Deuda.Size = new System.Drawing.Size(249, 21);
+            this.cbxS6_3_Deuda.TabIndex = 3;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.lblS6_2_IngresosRemesas);
+            this.groupBox7.Controls.Add(this.cbxS6_2_IngRemesas);
+            this.groupBox7.Controls.Add(this.txtS6_2_CantidadRemesas);
+            this.groupBox7.Controls.Add(this.lblS6_2_QRemesas);
+            this.groupBox7.Location = new System.Drawing.Point(57, 154);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(300, 119);
+            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabStop = false;
+            // 
+            // lblS6_2_IngresosRemesas
+            // 
+            this.lblS6_2_IngresosRemesas.AutoSize = true;
+            this.lblS6_2_IngresosRemesas.Location = new System.Drawing.Point(19, 23);
+            this.lblS6_2_IngresosRemesas.Name = "lblS6_2_IngresosRemesas";
+            this.lblS6_2_IngresosRemesas.Size = new System.Drawing.Size(252, 26);
+            this.lblS6_2_IngresosRemesas.TabIndex = 17;
+            this.lblS6_2_IngresosRemesas.Text = "2. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por remesas? ¿qué cant" +
+    "idad?\r\n";
+            // 
+            // cbxS6_2_IngRemesas
+            // 
+            this.cbxS6_2_IngRemesas.FormattingEnabled = true;
+            this.cbxS6_2_IngRemesas.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "NS/NR"});
+            this.cbxS6_2_IngRemesas.Location = new System.Drawing.Point(21, 73);
+            this.cbxS6_2_IngRemesas.Name = "cbxS6_2_IngRemesas";
+            this.cbxS6_2_IngRemesas.Size = new System.Drawing.Size(125, 21);
+            this.cbxS6_2_IngRemesas.TabIndex = 3;
+            // 
+            // txtS6_2_CantidadRemesas
+            // 
+            this.txtS6_2_CantidadRemesas.Enabled = false;
+            this.txtS6_2_CantidadRemesas.Location = new System.Drawing.Point(183, 73);
+            this.txtS6_2_CantidadRemesas.Multiline = true;
+            this.txtS6_2_CantidadRemesas.Name = "txtS6_2_CantidadRemesas";
+            this.txtS6_2_CantidadRemesas.Size = new System.Drawing.Size(87, 23);
+            this.txtS6_2_CantidadRemesas.TabIndex = 2;
+            // 
+            // lblS6_2_QRemesas
+            // 
+            this.lblS6_2_QRemesas.AutoSize = true;
+            this.lblS6_2_QRemesas.Enabled = false;
+            this.lblS6_2_QRemesas.Location = new System.Drawing.Point(163, 76);
+            this.lblS6_2_QRemesas.Name = "lblS6_2_QRemesas";
+            this.lblS6_2_QRemesas.Size = new System.Drawing.Size(18, 13);
+            this.lblS6_2_QRemesas.TabIndex = 1;
+            this.lblS6_2_QRemesas.Text = "Q.";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.lblS6_1_IngresosEstado);
+            this.groupBox6.Controls.Add(this.cbxS6_1_IngEstado);
+            this.groupBox6.Controls.Add(this.txtS6_1_CantidadIngEstado);
+            this.groupBox6.Controls.Add(this.lblS6_1_QEstado);
+            this.groupBox6.Location = new System.Drawing.Point(57, 29);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(300, 119);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            // 
+            // lblS6_1_IngresosEstado
+            // 
+            this.lblS6_1_IngresosEstado.AutoSize = true;
+            this.lblS6_1_IngresosEstado.Location = new System.Drawing.Point(19, 19);
+            this.lblS6_1_IngresosEstado.Name = "lblS6_1_IngresosEstado";
+            this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(260, 26);
+            this.lblS6_1_IngresosEstado.TabIndex = 16;
+            this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por apoyo del Estado (" +
+    "programas)? ¿qué cantidad?\r\n";
+            // 
+            // cbxS6_1_IngEstado
+            // 
+            this.cbxS6_1_IngEstado.FormattingEnabled = true;
+            this.cbxS6_1_IngEstado.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "NS/NR"});
+            this.cbxS6_1_IngEstado.Location = new System.Drawing.Point(21, 73);
+            this.cbxS6_1_IngEstado.Name = "cbxS6_1_IngEstado";
+            this.cbxS6_1_IngEstado.Size = new System.Drawing.Size(125, 21);
+            this.cbxS6_1_IngEstado.TabIndex = 3;
+            // 
+            // txtS6_1_CantidadIngEstado
+            // 
+            this.txtS6_1_CantidadIngEstado.Enabled = false;
+            this.txtS6_1_CantidadIngEstado.Location = new System.Drawing.Point(183, 73);
+            this.txtS6_1_CantidadIngEstado.Multiline = true;
+            this.txtS6_1_CantidadIngEstado.Name = "txtS6_1_CantidadIngEstado";
+            this.txtS6_1_CantidadIngEstado.Size = new System.Drawing.Size(87, 23);
+            this.txtS6_1_CantidadIngEstado.TabIndex = 2;
+            // 
+            // lblS6_1_QEstado
+            // 
+            this.lblS6_1_QEstado.AutoSize = true;
+            this.lblS6_1_QEstado.Enabled = false;
+            this.lblS6_1_QEstado.Location = new System.Drawing.Point(163, 76);
+            this.lblS6_1_QEstado.Name = "lblS6_1_QEstado";
+            this.lblS6_1_QEstado.Size = new System.Drawing.Size(18, 13);
+            this.lblS6_1_QEstado.TabIndex = 1;
+            this.lblS6_1_QEstado.Text = "Q.";
+            // 
             // pbS6_Siguiente
             // 
             this.pbS6_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS6_Siguiente.Location = new System.Drawing.Point(1593, 603);
-            this.pbS6_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS6_Siguiente.Location = new System.Drawing.Point(1195, 490);
             this.pbS6_Siguiente.Name = "pbS6_Siguiente";
-            this.pbS6_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS6_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS6_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS6_Siguiente.TabIndex = 12;
             this.pbS6_Siguiente.TabStop = false;
@@ -2160,24 +2559,1485 @@
             // tbpS7
             // 
             this.tbpS7.Controls.Add(this.gbS7);
-            this.tbpS7.Location = new System.Drawing.Point(4, 25);
-            this.tbpS7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
-            this.tbpS7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS7.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS7.Size = new System.Drawing.Size(1332, 549);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
             this.tbpS7.UseVisualStyleBackColor = true;
+            // 
+            // gbS7
+            // 
+            this.gbS7.Controls.Add(this.pbS7_Siguiente);
+            this.gbS7.Controls.Add(this.groupBox24);
+            this.gbS7.Controls.Add(this.groupBox25);
+            this.gbS7.Controls.Add(this.groupBox23);
+            this.gbS7.Controls.Add(this.groupBox22);
+            this.gbS7.Controls.Add(this.groupBox21);
+            this.gbS7.Controls.Add(this.groupBox20);
+            this.gbS7.Controls.Add(this.groupBox19);
+            this.gbS7.Controls.Add(this.groupBox18);
+            this.gbS7.Location = new System.Drawing.Point(3, 3);
+            this.gbS7.Name = "gbS7";
+            this.gbS7.Size = new System.Drawing.Size(1332, 510);
+            this.gbS7.TabIndex = 1;
+            this.gbS7.TabStop = false;
+            this.gbS7.Text = "VIVIENDA";
+            // 
+            // pbS7_Siguiente
+            // 
+            this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS7_Siguiente.Location = new System.Drawing.Point(1218, 437);
+            this.pbS7_Siguiente.Name = "pbS7_Siguiente";
+            this.pbS7_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS7_Siguiente.TabIndex = 13;
+            this.pbS7_Siguiente.TabStop = false;
+            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click_1);
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.lblS7_8_MaterialPiso);
+            this.groupBox24.Controls.Add(this.gbS7_8_Tierra);
+            this.groupBox24.Controls.Add(this.gbS7_8_Madera);
+            this.groupBox24.Controls.Add(this.gbS7_8_LadrilloBarro);
+            this.groupBox24.Controls.Add(this.gbS7_8_Encementado);
+            this.groupBox24.Controls.Add(this.gbS7_8_EstadoPiso);
+            this.groupBox24.Location = new System.Drawing.Point(1005, 19);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(307, 332);
+            this.groupBox24.TabIndex = 8;
+            this.groupBox24.TabStop = false;
+            // 
+            // lblS7_8_MaterialPiso
+            // 
+            this.lblS7_8_MaterialPiso.AutoSize = true;
+            this.lblS7_8_MaterialPiso.Location = new System.Drawing.Point(10, 23);
+            this.lblS7_8_MaterialPiso.Name = "lblS7_8_MaterialPiso";
+            this.lblS7_8_MaterialPiso.Size = new System.Drawing.Size(269, 26);
+            this.lblS7_8_MaterialPiso.TabIndex = 16;
+            this.lblS7_8_MaterialPiso.Text = "8. OBSERVE y defina el tipo y el estado del material de \r\n    PISO de la vivienda" +
+    ".";
+            // 
+            // gbS7_8_Tierra
+            // 
+            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_MuyBueno);
+            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_Bueno);
+            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_Malo);
+            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_MuyMalo);
+            this.gbS7_8_Tierra.Controls.Add(this.label34);
+            this.gbS7_8_Tierra.Location = new System.Drawing.Point(5, 209);
+            this.gbS7_8_Tierra.Name = "gbS7_8_Tierra";
+            this.gbS7_8_Tierra.Size = new System.Drawing.Size(289, 37);
+            this.gbS7_8_Tierra.TabIndex = 17;
+            this.gbS7_8_Tierra.TabStop = false;
+            // 
+            // rbS7_84_MuyBueno
+            // 
+            this.rbS7_84_MuyBueno.AutoSize = true;
+            this.rbS7_84_MuyBueno.Location = new System.Drawing.Point(255, 13);
+            this.rbS7_84_MuyBueno.Name = "rbS7_84_MuyBueno";
+            this.rbS7_84_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_84_MuyBueno.TabIndex = 4;
+            this.rbS7_84_MuyBueno.TabStop = true;
+            this.rbS7_84_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_84_Bueno
+            // 
+            this.rbS7_84_Bueno.AutoSize = true;
+            this.rbS7_84_Bueno.Location = new System.Drawing.Point(203, 13);
+            this.rbS7_84_Bueno.Name = "rbS7_84_Bueno";
+            this.rbS7_84_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_84_Bueno.TabIndex = 3;
+            this.rbS7_84_Bueno.TabStop = true;
+            this.rbS7_84_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_84_Malo
+            // 
+            this.rbS7_84_Malo.AutoSize = true;
+            this.rbS7_84_Malo.Location = new System.Drawing.Point(160, 13);
+            this.rbS7_84_Malo.Name = "rbS7_84_Malo";
+            this.rbS7_84_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_84_Malo.TabIndex = 2;
+            this.rbS7_84_Malo.TabStop = true;
+            this.rbS7_84_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_84_MuyMalo
+            // 
+            this.rbS7_84_MuyMalo.AutoSize = true;
+            this.rbS7_84_MuyMalo.Location = new System.Drawing.Point(106, 13);
+            this.rbS7_84_MuyMalo.Name = "rbS7_84_MuyMalo";
+            this.rbS7_84_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_84_MuyMalo.TabIndex = 1;
+            this.rbS7_84_MuyMalo.TabStop = true;
+            this.rbS7_84_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(5, 13);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(46, 13);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "4. Tierra";
+            // 
+            // gbS7_8_Madera
+            // 
+            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_MuyBueno);
+            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_Bueno);
+            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_Malo);
+            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_MuyMalo);
+            this.gbS7_8_Madera.Controls.Add(this.label53);
+            this.gbS7_8_Madera.Location = new System.Drawing.Point(5, 172);
+            this.gbS7_8_Madera.Name = "gbS7_8_Madera";
+            this.gbS7_8_Madera.Size = new System.Drawing.Size(289, 37);
+            this.gbS7_8_Madera.TabIndex = 16;
+            this.gbS7_8_Madera.TabStop = false;
+            // 
+            // rbS7_83_MuyBueno
+            // 
+            this.rbS7_83_MuyBueno.AutoSize = true;
+            this.rbS7_83_MuyBueno.Location = new System.Drawing.Point(256, 13);
+            this.rbS7_83_MuyBueno.Name = "rbS7_83_MuyBueno";
+            this.rbS7_83_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_83_MuyBueno.TabIndex = 4;
+            this.rbS7_83_MuyBueno.TabStop = true;
+            this.rbS7_83_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_83_Bueno
+            // 
+            this.rbS7_83_Bueno.AutoSize = true;
+            this.rbS7_83_Bueno.Location = new System.Drawing.Point(204, 13);
+            this.rbS7_83_Bueno.Name = "rbS7_83_Bueno";
+            this.rbS7_83_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_83_Bueno.TabIndex = 3;
+            this.rbS7_83_Bueno.TabStop = true;
+            this.rbS7_83_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_83_Malo
+            // 
+            this.rbS7_83_Malo.AutoSize = true;
+            this.rbS7_83_Malo.Location = new System.Drawing.Point(161, 13);
+            this.rbS7_83_Malo.Name = "rbS7_83_Malo";
+            this.rbS7_83_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_83_Malo.TabIndex = 2;
+            this.rbS7_83_Malo.TabStop = true;
+            this.rbS7_83_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_83_MuyMalo
+            // 
+            this.rbS7_83_MuyMalo.AutoSize = true;
+            this.rbS7_83_MuyMalo.Location = new System.Drawing.Point(107, 13);
+            this.rbS7_83_MuyMalo.Name = "rbS7_83_MuyMalo";
+            this.rbS7_83_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_83_MuyMalo.TabIndex = 1;
+            this.rbS7_83_MuyMalo.TabStop = true;
+            this.rbS7_83_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(5, 13);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(55, 13);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "3. Madera";
+            // 
+            // gbS7_8_LadrilloBarro
+            // 
+            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_MuyBueno);
+            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_Bueno);
+            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_Malo);
+            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_MuyMalo);
+            this.gbS7_8_LadrilloBarro.Controls.Add(this.label54);
+            this.gbS7_8_LadrilloBarro.Location = new System.Drawing.Point(6, 134);
+            this.gbS7_8_LadrilloBarro.Name = "gbS7_8_LadrilloBarro";
+            this.gbS7_8_LadrilloBarro.Size = new System.Drawing.Size(288, 37);
+            this.gbS7_8_LadrilloBarro.TabIndex = 15;
+            this.gbS7_8_LadrilloBarro.TabStop = false;
+            // 
+            // rbS7_82_MuyBueno
+            // 
+            this.rbS7_82_MuyBueno.AutoSize = true;
+            this.rbS7_82_MuyBueno.Location = new System.Drawing.Point(257, 13);
+            this.rbS7_82_MuyBueno.Name = "rbS7_82_MuyBueno";
+            this.rbS7_82_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_82_MuyBueno.TabIndex = 4;
+            this.rbS7_82_MuyBueno.TabStop = true;
+            this.rbS7_82_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_82_Bueno
+            // 
+            this.rbS7_82_Bueno.AutoSize = true;
+            this.rbS7_82_Bueno.Location = new System.Drawing.Point(205, 13);
+            this.rbS7_82_Bueno.Name = "rbS7_82_Bueno";
+            this.rbS7_82_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_82_Bueno.TabIndex = 3;
+            this.rbS7_82_Bueno.TabStop = true;
+            this.rbS7_82_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_82_Malo
+            // 
+            this.rbS7_82_Malo.AutoSize = true;
+            this.rbS7_82_Malo.Location = new System.Drawing.Point(162, 13);
+            this.rbS7_82_Malo.Name = "rbS7_82_Malo";
+            this.rbS7_82_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_82_Malo.TabIndex = 2;
+            this.rbS7_82_Malo.TabStop = true;
+            this.rbS7_82_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_82_MuyMalo
+            // 
+            this.rbS7_82_MuyMalo.AutoSize = true;
+            this.rbS7_82_MuyMalo.Location = new System.Drawing.Point(108, 13);
+            this.rbS7_82_MuyMalo.Name = "rbS7_82_MuyMalo";
+            this.rbS7_82_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_82_MuyMalo.TabIndex = 1;
+            this.rbS7_82_MuyMalo.TabStop = true;
+            this.rbS7_82_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(4, 13);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(99, 13);
+            this.label54.TabIndex = 0;
+            this.label54.Text = "2. Ladrillos de barro";
+            // 
+            // gbS7_8_Encementado
+            // 
+            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_MuyBueno);
+            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_Bueno);
+            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_Malo);
+            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_MuyMalo);
+            this.gbS7_8_Encementado.Controls.Add(this.label55);
+            this.gbS7_8_Encementado.Location = new System.Drawing.Point(6, 97);
+            this.gbS7_8_Encementado.Name = "gbS7_8_Encementado";
+            this.gbS7_8_Encementado.Size = new System.Drawing.Size(288, 37);
+            this.gbS7_8_Encementado.TabIndex = 14;
+            this.gbS7_8_Encementado.TabStop = false;
+            // 
+            // rbS7_81_MuyBueno
+            // 
+            this.rbS7_81_MuyBueno.AutoSize = true;
+            this.rbS7_81_MuyBueno.Location = new System.Drawing.Point(256, 13);
+            this.rbS7_81_MuyBueno.Name = "rbS7_81_MuyBueno";
+            this.rbS7_81_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_81_MuyBueno.TabIndex = 4;
+            this.rbS7_81_MuyBueno.TabStop = true;
+            this.rbS7_81_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_81_Bueno
+            // 
+            this.rbS7_81_Bueno.AutoSize = true;
+            this.rbS7_81_Bueno.Location = new System.Drawing.Point(204, 13);
+            this.rbS7_81_Bueno.Name = "rbS7_81_Bueno";
+            this.rbS7_81_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_81_Bueno.TabIndex = 3;
+            this.rbS7_81_Bueno.TabStop = true;
+            this.rbS7_81_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_81_Malo
+            // 
+            this.rbS7_81_Malo.AutoSize = true;
+            this.rbS7_81_Malo.Location = new System.Drawing.Point(161, 13);
+            this.rbS7_81_Malo.Name = "rbS7_81_Malo";
+            this.rbS7_81_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_81_Malo.TabIndex = 2;
+            this.rbS7_81_Malo.TabStop = true;
+            this.rbS7_81_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_81_MuyMalo
+            // 
+            this.rbS7_81_MuyMalo.AutoSize = true;
+            this.rbS7_81_MuyMalo.Location = new System.Drawing.Point(108, 13);
+            this.rbS7_81_MuyMalo.Name = "rbS7_81_MuyMalo";
+            this.rbS7_81_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_81_MuyMalo.TabIndex = 1;
+            this.rbS7_81_MuyMalo.TabStop = true;
+            this.rbS7_81_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(3, 13);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(85, 13);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "1. Encementado";
+            // 
+            // gbS7_8_EstadoPiso
+            // 
+            this.gbS7_8_EstadoPiso.Controls.Add(this.label56);
+            this.gbS7_8_EstadoPiso.Controls.Add(this.label57);
+            this.gbS7_8_EstadoPiso.Controls.Add(this.label58);
+            this.gbS7_8_EstadoPiso.Controls.Add(this.label59);
+            this.gbS7_8_EstadoPiso.Location = new System.Drawing.Point(6, 67);
+            this.gbS7_8_EstadoPiso.Name = "gbS7_8_EstadoPiso";
+            this.gbS7_8_EstadoPiso.Size = new System.Drawing.Size(295, 29);
+            this.gbS7_8_EstadoPiso.TabIndex = 13;
+            this.gbS7_8_EstadoPiso.TabStop = false;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(192, 9);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(37, 13);
+            this.label56.TabIndex = 3;
+            this.label56.Text = "bueno";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(235, 9);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(59, 13);
+            this.label57.TabIndex = 2;
+            this.label57.Text = "muy bueno";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(153, 9);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(29, 13);
+            this.label58.TabIndex = 1;
+            this.label58.Text = "malo";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(90, 9);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(51, 13);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "muy malo";
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.lblS7_7_MaterialParedes);
+            this.groupBox25.Controls.Add(this.gbS7_7_Desechos);
+            this.groupBox25.Controls.Add(this.gbS7_7_BaharequeBambu);
+            this.groupBox25.Controls.Add(this.gbS7_7_Lamina);
+            this.groupBox25.Controls.Add(this.gbS7_7_Adobe);
+            this.groupBox25.Controls.Add(this.gbS7_7_Madera);
+            this.groupBox25.Controls.Add(this.gbS7_7_BlockLadriPrefabr);
+            this.groupBox25.Controls.Add(this.gbS7_7_EstadoParedes);
+            this.groupBox25.Location = new System.Drawing.Point(637, 10);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(362, 341);
+            this.groupBox25.TabIndex = 7;
+            this.groupBox25.TabStop = false;
+            // 
+            // lblS7_7_MaterialParedes
+            // 
+            this.lblS7_7_MaterialParedes.AutoSize = true;
+            this.lblS7_7_MaterialParedes.Location = new System.Drawing.Point(9, 19);
+            this.lblS7_7_MaterialParedes.Name = "lblS7_7_MaterialParedes";
+            this.lblS7_7_MaterialParedes.Size = new System.Drawing.Size(323, 26);
+            this.lblS7_7_MaterialParedes.TabIndex = 15;
+            this.lblS7_7_MaterialParedes.Text = "7. OBSERVE y defina el tipo y el estado del material de PAREDES \r\n     de la vivi" +
+    "enda.";
+            // 
+            // gbS7_7_Desechos
+            // 
+            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_MuyBueno);
+            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_Bueno);
+            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_Malo);
+            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_MuyMalo);
+            this.gbS7_7_Desechos.Controls.Add(this.label35);
+            this.gbS7_7_Desechos.Location = new System.Drawing.Point(11, 282);
+            this.gbS7_7_Desechos.Name = "gbS7_7_Desechos";
+            this.gbS7_7_Desechos.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Desechos.TabIndex = 14;
+            this.gbS7_7_Desechos.TabStop = false;
+            // 
+            // rbS7_76_MuyBueno
+            // 
+            this.rbS7_76_MuyBueno.AutoSize = true;
+            this.rbS7_76_MuyBueno.Location = new System.Drawing.Point(282, 13);
+            this.rbS7_76_MuyBueno.Name = "rbS7_76_MuyBueno";
+            this.rbS7_76_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_76_MuyBueno.TabIndex = 4;
+            this.rbS7_76_MuyBueno.TabStop = true;
+            this.rbS7_76_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_76_Bueno
+            // 
+            this.rbS7_76_Bueno.AutoSize = true;
+            this.rbS7_76_Bueno.Location = new System.Drawing.Point(230, 13);
+            this.rbS7_76_Bueno.Name = "rbS7_76_Bueno";
+            this.rbS7_76_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_76_Bueno.TabIndex = 3;
+            this.rbS7_76_Bueno.TabStop = true;
+            this.rbS7_76_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_76_Malo
+            // 
+            this.rbS7_76_Malo.AutoSize = true;
+            this.rbS7_76_Malo.Location = new System.Drawing.Point(187, 13);
+            this.rbS7_76_Malo.Name = "rbS7_76_Malo";
+            this.rbS7_76_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_76_Malo.TabIndex = 2;
+            this.rbS7_76_Malo.TabStop = true;
+            this.rbS7_76_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_76_MuyMalo
+            // 
+            this.rbS7_76_MuyMalo.AutoSize = true;
+            this.rbS7_76_MuyMalo.Location = new System.Drawing.Point(133, 13);
+            this.rbS7_76_MuyMalo.Name = "rbS7_76_MuyMalo";
+            this.rbS7_76_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_76_MuyMalo.TabIndex = 1;
+            this.rbS7_76_MuyMalo.TabStop = true;
+            this.rbS7_76_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(9, 13);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(67, 13);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "6. Desechos";
+            // 
+            // gbS7_7_BaharequeBambu
+            // 
+            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_MuyBueno);
+            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_Bueno);
+            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_Malo);
+            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_MuyMalo);
+            this.gbS7_7_BaharequeBambu.Controls.Add(this.label44);
+            this.gbS7_7_BaharequeBambu.Location = new System.Drawing.Point(11, 244);
+            this.gbS7_7_BaharequeBambu.Name = "gbS7_7_BaharequeBambu";
+            this.gbS7_7_BaharequeBambu.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_BaharequeBambu.TabIndex = 13;
+            this.gbS7_7_BaharequeBambu.TabStop = false;
+            // 
+            // rbS7_75_MuyBueno
+            // 
+            this.rbS7_75_MuyBueno.AutoSize = true;
+            this.rbS7_75_MuyBueno.Location = new System.Drawing.Point(282, 13);
+            this.rbS7_75_MuyBueno.Name = "rbS7_75_MuyBueno";
+            this.rbS7_75_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_75_MuyBueno.TabIndex = 4;
+            this.rbS7_75_MuyBueno.TabStop = true;
+            this.rbS7_75_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_75_Bueno
+            // 
+            this.rbS7_75_Bueno.AutoSize = true;
+            this.rbS7_75_Bueno.Location = new System.Drawing.Point(230, 13);
+            this.rbS7_75_Bueno.Name = "rbS7_75_Bueno";
+            this.rbS7_75_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_75_Bueno.TabIndex = 3;
+            this.rbS7_75_Bueno.TabStop = true;
+            this.rbS7_75_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_75_Malo
+            // 
+            this.rbS7_75_Malo.AutoSize = true;
+            this.rbS7_75_Malo.Location = new System.Drawing.Point(187, 13);
+            this.rbS7_75_Malo.Name = "rbS7_75_Malo";
+            this.rbS7_75_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_75_Malo.TabIndex = 2;
+            this.rbS7_75_Malo.TabStop = true;
+            this.rbS7_75_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_75_MuyMalo
+            // 
+            this.rbS7_75_MuyMalo.AutoSize = true;
+            this.rbS7_75_MuyMalo.Location = new System.Drawing.Point(133, 13);
+            this.rbS7_75_MuyMalo.Name = "rbS7_75_MuyMalo";
+            this.rbS7_75_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_75_MuyMalo.TabIndex = 1;
+            this.rbS7_75_MuyMalo.TabStop = true;
+            this.rbS7_75_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(9, 13);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(109, 13);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "5. Bahareque/Bambú";
+            // 
+            // gbS7_7_Lamina
+            // 
+            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_MuyBueno);
+            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_Bueno);
+            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_Malo);
+            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_MuyMalo);
+            this.gbS7_7_Lamina.Controls.Add(this.label45);
+            this.gbS7_7_Lamina.Location = new System.Drawing.Point(11, 207);
+            this.gbS7_7_Lamina.Name = "gbS7_7_Lamina";
+            this.gbS7_7_Lamina.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Lamina.TabIndex = 12;
+            this.gbS7_7_Lamina.TabStop = false;
+            // 
+            // rbS7_74_MuyBueno
+            // 
+            this.rbS7_74_MuyBueno.AutoSize = true;
+            this.rbS7_74_MuyBueno.Location = new System.Drawing.Point(282, 13);
+            this.rbS7_74_MuyBueno.Name = "rbS7_74_MuyBueno";
+            this.rbS7_74_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_74_MuyBueno.TabIndex = 4;
+            this.rbS7_74_MuyBueno.TabStop = true;
+            this.rbS7_74_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_74_Bueno
+            // 
+            this.rbS7_74_Bueno.AutoSize = true;
+            this.rbS7_74_Bueno.Location = new System.Drawing.Point(230, 13);
+            this.rbS7_74_Bueno.Name = "rbS7_74_Bueno";
+            this.rbS7_74_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_74_Bueno.TabIndex = 3;
+            this.rbS7_74_Bueno.TabStop = true;
+            this.rbS7_74_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_74_Malo
+            // 
+            this.rbS7_74_Malo.AutoSize = true;
+            this.rbS7_74_Malo.Location = new System.Drawing.Point(187, 13);
+            this.rbS7_74_Malo.Name = "rbS7_74_Malo";
+            this.rbS7_74_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_74_Malo.TabIndex = 2;
+            this.rbS7_74_Malo.TabStop = true;
+            this.rbS7_74_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_74_MuyMalo
+            // 
+            this.rbS7_74_MuyMalo.AutoSize = true;
+            this.rbS7_74_MuyMalo.Location = new System.Drawing.Point(133, 13);
+            this.rbS7_74_MuyMalo.Name = "rbS7_74_MuyMalo";
+            this.rbS7_74_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_74_MuyMalo.TabIndex = 1;
+            this.rbS7_74_MuyMalo.TabStop = true;
+            this.rbS7_74_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(9, 13);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(53, 13);
+            this.label45.TabIndex = 0;
+            this.label45.Text = "4. Lámina";
+            // 
+            // gbS7_7_Adobe
+            // 
+            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_MuyBueno);
+            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_Bueno);
+            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_Malo);
+            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_MuyMalo);
+            this.gbS7_7_Adobe.Controls.Add(this.label46);
+            this.gbS7_7_Adobe.Location = new System.Drawing.Point(11, 170);
+            this.gbS7_7_Adobe.Name = "gbS7_7_Adobe";
+            this.gbS7_7_Adobe.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Adobe.TabIndex = 11;
+            this.gbS7_7_Adobe.TabStop = false;
+            // 
+            // rbS7_73_MuyBueno
+            // 
+            this.rbS7_73_MuyBueno.AutoSize = true;
+            this.rbS7_73_MuyBueno.Location = new System.Drawing.Point(282, 13);
+            this.rbS7_73_MuyBueno.Name = "rbS7_73_MuyBueno";
+            this.rbS7_73_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_73_MuyBueno.TabIndex = 4;
+            this.rbS7_73_MuyBueno.TabStop = true;
+            this.rbS7_73_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_73_Bueno
+            // 
+            this.rbS7_73_Bueno.AutoSize = true;
+            this.rbS7_73_Bueno.Location = new System.Drawing.Point(230, 13);
+            this.rbS7_73_Bueno.Name = "rbS7_73_Bueno";
+            this.rbS7_73_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_73_Bueno.TabIndex = 3;
+            this.rbS7_73_Bueno.TabStop = true;
+            this.rbS7_73_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_73_Malo
+            // 
+            this.rbS7_73_Malo.AutoSize = true;
+            this.rbS7_73_Malo.Location = new System.Drawing.Point(187, 13);
+            this.rbS7_73_Malo.Name = "rbS7_73_Malo";
+            this.rbS7_73_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_73_Malo.TabIndex = 2;
+            this.rbS7_73_Malo.TabStop = true;
+            this.rbS7_73_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_73_MuyMalo
+            // 
+            this.rbS7_73_MuyMalo.AutoSize = true;
+            this.rbS7_73_MuyMalo.Location = new System.Drawing.Point(133, 13);
+            this.rbS7_73_MuyMalo.Name = "rbS7_73_MuyMalo";
+            this.rbS7_73_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_73_MuyMalo.TabIndex = 1;
+            this.rbS7_73_MuyMalo.TabStop = true;
+            this.rbS7_73_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(9, 13);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(50, 13);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "3. Adobe";
+            // 
+            // gbS7_7_Madera
+            // 
+            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_MuyBueno);
+            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_Bueno);
+            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_Malo);
+            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_MuyMalo);
+            this.gbS7_7_Madera.Controls.Add(this.label47);
+            this.gbS7_7_Madera.Location = new System.Drawing.Point(12, 132);
+            this.gbS7_7_Madera.Name = "gbS7_7_Madera";
+            this.gbS7_7_Madera.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Madera.TabIndex = 10;
+            this.gbS7_7_Madera.TabStop = false;
+            // 
+            // rbS7_72_MuyBueno
+            // 
+            this.rbS7_72_MuyBueno.AutoSize = true;
+            this.rbS7_72_MuyBueno.Location = new System.Drawing.Point(282, 13);
+            this.rbS7_72_MuyBueno.Name = "rbS7_72_MuyBueno";
+            this.rbS7_72_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_72_MuyBueno.TabIndex = 4;
+            this.rbS7_72_MuyBueno.TabStop = true;
+            this.rbS7_72_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_72_Bueno
+            // 
+            this.rbS7_72_Bueno.AutoSize = true;
+            this.rbS7_72_Bueno.Location = new System.Drawing.Point(230, 13);
+            this.rbS7_72_Bueno.Name = "rbS7_72_Bueno";
+            this.rbS7_72_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_72_Bueno.TabIndex = 3;
+            this.rbS7_72_Bueno.TabStop = true;
+            this.rbS7_72_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_72_Malo
+            // 
+            this.rbS7_72_Malo.AutoSize = true;
+            this.rbS7_72_Malo.Location = new System.Drawing.Point(187, 13);
+            this.rbS7_72_Malo.Name = "rbS7_72_Malo";
+            this.rbS7_72_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_72_Malo.TabIndex = 2;
+            this.rbS7_72_Malo.TabStop = true;
+            this.rbS7_72_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_72_MuyMalo
+            // 
+            this.rbS7_72_MuyMalo.AutoSize = true;
+            this.rbS7_72_MuyMalo.Location = new System.Drawing.Point(133, 13);
+            this.rbS7_72_MuyMalo.Name = "rbS7_72_MuyMalo";
+            this.rbS7_72_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_72_MuyMalo.TabIndex = 1;
+            this.rbS7_72_MuyMalo.TabStop = true;
+            this.rbS7_72_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(9, 13);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(55, 13);
+            this.label47.TabIndex = 0;
+            this.label47.Text = "2. Madera";
+            // 
+            // gbS7_7_BlockLadriPrefabr
+            // 
+            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_MuyBueno);
+            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_Bueno);
+            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_Malo);
+            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_MuyMalo);
+            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.label48);
+            this.gbS7_7_BlockLadriPrefabr.Location = new System.Drawing.Point(12, 95);
+            this.gbS7_7_BlockLadriPrefabr.Name = "gbS7_7_BlockLadriPrefabr";
+            this.gbS7_7_BlockLadriPrefabr.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_BlockLadriPrefabr.TabIndex = 9;
+            this.gbS7_7_BlockLadriPrefabr.TabStop = false;
+            // 
+            // rbS7_71_MuyBueno
+            // 
+            this.rbS7_71_MuyBueno.AutoSize = true;
+            this.rbS7_71_MuyBueno.Location = new System.Drawing.Point(282, 13);
+            this.rbS7_71_MuyBueno.Name = "rbS7_71_MuyBueno";
+            this.rbS7_71_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_71_MuyBueno.TabIndex = 4;
+            this.rbS7_71_MuyBueno.TabStop = true;
+            this.rbS7_71_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_71_Bueno
+            // 
+            this.rbS7_71_Bueno.AutoSize = true;
+            this.rbS7_71_Bueno.Location = new System.Drawing.Point(230, 13);
+            this.rbS7_71_Bueno.Name = "rbS7_71_Bueno";
+            this.rbS7_71_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_71_Bueno.TabIndex = 3;
+            this.rbS7_71_Bueno.TabStop = true;
+            this.rbS7_71_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_71_Malo
+            // 
+            this.rbS7_71_Malo.AutoSize = true;
+            this.rbS7_71_Malo.Location = new System.Drawing.Point(187, 13);
+            this.rbS7_71_Malo.Name = "rbS7_71_Malo";
+            this.rbS7_71_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_71_Malo.TabIndex = 2;
+            this.rbS7_71_Malo.TabStop = true;
+            this.rbS7_71_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_71_MuyMalo
+            // 
+            this.rbS7_71_MuyMalo.AutoSize = true;
+            this.rbS7_71_MuyMalo.Location = new System.Drawing.Point(134, 13);
+            this.rbS7_71_MuyMalo.Name = "rbS7_71_MuyMalo";
+            this.rbS7_71_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_71_MuyMalo.TabIndex = 1;
+            this.rbS7_71_MuyMalo.TabStop = true;
+            this.rbS7_71_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(9, 13);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(126, 13);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "1. Block/Ladrillo/Prefabr.";
+            // 
+            // gbS7_7_EstadoParedes
+            // 
+            this.gbS7_7_EstadoParedes.Controls.Add(this.label49);
+            this.gbS7_7_EstadoParedes.Controls.Add(this.label50);
+            this.gbS7_7_EstadoParedes.Controls.Add(this.label51);
+            this.gbS7_7_EstadoParedes.Controls.Add(this.label52);
+            this.gbS7_7_EstadoParedes.Location = new System.Drawing.Point(12, 65);
+            this.gbS7_7_EstadoParedes.Name = "gbS7_7_EstadoParedes";
+            this.gbS7_7_EstadoParedes.Size = new System.Drawing.Size(327, 29);
+            this.gbS7_7_EstadoParedes.TabIndex = 8;
+            this.gbS7_7_EstadoParedes.TabStop = false;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(218, 9);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(37, 13);
+            this.label49.TabIndex = 3;
+            this.label49.Text = "bueno";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(262, 9);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(59, 13);
+            this.label50.TabIndex = 2;
+            this.label50.Text = "muy bueno";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(179, 9);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(29, 13);
+            this.label51.TabIndex = 1;
+            this.label51.Text = "malo";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(114, 9);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(51, 13);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "muy malo";
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.lblS7_6_MaterialTecho);
+            this.groupBox23.Controls.Add(this.gbS7_6_Desechos);
+            this.groupBox23.Controls.Add(this.gbS7_6_Paja);
+            this.groupBox23.Controls.Add(this.gbS7_6_Duralita);
+            this.groupBox23.Controls.Add(this.gbS7_6_Lamina);
+            this.groupBox23.Controls.Add(this.gbS7_6_Barro);
+            this.groupBox23.Controls.Add(this.gbS7_6_Concreto);
+            this.groupBox23.Controls.Add(this.gbS7_6_EstadoTecho);
+            this.groupBox23.Location = new System.Drawing.Point(294, 204);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(336, 284);
+            this.groupBox23.TabIndex = 6;
+            this.groupBox23.TabStop = false;
+            // 
+            // lblS7_6_MaterialTecho
+            // 
+            this.lblS7_6_MaterialTecho.AutoSize = true;
+            this.lblS7_6_MaterialTecho.Location = new System.Drawing.Point(10, 15);
+            this.lblS7_6_MaterialTecho.Name = "lblS7_6_MaterialTecho";
+            this.lblS7_6_MaterialTecho.Size = new System.Drawing.Size(314, 26);
+            this.lblS7_6_MaterialTecho.TabIndex = 15;
+            this.lblS7_6_MaterialTecho.Text = "6. OBSERVE y defina el tipo y el estado del material del TECHO  \r\n     de la vivi" +
+    "enda.";
+            // 
+            // gbS7_6_Desechos
+            // 
+            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_MuyBueno);
+            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_Bueno);
+            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_Malo);
+            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_MuyMalo);
+            this.gbS7_6_Desechos.Controls.Add(this.label43);
+            this.gbS7_6_Desechos.Location = new System.Drawing.Point(17, 236);
+            this.gbS7_6_Desechos.Name = "gbS7_6_Desechos";
+            this.gbS7_6_Desechos.Size = new System.Drawing.Size(296, 37);
+            this.gbS7_6_Desechos.TabIndex = 7;
+            this.gbS7_6_Desechos.TabStop = false;
+            // 
+            // rbS7_66_MuyBueno
+            // 
+            this.rbS7_66_MuyBueno.AutoSize = true;
+            this.rbS7_66_MuyBueno.Location = new System.Drawing.Point(245, 13);
+            this.rbS7_66_MuyBueno.Name = "rbS7_66_MuyBueno";
+            this.rbS7_66_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_66_MuyBueno.TabIndex = 4;
+            this.rbS7_66_MuyBueno.TabStop = true;
+            this.rbS7_66_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_66_Bueno
+            // 
+            this.rbS7_66_Bueno.AutoSize = true;
+            this.rbS7_66_Bueno.Location = new System.Drawing.Point(193, 13);
+            this.rbS7_66_Bueno.Name = "rbS7_66_Bueno";
+            this.rbS7_66_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_66_Bueno.TabIndex = 3;
+            this.rbS7_66_Bueno.TabStop = true;
+            this.rbS7_66_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_66_Malo
+            // 
+            this.rbS7_66_Malo.AutoSize = true;
+            this.rbS7_66_Malo.Location = new System.Drawing.Point(152, 13);
+            this.rbS7_66_Malo.Name = "rbS7_66_Malo";
+            this.rbS7_66_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_66_Malo.TabIndex = 2;
+            this.rbS7_66_Malo.TabStop = true;
+            this.rbS7_66_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_66_MuyMalo
+            // 
+            this.rbS7_66_MuyMalo.AutoSize = true;
+            this.rbS7_66_MuyMalo.Location = new System.Drawing.Point(108, 13);
+            this.rbS7_66_MuyMalo.Name = "rbS7_66_MuyMalo";
+            this.rbS7_66_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_66_MuyMalo.TabIndex = 1;
+            this.rbS7_66_MuyMalo.TabStop = true;
+            this.rbS7_66_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(9, 13);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(67, 13);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "6. Desechos";
+            // 
+            // gbS7_6_Paja
+            // 
+            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_MuyBueno);
+            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_Bueno);
+            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_Malo);
+            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_MuyMalo);
+            this.gbS7_6_Paja.Controls.Add(this.label42);
+            this.gbS7_6_Paja.Location = new System.Drawing.Point(17, 203);
+            this.gbS7_6_Paja.Name = "gbS7_6_Paja";
+            this.gbS7_6_Paja.Size = new System.Drawing.Size(296, 37);
+            this.gbS7_6_Paja.TabIndex = 6;
+            this.gbS7_6_Paja.TabStop = false;
+            // 
+            // rbS7_65_MuyBueno
+            // 
+            this.rbS7_65_MuyBueno.AutoSize = true;
+            this.rbS7_65_MuyBueno.Location = new System.Drawing.Point(246, 13);
+            this.rbS7_65_MuyBueno.Name = "rbS7_65_MuyBueno";
+            this.rbS7_65_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_65_MuyBueno.TabIndex = 4;
+            this.rbS7_65_MuyBueno.TabStop = true;
+            this.rbS7_65_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_65_Bueno
+            // 
+            this.rbS7_65_Bueno.AutoSize = true;
+            this.rbS7_65_Bueno.Location = new System.Drawing.Point(194, 13);
+            this.rbS7_65_Bueno.Name = "rbS7_65_Bueno";
+            this.rbS7_65_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_65_Bueno.TabIndex = 3;
+            this.rbS7_65_Bueno.TabStop = true;
+            this.rbS7_65_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_65_Malo
+            // 
+            this.rbS7_65_Malo.AutoSize = true;
+            this.rbS7_65_Malo.Location = new System.Drawing.Point(151, 13);
+            this.rbS7_65_Malo.Name = "rbS7_65_Malo";
+            this.rbS7_65_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_65_Malo.TabIndex = 2;
+            this.rbS7_65_Malo.TabStop = true;
+            this.rbS7_65_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_65_MuyMalo
+            // 
+            this.rbS7_65_MuyMalo.AutoSize = true;
+            this.rbS7_65_MuyMalo.Location = new System.Drawing.Point(108, 13);
+            this.rbS7_65_MuyMalo.Name = "rbS7_65_MuyMalo";
+            this.rbS7_65_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_65_MuyMalo.TabIndex = 1;
+            this.rbS7_65_MuyMalo.TabStop = true;
+            this.rbS7_65_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(9, 13);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(40, 13);
+            this.label42.TabIndex = 0;
+            this.label42.Text = "5. Paja";
+            // 
+            // gbS7_6_Duralita
+            // 
+            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_MuyBueno);
+            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_Bueno);
+            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_Malo);
+            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_MuyMalo);
+            this.gbS7_6_Duralita.Controls.Add(this.label41);
+            this.gbS7_6_Duralita.Location = new System.Drawing.Point(17, 172);
+            this.gbS7_6_Duralita.Name = "gbS7_6_Duralita";
+            this.gbS7_6_Duralita.Size = new System.Drawing.Size(296, 37);
+            this.gbS7_6_Duralita.TabIndex = 5;
+            this.gbS7_6_Duralita.TabStop = false;
+            // 
+            // rbS7_64_MuyBueno
+            // 
+            this.rbS7_64_MuyBueno.AutoSize = true;
+            this.rbS7_64_MuyBueno.Location = new System.Drawing.Point(247, 13);
+            this.rbS7_64_MuyBueno.Name = "rbS7_64_MuyBueno";
+            this.rbS7_64_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_64_MuyBueno.TabIndex = 4;
+            this.rbS7_64_MuyBueno.TabStop = true;
+            this.rbS7_64_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_64_Bueno
+            // 
+            this.rbS7_64_Bueno.AutoSize = true;
+            this.rbS7_64_Bueno.Location = new System.Drawing.Point(195, 13);
+            this.rbS7_64_Bueno.Name = "rbS7_64_Bueno";
+            this.rbS7_64_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_64_Bueno.TabIndex = 3;
+            this.rbS7_64_Bueno.TabStop = true;
+            this.rbS7_64_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_64_Malo
+            // 
+            this.rbS7_64_Malo.AutoSize = true;
+            this.rbS7_64_Malo.Location = new System.Drawing.Point(153, 13);
+            this.rbS7_64_Malo.Name = "rbS7_64_Malo";
+            this.rbS7_64_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_64_Malo.TabIndex = 2;
+            this.rbS7_64_Malo.TabStop = true;
+            this.rbS7_64_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_64_MuyMalo
+            // 
+            this.rbS7_64_MuyMalo.AutoSize = true;
+            this.rbS7_64_MuyMalo.Location = new System.Drawing.Point(108, 13);
+            this.rbS7_64_MuyMalo.Name = "rbS7_64_MuyMalo";
+            this.rbS7_64_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_64_MuyMalo.TabIndex = 1;
+            this.rbS7_64_MuyMalo.TabStop = true;
+            this.rbS7_64_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(9, 13);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(92, 13);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "4. Teja de duralita";
+            // 
+            // gbS7_6_Lamina
+            // 
+            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_MuyBueno);
+            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_Bueno);
+            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_Malo);
+            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_MuyMalo);
+            this.gbS7_6_Lamina.Controls.Add(this.label40);
+            this.gbS7_6_Lamina.Location = new System.Drawing.Point(15, 140);
+            this.gbS7_6_Lamina.Name = "gbS7_6_Lamina";
+            this.gbS7_6_Lamina.Size = new System.Drawing.Size(298, 37);
+            this.gbS7_6_Lamina.TabIndex = 4;
+            this.gbS7_6_Lamina.TabStop = false;
+            // 
+            // rbS7_63_MuyBueno
+            // 
+            this.rbS7_63_MuyBueno.AutoSize = true;
+            this.rbS7_63_MuyBueno.Location = new System.Drawing.Point(248, 13);
+            this.rbS7_63_MuyBueno.Name = "rbS7_63_MuyBueno";
+            this.rbS7_63_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_63_MuyBueno.TabIndex = 4;
+            this.rbS7_63_MuyBueno.TabStop = true;
+            this.rbS7_63_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_63_Bueno
+            // 
+            this.rbS7_63_Bueno.AutoSize = true;
+            this.rbS7_63_Bueno.Location = new System.Drawing.Point(196, 13);
+            this.rbS7_63_Bueno.Name = "rbS7_63_Bueno";
+            this.rbS7_63_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_63_Bueno.TabIndex = 3;
+            this.rbS7_63_Bueno.TabStop = true;
+            this.rbS7_63_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_63_Malo
+            // 
+            this.rbS7_63_Malo.AutoSize = true;
+            this.rbS7_63_Malo.Location = new System.Drawing.Point(153, 13);
+            this.rbS7_63_Malo.Name = "rbS7_63_Malo";
+            this.rbS7_63_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_63_Malo.TabIndex = 2;
+            this.rbS7_63_Malo.TabStop = true;
+            this.rbS7_63_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_63_MuyMalo
+            // 
+            this.rbS7_63_MuyMalo.AutoSize = true;
+            this.rbS7_63_MuyMalo.Location = new System.Drawing.Point(111, 13);
+            this.rbS7_63_MuyMalo.Name = "rbS7_63_MuyMalo";
+            this.rbS7_63_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_63_MuyMalo.TabIndex = 1;
+            this.rbS7_63_MuyMalo.TabStop = true;
+            this.rbS7_63_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(9, 13);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(53, 13);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "3. Lámina";
+            // 
+            // gbS7_6_Barro
+            // 
+            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_MuyBueno);
+            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_Bueno);
+            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_Malo);
+            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_MuyMalo);
+            this.gbS7_6_Barro.Controls.Add(this.label39);
+            this.gbS7_6_Barro.Location = new System.Drawing.Point(14, 109);
+            this.gbS7_6_Barro.Name = "gbS7_6_Barro";
+            this.gbS7_6_Barro.Size = new System.Drawing.Size(299, 37);
+            this.gbS7_6_Barro.TabIndex = 3;
+            this.gbS7_6_Barro.TabStop = false;
+            // 
+            // rbS7_62_MuyBueno
+            // 
+            this.rbS7_62_MuyBueno.AutoSize = true;
+            this.rbS7_62_MuyBueno.Location = new System.Drawing.Point(249, 13);
+            this.rbS7_62_MuyBueno.Name = "rbS7_62_MuyBueno";
+            this.rbS7_62_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_62_MuyBueno.TabIndex = 4;
+            this.rbS7_62_MuyBueno.TabStop = true;
+            this.rbS7_62_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_62_Bueno
+            // 
+            this.rbS7_62_Bueno.AutoSize = true;
+            this.rbS7_62_Bueno.Location = new System.Drawing.Point(197, 13);
+            this.rbS7_62_Bueno.Name = "rbS7_62_Bueno";
+            this.rbS7_62_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_62_Bueno.TabIndex = 3;
+            this.rbS7_62_Bueno.TabStop = true;
+            this.rbS7_62_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_62_Malo
+            // 
+            this.rbS7_62_Malo.AutoSize = true;
+            this.rbS7_62_Malo.Location = new System.Drawing.Point(155, 13);
+            this.rbS7_62_Malo.Name = "rbS7_62_Malo";
+            this.rbS7_62_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_62_Malo.TabIndex = 2;
+            this.rbS7_62_Malo.TabStop = true;
+            this.rbS7_62_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_62_MuyMalo
+            // 
+            this.rbS7_62_MuyMalo.AutoSize = true;
+            this.rbS7_62_MuyMalo.Location = new System.Drawing.Point(112, 13);
+            this.rbS7_62_MuyMalo.Name = "rbS7_62_MuyMalo";
+            this.rbS7_62_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_62_MuyMalo.TabIndex = 1;
+            this.rbS7_62_MuyMalo.TabStop = true;
+            this.rbS7_62_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(9, 13);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(82, 13);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "2. Teja de barro";
+            // 
+            // gbS7_6_Concreto
+            // 
+            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_MuyBueno);
+            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_Bueno);
+            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_Malo);
+            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_MuyMalo);
+            this.gbS7_6_Concreto.Controls.Add(this.label33);
+            this.gbS7_6_Concreto.Location = new System.Drawing.Point(13, 76);
+            this.gbS7_6_Concreto.Name = "gbS7_6_Concreto";
+            this.gbS7_6_Concreto.Size = new System.Drawing.Size(300, 37);
+            this.gbS7_6_Concreto.TabIndex = 2;
+            this.gbS7_6_Concreto.TabStop = false;
+            // 
+            // rbS7_61_MuyBueno
+            // 
+            this.rbS7_61_MuyBueno.AutoSize = true;
+            this.rbS7_61_MuyBueno.Location = new System.Drawing.Point(250, 13);
+            this.rbS7_61_MuyBueno.Name = "rbS7_61_MuyBueno";
+            this.rbS7_61_MuyBueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_61_MuyBueno.TabIndex = 4;
+            this.rbS7_61_MuyBueno.TabStop = true;
+            this.rbS7_61_MuyBueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_61_Bueno
+            // 
+            this.rbS7_61_Bueno.AutoSize = true;
+            this.rbS7_61_Bueno.Location = new System.Drawing.Point(198, 13);
+            this.rbS7_61_Bueno.Name = "rbS7_61_Bueno";
+            this.rbS7_61_Bueno.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_61_Bueno.TabIndex = 3;
+            this.rbS7_61_Bueno.TabStop = true;
+            this.rbS7_61_Bueno.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_61_Malo
+            // 
+            this.rbS7_61_Malo.AutoSize = true;
+            this.rbS7_61_Malo.Location = new System.Drawing.Point(155, 13);
+            this.rbS7_61_Malo.Name = "rbS7_61_Malo";
+            this.rbS7_61_Malo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_61_Malo.TabIndex = 2;
+            this.rbS7_61_Malo.TabStop = true;
+            this.rbS7_61_Malo.UseVisualStyleBackColor = true;
+            // 
+            // rbS7_61_MuyMalo
+            // 
+            this.rbS7_61_MuyMalo.AutoSize = true;
+            this.rbS7_61_MuyMalo.Location = new System.Drawing.Point(113, 13);
+            this.rbS7_61_MuyMalo.Name = "rbS7_61_MuyMalo";
+            this.rbS7_61_MuyMalo.Size = new System.Drawing.Size(14, 13);
+            this.rbS7_61_MuyMalo.TabIndex = 1;
+            this.rbS7_61_MuyMalo.TabStop = true;
+            this.rbS7_61_MuyMalo.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(9, 13);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(62, 13);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "1. Concreto";
+            // 
+            // gbS7_6_EstadoTecho
+            // 
+            this.gbS7_6_EstadoTecho.Controls.Add(this.label37);
+            this.gbS7_6_EstadoTecho.Controls.Add(this.label38);
+            this.gbS7_6_EstadoTecho.Controls.Add(this.label36);
+            this.gbS7_6_EstadoTecho.Controls.Add(this.label31);
+            this.gbS7_6_EstadoTecho.Location = new System.Drawing.Point(13, 50);
+            this.gbS7_6_EstadoTecho.Name = "gbS7_6_EstadoTecho";
+            this.gbS7_6_EstadoTecho.Size = new System.Drawing.Size(300, 29);
+            this.gbS7_6_EstadoTecho.TabIndex = 1;
+            this.gbS7_6_EstadoTecho.TabStop = false;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(190, 9);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(37, 13);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "bueno";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(234, 9);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 13);
+            this.label38.TabIndex = 2;
+            this.label38.Text = "muy bueno";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(150, 9);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(29, 13);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "malo";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(89, 9);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(51, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "muy malo";
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.lblS7_5_Problema);
+            this.groupBox22.Controls.Add(this.txtS7_5_ProblemaC);
+            this.groupBox22.Controls.Add(this.lblS7_5_C);
+            this.groupBox22.Controls.Add(this.txtS7_5_ProblemaB);
+            this.groupBox22.Controls.Add(this.lblS7_5_B);
+            this.groupBox22.Controls.Add(this.cbsS7_5_ProbViv);
+            this.groupBox22.Controls.Add(this.txtS7_5_ProblemaA);
+            this.groupBox22.Controls.Add(this.lblS7_5_A);
+            this.groupBox22.Location = new System.Drawing.Point(294, 8);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(336, 192);
+            this.groupBox22.TabIndex = 5;
+            this.groupBox22.TabStop = false;
+            // 
+            // lblS7_5_Problema
+            // 
+            this.lblS7_5_Problema.AutoSize = true;
+            this.lblS7_5_Problema.Location = new System.Drawing.Point(10, 20);
+            this.lblS7_5_Problema.Name = "lblS7_5_Problema";
+            this.lblS7_5_Problema.Size = new System.Drawing.Size(288, 26);
+            this.lblS7_5_Problema.TabIndex = 15;
+            this.lblS7_5_Problema.Text = "5. ¿Cree que su vivienda actual tienen algún problema que \r\n     le gustaría reso" +
+    "lver?";
+            // 
+            // txtS7_5_ProblemaC
+            // 
+            this.txtS7_5_ProblemaC.Enabled = false;
+            this.txtS7_5_ProblemaC.Location = new System.Drawing.Point(53, 153);
+            this.txtS7_5_ProblemaC.Multiline = true;
+            this.txtS7_5_ProblemaC.Name = "txtS7_5_ProblemaC";
+            this.txtS7_5_ProblemaC.Size = new System.Drawing.Size(227, 23);
+            this.txtS7_5_ProblemaC.TabIndex = 7;
+            // 
+            // lblS7_5_C
+            // 
+            this.lblS7_5_C.AutoSize = true;
+            this.lblS7_5_C.Enabled = false;
+            this.lblS7_5_C.Location = new System.Drawing.Point(32, 157);
+            this.lblS7_5_C.Name = "lblS7_5_C";
+            this.lblS7_5_C.Size = new System.Drawing.Size(16, 13);
+            this.lblS7_5_C.TabIndex = 6;
+            this.lblS7_5_C.Text = "c)";
+            // 
+            // txtS7_5_ProblemaB
+            // 
+            this.txtS7_5_ProblemaB.Enabled = false;
+            this.txtS7_5_ProblemaB.Location = new System.Drawing.Point(53, 124);
+            this.txtS7_5_ProblemaB.Multiline = true;
+            this.txtS7_5_ProblemaB.Name = "txtS7_5_ProblemaB";
+            this.txtS7_5_ProblemaB.Size = new System.Drawing.Size(227, 23);
+            this.txtS7_5_ProblemaB.TabIndex = 5;
+            // 
+            // lblS7_5_B
+            // 
+            this.lblS7_5_B.AutoSize = true;
+            this.lblS7_5_B.Enabled = false;
+            this.lblS7_5_B.Location = new System.Drawing.Point(32, 128);
+            this.lblS7_5_B.Name = "lblS7_5_B";
+            this.lblS7_5_B.Size = new System.Drawing.Size(16, 13);
+            this.lblS7_5_B.TabIndex = 4;
+            this.lblS7_5_B.Text = "b)";
+            // 
+            // cbsS7_5_ProbViv
+            // 
+            this.cbsS7_5_ProbViv.FormattingEnabled = true;
+            this.cbsS7_5_ProbViv.Items.AddRange(new object[] {
+            "Si (especificar cuales)",
+            "No",
+            "NS/NR"});
+            this.cbsS7_5_ProbViv.Location = new System.Drawing.Point(55, 67);
+            this.cbsS7_5_ProbViv.Name = "cbsS7_5_ProbViv";
+            this.cbsS7_5_ProbViv.Size = new System.Drawing.Size(225, 21);
+            this.cbsS7_5_ProbViv.TabIndex = 3;
+            // 
+            // txtS7_5_ProblemaA
+            // 
+            this.txtS7_5_ProblemaA.Enabled = false;
+            this.txtS7_5_ProblemaA.Location = new System.Drawing.Point(53, 95);
+            this.txtS7_5_ProblemaA.Multiline = true;
+            this.txtS7_5_ProblemaA.Name = "txtS7_5_ProblemaA";
+            this.txtS7_5_ProblemaA.Size = new System.Drawing.Size(227, 23);
+            this.txtS7_5_ProblemaA.TabIndex = 2;
+            // 
+            // lblS7_5_A
+            // 
+            this.lblS7_5_A.AutoSize = true;
+            this.lblS7_5_A.Enabled = false;
+            this.lblS7_5_A.Location = new System.Drawing.Point(32, 99);
+            this.lblS7_5_A.Name = "lblS7_5_A";
+            this.lblS7_5_A.Size = new System.Drawing.Size(16, 13);
+            this.lblS7_5_A.TabIndex = 1;
+            this.lblS7_5_A.Text = "a)";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.lblS7_4_Camas);
+            this.groupBox21.Controls.Add(this.txtS7_4_CantCamas);
+            this.groupBox21.Location = new System.Drawing.Point(18, 333);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(270, 116);
+            this.groupBox21.TabIndex = 4;
+            this.groupBox21.TabStop = false;
+            // 
+            // lblS7_4_Camas
+            // 
+            this.lblS7_4_Camas.AutoSize = true;
+            this.lblS7_4_Camas.Location = new System.Drawing.Point(6, 24);
+            this.lblS7_4_Camas.Name = "lblS7_4_Camas";
+            this.lblS7_4_Camas.Size = new System.Drawing.Size(257, 26);
+            this.lblS7_4_Camas.TabIndex = 14;
+            this.lblS7_4_Camas.Text = "4. ¿Cuántas camas o su equivalentes tiene usted en \r\n    su vivienda?";
+            // 
+            // txtS7_4_CantCamas
+            // 
+            this.txtS7_4_CantCamas.Location = new System.Drawing.Point(27, 73);
+            this.txtS7_4_CantCamas.Multiline = true;
+            this.txtS7_4_CantCamas.Name = "txtS7_4_CantCamas";
+            this.txtS7_4_CantCamas.Size = new System.Drawing.Size(208, 23);
+            this.txtS7_4_CantCamas.TabIndex = 3;
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.lblS7_3_Dormitorio);
+            this.groupBox20.Controls.Add(this.txtS7_3_CantDormitorios);
+            this.groupBox20.Location = new System.Drawing.Point(18, 221);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(270, 106);
+            this.groupBox20.TabIndex = 3;
+            this.groupBox20.TabStop = false;
+            // 
+            // lblS7_3_Dormitorio
+            // 
+            this.lblS7_3_Dormitorio.AutoSize = true;
+            this.lblS7_3_Dormitorio.Location = new System.Drawing.Point(9, 20);
+            this.lblS7_3_Dormitorio.Name = "lblS7_3_Dormitorio";
+            this.lblS7_3_Dormitorio.Size = new System.Drawing.Size(245, 26);
+            this.lblS7_3_Dormitorio.TabIndex = 15;
+            this.lblS7_3_Dormitorio.Text = "3. Del total de cuartos. ¿Cuántos están destinadas\r\n    a dormitorio?";
+            // 
+            // txtS7_3_CantDormitorios
+            // 
+            this.txtS7_3_CantDormitorios.Location = new System.Drawing.Point(32, 67);
+            this.txtS7_3_CantDormitorios.Multiline = true;
+            this.txtS7_3_CantDormitorios.Name = "txtS7_3_CantDormitorios";
+            this.txtS7_3_CantDormitorios.Size = new System.Drawing.Size(208, 23);
+            this.txtS7_3_CantDormitorios.TabIndex = 3;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.lblS7_2_Cuartos);
+            this.groupBox19.Controls.Add(this.txtS7_2_Cuartos);
+            this.groupBox19.Location = new System.Drawing.Point(18, 120);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(270, 95);
+            this.groupBox19.TabIndex = 2;
+            this.groupBox19.TabStop = false;
+            // 
+            // lblS7_2_Cuartos
+            // 
+            this.lblS7_2_Cuartos.AutoSize = true;
+            this.lblS7_2_Cuartos.Location = new System.Drawing.Point(14, 20);
+            this.lblS7_2_Cuartos.Name = "lblS7_2_Cuartos";
+            this.lblS7_2_Cuartos.Size = new System.Drawing.Size(197, 13);
+            this.lblS7_2_Cuartos.TabIndex = 15;
+            this.lblS7_2_Cuartos.Text = "2. ¿Cuántos cuartos hay en la vivienda?";
+            // 
+            // txtS7_2_Cuartos
+            // 
+            this.txtS7_2_Cuartos.Location = new System.Drawing.Point(27, 54);
+            this.txtS7_2_Cuartos.Multiline = true;
+            this.txtS7_2_Cuartos.Name = "txtS7_2_Cuartos";
+            this.txtS7_2_Cuartos.Size = new System.Drawing.Size(221, 23);
+            this.txtS7_2_Cuartos.TabIndex = 3;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.lblS7_1_Dimensiones);
+            this.groupBox18.Controls.Add(this.txtS7_1_AnchoViv);
+            this.groupBox18.Controls.Add(this.txtS7_1_LargoViv);
+            this.groupBox18.Controls.Add(this.lblS7_1_X);
+            this.groupBox18.Location = new System.Drawing.Point(18, 6);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(270, 108);
+            this.groupBox18.TabIndex = 1;
+            this.groupBox18.TabStop = false;
+            // 
+            // lblS7_1_Dimensiones
+            // 
+            this.lblS7_1_Dimensiones.AutoSize = true;
+            this.lblS7_1_Dimensiones.Location = new System.Drawing.Point(14, 23);
+            this.lblS7_1_Dimensiones.Name = "lblS7_1_Dimensiones";
+            this.lblS7_1_Dimensiones.Size = new System.Drawing.Size(232, 13);
+            this.lblS7_1_Dimensiones.TabIndex = 14;
+            this.lblS7_1_Dimensiones.Text = "1. ¿Cuáles son las dimensiones de su vivienda?\t\t\t";
+            // 
+            // txtS7_1_AnchoViv
+            // 
+            this.txtS7_1_AnchoViv.Location = new System.Drawing.Point(35, 61);
+            this.txtS7_1_AnchoViv.Multiline = true;
+            this.txtS7_1_AnchoViv.Name = "txtS7_1_AnchoViv";
+            this.txtS7_1_AnchoViv.Size = new System.Drawing.Size(87, 23);
+            this.txtS7_1_AnchoViv.TabIndex = 3;
+            // 
+            // txtS7_1_LargoViv
+            // 
+            this.txtS7_1_LargoViv.Location = new System.Drawing.Point(156, 61);
+            this.txtS7_1_LargoViv.Multiline = true;
+            this.txtS7_1_LargoViv.Name = "txtS7_1_LargoViv";
+            this.txtS7_1_LargoViv.Size = new System.Drawing.Size(87, 23);
+            this.txtS7_1_LargoViv.TabIndex = 2;
+            // 
+            // lblS7_1_X
+            // 
+            this.lblS7_1_X.AutoSize = true;
+            this.lblS7_1_X.Location = new System.Drawing.Point(132, 65);
+            this.lblS7_1_X.Name = "lblS7_1_X";
+            this.lblS7_1_X.Size = new System.Drawing.Size(14, 13);
+            this.lblS7_1_X.TabIndex = 1;
+            this.lblS7_1_X.Text = "X";
             // 
             // tbpS8
             // 
             this.tbpS8.Controls.Add(this.pbS8_Siguiente);
             this.tbpS8.Controls.Add(this.groupBox47);
-            this.tbpS8.Location = new System.Drawing.Point(4, 25);
-            this.tbpS8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS8.Location = new System.Drawing.Point(4, 22);
             this.tbpS8.Name = "tbpS8";
-            this.tbpS8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS8.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS8.Size = new System.Drawing.Size(1332, 549);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
             this.tbpS8.UseVisualStyleBackColor = true;
@@ -2185,10 +4045,9 @@
             // pbS8_Siguiente
             // 
             this.pbS8_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS8_Siguiente.Location = new System.Drawing.Point(1272, 596);
-            this.pbS8_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS8_Siguiente.Location = new System.Drawing.Point(954, 484);
             this.pbS8_Siguiente.Name = "pbS8_Siguiente";
-            this.pbS8_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS8_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS8_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS8_Siguiente.TabIndex = 14;
             this.pbS8_Siguiente.TabStop = false;
@@ -2205,22 +4064,19 @@
             this.groupBox47.Controls.Add(this.groupBox51);
             this.groupBox47.Controls.Add(this.groupBox49);
             this.groupBox47.Controls.Add(this.groupBox48);
-            this.groupBox47.Location = new System.Drawing.Point(11, 10);
-            this.groupBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox47.Location = new System.Drawing.Point(8, 8);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox47.Size = new System.Drawing.Size(1771, 578);
+            this.groupBox47.Size = new System.Drawing.Size(1328, 470);
             this.groupBox47.TabIndex = 1;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "SERVICIOS BASICOS";
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(428, 546);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTextBox2.Location = new System.Drawing.Point(321, 444);
             this.maskedTextBox2.Mask = "000.00";
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(480, 22);
+            this.maskedTextBox2.Size = new System.Drawing.Size(361, 20);
             this.maskedTextBox2.TabIndex = 10;
             // 
             // groupBox56
@@ -2236,11 +4092,9 @@
             this.groupBox56.Controls.Add(this.groupBox61);
             this.groupBox56.Controls.Add(this.gbxS808_Refrigerador);
             this.groupBox56.Controls.Add(this.groupBox63);
-            this.groupBox56.Location = new System.Drawing.Point(849, 15);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox56.Location = new System.Drawing.Point(637, 12);
             this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox56.Size = new System.Drawing.Size(483, 516);
+            this.groupBox56.Size = new System.Drawing.Size(362, 419);
             this.groupBox56.TabIndex = 9;
             this.groupBox56.TabStop = false;
             // 
@@ -2251,30 +4105,26 @@
             this.groupBox64.Controls.Add(this.rbtS808_Otros_R);
             this.groupBox64.Controls.Add(this.rbtS808_Otros_B);
             this.groupBox64.Controls.Add(this.label74);
-            this.groupBox64.Location = new System.Drawing.Point(27, 422);
-            this.groupBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox64.Location = new System.Drawing.Point(20, 343);
             this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox64.Size = new System.Drawing.Size(440, 75);
+            this.groupBox64.Size = new System.Drawing.Size(330, 61);
             this.groupBox64.TabIndex = 17;
             this.groupBox64.TabStop = false;
             // 
             // rbtS808_OtroEspecificar
             // 
             this.rbtS808_OtroEspecificar.Enabled = false;
-            this.rbtS808_OtroEspecificar.Location = new System.Drawing.Point(25, 32);
-            this.rbtS808_OtroEspecificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_OtroEspecificar.Location = new System.Drawing.Point(19, 26);
             this.rbtS808_OtroEspecificar.Name = "rbtS808_OtroEspecificar";
-            this.rbtS808_OtroEspecificar.Size = new System.Drawing.Size(171, 22);
+            this.rbtS808_OtroEspecificar.Size = new System.Drawing.Size(129, 20);
             this.rbtS808_OtroEspecificar.TabIndex = 5;
             // 
             // rbtS808_Otros_M
             // 
             this.rbtS808_Otros_M.AutoSize = true;
-            this.rbtS808_Otros_M.Location = new System.Drawing.Point(372, 32);
-            this.rbtS808_Otros_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Otros_M.Location = new System.Drawing.Point(279, 26);
             this.rbtS808_Otros_M.Name = "rbtS808_Otros_M";
-            this.rbtS808_Otros_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Otros_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Otros_M.TabIndex = 4;
             this.rbtS808_Otros_M.TabStop = true;
             this.rbtS808_Otros_M.UseVisualStyleBackColor = true;
@@ -2283,10 +4133,9 @@
             // rbtS808_Otros_R
             // 
             this.rbtS808_Otros_R.AutoSize = true;
-            this.rbtS808_Otros_R.Location = new System.Drawing.Point(297, 32);
-            this.rbtS808_Otros_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Otros_R.Location = new System.Drawing.Point(223, 26);
             this.rbtS808_Otros_R.Name = "rbtS808_Otros_R";
-            this.rbtS808_Otros_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Otros_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Otros_R.TabIndex = 2;
             this.rbtS808_Otros_R.TabStop = true;
             this.rbtS808_Otros_R.UseVisualStyleBackColor = true;
@@ -2295,10 +4144,9 @@
             // rbtS808_Otros_B
             // 
             this.rbtS808_Otros_B.AutoSize = true;
-            this.rbtS808_Otros_B.Location = new System.Drawing.Point(220, 32);
-            this.rbtS808_Otros_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Otros_B.Location = new System.Drawing.Point(165, 26);
             this.rbtS808_Otros_B.Name = "rbtS808_Otros_B";
-            this.rbtS808_Otros_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Otros_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Otros_B.TabIndex = 1;
             this.rbtS808_Otros_B.TabStop = true;
             this.rbtS808_Otros_B.UseVisualStyleBackColor = true;
@@ -2307,23 +4155,21 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(4, 11);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label74.Location = new System.Drawing.Point(3, 9);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(141, 17);
+            this.label74.Size = new System.Drawing.Size(104, 13);
             this.label74.TabIndex = 0;
             this.label74.Text = "9. Otros (especificar)\t";
             // 
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(4, 12);
-            this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label77.Location = new System.Drawing.Point(3, 10);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(469, 51);
+            this.label77.Size = new System.Drawing.Size(358, 39);
             this.label77.TabIndex = 15;
             this.label77.Text = "8. ¿Cuáles artículos de la siguiente lista posee y en qué estado se \r\n    encuent" +
-                "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
+    "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
             // 
             // groupBox65
             // 
@@ -2331,21 +4177,18 @@
             this.groupBox65.Controls.Add(this.rbtS808_Amueblado_R);
             this.groupBox65.Controls.Add(this.rbtS808_Amueblado_B);
             this.groupBox65.Controls.Add(this.label78);
-            this.groupBox65.Location = new System.Drawing.Point(27, 372);
-            this.groupBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox65.Location = new System.Drawing.Point(20, 302);
             this.groupBox65.Name = "groupBox65";
-            this.groupBox65.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox65.Size = new System.Drawing.Size(440, 49);
+            this.groupBox65.Size = new System.Drawing.Size(330, 40);
             this.groupBox65.TabIndex = 16;
             this.groupBox65.TabStop = false;
             // 
             // rbtS808_Amueblado_M
             // 
             this.rbtS808_Amueblado_M.AutoSize = true;
-            this.rbtS808_Amueblado_M.Location = new System.Drawing.Point(372, 14);
-            this.rbtS808_Amueblado_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Amueblado_M.Location = new System.Drawing.Point(279, 11);
             this.rbtS808_Amueblado_M.Name = "rbtS808_Amueblado_M";
-            this.rbtS808_Amueblado_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Amueblado_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Amueblado_M.TabIndex = 4;
             this.rbtS808_Amueblado_M.TabStop = true;
             this.rbtS808_Amueblado_M.UseVisualStyleBackColor = true;
@@ -2353,10 +4196,9 @@
             // rbtS808_Amueblado_R
             // 
             this.rbtS808_Amueblado_R.AutoSize = true;
-            this.rbtS808_Amueblado_R.Location = new System.Drawing.Point(297, 14);
-            this.rbtS808_Amueblado_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Amueblado_R.Location = new System.Drawing.Point(223, 11);
             this.rbtS808_Amueblado_R.Name = "rbtS808_Amueblado_R";
-            this.rbtS808_Amueblado_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Amueblado_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Amueblado_R.TabIndex = 2;
             this.rbtS808_Amueblado_R.TabStop = true;
             this.rbtS808_Amueblado_R.UseVisualStyleBackColor = true;
@@ -2364,10 +4206,9 @@
             // rbtS808_Amueblado_B
             // 
             this.rbtS808_Amueblado_B.AutoSize = true;
-            this.rbtS808_Amueblado_B.Location = new System.Drawing.Point(220, 14);
-            this.rbtS808_Amueblado_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Amueblado_B.Location = new System.Drawing.Point(165, 11);
             this.rbtS808_Amueblado_B.Name = "rbtS808_Amueblado_B";
-            this.rbtS808_Amueblado_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Amueblado_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Amueblado_B.TabIndex = 1;
             this.rbtS808_Amueblado_B.TabStop = true;
             this.rbtS808_Amueblado_B.UseVisualStyleBackColor = true;
@@ -2375,10 +4216,9 @@
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(3, 12);
-            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label78.Location = new System.Drawing.Point(2, 10);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(203, 34);
+            this.label78.Size = new System.Drawing.Size(151, 26);
             this.label78.TabIndex = 0;
             this.label78.Text = "8. Amueblado (camas, ropero, \r\n    gabinetes, etc.)";
             // 
@@ -2388,21 +4228,18 @@
             this.groupBox57.Controls.Add(this.rbtS808_Automovil_R);
             this.groupBox57.Controls.Add(this.rbtS808_Automovil_B);
             this.groupBox57.Controls.Add(this.label67);
-            this.groupBox57.Location = new System.Drawing.Point(27, 287);
-            this.groupBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox57.Location = new System.Drawing.Point(20, 233);
             this.groupBox57.Name = "groupBox57";
-            this.groupBox57.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox57.Size = new System.Drawing.Size(440, 37);
+            this.groupBox57.Size = new System.Drawing.Size(330, 30);
             this.groupBox57.TabIndex = 14;
             this.groupBox57.TabStop = false;
             // 
             // rbtS808_Automovil_M
             // 
             this.rbtS808_Automovil_M.AutoSize = true;
-            this.rbtS808_Automovil_M.Location = new System.Drawing.Point(372, 14);
-            this.rbtS808_Automovil_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Automovil_M.Location = new System.Drawing.Point(279, 11);
             this.rbtS808_Automovil_M.Name = "rbtS808_Automovil_M";
-            this.rbtS808_Automovil_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Automovil_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Automovil_M.TabIndex = 4;
             this.rbtS808_Automovil_M.TabStop = true;
             this.rbtS808_Automovil_M.UseVisualStyleBackColor = true;
@@ -2410,10 +4247,9 @@
             // rbtS808_Automovil_R
             // 
             this.rbtS808_Automovil_R.AutoSize = true;
-            this.rbtS808_Automovil_R.Location = new System.Drawing.Point(297, 12);
-            this.rbtS808_Automovil_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Automovil_R.Location = new System.Drawing.Point(223, 10);
             this.rbtS808_Automovil_R.Name = "rbtS808_Automovil_R";
-            this.rbtS808_Automovil_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Automovil_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Automovil_R.TabIndex = 2;
             this.rbtS808_Automovil_R.TabStop = true;
             this.rbtS808_Automovil_R.UseVisualStyleBackColor = true;
@@ -2421,10 +4257,9 @@
             // rbtS808_Automovil_B
             // 
             this.rbtS808_Automovil_B.AutoSize = true;
-            this.rbtS808_Automovil_B.Location = new System.Drawing.Point(220, 14);
-            this.rbtS808_Automovil_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Automovil_B.Location = new System.Drawing.Point(165, 11);
             this.rbtS808_Automovil_B.Name = "rbtS808_Automovil_B";
-            this.rbtS808_Automovil_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Automovil_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Automovil_B.TabIndex = 1;
             this.rbtS808_Automovil_B.TabStop = true;
             this.rbtS808_Automovil_B.UseVisualStyleBackColor = true;
@@ -2432,10 +4267,9 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(4, 12);
-            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label67.Location = new System.Drawing.Point(3, 10);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(85, 17);
+            this.label67.Size = new System.Drawing.Size(65, 13);
             this.label67.TabIndex = 0;
             this.label67.Text = "6. Automóvil\t";
             // 
@@ -2445,21 +4279,18 @@
             this.groupBox66.Controls.Add(this.rbtS808_Computadora_R);
             this.groupBox66.Controls.Add(this.rbtS808_Computadora_B);
             this.groupBox66.Controls.Add(this.label79);
-            this.groupBox66.Location = new System.Drawing.Point(27, 332);
-            this.groupBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox66.Location = new System.Drawing.Point(20, 270);
             this.groupBox66.Name = "groupBox66";
-            this.groupBox66.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox66.Size = new System.Drawing.Size(440, 37);
+            this.groupBox66.Size = new System.Drawing.Size(330, 30);
             this.groupBox66.TabIndex = 15;
             this.groupBox66.TabStop = false;
             // 
             // rbtS808_Computadora_M
             // 
             this.rbtS808_Computadora_M.AutoSize = true;
-            this.rbtS808_Computadora_M.Location = new System.Drawing.Point(372, 14);
-            this.rbtS808_Computadora_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Computadora_M.Location = new System.Drawing.Point(279, 11);
             this.rbtS808_Computadora_M.Name = "rbtS808_Computadora_M";
-            this.rbtS808_Computadora_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Computadora_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Computadora_M.TabIndex = 4;
             this.rbtS808_Computadora_M.TabStop = true;
             this.rbtS808_Computadora_M.UseVisualStyleBackColor = true;
@@ -2467,10 +4298,9 @@
             // rbtS808_Computadora_R
             // 
             this.rbtS808_Computadora_R.AutoSize = true;
-            this.rbtS808_Computadora_R.Location = new System.Drawing.Point(297, 14);
-            this.rbtS808_Computadora_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Computadora_R.Location = new System.Drawing.Point(223, 11);
             this.rbtS808_Computadora_R.Name = "rbtS808_Computadora_R";
-            this.rbtS808_Computadora_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Computadora_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Computadora_R.TabIndex = 2;
             this.rbtS808_Computadora_R.TabStop = true;
             this.rbtS808_Computadora_R.UseVisualStyleBackColor = true;
@@ -2478,10 +4308,9 @@
             // rbtS808_Computadora_B
             // 
             this.rbtS808_Computadora_B.AutoSize = true;
-            this.rbtS808_Computadora_B.Location = new System.Drawing.Point(220, 14);
-            this.rbtS808_Computadora_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Computadora_B.Location = new System.Drawing.Point(165, 11);
             this.rbtS808_Computadora_B.Name = "rbtS808_Computadora_B";
-            this.rbtS808_Computadora_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Computadora_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Computadora_B.TabIndex = 1;
             this.rbtS808_Computadora_B.TabStop = true;
             this.rbtS808_Computadora_B.UseVisualStyleBackColor = true;
@@ -2489,10 +4318,9 @@
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(4, 12);
-            this.label79.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label79.Location = new System.Drawing.Point(3, 10);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(109, 17);
+            this.label79.Size = new System.Drawing.Size(82, 13);
             this.label79.TabIndex = 0;
             this.label79.Text = "7. Computadora\t\t";
             // 
@@ -2502,21 +4330,18 @@
             this.groupBox58.Controls.Add(this.rbtS808_Motocleta_R);
             this.groupBox58.Controls.Add(this.rbtS808_Motocicleta_B);
             this.groupBox58.Controls.Add(this.label68);
-            this.groupBox58.Location = new System.Drawing.Point(27, 249);
-            this.groupBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox58.Location = new System.Drawing.Point(20, 202);
             this.groupBox58.Name = "groupBox58";
-            this.groupBox58.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox58.Size = new System.Drawing.Size(440, 37);
+            this.groupBox58.Size = new System.Drawing.Size(330, 30);
             this.groupBox58.TabIndex = 13;
             this.groupBox58.TabStop = false;
             // 
             // rbtS808_Motocleta_M
             // 
             this.rbtS808_Motocleta_M.AutoSize = true;
-            this.rbtS808_Motocleta_M.Location = new System.Drawing.Point(372, 15);
-            this.rbtS808_Motocleta_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Motocleta_M.Location = new System.Drawing.Point(279, 12);
             this.rbtS808_Motocleta_M.Name = "rbtS808_Motocleta_M";
-            this.rbtS808_Motocleta_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Motocleta_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Motocleta_M.TabIndex = 4;
             this.rbtS808_Motocleta_M.TabStop = true;
             this.rbtS808_Motocleta_M.UseVisualStyleBackColor = true;
@@ -2524,10 +4349,9 @@
             // rbtS808_Motocleta_R
             // 
             this.rbtS808_Motocleta_R.AutoSize = true;
-            this.rbtS808_Motocleta_R.Location = new System.Drawing.Point(297, 14);
-            this.rbtS808_Motocleta_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Motocleta_R.Location = new System.Drawing.Point(223, 11);
             this.rbtS808_Motocleta_R.Name = "rbtS808_Motocleta_R";
-            this.rbtS808_Motocleta_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Motocleta_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Motocleta_R.TabIndex = 2;
             this.rbtS808_Motocleta_R.TabStop = true;
             this.rbtS808_Motocleta_R.UseVisualStyleBackColor = true;
@@ -2535,10 +4359,9 @@
             // rbtS808_Motocicleta_B
             // 
             this.rbtS808_Motocicleta_B.AutoSize = true;
-            this.rbtS808_Motocicleta_B.Location = new System.Drawing.Point(220, 15);
-            this.rbtS808_Motocicleta_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Motocicleta_B.Location = new System.Drawing.Point(165, 12);
             this.rbtS808_Motocicleta_B.Name = "rbtS808_Motocicleta_B";
-            this.rbtS808_Motocicleta_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Motocicleta_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Motocicleta_B.TabIndex = 1;
             this.rbtS808_Motocicleta_B.TabStop = true;
             this.rbtS808_Motocicleta_B.UseVisualStyleBackColor = true;
@@ -2546,10 +4369,9 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(5, 12);
-            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label68.Location = new System.Drawing.Point(4, 10);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(95, 17);
+            this.label68.Size = new System.Drawing.Size(74, 13);
             this.label68.TabIndex = 0;
             this.label68.Text = "5. Motocicleta\t";
             // 
@@ -2559,21 +4381,18 @@
             this.groupBox59.Controls.Add(this.rbtS808_DVD_R);
             this.groupBox59.Controls.Add(this.rbtS808_DVD_B);
             this.groupBox59.Controls.Add(this.label69);
-            this.groupBox59.Location = new System.Drawing.Point(27, 209);
-            this.groupBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox59.Location = new System.Drawing.Point(20, 170);
             this.groupBox59.Name = "groupBox59";
-            this.groupBox59.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox59.Size = new System.Drawing.Size(440, 37);
+            this.groupBox59.Size = new System.Drawing.Size(330, 30);
             this.groupBox59.TabIndex = 12;
             this.groupBox59.TabStop = false;
             // 
             // rbtS808_DVD_M
             // 
             this.rbtS808_DVD_M.AutoSize = true;
-            this.rbtS808_DVD_M.Location = new System.Drawing.Point(372, 12);
-            this.rbtS808_DVD_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_DVD_M.Location = new System.Drawing.Point(279, 10);
             this.rbtS808_DVD_M.Name = "rbtS808_DVD_M";
-            this.rbtS808_DVD_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_DVD_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_DVD_M.TabIndex = 4;
             this.rbtS808_DVD_M.TabStop = true;
             this.rbtS808_DVD_M.UseVisualStyleBackColor = true;
@@ -2581,10 +4400,9 @@
             // rbtS808_DVD_R
             // 
             this.rbtS808_DVD_R.AutoSize = true;
-            this.rbtS808_DVD_R.Location = new System.Drawing.Point(297, 12);
-            this.rbtS808_DVD_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_DVD_R.Location = new System.Drawing.Point(223, 10);
             this.rbtS808_DVD_R.Name = "rbtS808_DVD_R";
-            this.rbtS808_DVD_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_DVD_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_DVD_R.TabIndex = 2;
             this.rbtS808_DVD_R.TabStop = true;
             this.rbtS808_DVD_R.UseVisualStyleBackColor = true;
@@ -2592,10 +4410,9 @@
             // rbtS808_DVD_B
             // 
             this.rbtS808_DVD_B.AutoSize = true;
-            this.rbtS808_DVD_B.Location = new System.Drawing.Point(220, 12);
-            this.rbtS808_DVD_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_DVD_B.Location = new System.Drawing.Point(165, 10);
             this.rbtS808_DVD_B.Name = "rbtS808_DVD_B";
-            this.rbtS808_DVD_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_DVD_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_DVD_B.TabIndex = 1;
             this.rbtS808_DVD_B.TabStop = true;
             this.rbtS808_DVD_B.UseVisualStyleBackColor = true;
@@ -2603,10 +4420,9 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(4, 12);
-            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Location = new System.Drawing.Point(3, 10);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(136, 17);
+            this.label69.Size = new System.Drawing.Size(104, 13);
             this.label69.TabIndex = 0;
             this.label69.Text = "4. Reproductor DVD\t";
             // 
@@ -2616,21 +4432,18 @@
             this.groupBox60.Controls.Add(this.rbtS808_Televisor_R);
             this.groupBox60.Controls.Add(this.rbtS808_Televisor_B);
             this.groupBox60.Controls.Add(this.label70);
-            this.groupBox60.Location = new System.Drawing.Point(27, 170);
-            this.groupBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox60.Location = new System.Drawing.Point(20, 138);
             this.groupBox60.Name = "groupBox60";
-            this.groupBox60.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox60.Size = new System.Drawing.Size(440, 37);
+            this.groupBox60.Size = new System.Drawing.Size(330, 30);
             this.groupBox60.TabIndex = 11;
             this.groupBox60.TabStop = false;
             // 
             // rbtS808_Televisor_M
             // 
             this.rbtS808_Televisor_M.AutoSize = true;
-            this.rbtS808_Televisor_M.Location = new System.Drawing.Point(372, 12);
-            this.rbtS808_Televisor_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Televisor_M.Location = new System.Drawing.Point(279, 10);
             this.rbtS808_Televisor_M.Name = "rbtS808_Televisor_M";
-            this.rbtS808_Televisor_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Televisor_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Televisor_M.TabIndex = 4;
             this.rbtS808_Televisor_M.TabStop = true;
             this.rbtS808_Televisor_M.UseVisualStyleBackColor = true;
@@ -2638,10 +4451,9 @@
             // rbtS808_Televisor_R
             // 
             this.rbtS808_Televisor_R.AutoSize = true;
-            this.rbtS808_Televisor_R.Location = new System.Drawing.Point(297, 11);
-            this.rbtS808_Televisor_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Televisor_R.Location = new System.Drawing.Point(223, 9);
             this.rbtS808_Televisor_R.Name = "rbtS808_Televisor_R";
-            this.rbtS808_Televisor_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Televisor_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Televisor_R.TabIndex = 2;
             this.rbtS808_Televisor_R.TabStop = true;
             this.rbtS808_Televisor_R.UseVisualStyleBackColor = true;
@@ -2649,10 +4461,9 @@
             // rbtS808_Televisor_B
             // 
             this.rbtS808_Televisor_B.AutoSize = true;
-            this.rbtS808_Televisor_B.Location = new System.Drawing.Point(220, 11);
-            this.rbtS808_Televisor_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Televisor_B.Location = new System.Drawing.Point(165, 9);
             this.rbtS808_Televisor_B.Name = "rbtS808_Televisor_B";
-            this.rbtS808_Televisor_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Televisor_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Televisor_B.TabIndex = 1;
             this.rbtS808_Televisor_B.TabStop = true;
             this.rbtS808_Televisor_B.UseVisualStyleBackColor = true;
@@ -2660,10 +4471,9 @@
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(4, 12);
-            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Location = new System.Drawing.Point(3, 10);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(82, 17);
+            this.label70.Size = new System.Drawing.Size(62, 13);
             this.label70.TabIndex = 0;
             this.label70.Text = "3. Televisor\t";
             // 
@@ -2673,21 +4483,18 @@
             this.groupBox61.Controls.Add(this.rbtS808_EquipoSonido_R);
             this.groupBox61.Controls.Add(this.rbtS808_EquipoSonido_B);
             this.groupBox61.Controls.Add(this.label71);
-            this.groupBox61.Location = new System.Drawing.Point(27, 132);
-            this.groupBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox61.Location = new System.Drawing.Point(20, 107);
             this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox61.Size = new System.Drawing.Size(440, 37);
+            this.groupBox61.Size = new System.Drawing.Size(330, 30);
             this.groupBox61.TabIndex = 10;
             this.groupBox61.TabStop = false;
             // 
             // rbtS808_EquipoSonido_M
             // 
             this.rbtS808_EquipoSonido_M.AutoSize = true;
-            this.rbtS808_EquipoSonido_M.Location = new System.Drawing.Point(372, 11);
-            this.rbtS808_EquipoSonido_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_EquipoSonido_M.Location = new System.Drawing.Point(279, 9);
             this.rbtS808_EquipoSonido_M.Name = "rbtS808_EquipoSonido_M";
-            this.rbtS808_EquipoSonido_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_EquipoSonido_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_EquipoSonido_M.TabIndex = 4;
             this.rbtS808_EquipoSonido_M.TabStop = true;
             this.rbtS808_EquipoSonido_M.UseVisualStyleBackColor = true;
@@ -2695,10 +4502,9 @@
             // rbtS808_EquipoSonido_R
             // 
             this.rbtS808_EquipoSonido_R.AutoSize = true;
-            this.rbtS808_EquipoSonido_R.Location = new System.Drawing.Point(297, 11);
-            this.rbtS808_EquipoSonido_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_EquipoSonido_R.Location = new System.Drawing.Point(223, 9);
             this.rbtS808_EquipoSonido_R.Name = "rbtS808_EquipoSonido_R";
-            this.rbtS808_EquipoSonido_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_EquipoSonido_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_EquipoSonido_R.TabIndex = 2;
             this.rbtS808_EquipoSonido_R.TabStop = true;
             this.rbtS808_EquipoSonido_R.UseVisualStyleBackColor = true;
@@ -2706,10 +4512,9 @@
             // rbtS808_EquipoSonido_B
             // 
             this.rbtS808_EquipoSonido_B.AutoSize = true;
-            this.rbtS808_EquipoSonido_B.Location = new System.Drawing.Point(220, 11);
-            this.rbtS808_EquipoSonido_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_EquipoSonido_B.Location = new System.Drawing.Point(165, 9);
             this.rbtS808_EquipoSonido_B.Name = "rbtS808_EquipoSonido_B";
-            this.rbtS808_EquipoSonido_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_EquipoSonido_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_EquipoSonido_B.TabIndex = 1;
             this.rbtS808_EquipoSonido_B.TabStop = true;
             this.rbtS808_EquipoSonido_B.UseVisualStyleBackColor = true;
@@ -2717,10 +4522,9 @@
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(4, 12);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Location = new System.Drawing.Point(3, 10);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(134, 17);
+            this.label71.Size = new System.Drawing.Size(101, 13);
             this.label71.TabIndex = 0;
             this.label71.Text = "2. Equipo de sonido\t";
             // 
@@ -2730,21 +4534,18 @@
             this.gbxS808_Refrigerador.Controls.Add(this.rbtS808_Refrigerador_R);
             this.gbxS808_Refrigerador.Controls.Add(this.rbtS808_Refrigerador_B);
             this.gbxS808_Refrigerador.Controls.Add(this.label72);
-            this.gbxS808_Refrigerador.Location = new System.Drawing.Point(27, 92);
-            this.gbxS808_Refrigerador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxS808_Refrigerador.Location = new System.Drawing.Point(20, 75);
             this.gbxS808_Refrigerador.Name = "gbxS808_Refrigerador";
-            this.gbxS808_Refrigerador.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxS808_Refrigerador.Size = new System.Drawing.Size(440, 37);
+            this.gbxS808_Refrigerador.Size = new System.Drawing.Size(330, 30);
             this.gbxS808_Refrigerador.TabIndex = 9;
             this.gbxS808_Refrigerador.TabStop = false;
             // 
             // rbtS808_Refrigerador_M
             // 
             this.rbtS808_Refrigerador_M.AutoSize = true;
-            this.rbtS808_Refrigerador_M.Location = new System.Drawing.Point(372, 12);
-            this.rbtS808_Refrigerador_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Refrigerador_M.Location = new System.Drawing.Point(279, 10);
             this.rbtS808_Refrigerador_M.Name = "rbtS808_Refrigerador_M";
-            this.rbtS808_Refrigerador_M.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Refrigerador_M.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Refrigerador_M.TabIndex = 3;
             this.rbtS808_Refrigerador_M.TabStop = true;
             this.rbtS808_Refrigerador_M.UseVisualStyleBackColor = true;
@@ -2752,10 +4553,9 @@
             // rbtS808_Refrigerador_R
             // 
             this.rbtS808_Refrigerador_R.AutoSize = true;
-            this.rbtS808_Refrigerador_R.Location = new System.Drawing.Point(297, 12);
-            this.rbtS808_Refrigerador_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Refrigerador_R.Location = new System.Drawing.Point(223, 10);
             this.rbtS808_Refrigerador_R.Name = "rbtS808_Refrigerador_R";
-            this.rbtS808_Refrigerador_R.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Refrigerador_R.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Refrigerador_R.TabIndex = 2;
             this.rbtS808_Refrigerador_R.TabStop = true;
             this.rbtS808_Refrigerador_R.UseVisualStyleBackColor = true;
@@ -2763,10 +4563,9 @@
             // rbtS808_Refrigerador_B
             // 
             this.rbtS808_Refrigerador_B.AutoSize = true;
-            this.rbtS808_Refrigerador_B.Location = new System.Drawing.Point(220, 12);
-            this.rbtS808_Refrigerador_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Refrigerador_B.Location = new System.Drawing.Point(165, 10);
             this.rbtS808_Refrigerador_B.Name = "rbtS808_Refrigerador_B";
-            this.rbtS808_Refrigerador_B.Size = new System.Drawing.Size(17, 16);
+            this.rbtS808_Refrigerador_B.Size = new System.Drawing.Size(14, 13);
             this.rbtS808_Refrigerador_B.TabIndex = 1;
             this.rbtS808_Refrigerador_B.TabStop = true;
             this.rbtS808_Refrigerador_B.UseVisualStyleBackColor = true;
@@ -2774,10 +4573,9 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(5, 12);
-            this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label72.Location = new System.Drawing.Point(4, 10);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(108, 17);
+            this.label72.Size = new System.Drawing.Size(80, 13);
             this.label72.TabIndex = 0;
             this.label72.Text = "1.  Refrigerador\t\t\r\n";
             // 
@@ -2786,41 +4584,36 @@
             this.groupBox63.Controls.Add(this.label73);
             this.groupBox63.Controls.Add(this.label75);
             this.groupBox63.Controls.Add(this.label76);
-            this.groupBox63.Location = new System.Drawing.Point(27, 53);
-            this.groupBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox63.Location = new System.Drawing.Point(20, 43);
             this.groupBox63.Name = "groupBox63";
-            this.groupBox63.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox63.Size = new System.Drawing.Size(440, 37);
+            this.groupBox63.Size = new System.Drawing.Size(330, 30);
             this.groupBox63.TabIndex = 8;
             this.groupBox63.TabStop = false;
             // 
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(360, 11);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label73.Location = new System.Drawing.Point(270, 9);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(38, 17);
+            this.label73.Size = new System.Drawing.Size(29, 13);
             this.label73.TabIndex = 3;
             this.label73.Text = "malo";
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(279, 11);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label75.Location = new System.Drawing.Point(209, 9);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(58, 17);
+            this.label75.Size = new System.Drawing.Size(44, 13);
             this.label75.TabIndex = 1;
             this.label75.Text = "Regular";
             // 
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(207, 11);
-            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label76.Location = new System.Drawing.Point(155, 9);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(48, 17);
+            this.label76.Size = new System.Drawing.Size(37, 13);
             this.label76.TabIndex = 0;
             this.label76.Text = "bueno";
             // 
@@ -2828,11 +4621,9 @@
             // 
             this.groupBox55.Controls.Add(this.cklS8_S807);
             this.groupBox55.Controls.Add(this.label66);
-            this.groupBox55.Location = new System.Drawing.Point(432, 303);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox55.Location = new System.Drawing.Point(324, 246);
             this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox55.Size = new System.Drawing.Size(400, 171);
+            this.groupBox55.Size = new System.Drawing.Size(300, 139);
             this.groupBox55.TabIndex = 8;
             this.groupBox55.TabStop = false;
             // 
@@ -2845,44 +4636,39 @@
             "03. Teléfono residencial\t\t\t",
             "04. Internet\t\t\t",
             "NS/NR\t\t\t"});
-            this.cklS8_S807.Location = new System.Drawing.Point(25, 50);
-            this.cklS8_S807.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
-            this.cklS8_S807.Size = new System.Drawing.Size(332, 89);
+            this.cklS8_S807.Size = new System.Drawing.Size(250, 64);
             this.cklS8_S807.TabIndex = 9;
             // 
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(3, 11);
-            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label66.Location = new System.Drawing.Point(2, 9);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(341, 34);
+            this.label66.Size = new System.Drawing.Size(266, 26);
             this.label66.TabIndex = 1;
             this.label66.Text = "7. ¿Cuenta con algún otro servicio adicional?\r\n    [MARCAR TODAS LAS OPCIONES NEC" +
-                "ESARIAS] ";
+    "ESARIAS] ";
             // 
             // groupBox54
             // 
             this.groupBox54.Controls.Add(this.txtS8_OtroTipoBasura);
             this.groupBox54.Controls.Add(this.cbxS8_BasuraHogar);
             this.groupBox54.Controls.Add(this.label65);
-            this.groupBox54.Location = new System.Drawing.Point(429, 150);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox54.Location = new System.Drawing.Point(322, 122);
             this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox54.Size = new System.Drawing.Size(400, 151);
+            this.groupBox54.Size = new System.Drawing.Size(300, 123);
             this.groupBox54.TabIndex = 7;
             this.groupBox54.TabStop = false;
             // 
             // txtS8_OtroTipoBasura
             // 
             this.txtS8_OtroTipoBasura.Enabled = false;
-            this.txtS8_OtroTipoBasura.Location = new System.Drawing.Point(27, 84);
-            this.txtS8_OtroTipoBasura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtroTipoBasura.Location = new System.Drawing.Point(20, 68);
             this.txtS8_OtroTipoBasura.Multiline = true;
             this.txtS8_OtroTipoBasura.Name = "txtS8_OtroTipoBasura";
-            this.txtS8_OtroTipoBasura.Size = new System.Drawing.Size(332, 38);
+            this.txtS8_OtroTipoBasura.Size = new System.Drawing.Size(250, 32);
             this.txtS8_OtroTipoBasura.TabIndex = 3;
             // 
             // cbxS8_BasuraHogar
@@ -2896,20 +4682,18 @@
             "Paga por el servicio de recolección de basura",
             "Otro (especifique)",
             "NS/NR"});
-            this.cbxS8_BasuraHogar.Location = new System.Drawing.Point(25, 49);
-            this.cbxS8_BasuraHogar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_BasuraHogar.Location = new System.Drawing.Point(19, 40);
             this.cbxS8_BasuraHogar.Name = "cbxS8_BasuraHogar";
-            this.cbxS8_BasuraHogar.Size = new System.Drawing.Size(332, 24);
+            this.cbxS8_BasuraHogar.Size = new System.Drawing.Size(250, 21);
             this.cbxS8_BasuraHogar.TabIndex = 2;
             this.cbxS8_BasuraHogar.SelectedIndexChanged += new System.EventHandler(this.cbxS8_BasuraHogar_SelectedIndexChanged);
             // 
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(4, 11);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Location = new System.Drawing.Point(3, 9);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(385, 34);
+            this.label65.Size = new System.Drawing.Size(288, 26);
             this.label65.TabIndex = 1;
             this.label65.Text = "6. ¿Qué hacen habitualmente con la basura que se genera \r\n    en el hogar?";
             // 
@@ -2918,22 +4702,19 @@
             this.groupBox53.Controls.Add(this.txtS8_OtroTipoSanitario);
             this.groupBox53.Controls.Add(this.cbxS8_Sanitario);
             this.groupBox53.Controls.Add(this.label64);
-            this.groupBox53.Location = new System.Drawing.Point(428, 15);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox53.Location = new System.Drawing.Point(321, 12);
             this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox53.Size = new System.Drawing.Size(400, 135);
+            this.groupBox53.Size = new System.Drawing.Size(300, 110);
             this.groupBox53.TabIndex = 6;
             this.groupBox53.TabStop = false;
             // 
             // txtS8_OtroTipoSanitario
             // 
             this.txtS8_OtroTipoSanitario.Enabled = false;
-            this.txtS8_OtroTipoSanitario.Location = new System.Drawing.Point(28, 63);
-            this.txtS8_OtroTipoSanitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtroTipoSanitario.Location = new System.Drawing.Point(21, 51);
             this.txtS8_OtroTipoSanitario.Multiline = true;
             this.txtS8_OtroTipoSanitario.Name = "txtS8_OtroTipoSanitario";
-            this.txtS8_OtroTipoSanitario.Size = new System.Drawing.Size(332, 48);
+            this.txtS8_OtroTipoSanitario.Size = new System.Drawing.Size(250, 40);
             this.txtS8_OtroTipoSanitario.TabIndex = 3;
             // 
             // cbxS8_Sanitario
@@ -2946,20 +4727,18 @@
             "No tiene",
             "Otro (especificar)",
             "NS/NR"});
-            this.cbxS8_Sanitario.Location = new System.Drawing.Point(27, 31);
-            this.cbxS8_Sanitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_Sanitario.Location = new System.Drawing.Point(20, 25);
             this.cbxS8_Sanitario.Name = "cbxS8_Sanitario";
-            this.cbxS8_Sanitario.Size = new System.Drawing.Size(332, 24);
+            this.cbxS8_Sanitario.Size = new System.Drawing.Size(250, 21);
             this.cbxS8_Sanitario.TabIndex = 2;
             this.cbxS8_Sanitario.SelectedIndexChanged += new System.EventHandler(this.cbxS8_Sanitario_SelectedIndexChanged);
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(4, 11);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label64.Location = new System.Drawing.Point(3, 9);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(357, 17);
+            this.label64.Size = new System.Drawing.Size(267, 13);
             this.label64.TabIndex = 1;
             this.label64.Text = "5. ¿Con qué tipo de servicio sanitario cuenta su hogar?\t";
             // 
@@ -2968,22 +4747,19 @@
             this.groupBox52.Controls.Add(this.txtS8_OtraEnergiaCocina);
             this.groupBox52.Controls.Add(this.cbxS8_EnergiaCocina);
             this.groupBox52.Controls.Add(this.label63);
-            this.groupBox52.Location = new System.Drawing.Point(11, 370);
-            this.groupBox52.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox52.Location = new System.Drawing.Point(8, 301);
             this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox52.Size = new System.Drawing.Size(400, 149);
+            this.groupBox52.Size = new System.Drawing.Size(300, 121);
             this.groupBox52.TabIndex = 5;
             this.groupBox52.TabStop = false;
             // 
             // txtS8_OtraEnergiaCocina
             // 
             this.txtS8_OtraEnergiaCocina.Enabled = false;
-            this.txtS8_OtraEnergiaCocina.Location = new System.Drawing.Point(25, 80);
-            this.txtS8_OtraEnergiaCocina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtraEnergiaCocina.Location = new System.Drawing.Point(19, 65);
             this.txtS8_OtraEnergiaCocina.Multiline = true;
             this.txtS8_OtraEnergiaCocina.Name = "txtS8_OtraEnergiaCocina";
-            this.txtS8_OtraEnergiaCocina.Size = new System.Drawing.Size(332, 48);
+            this.txtS8_OtraEnergiaCocina.Size = new System.Drawing.Size(250, 40);
             this.txtS8_OtraEnergiaCocina.TabIndex = 3;
             // 
             // cbxS8_EnergiaCocina
@@ -2997,45 +4773,40 @@
             "No cocina",
             "Otro (especifique)",
             "NS/NR"});
-            this.cbxS8_EnergiaCocina.Location = new System.Drawing.Point(25, 47);
-            this.cbxS8_EnergiaCocina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_EnergiaCocina.Location = new System.Drawing.Point(19, 38);
             this.cbxS8_EnergiaCocina.Name = "cbxS8_EnergiaCocina";
-            this.cbxS8_EnergiaCocina.Size = new System.Drawing.Size(332, 24);
+            this.cbxS8_EnergiaCocina.Size = new System.Drawing.Size(250, 21);
             this.cbxS8_EnergiaCocina.TabIndex = 2;
             this.cbxS8_EnergiaCocina.SelectedIndexChanged += new System.EventHandler(this.cbxS8_EnergiaCocina_SelectedIndexChanged);
             // 
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(4, 11);
-            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Location = new System.Drawing.Point(3, 9);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(293, 34);
+            this.label63.Size = new System.Drawing.Size(220, 26);
             this.label63.TabIndex = 1;
             this.label63.Text = "4. ¿Qué tipo de combustible o energía utiliza \r\n    PREDOMINANTEMENTE para cocina" +
-                "r?\t\t\t\t";
+    "r?\t\t\t\t";
             // 
             // groupBox51
             // 
             this.groupBox51.Controls.Add(this.txtS8_OtraEnergiaElectrica);
             this.groupBox51.Controls.Add(this.cbxS8_EnergiaElectrica);
             this.groupBox51.Controls.Add(this.label62);
-            this.groupBox51.Location = new System.Drawing.Point(11, 240);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox51.Location = new System.Drawing.Point(8, 195);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox51.Size = new System.Drawing.Size(400, 129);
+            this.groupBox51.Size = new System.Drawing.Size(300, 105);
             this.groupBox51.TabIndex = 4;
             this.groupBox51.TabStop = false;
             // 
             // txtS8_OtraEnergiaElectrica
             // 
             this.txtS8_OtraEnergiaElectrica.Enabled = false;
-            this.txtS8_OtraEnergiaElectrica.Location = new System.Drawing.Point(25, 66);
-            this.txtS8_OtraEnergiaElectrica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtraEnergiaElectrica.Location = new System.Drawing.Point(19, 54);
             this.txtS8_OtraEnergiaElectrica.Multiline = true;
             this.txtS8_OtraEnergiaElectrica.Name = "txtS8_OtraEnergiaElectrica";
-            this.txtS8_OtraEnergiaElectrica.Size = new System.Drawing.Size(332, 48);
+            this.txtS8_OtraEnergiaElectrica.Size = new System.Drawing.Size(250, 40);
             this.txtS8_OtraEnergiaElectrica.TabIndex = 3;
             // 
             // cbxS8_EnergiaElectrica
@@ -3049,20 +4820,18 @@
             "No tiene acceso",
             "Otro (especifique)",
             "NS/NR"});
-            this.cbxS8_EnergiaElectrica.Location = new System.Drawing.Point(25, 36);
-            this.cbxS8_EnergiaElectrica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_EnergiaElectrica.Location = new System.Drawing.Point(19, 29);
             this.cbxS8_EnergiaElectrica.Name = "cbxS8_EnergiaElectrica";
-            this.cbxS8_EnergiaElectrica.Size = new System.Drawing.Size(332, 24);
+            this.cbxS8_EnergiaElectrica.Size = new System.Drawing.Size(250, 21);
             this.cbxS8_EnergiaElectrica.TabIndex = 2;
             this.cbxS8_EnergiaElectrica.SelectedIndexChanged += new System.EventHandler(this.cbxS8_EnergiaElectrica_SelectedIndexChanged);
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(4, 11);
-            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label62.Location = new System.Drawing.Point(3, 9);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(259, 17);
+            this.label62.Size = new System.Drawing.Size(196, 13);
             this.label62.TabIndex = 1;
             this.label62.Text = "3. ¿Cómo obtienen la energía eléctrica?";
             // 
@@ -3071,22 +4840,19 @@
             this.groupBox49.Controls.Add(this.txtS8_OtraFuente);
             this.groupBox49.Controls.Add(this.cbxS8_FuenteAgua);
             this.groupBox49.Controls.Add(this.label61);
-            this.groupBox49.Location = new System.Drawing.Point(8, 101);
-            this.groupBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox49.Location = new System.Drawing.Point(6, 82);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox49.Size = new System.Drawing.Size(400, 138);
+            this.groupBox49.Size = new System.Drawing.Size(300, 112);
             this.groupBox49.TabIndex = 3;
             this.groupBox49.TabStop = false;
             // 
             // txtS8_OtraFuente
             // 
             this.txtS8_OtraFuente.Enabled = false;
-            this.txtS8_OtraFuente.Location = new System.Drawing.Point(28, 65);
-            this.txtS8_OtraFuente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtraFuente.Location = new System.Drawing.Point(21, 53);
             this.txtS8_OtraFuente.Multiline = true;
             this.txtS8_OtraFuente.Name = "txtS8_OtraFuente";
-            this.txtS8_OtraFuente.Size = new System.Drawing.Size(332, 48);
+            this.txtS8_OtraFuente.Size = new System.Drawing.Size(250, 40);
             this.txtS8_OtraFuente.TabIndex = 3;
             // 
             // cbxS8_FuenteAgua
@@ -3102,20 +4868,18 @@
             "Vecino",
             "Otro (especifique)",
             "NS/NR"});
-            this.cbxS8_FuenteAgua.Location = new System.Drawing.Point(28, 32);
-            this.cbxS8_FuenteAgua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_FuenteAgua.Location = new System.Drawing.Point(21, 26);
             this.cbxS8_FuenteAgua.Name = "cbxS8_FuenteAgua";
-            this.cbxS8_FuenteAgua.Size = new System.Drawing.Size(332, 24);
+            this.cbxS8_FuenteAgua.Size = new System.Drawing.Size(250, 21);
             this.cbxS8_FuenteAgua.TabIndex = 2;
             this.cbxS8_FuenteAgua.SelectedIndexChanged += new System.EventHandler(this.cbxS8_FuenteAgua_SelectedIndexChanged);
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(4, 12);
-            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Location = new System.Drawing.Point(3, 10);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(345, 17);
+            this.label61.Size = new System.Drawing.Size(259, 13);
             this.label61.TabIndex = 1;
             this.label61.Text = "2. ¿Cuál es la principal fuente de obtención de agua?\t\t\t\t\r\n";
             // 
@@ -3123,11 +4887,9 @@
             // 
             this.groupBox48.Controls.Add(this.cbxS8_AccesoAgua);
             this.groupBox48.Controls.Add(this.label60);
-            this.groupBox48.Location = new System.Drawing.Point(8, 16);
-            this.groupBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox48.Location = new System.Drawing.Point(6, 13);
             this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox48.Size = new System.Drawing.Size(400, 84);
+            this.groupBox48.Size = new System.Drawing.Size(300, 68);
             this.groupBox48.TabIndex = 0;
             this.groupBox48.TabStop = false;
             // 
@@ -3139,19 +4901,17 @@
             "Cada varios días o semanal",
             "Quincenal o más",
             "NS/NR"});
-            this.cbxS8_AccesoAgua.Location = new System.Drawing.Point(28, 39);
-            this.cbxS8_AccesoAgua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_AccesoAgua.Location = new System.Drawing.Point(21, 32);
             this.cbxS8_AccesoAgua.Name = "cbxS8_AccesoAgua";
-            this.cbxS8_AccesoAgua.Size = new System.Drawing.Size(332, 24);
+            this.cbxS8_AccesoAgua.Size = new System.Drawing.Size(250, 21);
             this.cbxS8_AccesoAgua.TabIndex = 2;
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(5, 12);
-            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label60.Location = new System.Drawing.Point(4, 10);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(291, 17);
+            this.label60.Size = new System.Drawing.Size(223, 13);
             this.label60.TabIndex = 1;
             this.label60.Text = "1. ¿Cada cuánto cuenta con acceso a agua?\t\t\t";
             // 
@@ -3159,11 +4919,10 @@
             // 
             this.tbpS9.Controls.Add(this.pbS9_Siguiente);
             this.tbpS9.Controls.Add(this.groupBox67);
-            this.tbpS9.Location = new System.Drawing.Point(4, 25);
-            this.tbpS9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS9.Location = new System.Drawing.Point(4, 22);
             this.tbpS9.Name = "tbpS9";
-            this.tbpS9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS9.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS9.Size = new System.Drawing.Size(1332, 549);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
             this.tbpS9.UseVisualStyleBackColor = true;
@@ -3171,10 +4930,9 @@
             // pbS9_Siguiente
             // 
             this.pbS9_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS9_Siguiente.Location = new System.Drawing.Point(773, 598);
-            this.pbS9_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS9_Siguiente.Location = new System.Drawing.Point(580, 486);
             this.pbS9_Siguiente.Name = "pbS9_Siguiente";
-            this.pbS9_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS9_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS9_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS9_Siguiente.TabIndex = 15;
             this.pbS9_Siguiente.TabStop = false;
@@ -3187,11 +4945,9 @@
             this.groupBox67.Controls.Add(this.groupBox83);
             this.groupBox67.Controls.Add(this.groupBox84);
             this.groupBox67.Controls.Add(this.groupBox85);
-            this.groupBox67.Location = new System.Drawing.Point(11, 10);
-            this.groupBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox67.Location = new System.Drawing.Point(8, 8);
             this.groupBox67.Name = "groupBox67";
-            this.groupBox67.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox67.Size = new System.Drawing.Size(1771, 581);
+            this.groupBox67.Size = new System.Drawing.Size(1328, 472);
             this.groupBox67.TabIndex = 3;
             this.groupBox67.TabStop = false;
             this.groupBox67.Text = "PROPIEDAD";
@@ -3206,72 +4962,64 @@
             this.groupBox80.Controls.Add(this.txtS9_OtraPropiedadA);
             this.groupBox80.Controls.Add(this.cbxS9_OtraPropiedad);
             this.groupBox80.Controls.Add(this.label94);
-            this.groupBox80.Location = new System.Drawing.Point(433, 170);
-            this.groupBox80.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox80.Location = new System.Drawing.Point(325, 138);
             this.groupBox80.Name = "groupBox80";
-            this.groupBox80.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox80.Size = new System.Drawing.Size(400, 208);
+            this.groupBox80.Size = new System.Drawing.Size(300, 169);
             this.groupBox80.TabIndex = 7;
             this.groupBox80.TabStop = false;
             // 
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(23, 161);
-            this.label102.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label102.Location = new System.Drawing.Point(17, 131);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(28, 17);
+            this.label102.Size = new System.Drawing.Size(22, 13);
             this.label102.TabIndex = 11;
             this.label102.Text = "c). \t\t\t\r\n";
             // 
             // txtS9_OtraPropiedadC
             // 
             this.txtS9_OtraPropiedadC.Enabled = false;
-            this.txtS9_OtraPropiedadC.Location = new System.Drawing.Point(60, 155);
-            this.txtS9_OtraPropiedadC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtraPropiedadC.Location = new System.Drawing.Point(45, 126);
             this.txtS9_OtraPropiedadC.Multiline = true;
             this.txtS9_OtraPropiedadC.Name = "txtS9_OtraPropiedadC";
-            this.txtS9_OtraPropiedadC.Size = new System.Drawing.Size(299, 24);
+            this.txtS9_OtraPropiedadC.Size = new System.Drawing.Size(225, 20);
             this.txtS9_OtraPropiedadC.TabIndex = 10;
             // 
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(23, 127);
-            this.label93.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label93.Location = new System.Drawing.Point(17, 103);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(29, 17);
+            this.label93.Size = new System.Drawing.Size(22, 13);
             this.label93.TabIndex = 9;
             this.label93.Text = "b). \t\t\t\r\n";
             // 
             // txtS9_OtraPropiedadB
             // 
             this.txtS9_OtraPropiedadB.Enabled = false;
-            this.txtS9_OtraPropiedadB.Location = new System.Drawing.Point(60, 121);
-            this.txtS9_OtraPropiedadB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtraPropiedadB.Location = new System.Drawing.Point(45, 98);
             this.txtS9_OtraPropiedadB.Multiline = true;
             this.txtS9_OtraPropiedadB.Name = "txtS9_OtraPropiedadB";
-            this.txtS9_OtraPropiedadB.Size = new System.Drawing.Size(299, 24);
+            this.txtS9_OtraPropiedadB.Size = new System.Drawing.Size(225, 20);
             this.txtS9_OtraPropiedadB.TabIndex = 8;
             // 
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(23, 90);
-            this.label101.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label101.Location = new System.Drawing.Point(17, 73);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(29, 17);
+            this.label101.Size = new System.Drawing.Size(22, 13);
             this.label101.TabIndex = 7;
             this.label101.Text = "a). \t\t\t\r\n";
             // 
             // txtS9_OtraPropiedadA
             // 
             this.txtS9_OtraPropiedadA.Enabled = false;
-            this.txtS9_OtraPropiedadA.Location = new System.Drawing.Point(60, 84);
-            this.txtS9_OtraPropiedadA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtraPropiedadA.Location = new System.Drawing.Point(45, 68);
             this.txtS9_OtraPropiedadA.Multiline = true;
             this.txtS9_OtraPropiedadA.Name = "txtS9_OtraPropiedadA";
-            this.txtS9_OtraPropiedadA.Size = new System.Drawing.Size(299, 24);
+            this.txtS9_OtraPropiedadA.Size = new System.Drawing.Size(225, 20);
             this.txtS9_OtraPropiedadA.TabIndex = 6;
             // 
             // cbxS9_OtraPropiedad
@@ -3281,23 +5029,21 @@
             "Si",
             "No",
             "NS/NR"});
-            this.cbxS9_OtraPropiedad.Location = new System.Drawing.Point(27, 50);
-            this.cbxS9_OtraPropiedad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_OtraPropiedad.Location = new System.Drawing.Point(20, 41);
             this.cbxS9_OtraPropiedad.Name = "cbxS9_OtraPropiedad";
-            this.cbxS9_OtraPropiedad.Size = new System.Drawing.Size(332, 24);
+            this.cbxS9_OtraPropiedad.Size = new System.Drawing.Size(250, 21);
             this.cbxS9_OtraPropiedad.TabIndex = 2;
             this.cbxS9_OtraPropiedad.SelectedIndexChanged += new System.EventHandler(this.cbxS9_OtraPropiedad_SelectedIndexChanged);
             // 
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(4, 11);
-            this.label94.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label94.Location = new System.Drawing.Point(3, 9);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(375, 34);
+            this.label94.Size = new System.Drawing.Size(278, 26);
             this.label94.TabIndex = 1;
             this.label94.Text = "5. ¿Posee usted o algún miembro de su familia algún otro \r\n     tipo de bien o de" +
-                " propiedad?\t";
+    " propiedad?\t";
             // 
             // groupBox81
             // 
@@ -3308,21 +5054,18 @@
             this.groupBox81.Controls.Add(this.txtS9_TelefonoPropietarioTerreno);
             this.groupBox81.Controls.Add(this.txtS9_PropietarioTerreno);
             this.groupBox81.Controls.Add(this.label95);
-            this.groupBox81.Location = new System.Drawing.Point(433, 21);
-            this.groupBox81.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox81.Location = new System.Drawing.Point(325, 17);
             this.groupBox81.Name = "groupBox81";
-            this.groupBox81.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox81.Size = new System.Drawing.Size(400, 148);
+            this.groupBox81.Size = new System.Drawing.Size(300, 120);
             this.groupBox81.TabIndex = 6;
             this.groupBox81.TabStop = false;
             // 
             // ckbS9_NSNR
             // 
             this.ckbS9_NSNR.AutoSize = true;
-            this.ckbS9_NSNR.Location = new System.Drawing.Point(27, 113);
-            this.ckbS9_NSNR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbS9_NSNR.Location = new System.Drawing.Point(20, 92);
             this.ckbS9_NSNR.Name = "ckbS9_NSNR";
-            this.ckbS9_NSNR.Size = new System.Drawing.Size(69, 21);
+            this.ckbS9_NSNR.Size = new System.Drawing.Size(57, 17);
             this.ckbS9_NSNR.TabIndex = 9;
             this.ckbS9_NSNR.Text = "NSNR";
             this.ckbS9_NSNR.UseVisualStyleBackColor = true;
@@ -3330,57 +5073,51 @@
             // label152
             // 
             this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(32, 144);
-            this.label152.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label152.Location = new System.Drawing.Point(24, 117);
             this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(0, 17);
+            this.label152.Size = new System.Drawing.Size(0, 13);
             this.label152.TabIndex = 8;
             // 
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(21, 84);
-            this.label100.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label100.Location = new System.Drawing.Point(16, 68);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(146, 17);
+            this.label100.Size = new System.Drawing.Size(112, 13);
             this.label100.TabIndex = 6;
             this.label100.Text = "Teléfono de contacto:\t\t\t\t\t\t\t\r\n";
             // 
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(23, 52);
-            this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label96.Location = new System.Drawing.Point(17, 42);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(81, 17);
+            this.label96.Size = new System.Drawing.Size(60, 13);
             this.label96.TabIndex = 5;
             this.label96.Text = "Propietario:\t\t\t\t\r\n";
             // 
             // txtS9_TelefonoPropietarioTerreno
             // 
-            this.txtS9_TelefonoPropietarioTerreno.Location = new System.Drawing.Point(180, 80);
-            this.txtS9_TelefonoPropietarioTerreno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_TelefonoPropietarioTerreno.Location = new System.Drawing.Point(135, 65);
             this.txtS9_TelefonoPropietarioTerreno.Multiline = true;
             this.txtS9_TelefonoPropietarioTerreno.Name = "txtS9_TelefonoPropietarioTerreno";
-            this.txtS9_TelefonoPropietarioTerreno.Size = new System.Drawing.Size(175, 30);
+            this.txtS9_TelefonoPropietarioTerreno.Size = new System.Drawing.Size(132, 25);
             this.txtS9_TelefonoPropietarioTerreno.TabIndex = 4;
             // 
             // txtS9_PropietarioTerreno
             // 
-            this.txtS9_PropietarioTerreno.Location = new System.Drawing.Point(111, 47);
-            this.txtS9_PropietarioTerreno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_PropietarioTerreno.Location = new System.Drawing.Point(83, 38);
             this.txtS9_PropietarioTerreno.Multiline = true;
             this.txtS9_PropietarioTerreno.Name = "txtS9_PropietarioTerreno";
-            this.txtS9_PropietarioTerreno.Size = new System.Drawing.Size(244, 24);
+            this.txtS9_PropietarioTerreno.Size = new System.Drawing.Size(184, 20);
             this.txtS9_PropietarioTerreno.TabIndex = 3;
             // 
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(5, 11);
-            this.label95.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label95.Location = new System.Drawing.Point(4, 9);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(377, 34);
+            this.label95.Size = new System.Drawing.Size(279, 26);
             this.label95.TabIndex = 1;
             this.label95.Text = "4. ¿Conoce usted al propietario del terreno y alguna forma\r\n    de contacto?";
             // 
@@ -3389,22 +5126,19 @@
             this.groupBox83.Controls.Add(this.txtS9_OtroTipoPropietario);
             this.groupBox83.Controls.Add(this.cbxS9_TipoPropietario);
             this.groupBox83.Controls.Add(this.label97);
-            this.groupBox83.Location = new System.Drawing.Point(12, 228);
-            this.groupBox83.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox83.Location = new System.Drawing.Point(9, 185);
             this.groupBox83.Name = "groupBox83";
-            this.groupBox83.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox83.Size = new System.Drawing.Size(400, 150);
+            this.groupBox83.Size = new System.Drawing.Size(300, 122);
             this.groupBox83.TabIndex = 4;
             this.groupBox83.TabStop = false;
             // 
             // txtS9_OtroTipoPropietario
             // 
             this.txtS9_OtroTipoPropietario.Enabled = false;
-            this.txtS9_OtroTipoPropietario.Location = new System.Drawing.Point(33, 91);
-            this.txtS9_OtroTipoPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtroTipoPropietario.Location = new System.Drawing.Point(25, 74);
             this.txtS9_OtroTipoPropietario.Multiline = true;
             this.txtS9_OtroTipoPropietario.Name = "txtS9_OtroTipoPropietario";
-            this.txtS9_OtroTipoPropietario.Size = new System.Drawing.Size(332, 48);
+            this.txtS9_OtroTipoPropietario.Size = new System.Drawing.Size(250, 40);
             this.txtS9_OtroTipoPropietario.TabIndex = 3;
             // 
             // cbxS9_TipoPropietario
@@ -3417,20 +5151,18 @@
             "Ocupación irregular",
             "Otro (especifique)",
             "NS/NR"});
-            this.cbxS9_TipoPropietario.Location = new System.Drawing.Point(31, 55);
-            this.cbxS9_TipoPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_TipoPropietario.Location = new System.Drawing.Point(23, 45);
             this.cbxS9_TipoPropietario.Name = "cbxS9_TipoPropietario";
-            this.cbxS9_TipoPropietario.Size = new System.Drawing.Size(332, 24);
+            this.cbxS9_TipoPropietario.Size = new System.Drawing.Size(250, 21);
             this.cbxS9_TipoPropietario.TabIndex = 2;
             this.cbxS9_TipoPropietario.SelectedIndexChanged += new System.EventHandler(this.cbxS9_TipoPropietario_SelectedIndexChanged);
             // 
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(5, 11);
-            this.label97.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label97.Location = new System.Drawing.Point(4, 9);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(355, 34);
+            this.label97.Size = new System.Drawing.Size(264, 26);
             this.label97.TabIndex = 1;
             this.label97.Text = "3. En el caso de no ser propietario, ¿Cuál es el tipo de \r\n     propiedad?";
             // 
@@ -3439,22 +5171,19 @@
             this.groupBox84.Controls.Add(this.txtS9_OtroPropietario);
             this.groupBox84.Controls.Add(this.cbxS9_Propietario);
             this.groupBox84.Controls.Add(this.label98);
-            this.groupBox84.Location = new System.Drawing.Point(15, 96);
-            this.groupBox84.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox84.Location = new System.Drawing.Point(11, 78);
             this.groupBox84.Name = "groupBox84";
-            this.groupBox84.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox84.Size = new System.Drawing.Size(400, 129);
+            this.groupBox84.Size = new System.Drawing.Size(300, 105);
             this.groupBox84.TabIndex = 3;
             this.groupBox84.TabStop = false;
             // 
             // txtS9_OtroPropietario
             // 
             this.txtS9_OtroPropietario.Enabled = false;
-            this.txtS9_OtroPropietario.Location = new System.Drawing.Point(28, 68);
-            this.txtS9_OtroPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtroPropietario.Location = new System.Drawing.Point(21, 55);
             this.txtS9_OtroPropietario.Multiline = true;
             this.txtS9_OtroPropietario.Name = "txtS9_OtroPropietario";
-            this.txtS9_OtroPropietario.Size = new System.Drawing.Size(332, 48);
+            this.txtS9_OtroPropietario.Size = new System.Drawing.Size(250, 40);
             this.txtS9_OtroPropietario.TabIndex = 3;
             // 
             // cbxS9_Propietario
@@ -3466,20 +5195,18 @@
             "Está en proceso de escrituración",
             "Otra (especificar)",
             "NS/NR"});
-            this.cbxS9_Propietario.Location = new System.Drawing.Point(27, 33);
-            this.cbxS9_Propietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_Propietario.Location = new System.Drawing.Point(20, 27);
             this.cbxS9_Propietario.Name = "cbxS9_Propietario";
-            this.cbxS9_Propietario.Size = new System.Drawing.Size(332, 24);
+            this.cbxS9_Propietario.Size = new System.Drawing.Size(250, 21);
             this.cbxS9_Propietario.TabIndex = 2;
             this.cbxS9_Propietario.SelectedIndexChanged += new System.EventHandler(this.cbxS9_Propietario_SelectedIndexChanged);
             // 
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(5, 12);
-            this.label98.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label98.Location = new System.Drawing.Point(4, 10);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(360, 17);
+            this.label98.Size = new System.Drawing.Size(269, 13);
             this.label98.TabIndex = 1;
             this.label98.Text = "2. En el caso de que sea usted propietario:          ►   (5)";
             // 
@@ -3487,11 +5214,9 @@
             // 
             this.groupBox85.Controls.Add(this.cbxS9_1_Propio);
             this.groupBox85.Controls.Add(this.label99);
-            this.groupBox85.Location = new System.Drawing.Point(15, 22);
-            this.groupBox85.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox85.Location = new System.Drawing.Point(11, 18);
             this.groupBox85.Name = "groupBox85";
-            this.groupBox85.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox85.Size = new System.Drawing.Size(400, 73);
+            this.groupBox85.Size = new System.Drawing.Size(300, 59);
             this.groupBox85.TabIndex = 0;
             this.groupBox85.TabStop = false;
             // 
@@ -3502,19 +5227,17 @@
             "Si",
             "No",
             "NS/NR"});
-            this.cbxS9_1_Propio.Location = new System.Drawing.Point(27, 34);
-            this.cbxS9_1_Propio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_1_Propio.Location = new System.Drawing.Point(20, 28);
             this.cbxS9_1_Propio.Name = "cbxS9_1_Propio";
-            this.cbxS9_1_Propio.Size = new System.Drawing.Size(332, 24);
+            this.cbxS9_1_Propio.Size = new System.Drawing.Size(250, 21);
             this.cbxS9_1_Propio.TabIndex = 2;
             // 
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(5, 11);
-            this.label99.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label99.Location = new System.Drawing.Point(4, 9);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(252, 17);
+            this.label99.Size = new System.Drawing.Size(187, 13);
             this.label99.TabIndex = 1;
             this.label99.Text = "1. ¿El terreno donde habita es propio?\t\t\t\t\t\t\t\t\t\r\n";
             // 
@@ -3522,11 +5245,10 @@
             // 
             this.tbpS10.Controls.Add(this.pbS10_Siguiente);
             this.tbpS10.Controls.Add(this.groupBox68);
-            this.tbpS10.Location = new System.Drawing.Point(4, 25);
-            this.tbpS10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS10.Location = new System.Drawing.Point(4, 22);
             this.tbpS10.Name = "tbpS10";
-            this.tbpS10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS10.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
             this.tbpS10.UseVisualStyleBackColor = true;
@@ -3534,10 +5256,9 @@
             // pbS10_Siguiente
             // 
             this.pbS10_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS10_Siguiente.Location = new System.Drawing.Point(1676, 601);
-            this.pbS10_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS10_Siguiente.Location = new System.Drawing.Point(1257, 488);
             this.pbS10_Siguiente.Name = "pbS10_Siguiente";
-            this.pbS10_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS10_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS10_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS10_Siguiente.TabIndex = 16;
             this.pbS10_Siguiente.TabStop = false;
@@ -3556,11 +5277,9 @@
             this.groupBox68.Controls.Add(this.groupBox71);
             this.groupBox68.Controls.Add(this.groupBox72);
             this.groupBox68.Controls.Add(this.groupBox97);
-            this.groupBox68.Location = new System.Drawing.Point(11, 14);
-            this.groupBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox68.Location = new System.Drawing.Point(8, 11);
             this.groupBox68.Name = "groupBox68";
-            this.groupBox68.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox68.Size = new System.Drawing.Size(1771, 606);
+            this.groupBox68.Size = new System.Drawing.Size(1328, 492);
             this.groupBox68.TabIndex = 6;
             this.groupBox68.TabStop = false;
             this.groupBox68.Text = "COMUNIDAD";
@@ -3575,72 +5294,64 @@
             this.groupBox90.Controls.Add(this.txtS10_ProyectosVecinosA);
             this.groupBox90.Controls.Add(this.cbxS10_ProyectosVecinos);
             this.groupBox90.Controls.Add(this.label124);
-            this.groupBox90.Location = new System.Drawing.Point(1337, 399);
-            this.groupBox90.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox90.Location = new System.Drawing.Point(1003, 324);
             this.groupBox90.Name = "groupBox90";
-            this.groupBox90.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox90.Size = new System.Drawing.Size(400, 191);
+            this.groupBox90.Size = new System.Drawing.Size(300, 155);
             this.groupBox90.TabIndex = 14;
             this.groupBox90.TabStop = false;
             // 
             // label121
             // 
             this.label121.AutoSize = true;
-            this.label121.Location = new System.Drawing.Point(31, 161);
-            this.label121.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label121.Location = new System.Drawing.Point(23, 131);
             this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(28, 17);
+            this.label121.Size = new System.Drawing.Size(22, 13);
             this.label121.TabIndex = 11;
             this.label121.Text = "c). \t\t\t\r\n";
             // 
             // txtS10_ProyectosVecinosC
             // 
             this.txtS10_ProyectosVecinosC.Enabled = false;
-            this.txtS10_ProyectosVecinosC.Location = new System.Drawing.Point(68, 155);
-            this.txtS10_ProyectosVecinosC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ProyectosVecinosC.Location = new System.Drawing.Point(51, 126);
             this.txtS10_ProyectosVecinosC.Multiline = true;
             this.txtS10_ProyectosVecinosC.Name = "txtS10_ProyectosVecinosC";
-            this.txtS10_ProyectosVecinosC.Size = new System.Drawing.Size(296, 24);
+            this.txtS10_ProyectosVecinosC.Size = new System.Drawing.Size(223, 20);
             this.txtS10_ProyectosVecinosC.TabIndex = 10;
             // 
             // label122
             // 
             this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(31, 132);
-            this.label122.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label122.Location = new System.Drawing.Point(23, 107);
             this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(29, 17);
+            this.label122.Size = new System.Drawing.Size(22, 13);
             this.label122.TabIndex = 9;
             this.label122.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_ProyectosVecinosB
             // 
             this.txtS10_ProyectosVecinosB.Enabled = false;
-            this.txtS10_ProyectosVecinosB.Location = new System.Drawing.Point(68, 126);
-            this.txtS10_ProyectosVecinosB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ProyectosVecinosB.Location = new System.Drawing.Point(51, 102);
             this.txtS10_ProyectosVecinosB.Multiline = true;
             this.txtS10_ProyectosVecinosB.Name = "txtS10_ProyectosVecinosB";
-            this.txtS10_ProyectosVecinosB.Size = new System.Drawing.Size(296, 24);
+            this.txtS10_ProyectosVecinosB.Size = new System.Drawing.Size(223, 20);
             this.txtS10_ProyectosVecinosB.TabIndex = 8;
             // 
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(31, 102);
-            this.label123.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label123.Location = new System.Drawing.Point(23, 83);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(29, 17);
+            this.label123.Size = new System.Drawing.Size(22, 13);
             this.label123.TabIndex = 7;
             this.label123.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_ProyectosVecinosA
             // 
             this.txtS10_ProyectosVecinosA.Enabled = false;
-            this.txtS10_ProyectosVecinosA.Location = new System.Drawing.Point(68, 96);
-            this.txtS10_ProyectosVecinosA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ProyectosVecinosA.Location = new System.Drawing.Point(51, 78);
             this.txtS10_ProyectosVecinosA.Multiline = true;
             this.txtS10_ProyectosVecinosA.Name = "txtS10_ProyectosVecinosA";
-            this.txtS10_ProyectosVecinosA.Size = new System.Drawing.Size(296, 24);
+            this.txtS10_ProyectosVecinosA.Size = new System.Drawing.Size(223, 20);
             this.txtS10_ProyectosVecinosA.TabIndex = 6;
             // 
             // cbxS10_ProyectosVecinos
@@ -3650,24 +5361,22 @@
             "Si estaría dispuesto a trabajar en:",
             "No estaría dispuesto",
             "NS/NR"});
-            this.cbxS10_ProyectosVecinos.Location = new System.Drawing.Point(32, 65);
-            this.cbxS10_ProyectosVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_ProyectosVecinos.Location = new System.Drawing.Point(24, 53);
             this.cbxS10_ProyectosVecinos.Name = "cbxS10_ProyectosVecinos";
-            this.cbxS10_ProyectosVecinos.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_ProyectosVecinos.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_ProyectosVecinos.TabIndex = 2;
             this.cbxS10_ProyectosVecinos.SelectedIndexChanged += new System.EventHandler(this.cbxS10_ProyectosVecinos_SelectedIndexChanged);
             // 
             // label124
             // 
             this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(4, 11);
-            this.label124.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label124.Location = new System.Drawing.Point(3, 9);
             this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(376, 51);
+            this.label124.Size = new System.Drawing.Size(281, 39);
             this.label124.TabIndex = 1;
             this.label124.Text = "11. ¿Estaría dispuesto a trabajar junto a sus vecinos para \r\n      mejorar algún " +
-                "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
-                "rlo?\t";
+    "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
+    "rlo?\t";
             // 
             // groupBox89
             // 
@@ -3679,72 +5388,64 @@
             this.groupBox89.Controls.Add(this.txtS10_NecesidadComA);
             this.groupBox89.Controls.Add(this.cbxS10_NecesidadCom);
             this.groupBox89.Controls.Add(this.label120);
-            this.groupBox89.Location = new System.Drawing.Point(1337, 208);
-            this.groupBox89.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox89.Location = new System.Drawing.Point(1003, 169);
             this.groupBox89.Name = "groupBox89";
-            this.groupBox89.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox89.Size = new System.Drawing.Size(400, 190);
+            this.groupBox89.Size = new System.Drawing.Size(300, 154);
             this.groupBox89.TabIndex = 13;
             this.groupBox89.TabStop = false;
             // 
             // label117
             // 
             this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(21, 160);
-            this.label117.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label117.Location = new System.Drawing.Point(16, 130);
             this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(28, 17);
+            this.label117.Size = new System.Drawing.Size(22, 13);
             this.label117.TabIndex = 11;
             this.label117.Text = "c). \t\t\t\r\n";
             // 
             // txtS10_NecesidadComC
             // 
             this.txtS10_NecesidadComC.Enabled = false;
-            this.txtS10_NecesidadComC.Location = new System.Drawing.Point(59, 154);
-            this.txtS10_NecesidadComC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadComC.Location = new System.Drawing.Point(44, 125);
             this.txtS10_NecesidadComC.Multiline = true;
             this.txtS10_NecesidadComC.Name = "txtS10_NecesidadComC";
-            this.txtS10_NecesidadComC.Size = new System.Drawing.Size(295, 24);
+            this.txtS10_NecesidadComC.Size = new System.Drawing.Size(222, 20);
             this.txtS10_NecesidadComC.TabIndex = 10;
             // 
             // label118
             // 
             this.label118.AutoSize = true;
-            this.label118.Location = new System.Drawing.Point(21, 129);
-            this.label118.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label118.Location = new System.Drawing.Point(16, 105);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(29, 17);
+            this.label118.Size = new System.Drawing.Size(22, 13);
             this.label118.TabIndex = 9;
             this.label118.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_NecesidadComB
             // 
             this.txtS10_NecesidadComB.Enabled = false;
-            this.txtS10_NecesidadComB.Location = new System.Drawing.Point(59, 123);
-            this.txtS10_NecesidadComB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadComB.Location = new System.Drawing.Point(44, 100);
             this.txtS10_NecesidadComB.Multiline = true;
             this.txtS10_NecesidadComB.Name = "txtS10_NecesidadComB";
-            this.txtS10_NecesidadComB.Size = new System.Drawing.Size(295, 24);
+            this.txtS10_NecesidadComB.Size = new System.Drawing.Size(222, 20);
             this.txtS10_NecesidadComB.TabIndex = 8;
             // 
             // label119
             // 
             this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(21, 100);
-            this.label119.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label119.Location = new System.Drawing.Point(16, 81);
             this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(29, 17);
+            this.label119.Size = new System.Drawing.Size(22, 13);
             this.label119.TabIndex = 7;
             this.label119.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_NecesidadComA
             // 
             this.txtS10_NecesidadComA.Enabled = false;
-            this.txtS10_NecesidadComA.Location = new System.Drawing.Point(59, 94);
-            this.txtS10_NecesidadComA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadComA.Location = new System.Drawing.Point(44, 76);
             this.txtS10_NecesidadComA.Multiline = true;
             this.txtS10_NecesidadComA.Name = "txtS10_NecesidadComA";
-            this.txtS10_NecesidadComA.Size = new System.Drawing.Size(295, 24);
+            this.txtS10_NecesidadComA.Size = new System.Drawing.Size(222, 20);
             this.txtS10_NecesidadComA.TabIndex = 6;
             // 
             // cbxS10_NecesidadCom
@@ -3754,23 +5455,21 @@
             "Si (especificar)",
             "No existen problemas en mi comunidad",
             "NS/NR"});
-            this.cbxS10_NecesidadCom.Location = new System.Drawing.Point(21, 63);
-            this.cbxS10_NecesidadCom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_NecesidadCom.Location = new System.Drawing.Point(16, 51);
             this.cbxS10_NecesidadCom.Name = "cbxS10_NecesidadCom";
-            this.cbxS10_NecesidadCom.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_NecesidadCom.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_NecesidadCom.TabIndex = 2;
             this.cbxS10_NecesidadCom.SelectedIndexChanged += new System.EventHandler(this.cbxS10_NecesidadCom_SelectedIndexChanged);
             // 
             // label120
             // 
             this.label120.AutoSize = true;
-            this.label120.Location = new System.Drawing.Point(5, 11);
-            this.label120.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label120.Location = new System.Drawing.Point(4, 9);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(379, 51);
+            this.label120.Size = new System.Drawing.Size(285, 39);
             this.label120.TabIndex = 1;
             this.label120.Text = "10. ¿Considera que existen problemáticas y/o necesidades\r\n      en su comunidad? " +
-                "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
+    "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
             // 
             // groupBox82
             // 
@@ -3782,72 +5481,64 @@
             this.groupBox82.Controls.Add(this.txtS10_NecesidadA);
             this.groupBox82.Controls.Add(this.cbxS10_Necesidad);
             this.groupBox82.Controls.Add(this.label116);
-            this.groupBox82.Location = new System.Drawing.Point(1337, 18);
-            this.groupBox82.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox82.Location = new System.Drawing.Point(1003, 15);
             this.groupBox82.Name = "groupBox82";
-            this.groupBox82.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox82.Size = new System.Drawing.Size(400, 188);
+            this.groupBox82.Size = new System.Drawing.Size(300, 153);
             this.groupBox82.TabIndex = 12;
             this.groupBox82.TabStop = false;
             // 
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(17, 159);
-            this.label106.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label106.Location = new System.Drawing.Point(13, 129);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(28, 17);
+            this.label106.Size = new System.Drawing.Size(22, 13);
             this.label106.TabIndex = 11;
             this.label106.Text = "c). \t\t\t\r\n";
             // 
             // txtS10_NecesidadC
             // 
             this.txtS10_NecesidadC.Enabled = false;
-            this.txtS10_NecesidadC.Location = new System.Drawing.Point(55, 153);
-            this.txtS10_NecesidadC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadC.Location = new System.Drawing.Point(41, 124);
             this.txtS10_NecesidadC.Multiline = true;
             this.txtS10_NecesidadC.Name = "txtS10_NecesidadC";
-            this.txtS10_NecesidadC.Size = new System.Drawing.Size(300, 24);
+            this.txtS10_NecesidadC.Size = new System.Drawing.Size(226, 20);
             this.txtS10_NecesidadC.TabIndex = 10;
             // 
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(17, 129);
-            this.label114.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label114.Location = new System.Drawing.Point(13, 105);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(29, 17);
+            this.label114.Size = new System.Drawing.Size(22, 13);
             this.label114.TabIndex = 9;
             this.label114.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_NecesidadB
             // 
             this.txtS10_NecesidadB.Enabled = false;
-            this.txtS10_NecesidadB.Location = new System.Drawing.Point(55, 123);
-            this.txtS10_NecesidadB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadB.Location = new System.Drawing.Point(41, 100);
             this.txtS10_NecesidadB.Multiline = true;
             this.txtS10_NecesidadB.Name = "txtS10_NecesidadB";
-            this.txtS10_NecesidadB.Size = new System.Drawing.Size(300, 24);
+            this.txtS10_NecesidadB.Size = new System.Drawing.Size(226, 20);
             this.txtS10_NecesidadB.TabIndex = 8;
             // 
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(17, 100);
-            this.label115.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label115.Location = new System.Drawing.Point(13, 81);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(29, 17);
+            this.label115.Size = new System.Drawing.Size(22, 13);
             this.label115.TabIndex = 7;
             this.label115.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_NecesidadA
             // 
             this.txtS10_NecesidadA.Enabled = false;
-            this.txtS10_NecesidadA.Location = new System.Drawing.Point(55, 94);
-            this.txtS10_NecesidadA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadA.Location = new System.Drawing.Point(41, 76);
             this.txtS10_NecesidadA.Multiline = true;
             this.txtS10_NecesidadA.Name = "txtS10_NecesidadA";
-            this.txtS10_NecesidadA.Size = new System.Drawing.Size(300, 24);
+            this.txtS10_NecesidadA.Size = new System.Drawing.Size(226, 20);
             this.txtS10_NecesidadA.TabIndex = 6;
             // 
             // cbxS10_Necesidad
@@ -3857,23 +5548,21 @@
             "Si (especificar)",
             "No existen problemas en mi familia",
             "NS/NR"});
-            this.cbxS10_Necesidad.Location = new System.Drawing.Point(23, 63);
-            this.cbxS10_Necesidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_Necesidad.Location = new System.Drawing.Point(17, 51);
             this.cbxS10_Necesidad.Name = "cbxS10_Necesidad";
-            this.cbxS10_Necesidad.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_Necesidad.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_Necesidad.TabIndex = 2;
             this.cbxS10_Necesidad.SelectedIndexChanged += new System.EventHandler(this.cbxS10_Necesidad_SelectedIndexChanged);
             // 
             // label116
             // 
             this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(4, 11);
-            this.label116.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label116.Location = new System.Drawing.Point(3, 9);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(397, 51);
+            this.label116.Size = new System.Drawing.Size(297, 39);
             this.label116.TabIndex = 1;
             this.label116.Text = "9. ¿Considera que existe alguna necesidad o problemática en\r\n    su familia? En e" +
-                "l caso de que si ¿cuáles considera que son\r\n    las principales?";
+    "l caso de que si ¿cuáles considera que son\r\n    las principales?";
             // 
             // gbxS1008_Com
             // 
@@ -3890,11 +5579,9 @@
             this.gbxS1008_Com.Controls.Add(this.groupBox79);
             this.gbxS1008_Com.Controls.Add(this.groupBox86);
             this.gbxS1008_Com.Controls.Add(this.groupBox87);
-            this.gbxS1008_Com.Location = new System.Drawing.Point(841, 20);
-            this.gbxS1008_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxS1008_Com.Location = new System.Drawing.Point(631, 16);
             this.gbxS1008_Com.Name = "gbxS1008_Com";
-            this.gbxS1008_Com.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxS1008_Com.Size = new System.Drawing.Size(483, 501);
+            this.gbxS1008_Com.Size = new System.Drawing.Size(362, 407);
             this.gbxS1008_Com.TabIndex = 11;
             this.gbxS1008_Com.TabStop = false;
             // 
@@ -3905,21 +5592,18 @@
             this.groupBox91.Controls.Add(this.radioButton110);
             this.groupBox91.Controls.Add(this.radioButton111);
             this.groupBox91.Controls.Add(this.label125);
-            this.groupBox91.Location = new System.Drawing.Point(23, 297);
-            this.groupBox91.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox91.Location = new System.Drawing.Point(17, 241);
             this.groupBox91.Name = "groupBox91";
-            this.groupBox91.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox91.Size = new System.Drawing.Size(440, 37);
+            this.groupBox91.Size = new System.Drawing.Size(330, 30);
             this.groupBox91.TabIndex = 16;
             this.groupBox91.TabStop = false;
             // 
             // radioButton108
             // 
             this.radioButton108.AutoSize = true;
-            this.radioButton108.Location = new System.Drawing.Point(396, 16);
-            this.radioButton108.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton108.Location = new System.Drawing.Point(297, 13);
             this.radioButton108.Name = "radioButton108";
-            this.radioButton108.Size = new System.Drawing.Size(17, 16);
+            this.radioButton108.Size = new System.Drawing.Size(14, 13);
             this.radioButton108.TabIndex = 4;
             this.radioButton108.TabStop = true;
             this.radioButton108.UseVisualStyleBackColor = true;
@@ -3927,10 +5611,9 @@
             // radioButton109
             // 
             this.radioButton109.AutoSize = true;
-            this.radioButton109.Location = new System.Drawing.Point(340, 16);
-            this.radioButton109.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton109.Location = new System.Drawing.Point(255, 13);
             this.radioButton109.Name = "radioButton109";
-            this.radioButton109.Size = new System.Drawing.Size(17, 16);
+            this.radioButton109.Size = new System.Drawing.Size(14, 13);
             this.radioButton109.TabIndex = 3;
             this.radioButton109.TabStop = true;
             this.radioButton109.UseVisualStyleBackColor = true;
@@ -3938,10 +5621,9 @@
             // radioButton110
             // 
             this.radioButton110.AutoSize = true;
-            this.radioButton110.Location = new System.Drawing.Point(281, 16);
-            this.radioButton110.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton110.Location = new System.Drawing.Point(211, 13);
             this.radioButton110.Name = "radioButton110";
-            this.radioButton110.Size = new System.Drawing.Size(17, 16);
+            this.radioButton110.Size = new System.Drawing.Size(14, 13);
             this.radioButton110.TabIndex = 2;
             this.radioButton110.TabStop = true;
             this.radioButton110.UseVisualStyleBackColor = true;
@@ -3949,10 +5631,9 @@
             // radioButton111
             // 
             this.radioButton111.AutoSize = true;
-            this.radioButton111.Location = new System.Drawing.Point(229, 16);
-            this.radioButton111.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton111.Location = new System.Drawing.Point(172, 13);
             this.radioButton111.Name = "radioButton111";
-            this.radioButton111.Size = new System.Drawing.Size(17, 16);
+            this.radioButton111.Size = new System.Drawing.Size(14, 13);
             this.radioButton111.TabIndex = 1;
             this.radioButton111.TabStop = true;
             this.radioButton111.UseVisualStyleBackColor = true;
@@ -3960,10 +5641,9 @@
             // label125
             // 
             this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(4, 11);
-            this.label125.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label125.Location = new System.Drawing.Point(3, 9);
             this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(71, 17);
+            this.label125.Size = new System.Drawing.Size(54, 13);
             this.label125.TabIndex = 0;
             this.label125.Text = "7. Ejército";
             // 
@@ -3974,21 +5654,18 @@
             this.groupBox88.Controls.Add(this.radioButton118);
             this.groupBox88.Controls.Add(this.radioButton119);
             this.groupBox88.Controls.Add(this.label113);
-            this.groupBox88.Location = new System.Drawing.Point(23, 105);
-            this.groupBox88.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox88.Location = new System.Drawing.Point(17, 85);
             this.groupBox88.Name = "groupBox88";
-            this.groupBox88.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox88.Size = new System.Drawing.Size(440, 37);
+            this.groupBox88.Size = new System.Drawing.Size(330, 30);
             this.groupBox88.TabIndex = 10;
             this.groupBox88.TabStop = false;
             // 
             // radioButton116
             // 
             this.radioButton116.AutoSize = true;
-            this.radioButton116.Location = new System.Drawing.Point(396, 16);
-            this.radioButton116.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton116.Location = new System.Drawing.Point(297, 13);
             this.radioButton116.Name = "radioButton116";
-            this.radioButton116.Size = new System.Drawing.Size(17, 16);
+            this.radioButton116.Size = new System.Drawing.Size(14, 13);
             this.radioButton116.TabIndex = 4;
             this.radioButton116.TabStop = true;
             this.radioButton116.UseVisualStyleBackColor = true;
@@ -3996,10 +5673,9 @@
             // radioButton117
             // 
             this.radioButton117.AutoSize = true;
-            this.radioButton117.Location = new System.Drawing.Point(340, 16);
-            this.radioButton117.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton117.Location = new System.Drawing.Point(255, 13);
             this.radioButton117.Name = "radioButton117";
-            this.radioButton117.Size = new System.Drawing.Size(17, 16);
+            this.radioButton117.Size = new System.Drawing.Size(14, 13);
             this.radioButton117.TabIndex = 3;
             this.radioButton117.TabStop = true;
             this.radioButton117.UseVisualStyleBackColor = true;
@@ -4007,10 +5683,9 @@
             // radioButton118
             // 
             this.radioButton118.AutoSize = true;
-            this.radioButton118.Location = new System.Drawing.Point(281, 16);
-            this.radioButton118.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton118.Location = new System.Drawing.Point(211, 13);
             this.radioButton118.Name = "radioButton118";
-            this.radioButton118.Size = new System.Drawing.Size(17, 16);
+            this.radioButton118.Size = new System.Drawing.Size(14, 13);
             this.radioButton118.TabIndex = 2;
             this.radioButton118.TabStop = true;
             this.radioButton118.UseVisualStyleBackColor = true;
@@ -4018,10 +5693,9 @@
             // radioButton119
             // 
             this.radioButton119.AutoSize = true;
-            this.radioButton119.Location = new System.Drawing.Point(229, 16);
-            this.radioButton119.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton119.Location = new System.Drawing.Point(172, 13);
             this.radioButton119.Name = "radioButton119";
-            this.radioButton119.Size = new System.Drawing.Size(17, 16);
+            this.radioButton119.Size = new System.Drawing.Size(14, 13);
             this.radioButton119.TabIndex = 1;
             this.radioButton119.TabStop = true;
             this.radioButton119.UseVisualStyleBackColor = true;
@@ -4029,10 +5703,9 @@
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(5, 12);
-            this.label113.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label113.Location = new System.Drawing.Point(4, 10);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(161, 17);
+            this.label113.Size = new System.Drawing.Size(122, 13);
             this.label113.TabIndex = 0;
             this.label113.Text = "2. Vecinos de su cuadra";
             // 
@@ -4043,21 +5716,18 @@
             this.groupBox92.Controls.Add(this.radioButton122);
             this.groupBox92.Controls.Add(this.radioButton123);
             this.groupBox92.Controls.Add(this.label126);
-            this.groupBox92.Location = new System.Drawing.Point(21, 450);
-            this.groupBox92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox92.Location = new System.Drawing.Point(16, 366);
             this.groupBox92.Name = "groupBox92";
-            this.groupBox92.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox92.Size = new System.Drawing.Size(440, 37);
+            this.groupBox92.Size = new System.Drawing.Size(330, 30);
             this.groupBox92.TabIndex = 20;
             this.groupBox92.TabStop = false;
             // 
             // radioButton120
             // 
             this.radioButton120.AutoSize = true;
-            this.radioButton120.Location = new System.Drawing.Point(396, 16);
-            this.radioButton120.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton120.Location = new System.Drawing.Point(297, 13);
             this.radioButton120.Name = "radioButton120";
-            this.radioButton120.Size = new System.Drawing.Size(17, 16);
+            this.radioButton120.Size = new System.Drawing.Size(14, 13);
             this.radioButton120.TabIndex = 4;
             this.radioButton120.TabStop = true;
             this.radioButton120.UseVisualStyleBackColor = true;
@@ -4065,10 +5735,9 @@
             // radioButton121
             // 
             this.radioButton121.AutoSize = true;
-            this.radioButton121.Location = new System.Drawing.Point(340, 16);
-            this.radioButton121.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton121.Location = new System.Drawing.Point(255, 13);
             this.radioButton121.Name = "radioButton121";
-            this.radioButton121.Size = new System.Drawing.Size(17, 16);
+            this.radioButton121.Size = new System.Drawing.Size(14, 13);
             this.radioButton121.TabIndex = 3;
             this.radioButton121.TabStop = true;
             this.radioButton121.UseVisualStyleBackColor = true;
@@ -4076,10 +5745,9 @@
             // radioButton122
             // 
             this.radioButton122.AutoSize = true;
-            this.radioButton122.Location = new System.Drawing.Point(281, 16);
-            this.radioButton122.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton122.Location = new System.Drawing.Point(211, 13);
             this.radioButton122.Name = "radioButton122";
-            this.radioButton122.Size = new System.Drawing.Size(17, 16);
+            this.radioButton122.Size = new System.Drawing.Size(14, 13);
             this.radioButton122.TabIndex = 2;
             this.radioButton122.TabStop = true;
             this.radioButton122.UseVisualStyleBackColor = true;
@@ -4087,10 +5755,9 @@
             // radioButton123
             // 
             this.radioButton123.AutoSize = true;
-            this.radioButton123.Location = new System.Drawing.Point(229, 16);
-            this.radioButton123.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton123.Location = new System.Drawing.Point(172, 13);
             this.radioButton123.Name = "radioButton123";
-            this.radioButton123.Size = new System.Drawing.Size(17, 16);
+            this.radioButton123.Size = new System.Drawing.Size(14, 13);
             this.radioButton123.TabIndex = 1;
             this.radioButton123.TabStop = true;
             this.radioButton123.UseVisualStyleBackColor = true;
@@ -4098,10 +5765,9 @@
             // label126
             // 
             this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(4, 11);
-            this.label126.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label126.Location = new System.Drawing.Point(3, 9);
             this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(214, 17);
+            this.label126.Size = new System.Drawing.Size(160, 13);
             this.label126.TabIndex = 0;
             this.label126.Text = "11. Iglesias y/o grupos religiosos\r\n";
             // 
@@ -4112,21 +5778,18 @@
             this.groupBox93.Controls.Add(this.radioButton126);
             this.groupBox93.Controls.Add(this.radioButton127);
             this.groupBox93.Controls.Add(this.label127);
-            this.groupBox93.Location = new System.Drawing.Point(23, 411);
-            this.groupBox93.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox93.Location = new System.Drawing.Point(17, 334);
             this.groupBox93.Name = "groupBox93";
-            this.groupBox93.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox93.Size = new System.Drawing.Size(440, 37);
+            this.groupBox93.Size = new System.Drawing.Size(330, 30);
             this.groupBox93.TabIndex = 19;
             this.groupBox93.TabStop = false;
             // 
             // radioButton124
             // 
             this.radioButton124.AutoSize = true;
-            this.radioButton124.Location = new System.Drawing.Point(396, 16);
-            this.radioButton124.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton124.Location = new System.Drawing.Point(297, 13);
             this.radioButton124.Name = "radioButton124";
-            this.radioButton124.Size = new System.Drawing.Size(17, 16);
+            this.radioButton124.Size = new System.Drawing.Size(14, 13);
             this.radioButton124.TabIndex = 4;
             this.radioButton124.TabStop = true;
             this.radioButton124.UseVisualStyleBackColor = true;
@@ -4134,10 +5797,9 @@
             // radioButton125
             // 
             this.radioButton125.AutoSize = true;
-            this.radioButton125.Location = new System.Drawing.Point(340, 16);
-            this.radioButton125.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton125.Location = new System.Drawing.Point(255, 13);
             this.radioButton125.Name = "radioButton125";
-            this.radioButton125.Size = new System.Drawing.Size(17, 16);
+            this.radioButton125.Size = new System.Drawing.Size(14, 13);
             this.radioButton125.TabIndex = 3;
             this.radioButton125.TabStop = true;
             this.radioButton125.UseVisualStyleBackColor = true;
@@ -4145,10 +5807,9 @@
             // radioButton126
             // 
             this.radioButton126.AutoSize = true;
-            this.radioButton126.Location = new System.Drawing.Point(281, 16);
-            this.radioButton126.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton126.Location = new System.Drawing.Point(211, 13);
             this.radioButton126.Name = "radioButton126";
-            this.radioButton126.Size = new System.Drawing.Size(17, 16);
+            this.radioButton126.Size = new System.Drawing.Size(14, 13);
             this.radioButton126.TabIndex = 2;
             this.radioButton126.TabStop = true;
             this.radioButton126.UseVisualStyleBackColor = true;
@@ -4156,10 +5817,9 @@
             // radioButton127
             // 
             this.radioButton127.AutoSize = true;
-            this.radioButton127.Location = new System.Drawing.Point(229, 16);
-            this.radioButton127.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton127.Location = new System.Drawing.Point(172, 13);
             this.radioButton127.Name = "radioButton127";
-            this.radioButton127.Size = new System.Drawing.Size(17, 16);
+            this.radioButton127.Size = new System.Drawing.Size(14, 13);
             this.radioButton127.TabIndex = 1;
             this.radioButton127.TabStop = true;
             this.radioButton127.UseVisualStyleBackColor = true;
@@ -4167,20 +5827,18 @@
             // label127
             // 
             this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(4, 11);
-            this.label127.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label127.Location = new System.Drawing.Point(3, 9);
             this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(187, 17);
+            this.label127.Size = new System.Drawing.Size(143, 13);
             this.label127.TabIndex = 0;
             this.label127.Text = "10. Medios de comunicación";
             // 
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(5, 11);
-            this.label112.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label112.Location = new System.Drawing.Point(4, 9);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(397, 17);
+            this.label112.Size = new System.Drawing.Size(299, 13);
             this.label112.TabIndex = 15;
             this.label112.Text = "8. ¿Confía usted en las siguientes personas y/o instituciones?";
             // 
@@ -4191,21 +5849,18 @@
             this.groupBox94.Controls.Add(this.radioButton130);
             this.groupBox94.Controls.Add(this.radioButton131);
             this.groupBox94.Controls.Add(this.label128);
-            this.groupBox94.Location = new System.Drawing.Point(23, 373);
-            this.groupBox94.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox94.Location = new System.Drawing.Point(17, 303);
             this.groupBox94.Name = "groupBox94";
-            this.groupBox94.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox94.Size = new System.Drawing.Size(440, 37);
+            this.groupBox94.Size = new System.Drawing.Size(330, 30);
             this.groupBox94.TabIndex = 18;
             this.groupBox94.TabStop = false;
             // 
             // radioButton128
             // 
             this.radioButton128.AutoSize = true;
-            this.radioButton128.Location = new System.Drawing.Point(396, 16);
-            this.radioButton128.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton128.Location = new System.Drawing.Point(297, 13);
             this.radioButton128.Name = "radioButton128";
-            this.radioButton128.Size = new System.Drawing.Size(17, 16);
+            this.radioButton128.Size = new System.Drawing.Size(14, 13);
             this.radioButton128.TabIndex = 4;
             this.radioButton128.TabStop = true;
             this.radioButton128.UseVisualStyleBackColor = true;
@@ -4213,10 +5868,9 @@
             // radioButton129
             // 
             this.radioButton129.AutoSize = true;
-            this.radioButton129.Location = new System.Drawing.Point(340, 16);
-            this.radioButton129.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton129.Location = new System.Drawing.Point(255, 13);
             this.radioButton129.Name = "radioButton129";
-            this.radioButton129.Size = new System.Drawing.Size(17, 16);
+            this.radioButton129.Size = new System.Drawing.Size(14, 13);
             this.radioButton129.TabIndex = 3;
             this.radioButton129.TabStop = true;
             this.radioButton129.UseVisualStyleBackColor = true;
@@ -4224,10 +5878,9 @@
             // radioButton130
             // 
             this.radioButton130.AutoSize = true;
-            this.radioButton130.Location = new System.Drawing.Point(281, 16);
-            this.radioButton130.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton130.Location = new System.Drawing.Point(211, 13);
             this.radioButton130.Name = "radioButton130";
-            this.radioButton130.Size = new System.Drawing.Size(17, 16);
+            this.radioButton130.Size = new System.Drawing.Size(14, 13);
             this.radioButton130.TabIndex = 2;
             this.radioButton130.TabStop = true;
             this.radioButton130.UseVisualStyleBackColor = true;
@@ -4235,10 +5888,9 @@
             // radioButton131
             // 
             this.radioButton131.AutoSize = true;
-            this.radioButton131.Location = new System.Drawing.Point(229, 16);
-            this.radioButton131.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton131.Location = new System.Drawing.Point(172, 13);
             this.radioButton131.Name = "radioButton131";
-            this.radioButton131.Size = new System.Drawing.Size(17, 16);
+            this.radioButton131.Size = new System.Drawing.Size(14, 13);
             this.radioButton131.TabIndex = 1;
             this.radioButton131.TabStop = true;
             this.radioButton131.UseVisualStyleBackColor = true;
@@ -4246,10 +5898,9 @@
             // label128
             // 
             this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(4, 12);
-            this.label128.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label128.Location = new System.Drawing.Point(3, 10);
             this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(72, 17);
+            this.label128.Size = new System.Drawing.Size(56, 13);
             this.label128.TabIndex = 0;
             this.label128.Text = "9. TECHO";
             // 
@@ -4260,21 +5911,18 @@
             this.groupBox76.Controls.Add(this.radioButton94);
             this.groupBox76.Controls.Add(this.radioButton95);
             this.groupBox76.Controls.Add(this.label84);
-            this.groupBox76.Location = new System.Drawing.Point(23, 258);
-            this.groupBox76.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox76.Location = new System.Drawing.Point(17, 210);
             this.groupBox76.Name = "groupBox76";
-            this.groupBox76.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox76.Size = new System.Drawing.Size(440, 37);
+            this.groupBox76.Size = new System.Drawing.Size(330, 30);
             this.groupBox76.TabIndex = 14;
             this.groupBox76.TabStop = false;
             // 
             // radioButton92
             // 
             this.radioButton92.AutoSize = true;
-            this.radioButton92.Location = new System.Drawing.Point(396, 16);
-            this.radioButton92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton92.Location = new System.Drawing.Point(297, 13);
             this.radioButton92.Name = "radioButton92";
-            this.radioButton92.Size = new System.Drawing.Size(17, 16);
+            this.radioButton92.Size = new System.Drawing.Size(14, 13);
             this.radioButton92.TabIndex = 4;
             this.radioButton92.TabStop = true;
             this.radioButton92.UseVisualStyleBackColor = true;
@@ -4282,10 +5930,9 @@
             // radioButton93
             // 
             this.radioButton93.AutoSize = true;
-            this.radioButton93.Location = new System.Drawing.Point(340, 16);
-            this.radioButton93.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton93.Location = new System.Drawing.Point(255, 13);
             this.radioButton93.Name = "radioButton93";
-            this.radioButton93.Size = new System.Drawing.Size(17, 16);
+            this.radioButton93.Size = new System.Drawing.Size(14, 13);
             this.radioButton93.TabIndex = 3;
             this.radioButton93.TabStop = true;
             this.radioButton93.UseVisualStyleBackColor = true;
@@ -4293,10 +5940,9 @@
             // radioButton94
             // 
             this.radioButton94.AutoSize = true;
-            this.radioButton94.Location = new System.Drawing.Point(281, 16);
-            this.radioButton94.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton94.Location = new System.Drawing.Point(211, 13);
             this.radioButton94.Name = "radioButton94";
-            this.radioButton94.Size = new System.Drawing.Size(17, 16);
+            this.radioButton94.Size = new System.Drawing.Size(14, 13);
             this.radioButton94.TabIndex = 2;
             this.radioButton94.TabStop = true;
             this.radioButton94.UseVisualStyleBackColor = true;
@@ -4304,10 +5950,9 @@
             // radioButton95
             // 
             this.radioButton95.AutoSize = true;
-            this.radioButton95.Location = new System.Drawing.Point(229, 16);
-            this.radioButton95.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton95.Location = new System.Drawing.Point(172, 13);
             this.radioButton95.Name = "radioButton95";
-            this.radioButton95.Size = new System.Drawing.Size(17, 16);
+            this.radioButton95.Size = new System.Drawing.Size(14, 13);
             this.radioButton95.TabIndex = 1;
             this.radioButton95.TabStop = true;
             this.radioButton95.UseVisualStyleBackColor = true;
@@ -4315,10 +5960,9 @@
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(4, 11);
-            this.label84.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label84.Location = new System.Drawing.Point(3, 9);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(203, 17);
+            this.label84.Size = new System.Drawing.Size(151, 13);
             this.label84.TabIndex = 0;
             this.label84.Text = "6. Organizaciones de gobierno";
             // 
@@ -4329,21 +5973,18 @@
             this.groupBox95.Controls.Add(this.radioButton134);
             this.groupBox95.Controls.Add(this.radioButton135);
             this.groupBox95.Controls.Add(this.label129);
-            this.groupBox95.Location = new System.Drawing.Point(23, 335);
-            this.groupBox95.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox95.Location = new System.Drawing.Point(17, 272);
             this.groupBox95.Name = "groupBox95";
-            this.groupBox95.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox95.Size = new System.Drawing.Size(440, 37);
+            this.groupBox95.Size = new System.Drawing.Size(330, 30);
             this.groupBox95.TabIndex = 17;
             this.groupBox95.TabStop = false;
             // 
             // radioButton132
             // 
             this.radioButton132.AutoSize = true;
-            this.radioButton132.Location = new System.Drawing.Point(396, 16);
-            this.radioButton132.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton132.Location = new System.Drawing.Point(297, 13);
             this.radioButton132.Name = "radioButton132";
-            this.radioButton132.Size = new System.Drawing.Size(17, 16);
+            this.radioButton132.Size = new System.Drawing.Size(14, 13);
             this.radioButton132.TabIndex = 4;
             this.radioButton132.TabStop = true;
             this.radioButton132.UseVisualStyleBackColor = true;
@@ -4351,10 +5992,9 @@
             // radioButton133
             // 
             this.radioButton133.AutoSize = true;
-            this.radioButton133.Location = new System.Drawing.Point(340, 16);
-            this.radioButton133.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton133.Location = new System.Drawing.Point(255, 13);
             this.radioButton133.Name = "radioButton133";
-            this.radioButton133.Size = new System.Drawing.Size(17, 16);
+            this.radioButton133.Size = new System.Drawing.Size(14, 13);
             this.radioButton133.TabIndex = 3;
             this.radioButton133.TabStop = true;
             this.radioButton133.UseVisualStyleBackColor = true;
@@ -4362,10 +6002,9 @@
             // radioButton134
             // 
             this.radioButton134.AutoSize = true;
-            this.radioButton134.Location = new System.Drawing.Point(281, 16);
-            this.radioButton134.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton134.Location = new System.Drawing.Point(211, 13);
             this.radioButton134.Name = "radioButton134";
-            this.radioButton134.Size = new System.Drawing.Size(17, 16);
+            this.radioButton134.Size = new System.Drawing.Size(14, 13);
             this.radioButton134.TabIndex = 2;
             this.radioButton134.TabStop = true;
             this.radioButton134.UseVisualStyleBackColor = true;
@@ -4373,10 +6012,9 @@
             // radioButton135
             // 
             this.radioButton135.AutoSize = true;
-            this.radioButton135.Location = new System.Drawing.Point(229, 16);
-            this.radioButton135.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton135.Location = new System.Drawing.Point(172, 13);
             this.radioButton135.Name = "radioButton135";
-            this.radioButton135.Size = new System.Drawing.Size(17, 16);
+            this.radioButton135.Size = new System.Drawing.Size(14, 13);
             this.radioButton135.TabIndex = 1;
             this.radioButton135.TabStop = true;
             this.radioButton135.UseVisualStyleBackColor = true;
@@ -4384,10 +6022,9 @@
             // label129
             // 
             this.label129.AutoSize = true;
-            this.label129.Location = new System.Drawing.Point(4, 11);
-            this.label129.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label129.Location = new System.Drawing.Point(3, 9);
             this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(131, 17);
+            this.label129.Size = new System.Drawing.Size(100, 13);
             this.label129.TabIndex = 0;
             this.label129.Text = "8. Partidos políticos";
             // 
@@ -4398,21 +6035,18 @@
             this.groupBox77.Controls.Add(this.radioButton98);
             this.groupBox77.Controls.Add(this.radioButton99);
             this.groupBox77.Controls.Add(this.label85);
-            this.groupBox77.Location = new System.Drawing.Point(23, 220);
-            this.groupBox77.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox77.Location = new System.Drawing.Point(17, 179);
             this.groupBox77.Name = "groupBox77";
-            this.groupBox77.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox77.Size = new System.Drawing.Size(440, 37);
+            this.groupBox77.Size = new System.Drawing.Size(330, 30);
             this.groupBox77.TabIndex = 13;
             this.groupBox77.TabStop = false;
             // 
             // radioButton96
             // 
             this.radioButton96.AutoSize = true;
-            this.radioButton96.Location = new System.Drawing.Point(396, 16);
-            this.radioButton96.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton96.Location = new System.Drawing.Point(297, 13);
             this.radioButton96.Name = "radioButton96";
-            this.radioButton96.Size = new System.Drawing.Size(17, 16);
+            this.radioButton96.Size = new System.Drawing.Size(14, 13);
             this.radioButton96.TabIndex = 4;
             this.radioButton96.TabStop = true;
             this.radioButton96.UseVisualStyleBackColor = true;
@@ -4420,10 +6054,9 @@
             // radioButton97
             // 
             this.radioButton97.AutoSize = true;
-            this.radioButton97.Location = new System.Drawing.Point(340, 16);
-            this.radioButton97.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton97.Location = new System.Drawing.Point(255, 13);
             this.radioButton97.Name = "radioButton97";
-            this.radioButton97.Size = new System.Drawing.Size(17, 16);
+            this.radioButton97.Size = new System.Drawing.Size(14, 13);
             this.radioButton97.TabIndex = 3;
             this.radioButton97.TabStop = true;
             this.radioButton97.UseVisualStyleBackColor = true;
@@ -4431,10 +6064,9 @@
             // radioButton98
             // 
             this.radioButton98.AutoSize = true;
-            this.radioButton98.Location = new System.Drawing.Point(281, 16);
-            this.radioButton98.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton98.Location = new System.Drawing.Point(211, 13);
             this.radioButton98.Name = "radioButton98";
-            this.radioButton98.Size = new System.Drawing.Size(17, 16);
+            this.radioButton98.Size = new System.Drawing.Size(14, 13);
             this.radioButton98.TabIndex = 2;
             this.radioButton98.TabStop = true;
             this.radioButton98.UseVisualStyleBackColor = true;
@@ -4442,10 +6074,9 @@
             // radioButton99
             // 
             this.radioButton99.AutoSize = true;
-            this.radioButton99.Location = new System.Drawing.Point(229, 16);
-            this.radioButton99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton99.Location = new System.Drawing.Point(172, 13);
             this.radioButton99.Name = "radioButton99";
-            this.radioButton99.Size = new System.Drawing.Size(17, 16);
+            this.radioButton99.Size = new System.Drawing.Size(14, 13);
             this.radioButton99.TabIndex = 1;
             this.radioButton99.TabStop = true;
             this.radioButton99.UseVisualStyleBackColor = true;
@@ -4453,10 +6084,9 @@
             // label85
             // 
             this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(4, 11);
-            this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label85.Location = new System.Drawing.Point(3, 9);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(110, 17);
+            this.label85.Size = new System.Drawing.Size(84, 13);
             this.label85.TabIndex = 0;
             this.label85.Text = "5. Municipalidad";
             // 
@@ -4467,21 +6097,18 @@
             this.groupBox78.Controls.Add(this.radioButton102);
             this.groupBox78.Controls.Add(this.radioButton103);
             this.groupBox78.Controls.Add(this.label86);
-            this.groupBox78.Location = new System.Drawing.Point(23, 182);
-            this.groupBox78.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox78.Location = new System.Drawing.Point(17, 148);
             this.groupBox78.Name = "groupBox78";
-            this.groupBox78.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox78.Size = new System.Drawing.Size(440, 37);
+            this.groupBox78.Size = new System.Drawing.Size(330, 30);
             this.groupBox78.TabIndex = 12;
             this.groupBox78.TabStop = false;
             // 
             // radioButton100
             // 
             this.radioButton100.AutoSize = true;
-            this.radioButton100.Location = new System.Drawing.Point(396, 16);
-            this.radioButton100.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton100.Location = new System.Drawing.Point(297, 13);
             this.radioButton100.Name = "radioButton100";
-            this.radioButton100.Size = new System.Drawing.Size(17, 16);
+            this.radioButton100.Size = new System.Drawing.Size(14, 13);
             this.radioButton100.TabIndex = 4;
             this.radioButton100.TabStop = true;
             this.radioButton100.UseVisualStyleBackColor = true;
@@ -4489,10 +6116,9 @@
             // radioButton101
             // 
             this.radioButton101.AutoSize = true;
-            this.radioButton101.Location = new System.Drawing.Point(340, 16);
-            this.radioButton101.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton101.Location = new System.Drawing.Point(255, 13);
             this.radioButton101.Name = "radioButton101";
-            this.radioButton101.Size = new System.Drawing.Size(17, 16);
+            this.radioButton101.Size = new System.Drawing.Size(14, 13);
             this.radioButton101.TabIndex = 3;
             this.radioButton101.TabStop = true;
             this.radioButton101.UseVisualStyleBackColor = true;
@@ -4500,10 +6126,9 @@
             // radioButton102
             // 
             this.radioButton102.AutoSize = true;
-            this.radioButton102.Location = new System.Drawing.Point(281, 16);
-            this.radioButton102.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton102.Location = new System.Drawing.Point(211, 13);
             this.radioButton102.Name = "radioButton102";
-            this.radioButton102.Size = new System.Drawing.Size(17, 16);
+            this.radioButton102.Size = new System.Drawing.Size(14, 13);
             this.radioButton102.TabIndex = 2;
             this.radioButton102.TabStop = true;
             this.radioButton102.UseVisualStyleBackColor = true;
@@ -4511,10 +6136,9 @@
             // radioButton103
             // 
             this.radioButton103.AutoSize = true;
-            this.radioButton103.Location = new System.Drawing.Point(229, 16);
-            this.radioButton103.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton103.Location = new System.Drawing.Point(172, 13);
             this.radioButton103.Name = "radioButton103";
-            this.radioButton103.Size = new System.Drawing.Size(17, 16);
+            this.radioButton103.Size = new System.Drawing.Size(14, 13);
             this.radioButton103.TabIndex = 1;
             this.radioButton103.TabStop = true;
             this.radioButton103.UseVisualStyleBackColor = true;
@@ -4522,10 +6146,9 @@
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(5, 12);
-            this.label86.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label86.Location = new System.Drawing.Point(4, 10);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(65, 17);
+            this.label86.Size = new System.Drawing.Size(52, 13);
             this.label86.TabIndex = 0;
             this.label86.Text = "4. Policía";
             // 
@@ -4536,21 +6159,18 @@
             this.groupBox79.Controls.Add(this.radioButton106);
             this.groupBox79.Controls.Add(this.radioButton107);
             this.groupBox79.Controls.Add(this.label105);
-            this.groupBox79.Location = new System.Drawing.Point(23, 143);
-            this.groupBox79.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox79.Location = new System.Drawing.Point(17, 116);
             this.groupBox79.Name = "groupBox79";
-            this.groupBox79.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox79.Size = new System.Drawing.Size(440, 37);
+            this.groupBox79.Size = new System.Drawing.Size(330, 30);
             this.groupBox79.TabIndex = 11;
             this.groupBox79.TabStop = false;
             // 
             // radioButton104
             // 
             this.radioButton104.AutoSize = true;
-            this.radioButton104.Location = new System.Drawing.Point(396, 16);
-            this.radioButton104.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton104.Location = new System.Drawing.Point(297, 13);
             this.radioButton104.Name = "radioButton104";
-            this.radioButton104.Size = new System.Drawing.Size(17, 16);
+            this.radioButton104.Size = new System.Drawing.Size(14, 13);
             this.radioButton104.TabIndex = 4;
             this.radioButton104.TabStop = true;
             this.radioButton104.UseVisualStyleBackColor = true;
@@ -4558,10 +6178,9 @@
             // radioButton105
             // 
             this.radioButton105.AutoSize = true;
-            this.radioButton105.Location = new System.Drawing.Point(340, 16);
-            this.radioButton105.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton105.Location = new System.Drawing.Point(255, 13);
             this.radioButton105.Name = "radioButton105";
-            this.radioButton105.Size = new System.Drawing.Size(17, 16);
+            this.radioButton105.Size = new System.Drawing.Size(14, 13);
             this.radioButton105.TabIndex = 3;
             this.radioButton105.TabStop = true;
             this.radioButton105.UseVisualStyleBackColor = true;
@@ -4569,10 +6188,9 @@
             // radioButton106
             // 
             this.radioButton106.AutoSize = true;
-            this.radioButton106.Location = new System.Drawing.Point(281, 16);
-            this.radioButton106.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton106.Location = new System.Drawing.Point(211, 13);
             this.radioButton106.Name = "radioButton106";
-            this.radioButton106.Size = new System.Drawing.Size(17, 16);
+            this.radioButton106.Size = new System.Drawing.Size(14, 13);
             this.radioButton106.TabIndex = 2;
             this.radioButton106.TabStop = true;
             this.radioButton106.UseVisualStyleBackColor = true;
@@ -4580,10 +6198,9 @@
             // radioButton107
             // 
             this.radioButton107.AutoSize = true;
-            this.radioButton107.Location = new System.Drawing.Point(229, 16);
-            this.radioButton107.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton107.Location = new System.Drawing.Point(172, 13);
             this.radioButton107.Name = "radioButton107";
-            this.radioButton107.Size = new System.Drawing.Size(17, 16);
+            this.radioButton107.Size = new System.Drawing.Size(14, 13);
             this.radioButton107.TabIndex = 1;
             this.radioButton107.TabStop = true;
             this.radioButton107.UseVisualStyleBackColor = true;
@@ -4591,10 +6208,9 @@
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(5, 12);
-            this.label105.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label105.Location = new System.Drawing.Point(4, 10);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(155, 17);
+            this.label105.Size = new System.Drawing.Size(117, 13);
             this.label105.TabIndex = 0;
             this.label105.Text = "3. Líderes comunitarios";
             // 
@@ -4605,21 +6221,18 @@
             this.groupBox86.Controls.Add(this.radioButton114);
             this.groupBox86.Controls.Add(this.radioButton115);
             this.groupBox86.Controls.Add(this.label107);
-            this.groupBox86.Location = new System.Drawing.Point(23, 66);
-            this.groupBox86.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox86.Location = new System.Drawing.Point(17, 54);
             this.groupBox86.Name = "groupBox86";
-            this.groupBox86.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox86.Size = new System.Drawing.Size(440, 37);
+            this.groupBox86.Size = new System.Drawing.Size(330, 30);
             this.groupBox86.TabIndex = 9;
             this.groupBox86.TabStop = false;
             // 
             // radioButton112
             // 
             this.radioButton112.AutoSize = true;
-            this.radioButton112.Location = new System.Drawing.Point(395, 16);
-            this.radioButton112.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton112.Location = new System.Drawing.Point(296, 13);
             this.radioButton112.Name = "radioButton112";
-            this.radioButton112.Size = new System.Drawing.Size(17, 16);
+            this.radioButton112.Size = new System.Drawing.Size(14, 13);
             this.radioButton112.TabIndex = 4;
             this.radioButton112.TabStop = true;
             this.radioButton112.UseVisualStyleBackColor = true;
@@ -4627,10 +6240,9 @@
             // radioButton113
             // 
             this.radioButton113.AutoSize = true;
-            this.radioButton113.Location = new System.Drawing.Point(340, 15);
-            this.radioButton113.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton113.Location = new System.Drawing.Point(255, 12);
             this.radioButton113.Name = "radioButton113";
-            this.radioButton113.Size = new System.Drawing.Size(17, 16);
+            this.radioButton113.Size = new System.Drawing.Size(14, 13);
             this.radioButton113.TabIndex = 3;
             this.radioButton113.TabStop = true;
             this.radioButton113.UseVisualStyleBackColor = true;
@@ -4638,10 +6250,9 @@
             // radioButton114
             // 
             this.radioButton114.AutoSize = true;
-            this.radioButton114.Location = new System.Drawing.Point(280, 16);
-            this.radioButton114.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton114.Location = new System.Drawing.Point(210, 13);
             this.radioButton114.Name = "radioButton114";
-            this.radioButton114.Size = new System.Drawing.Size(17, 16);
+            this.radioButton114.Size = new System.Drawing.Size(14, 13);
             this.radioButton114.TabIndex = 2;
             this.radioButton114.TabStop = true;
             this.radioButton114.UseVisualStyleBackColor = true;
@@ -4649,10 +6260,9 @@
             // radioButton115
             // 
             this.radioButton115.AutoSize = true;
-            this.radioButton115.Location = new System.Drawing.Point(229, 15);
-            this.radioButton115.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton115.Location = new System.Drawing.Point(172, 12);
             this.radioButton115.Name = "radioButton115";
-            this.radioButton115.Size = new System.Drawing.Size(17, 16);
+            this.radioButton115.Size = new System.Drawing.Size(14, 13);
             this.radioButton115.TabIndex = 1;
             this.radioButton115.TabStop = true;
             this.radioButton115.UseVisualStyleBackColor = true;
@@ -4660,10 +6270,9 @@
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(4, 12);
-            this.label107.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label107.Location = new System.Drawing.Point(3, 10);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(68, 17);
+            this.label107.Size = new System.Drawing.Size(51, 13);
             this.label107.TabIndex = 0;
             this.label107.Text = "1. Familia";
             // 
@@ -4673,51 +6282,45 @@
             this.groupBox87.Controls.Add(this.label109);
             this.groupBox87.Controls.Add(this.label110);
             this.groupBox87.Controls.Add(this.label111);
-            this.groupBox87.Location = new System.Drawing.Point(23, 28);
-            this.groupBox87.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox87.Location = new System.Drawing.Point(17, 23);
             this.groupBox87.Name = "groupBox87";
-            this.groupBox87.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox87.Size = new System.Drawing.Size(440, 37);
+            this.groupBox87.Size = new System.Drawing.Size(330, 30);
             this.groupBox87.TabIndex = 8;
             this.groupBox87.TabStop = false;
             // 
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(332, 11);
-            this.label108.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label108.Location = new System.Drawing.Point(249, 9);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(29, 17);
+            this.label108.Size = new System.Drawing.Size(23, 13);
             this.label108.TabIndex = 3;
             this.label108.Text = "NO";
             // 
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(372, 11);
-            this.label109.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label109.Location = new System.Drawing.Point(279, 9);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(51, 17);
+            this.label109.Size = new System.Drawing.Size(43, 13);
             this.label109.TabIndex = 2;
             this.label109.Text = "NS/NR";
             // 
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(256, 11);
-            this.label110.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label110.Location = new System.Drawing.Point(192, 9);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(75, 17);
+            this.label110.Size = new System.Drawing.Size(57, 13);
             this.label110.TabIndex = 1;
             this.label110.Text = "Indiferente";
             // 
             // label111
             // 
             this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(225, 11);
-            this.label111.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label111.Location = new System.Drawing.Point(169, 9);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(20, 17);
+            this.label111.Size = new System.Drawing.Size(17, 13);
             this.label111.TabIndex = 0;
             this.label111.Text = "SI";
             // 
@@ -4727,11 +6330,9 @@
             this.groupBox75.Controls.Add(this.label103);
             this.groupBox75.Controls.Add(this.txtS1007_Especificar);
             this.groupBox75.Controls.Add(this.label104);
-            this.groupBox75.Location = new System.Drawing.Point(427, 370);
-            this.groupBox75.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox75.Location = new System.Drawing.Point(320, 301);
             this.groupBox75.Name = "groupBox75";
-            this.groupBox75.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox75.Size = new System.Drawing.Size(400, 183);
+            this.groupBox75.Size = new System.Drawing.Size(300, 149);
             this.groupBox75.TabIndex = 10;
             this.groupBox75.TabStop = false;
             // 
@@ -4745,37 +6346,33 @@
             "04. Compromisos familiares",
             "05. Otro (especificar)\t",
             "NS/NR"});
-            this.cklS1007_Com.Location = new System.Drawing.Point(27, 31);
-            this.cklS1007_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS1007_Com.Location = new System.Drawing.Point(20, 25);
             this.cklS1007_Com.Name = "cklS1007_Com";
-            this.cklS1007_Com.Size = new System.Drawing.Size(332, 89);
+            this.cklS1007_Com.Size = new System.Drawing.Size(250, 64);
             this.cklS1007_Com.TabIndex = 5;
             // 
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(35, 86);
-            this.label103.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label103.Location = new System.Drawing.Point(26, 70);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(0, 17);
+            this.label103.Size = new System.Drawing.Size(0, 13);
             this.label103.TabIndex = 4;
             // 
             // txtS1007_Especificar
             // 
-            this.txtS1007_Especificar.Location = new System.Drawing.Point(24, 153);
-            this.txtS1007_Especificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS1007_Especificar.Location = new System.Drawing.Point(18, 124);
             this.txtS1007_Especificar.Multiline = true;
             this.txtS1007_Especificar.Name = "txtS1007_Especificar";
-            this.txtS1007_Especificar.Size = new System.Drawing.Size(332, 24);
+            this.txtS1007_Especificar.Size = new System.Drawing.Size(250, 20);
             this.txtS1007_Especificar.TabIndex = 3;
             // 
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(4, 11);
-            this.label104.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label104.Location = new System.Drawing.Point(3, 9);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(275, 17);
+            this.label104.Size = new System.Drawing.Size(204, 13);
             this.label104.TabIndex = 1;
             this.label104.Text = "7. ¿Por qué razón o razones no participa?";
             // 
@@ -4784,21 +6381,18 @@
             this.groupBox74.Controls.Add(this.txtS1006_Especificar);
             this.groupBox74.Controls.Add(this.cklS1006_Com);
             this.groupBox74.Controls.Add(this.label92);
-            this.groupBox74.Location = new System.Drawing.Point(429, 121);
-            this.groupBox74.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox74.Location = new System.Drawing.Point(322, 98);
             this.groupBox74.Name = "groupBox74";
-            this.groupBox74.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox74.Size = new System.Drawing.Size(400, 249);
+            this.groupBox74.Size = new System.Drawing.Size(300, 202);
             this.groupBox74.TabIndex = 9;
             this.groupBox74.TabStop = false;
             // 
             // txtS1006_Especificar
             // 
-            this.txtS1006_Especificar.Location = new System.Drawing.Point(21, 213);
-            this.txtS1006_Especificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS1006_Especificar.Location = new System.Drawing.Point(16, 173);
             this.txtS1006_Especificar.Multiline = true;
             this.txtS1006_Especificar.Name = "txtS1006_Especificar";
-            this.txtS1006_Especificar.Size = new System.Drawing.Size(332, 24);
+            this.txtS1006_Especificar.Size = new System.Drawing.Size(250, 20);
             this.txtS1006_Especificar.TabIndex = 10;
             // 
             // cklS1006_Com
@@ -4814,19 +6408,17 @@
             "07. Mesa de Trabajo de TECHO\t\t\t\t",
             "08. Otra (especificar)\t\t\t\t",
             "NS/NR\t\t\t\t"});
-            this.cklS1006_Com.Location = new System.Drawing.Point(25, 34);
-            this.cklS1006_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS1006_Com.Location = new System.Drawing.Point(19, 28);
             this.cklS1006_Com.Name = "cklS1006_Com";
-            this.cklS1006_Com.Size = new System.Drawing.Size(332, 140);
+            this.cklS1006_Com.Size = new System.Drawing.Size(250, 109);
             this.cklS1006_Com.TabIndex = 9;
             // 
             // label92
             // 
             this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(4, 12);
-            this.label92.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label92.Location = new System.Drawing.Point(3, 10);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(334, 17);
+            this.label92.Size = new System.Drawing.Size(252, 13);
             this.label92.TabIndex = 1;
             this.label92.Text = "6. ¿En cuál o cuáles participa?                   ►(10.08)";
             // 
@@ -4834,11 +6426,9 @@
             // 
             this.groupBox73.Controls.Add(this.cbxS10_ParticipacionGrupo);
             this.groupBox73.Controls.Add(this.label91);
-            this.groupBox73.Location = new System.Drawing.Point(429, 18);
-            this.groupBox73.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox73.Location = new System.Drawing.Point(322, 15);
             this.groupBox73.Name = "groupBox73";
-            this.groupBox73.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox73.Size = new System.Drawing.Size(400, 100);
+            this.groupBox73.Size = new System.Drawing.Size(300, 81);
             this.groupBox73.TabIndex = 8;
             this.groupBox73.TabStop = false;
             // 
@@ -4849,22 +6439,20 @@
             "Si",
             "No\t\t\t► (7)",
             "NS/NR"});
-            this.cbxS10_ParticipacionGrupo.Location = new System.Drawing.Point(21, 63);
-            this.cbxS10_ParticipacionGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_ParticipacionGrupo.Location = new System.Drawing.Point(16, 51);
             this.cbxS10_ParticipacionGrupo.Name = "cbxS10_ParticipacionGrupo";
-            this.cbxS10_ParticipacionGrupo.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_ParticipacionGrupo.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_ParticipacionGrupo.TabIndex = 2;
             // 
             // label91
             // 
             this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(4, 11);
-            this.label91.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label91.Location = new System.Drawing.Point(3, 9);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(365, 51);
+            this.label91.Size = new System.Drawing.Size(274, 39);
             this.label91.TabIndex = 1;
             this.label91.Text = "5. ¿Ha participado usted o algún miembro de su familia\r\n    en algún grupo u orga" +
-                "nización que actue en beneficio\r\n    de la comunidad?";
+    "nización que actue en beneficio\r\n    de la comunidad?";
             // 
             // groupBox70
             // 
@@ -4876,72 +6464,64 @@
             this.groupBox70.Controls.Add(this.txtS10_OrganizarA);
             this.groupBox70.Controls.Add(this.cbxS10_OrganizarVecinos);
             this.groupBox70.Controls.Add(this.label83);
-            this.groupBox70.Location = new System.Drawing.Point(12, 370);
-            this.groupBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox70.Location = new System.Drawing.Point(9, 301);
             this.groupBox70.Name = "groupBox70";
-            this.groupBox70.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox70.Size = new System.Drawing.Size(400, 183);
+            this.groupBox70.Size = new System.Drawing.Size(300, 149);
             this.groupBox70.TabIndex = 7;
             this.groupBox70.TabStop = false;
             // 
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(20, 148);
-            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label80.Location = new System.Drawing.Point(15, 120);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(28, 17);
+            this.label80.Size = new System.Drawing.Size(22, 13);
             this.label80.TabIndex = 11;
             this.label80.Text = "c). \t\t\t\r\n";
             // 
             // txtS10_OrganizarC
             // 
             this.txtS10_OrganizarC.Enabled = false;
-            this.txtS10_OrganizarC.Location = new System.Drawing.Point(57, 142);
-            this.txtS10_OrganizarC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_OrganizarC.Location = new System.Drawing.Point(43, 115);
             this.txtS10_OrganizarC.Multiline = true;
             this.txtS10_OrganizarC.Name = "txtS10_OrganizarC";
-            this.txtS10_OrganizarC.Size = new System.Drawing.Size(303, 24);
+            this.txtS10_OrganizarC.Size = new System.Drawing.Size(228, 20);
             this.txtS10_OrganizarC.TabIndex = 10;
             // 
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(20, 114);
-            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label81.Location = new System.Drawing.Point(15, 93);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(29, 17);
+            this.label81.Size = new System.Drawing.Size(22, 13);
             this.label81.TabIndex = 9;
             this.label81.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_OrganizarB
             // 
             this.txtS10_OrganizarB.Enabled = false;
-            this.txtS10_OrganizarB.Location = new System.Drawing.Point(57, 108);
-            this.txtS10_OrganizarB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_OrganizarB.Location = new System.Drawing.Point(43, 88);
             this.txtS10_OrganizarB.Multiline = true;
             this.txtS10_OrganizarB.Name = "txtS10_OrganizarB";
-            this.txtS10_OrganizarB.Size = new System.Drawing.Size(303, 24);
+            this.txtS10_OrganizarB.Size = new System.Drawing.Size(228, 20);
             this.txtS10_OrganizarB.TabIndex = 8;
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(20, 85);
-            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label82.Location = new System.Drawing.Point(15, 69);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(29, 17);
+            this.label82.Size = new System.Drawing.Size(22, 13);
             this.label82.TabIndex = 7;
             this.label82.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_OrganizarA
             // 
             this.txtS10_OrganizarA.Enabled = false;
-            this.txtS10_OrganizarA.Location = new System.Drawing.Point(57, 79);
-            this.txtS10_OrganizarA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_OrganizarA.Location = new System.Drawing.Point(43, 64);
             this.txtS10_OrganizarA.Multiline = true;
             this.txtS10_OrganizarA.Name = "txtS10_OrganizarA";
-            this.txtS10_OrganizarA.Size = new System.Drawing.Size(303, 24);
+            this.txtS10_OrganizarA.Size = new System.Drawing.Size(228, 20);
             this.txtS10_OrganizarA.TabIndex = 6;
             // 
             // cbxS10_OrganizarVecinos
@@ -4951,23 +6531,21 @@
             "Si (especificar)",
             "No me organizo con mis vecinos",
             "NS/NR"});
-            this.cbxS10_OrganizarVecinos.Location = new System.Drawing.Point(28, 49);
-            this.cbxS10_OrganizarVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_OrganizarVecinos.Location = new System.Drawing.Point(21, 40);
             this.cbxS10_OrganizarVecinos.Name = "cbxS10_OrganizarVecinos";
-            this.cbxS10_OrganizarVecinos.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_OrganizarVecinos.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_OrganizarVecinos.TabIndex = 2;
             this.cbxS10_OrganizarVecinos.SelectedIndexChanged += new System.EventHandler(this.cbxS10_OrganizarVecinos_SelectedIndexChanged);
             // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(-3, 12);
-            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label83.Location = new System.Drawing.Point(-2, 10);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(410, 34);
+            this.label83.Size = new System.Drawing.Size(308, 26);
             this.label83.TabIndex = 1;
             this.label83.Text = "4. ¿Podría mencionarme si usted se organiza con sus vecinos? \r\n    ¿En qué situac" +
-                "iones lo hacen?\r\n";
+    "iones lo hacen?\r\n";
             // 
             // groupBox71
             // 
@@ -4975,32 +6553,28 @@
             this.groupBox71.Controls.Add(this.txtS10_CometarioRelacion);
             this.groupBox71.Controls.Add(this.cbxS10_RelacionVecinos);
             this.groupBox71.Controls.Add(this.label87);
-            this.groupBox71.Location = new System.Drawing.Point(13, 220);
-            this.groupBox71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox71.Location = new System.Drawing.Point(10, 179);
             this.groupBox71.Name = "groupBox71";
-            this.groupBox71.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox71.Size = new System.Drawing.Size(400, 149);
+            this.groupBox71.Size = new System.Drawing.Size(300, 121);
             this.groupBox71.TabIndex = 4;
             this.groupBox71.TabStop = false;
             // 
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(19, 63);
-            this.label90.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label90.Location = new System.Drawing.Point(14, 51);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(196, 17);
+            this.label90.Size = new System.Drawing.Size(146, 13);
             this.label90.TabIndex = 4;
             this.label90.Text = "¿Por qué es de esta manera?";
             // 
             // txtS10_CometarioRelacion
             // 
             this.txtS10_CometarioRelacion.Enabled = false;
-            this.txtS10_CometarioRelacion.Location = new System.Drawing.Point(27, 86);
-            this.txtS10_CometarioRelacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_CometarioRelacion.Location = new System.Drawing.Point(20, 70);
             this.txtS10_CometarioRelacion.Multiline = true;
             this.txtS10_CometarioRelacion.Name = "txtS10_CometarioRelacion";
-            this.txtS10_CometarioRelacion.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_CometarioRelacion.Size = new System.Drawing.Size(250, 40);
             this.txtS10_CometarioRelacion.TabIndex = 3;
             // 
             // cbxS10_RelacionVecinos
@@ -5013,20 +6587,18 @@
             "Mala",
             "Muy mala",
             "NS/NR"});
-            this.cbxS10_RelacionVecinos.Location = new System.Drawing.Point(27, 31);
-            this.cbxS10_RelacionVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_RelacionVecinos.Location = new System.Drawing.Point(20, 25);
             this.cbxS10_RelacionVecinos.Name = "cbxS10_RelacionVecinos";
-            this.cbxS10_RelacionVecinos.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_RelacionVecinos.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_RelacionVecinos.TabIndex = 2;
             this.cbxS10_RelacionVecinos.SelectedIndexChanged += new System.EventHandler(this.cbxS10_RelacionVecinos_SelectedIndexChanged);
             // 
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(4, 11);
-            this.label87.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label87.Location = new System.Drawing.Point(3, 9);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(377, 17);
+            this.label87.Size = new System.Drawing.Size(284, 13);
             this.label87.TabIndex = 1;
             this.label87.Text = "3. ¿Cómo es su relación con los vecinos de la comunidad?";
             // 
@@ -5034,30 +6606,26 @@
             // 
             this.groupBox72.Controls.Add(this.txtS10_AyudaVecinos);
             this.groupBox72.Controls.Add(this.label88);
-            this.groupBox72.Location = new System.Drawing.Point(13, 119);
-            this.groupBox72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox72.Location = new System.Drawing.Point(10, 97);
             this.groupBox72.Name = "groupBox72";
-            this.groupBox72.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox72.Size = new System.Drawing.Size(400, 98);
+            this.groupBox72.Size = new System.Drawing.Size(300, 80);
             this.groupBox72.TabIndex = 3;
             this.groupBox72.TabStop = false;
             // 
             // txtS10_AyudaVecinos
             // 
-            this.txtS10_AyudaVecinos.Location = new System.Drawing.Point(27, 37);
-            this.txtS10_AyudaVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_AyudaVecinos.Location = new System.Drawing.Point(20, 30);
             this.txtS10_AyudaVecinos.Multiline = true;
             this.txtS10_AyudaVecinos.Name = "txtS10_AyudaVecinos";
-            this.txtS10_AyudaVecinos.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_AyudaVecinos.Size = new System.Drawing.Size(250, 40);
             this.txtS10_AyudaVecinos.TabIndex = 3;
             // 
             // label88
             // 
             this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(4, 12);
-            this.label88.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label88.Location = new System.Drawing.Point(3, 10);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(395, 17);
+            this.label88.Size = new System.Drawing.Size(295, 13);
             this.label88.TabIndex = 1;
             this.label88.Text = "2. ¿De qué forma le ayudan sus vecinos a usted y su familia?\r\n";
             // 
@@ -5065,30 +6633,26 @@
             // 
             this.groupBox97.Controls.Add(this.txtS10_Ayudo);
             this.groupBox97.Controls.Add(this.label89);
-            this.groupBox97.Location = new System.Drawing.Point(13, 20);
-            this.groupBox97.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox97.Location = new System.Drawing.Point(10, 16);
             this.groupBox97.Name = "groupBox97";
-            this.groupBox97.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox97.Size = new System.Drawing.Size(400, 98);
+            this.groupBox97.Size = new System.Drawing.Size(300, 80);
             this.groupBox97.TabIndex = 0;
             this.groupBox97.TabStop = false;
             // 
             // txtS10_Ayudo
             // 
-            this.txtS10_Ayudo.Location = new System.Drawing.Point(27, 37);
-            this.txtS10_Ayudo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_Ayudo.Location = new System.Drawing.Point(20, 30);
             this.txtS10_Ayudo.Multiline = true;
             this.txtS10_Ayudo.Name = "txtS10_Ayudo";
-            this.txtS10_Ayudo.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_Ayudo.Size = new System.Drawing.Size(250, 40);
             this.txtS10_Ayudo.TabIndex = 4;
             // 
             // label89
             // 
             this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(5, 12);
-            this.label89.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label89.Location = new System.Drawing.Point(4, 10);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(372, 17);
+            this.label89.Size = new System.Drawing.Size(278, 13);
             this.label89.TabIndex = 1;
             this.label89.Text = "1. ¿De qué forma ayuda usted y su familia a sus vecinos?";
             // 
@@ -5097,11 +6661,10 @@
             this.tbpS10Cont.AutoScroll = true;
             this.tbpS10Cont.Controls.Add(this.pbS10Cont_Siguiente);
             this.tbpS10Cont.Controls.Add(this.groupBox98);
-            this.tbpS10Cont.Location = new System.Drawing.Point(4, 25);
-            this.tbpS10Cont.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS10Cont.Location = new System.Drawing.Point(4, 22);
             this.tbpS10Cont.Name = "tbpS10Cont";
-            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbpS10Cont.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10Cont.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
             this.tbpS10Cont.UseVisualStyleBackColor = true;
@@ -5109,10 +6672,9 @@
             // pbS10Cont_Siguiente
             // 
             this.pbS10Cont_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS10Cont_Siguiente.Location = new System.Drawing.Point(1171, 599);
-            this.pbS10Cont_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS10Cont_Siguiente.Location = new System.Drawing.Point(878, 487);
             this.pbS10Cont_Siguiente.Name = "pbS10Cont_Siguiente";
-            this.pbS10Cont_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS10Cont_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS10Cont_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS10Cont_Siguiente.TabIndex = 17;
             this.pbS10Cont_Siguiente.TabStop = false;
@@ -5131,11 +6693,9 @@
             this.groupBox98.Controls.Add(this.groupBox100);
             this.groupBox98.Controls.Add(this.groupBox101);
             this.groupBox98.Controls.Add(this.groupBox109);
-            this.groupBox98.Location = new System.Drawing.Point(11, 10);
-            this.groupBox98.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox98.Location = new System.Drawing.Point(8, 8);
             this.groupBox98.Name = "groupBox98";
-            this.groupBox98.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox98.Size = new System.Drawing.Size(1735, 590);
+            this.groupBox98.Size = new System.Drawing.Size(1301, 479);
             this.groupBox98.TabIndex = 5;
             this.groupBox98.TabStop = false;
             this.groupBox98.Text = "...CONTINUACIÓN DE COMUNIDAD";
@@ -5146,32 +6706,28 @@
             this.groupBox108.Controls.Add(this.txtS10_ComentarioEstadoFuturo);
             this.groupBox108.Controls.Add(this.cbxS10_estadoFuturo);
             this.groupBox108.Controls.Add(this.label150);
-            this.groupBox108.Location = new System.Drawing.Point(829, 342);
-            this.groupBox108.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox108.Location = new System.Drawing.Point(622, 278);
             this.groupBox108.Name = "groupBox108";
-            this.groupBox108.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox108.Size = new System.Drawing.Size(400, 169);
+            this.groupBox108.Size = new System.Drawing.Size(300, 137);
             this.groupBox108.TabIndex = 15;
             this.groupBox108.TabStop = false;
             // 
             // label148
             // 
             this.label148.AutoSize = true;
-            this.label148.Location = new System.Drawing.Point(28, 84);
-            this.label148.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label148.Location = new System.Drawing.Point(21, 68);
             this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(74, 17);
+            this.label148.Size = new System.Drawing.Size(56, 13);
             this.label148.TabIndex = 4;
             this.label148.Text = "¿Por qué?";
             // 
             // txtS10_ComentarioEstadoFuturo
             // 
             this.txtS10_ComentarioEstadoFuturo.Enabled = false;
-            this.txtS10_ComentarioEstadoFuturo.Location = new System.Drawing.Point(32, 103);
-            this.txtS10_ComentarioEstadoFuturo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ComentarioEstadoFuturo.Location = new System.Drawing.Point(24, 84);
             this.txtS10_ComentarioEstadoFuturo.Multiline = true;
             this.txtS10_ComentarioEstadoFuturo.Name = "txtS10_ComentarioEstadoFuturo";
-            this.txtS10_ComentarioEstadoFuturo.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_ComentarioEstadoFuturo.Size = new System.Drawing.Size(250, 40);
             this.txtS10_ComentarioEstadoFuturo.TabIndex = 3;
             // 
             // cbxS10_estadoFuturo
@@ -5182,23 +6738,21 @@
             "0.2 Igual",
             "0.3 Peor",
             "NS/NR"});
-            this.cbxS10_estadoFuturo.Location = new System.Drawing.Point(32, 50);
-            this.cbxS10_estadoFuturo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_estadoFuturo.Location = new System.Drawing.Point(24, 41);
             this.cbxS10_estadoFuturo.Name = "cbxS10_estadoFuturo";
-            this.cbxS10_estadoFuturo.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_estadoFuturo.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_estadoFuturo.TabIndex = 2;
             this.cbxS10_estadoFuturo.SelectedIndexChanged += new System.EventHandler(this.cbxS10_estadoFuturo_SelectedIndexChanged);
             // 
             // label150
             // 
             this.label150.AutoSize = true;
-            this.label150.Location = new System.Drawing.Point(3, 12);
-            this.label150.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label150.Location = new System.Drawing.Point(2, 10);
             this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(402, 34);
+            this.label150.Size = new System.Drawing.Size(299, 26);
             this.label150.TabIndex = 1;
             this.label150.Text = "21. ¿Cómo cree que estará su comunidad en años posteriores\r\n      (en el futuro)?" +
-                " ¿Por qué cree eso?";
+    " ¿Por qué cree eso?";
             // 
             // groupBox107
             // 
@@ -5206,32 +6760,28 @@
             this.groupBox107.Controls.Add(this.txtS10_ComentarioEstadoPasado);
             this.groupBox107.Controls.Add(this.cbxS10_EstadoPasado);
             this.groupBox107.Controls.Add(this.label147);
-            this.groupBox107.Location = new System.Drawing.Point(831, 172);
-            this.groupBox107.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox107.Location = new System.Drawing.Point(623, 140);
             this.groupBox107.Name = "groupBox107";
-            this.groupBox107.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox107.Size = new System.Drawing.Size(400, 169);
+            this.groupBox107.Size = new System.Drawing.Size(300, 137);
             this.groupBox107.TabIndex = 14;
             this.groupBox107.TabStop = false;
             // 
             // label149
             // 
             this.label149.AutoSize = true;
-            this.label149.Location = new System.Drawing.Point(37, 79);
-            this.label149.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label149.Location = new System.Drawing.Point(28, 64);
             this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(74, 17);
+            this.label149.Size = new System.Drawing.Size(56, 13);
             this.label149.TabIndex = 4;
             this.label149.Text = "¿Por qué?";
             // 
             // txtS10_ComentarioEstadoPasado
             // 
             this.txtS10_ComentarioEstadoPasado.Enabled = false;
-            this.txtS10_ComentarioEstadoPasado.Location = new System.Drawing.Point(33, 106);
-            this.txtS10_ComentarioEstadoPasado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ComentarioEstadoPasado.Location = new System.Drawing.Point(25, 86);
             this.txtS10_ComentarioEstadoPasado.Multiline = true;
             this.txtS10_ComentarioEstadoPasado.Name = "txtS10_ComentarioEstadoPasado";
-            this.txtS10_ComentarioEstadoPasado.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_ComentarioEstadoPasado.Size = new System.Drawing.Size(250, 40);
             this.txtS10_ComentarioEstadoPasado.TabIndex = 3;
             // 
             // cbxS10_EstadoPasado
@@ -5242,23 +6792,21 @@
             "0.2 Igual",
             "0.3 Peor",
             "NS/NR"});
-            this.cbxS10_EstadoPasado.Location = new System.Drawing.Point(33, 48);
-            this.cbxS10_EstadoPasado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_EstadoPasado.Location = new System.Drawing.Point(25, 39);
             this.cbxS10_EstadoPasado.Name = "cbxS10_EstadoPasado";
-            this.cbxS10_EstadoPasado.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_EstadoPasado.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_EstadoPasado.TabIndex = 2;
             this.cbxS10_EstadoPasado.SelectedIndexChanged += new System.EventHandler(this.cbxS10_EstadoPasado_SelectedIndexChanged);
             // 
             // label147
             // 
             this.label147.AutoSize = true;
-            this.label147.Location = new System.Drawing.Point(4, 11);
-            this.label147.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label147.Location = new System.Drawing.Point(3, 9);
             this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(380, 34);
+            this.label147.Size = new System.Drawing.Size(285, 26);
             this.label147.TabIndex = 1;
             this.label147.Text = "20. ¿Cómo cree que está su comunidad en relación a años\r\n      anteriores (al pas" +
-                "ado)? ¿Por qué cree eso?";
+    "ado)? ¿Por qué cree eso?";
             // 
             // groupBox106
             // 
@@ -5270,21 +6818,18 @@
             this.groupBox106.Controls.Add(this.label144);
             this.groupBox106.Controls.Add(this.txtS10_LiderA);
             this.groupBox106.Controls.Add(this.label145);
-            this.groupBox106.Location = new System.Drawing.Point(831, 16);
-            this.groupBox106.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox106.Location = new System.Drawing.Point(623, 13);
             this.groupBox106.Name = "groupBox106";
-            this.groupBox106.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox106.Size = new System.Drawing.Size(400, 154);
+            this.groupBox106.Size = new System.Drawing.Size(300, 125);
             this.groupBox106.TabIndex = 14;
             this.groupBox106.TabStop = false;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(36, 129);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox3.Location = new System.Drawing.Point(27, 105);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(69, 21);
+            this.checkBox3.Size = new System.Drawing.Size(57, 17);
             this.checkBox3.TabIndex = 12;
             this.checkBox3.Text = "NSNR";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -5292,67 +6837,60 @@
             // label146
             // 
             this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(29, 106);
-            this.label146.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label146.Location = new System.Drawing.Point(22, 86);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(28, 17);
+            this.label146.Size = new System.Drawing.Size(22, 13);
             this.label146.TabIndex = 11;
             this.label146.Text = "c). \t\t\t\r\n";
             // 
             // txtS10_LiderC
             // 
-            this.txtS10_LiderC.Location = new System.Drawing.Point(67, 102);
-            this.txtS10_LiderC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_LiderC.Location = new System.Drawing.Point(50, 83);
             this.txtS10_LiderC.Multiline = true;
             this.txtS10_LiderC.Name = "txtS10_LiderC";
-            this.txtS10_LiderC.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_LiderC.Size = new System.Drawing.Size(225, 20);
             this.txtS10_LiderC.TabIndex = 10;
             // 
             // label136
             // 
             this.label136.AutoSize = true;
-            this.label136.Location = new System.Drawing.Point(29, 68);
-            this.label136.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label136.Location = new System.Drawing.Point(22, 55);
             this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(29, 17);
+            this.label136.Size = new System.Drawing.Size(22, 13);
             this.label136.TabIndex = 9;
             this.label136.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_LiderB
             // 
-            this.txtS10_LiderB.Location = new System.Drawing.Point(67, 64);
-            this.txtS10_LiderB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_LiderB.Location = new System.Drawing.Point(50, 52);
             this.txtS10_LiderB.Multiline = true;
             this.txtS10_LiderB.Name = "txtS10_LiderB";
-            this.txtS10_LiderB.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_LiderB.Size = new System.Drawing.Size(225, 20);
             this.txtS10_LiderB.TabIndex = 8;
             // 
             // label144
             // 
             this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(29, 34);
-            this.label144.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label144.Location = new System.Drawing.Point(22, 28);
             this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(29, 17);
+            this.label144.Size = new System.Drawing.Size(22, 13);
             this.label144.TabIndex = 7;
             this.label144.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_LiderA
             // 
-            this.txtS10_LiderA.Location = new System.Drawing.Point(67, 31);
-            this.txtS10_LiderA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_LiderA.Location = new System.Drawing.Point(50, 25);
             this.txtS10_LiderA.Multiline = true;
             this.txtS10_LiderA.Name = "txtS10_LiderA";
-            this.txtS10_LiderA.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_LiderA.Size = new System.Drawing.Size(225, 20);
             this.txtS10_LiderA.TabIndex = 6;
             // 
             // label145
             // 
             this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(4, 11);
-            this.label145.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label145.Location = new System.Drawing.Point(3, 9);
             this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(378, 17);
+            this.label145.Size = new System.Drawing.Size(284, 13);
             this.label145.TabIndex = 1;
             this.label145.Text = "19. ¿A quiénes identifica usted como líderes comunitarios?\r\n";
             // 
@@ -5362,32 +6900,28 @@
             this.groupBox105.Controls.Add(this.txtS10_ComentarioConfianza);
             this.groupBox105.Controls.Add(this.cbxS10_ConfiazaOrganizacion);
             this.groupBox105.Controls.Add(this.label135);
-            this.groupBox105.Location = new System.Drawing.Point(421, 388);
-            this.groupBox105.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox105.Location = new System.Drawing.Point(316, 315);
             this.groupBox105.Name = "groupBox105";
-            this.groupBox105.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox105.Size = new System.Drawing.Size(400, 176);
+            this.groupBox105.Size = new System.Drawing.Size(300, 143);
             this.groupBox105.TabIndex = 13;
             this.groupBox105.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 89);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(33, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "¿Por qué razón?";
             // 
             // txtS10_ComentarioConfianza
             // 
             this.txtS10_ComentarioConfianza.Enabled = false;
-            this.txtS10_ComentarioConfianza.Location = new System.Drawing.Point(44, 107);
-            this.txtS10_ComentarioConfianza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ComentarioConfianza.Location = new System.Drawing.Point(33, 87);
             this.txtS10_ComentarioConfianza.Multiline = true;
             this.txtS10_ComentarioConfianza.Name = "txtS10_ComentarioConfianza";
-            this.txtS10_ComentarioConfianza.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_ComentarioConfianza.Size = new System.Drawing.Size(250, 40);
             this.txtS10_ComentarioConfianza.TabIndex = 3;
             // 
             // cbxS10_ConfiazaOrganizacion
@@ -5397,51 +6931,37 @@
             "01. Si",
             "02. No",
             "NS/NR"});
-            this.cbxS10_ConfiazaOrganizacion.Location = new System.Drawing.Point(48, 59);
-            this.cbxS10_ConfiazaOrganizacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_ConfiazaOrganizacion.Location = new System.Drawing.Point(36, 48);
             this.cbxS10_ConfiazaOrganizacion.Name = "cbxS10_ConfiazaOrganizacion";
-            this.cbxS10_ConfiazaOrganizacion.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_ConfiazaOrganizacion.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_ConfiazaOrganizacion.TabIndex = 2;
             this.cbxS10_ConfiazaOrganizacion.SelectedIndexChanged += new System.EventHandler(this.cbxS10_ConfiazaOrganizacion_SelectedIndexChanged);
             // 
             // label135
             // 
             this.label135.AutoSize = true;
-            this.label135.Location = new System.Drawing.Point(20, 20);
-            this.label135.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label135.Location = new System.Drawing.Point(15, 16);
             this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(340, 34);
+            this.label135.Size = new System.Drawing.Size(256, 26);
             this.label135.TabIndex = 1;
             this.label135.Text = "18. ¿Confía usted en esta organización comunitaria?\r\n      ¿Por qué razón?";
             // 
             // groupBox99
             // 
-            this.groupBox99.Controls.Add(this.txt10_TipoOrganizacion);
+            this.groupBox99.Controls.Add(this.txtS10_TipoOrganizaciones);
             this.groupBox99.Controls.Add(this.label137);
-            this.groupBox99.Location = new System.Drawing.Point(421, 271);
-            this.groupBox99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox99.Location = new System.Drawing.Point(316, 220);
             this.groupBox99.Name = "groupBox99";
-            this.groupBox99.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox99.Size = new System.Drawing.Size(400, 116);
+            this.groupBox99.Size = new System.Drawing.Size(300, 94);
             this.groupBox99.TabIndex = 12;
             this.groupBox99.TabStop = false;
-            // 
-            // txt10_TipoOrganizacion
-            // 
-            this.txt10_TipoOrganizacion.Location = new System.Drawing.Point(35, 49);
-            this.txt10_TipoOrganizacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt10_TipoOrganizacion.Multiline = true;
-            this.txt10_TipoOrganizacion.Name = "txt10_TipoOrganizacion";
-            this.txt10_TipoOrganizacion.Size = new System.Drawing.Size(332, 48);
-            this.txt10_TipoOrganizacion.TabIndex = 8;
             // 
             // label137
             // 
             this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(4, 11);
-            this.label137.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label137.Location = new System.Drawing.Point(3, 9);
             this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(279, 34);
+            this.label137.Size = new System.Drawing.Size(212, 26);
             this.label137.TabIndex = 1;
             this.label137.Text = "17. ¿Qué tipo de organización es?\r\n      (COCODE, Junta de vecinos, CUB, etc)\r\n";
             // 
@@ -5450,22 +6970,19 @@
             this.groupBox104.Controls.Add(this.txtS10_TipoDiscriminacion);
             this.groupBox104.Controls.Add(this.cbxS10_Discriminacion);
             this.groupBox104.Controls.Add(this.label143);
-            this.groupBox104.Location = new System.Drawing.Point(421, 16);
-            this.groupBox104.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox104.Location = new System.Drawing.Point(316, 13);
             this.groupBox104.Name = "groupBox104";
-            this.groupBox104.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox104.Size = new System.Drawing.Size(400, 154);
+            this.groupBox104.Size = new System.Drawing.Size(300, 125);
             this.groupBox104.TabIndex = 11;
             this.groupBox104.TabStop = false;
             // 
             // txtS10_TipoDiscriminacion
             // 
             this.txtS10_TipoDiscriminacion.Enabled = false;
-            this.txtS10_TipoDiscriminacion.Location = new System.Drawing.Point(33, 86);
-            this.txtS10_TipoDiscriminacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_TipoDiscriminacion.Location = new System.Drawing.Point(25, 70);
             this.txtS10_TipoDiscriminacion.Multiline = true;
             this.txtS10_TipoDiscriminacion.Name = "txtS10_TipoDiscriminacion";
-            this.txtS10_TipoDiscriminacion.Size = new System.Drawing.Size(332, 48);
+            this.txtS10_TipoDiscriminacion.Size = new System.Drawing.Size(250, 40);
             this.txtS10_TipoDiscriminacion.TabIndex = 3;
             // 
             // cbxS10_Discriminacion
@@ -5475,23 +6992,21 @@
             "01. Si  (especificar)\t",
             "02. No\t",
             "NS/NR\t"});
-            this.cbxS10_Discriminacion.Location = new System.Drawing.Point(33, 50);
-            this.cbxS10_Discriminacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_Discriminacion.Location = new System.Drawing.Point(25, 41);
             this.cbxS10_Discriminacion.Name = "cbxS10_Discriminacion";
-            this.cbxS10_Discriminacion.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_Discriminacion.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_Discriminacion.TabIndex = 2;
             this.cbxS10_Discriminacion.SelectedIndexChanged += new System.EventHandler(this.cbxS10_Discriminacion_SelectedIndexChanged);
             // 
             // label143
             // 
             this.label143.AutoSize = true;
-            this.label143.Location = new System.Drawing.Point(5, 11);
-            this.label143.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label143.Location = new System.Drawing.Point(4, 9);
             this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(385, 34);
+            this.label143.Size = new System.Drawing.Size(289, 26);
             this.label143.TabIndex = 1;
             this.label143.Text = "15. ¿Usted considera que en la comunidad existe algún tipo\r\n      de discriminaci" +
-                "ón? En caso de que si, ¿de qué tipo?";
+    "ón? En caso de que si, ¿de qué tipo?";
             // 
             // groupBox103
             // 
@@ -5501,21 +7016,18 @@
             this.groupBox103.Controls.Add(this.label141);
             this.groupBox103.Controls.Add(this.txtS10_ApectosNegativosA);
             this.groupBox103.Controls.Add(this.label142);
-            this.groupBox103.Location = new System.Drawing.Point(12, 165);
-            this.groupBox103.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox103.Location = new System.Drawing.Point(9, 134);
             this.groupBox103.Name = "groupBox103";
-            this.groupBox103.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox103.Size = new System.Drawing.Size(400, 138);
+            this.groupBox103.Size = new System.Drawing.Size(300, 112);
             this.groupBox103.TabIndex = 10;
             this.groupBox103.TabStop = false;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(29, 112);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Location = new System.Drawing.Point(22, 91);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 21);
+            this.checkBox2.Size = new System.Drawing.Size(57, 17);
             this.checkBox2.TabIndex = 11;
             this.checkBox2.Text = "NSNR";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -5523,51 +7035,46 @@
             // label131
             // 
             this.label131.AutoSize = true;
-            this.label131.Location = new System.Drawing.Point(24, 90);
-            this.label131.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label131.Location = new System.Drawing.Point(18, 73);
             this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(29, 17);
+            this.label131.Size = new System.Drawing.Size(22, 13);
             this.label131.TabIndex = 9;
             this.label131.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_ApectosNegativosB
             // 
-            this.txtS10_ApectosNegativosB.Location = new System.Drawing.Point(61, 84);
-            this.txtS10_ApectosNegativosB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosNegativosB.Location = new System.Drawing.Point(46, 68);
             this.txtS10_ApectosNegativosB.Multiline = true;
             this.txtS10_ApectosNegativosB.Name = "txtS10_ApectosNegativosB";
-            this.txtS10_ApectosNegativosB.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_ApectosNegativosB.Size = new System.Drawing.Size(225, 20);
             this.txtS10_ApectosNegativosB.TabIndex = 8;
             // 
             // label141
             // 
             this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(24, 53);
-            this.label141.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label141.Location = new System.Drawing.Point(18, 43);
             this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(29, 17);
+            this.label141.Size = new System.Drawing.Size(22, 13);
             this.label141.TabIndex = 7;
             this.label141.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_ApectosNegativosA
             // 
-            this.txtS10_ApectosNegativosA.Location = new System.Drawing.Point(61, 47);
-            this.txtS10_ApectosNegativosA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosNegativosA.Location = new System.Drawing.Point(46, 38);
             this.txtS10_ApectosNegativosA.Multiline = true;
             this.txtS10_ApectosNegativosA.Name = "txtS10_ApectosNegativosA";
-            this.txtS10_ApectosNegativosA.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_ApectosNegativosA.Size = new System.Drawing.Size(225, 20);
             this.txtS10_ApectosNegativosA.TabIndex = 6;
             // 
             // label142
             // 
             this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(1, 11);
-            this.label142.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label142.Location = new System.Drawing.Point(1, 9);
             this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(402, 34);
+            this.label142.Size = new System.Drawing.Size(300, 26);
             this.label142.TabIndex = 1;
             this.label142.Text = "13. ¿Cuáles son para usted los principales aspectos negativos\r\n      de vivir en " +
-                "esta comunidad?\r\n";
+    "esta comunidad?\r\n";
             // 
             // groupBox100
             // 
@@ -5577,21 +7084,18 @@
             this.groupBox100.Controls.Add(this.label133);
             this.groupBox100.Controls.Add(this.txtS10_ApectosPositivosA);
             this.groupBox100.Controls.Add(this.label134);
-            this.groupBox100.Location = new System.Drawing.Point(12, 16);
-            this.groupBox100.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox100.Location = new System.Drawing.Point(9, 13);
             this.groupBox100.Name = "groupBox100";
-            this.groupBox100.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox100.Size = new System.Drawing.Size(400, 142);
+            this.groupBox100.Size = new System.Drawing.Size(300, 115);
             this.groupBox100.TabIndex = 7;
             this.groupBox100.TabStop = false;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(28, 112);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Location = new System.Drawing.Point(21, 91);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(69, 21);
+            this.checkBox1.Size = new System.Drawing.Size(57, 17);
             this.checkBox1.TabIndex = 10;
             this.checkBox1.Text = "NSNR";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -5599,62 +7103,55 @@
             // label132
             // 
             this.label132.AutoSize = true;
-            this.label132.Location = new System.Drawing.Point(24, 86);
-            this.label132.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label132.Location = new System.Drawing.Point(18, 70);
             this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(29, 17);
+            this.label132.Size = new System.Drawing.Size(22, 13);
             this.label132.TabIndex = 9;
             this.label132.Text = "b). \t\t\t\r\n";
             // 
             // txtS10_ApectosPositivosB
             // 
-            this.txtS10_ApectosPositivosB.Location = new System.Drawing.Point(61, 82);
-            this.txtS10_ApectosPositivosB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosPositivosB.Location = new System.Drawing.Point(46, 67);
             this.txtS10_ApectosPositivosB.Multiline = true;
             this.txtS10_ApectosPositivosB.Name = "txtS10_ApectosPositivosB";
-            this.txtS10_ApectosPositivosB.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_ApectosPositivosB.Size = new System.Drawing.Size(225, 20);
             this.txtS10_ApectosPositivosB.TabIndex = 8;
             // 
             // label133
             // 
             this.label133.AutoSize = true;
-            this.label133.Location = new System.Drawing.Point(24, 52);
-            this.label133.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label133.Location = new System.Drawing.Point(18, 42);
             this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(29, 17);
+            this.label133.Size = new System.Drawing.Size(22, 13);
             this.label133.TabIndex = 7;
             this.label133.Text = "a). \t\t\t\r\n";
             // 
             // txtS10_ApectosPositivosA
             // 
-            this.txtS10_ApectosPositivosA.Location = new System.Drawing.Point(61, 49);
-            this.txtS10_ApectosPositivosA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosPositivosA.Location = new System.Drawing.Point(46, 40);
             this.txtS10_ApectosPositivosA.Multiline = true;
             this.txtS10_ApectosPositivosA.Name = "txtS10_ApectosPositivosA";
-            this.txtS10_ApectosPositivosA.Size = new System.Drawing.Size(299, 24);
+            this.txtS10_ApectosPositivosA.Size = new System.Drawing.Size(225, 20);
             this.txtS10_ApectosPositivosA.TabIndex = 6;
             // 
             // label134
             // 
             this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(4, 11);
-            this.label134.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label134.Location = new System.Drawing.Point(3, 9);
             this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(396, 34);
+            this.label134.Size = new System.Drawing.Size(295, 26);
             this.label134.TabIndex = 1;
             this.label134.Text = "12. ¿Cuáles son para usted los principales aspectos positivos\r\n      de vivir en " +
-                "esta comunidad?\r\n";
+    "esta comunidad?\r\n";
             // 
             // groupBox101
             // 
             this.groupBox101.Controls.Add(this.cklS1014_com);
             this.groupBox101.Controls.Add(this.txtS1014_Especificar);
             this.groupBox101.Controls.Add(this.label138);
-            this.groupBox101.Location = new System.Drawing.Point(12, 310);
-            this.groupBox101.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox101.Location = new System.Drawing.Point(9, 252);
             this.groupBox101.Name = "groupBox101";
-            this.groupBox101.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox101.Size = new System.Drawing.Size(400, 250);
+            this.groupBox101.Size = new System.Drawing.Size(300, 203);
             this.groupBox101.TabIndex = 4;
             this.groupBox101.TabStop = false;
             // 
@@ -5671,41 +7168,36 @@
             "07. No hay grupos vulnerables",
             "08. Otro (especificar)\t\t",
             "NS/NR"});
-            this.cklS1014_com.Location = new System.Drawing.Point(28, 47);
-            this.cklS1014_com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS1014_com.Location = new System.Drawing.Point(21, 38);
             this.cklS1014_com.Name = "cklS1014_com";
-            this.cklS1014_com.Size = new System.Drawing.Size(332, 140);
+            this.cklS1014_com.Size = new System.Drawing.Size(250, 109);
             this.cklS1014_com.TabIndex = 4;
             // 
             // txtS1014_Especificar
             // 
-            this.txtS1014_Especificar.Location = new System.Drawing.Point(28, 210);
-            this.txtS1014_Especificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS1014_Especificar.Location = new System.Drawing.Point(21, 171);
             this.txtS1014_Especificar.Multiline = true;
             this.txtS1014_Especificar.Name = "txtS1014_Especificar";
-            this.txtS1014_Especificar.Size = new System.Drawing.Size(332, 27);
+            this.txtS1014_Especificar.Size = new System.Drawing.Size(250, 23);
             this.txtS1014_Especificar.TabIndex = 3;
             // 
             // label138
             // 
             this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(0, 10);
-            this.label138.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label138.Location = new System.Drawing.Point(0, 8);
             this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(403, 34);
+            this.label138.Size = new System.Drawing.Size(301, 26);
             this.label138.TabIndex = 1;
             this.label138.Text = "14. ¿Cuáles considera usted que es el grupo de su comunidad\r\n      más afectado p" +
-                "or los problemas de la comunidad?";
+    "or los problemas de la comunidad?";
             // 
             // groupBox109
             // 
             this.groupBox109.Controls.Add(this.cbxS10_OrganizacionComunitaria);
             this.groupBox109.Controls.Add(this.label139);
-            this.groupBox109.Location = new System.Drawing.Point(421, 177);
-            this.groupBox109.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox109.Location = new System.Drawing.Point(316, 144);
             this.groupBox109.Name = "groupBox109";
-            this.groupBox109.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox109.Size = new System.Drawing.Size(400, 82);
+            this.groupBox109.Size = new System.Drawing.Size(300, 67);
             this.groupBox109.TabIndex = 3;
             this.groupBox109.TabStop = false;
             // 
@@ -5716,19 +7208,17 @@
             "01. Si\t\t",
             "0.2 No\t►(19)",
             "NS/NR\t\t"});
-            this.cbxS10_OrganizacionComunitaria.Location = new System.Drawing.Point(32, 48);
-            this.cbxS10_OrganizacionComunitaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_OrganizacionComunitaria.Location = new System.Drawing.Point(24, 39);
             this.cbxS10_OrganizacionComunitaria.Name = "cbxS10_OrganizacionComunitaria";
-            this.cbxS10_OrganizacionComunitaria.Size = new System.Drawing.Size(332, 24);
+            this.cbxS10_OrganizacionComunitaria.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_OrganizacionComunitaria.TabIndex = 2;
             // 
             // label139
             // 
             this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(4, 11);
-            this.label139.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label139.Location = new System.Drawing.Point(3, 9);
             this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(377, 34);
+            this.label139.Size = new System.Drawing.Size(281, 26);
             this.label139.TabIndex = 1;
             this.label139.Text = "16. ¿Existe alguna organización que los represente a nivel\r\n      comunitario?";
             // 
@@ -5736,10 +7226,9 @@
             // 
             this.tbpS11.Controls.Add(this.pbS11_Siguiente);
             this.tbpS11.Controls.Add(this.groupBox102);
-            this.tbpS11.Location = new System.Drawing.Point(4, 25);
-            this.tbpS11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS11.Location = new System.Drawing.Point(4, 22);
             this.tbpS11.Name = "tbpS11";
-            this.tbpS11.Size = new System.Drawing.Size(1779, 679);
+            this.tbpS11.Size = new System.Drawing.Size(1332, 549);
             this.tbpS11.TabIndex = 12;
             this.tbpS11.Text = "Sección 11";
             this.tbpS11.UseVisualStyleBackColor = true;
@@ -5747,10 +7236,9 @@
             // pbS11_Siguiente
             // 
             this.pbS11_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS11_Siguiente.Location = new System.Drawing.Point(795, 599);
-            this.pbS11_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS11_Siguiente.Location = new System.Drawing.Point(596, 487);
             this.pbS11_Siguiente.Name = "pbS11_Siguiente";
-            this.pbS11_Siguiente.Size = new System.Drawing.Size(71, 73);
+            this.pbS11_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS11_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbS11_Siguiente.TabIndex = 18;
             this.pbS11_Siguiente.TabStop = false;
@@ -5764,11 +7252,9 @@
             this.groupBox102.Controls.Add(this.groupBox112);
             this.groupBox102.Controls.Add(this.groupBox113);
             this.groupBox102.Controls.Add(this.groupBox114);
-            this.groupBox102.Location = new System.Drawing.Point(11, 10);
-            this.groupBox102.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox102.Location = new System.Drawing.Point(8, 8);
             this.groupBox102.Name = "groupBox102";
-            this.groupBox102.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox102.Size = new System.Drawing.Size(1771, 586);
+            this.groupBox102.Size = new System.Drawing.Size(1328, 476);
             this.groupBox102.TabIndex = 3;
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "MOVILIDAD";
@@ -5777,30 +7263,26 @@
             // 
             this.groupBox1.Controls.Add(this.txt_S11_ComentarioFinal);
             this.groupBox1.Controls.Add(this.label140);
-            this.groupBox1.Location = new System.Drawing.Point(436, 110);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(327, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(400, 257);
+            this.groupBox1.Size = new System.Drawing.Size(300, 209);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // txt_S11_ComentarioFinal
             // 
-            this.txt_S11_ComentarioFinal.Location = new System.Drawing.Point(29, 54);
-            this.txt_S11_ComentarioFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_S11_ComentarioFinal.Location = new System.Drawing.Point(22, 44);
             this.txt_S11_ComentarioFinal.Multiline = true;
             this.txt_S11_ComentarioFinal.Name = "txt_S11_ComentarioFinal";
-            this.txt_S11_ComentarioFinal.Size = new System.Drawing.Size(332, 184);
+            this.txt_S11_ComentarioFinal.Size = new System.Drawing.Size(250, 150);
             this.txt_S11_ComentarioFinal.TabIndex = 2;
             // 
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(17, 16);
-            this.label140.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label140.Location = new System.Drawing.Point(13, 13);
             this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(339, 34);
+            this.label140.Size = new System.Drawing.Size(266, 26);
             this.label140.TabIndex = 1;
             this.label140.Text = "COMENTARIOS DEL ENCUESTADOR/A SOBRE EL \r\nHOGAR Y SUS ASPECTOS";
             // 
@@ -5808,11 +7290,9 @@
             // 
             this.groupBox110.Controls.Add(this.cbxS11_4_ViviedaActual);
             this.groupBox110.Controls.Add(this.label153);
-            this.groupBox110.Location = new System.Drawing.Point(436, 21);
-            this.groupBox110.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox110.Location = new System.Drawing.Point(327, 17);
             this.groupBox110.Name = "groupBox110";
-            this.groupBox110.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox110.Size = new System.Drawing.Size(400, 86);
+            this.groupBox110.Size = new System.Drawing.Size(300, 70);
             this.groupBox110.TabIndex = 7;
             this.groupBox110.TabStop = false;
             // 
@@ -5823,19 +7303,17 @@
             "Si",
             "No",
             "NS/NR"});
-            this.cbxS11_4_ViviedaActual.Location = new System.Drawing.Point(29, 49);
-            this.cbxS11_4_ViviedaActual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS11_4_ViviedaActual.Location = new System.Drawing.Point(22, 40);
             this.cbxS11_4_ViviedaActual.Name = "cbxS11_4_ViviedaActual";
-            this.cbxS11_4_ViviedaActual.Size = new System.Drawing.Size(332, 24);
+            this.cbxS11_4_ViviedaActual.Size = new System.Drawing.Size(250, 21);
             this.cbxS11_4_ViviedaActual.TabIndex = 2;
             // 
             // label153
             // 
             this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(4, 11);
-            this.label153.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label153.Location = new System.Drawing.Point(3, 9);
             this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(394, 34);
+            this.label153.Size = new System.Drawing.Size(294, 26);
             this.label153.TabIndex = 1;
             this.label153.Text = "4. ¿Tiene pensado usted y su familia seguir viviendo en esta \r\n    comunidad?\r\n";
             // 
@@ -5846,91 +7324,80 @@
             this.groupBox112.Controls.Add(this.label161);
             this.groupBox112.Controls.Add(this.txtS11_3a_AñoTraslado);
             this.groupBox112.Controls.Add(this.label157);
-            this.groupBox112.Location = new System.Drawing.Point(16, 214);
-            this.groupBox112.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox112.Location = new System.Drawing.Point(12, 174);
             this.groupBox112.Name = "groupBox112";
-            this.groupBox112.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox112.Size = new System.Drawing.Size(400, 153);
+            this.groupBox112.Size = new System.Drawing.Size(300, 124);
             this.groupBox112.TabIndex = 4;
             this.groupBox112.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 92);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(22, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Por qué:\t\t\r\n";
             // 
             // txtS11_3b_Porque
             // 
-            this.txtS11_3b_Porque.Location = new System.Drawing.Point(96, 80);
-            this.txtS11_3b_Porque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS11_3b_Porque.Location = new System.Drawing.Point(72, 65);
             this.txtS11_3b_Porque.Multiline = true;
             this.txtS11_3b_Porque.Name = "txtS11_3b_Porque";
-            this.txtS11_3b_Porque.Size = new System.Drawing.Size(257, 54);
+            this.txtS11_3b_Porque.Size = new System.Drawing.Size(194, 45);
             this.txtS11_3b_Porque.TabIndex = 12;
             // 
             // label161
             // 
             this.label161.AutoSize = true;
-            this.label161.Location = new System.Drawing.Point(29, 52);
-            this.label161.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label161.Location = new System.Drawing.Point(22, 42);
             this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(36, 17);
+            this.label161.Size = new System.Drawing.Size(28, 13);
             this.label161.TabIndex = 11;
             this.label161.Text = "año:\t\t\r\n";
             // 
             // txtS11_3a_AñoTraslado
             // 
-            this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(96, 48);
-            this.txtS11_3a_AñoTraslado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(72, 39);
             this.txtS11_3a_AñoTraslado.Multiline = true;
             this.txtS11_3a_AñoTraslado.Name = "txtS11_3a_AñoTraslado";
-            this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(257, 24);
+            this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(194, 20);
             this.txtS11_3a_AñoTraslado.TabIndex = 10;
             // 
             // label157
             // 
             this.label157.AutoSize = true;
-            this.label157.Location = new System.Drawing.Point(4, 10);
-            this.label157.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label157.Location = new System.Drawing.Point(3, 8);
             this.label157.Name = "label157";
-            this.label157.Size = new System.Drawing.Size(398, 34);
+            this.label157.Size = new System.Drawing.Size(296, 26);
             this.label157.TabIndex = 1;
             this.label157.Text = "3. ¿En qué año se traslado su familia a esta comunidad y por \r\n    qué el traslad" +
-                "o?";
+    "o?";
             // 
             // groupBox113
             // 
             this.groupBox113.Controls.Add(this.txtS11_2_DireccionPasada);
             this.groupBox113.Controls.Add(this.label158);
-            this.groupBox113.Location = new System.Drawing.Point(16, 110);
-            this.groupBox113.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox113.Location = new System.Drawing.Point(12, 89);
             this.groupBox113.Name = "groupBox113";
-            this.groupBox113.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox113.Size = new System.Drawing.Size(400, 102);
+            this.groupBox113.Size = new System.Drawing.Size(300, 83);
             this.groupBox113.TabIndex = 3;
             this.groupBox113.TabStop = false;
             // 
             // txtS11_2_DireccionPasada
             // 
-            this.txtS11_2_DireccionPasada.Location = new System.Drawing.Point(27, 38);
-            this.txtS11_2_DireccionPasada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS11_2_DireccionPasada.Location = new System.Drawing.Point(20, 31);
             this.txtS11_2_DireccionPasada.Multiline = true;
             this.txtS11_2_DireccionPasada.Name = "txtS11_2_DireccionPasada";
-            this.txtS11_2_DireccionPasada.Size = new System.Drawing.Size(332, 48);
+            this.txtS11_2_DireccionPasada.Size = new System.Drawing.Size(250, 40);
             this.txtS11_2_DireccionPasada.TabIndex = 3;
             // 
             // label158
             // 
             this.label158.AutoSize = true;
-            this.label158.Location = new System.Drawing.Point(4, 11);
-            this.label158.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label158.Location = new System.Drawing.Point(3, 9);
             this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(360, 17);
+            this.label158.Size = new System.Drawing.Size(268, 13);
             this.label158.TabIndex = 1;
             this.label158.Text = "2. ¿Dónde vivió su familia anteriormente? (lugar exacto)\r\n";
             // 
@@ -5938,11 +7405,9 @@
             // 
             this.groupBox114.Controls.Add(this.cbxS11_1_VidaFamiliar);
             this.groupBox114.Controls.Add(this.label159);
-            this.groupBox114.Location = new System.Drawing.Point(16, 21);
-            this.groupBox114.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox114.Location = new System.Drawing.Point(12, 17);
             this.groupBox114.Name = "groupBox114";
-            this.groupBox114.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox114.Size = new System.Drawing.Size(400, 86);
+            this.groupBox114.Size = new System.Drawing.Size(300, 70);
             this.groupBox114.TabIndex = 0;
             this.groupBox114.TabStop = false;
             // 
@@ -5954,2196 +7419,37 @@
             "Si",
             "No\t\t\t\t",
             "NS/NR"});
-            this.cbxS11_1_VidaFamiliar.Location = new System.Drawing.Point(24, 47);
-            this.cbxS11_1_VidaFamiliar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS11_1_VidaFamiliar.Location = new System.Drawing.Point(18, 38);
             this.cbxS11_1_VidaFamiliar.Name = "cbxS11_1_VidaFamiliar";
-            this.cbxS11_1_VidaFamiliar.Size = new System.Drawing.Size(332, 24);
+            this.cbxS11_1_VidaFamiliar.Size = new System.Drawing.Size(250, 21);
             this.cbxS11_1_VidaFamiliar.TabIndex = 2;
             this.cbxS11_1_VidaFamiliar.ValueMember = "1";
             // 
             // label159
             // 
             this.label159.AutoSize = true;
-            this.label159.Location = new System.Drawing.Point(4, 11);
-            this.label159.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label159.Location = new System.Drawing.Point(3, 9);
             this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(378, 34);
+            this.label159.Size = new System.Drawing.Size(282, 26);
             this.label159.TabIndex = 1;
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
-                "urante toda su VIDA FAMILIAR?\r\n";
-            // 
-            // gbS6
-            // 
-            this.gbS6.Controls.Add(this.groupBox16);
-            this.gbS6.Controls.Add(this.groupBox15);
-            this.gbS6.Controls.Add(this.groupBox14);
-            this.gbS6.Controls.Add(this.groupBox13);
-            this.gbS6.Controls.Add(this.groupBox12);
-            this.gbS6.Controls.Add(this.groupBox11);
-            this.gbS6.Controls.Add(this.groupBox10);
-            this.gbS6.Controls.Add(this.groupBox9);
-            this.gbS6.Controls.Add(this.groupBox8);
-            this.gbS6.Controls.Add(this.groupBox7);
-            this.gbS6.Controls.Add(this.groupBox6);
-            this.gbS6.Location = new System.Drawing.Point(4, 0);
-            this.gbS6.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS6.Name = "gbS6";
-            this.gbS6.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS6.Size = new System.Drawing.Size(1771, 599);
-            this.gbS6.TabIndex = 13;
-            this.gbS6.TabStop = false;
-            this.gbS6.Text = "INGRESOS DEL HOGAR";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.lblS6_11_FaltaDinero);
-            this.groupBox16.Controls.Add(this.chlbS6_11_CubrirFaltaDinero);
-            this.groupBox16.Controls.Add(this.lblS6_11_Especificar);
-            this.groupBox16.Controls.Add(this.txtS6_11_EspecificarFaltaDinero);
-            this.groupBox16.Location = new System.Drawing.Point(1300, 218);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox16.Size = new System.Drawing.Size(400, 298);
-            this.groupBox16.TabIndex = 10;
-            this.groupBox16.TabStop = false;
-            // 
-            // lblS6_11_FaltaDinero
-            // 
-            this.lblS6_11_FaltaDinero.AutoSize = true;
-            this.lblS6_11_FaltaDinero.Location = new System.Drawing.Point(25, 32);
-            this.lblS6_11_FaltaDinero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_11_FaltaDinero.Name = "lblS6_11_FaltaDinero";
-            this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(341, 51);
-            this.lblS6_11_FaltaDinero.TabIndex = 25;
-            this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero \r\n      en los últimos doce m" +
-                "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
-            // 
-            // chlbS6_11_CubrirFaltaDinero
-            // 
-            this.chlbS6_11_CubrirFaltaDinero.FormattingEnabled = true;
-            this.chlbS6_11_CubrirFaltaDinero.Items.AddRange(new object[] {
-            "Recorte de gastos / Ajuste de presupuesto",
-            "Endeudamiento o préstamo",
-            "Vendiendo algo del hogar (televisor, radio, etc.)",
-            "Trabajos ocasionales",
-            "Ahorros",
-            "Ayuda familiar",
-            "Apoyos del Estado",
-            "Otro (especifique)",
-            "NS/NR"});
-            this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(28, 98);
-            this.chlbS6_11_CubrirFaltaDinero.Margin = new System.Windows.Forms.Padding(4);
-            this.chlbS6_11_CubrirFaltaDinero.Name = "chlbS6_11_CubrirFaltaDinero";
-            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(331, 157);
-            this.chlbS6_11_CubrirFaltaDinero.TabIndex = 10;
-            // 
-            // lblS6_11_Especificar
-            // 
-            this.lblS6_11_Especificar.AutoSize = true;
-            this.lblS6_11_Especificar.Location = new System.Drawing.Point(32, 267);
-            this.lblS6_11_Especificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_11_Especificar.Name = "lblS6_11_Especificar";
-            this.lblS6_11_Especificar.Size = new System.Drawing.Size(81, 17);
-            this.lblS6_11_Especificar.TabIndex = 4;
-            this.lblS6_11_Especificar.Text = "Especificar:";
-            // 
-            // txtS6_11_EspecificarFaltaDinero
-            // 
-            this.txtS6_11_EspecificarFaltaDinero.Location = new System.Drawing.Point(123, 263);
-            this.txtS6_11_EspecificarFaltaDinero.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_11_EspecificarFaltaDinero.Multiline = true;
-            this.txtS6_11_EspecificarFaltaDinero.Name = "txtS6_11_EspecificarFaltaDinero";
-            this.txtS6_11_EspecificarFaltaDinero.Size = new System.Drawing.Size(236, 27);
-            this.txtS6_11_EspecificarFaltaDinero.TabIndex = 2;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.lblS6_10_Gastos);
-            this.groupBox15.Controls.Add(this.txtS6_10_CantiGastosaIngresos);
-            this.groupBox15.Controls.Add(this.lblS6_10_QGastos);
-            this.groupBox15.Location = new System.Drawing.Point(1300, 36);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox15.Size = new System.Drawing.Size(400, 175);
-            this.groupBox15.TabIndex = 9;
-            this.groupBox15.TabStop = false;
-            // 
-            // lblS6_10_Gastos
-            // 
-            this.lblS6_10_Gastos.AutoSize = true;
-            this.lblS6_10_Gastos.Location = new System.Drawing.Point(24, 23);
-            this.lblS6_10_Gastos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_10_Gastos.Name = "lblS6_10_Gastos";
-            this.lblS6_10_Gastos.Size = new System.Drawing.Size(352, 68);
-            this.lblS6_10_Gastos.TabIndex = 24;
-            this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido \r\n      suficientes para cubri" +
-                "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
-                "\r\n      ingresos?";
-            // 
-            // txtS6_10_CantiGastosaIngresos
-            // 
-            this.txtS6_10_CantiGastosaIngresos.Location = new System.Drawing.Point(56, 123);
-            this.txtS6_10_CantiGastosaIngresos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_10_CantiGastosaIngresos.Multiline = true;
-            this.txtS6_10_CantiGastosaIngresos.Name = "txtS6_10_CantiGastosaIngresos";
-            this.txtS6_10_CantiGastosaIngresos.Size = new System.Drawing.Size(303, 27);
-            this.txtS6_10_CantiGastosaIngresos.TabIndex = 2;
-            // 
-            // lblS6_10_QGastos
-            // 
-            this.lblS6_10_QGastos.AutoSize = true;
-            this.lblS6_10_QGastos.Location = new System.Drawing.Point(24, 129);
-            this.lblS6_10_QGastos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_10_QGastos.Name = "lblS6_10_QGastos";
-            this.lblS6_10_QGastos.Size = new System.Drawing.Size(23, 17);
-            this.lblS6_10_QGastos.TabIndex = 1;
-            this.lblS6_10_QGastos.Text = "Q.";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.lblS6_9_CantidadAhorro);
-            this.groupBox14.Controls.Add(this.txtS6_9_CantiAhorro);
-            this.groupBox14.Controls.Add(this.lblS6_9_QAhorro);
-            this.groupBox14.Location = new System.Drawing.Point(892, 343);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox14.Size = new System.Drawing.Size(400, 146);
-            this.groupBox14.TabIndex = 8;
-            this.groupBox14.TabStop = false;
-            // 
-            // lblS6_9_CantidadAhorro
-            // 
-            this.lblS6_9_CantidadAhorro.AutoSize = true;
-            this.lblS6_9_CantidadAhorro.Location = new System.Drawing.Point(25, 23);
-            this.lblS6_9_CantidadAhorro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_9_CantidadAhorro.Name = "lblS6_9_CantidadAhorro";
-            this.lblS6_9_CantidadAhorro.Size = new System.Drawing.Size(330, 34);
-            this.lblS6_9_CantidadAhorro.TabIndex = 23;
-            this.lblS6_9_CantidadAhorro.Text = "9. Mensualmente, ¿cuál es el monto promedio que \r\n    logran ahorrar en el hogar?" +
-                "";
-            // 
-            // txtS6_9_CantiAhorro
-            // 
-            this.txtS6_9_CantiAhorro.Location = new System.Drawing.Point(69, 90);
-            this.txtS6_9_CantiAhorro.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_9_CantiAhorro.Multiline = true;
-            this.txtS6_9_CantiAhorro.Name = "txtS6_9_CantiAhorro";
-            this.txtS6_9_CantiAhorro.Size = new System.Drawing.Size(289, 27);
-            this.txtS6_9_CantiAhorro.TabIndex = 2;
-            // 
-            // lblS6_9_QAhorro
-            // 
-            this.lblS6_9_QAhorro.AutoSize = true;
-            this.lblS6_9_QAhorro.Location = new System.Drawing.Point(37, 94);
-            this.lblS6_9_QAhorro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_9_QAhorro.Name = "lblS6_9_QAhorro";
-            this.lblS6_9_QAhorro.Size = new System.Drawing.Size(23, 17);
-            this.lblS6_9_QAhorro.TabIndex = 1;
-            this.lblS6_9_QAhorro.Text = "Q.";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.lblS6_8_Ahorro);
-            this.groupBox13.Controls.Add(this.cbxS6_8_AhorroMensual);
-            this.groupBox13.Location = new System.Drawing.Point(892, 190);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox13.Size = new System.Drawing.Size(400, 146);
-            this.groupBox13.TabIndex = 7;
-            this.groupBox13.TabStop = false;
-            // 
-            // lblS6_8_Ahorro
-            // 
-            this.lblS6_8_Ahorro.AutoSize = true;
-            this.lblS6_8_Ahorro.Location = new System.Drawing.Point(25, 28);
-            this.lblS6_8_Ahorro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_8_Ahorro.Name = "lblS6_8_Ahorro";
-            this.lblS6_8_Ahorro.Size = new System.Drawing.Size(350, 51);
-            this.lblS6_8_Ahorro.TabIndex = 22;
-            this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han \r\n    sido suficientes. ¿Han " +
-                "logrado en ese caso generar\r\n    un ahorro mensual?";
-            // 
-            // cbxS6_8_AhorroMensual
-            // 
-            this.cbxS6_8_AhorroMensual.FormattingEnabled = true;
-            this.cbxS6_8_AhorroMensual.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "NS/NR"});
-            this.cbxS6_8_AhorroMensual.Location = new System.Drawing.Point(28, 96);
-            this.cbxS6_8_AhorroMensual.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxS6_8_AhorroMensual.Name = "cbxS6_8_AhorroMensual";
-            this.cbxS6_8_AhorroMensual.Size = new System.Drawing.Size(331, 24);
-            this.cbxS6_8_AhorroMensual.TabIndex = 3;
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.lblS6_7_CubrirGastos);
-            this.groupBox12.Controls.Add(this.cbxS6_7_CubrenGasto);
-            this.groupBox12.Location = new System.Drawing.Point(892, 36);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox12.Size = new System.Drawing.Size(400, 146);
-            this.groupBox12.TabIndex = 6;
-            this.groupBox12.TabStop = false;
-            // 
-            // lblS6_7_CubrirGastos
-            // 
-            this.lblS6_7_CubrirGastos.AutoSize = true;
-            this.lblS6_7_CubrirGastos.Location = new System.Drawing.Point(25, 23);
-            this.lblS6_7_CubrirGastos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_7_CubrirGastos.Name = "lblS6_7_CubrirGastos";
-            this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(342, 34);
-            this.lblS6_7_CubrirGastos.TabIndex = 21;
-            this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del \r\n     hogar han sido sufi" +
-                "cientes para cubrir su gastos?";
-            // 
-            // cbxS6_7_CubrenGasto
-            // 
-            this.cbxS6_7_CubrenGasto.FormattingEnabled = true;
-            this.cbxS6_7_CubrenGasto.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "Iguales",
-            "NS/NR"});
-            this.cbxS6_7_CubrenGasto.Location = new System.Drawing.Point(28, 101);
-            this.cbxS6_7_CubrenGasto.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxS6_7_CubrenGasto.Name = "cbxS6_7_CubrenGasto";
-            this.cbxS6_7_CubrenGasto.Size = new System.Drawing.Size(331, 24);
-            this.cbxS6_7_CubrenGasto.TabIndex = 3;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.lblS6_6_IngresoTotal);
-            this.groupBox11.Controls.Add(this.txtS6_6_IngresoTotal);
-            this.groupBox11.Controls.Add(this.lblS6_6_QIngresosTotales);
-            this.groupBox11.Location = new System.Drawing.Point(484, 343);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox11.Size = new System.Drawing.Size(400, 146);
-            this.groupBox11.TabIndex = 5;
-            this.groupBox11.TabStop = false;
-            // 
-            // lblS6_6_IngresoTotal
-            // 
-            this.lblS6_6_IngresoTotal.AutoSize = true;
-            this.lblS6_6_IngresoTotal.Location = new System.Drawing.Point(24, 23);
-            this.lblS6_6_IngresoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_6_IngresoTotal.Name = "lblS6_6_IngresoTotal";
-            this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(322, 51);
-            this.lblS6_6_IngresoTotal.TabIndex = 20;
-            this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el\r\n     trabajo de todos los in" +
-                "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
-            // 
-            // txtS6_6_IngresoTotal
-            // 
-            this.txtS6_6_IngresoTotal.Location = new System.Drawing.Point(56, 98);
-            this.txtS6_6_IngresoTotal.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_6_IngresoTotal.Multiline = true;
-            this.txtS6_6_IngresoTotal.Name = "txtS6_6_IngresoTotal";
-            this.txtS6_6_IngresoTotal.Size = new System.Drawing.Size(303, 27);
-            this.txtS6_6_IngresoTotal.TabIndex = 2;
-            // 
-            // lblS6_6_QIngresosTotales
-            // 
-            this.lblS6_6_QIngresosTotales.AutoSize = true;
-            this.lblS6_6_QIngresosTotales.Location = new System.Drawing.Point(24, 102);
-            this.lblS6_6_QIngresosTotales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_6_QIngresosTotales.Name = "lblS6_6_QIngresosTotales";
-            this.lblS6_6_QIngresosTotales.Size = new System.Drawing.Size(23, 17);
-            this.lblS6_6_QIngresosTotales.TabIndex = 1;
-            this.lblS6_6_QIngresosTotales.Text = "Q.";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.lblS6_5_TiempoDeuda);
-            this.groupBox10.Controls.Add(this.cbxS6_5_TiempoPagoDeuda);
-            this.groupBox10.Location = new System.Drawing.Point(484, 190);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox10.Size = new System.Drawing.Size(400, 146);
-            this.groupBox10.TabIndex = 4;
-            this.groupBox10.TabStop = false;
-            // 
-            // lblS6_5_TiempoDeuda
-            // 
-            this.lblS6_5_TiempoDeuda.AutoSize = true;
-            this.lblS6_5_TiempoDeuda.Location = new System.Drawing.Point(25, 28);
-            this.lblS6_5_TiempoDeuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_5_TiempoDeuda.Name = "lblS6_5_TiempoDeuda";
-            this.lblS6_5_TiempoDeuda.Size = new System.Drawing.Size(279, 17);
-            this.lblS6_5_TiempoDeuda.TabIndex = 19;
-            this.lblS6_5_TiempoDeuda.Text = "5. ¿Cada cuanto tiempo paga sus deudas?";
-            // 
-            // cbxS6_5_TiempoPagoDeuda
-            // 
-            this.cbxS6_5_TiempoPagoDeuda.FormattingEnabled = true;
-            this.cbxS6_5_TiempoPagoDeuda.Items.AddRange(new object[] {
-            "Todos los meses",
-            "Una vez cada tres meses",
-            "Una vez cada seis meses",
-            "No las paga",
-            "NS/NR"});
-            this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_5_TiempoPagoDeuda.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxS6_5_TiempoPagoDeuda.Name = "cbxS6_5_TiempoPagoDeuda";
-            this.cbxS6_5_TiempoPagoDeuda.Size = new System.Drawing.Size(331, 24);
-            this.cbxS6_5_TiempoPagoDeuda.TabIndex = 3;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.lblS6_4_CantiDeudas);
-            this.groupBox9.Controls.Add(this.lblS6_4_Valor0);
-            this.groupBox9.Controls.Add(this.txtS6_4_CantiDeuda);
-            this.groupBox9.Controls.Add(this.lblS6_4_QDeuda);
-            this.groupBox9.Location = new System.Drawing.Point(484, 36);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Size = new System.Drawing.Size(400, 146);
-            this.groupBox9.TabIndex = 3;
-            this.groupBox9.TabStop = false;
-            // 
-            // lblS6_4_CantiDeudas
-            // 
-            this.lblS6_4_CantiDeudas.AutoSize = true;
-            this.lblS6_4_CantiDeudas.Location = new System.Drawing.Point(12, 23);
-            this.lblS6_4_CantiDeudas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_4_CantiDeudas.Name = "lblS6_4_CantiDeudas";
-            this.lblS6_4_CantiDeudas.Size = new System.Drawing.Size(347, 34);
-            this.lblS6_4_CantiDeudas.TabIndex = 18;
-            this.lblS6_4_CantiDeudas.Text = "4. ¿A cuánto dinero, aproximadamente, equivalen sus\r\n    deudas?";
-            // 
-            // lblS6_4_Valor0
-            // 
-            this.lblS6_4_Valor0.AutoSize = true;
-            this.lblS6_4_Valor0.Location = new System.Drawing.Point(43, 79);
-            this.lblS6_4_Valor0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_4_Valor0.Name = "lblS6_4_Valor0";
-            this.lblS6_4_Valor0.Size = new System.Drawing.Size(294, 17);
-            this.lblS6_4_Valor0.TabIndex = 3;
-            this.lblS6_4_Valor0.Text = "SI NO TIENE DEUDAS, COLOCAR VALOR \'0\'";
-            // 
-            // txtS6_4_CantiDeuda
-            // 
-            this.txtS6_4_CantiDeuda.Location = new System.Drawing.Point(75, 103);
-            this.txtS6_4_CantiDeuda.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_4_CantiDeuda.Multiline = true;
-            this.txtS6_4_CantiDeuda.Name = "txtS6_4_CantiDeuda";
-            this.txtS6_4_CantiDeuda.Size = new System.Drawing.Size(273, 27);
-            this.txtS6_4_CantiDeuda.TabIndex = 2;
-            // 
-            // lblS6_4_QDeuda
-            // 
-            this.lblS6_4_QDeuda.AutoSize = true;
-            this.lblS6_4_QDeuda.Location = new System.Drawing.Point(43, 107);
-            this.lblS6_4_QDeuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_4_QDeuda.Name = "lblS6_4_QDeuda";
-            this.lblS6_4_QDeuda.Size = new System.Drawing.Size(23, 17);
-            this.lblS6_4_QDeuda.TabIndex = 1;
-            this.lblS6_4_QDeuda.Text = "Q.";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.lblS6_3_Deuda);
-            this.groupBox8.Controls.Add(this.cbxS6_3_Deuda);
-            this.groupBox8.Location = new System.Drawing.Point(76, 343);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(400, 146);
-            this.groupBox8.TabIndex = 2;
-            this.groupBox8.TabStop = false;
-            // 
-            // lblS6_3_Deuda
-            // 
-            this.lblS6_3_Deuda.AutoSize = true;
-            this.lblS6_3_Deuda.Location = new System.Drawing.Point(25, 23);
-            this.lblS6_3_Deuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_3_Deuda.Name = "lblS6_3_Deuda";
-            this.lblS6_3_Deuda.Size = new System.Drawing.Size(330, 34);
-            this.lblS6_3_Deuda.TabIndex = 18;
-            this.lblS6_3_Deuda.Text = "3. Actualmente, ¿En su familia se mantiene alguna \r\n    deuda?\r\n";
-            // 
-            // cbxS6_3_Deuda
-            // 
-            this.cbxS6_3_Deuda.FormattingEnabled = true;
-            this.cbxS6_3_Deuda.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "NS/NR"});
-            this.cbxS6_3_Deuda.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_3_Deuda.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxS6_3_Deuda.Name = "cbxS6_3_Deuda";
-            this.cbxS6_3_Deuda.Size = new System.Drawing.Size(331, 24);
-            this.cbxS6_3_Deuda.TabIndex = 3;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.lblS6_2_IngresosRemesas);
-            this.groupBox7.Controls.Add(this.cbxS6_2_IngRemesas);
-            this.groupBox7.Controls.Add(this.txtS6_2_CantidadRemesas);
-            this.groupBox7.Controls.Add(this.lblS6_2_QRemesas);
-            this.groupBox7.Location = new System.Drawing.Point(76, 190);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(400, 146);
-            this.groupBox7.TabIndex = 1;
-            this.groupBox7.TabStop = false;
-            // 
-            // lblS6_2_IngresosRemesas
-            // 
-            this.lblS6_2_IngresosRemesas.AutoSize = true;
-            this.lblS6_2_IngresosRemesas.Location = new System.Drawing.Point(25, 28);
-            this.lblS6_2_IngresosRemesas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_2_IngresosRemesas.Name = "lblS6_2_IngresosRemesas";
-            this.lblS6_2_IngresosRemesas.Size = new System.Drawing.Size(341, 34);
-            this.lblS6_2_IngresosRemesas.TabIndex = 17;
-            this.lblS6_2_IngresosRemesas.Text = "2. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por remesas? ¿qué cant" +
-                "idad?\r\n";
-            // 
-            // cbxS6_2_IngRemesas
-            // 
-            this.cbxS6_2_IngRemesas.FormattingEnabled = true;
-            this.cbxS6_2_IngRemesas.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "NS/NR"});
-            this.cbxS6_2_IngRemesas.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_2_IngRemesas.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxS6_2_IngRemesas.Name = "cbxS6_2_IngRemesas";
-            this.cbxS6_2_IngRemesas.Size = new System.Drawing.Size(165, 24);
-            this.cbxS6_2_IngRemesas.TabIndex = 3;
-            // 
-            // txtS6_2_CantidadRemesas
-            // 
-            this.txtS6_2_CantidadRemesas.Enabled = false;
-            this.txtS6_2_CantidadRemesas.Location = new System.Drawing.Point(244, 90);
-            this.txtS6_2_CantidadRemesas.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_2_CantidadRemesas.Multiline = true;
-            this.txtS6_2_CantidadRemesas.Name = "txtS6_2_CantidadRemesas";
-            this.txtS6_2_CantidadRemesas.Size = new System.Drawing.Size(115, 27);
-            this.txtS6_2_CantidadRemesas.TabIndex = 2;
-            // 
-            // lblS6_2_QRemesas
-            // 
-            this.lblS6_2_QRemesas.AutoSize = true;
-            this.lblS6_2_QRemesas.Enabled = false;
-            this.lblS6_2_QRemesas.Location = new System.Drawing.Point(217, 94);
-            this.lblS6_2_QRemesas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_2_QRemesas.Name = "lblS6_2_QRemesas";
-            this.lblS6_2_QRemesas.Size = new System.Drawing.Size(23, 17);
-            this.lblS6_2_QRemesas.TabIndex = 1;
-            this.lblS6_2_QRemesas.Text = "Q.";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.lblS6_1_IngresosEstado);
-            this.groupBox6.Controls.Add(this.cbxS6_1_IngEstado);
-            this.groupBox6.Controls.Add(this.txtS6_1_CantidadIngEstado);
-            this.groupBox6.Controls.Add(this.lblS6_1_QEstado);
-            this.groupBox6.Location = new System.Drawing.Point(76, 36);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(400, 146);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            // 
-            // lblS6_1_IngresosEstado
-            // 
-            this.lblS6_1_IngresosEstado.AutoSize = true;
-            this.lblS6_1_IngresosEstado.Location = new System.Drawing.Point(25, 23);
-            this.lblS6_1_IngresosEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_1_IngresosEstado.Name = "lblS6_1_IngresosEstado";
-            this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(351, 34);
-            this.lblS6_1_IngresosEstado.TabIndex = 16;
-            this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por apoyo del Estado (" +
-                "programas)? ¿qué cantidad?\r\n";
-            // 
-            // cbxS6_1_IngEstado
-            // 
-            this.cbxS6_1_IngEstado.FormattingEnabled = true;
-            this.cbxS6_1_IngEstado.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "NS/NR"});
-            this.cbxS6_1_IngEstado.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_1_IngEstado.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxS6_1_IngEstado.Name = "cbxS6_1_IngEstado";
-            this.cbxS6_1_IngEstado.Size = new System.Drawing.Size(165, 24);
-            this.cbxS6_1_IngEstado.TabIndex = 3;
-            // 
-            // txtS6_1_CantidadIngEstado
-            // 
-            this.txtS6_1_CantidadIngEstado.Enabled = false;
-            this.txtS6_1_CantidadIngEstado.Location = new System.Drawing.Point(244, 90);
-            this.txtS6_1_CantidadIngEstado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS6_1_CantidadIngEstado.Multiline = true;
-            this.txtS6_1_CantidadIngEstado.Name = "txtS6_1_CantidadIngEstado";
-            this.txtS6_1_CantidadIngEstado.Size = new System.Drawing.Size(115, 27);
-            this.txtS6_1_CantidadIngEstado.TabIndex = 2;
-            // 
-            // lblS6_1_QEstado
-            // 
-            this.lblS6_1_QEstado.AutoSize = true;
-            this.lblS6_1_QEstado.Enabled = false;
-            this.lblS6_1_QEstado.Location = new System.Drawing.Point(217, 94);
-            this.lblS6_1_QEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS6_1_QEstado.Name = "lblS6_1_QEstado";
-            this.lblS6_1_QEstado.Size = new System.Drawing.Size(23, 17);
-            this.lblS6_1_QEstado.TabIndex = 1;
-            this.lblS6_1_QEstado.Text = "Q.";
-            // 
-            // gbS7
-            // 
-            this.gbS7.Controls.Add(this.pbS7_Siguiente);
-            this.gbS7.Controls.Add(this.groupBox24);
-            this.gbS7.Controls.Add(this.groupBox25);
-            this.gbS7.Controls.Add(this.groupBox23);
-            this.gbS7.Controls.Add(this.groupBox22);
-            this.gbS7.Controls.Add(this.groupBox21);
-            this.gbS7.Controls.Add(this.groupBox20);
-            this.gbS7.Controls.Add(this.groupBox19);
-            this.gbS7.Controls.Add(this.groupBox18);
-            this.gbS7.Location = new System.Drawing.Point(4, 4);
-            this.gbS7.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7.Name = "gbS7";
-            this.gbS7.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7.Size = new System.Drawing.Size(1776, 628);
-            this.gbS7.TabIndex = 1;
-            this.gbS7.TabStop = false;
-            this.gbS7.Text = "VIVIENDA";
-            // 
-            // pbS7_Siguiente
-            // 
-            this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS7_Siguiente.Location = new System.Drawing.Point(1624, 538);
-            this.pbS7_Siguiente.Margin = new System.Windows.Forms.Padding(4);
-            this.pbS7_Siguiente.Name = "pbS7_Siguiente";
-            this.pbS7_Siguiente.Size = new System.Drawing.Size(71, 73);
-            this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbS7_Siguiente.TabIndex = 13;
-            this.pbS7_Siguiente.TabStop = false;
-            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click_1);
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.lblS7_8_MaterialPiso);
-            this.groupBox24.Controls.Add(this.gbS7_8_Tierra);
-            this.groupBox24.Controls.Add(this.gbS7_8_Madera);
-            this.groupBox24.Controls.Add(this.gbS7_8_LadrilloBarro);
-            this.groupBox24.Controls.Add(this.gbS7_8_Encementado);
-            this.groupBox24.Controls.Add(this.gbS7_8_EstadoPiso);
-            this.groupBox24.Location = new System.Drawing.Point(1340, 23);
-            this.groupBox24.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox24.Size = new System.Drawing.Size(409, 409);
-            this.groupBox24.TabIndex = 8;
-            this.groupBox24.TabStop = false;
-            // 
-            // lblS7_8_MaterialPiso
-            // 
-            this.lblS7_8_MaterialPiso.AutoSize = true;
-            this.lblS7_8_MaterialPiso.Location = new System.Drawing.Point(13, 28);
-            this.lblS7_8_MaterialPiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_8_MaterialPiso.Name = "lblS7_8_MaterialPiso";
-            this.lblS7_8_MaterialPiso.Size = new System.Drawing.Size(360, 34);
-            this.lblS7_8_MaterialPiso.TabIndex = 16;
-            this.lblS7_8_MaterialPiso.Text = "8. OBSERVE y defina el tipo y el estado del material de \r\n    PISO de la vivienda" +
-                ".";
-            // 
-            // gbS7_8_Tierra
-            // 
-            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_MuyBueno);
-            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_Bueno);
-            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_Malo);
-            this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_MuyMalo);
-            this.gbS7_8_Tierra.Controls.Add(this.label34);
-            this.gbS7_8_Tierra.Location = new System.Drawing.Point(7, 257);
-            this.gbS7_8_Tierra.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_Tierra.Name = "gbS7_8_Tierra";
-            this.gbS7_8_Tierra.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_Tierra.Size = new System.Drawing.Size(385, 46);
-            this.gbS7_8_Tierra.TabIndex = 17;
-            this.gbS7_8_Tierra.TabStop = false;
-            // 
-            // rbS7_84_MuyBueno
-            // 
-            this.rbS7_84_MuyBueno.AutoSize = true;
-            this.rbS7_84_MuyBueno.Location = new System.Drawing.Point(340, 16);
-            this.rbS7_84_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_84_MuyBueno.Name = "rbS7_84_MuyBueno";
-            this.rbS7_84_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_84_MuyBueno.TabIndex = 4;
-            this.rbS7_84_MuyBueno.TabStop = true;
-            this.rbS7_84_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_84_Bueno
-            // 
-            this.rbS7_84_Bueno.AutoSize = true;
-            this.rbS7_84_Bueno.Location = new System.Drawing.Point(271, 16);
-            this.rbS7_84_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_84_Bueno.Name = "rbS7_84_Bueno";
-            this.rbS7_84_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_84_Bueno.TabIndex = 3;
-            this.rbS7_84_Bueno.TabStop = true;
-            this.rbS7_84_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_84_Malo
-            // 
-            this.rbS7_84_Malo.AutoSize = true;
-            this.rbS7_84_Malo.Location = new System.Drawing.Point(213, 16);
-            this.rbS7_84_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_84_Malo.Name = "rbS7_84_Malo";
-            this.rbS7_84_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_84_Malo.TabIndex = 2;
-            this.rbS7_84_Malo.TabStop = true;
-            this.rbS7_84_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_84_MuyMalo
-            // 
-            this.rbS7_84_MuyMalo.AutoSize = true;
-            this.rbS7_84_MuyMalo.Location = new System.Drawing.Point(141, 16);
-            this.rbS7_84_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_84_MuyMalo.Name = "rbS7_84_MuyMalo";
-            this.rbS7_84_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_84_MuyMalo.TabIndex = 1;
-            this.rbS7_84_MuyMalo.TabStop = true;
-            this.rbS7_84_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(7, 16);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(62, 17);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "4. Tierra";
-            // 
-            // gbS7_8_Madera
-            // 
-            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_MuyBueno);
-            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_Bueno);
-            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_Malo);
-            this.gbS7_8_Madera.Controls.Add(this.rbS7_83_MuyMalo);
-            this.gbS7_8_Madera.Controls.Add(this.label53);
-            this.gbS7_8_Madera.Location = new System.Drawing.Point(7, 212);
-            this.gbS7_8_Madera.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_Madera.Name = "gbS7_8_Madera";
-            this.gbS7_8_Madera.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_Madera.Size = new System.Drawing.Size(385, 46);
-            this.gbS7_8_Madera.TabIndex = 16;
-            this.gbS7_8_Madera.TabStop = false;
-            // 
-            // rbS7_83_MuyBueno
-            // 
-            this.rbS7_83_MuyBueno.AutoSize = true;
-            this.rbS7_83_MuyBueno.Location = new System.Drawing.Point(341, 16);
-            this.rbS7_83_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_83_MuyBueno.Name = "rbS7_83_MuyBueno";
-            this.rbS7_83_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_83_MuyBueno.TabIndex = 4;
-            this.rbS7_83_MuyBueno.TabStop = true;
-            this.rbS7_83_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_83_Bueno
-            // 
-            this.rbS7_83_Bueno.AutoSize = true;
-            this.rbS7_83_Bueno.Location = new System.Drawing.Point(272, 16);
-            this.rbS7_83_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_83_Bueno.Name = "rbS7_83_Bueno";
-            this.rbS7_83_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_83_Bueno.TabIndex = 3;
-            this.rbS7_83_Bueno.TabStop = true;
-            this.rbS7_83_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_83_Malo
-            // 
-            this.rbS7_83_Malo.AutoSize = true;
-            this.rbS7_83_Malo.Location = new System.Drawing.Point(215, 16);
-            this.rbS7_83_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_83_Malo.Name = "rbS7_83_Malo";
-            this.rbS7_83_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_83_Malo.TabIndex = 2;
-            this.rbS7_83_Malo.TabStop = true;
-            this.rbS7_83_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_83_MuyMalo
-            // 
-            this.rbS7_83_MuyMalo.AutoSize = true;
-            this.rbS7_83_MuyMalo.Location = new System.Drawing.Point(143, 16);
-            this.rbS7_83_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_83_MuyMalo.Name = "rbS7_83_MuyMalo";
-            this.rbS7_83_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_83_MuyMalo.TabIndex = 1;
-            this.rbS7_83_MuyMalo.TabStop = true;
-            this.rbS7_83_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(7, 16);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(72, 17);
-            this.label53.TabIndex = 0;
-            this.label53.Text = "3. Madera";
-            // 
-            // gbS7_8_LadrilloBarro
-            // 
-            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_MuyBueno);
-            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_Bueno);
-            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_Malo);
-            this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_MuyMalo);
-            this.gbS7_8_LadrilloBarro.Controls.Add(this.label54);
-            this.gbS7_8_LadrilloBarro.Location = new System.Drawing.Point(8, 165);
-            this.gbS7_8_LadrilloBarro.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_LadrilloBarro.Name = "gbS7_8_LadrilloBarro";
-            this.gbS7_8_LadrilloBarro.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_LadrilloBarro.Size = new System.Drawing.Size(384, 46);
-            this.gbS7_8_LadrilloBarro.TabIndex = 15;
-            this.gbS7_8_LadrilloBarro.TabStop = false;
-            // 
-            // rbS7_82_MuyBueno
-            // 
-            this.rbS7_82_MuyBueno.AutoSize = true;
-            this.rbS7_82_MuyBueno.Location = new System.Drawing.Point(343, 16);
-            this.rbS7_82_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_82_MuyBueno.Name = "rbS7_82_MuyBueno";
-            this.rbS7_82_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_82_MuyBueno.TabIndex = 4;
-            this.rbS7_82_MuyBueno.TabStop = true;
-            this.rbS7_82_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_82_Bueno
-            // 
-            this.rbS7_82_Bueno.AutoSize = true;
-            this.rbS7_82_Bueno.Location = new System.Drawing.Point(273, 16);
-            this.rbS7_82_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_82_Bueno.Name = "rbS7_82_Bueno";
-            this.rbS7_82_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_82_Bueno.TabIndex = 3;
-            this.rbS7_82_Bueno.TabStop = true;
-            this.rbS7_82_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_82_Malo
-            // 
-            this.rbS7_82_Malo.AutoSize = true;
-            this.rbS7_82_Malo.Location = new System.Drawing.Point(216, 16);
-            this.rbS7_82_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_82_Malo.Name = "rbS7_82_Malo";
-            this.rbS7_82_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_82_Malo.TabIndex = 2;
-            this.rbS7_82_Malo.TabStop = true;
-            this.rbS7_82_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_82_MuyMalo
-            // 
-            this.rbS7_82_MuyMalo.AutoSize = true;
-            this.rbS7_82_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_82_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_82_MuyMalo.Name = "rbS7_82_MuyMalo";
-            this.rbS7_82_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_82_MuyMalo.TabIndex = 1;
-            this.rbS7_82_MuyMalo.TabStop = true;
-            this.rbS7_82_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(5, 16);
-            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(135, 17);
-            this.label54.TabIndex = 0;
-            this.label54.Text = "2. Ladrillos de barro";
-            // 
-            // gbS7_8_Encementado
-            // 
-            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_MuyBueno);
-            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_Bueno);
-            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_Malo);
-            this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_MuyMalo);
-            this.gbS7_8_Encementado.Controls.Add(this.label55);
-            this.gbS7_8_Encementado.Location = new System.Drawing.Point(8, 119);
-            this.gbS7_8_Encementado.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_Encementado.Name = "gbS7_8_Encementado";
-            this.gbS7_8_Encementado.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_Encementado.Size = new System.Drawing.Size(384, 46);
-            this.gbS7_8_Encementado.TabIndex = 14;
-            this.gbS7_8_Encementado.TabStop = false;
-            // 
-            // rbS7_81_MuyBueno
-            // 
-            this.rbS7_81_MuyBueno.AutoSize = true;
-            this.rbS7_81_MuyBueno.Location = new System.Drawing.Point(341, 16);
-            this.rbS7_81_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_81_MuyBueno.Name = "rbS7_81_MuyBueno";
-            this.rbS7_81_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_81_MuyBueno.TabIndex = 4;
-            this.rbS7_81_MuyBueno.TabStop = true;
-            this.rbS7_81_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_81_Bueno
-            // 
-            this.rbS7_81_Bueno.AutoSize = true;
-            this.rbS7_81_Bueno.Location = new System.Drawing.Point(272, 16);
-            this.rbS7_81_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_81_Bueno.Name = "rbS7_81_Bueno";
-            this.rbS7_81_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_81_Bueno.TabIndex = 3;
-            this.rbS7_81_Bueno.TabStop = true;
-            this.rbS7_81_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_81_Malo
-            // 
-            this.rbS7_81_Malo.AutoSize = true;
-            this.rbS7_81_Malo.Location = new System.Drawing.Point(215, 16);
-            this.rbS7_81_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_81_Malo.Name = "rbS7_81_Malo";
-            this.rbS7_81_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_81_Malo.TabIndex = 2;
-            this.rbS7_81_Malo.TabStop = true;
-            this.rbS7_81_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_81_MuyMalo
-            // 
-            this.rbS7_81_MuyMalo.AutoSize = true;
-            this.rbS7_81_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_81_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_81_MuyMalo.Name = "rbS7_81_MuyMalo";
-            this.rbS7_81_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_81_MuyMalo.TabIndex = 1;
-            this.rbS7_81_MuyMalo.TabStop = true;
-            this.rbS7_81_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(4, 16);
-            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(111, 17);
-            this.label55.TabIndex = 0;
-            this.label55.Text = "1. Encementado";
-            // 
-            // gbS7_8_EstadoPiso
-            // 
-            this.gbS7_8_EstadoPiso.Controls.Add(this.label56);
-            this.gbS7_8_EstadoPiso.Controls.Add(this.label57);
-            this.gbS7_8_EstadoPiso.Controls.Add(this.label58);
-            this.gbS7_8_EstadoPiso.Controls.Add(this.label59);
-            this.gbS7_8_EstadoPiso.Location = new System.Drawing.Point(8, 82);
-            this.gbS7_8_EstadoPiso.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_EstadoPiso.Name = "gbS7_8_EstadoPiso";
-            this.gbS7_8_EstadoPiso.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_8_EstadoPiso.Size = new System.Drawing.Size(393, 36);
-            this.gbS7_8_EstadoPiso.TabIndex = 13;
-            this.gbS7_8_EstadoPiso.TabStop = false;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(256, 11);
-            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(48, 17);
-            this.label56.TabIndex = 3;
-            this.label56.Text = "bueno";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(313, 11);
-            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(78, 17);
-            this.label57.TabIndex = 2;
-            this.label57.Text = "muy bueno";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(204, 11);
-            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(38, 17);
-            this.label58.TabIndex = 1;
-            this.label58.Text = "malo";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(120, 11);
-            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(68, 17);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "muy malo";
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Controls.Add(this.lblS7_7_MaterialParedes);
-            this.groupBox25.Controls.Add(this.gbS7_7_Desechos);
-            this.groupBox25.Controls.Add(this.gbS7_7_BaharequeBambu);
-            this.groupBox25.Controls.Add(this.gbS7_7_Lamina);
-            this.groupBox25.Controls.Add(this.gbS7_7_Adobe);
-            this.groupBox25.Controls.Add(this.gbS7_7_Madera);
-            this.groupBox25.Controls.Add(this.gbS7_7_BlockLadriPrefabr);
-            this.groupBox25.Controls.Add(this.gbS7_7_EstadoParedes);
-            this.groupBox25.Location = new System.Drawing.Point(849, 12);
-            this.groupBox25.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox25.Size = new System.Drawing.Size(483, 420);
-            this.groupBox25.TabIndex = 7;
-            this.groupBox25.TabStop = false;
-            // 
-            // lblS7_7_MaterialParedes
-            // 
-            this.lblS7_7_MaterialParedes.AutoSize = true;
-            this.lblS7_7_MaterialParedes.Location = new System.Drawing.Point(12, 23);
-            this.lblS7_7_MaterialParedes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_7_MaterialParedes.Name = "lblS7_7_MaterialParedes";
-            this.lblS7_7_MaterialParedes.Size = new System.Drawing.Size(429, 34);
-            this.lblS7_7_MaterialParedes.TabIndex = 15;
-            this.lblS7_7_MaterialParedes.Text = "7. OBSERVE y defina el tipo y el estado del material de PAREDES \r\n     de la vivi" +
-                "enda.";
-            // 
-            // gbS7_7_Desechos
-            // 
-            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_MuyBueno);
-            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_Bueno);
-            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_Malo);
-            this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_MuyMalo);
-            this.gbS7_7_Desechos.Controls.Add(this.label35);
-            this.gbS7_7_Desechos.Location = new System.Drawing.Point(15, 347);
-            this.gbS7_7_Desechos.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Desechos.Name = "gbS7_7_Desechos";
-            this.gbS7_7_Desechos.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Desechos.Size = new System.Drawing.Size(436, 46);
-            this.gbS7_7_Desechos.TabIndex = 14;
-            this.gbS7_7_Desechos.TabStop = false;
-            // 
-            // rbS7_76_MuyBueno
-            // 
-            this.rbS7_76_MuyBueno.AutoSize = true;
-            this.rbS7_76_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_76_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_76_MuyBueno.Name = "rbS7_76_MuyBueno";
-            this.rbS7_76_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_76_MuyBueno.TabIndex = 4;
-            this.rbS7_76_MuyBueno.TabStop = true;
-            this.rbS7_76_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_76_Bueno
-            // 
-            this.rbS7_76_Bueno.AutoSize = true;
-            this.rbS7_76_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_76_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_76_Bueno.Name = "rbS7_76_Bueno";
-            this.rbS7_76_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_76_Bueno.TabIndex = 3;
-            this.rbS7_76_Bueno.TabStop = true;
-            this.rbS7_76_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_76_Malo
-            // 
-            this.rbS7_76_Malo.AutoSize = true;
-            this.rbS7_76_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_76_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_76_Malo.Name = "rbS7_76_Malo";
-            this.rbS7_76_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_76_Malo.TabIndex = 2;
-            this.rbS7_76_Malo.TabStop = true;
-            this.rbS7_76_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_76_MuyMalo
-            // 
-            this.rbS7_76_MuyMalo.AutoSize = true;
-            this.rbS7_76_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_76_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_76_MuyMalo.Name = "rbS7_76_MuyMalo";
-            this.rbS7_76_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_76_MuyMalo.TabIndex = 1;
-            this.rbS7_76_MuyMalo.TabStop = true;
-            this.rbS7_76_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(12, 16);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(87, 17);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "6. Desechos";
-            // 
-            // gbS7_7_BaharequeBambu
-            // 
-            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_MuyBueno);
-            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_Bueno);
-            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_Malo);
-            this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_MuyMalo);
-            this.gbS7_7_BaharequeBambu.Controls.Add(this.label44);
-            this.gbS7_7_BaharequeBambu.Location = new System.Drawing.Point(15, 300);
-            this.gbS7_7_BaharequeBambu.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_BaharequeBambu.Name = "gbS7_7_BaharequeBambu";
-            this.gbS7_7_BaharequeBambu.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_BaharequeBambu.Size = new System.Drawing.Size(436, 46);
-            this.gbS7_7_BaharequeBambu.TabIndex = 13;
-            this.gbS7_7_BaharequeBambu.TabStop = false;
-            // 
-            // rbS7_75_MuyBueno
-            // 
-            this.rbS7_75_MuyBueno.AutoSize = true;
-            this.rbS7_75_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_75_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_75_MuyBueno.Name = "rbS7_75_MuyBueno";
-            this.rbS7_75_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_75_MuyBueno.TabIndex = 4;
-            this.rbS7_75_MuyBueno.TabStop = true;
-            this.rbS7_75_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_75_Bueno
-            // 
-            this.rbS7_75_Bueno.AutoSize = true;
-            this.rbS7_75_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_75_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_75_Bueno.Name = "rbS7_75_Bueno";
-            this.rbS7_75_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_75_Bueno.TabIndex = 3;
-            this.rbS7_75_Bueno.TabStop = true;
-            this.rbS7_75_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_75_Malo
-            // 
-            this.rbS7_75_Malo.AutoSize = true;
-            this.rbS7_75_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_75_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_75_Malo.Name = "rbS7_75_Malo";
-            this.rbS7_75_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_75_Malo.TabIndex = 2;
-            this.rbS7_75_Malo.TabStop = true;
-            this.rbS7_75_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_75_MuyMalo
-            // 
-            this.rbS7_75_MuyMalo.AutoSize = true;
-            this.rbS7_75_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_75_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_75_MuyMalo.Name = "rbS7_75_MuyMalo";
-            this.rbS7_75_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_75_MuyMalo.TabIndex = 1;
-            this.rbS7_75_MuyMalo.TabStop = true;
-            this.rbS7_75_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(12, 16);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(142, 17);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "5. Bahareque/Bambú";
-            // 
-            // gbS7_7_Lamina
-            // 
-            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_MuyBueno);
-            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_Bueno);
-            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_Malo);
-            this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_MuyMalo);
-            this.gbS7_7_Lamina.Controls.Add(this.label45);
-            this.gbS7_7_Lamina.Location = new System.Drawing.Point(15, 255);
-            this.gbS7_7_Lamina.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Lamina.Name = "gbS7_7_Lamina";
-            this.gbS7_7_Lamina.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Lamina.Size = new System.Drawing.Size(436, 46);
-            this.gbS7_7_Lamina.TabIndex = 12;
-            this.gbS7_7_Lamina.TabStop = false;
-            // 
-            // rbS7_74_MuyBueno
-            // 
-            this.rbS7_74_MuyBueno.AutoSize = true;
-            this.rbS7_74_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_74_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_74_MuyBueno.Name = "rbS7_74_MuyBueno";
-            this.rbS7_74_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_74_MuyBueno.TabIndex = 4;
-            this.rbS7_74_MuyBueno.TabStop = true;
-            this.rbS7_74_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_74_Bueno
-            // 
-            this.rbS7_74_Bueno.AutoSize = true;
-            this.rbS7_74_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_74_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_74_Bueno.Name = "rbS7_74_Bueno";
-            this.rbS7_74_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_74_Bueno.TabIndex = 3;
-            this.rbS7_74_Bueno.TabStop = true;
-            this.rbS7_74_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_74_Malo
-            // 
-            this.rbS7_74_Malo.AutoSize = true;
-            this.rbS7_74_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_74_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_74_Malo.Name = "rbS7_74_Malo";
-            this.rbS7_74_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_74_Malo.TabIndex = 2;
-            this.rbS7_74_Malo.TabStop = true;
-            this.rbS7_74_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_74_MuyMalo
-            // 
-            this.rbS7_74_MuyMalo.AutoSize = true;
-            this.rbS7_74_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_74_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_74_MuyMalo.Name = "rbS7_74_MuyMalo";
-            this.rbS7_74_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_74_MuyMalo.TabIndex = 1;
-            this.rbS7_74_MuyMalo.TabStop = true;
-            this.rbS7_74_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(12, 16);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(70, 17);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "4. Lámina";
-            // 
-            // gbS7_7_Adobe
-            // 
-            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_MuyBueno);
-            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_Bueno);
-            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_Malo);
-            this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_MuyMalo);
-            this.gbS7_7_Adobe.Controls.Add(this.label46);
-            this.gbS7_7_Adobe.Location = new System.Drawing.Point(15, 209);
-            this.gbS7_7_Adobe.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Adobe.Name = "gbS7_7_Adobe";
-            this.gbS7_7_Adobe.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Adobe.Size = new System.Drawing.Size(436, 46);
-            this.gbS7_7_Adobe.TabIndex = 11;
-            this.gbS7_7_Adobe.TabStop = false;
-            // 
-            // rbS7_73_MuyBueno
-            // 
-            this.rbS7_73_MuyBueno.AutoSize = true;
-            this.rbS7_73_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_73_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_73_MuyBueno.Name = "rbS7_73_MuyBueno";
-            this.rbS7_73_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_73_MuyBueno.TabIndex = 4;
-            this.rbS7_73_MuyBueno.TabStop = true;
-            this.rbS7_73_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_73_Bueno
-            // 
-            this.rbS7_73_Bueno.AutoSize = true;
-            this.rbS7_73_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_73_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_73_Bueno.Name = "rbS7_73_Bueno";
-            this.rbS7_73_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_73_Bueno.TabIndex = 3;
-            this.rbS7_73_Bueno.TabStop = true;
-            this.rbS7_73_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_73_Malo
-            // 
-            this.rbS7_73_Malo.AutoSize = true;
-            this.rbS7_73_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_73_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_73_Malo.Name = "rbS7_73_Malo";
-            this.rbS7_73_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_73_Malo.TabIndex = 2;
-            this.rbS7_73_Malo.TabStop = true;
-            this.rbS7_73_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_73_MuyMalo
-            // 
-            this.rbS7_73_MuyMalo.AutoSize = true;
-            this.rbS7_73_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_73_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_73_MuyMalo.Name = "rbS7_73_MuyMalo";
-            this.rbS7_73_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_73_MuyMalo.TabIndex = 1;
-            this.rbS7_73_MuyMalo.TabStop = true;
-            this.rbS7_73_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(12, 16);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(65, 17);
-            this.label46.TabIndex = 0;
-            this.label46.Text = "3. Adobe";
-            // 
-            // gbS7_7_Madera
-            // 
-            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_MuyBueno);
-            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_Bueno);
-            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_Malo);
-            this.gbS7_7_Madera.Controls.Add(this.rbS7_72_MuyMalo);
-            this.gbS7_7_Madera.Controls.Add(this.label47);
-            this.gbS7_7_Madera.Location = new System.Drawing.Point(16, 162);
-            this.gbS7_7_Madera.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Madera.Name = "gbS7_7_Madera";
-            this.gbS7_7_Madera.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_Madera.Size = new System.Drawing.Size(436, 46);
-            this.gbS7_7_Madera.TabIndex = 10;
-            this.gbS7_7_Madera.TabStop = false;
-            // 
-            // rbS7_72_MuyBueno
-            // 
-            this.rbS7_72_MuyBueno.AutoSize = true;
-            this.rbS7_72_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_72_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_72_MuyBueno.Name = "rbS7_72_MuyBueno";
-            this.rbS7_72_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_72_MuyBueno.TabIndex = 4;
-            this.rbS7_72_MuyBueno.TabStop = true;
-            this.rbS7_72_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_72_Bueno
-            // 
-            this.rbS7_72_Bueno.AutoSize = true;
-            this.rbS7_72_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_72_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_72_Bueno.Name = "rbS7_72_Bueno";
-            this.rbS7_72_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_72_Bueno.TabIndex = 3;
-            this.rbS7_72_Bueno.TabStop = true;
-            this.rbS7_72_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_72_Malo
-            // 
-            this.rbS7_72_Malo.AutoSize = true;
-            this.rbS7_72_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_72_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_72_Malo.Name = "rbS7_72_Malo";
-            this.rbS7_72_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_72_Malo.TabIndex = 2;
-            this.rbS7_72_Malo.TabStop = true;
-            this.rbS7_72_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_72_MuyMalo
-            // 
-            this.rbS7_72_MuyMalo.AutoSize = true;
-            this.rbS7_72_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_72_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_72_MuyMalo.Name = "rbS7_72_MuyMalo";
-            this.rbS7_72_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_72_MuyMalo.TabIndex = 1;
-            this.rbS7_72_MuyMalo.TabStop = true;
-            this.rbS7_72_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(12, 16);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(72, 17);
-            this.label47.TabIndex = 0;
-            this.label47.Text = "2. Madera";
-            // 
-            // gbS7_7_BlockLadriPrefabr
-            // 
-            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_MuyBueno);
-            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_Bueno);
-            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_Malo);
-            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_MuyMalo);
-            this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.label48);
-            this.gbS7_7_BlockLadriPrefabr.Location = new System.Drawing.Point(16, 117);
-            this.gbS7_7_BlockLadriPrefabr.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_BlockLadriPrefabr.Name = "gbS7_7_BlockLadriPrefabr";
-            this.gbS7_7_BlockLadriPrefabr.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_BlockLadriPrefabr.Size = new System.Drawing.Size(436, 46);
-            this.gbS7_7_BlockLadriPrefabr.TabIndex = 9;
-            this.gbS7_7_BlockLadriPrefabr.TabStop = false;
-            // 
-            // rbS7_71_MuyBueno
-            // 
-            this.rbS7_71_MuyBueno.AutoSize = true;
-            this.rbS7_71_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_71_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_71_MuyBueno.Name = "rbS7_71_MuyBueno";
-            this.rbS7_71_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_71_MuyBueno.TabIndex = 4;
-            this.rbS7_71_MuyBueno.TabStop = true;
-            this.rbS7_71_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_71_Bueno
-            // 
-            this.rbS7_71_Bueno.AutoSize = true;
-            this.rbS7_71_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_71_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_71_Bueno.Name = "rbS7_71_Bueno";
-            this.rbS7_71_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_71_Bueno.TabIndex = 3;
-            this.rbS7_71_Bueno.TabStop = true;
-            this.rbS7_71_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_71_Malo
-            // 
-            this.rbS7_71_Malo.AutoSize = true;
-            this.rbS7_71_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_71_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_71_Malo.Name = "rbS7_71_Malo";
-            this.rbS7_71_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_71_Malo.TabIndex = 2;
-            this.rbS7_71_Malo.TabStop = true;
-            this.rbS7_71_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_71_MuyMalo
-            // 
-            this.rbS7_71_MuyMalo.AutoSize = true;
-            this.rbS7_71_MuyMalo.Location = new System.Drawing.Point(179, 16);
-            this.rbS7_71_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_71_MuyMalo.Name = "rbS7_71_MuyMalo";
-            this.rbS7_71_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_71_MuyMalo.TabIndex = 1;
-            this.rbS7_71_MuyMalo.TabStop = true;
-            this.rbS7_71_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(12, 16);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(163, 17);
-            this.label48.TabIndex = 0;
-            this.label48.Text = "1. Block/Ladrillo/Prefabr.";
-            // 
-            // gbS7_7_EstadoParedes
-            // 
-            this.gbS7_7_EstadoParedes.Controls.Add(this.label49);
-            this.gbS7_7_EstadoParedes.Controls.Add(this.label50);
-            this.gbS7_7_EstadoParedes.Controls.Add(this.label51);
-            this.gbS7_7_EstadoParedes.Controls.Add(this.label52);
-            this.gbS7_7_EstadoParedes.Location = new System.Drawing.Point(16, 80);
-            this.gbS7_7_EstadoParedes.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_EstadoParedes.Name = "gbS7_7_EstadoParedes";
-            this.gbS7_7_EstadoParedes.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_7_EstadoParedes.Size = new System.Drawing.Size(436, 36);
-            this.gbS7_7_EstadoParedes.TabIndex = 8;
-            this.gbS7_7_EstadoParedes.TabStop = false;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(291, 11);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(48, 17);
-            this.label49.TabIndex = 3;
-            this.label49.Text = "bueno";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(349, 11);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(78, 17);
-            this.label50.TabIndex = 2;
-            this.label50.Text = "muy bueno";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(239, 11);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(38, 17);
-            this.label51.TabIndex = 1;
-            this.label51.Text = "malo";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(152, 11);
-            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(68, 17);
-            this.label52.TabIndex = 0;
-            this.label52.Text = "muy malo";
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.Controls.Add(this.lblS7_6_MaterialTecho);
-            this.groupBox23.Controls.Add(this.gbS7_6_Desechos);
-            this.groupBox23.Controls.Add(this.gbS7_6_Paja);
-            this.groupBox23.Controls.Add(this.gbS7_6_Duralita);
-            this.groupBox23.Controls.Add(this.gbS7_6_Lamina);
-            this.groupBox23.Controls.Add(this.gbS7_6_Barro);
-            this.groupBox23.Controls.Add(this.gbS7_6_Concreto);
-            this.groupBox23.Controls.Add(this.gbS7_6_EstadoTecho);
-            this.groupBox23.Location = new System.Drawing.Point(392, 251);
-            this.groupBox23.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox23.Size = new System.Drawing.Size(448, 350);
-            this.groupBox23.TabIndex = 6;
-            this.groupBox23.TabStop = false;
-            // 
-            // lblS7_6_MaterialTecho
-            // 
-            this.lblS7_6_MaterialTecho.AutoSize = true;
-            this.lblS7_6_MaterialTecho.Location = new System.Drawing.Point(13, 19);
-            this.lblS7_6_MaterialTecho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_6_MaterialTecho.Name = "lblS7_6_MaterialTecho";
-            this.lblS7_6_MaterialTecho.Size = new System.Drawing.Size(419, 34);
-            this.lblS7_6_MaterialTecho.TabIndex = 15;
-            this.lblS7_6_MaterialTecho.Text = "6. OBSERVE y defina el tipo y el estado del material del TECHO  \r\n     de la vivi" +
-                "enda.";
-            // 
-            // gbS7_6_Desechos
-            // 
-            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_MuyBueno);
-            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_Bueno);
-            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_Malo);
-            this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_MuyMalo);
-            this.gbS7_6_Desechos.Controls.Add(this.label43);
-            this.gbS7_6_Desechos.Location = new System.Drawing.Point(23, 290);
-            this.gbS7_6_Desechos.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Desechos.Name = "gbS7_6_Desechos";
-            this.gbS7_6_Desechos.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Desechos.Size = new System.Drawing.Size(395, 46);
-            this.gbS7_6_Desechos.TabIndex = 7;
-            this.gbS7_6_Desechos.TabStop = false;
-            // 
-            // rbS7_66_MuyBueno
-            // 
-            this.rbS7_66_MuyBueno.AutoSize = true;
-            this.rbS7_66_MuyBueno.Location = new System.Drawing.Point(327, 16);
-            this.rbS7_66_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_66_MuyBueno.Name = "rbS7_66_MuyBueno";
-            this.rbS7_66_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_66_MuyBueno.TabIndex = 4;
-            this.rbS7_66_MuyBueno.TabStop = true;
-            this.rbS7_66_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_66_Bueno
-            // 
-            this.rbS7_66_Bueno.AutoSize = true;
-            this.rbS7_66_Bueno.Location = new System.Drawing.Point(257, 16);
-            this.rbS7_66_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_66_Bueno.Name = "rbS7_66_Bueno";
-            this.rbS7_66_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_66_Bueno.TabIndex = 3;
-            this.rbS7_66_Bueno.TabStop = true;
-            this.rbS7_66_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_66_Malo
-            // 
-            this.rbS7_66_Malo.AutoSize = true;
-            this.rbS7_66_Malo.Location = new System.Drawing.Point(203, 16);
-            this.rbS7_66_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_66_Malo.Name = "rbS7_66_Malo";
-            this.rbS7_66_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_66_Malo.TabIndex = 2;
-            this.rbS7_66_Malo.TabStop = true;
-            this.rbS7_66_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_66_MuyMalo
-            // 
-            this.rbS7_66_MuyMalo.AutoSize = true;
-            this.rbS7_66_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_66_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_66_MuyMalo.Name = "rbS7_66_MuyMalo";
-            this.rbS7_66_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_66_MuyMalo.TabIndex = 1;
-            this.rbS7_66_MuyMalo.TabStop = true;
-            this.rbS7_66_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(12, 16);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(87, 17);
-            this.label43.TabIndex = 0;
-            this.label43.Text = "6. Desechos";
-            // 
-            // gbS7_6_Paja
-            // 
-            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_MuyBueno);
-            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_Bueno);
-            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_Malo);
-            this.gbS7_6_Paja.Controls.Add(this.rbS7_65_MuyMalo);
-            this.gbS7_6_Paja.Controls.Add(this.label42);
-            this.gbS7_6_Paja.Location = new System.Drawing.Point(23, 250);
-            this.gbS7_6_Paja.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Paja.Name = "gbS7_6_Paja";
-            this.gbS7_6_Paja.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Paja.Size = new System.Drawing.Size(395, 46);
-            this.gbS7_6_Paja.TabIndex = 6;
-            this.gbS7_6_Paja.TabStop = false;
-            // 
-            // rbS7_65_MuyBueno
-            // 
-            this.rbS7_65_MuyBueno.AutoSize = true;
-            this.rbS7_65_MuyBueno.Location = new System.Drawing.Point(328, 16);
-            this.rbS7_65_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_65_MuyBueno.Name = "rbS7_65_MuyBueno";
-            this.rbS7_65_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_65_MuyBueno.TabIndex = 4;
-            this.rbS7_65_MuyBueno.TabStop = true;
-            this.rbS7_65_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_65_Bueno
-            // 
-            this.rbS7_65_Bueno.AutoSize = true;
-            this.rbS7_65_Bueno.Location = new System.Drawing.Point(259, 16);
-            this.rbS7_65_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_65_Bueno.Name = "rbS7_65_Bueno";
-            this.rbS7_65_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_65_Bueno.TabIndex = 3;
-            this.rbS7_65_Bueno.TabStop = true;
-            this.rbS7_65_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_65_Malo
-            // 
-            this.rbS7_65_Malo.AutoSize = true;
-            this.rbS7_65_Malo.Location = new System.Drawing.Point(201, 16);
-            this.rbS7_65_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_65_Malo.Name = "rbS7_65_Malo";
-            this.rbS7_65_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_65_Malo.TabIndex = 2;
-            this.rbS7_65_Malo.TabStop = true;
-            this.rbS7_65_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_65_MuyMalo
-            // 
-            this.rbS7_65_MuyMalo.AutoSize = true;
-            this.rbS7_65_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_65_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_65_MuyMalo.Name = "rbS7_65_MuyMalo";
-            this.rbS7_65_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_65_MuyMalo.TabIndex = 1;
-            this.rbS7_65_MuyMalo.TabStop = true;
-            this.rbS7_65_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(12, 16);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(52, 17);
-            this.label42.TabIndex = 0;
-            this.label42.Text = "5. Paja";
-            // 
-            // gbS7_6_Duralita
-            // 
-            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_MuyBueno);
-            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_Bueno);
-            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_Malo);
-            this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_MuyMalo);
-            this.gbS7_6_Duralita.Controls.Add(this.label41);
-            this.gbS7_6_Duralita.Location = new System.Drawing.Point(23, 212);
-            this.gbS7_6_Duralita.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Duralita.Name = "gbS7_6_Duralita";
-            this.gbS7_6_Duralita.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Duralita.Size = new System.Drawing.Size(395, 46);
-            this.gbS7_6_Duralita.TabIndex = 5;
-            this.gbS7_6_Duralita.TabStop = false;
-            // 
-            // rbS7_64_MuyBueno
-            // 
-            this.rbS7_64_MuyBueno.AutoSize = true;
-            this.rbS7_64_MuyBueno.Location = new System.Drawing.Point(329, 16);
-            this.rbS7_64_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_64_MuyBueno.Name = "rbS7_64_MuyBueno";
-            this.rbS7_64_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_64_MuyBueno.TabIndex = 4;
-            this.rbS7_64_MuyBueno.TabStop = true;
-            this.rbS7_64_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_64_Bueno
-            // 
-            this.rbS7_64_Bueno.AutoSize = true;
-            this.rbS7_64_Bueno.Location = new System.Drawing.Point(260, 16);
-            this.rbS7_64_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_64_Bueno.Name = "rbS7_64_Bueno";
-            this.rbS7_64_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_64_Bueno.TabIndex = 3;
-            this.rbS7_64_Bueno.TabStop = true;
-            this.rbS7_64_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_64_Malo
-            // 
-            this.rbS7_64_Malo.AutoSize = true;
-            this.rbS7_64_Malo.Location = new System.Drawing.Point(204, 16);
-            this.rbS7_64_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_64_Malo.Name = "rbS7_64_Malo";
-            this.rbS7_64_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_64_Malo.TabIndex = 2;
-            this.rbS7_64_Malo.TabStop = true;
-            this.rbS7_64_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_64_MuyMalo
-            // 
-            this.rbS7_64_MuyMalo.AutoSize = true;
-            this.rbS7_64_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_64_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_64_MuyMalo.Name = "rbS7_64_MuyMalo";
-            this.rbS7_64_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_64_MuyMalo.TabIndex = 1;
-            this.rbS7_64_MuyMalo.TabStop = true;
-            this.rbS7_64_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(12, 16);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(123, 17);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "4. Teja de duralita";
-            // 
-            // gbS7_6_Lamina
-            // 
-            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_MuyBueno);
-            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_Bueno);
-            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_Malo);
-            this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_MuyMalo);
-            this.gbS7_6_Lamina.Controls.Add(this.label40);
-            this.gbS7_6_Lamina.Location = new System.Drawing.Point(20, 172);
-            this.gbS7_6_Lamina.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Lamina.Name = "gbS7_6_Lamina";
-            this.gbS7_6_Lamina.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Lamina.Size = new System.Drawing.Size(397, 46);
-            this.gbS7_6_Lamina.TabIndex = 4;
-            this.gbS7_6_Lamina.TabStop = false;
-            // 
-            // rbS7_63_MuyBueno
-            // 
-            this.rbS7_63_MuyBueno.AutoSize = true;
-            this.rbS7_63_MuyBueno.Location = new System.Drawing.Point(331, 16);
-            this.rbS7_63_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_63_MuyBueno.Name = "rbS7_63_MuyBueno";
-            this.rbS7_63_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_63_MuyBueno.TabIndex = 4;
-            this.rbS7_63_MuyBueno.TabStop = true;
-            this.rbS7_63_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_63_Bueno
-            // 
-            this.rbS7_63_Bueno.AutoSize = true;
-            this.rbS7_63_Bueno.Location = new System.Drawing.Point(261, 16);
-            this.rbS7_63_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_63_Bueno.Name = "rbS7_63_Bueno";
-            this.rbS7_63_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_63_Bueno.TabIndex = 3;
-            this.rbS7_63_Bueno.TabStop = true;
-            this.rbS7_63_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_63_Malo
-            // 
-            this.rbS7_63_Malo.AutoSize = true;
-            this.rbS7_63_Malo.Location = new System.Drawing.Point(204, 16);
-            this.rbS7_63_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_63_Malo.Name = "rbS7_63_Malo";
-            this.rbS7_63_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_63_Malo.TabIndex = 2;
-            this.rbS7_63_Malo.TabStop = true;
-            this.rbS7_63_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_63_MuyMalo
-            // 
-            this.rbS7_63_MuyMalo.AutoSize = true;
-            this.rbS7_63_MuyMalo.Location = new System.Drawing.Point(148, 16);
-            this.rbS7_63_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_63_MuyMalo.Name = "rbS7_63_MuyMalo";
-            this.rbS7_63_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_63_MuyMalo.TabIndex = 1;
-            this.rbS7_63_MuyMalo.TabStop = true;
-            this.rbS7_63_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(12, 16);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(70, 17);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "3. Lámina";
-            // 
-            // gbS7_6_Barro
-            // 
-            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_MuyBueno);
-            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_Bueno);
-            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_Malo);
-            this.gbS7_6_Barro.Controls.Add(this.rbS7_62_MuyMalo);
-            this.gbS7_6_Barro.Controls.Add(this.label39);
-            this.gbS7_6_Barro.Location = new System.Drawing.Point(19, 134);
-            this.gbS7_6_Barro.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Barro.Name = "gbS7_6_Barro";
-            this.gbS7_6_Barro.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Barro.Size = new System.Drawing.Size(399, 46);
-            this.gbS7_6_Barro.TabIndex = 3;
-            this.gbS7_6_Barro.TabStop = false;
-            // 
-            // rbS7_62_MuyBueno
-            // 
-            this.rbS7_62_MuyBueno.AutoSize = true;
-            this.rbS7_62_MuyBueno.Location = new System.Drawing.Point(332, 16);
-            this.rbS7_62_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_62_MuyBueno.Name = "rbS7_62_MuyBueno";
-            this.rbS7_62_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_62_MuyBueno.TabIndex = 4;
-            this.rbS7_62_MuyBueno.TabStop = true;
-            this.rbS7_62_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_62_Bueno
-            // 
-            this.rbS7_62_Bueno.AutoSize = true;
-            this.rbS7_62_Bueno.Location = new System.Drawing.Point(263, 16);
-            this.rbS7_62_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_62_Bueno.Name = "rbS7_62_Bueno";
-            this.rbS7_62_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_62_Bueno.TabIndex = 3;
-            this.rbS7_62_Bueno.TabStop = true;
-            this.rbS7_62_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_62_Malo
-            // 
-            this.rbS7_62_Malo.AutoSize = true;
-            this.rbS7_62_Malo.Location = new System.Drawing.Point(207, 16);
-            this.rbS7_62_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_62_Malo.Name = "rbS7_62_Malo";
-            this.rbS7_62_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_62_Malo.TabIndex = 2;
-            this.rbS7_62_Malo.TabStop = true;
-            this.rbS7_62_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_62_MuyMalo
-            // 
-            this.rbS7_62_MuyMalo.AutoSize = true;
-            this.rbS7_62_MuyMalo.Location = new System.Drawing.Point(149, 16);
-            this.rbS7_62_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_62_MuyMalo.Name = "rbS7_62_MuyMalo";
-            this.rbS7_62_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_62_MuyMalo.TabIndex = 1;
-            this.rbS7_62_MuyMalo.TabStop = true;
-            this.rbS7_62_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(12, 16);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(110, 17);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "2. Teja de barro";
-            // 
-            // gbS7_6_Concreto
-            // 
-            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_MuyBueno);
-            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_Bueno);
-            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_Malo);
-            this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_MuyMalo);
-            this.gbS7_6_Concreto.Controls.Add(this.label33);
-            this.gbS7_6_Concreto.Location = new System.Drawing.Point(17, 94);
-            this.gbS7_6_Concreto.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Concreto.Name = "gbS7_6_Concreto";
-            this.gbS7_6_Concreto.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_Concreto.Size = new System.Drawing.Size(400, 46);
-            this.gbS7_6_Concreto.TabIndex = 2;
-            this.gbS7_6_Concreto.TabStop = false;
-            // 
-            // rbS7_61_MuyBueno
-            // 
-            this.rbS7_61_MuyBueno.AutoSize = true;
-            this.rbS7_61_MuyBueno.Location = new System.Drawing.Point(333, 16);
-            this.rbS7_61_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_61_MuyBueno.Name = "rbS7_61_MuyBueno";
-            this.rbS7_61_MuyBueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_61_MuyBueno.TabIndex = 4;
-            this.rbS7_61_MuyBueno.TabStop = true;
-            this.rbS7_61_MuyBueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_61_Bueno
-            // 
-            this.rbS7_61_Bueno.AutoSize = true;
-            this.rbS7_61_Bueno.Location = new System.Drawing.Point(264, 16);
-            this.rbS7_61_Bueno.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_61_Bueno.Name = "rbS7_61_Bueno";
-            this.rbS7_61_Bueno.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_61_Bueno.TabIndex = 3;
-            this.rbS7_61_Bueno.TabStop = true;
-            this.rbS7_61_Bueno.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_61_Malo
-            // 
-            this.rbS7_61_Malo.AutoSize = true;
-            this.rbS7_61_Malo.Location = new System.Drawing.Point(207, 16);
-            this.rbS7_61_Malo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_61_Malo.Name = "rbS7_61_Malo";
-            this.rbS7_61_Malo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_61_Malo.TabIndex = 2;
-            this.rbS7_61_Malo.TabStop = true;
-            this.rbS7_61_Malo.UseVisualStyleBackColor = true;
-            // 
-            // rbS7_61_MuyMalo
-            // 
-            this.rbS7_61_MuyMalo.AutoSize = true;
-            this.rbS7_61_MuyMalo.Location = new System.Drawing.Point(151, 16);
-            this.rbS7_61_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbS7_61_MuyMalo.Name = "rbS7_61_MuyMalo";
-            this.rbS7_61_MuyMalo.Size = new System.Drawing.Size(17, 16);
-            this.rbS7_61_MuyMalo.TabIndex = 1;
-            this.rbS7_61_MuyMalo.TabStop = true;
-            this.rbS7_61_MuyMalo.UseVisualStyleBackColor = true;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(12, 16);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(81, 17);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "1. Concreto";
-            // 
-            // gbS7_6_EstadoTecho
-            // 
-            this.gbS7_6_EstadoTecho.Controls.Add(this.label37);
-            this.gbS7_6_EstadoTecho.Controls.Add(this.label38);
-            this.gbS7_6_EstadoTecho.Controls.Add(this.label36);
-            this.gbS7_6_EstadoTecho.Controls.Add(this.label31);
-            this.gbS7_6_EstadoTecho.Location = new System.Drawing.Point(17, 62);
-            this.gbS7_6_EstadoTecho.Margin = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_EstadoTecho.Name = "gbS7_6_EstadoTecho";
-            this.gbS7_6_EstadoTecho.Padding = new System.Windows.Forms.Padding(4);
-            this.gbS7_6_EstadoTecho.Size = new System.Drawing.Size(400, 36);
-            this.gbS7_6_EstadoTecho.TabIndex = 1;
-            this.gbS7_6_EstadoTecho.TabStop = false;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(253, 11);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(48, 17);
-            this.label37.TabIndex = 3;
-            this.label37.Text = "bueno";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(312, 11);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(78, 17);
-            this.label38.TabIndex = 2;
-            this.label38.Text = "muy bueno";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(200, 11);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(38, 17);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "malo";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(119, 11);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(68, 17);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "muy malo";
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.Controls.Add(this.lblS7_5_Problema);
-            this.groupBox22.Controls.Add(this.txtS7_5_ProblemaC);
-            this.groupBox22.Controls.Add(this.lblS7_5_C);
-            this.groupBox22.Controls.Add(this.txtS7_5_ProblemaB);
-            this.groupBox22.Controls.Add(this.lblS7_5_B);
-            this.groupBox22.Controls.Add(this.cbsS7_5_ProbViv);
-            this.groupBox22.Controls.Add(this.txtS7_5_ProblemaA);
-            this.groupBox22.Controls.Add(this.lblS7_5_A);
-            this.groupBox22.Location = new System.Drawing.Point(392, 10);
-            this.groupBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox22.Size = new System.Drawing.Size(448, 236);
-            this.groupBox22.TabIndex = 5;
-            this.groupBox22.TabStop = false;
-            // 
-            // lblS7_5_Problema
-            // 
-            this.lblS7_5_Problema.AutoSize = true;
-            this.lblS7_5_Problema.Location = new System.Drawing.Point(13, 25);
-            this.lblS7_5_Problema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_5_Problema.Name = "lblS7_5_Problema";
-            this.lblS7_5_Problema.Size = new System.Drawing.Size(384, 34);
-            this.lblS7_5_Problema.TabIndex = 15;
-            this.lblS7_5_Problema.Text = "5. ¿Cree que su vivienda actual tienen algún problema que \r\n     le gustaría reso" +
-                "lver?";
-            // 
-            // txtS7_5_ProblemaC
-            // 
-            this.txtS7_5_ProblemaC.Enabled = false;
-            this.txtS7_5_ProblemaC.Location = new System.Drawing.Point(71, 188);
-            this.txtS7_5_ProblemaC.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_5_ProblemaC.Multiline = true;
-            this.txtS7_5_ProblemaC.Name = "txtS7_5_ProblemaC";
-            this.txtS7_5_ProblemaC.Size = new System.Drawing.Size(301, 27);
-            this.txtS7_5_ProblemaC.TabIndex = 7;
-            // 
-            // lblS7_5_C
-            // 
-            this.lblS7_5_C.AutoSize = true;
-            this.lblS7_5_C.Enabled = false;
-            this.lblS7_5_C.Location = new System.Drawing.Point(43, 193);
-            this.lblS7_5_C.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_5_C.Name = "lblS7_5_C";
-            this.lblS7_5_C.Size = new System.Drawing.Size(20, 17);
-            this.lblS7_5_C.TabIndex = 6;
-            this.lblS7_5_C.Text = "c)";
-            // 
-            // txtS7_5_ProblemaB
-            // 
-            this.txtS7_5_ProblemaB.Enabled = false;
-            this.txtS7_5_ProblemaB.Location = new System.Drawing.Point(71, 153);
-            this.txtS7_5_ProblemaB.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_5_ProblemaB.Multiline = true;
-            this.txtS7_5_ProblemaB.Name = "txtS7_5_ProblemaB";
-            this.txtS7_5_ProblemaB.Size = new System.Drawing.Size(301, 27);
-            this.txtS7_5_ProblemaB.TabIndex = 5;
-            // 
-            // lblS7_5_B
-            // 
-            this.lblS7_5_B.AutoSize = true;
-            this.lblS7_5_B.Enabled = false;
-            this.lblS7_5_B.Location = new System.Drawing.Point(43, 158);
-            this.lblS7_5_B.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_5_B.Name = "lblS7_5_B";
-            this.lblS7_5_B.Size = new System.Drawing.Size(21, 17);
-            this.lblS7_5_B.TabIndex = 4;
-            this.lblS7_5_B.Text = "b)";
-            // 
-            // cbsS7_5_ProbViv
-            // 
-            this.cbsS7_5_ProbViv.FormattingEnabled = true;
-            this.cbsS7_5_ProbViv.Items.AddRange(new object[] {
-            "Si (especificar cuales)",
-            "No",
-            "NS/NR"});
-            this.cbsS7_5_ProbViv.Location = new System.Drawing.Point(73, 82);
-            this.cbsS7_5_ProbViv.Margin = new System.Windows.Forms.Padding(4);
-            this.cbsS7_5_ProbViv.Name = "cbsS7_5_ProbViv";
-            this.cbsS7_5_ProbViv.Size = new System.Drawing.Size(299, 24);
-            this.cbsS7_5_ProbViv.TabIndex = 3;
-            // 
-            // txtS7_5_ProblemaA
-            // 
-            this.txtS7_5_ProblemaA.Enabled = false;
-            this.txtS7_5_ProblemaA.Location = new System.Drawing.Point(71, 117);
-            this.txtS7_5_ProblemaA.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_5_ProblemaA.Multiline = true;
-            this.txtS7_5_ProblemaA.Name = "txtS7_5_ProblemaA";
-            this.txtS7_5_ProblemaA.Size = new System.Drawing.Size(301, 27);
-            this.txtS7_5_ProblemaA.TabIndex = 2;
-            // 
-            // lblS7_5_A
-            // 
-            this.lblS7_5_A.AutoSize = true;
-            this.lblS7_5_A.Enabled = false;
-            this.lblS7_5_A.Location = new System.Drawing.Point(43, 122);
-            this.lblS7_5_A.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_5_A.Name = "lblS7_5_A";
-            this.lblS7_5_A.Size = new System.Drawing.Size(21, 17);
-            this.lblS7_5_A.TabIndex = 1;
-            this.lblS7_5_A.Text = "a)";
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.lblS7_4_Camas);
-            this.groupBox21.Controls.Add(this.txtS7_4_CantCamas);
-            this.groupBox21.Location = new System.Drawing.Point(24, 410);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox21.Size = new System.Drawing.Size(360, 143);
-            this.groupBox21.TabIndex = 4;
-            this.groupBox21.TabStop = false;
-            // 
-            // lblS7_4_Camas
-            // 
-            this.lblS7_4_Camas.AutoSize = true;
-            this.lblS7_4_Camas.Location = new System.Drawing.Point(8, 29);
-            this.lblS7_4_Camas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_4_Camas.Name = "lblS7_4_Camas";
-            this.lblS7_4_Camas.Size = new System.Drawing.Size(342, 34);
-            this.lblS7_4_Camas.TabIndex = 14;
-            this.lblS7_4_Camas.Text = "4. ¿Cuántas camas o su equivalentes tiene usted en \r\n    su vivienda?";
-            // 
-            // txtS7_4_CantCamas
-            // 
-            this.txtS7_4_CantCamas.Location = new System.Drawing.Point(36, 90);
-            this.txtS7_4_CantCamas.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_4_CantCamas.Multiline = true;
-            this.txtS7_4_CantCamas.Name = "txtS7_4_CantCamas";
-            this.txtS7_4_CantCamas.Size = new System.Drawing.Size(276, 27);
-            this.txtS7_4_CantCamas.TabIndex = 3;
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.lblS7_3_Dormitorio);
-            this.groupBox20.Controls.Add(this.txtS7_3_CantDormitorios);
-            this.groupBox20.Location = new System.Drawing.Point(24, 272);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox20.Size = new System.Drawing.Size(360, 130);
-            this.groupBox20.TabIndex = 3;
-            this.groupBox20.TabStop = false;
-            // 
-            // lblS7_3_Dormitorio
-            // 
-            this.lblS7_3_Dormitorio.AutoSize = true;
-            this.lblS7_3_Dormitorio.Location = new System.Drawing.Point(12, 24);
-            this.lblS7_3_Dormitorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_3_Dormitorio.Name = "lblS7_3_Dormitorio";
-            this.lblS7_3_Dormitorio.Size = new System.Drawing.Size(327, 34);
-            this.lblS7_3_Dormitorio.TabIndex = 15;
-            this.lblS7_3_Dormitorio.Text = "3. Del total de cuartos. ¿Cuántos están destinadas\r\n    a dormitorio?";
-            // 
-            // txtS7_3_CantDormitorios
-            // 
-            this.txtS7_3_CantDormitorios.Location = new System.Drawing.Point(43, 82);
-            this.txtS7_3_CantDormitorios.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_3_CantDormitorios.Multiline = true;
-            this.txtS7_3_CantDormitorios.Name = "txtS7_3_CantDormitorios";
-            this.txtS7_3_CantDormitorios.Size = new System.Drawing.Size(276, 27);
-            this.txtS7_3_CantDormitorios.TabIndex = 3;
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.lblS7_2_Cuartos);
-            this.groupBox19.Controls.Add(this.txtS7_2_Cuartos);
-            this.groupBox19.Location = new System.Drawing.Point(24, 148);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox19.Size = new System.Drawing.Size(360, 117);
-            this.groupBox19.TabIndex = 2;
-            this.groupBox19.TabStop = false;
-            // 
-            // lblS7_2_Cuartos
-            // 
-            this.lblS7_2_Cuartos.AutoSize = true;
-            this.lblS7_2_Cuartos.Location = new System.Drawing.Point(19, 25);
-            this.lblS7_2_Cuartos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_2_Cuartos.Name = "lblS7_2_Cuartos";
-            this.lblS7_2_Cuartos.Size = new System.Drawing.Size(261, 17);
-            this.lblS7_2_Cuartos.TabIndex = 15;
-            this.lblS7_2_Cuartos.Text = "2. ¿Cuántos cuartos hay en la vivienda?";
-            // 
-            // txtS7_2_Cuartos
-            // 
-            this.txtS7_2_Cuartos.Location = new System.Drawing.Point(36, 66);
-            this.txtS7_2_Cuartos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_2_Cuartos.Multiline = true;
-            this.txtS7_2_Cuartos.Name = "txtS7_2_Cuartos";
-            this.txtS7_2_Cuartos.Size = new System.Drawing.Size(293, 27);
-            this.txtS7_2_Cuartos.TabIndex = 3;
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.lblS7_1_Dimensiones);
-            this.groupBox18.Controls.Add(this.txtS7_1_AnchoViv);
-            this.groupBox18.Controls.Add(this.txtS7_1_LargoViv);
-            this.groupBox18.Controls.Add(this.lblS7_1_X);
-            this.groupBox18.Location = new System.Drawing.Point(24, 7);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox18.Size = new System.Drawing.Size(360, 133);
-            this.groupBox18.TabIndex = 1;
-            this.groupBox18.TabStop = false;
-            // 
-            // lblS7_1_Dimensiones
-            // 
-            this.lblS7_1_Dimensiones.AutoSize = true;
-            this.lblS7_1_Dimensiones.Location = new System.Drawing.Point(19, 28);
-            this.lblS7_1_Dimensiones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_1_Dimensiones.Name = "lblS7_1_Dimensiones";
-            this.lblS7_1_Dimensiones.Size = new System.Drawing.Size(310, 17);
-            this.lblS7_1_Dimensiones.TabIndex = 14;
-            this.lblS7_1_Dimensiones.Text = "1. ¿Cuáles son las dimensiones de su vivienda?\t\t\t";
-            // 
-            // txtS7_1_AnchoViv
-            // 
-            this.txtS7_1_AnchoViv.Location = new System.Drawing.Point(47, 75);
-            this.txtS7_1_AnchoViv.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_1_AnchoViv.Multiline = true;
-            this.txtS7_1_AnchoViv.Name = "txtS7_1_AnchoViv";
-            this.txtS7_1_AnchoViv.Size = new System.Drawing.Size(115, 27);
-            this.txtS7_1_AnchoViv.TabIndex = 3;
-            // 
-            // txtS7_1_LargoViv
-            // 
-            this.txtS7_1_LargoViv.Location = new System.Drawing.Point(208, 75);
-            this.txtS7_1_LargoViv.Margin = new System.Windows.Forms.Padding(4);
-            this.txtS7_1_LargoViv.Multiline = true;
-            this.txtS7_1_LargoViv.Name = "txtS7_1_LargoViv";
-            this.txtS7_1_LargoViv.Size = new System.Drawing.Size(115, 27);
-            this.txtS7_1_LargoViv.TabIndex = 2;
-            // 
-            // lblS7_1_X
-            // 
-            this.lblS7_1_X.AutoSize = true;
-            this.lblS7_1_X.Location = new System.Drawing.Point(176, 80);
-            this.lblS7_1_X.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblS7_1_X.Name = "lblS7_1_X";
-            this.lblS7_1_X.Size = new System.Drawing.Size(17, 17);
-            this.lblS7_1_X.TabIndex = 1;
-            this.lblS7_1_X.Text = "X";
+    "urante toda su VIDA FAMILIAR?\r\n";
+            // 
+            // txtS10_TipoOrganizaciones
+            // 
+            this.txtS10_TipoOrganizaciones.Location = new System.Drawing.Point(33, 40);
+            this.txtS10_TipoOrganizaciones.Multiline = true;
+            this.txtS10_TipoOrganizaciones.Name = "txtS10_TipoOrganizaciones";
+            this.txtS10_TipoOrganizaciones.Size = new System.Drawing.Size(250, 40);
+            this.txtS10_TipoOrganizaciones.TabIndex = 9;
             // 
             // frmEncuesta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1340, 741);
+            this.ClientSize = new System.Drawing.Size(1005, 602);
             this.Controls.Add(this.tbcDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEncuesta";
             this.Text = "frmEncuesta";
             this.Load += new System.EventHandler(this.frmEncuesta_Load);
@@ -8179,8 +7485,87 @@
             this.gbS5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).EndInit();
             this.tbpS6.ResumeLayout(false);
+            this.gbS6.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).EndInit();
             this.tbpS7.ResumeLayout(false);
+            this.gbS7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).EndInit();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.gbS7_8_Tierra.ResumeLayout(false);
+            this.gbS7_8_Tierra.PerformLayout();
+            this.gbS7_8_Madera.ResumeLayout(false);
+            this.gbS7_8_Madera.PerformLayout();
+            this.gbS7_8_LadrilloBarro.ResumeLayout(false);
+            this.gbS7_8_LadrilloBarro.PerformLayout();
+            this.gbS7_8_Encementado.ResumeLayout(false);
+            this.gbS7_8_Encementado.PerformLayout();
+            this.gbS7_8_EstadoPiso.ResumeLayout(false);
+            this.gbS7_8_EstadoPiso.PerformLayout();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.gbS7_7_Desechos.ResumeLayout(false);
+            this.gbS7_7_Desechos.PerformLayout();
+            this.gbS7_7_BaharequeBambu.ResumeLayout(false);
+            this.gbS7_7_BaharequeBambu.PerformLayout();
+            this.gbS7_7_Lamina.ResumeLayout(false);
+            this.gbS7_7_Lamina.PerformLayout();
+            this.gbS7_7_Adobe.ResumeLayout(false);
+            this.gbS7_7_Adobe.PerformLayout();
+            this.gbS7_7_Madera.ResumeLayout(false);
+            this.gbS7_7_Madera.PerformLayout();
+            this.gbS7_7_BlockLadriPrefabr.ResumeLayout(false);
+            this.gbS7_7_BlockLadriPrefabr.PerformLayout();
+            this.gbS7_7_EstadoParedes.ResumeLayout(false);
+            this.gbS7_7_EstadoParedes.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
+            this.gbS7_6_Desechos.ResumeLayout(false);
+            this.gbS7_6_Desechos.PerformLayout();
+            this.gbS7_6_Paja.ResumeLayout(false);
+            this.gbS7_6_Paja.PerformLayout();
+            this.gbS7_6_Duralita.ResumeLayout(false);
+            this.gbS7_6_Duralita.PerformLayout();
+            this.gbS7_6_Lamina.ResumeLayout(false);
+            this.gbS7_6_Lamina.PerformLayout();
+            this.gbS7_6_Barro.ResumeLayout(false);
+            this.gbS7_6_Barro.PerformLayout();
+            this.gbS7_6_Concreto.ResumeLayout(false);
+            this.gbS7_6_Concreto.PerformLayout();
+            this.gbS7_6_EstadoTecho.ResumeLayout(false);
+            this.gbS7_6_EstadoTecho.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
             this.tbpS8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS8_Siguiente)).EndInit();
             this.groupBox47.ResumeLayout(false);
@@ -8321,85 +7706,6 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
-            this.gbS6.ResumeLayout(false);
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.gbS7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).EndInit();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
-            this.gbS7_8_Tierra.ResumeLayout(false);
-            this.gbS7_8_Tierra.PerformLayout();
-            this.gbS7_8_Madera.ResumeLayout(false);
-            this.gbS7_8_Madera.PerformLayout();
-            this.gbS7_8_LadrilloBarro.ResumeLayout(false);
-            this.gbS7_8_LadrilloBarro.PerformLayout();
-            this.gbS7_8_Encementado.ResumeLayout(false);
-            this.gbS7_8_Encementado.PerformLayout();
-            this.gbS7_8_EstadoPiso.ResumeLayout(false);
-            this.gbS7_8_EstadoPiso.PerformLayout();
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox25.PerformLayout();
-            this.gbS7_7_Desechos.ResumeLayout(false);
-            this.gbS7_7_Desechos.PerformLayout();
-            this.gbS7_7_BaharequeBambu.ResumeLayout(false);
-            this.gbS7_7_BaharequeBambu.PerformLayout();
-            this.gbS7_7_Lamina.ResumeLayout(false);
-            this.gbS7_7_Lamina.PerformLayout();
-            this.gbS7_7_Adobe.ResumeLayout(false);
-            this.gbS7_7_Adobe.PerformLayout();
-            this.gbS7_7_Madera.ResumeLayout(false);
-            this.gbS7_7_Madera.PerformLayout();
-            this.gbS7_7_BlockLadriPrefabr.ResumeLayout(false);
-            this.gbS7_7_BlockLadriPrefabr.PerformLayout();
-            this.gbS7_7_EstadoParedes.ResumeLayout(false);
-            this.gbS7_7_EstadoParedes.PerformLayout();
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
-            this.gbS7_6_Desechos.ResumeLayout(false);
-            this.gbS7_6_Desechos.PerformLayout();
-            this.gbS7_6_Paja.ResumeLayout(false);
-            this.gbS7_6_Paja.PerformLayout();
-            this.gbS7_6_Duralita.ResumeLayout(false);
-            this.gbS7_6_Duralita.PerformLayout();
-            this.gbS7_6_Lamina.ResumeLayout(false);
-            this.gbS7_6_Lamina.PerformLayout();
-            this.gbS7_6_Barro.ResumeLayout(false);
-            this.gbS7_6_Barro.PerformLayout();
-            this.gbS7_6_Concreto.ResumeLayout(false);
-            this.gbS7_6_Concreto.PerformLayout();
-            this.gbS7_6_EstadoTecho.ResumeLayout(false);
-            this.gbS7_6_EstadoTecho.PerformLayout();
-            this.groupBox22.ResumeLayout(false);
-            this.groupBox22.PerformLayout();
-            this.groupBox21.ResumeLayout(false);
-            this.groupBox21.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -8776,7 +8082,6 @@
         private System.Windows.Forms.ComboBox cbxS10_ConfiazaOrganizacion;
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.GroupBox groupBox99;
-        private System.Windows.Forms.TextBox txt10_TipoOrganizacion;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.GroupBox groupBox104;
         private System.Windows.Forms.TextBox txtS10_TipoDiscriminacion;
@@ -9038,6 +8343,7 @@
         private System.Windows.Forms.TextBox txtS7_1_AnchoViv;
         private System.Windows.Forms.TextBox txtS7_1_LargoViv;
         private System.Windows.Forms.Label lblS7_1_X;
+        private System.Windows.Forms.TextBox txtS10_TipoOrganizaciones;
 
     }
 }
