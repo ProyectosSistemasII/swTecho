@@ -11,12 +11,16 @@ namespace Capa_Datos
 {
     public class ConexionBD
     {
-
-        public static String ConexionDireccion = 
-            "Server=" + Properties.Settings.Default.server + ";" + 
-            "Database=" + Properties.Settings.Default.database + ";" + 
-            "UID=" + Properties.Settings.Default.user + ";" + 
-            "Password=" + Properties.Settings.Default.password + ";";
+        public static String ConexionDireccion =
+           "Server=localhost;" +
+           "Database=swtecho;" +
+           "UID=root;" +
+           "Password=12345;";
+        //public static String ConexionDireccion = 
+            //"Server=" + Properties.Settings.Default.server + ";" + 
+            //"Database=" + Properties.Settings.Default.database + ";" + 
+            //"UID=" + Properties.Settings.Default.user + ";" + 
+            //"Password=" + Properties.Settings.Default.password + ";";
         public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);
 
         public static void modificarParamentrosServer(String server, String database, String user, String password)
@@ -32,6 +36,10 @@ namespace Capa_Datos
         {
             try
             {
+                MySqlConnection conexion = new MySqlConnection("Server=" + Properties.Settings.Default.server + ";" +
+            "Database=" + Properties.Settings.Default.database + ";" +
+            "UID=" + Properties.Settings.Default.user + ";" +
+            "Password=" + Properties.Settings.Default.password + ";");
                 conexion.Open();
                 conexion.Close();
                 return "Conexion existosa :)";
