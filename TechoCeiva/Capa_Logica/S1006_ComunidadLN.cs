@@ -72,9 +72,9 @@ namespace Capa_Logica
             }
             string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
             Regex regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.Especificar) && this.Otros != true)
+            if (!regex.IsMatch(this.Especificar) && this.Otros == true)
             {
-                Error error = new Error("Debe Especificar el articulo que no se encuenta en la lista", 5000, 9);
+                Error error = new Error("Debe Especificar 'En cual otro participa'  en la pregunta 6", 5000, 601);
                 errores.Add(error);
             }
         }

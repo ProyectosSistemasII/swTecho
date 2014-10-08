@@ -53,7 +53,7 @@ namespace Capa_Datos
             this.Otros = otros;
             this.Especificar = especificar;
             this.NSNR = NSNR;
-
+            this.errores = new List<Error>();
         }
         public void InsertarS1014()
         {
@@ -111,7 +111,7 @@ namespace Capa_Datos
         public Int32 Obtener_Ultima_EncS1014()
         {
             int i = 0;
-            MySqlCommand comando = new MySqlCommand("select max(idS1014_Serv) as Contador from S1014_Serv", conex);
+            MySqlCommand comando = new MySqlCommand("select max(idS1014_Com) as Contador from S1014_Com", conex);
             comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();

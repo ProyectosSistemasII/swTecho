@@ -27,7 +27,7 @@ namespace TechoCeiva
         /// -----------------------------------------------------------------------------------------------------------
         
         // variables para que no deje error los combobox cuando estan vacios Seccion 10
-        S10_ComunidadLN NuevaS10_Comunidad = null;
+        S10_ComunidadLN NuevaS10_Comunidad = new S10_ComunidadLN();
         
         String cbxS10_RelacionVecinostxt ="";
         String cbxS10_OrganizarVecinostxt ="";
@@ -41,9 +41,28 @@ namespace TechoCeiva
         String cbxS10_EstadoPasadotxt="";
         String cbxS10_estadoFuturotxt = "";
 
-        S807_ServiciosLN NuevaS1006 = null;
-        S808_ServiciosLN NuevaS1007 = null;
-        S808_ServiciosLN NuevaS1008 = null;
+        S1006_ComunidadLN NuevaS1006 = new S1006_ComunidadLN();
+        S1007_ComunidadLN NuevaS1007 = new S1007_ComunidadLN();
+        S1008_ComunidadLN NuevaS1008 = new S1008_ComunidadLN();
+        S1014_ComunidadLN NuevaS1014 = new S1014_ComunidadLN();
+        Boolean Pregunta1006 = false;
+        Boolean Pregunta1007 = false;
+        Boolean Pregunta1008 = false;
+        Boolean Pregunta1014 = false;
+        //selecciones en la pregunta 1008
+        int rbtS1008_Familiar = -1;
+        int rbtS1008_Vecinos = -1;
+        int rbtS1008_lideresComunitarios = -1;
+        int rbtS1008_Policia = -1;
+        int rbtS1008_Municipalidad = -1;
+        int rbtS1008_OrganizacionGobierno = -1;
+        int rbtS1008_Ejercito = -1;
+        int rbtS1008_partidosPoliticos = -1;
+        int rbtS1008_Techo = -1;
+        int rbtS1008_MedioComunicacion = -1;
+        int rbtS1008_IglesiasReligiosos = -1;
+         
+            
         /// -----------------------------------------------------------------------------------------------------------
 
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
@@ -200,19 +219,26 @@ namespace TechoCeiva
         private void pbS10Cont_Siguiente_Click(object sender, EventArgs e)
         {
             this.VerificarCombox_S10();
-            S11_MovilidadLN S11 = new S11_MovilidadLN();
-            Boolean correcto = true; //S11.Ingresar_EncS11(Convert.ToInt32(txtCodigoS11.Text), cbxS11_1_VidaFamiliar.SelectedValue.ToString(), txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActual.SelectedValue.ToString(), txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
-            if (correcto)
+            NuevaS10_Comunidad.S10_ComunidadLNCont(this.ckbS10_Positivo.Checked, txtS10_ApectosPositivosA.Text,txtS10_ApectosPositivosB.Text, ckbS10_Negativo.Checked,txtS10_ApectosNegativosA.Text, txtS10_ApectosNegativosB.Text, cbxS10_Discriminaciontxt,txtS10_TipoDiscriminacion.Text,cbxS10_OrganizacionComunitariatxt,txtS10_TipoOrganizaciones.Text, cbxS10_ConfiazaOrganizaciontxt,txtS10_ComentarioConfianza.Text, ckbS10_Lider.Checked, txtS10_LiderA.Text, txtS10_LiderB.Text, txtS10_LiderC.Text,cbxS10_EstadoPasadotxt, txtS10_ComentarioEstadoPasado.Text,cbxS10_estadoFuturotxt, txtS10_ComentarioEstadoFuturo.Text,NuevaS1014.idS1014_com);
+            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10Cont();
+            if (!correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS10Cont.Parent = null;
-                tbpS11.Parent = tbcDatos;
-                cbxS11_1_VidaFamiliar.SelectedValue = 0;
-                cbxS11_4_ViviedaActual.SelectedValue = 0;
+                MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
+                int cant = NuevaS10_Comunidad.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+            }
+            if (Pregunta1014 == false)
+            {
+                if (this.IngresarS1014() == true)
+                    Pregunta1014=true;
             }
             else
             {
-               // MessageBox.Show(S11.obtenerError());
+                MessageBox.Show("Ingresado Correctamente");
+                tbpS10Cont.Parent = null;
+                tbpS11.Parent = tbcDatos;     
             }
 
         }
@@ -220,25 +246,37 @@ namespace TechoCeiva
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
             this.VerificarCombox_S10();
-            NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.CodigoEncuesta,0,0,0);
+            NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.CodigoEncuesta,NuevaS1006.idS1006_com,NuevaS1007.idS1007_com, NuevaS1008.idS1008_Com);
             Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10();
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS10.Parent = null;
-                tbpS10Cont.Parent = tbcDatos;
-            }
-            else if (NuevaS10_Comunidad.idS1006 == 0)
-            {
-
-            }
-            else
+            if (!correcto)
             {
                 MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
                 int cant = NuevaS10_Comunidad.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+                
+            }
+            if (Pregunta1006 == false )
+            {
+                if (this.IngresarS1006() == true) 
+                    Pregunta1006=true;
+           }
+            if (Pregunta1007 == false)
+            {
+                if(this.IngresarS1007() == true)
+                    Pregunta1007= true;
+           }
+            if (Pregunta1008 == false)
+            {
+                if (this.IngresarS1008() == true)
+                    Pregunta1008=true;
+            }            
+            else
+            {
+                MessageBox.Show("Debe Ingresar la Continuacion de la Seccion 10");
+                tbpS10.Parent = null;
+                tbpS10Cont.Parent = tbcDatos;
             }    
         }
 
@@ -331,8 +369,12 @@ namespace TechoCeiva
                     txtS10_ApectosNegativosA.Focus();
                     break;
                 case 14:
-                    cklS1014_com.BackColor = ColorCampsVacios;
-                    cklS1014_com.Focus();
+                    cklS1014_Com.BackColor = ColorCampsVacios;
+                    cklS1014_Com.Focus();
+                    break;
+                case 1401:
+                    txtS1014_Especificar.BackColor = ColorCampsVacios;
+                    txtS1014_Especificar.Focus();
                     break;
                 case 15:
                     cbxS10_Discriminacion.BackColor = ColorCampsVacios;
@@ -410,104 +452,158 @@ namespace TechoCeiva
             
             return NumeroCaso;
         }
-        /*
-        public Boolean IngresarS1008()
+        public Boolean IngresarS1014()
         {
-            this.VerificarRadioBtn_S808();
-            NuevaS808 = new S808_ServiciosLN(rbtS808_Refrigerador, rbtS808_EquipoDeSonido, rbtS808_Televisor, rbtS808_ReproductorDVD, rbtS808_Motocicleta, rbtS808_Automovil, rbtS808_Computadora, rbtS808_Amueblado, rbtS808_Otros, rbtS808_OtroEspecificar.Text);
-            Boolean correcto = NuevaS808.Insertar_EncuS808();
+            NuevaS1014 = new S1014_ComunidadLN(Convert.ToBoolean(cklS1014_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)), txtS1014_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(8)));
+
+            Boolean correcto = NuevaS1014.Insertar_EncuS1014();
             if (!correcto)
             {
-                MessageBox.Show(NuevaS808.obtenerError().mensaje);
-                int cant = NuevaS808.errores.Count - 1;
+                MessageBox.Show(NuevaS1014.obtenerError().mensaje);
+                int cant = NuevaS1014.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
-                    this.Comprobar_S1008(NuevaS808.errores[i].NumeroPregunta);
+                    this.Comprobar_S10(NuevaS1014.errores[i].NumeroPregunta);
             }
             return correcto;
         }
 
-        private void Comprobar_S808(int pregunta)
+       
+        public Boolean IngresarS1008()
         {
-            switch (pregunta)
-            {
-                case 9:
-                    rbtS808_OtroEspecificar.BackColor = ColorCampsVacios;
-                    rbtS808_OtroEspecificar.Focus();
-                    break;
-            }
-        }
-
-        public void VerificarRadioBtn_S1008()
-        {
-            if (rbtS808_Refrigerador_M.Checked)
-                rbtS808_Refrigerador = 1;
-            else if (rbtS808_Refrigerador_R.Checked)
-                rbtS808_Refrigerador = 2;
-            else if (rbtS808_Refrigerador_B.Checked)
-                rbtS808_Refrigerador = 3;
-            if (rbtS808_EquipoSonido_M.Checked)
-                rbtS808_EquipoDeSonido = 1;
-            else if (rbtS808_EquipoSonido_R.Checked)
-                rbtS808_EquipoDeSonido = 2;
-            else if (rbtS808_EquipoSonido_B.Checked)
-                rbtS808_EquipoDeSonido = 3;
-
-            if (rbtS808_Televisor_M.Checked)
-                rbtS808_Televisor = 1;
-            else if (rbtS808_Televisor_R.Checked)
-                rbtS808_Televisor = 2;
-            else if (rbtS808_Televisor_B.Checked)
-                rbtS808_Televisor = 3;
-            if (rbtS808_DVD_M.Checked)
-                rbtS808_ReproductorDVD = 1;
-            else if (rbtS808_DVD_R.Checked)
-                rbtS808_ReproductorDVD = 2;
-            else if (rbtS808_DVD_B.Checked)
-                rbtS808_ReproductorDVD = 3;
-            if (rbtS808_Motocleta_M.Checked)
-                rbtS808_Motocicleta = 1;
-            else if (rbtS808_Motocleta_R.Checked)
-                rbtS808_Motocicleta = 2;
-            else if (rbtS808_Motocicleta_B.Checked)
-                rbtS808_Motocicleta = 3;
-            if (rbtS808_Automovil_M.Checked)
-                rbtS808_Automovil = 1;
-            else if (rbtS808_Automovil_R.Checked)
-                rbtS808_Automovil = 2;
-            else if (rbtS808_Automovil_B.Checked)
-                rbtS808_Automovil = 3;
-            if (rbtS808_Computadora_M.Checked)
-                rbtS808_Computadora = 1;
-            else if (rbtS808_Computadora_R.Checked)
-                rbtS808_Computadora = 2;
-            else if (rbtS808_Computadora_B.Checked)
-                rbtS808_Computadora = 3;
-            if (rbtS808_Amueblado_M.Checked)
-                rbtS808_Amueblado = 1;
-            else if (rbtS808_Amueblado_R.Checked)
-                rbtS808_Amueblado = 2;
-            else if (rbtS808_Amueblado_B.Checked)
-                rbtS808_Amueblado = 3;
-            if (rbtS808_Otros_M.Checked)
-                rbtS808_Otros = 1;
-            else if (rbtS808_Otros_R.Checked)
-                rbtS808_Otros = 2;
-            else if (rbtS808_Otros_B.Checked)
-                rbtS808_Otros = 3;
-        }
-        */
-        public Boolean IngresarS1006()
-        {
-            NuevaS807 = new S807_ServiciosLN(Convert.ToBoolean(cklS8_S807.GetItemCheckState(0)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(1)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(2)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(3)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(4)));
-            Boolean correcto = NuevaS807.Insertar_EncuS807();
+            this.VerificarRadioBtn_S1008();
+            NuevaS1008 = new S1008_ComunidadLN(rbtS1008_Familiar, rbtS1008_Vecinos, rbtS1008_lideresComunitarios, rbtS1008_Policia,rbtS1008_Municipalidad,rbtS1008_OrganizacionGobierno,rbtS1008_Ejercito,rbtS1008_partidosPoliticos,rbtS1008_Techo,rbtS1008_MedioComunicacion,rbtS1008_IglesiasReligiosos);
+            Boolean correcto = NuevaS1008.Insertar_EncuS1008();
             if (!correcto)
             {
-                MessageBox.Show(NuevaS807.obtenerError().mensaje);
-                int cant = NuevaS807.errores.Count - 1;
+                MessageBox.Show(NuevaS1008.obtenerError().mensaje);
+                int cant = NuevaS1008.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
-                    this.Comprobar_S10(NuevaS807.errores[i].NumeroPregunta);
+                    this.Comprobar_S10(NuevaS1008.errores[i].NumeroPregunta);
+            }
+            return correcto;
+        }
+        public void VerificarRadioBtn_S1008()
+        {
+            if (rbtS1008_Familia_NS.Checked)
+                rbtS1008_Familiar = 0;
+            else if (rbtS1008_Familia_N.Checked)
+                rbtS1008_Familiar = 1;
+            else if (rbtS1008_Familia_I.Checked)
+                rbtS1008_Familiar = 2;
+            else if(rbtS1008_Familia_S.Checked)
+                rbtS1008_Familiar =3;
+            if (rbtS1008_Vecinos_NS.Checked)
+                rbtS1008_Vecinos = 0;
+            else if (rbtS1008_Vecinos_N.Checked)
+                rbtS1008_Vecinos = 1;
+            else if (rbtS1008_Vecinos_I.Checked)
+                rbtS1008_Vecinos = 2;
+            else if (rbtS1008_Vecinos_S.Checked)
+                rbtS1008_Vecinos = 3;
+            if (rbtS1008_LiderCom_NS.Checked)
+                rbtS1008_lideresComunitarios = 0;
+            else if (rbtS1008_LiderCom_N.Checked)
+                rbtS1008_lideresComunitarios = 1;
+            else if (rbtS1008_LiderCom_I.Checked)
+                rbtS1008_lideresComunitarios = 2;
+            else if (rbtS1008_LiderCom_S.Checked)
+                rbtS1008_lideresComunitarios = 3;
+            if (rbtS1008_Policia_NS.Checked)
+                rbtS1008_Policia = 0;
+            else if (rbtS1008_Policia_N.Checked)
+                rbtS1008_Policia = 1;
+            else if (rbtS1008_Policia_I.Checked)
+                rbtS1008_Policia = 2;
+            else if (rbtS1008_Policia_S.Checked)
+                rbtS1008_Policia = 3;
+            if (rbtS1008_Muni_NS.Checked)
+                rbtS1008_Municipalidad = 0;
+            else if (rbtS1008_Muni_N.Checked)
+                rbtS1008_Municipalidad = 1;
+            else if (rbtS1008_Muni_I.Checked)
+                rbtS1008_Municipalidad = 2;
+            else if (rbtS1008_Muni_S.Checked)
+                rbtS1008_Municipalidad = 3;
+            if (rbtS1008_OrgGobierno_NS.Checked)
+                rbtS1008_OrganizacionGobierno = 0;
+            else if (rbtS1008_OrgGobierno_N.Checked)
+                rbtS1008_OrganizacionGobierno = 1;
+            else if (rbtS1008_OrgGobierno_I.Checked)
+                rbtS1008_OrganizacionGobierno = 2;
+            else if (rbtS1008_OrgGobierno_S.Checked)
+                rbtS1008_OrganizacionGobierno = 3;
+            if (rbtS1008_Ejercito_NS.Checked)
+                rbtS1008_Ejercito = 0;
+            else if (rbtS1008_Ejercito_N.Checked)
+                rbtS1008_Ejercito = 1;
+            else if (rbtS1008_Ejercito_I.Checked)
+                rbtS1008_Ejercito = 2;
+            else if (rbtS1008_Ejercito_S.Checked)
+                rbtS1008_Ejercito = 3;
+            if (rbtS1008_Politicos_NS.Checked)
+                rbtS1008_partidosPoliticos = 0;
+            else if (rbtS1008_Politicos_N.Checked)
+                rbtS1008_partidosPoliticos = 1;
+            else if (rbtS1008_Politicos_I.Checked)
+                rbtS1008_partidosPoliticos = 2;
+            else if (rbtS1008_Politicos_S.Checked)
+                rbtS1008_partidosPoliticos = 3;
+            if (rbtS1008_Techo_NS.Checked)
+                rbtS1008_Techo = 0;
+            else if (rbtS1008_Techo_N.Checked)
+                rbtS1008_Techo = 1;
+            else if (rbtS1008_Techo_I.Checked)
+                rbtS1008_Techo = 2;
+            else if (rbtS1008_Techo_S.Checked)
+                rbtS1008_Techo = 3;
+            if (rbtS1008_Comunicacion_NS.Checked)
+                rbtS1008_MedioComunicacion = 0;
+            else if (rbtS1008_Comunicacion_N.Checked)
+                rbtS1008_MedioComunicacion = 1;
+            else if (rbtS1008_Comunicacion_I.Checked)
+                rbtS1008_MedioComunicacion = 2;
+            else if (rbtS1008_Comunicacion_S.Checked)
+                rbtS1008_MedioComunicacion = 3;
+            if (rbtS1008_Iglesia_NS.Checked)
+                rbtS1008_IglesiasReligiosos = 0;
+            else if (rbtS1008_Iglesia_N.Checked)
+                rbtS1008_IglesiasReligiosos = 1;
+            else if (rbtS1008_Iglesia_I.Checked)
+                rbtS1008_IglesiasReligiosos = 2;
+            else if (rbtS1008_Iglesia_S.Checked)
+                rbtS1008_IglesiasReligiosos = 3;
+            
+        }
+        
+        public Boolean IngresarS1007()
+        {
+            NuevaS1007 = new S1007_ComunidadLN(Convert.ToBoolean(cklS1007_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(4)),txtS1007_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)));
+
+            Boolean correcto = NuevaS1007.Insertar_EncuS1007();
+            if (!correcto)
+            {
+                MessageBox.Show(NuevaS1007.obtenerError().mensaje);
+                int cant = NuevaS1007.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S10(NuevaS1007.errores[i].NumeroPregunta);
+            }
+            return correcto;
+        }
+        public Boolean IngresarS1006()
+        {
+            NuevaS1006 = new S1006_ComunidadLN(Convert.ToBoolean(cklS1006_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), txtS1006_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)));
+
+            Boolean correcto = NuevaS1006.Insertar_EncuS1006();
+            if (!correcto)
+            {
+                MessageBox.Show(NuevaS1006.obtenerError().mensaje);
+                int cant = NuevaS1006.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S10(NuevaS1006.errores[i].NumeroPregunta);
             }
             return correcto;
         }
@@ -1295,11 +1391,11 @@ namespace TechoCeiva
             tbpS4.Parent = null;
             tbpS5.Parent = null;
             tbpS6.Parent = null;
-            //tbpS7.Parent = null;
+            tbpS7.Parent = null;
             tbpS8.Parent = null;
             tbpS9.Parent = null;
-            //tbpS10.Parent = null;
-            tbpS10Cont.Parent = null;
+            tbpS10.Parent = null;
+           // tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
             dgvS2.Columns[0].ReadOnly = true;
@@ -1756,6 +1852,30 @@ namespace TechoCeiva
             }
             else
                 MessageBox.Show(SDatos.obtenerError());
+        }
+
+        private void cklS1007_Com_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (Convert.ToBoolean(cklS1007_Com.GetItemCheckState(4)) == true)
+                txtS1007_Especificar.Enabled = false;
+            else
+                txtS1007_Especificar.Enabled = true;
+        }
+
+        private void cklS1006_Com_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)) == true)
+                txtS1006_Especificar.Enabled = false;
+            else
+                txtS1006_Especificar.Enabled = true;
+        }
+
+        private void cklS1014_Com_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToBoolean(cklS1014_Com.GetItemCheckState(7)) == true)                
+                txtS1014_Especificar.Enabled = false;
+            else
+                txtS1014_Especificar.Enabled = true;
         }        
     }
 }

@@ -50,7 +50,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S1007_com(NoInteresa,FaltaInformacion,FaltaTiempo,CompromisoFamiliar,Otros,Especificar,NSNR) VALUES(@NoInteresa,@FaltaInformacion,@FaltaTiempo,@CompromisoFamiliar,@Otros,@Especificar,@NSNR)";
+                string consulta = "INSERT INTO S1007_com(NoInteresa,FaltaInformacion,FaltaTiempo,CompromisoFamiliar,Otro,Especificar,NSNR) VALUES(@NoInteresa,@FaltaInformacion,@FaltaTiempo,@CompromisoFamiliar,@Otros,@Especificar,@NSNR)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@NoInteresa", this.NoInteresa);
                 comando.Parameters.AddWithValue("@FaltaInformacion", this.FaltaInformacion);
@@ -107,7 +107,7 @@ namespace Capa_Datos
         public Int32 Obtener_Ultima_EncS1007()
         {
             int i = 0;
-            MySqlCommand comando = new MySqlCommand("select max(idS1007_Serv) as Contador from S1007_Serv", conex);
+            MySqlCommand comando = new MySqlCommand("select max(idS1007_Com) as Contador from S1007_com", conex);
             comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();

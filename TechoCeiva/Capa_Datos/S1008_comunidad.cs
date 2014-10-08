@@ -62,7 +62,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S1008_com(Familiar,Vecinos,LideresComunitarios,Municipalidad,OrganizacionGobierno,Ejercito,PartidosPoliticos,Techo,MedioComunicacion,IglesiasReligiosas) VALUES(@Familiar,@Vecinos,@LideresComunitarios,@Municipalidad,@OrganizacionGobierno,@Ejercito,@PartidosPoliticos,@Techo,@MedioComunicacion,@IglesiasReligiosas)";
+                string consulta = "INSERT INTO S1008_com(Familiar,Vecinos,LideresComunitarios,Policia,Municipalidad,OrganizacionGobierno,Ejercito,PartidosPoliticos,Techo,MedioComunicacion,IglesiasReligiosos) VALUES(@Familiar,@Vecinos,@LideresComunitarios,@Policia,@Municipalidad,@OrganizacionGobierno,@Ejercito,@PartidosPoliticos,@Techo,@MedioComunicacion,@IglesiasReligiosos)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Familiar", this.Familiar);
                 comando.Parameters.AddWithValue("@Vecinos", this.Vecinos);
@@ -74,7 +74,7 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@PartidosPoliticos", this.partidosPoliticos);
                 comando.Parameters.AddWithValue("@Techo", this.Techo);
                 comando.Parameters.AddWithValue("@MedioComunicacion", this.MedioComunicacion);
-                comando.Parameters.AddWithValue("@IglesiasReligiosas", this.IglesiasReligiosos);
+                comando.Parameters.AddWithValue("@IglesiasReligiosos", this.IglesiasReligiosos);
 
                 try
                 {
@@ -114,7 +114,7 @@ namespace Capa_Datos
         public Int32 Obtener_Ultima_EncS1008()
         {
             int i = 0;
-            MySqlCommand comando = new MySqlCommand("select max(idS1008_Serv) as Contador from S1008_Serv", conex);
+            MySqlCommand comando = new MySqlCommand("select max(idS1008_Com) as Contador from S1008_Com", conex);
             comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
