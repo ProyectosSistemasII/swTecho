@@ -29,14 +29,14 @@ namespace TechoCeiva
         {
             frmEncuesta nEncuesta = new frmEncuesta();
             nEncuesta.idComuni = Convert.ToInt32(cmbComunidad.SelectedValue.ToString());
-            //MessageBox.Show(cmbComunidad.SelectedValue.ToString());
+            MessageBox.Show(cmbComunidad.SelectedValue.ToString());
             nEncuesta.ShowDialog();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _Comunidad Comunidades = new _Comunidad();
-            cmbComunidad.ItemsSource = Comunidades.ObtenerComunidades();
+            cmbComunidad.ItemsSource = Comunidades.ObtenerComunidadesEncuesta();
             cmbComunidad.DisplayMemberPath = "Nombre";//.ToString();
             cmbComunidad.SelectedValuePath = "idComunidad";//.ToString();
         }

@@ -28,6 +28,13 @@ namespace Capa_Datos
             this.Municipio_idMunicipio = 0;
         }
 
+        public _Comunidad(int idComunidad, string Nombre)
+        {
+            this.idComunidad = idComunidad;
+            this.Nombre = Nombre;
+            this.errores = new List<Error>();
+        }
+
         public _Comunidad(int idComunidad, string Nombre,bool activo, int idDepartamento, int idMunicipio)
         {
             this.idComunidad = idComunidad;
@@ -60,6 +67,26 @@ namespace Capa_Datos
             {
                 DataRow row = tabla.Rows[i];
                 _Comunidad Comunidades = new _Comunidad(Convert.ToString(row["Nombre"]), Convert.ToString(row["NombreM"]), Convert.ToString(row["NombreD"]));
+                ListaComunidad.Add(Comunidades);
+            }
+            return ListaComunidad;
+        }
+
+        public List<_Comunidad> ObtenerComunidadesEncuesta()
+        {
+            List<_Comunidad> ListaComunidad = new List<_Comunidad>();
+            MySqlCommand comando = new MySqlCommand("SELECT Comunidad.idComunidad, Comunidad.Nombre FROM comunidad where activo=true order by Comunidad.Nombre ASC", conex);
+            comando.CommandTimeout = 12280;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                DataRow row = tabla.Rows[i];
+                _Comunidad Comunidades = new _Comunidad(Convert.ToInt32(row["idComunidad"]), Convert.ToString(row["Nombre"]));
                 ListaComunidad.Add(Comunidades);
             }
             return ListaComunidad;
