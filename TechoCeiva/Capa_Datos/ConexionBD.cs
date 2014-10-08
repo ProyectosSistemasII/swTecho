@@ -7,9 +7,57 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class ConexionBD
+    public class ConexionBD
     {
-        public static String ConexionDireccion = "Server=localhost;" + "Database=swtecho;" + "UID=root;" + "Password=12345;";
-        public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);        
+        public static String ConexionDireccion =
+           "Server=" + Properties.Settings.Default.server + ";" +
+           "Database=" + Properties.Settings.Default.database + ";" +
+           "UID=" + Properties.Settings.Default.user + ";" +
+           "Password=" + Properties.Settings.Default.password + ";";
+        public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);
+
+        public static void modificarParamentrosServer(String server, String database, String user, String password)
+        {
+            Properties.Settings.Default.server = server;
+            Properties.Settings.Default.database = database;
+            Properties.Settings.Default.user = user;
+            Properties.Settings.Default.password = password;
+            Properties.Settings.Default.Save();
+        }
+
+        public String conConexion()
+        {
+            try
+            {
+                conexion.Open();
+                conexion.Close();
+                return "Conexion existosa :)";
+            }
+            catch (MySqlException ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public static String getServer()
+        {
+            return Properties.Settings.Default.server;
+        }
+
+        public static String getDatabase()
+        {
+            return Properties.Settings.Default.database;
+        }
+
+        public static String getUser()
+        {
+            return Properties.Settings.Default.user;
+        }
+
+        public static String getPassword()
+        {
+            return Properties.Settings.Default.password;
+        }
+   
     }
 }

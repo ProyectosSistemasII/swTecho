@@ -79,6 +79,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVoluntarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="UC_SelecComunidad.xaml.cs">
       <DependentUpon>UC_SelecComunidad.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UC_Settings.xaml.cs">
+      <DependentUpon>UC_Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UC_User.xaml.cs">
       <DependentUpon>UC_User.xaml</DependentUpon>
     </Compile>
@@ -147,6 +156,9 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVoluntarios.resx">
       <DependentUpon>frmVoluntarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +172,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -224,6 +237,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UC_SelecComunidad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UC_Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
