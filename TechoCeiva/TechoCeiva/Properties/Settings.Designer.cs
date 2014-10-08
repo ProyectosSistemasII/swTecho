@@ -26,12 +26,12 @@ namespace TechoCeiva.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Techo123.")]
-        public string passwordSetting {
+        public string passwordSettings {
             get {
-                return ((string)(this["passwordSetting"]));
+                return ((string)(this["passwordSettings"]));
             }
             set {
-                this["passwordSetting"] = value;
+                this["passwordSettings"] = value;
             }
         }
     }
