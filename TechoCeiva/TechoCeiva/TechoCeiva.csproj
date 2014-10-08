@@ -272,8 +272,6 @@
   <ItemGroup>
     <Resource Include="img\logo-techo.png" />
     <Resource Include="img\o.png" />
-    <Resource Include="img\trash.png" />
-    <Resource Include="trash.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">

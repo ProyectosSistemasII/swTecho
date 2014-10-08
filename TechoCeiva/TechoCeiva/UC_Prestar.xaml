@@ -273,7 +273,7 @@
 			<DataGrid x:Name="DataGridPrestamo" Canvas.Left="551.341" Height="245.294" Width="458.001" Canvas.Top="52.013"/>
 			<Button x:Name="btnGuardar" Content="Guardar" Canvas.Left="551.341" Style="{DynamicResource SimpleButton}" Canvas.Top="320.307" Width="133" Height="36" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White"/>
 			<Button x:Name="btnCancelar" Content="Cancelar" Canvas.Left="717.841" Style="{DynamicResource SimpleButton}" Canvas.Top="320.307" Width="133" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667"/>
-			<Button x:Name="btnX" Content="" Style="{DynamicResource btnTrash}" Width="41.959" Height="55.28" BorderBrush="{x:Null}" Foreground="#FFF7F7F7" FontSize="14.667" FontWeight="Bold" Canvas.Left="1009.342" Canvas.Top="52.013">
+			<Button x:Name="btnX" Content="" Style="{DynamicResource btnTrash}" Width="41.959" Height="55.28" BorderBrush="{x:Null}" Foreground="#FFF7F7F7" FontSize="14.667" FontWeight="Bold" Canvas.Left="1009.342" Canvas.Top="52.013" Background="#FF9E9999">
 				<Button.Resources>
 <!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->
 					<Style x:Key="btnTrash" TargetType="{x:Type Button}" BasedOn="{x:Null}">
@@ -320,9 +320,6 @@
 					</Style>
 	
 				</Button.Resources>
-				<Button.Background>
-					<ImageBrush ImageSource="img/trash.png" Stretch="None"/>
-				</Button.Background>
 			</Button>
 			<Separator Height="333.307" Canvas.Left="315.5" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="23" Width="0.5" Background="#FFA0A0A0" Opacity="0.85"/>
 			<Label x:Name="lblDetallePrestamo" Content="Detalle del préstamo" Canvas.Left="551.341" Style="{DynamicResource SimpleLabel}" Canvas.Top="28.506" FontSize="14.667" FontWeight="Bold"/>

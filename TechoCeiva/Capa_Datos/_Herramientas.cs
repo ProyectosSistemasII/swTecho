@@ -32,6 +32,7 @@ namespace Capa_Datos
             this.Nombre = _nombre;
             this.Existencia = _existencia;
             this.Activo = _activo;
+            this._errores = new List<Error>();
         }
 
         /// <summary>
@@ -44,31 +45,19 @@ namespace Capa_Datos
         
         public void _Insertar_H()
         {
-            //if (this._errores.Count == 0)
-            //{
-            /*
+            if (this._errores.Count == 0)
+            {
                 string query = "INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo)";
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
-                _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
+                _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
                 _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
-            */
+            
                 try
                 {
-                    string query = "INSERT INTO Herramientas (Nombre, Existencia, Activo) VALUES (@Nombre,@Existencia,@Activo);";
-                    MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                    
-                    _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
-                    _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
-                    _comando.Parameters.AddWithValue("@Activo", this.Activo);
-
-                    //MySqlDataReader reader;
                     _comando.Connection.Open();
-                    //reader = _comando.ExecuteReader();
-                    //_comando.CommandText = query;
                     _comando.ExecuteNonQuery();
                     _comando.Connection.Close();
-                    //_comando.Connection.Close();
                      
                 }
                 catch (MySqlException ex)
@@ -76,7 +65,7 @@ namespace Capa_Datos
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-            //}
+            }
         }
 
  
