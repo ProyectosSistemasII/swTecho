@@ -36,7 +36,7 @@ namespace TechoCeiva
             lista = depto.Obtener_D();
             cmbDepartamento.ItemsSource = depto.Obtener_D();
             cmbDepartamento.SelectedValuePath = "idDepartamento";
-            cmbDepartamento.DisplayMemberPath = "NombreD";
+            cmbDepartamento.DisplayMemberPath = "nombre";
 
             fillDataGrid(comn);
         }
@@ -79,7 +79,7 @@ namespace TechoCeiva
 
             cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
             cmbMunicipio.SelectedValuePath = "idMunicipio";
-            cmbMunicipio.DisplayMemberPath = "NombreM";
+            cmbMunicipio.DisplayMemberPath = "nombre";
         }
     }
 }

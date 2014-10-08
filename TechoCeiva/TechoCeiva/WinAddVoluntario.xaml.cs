@@ -27,7 +27,7 @@ namespace TechoCeiva
 
             cmbDepartamento.ItemsSource = depto.Obtener_D();
             cmbDepartamento.SelectedValuePath = "idDepartamento";
-            cmbDepartamento.DisplayMemberPath = "NombreD";
+            cmbDepartamento.DisplayMemberPath = "nombre";
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
@@ -78,7 +78,7 @@ namespace TechoCeiva
 
             cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
             cmbMunicipio.SelectedValuePath = "idMunicipio";
-            cmbMunicipio.DisplayMemberPath = "NombreM";
+            cmbMunicipio.DisplayMemberPath = "nombre";
         }
 
 	}
