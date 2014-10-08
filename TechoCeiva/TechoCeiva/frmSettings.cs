@@ -15,5 +15,25 @@ namespace TechoCeiva
         {
             InitializeComponent();
         }
+
+        private void frmSettings_Load(object sender, EventArgs e)
+        {
+            UC_Settings settings = new UC_Settings();
+            canvasSettings.Child=settings;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtAcceso.Text == Properties.Settings.Default.passwordSettings)
+            {
+                canvasSettings.Visible = true;
+                button1.Visible = false;
+                txtAcceso.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta","Error");
+            }
+        }
     }
 }

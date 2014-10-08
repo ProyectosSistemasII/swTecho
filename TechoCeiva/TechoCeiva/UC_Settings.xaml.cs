@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
-
+using System.Collections;
 namespace TechoCeiva
 {
     /// <summary>
@@ -27,7 +27,21 @@ namespace TechoCeiva
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            
+            String salida = SettingsSistema.saveParametros(txtServer.Text, txtDatabase.Text, txtUser.Text, pswPassword.Password);
+            MessageBox.Show(salida, "Mensaje");
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            //[0] server
+            //[1] database
+            //[2] user
+            //[3] password
+            ArrayList parametros =SettingsSistema.getParametros();
+            txtServer.Text = parametros[0].ToString();
+            txtDatabase.Text = parametros[1].ToString();
+            txtUser.Text = parametros[2].ToString();
+            pswPassword.Password = parametros[3].ToString();
         }
     }
 }

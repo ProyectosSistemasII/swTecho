@@ -31,22 +31,6 @@ namespace TechoCeiva
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            acction_Login();
-        }
-
-        private void txt_password_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                acction_Login();
-            }
-            else
-            {
-            }
-        }
-
-        private void acction_Login()
-        {
             UsuarioLN usuario = new UsuarioLN();
             Boolean correcto = usuario.iniciarSesion(txt_username.Text, txt_password.Password);
             if (correcto)
@@ -62,6 +46,13 @@ namespace TechoCeiva
             {
                 MessageBox.Show(usuario.obtenerError());
             }
+
+            
+        }
+
+        private void label1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            new frmSettings().Show();
         }
 	}
 }

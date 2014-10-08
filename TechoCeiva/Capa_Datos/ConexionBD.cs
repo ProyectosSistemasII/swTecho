@@ -5,15 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
+
+
 namespace Capa_Datos
 {
     public class ConexionBD
     {
-        public static String ConexionDireccion =
-           "Server=" + Properties.Settings.Default.server + ";" +
-           "Database=" + Properties.Settings.Default.database + ";" +
-           "UID=" + Properties.Settings.Default.user + ";" +
-           "Password=" + Properties.Settings.Default.password + ";";
+
+        public static String ConexionDireccion = 
+            "Server=" + Properties.Settings.Default.server + ";" + 
+            "Database=" + Properties.Settings.Default.database + ";" + 
+            "UID=" + Properties.Settings.Default.user + ";" + 
+            "Password=" + Properties.Settings.Default.password + ";";
         public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);
 
         public static void modificarParamentrosServer(String server, String database, String user, String password)
@@ -25,7 +28,7 @@ namespace Capa_Datos
             Properties.Settings.Default.Save();
         }
 
-        public String conConexion()
+        public static String conConexion()
         {
             try
             {
@@ -33,9 +36,9 @@ namespace Capa_Datos
                 conexion.Close();
                 return "Conexion existosa :)";
             }
-            catch (MySqlException ex)
+            catch(MySqlException ex)
             {
-                return ex.Message;
+                return "No se pudo establecer conexion :(";
             }
         }
 
@@ -58,6 +61,5 @@ namespace Capa_Datos
         {
             return Properties.Settings.Default.password;
         }
-   
     }
 }

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="282" Width="280" Height="400">
+             d:DesignHeight="300" d:DesignWidth="282" Width="280" Height="400" Loaded="UserControl_Loaded">
     <Grid>
         <Label Content="Servidor" Height="28" HorizontalAlignment="Left" Margin="26,103,0,0" Name="label1" VerticalAlignment="Top" />
         <Label Content="Usuario" Height="28" HorizontalAlignment="Left" Margin="30,189,0,0" Name="label2" VerticalAlignment="Top" />
@@ -14,44 +14,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="116,152,0,0" Name="txtDatabase" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="116,189,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="116,235,0,0" Name="pswPassword" VerticalAlignment="Top" Width="120" />
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="30" Margin="12,0,152,66" Name="btn_Login" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" Click="btn_Login_Click">
-            <Button.Resources>
-                <Style BasedOn="{x:Null}" x:Key="btnLogin" TargetType="{x:Type Button}">
-                    <Setter Property="FrameworkElement.FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}" />
-                    <Setter Property="Control.Background" Value="{DynamicResource NormalBrush}" />
-                    <Setter Property="Control.BorderBrush" Value="{DynamicResource NormalBorderBrush}" />
-                    <Setter Property="Control.Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Grid Name="Grid">
-                                    <Border Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}" Name="Border" Padding="{TemplateBinding Control.Padding}" />
-                                    <ContentPresenter HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" Margin="{TemplateBinding Control.Padding}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
-                                </Grid>
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="UIElement.IsKeyboardFocused" Value="true">
-                                        <Setter Property="Border.BorderBrush" TargetName="Border" Value="{DynamicResource DefaultedBorderBrush}" />
-                                    </Trigger>
-                                    <Trigger Property="UIElement.IsMouseOver" Value="true">
-                                        <Setter Property="Border.Background" TargetName="Border" Value="#FF626465" />
-                                    </Trigger>
-                                    <Trigger Property="ButtonBase.IsPressed" Value="true">
-                                        <Setter Property="Border.Background" TargetName="Border" Value="{DynamicResource PressedBrush}" />
-                                        <Setter Property="Border.BorderBrush" TargetName="Border" Value="{DynamicResource PressedBorderBrush}" />
-                                    </Trigger>
-                                    <Trigger Property="UIElement.IsEnabled" Value="true" />
-                                    <Trigger Property="UIElement.IsEnabled" Value="false">
-                                        <Setter Property="Border.Background" TargetName="Border" Value="{DynamicResource DisabledBackgroundBrush}" />
-                                        <Setter Property="Border.BorderBrush" TargetName="Border" Value="{DynamicResource DisabledBorderBrush}" />
-                                        <Setter Property="Control.Foreground" Value="{DynamicResource DisabledForegroundBrush}" />
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Probar conexion" FontSize="14.667" Foreground="White" Height="30" Margin="0,0,12,66" Name="button1" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="116">
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="30" Margin="90,0,74,73" Name="btn_Login" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" Click="btn_Login_Click">
             <Button.Resources>
                 <Style BasedOn="{x:Null}" x:Key="btnLogin" TargetType="{x:Type Button}">
                     <Setter Property="FrameworkElement.FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}" />
