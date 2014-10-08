@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class S708_Vivienda
+    public class S708_Vivienda
     {
         public int Encementado { get; set; }
         public int LadrilloBarro { get; set; }
@@ -38,13 +38,12 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S708_Viv(Encementado,LadrilloBarro,Madera,Tierra) VALUES(@Encementado,@LadrilloBarro,@Madera,@Tierra)";
+                string consulta = "INSERT INTO S708_Viv(Encementado,LadrillosBarro,Madera,Tierra) VALUES(@Encementado,@LadrilloBarro,@Madera,@Tierra)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Encementado", this.Encementado);
                 comando.Parameters.AddWithValue("@LadrilloBarro", this.LadrilloBarro);
                 comando.Parameters.AddWithValue("@Madera", this.Madera);
-                comando.Parameters.AddWithValue("@Tierra", this.Tierra);
-                
+                comando.Parameters.AddWithValue("@Tierra", this.Tierra);                
                 try
                 {
                     comando.Connection.Open();
@@ -57,6 +56,25 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
+        }
+
+        public int UltimoId()
+        {
+            int id = 0;
+            String consulta = "SELECT MAX(idS708_Viv) FROM S708_Viv";
+            MySqlCommand comando = new MySqlCommand(consulta, conex);
+            try
+            {
+                comando.Connection.Open();
+                id = (Int32)comando.ExecuteScalar();
+                comando.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Error error = new Error(ex.Message + "   " + ex.Number, 0);
+                errores.Add(error);
+            }
+            return id;
         }
     }
 }

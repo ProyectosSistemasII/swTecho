@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Capa_Datos
 {
-    class S707_Vivienda
+    public class S707_Vivienda
     {
         public int BlockLadrilloPrefabr { get; set; }
         public int Madera { get; set; }
@@ -44,15 +44,14 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S707_Viv(BlockLadrilloPrefabr,Madera,Adobe,Lamina,BaharequeBambu,Desechos) VALUES(@BlockLadrilloPrefabr,@Madera,@Adobe,@Lamina,@BaharequeBambu,@Desechos)";
+                string consulta = "INSERT INTO S707_Viv(BlockLadrilloPrefabr,Madera,Adobe,Lamina,BaharequeBambu,Desechos) VALUES(@BlockLadrilloPrefabr,@Madera,@Adobe,@Lamina,@BaharequeBambu,@Desechos)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@BlockLadrilloPrefabr", this.BlockLadrilloPrefabr);
                 comando.Parameters.AddWithValue("@Madera", this.Madera);
                 comando.Parameters.AddWithValue("@Adobe", this.Adobe);
                 comando.Parameters.AddWithValue("@Lamina", this.Lamina);
                 comando.Parameters.AddWithValue("@BaharequeBambu", this.BaharequeBambu);
-                comando.Parameters.AddWithValue("@Desechos", this.Desechos);
-                
+                comando.Parameters.AddWithValue("@Desechos", this.Desechos);                
                 try
                 {
                     comando.Connection.Open();
@@ -65,6 +64,25 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
+        }
+
+        public int UltimoId()
+        {
+            int id = 0;
+            String consulta = "SELECT MAX(idS707_Viv) FROM S707_Viv";
+            MySqlCommand comando = new MySqlCommand(consulta, conex);
+            try
+            {
+                comando.Connection.Open();
+                id = (Int32)comando.ExecuteScalar();
+                comando.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Error error = new Error(ex.Message + "   " + ex.Number, 0);
+                errores.Add(error);
+            }
+            return id;
         }
     }
 }

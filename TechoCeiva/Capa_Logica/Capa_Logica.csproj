@@ -68,6 +68,9 @@
     <Compile Include="S5_TrabajoLN.cs" />
     <Compile Include="S611_IngresosLN.cs" />
     <Compile Include="S6_IngresosLN.cs" />
+    <Compile Include="S706_ViviendaLN.cs" />
+    <Compile Include="S707_ViviendaLN.cs" />
+    <Compile Include="S708_ViviendaLN.cs" />
     <Compile Include="S7_ViviendaLN.cs" />
     <Compile Include="S807_ServiciosLN.cs" />
     <Compile Include="S808_ServiciosLN.cs" />
