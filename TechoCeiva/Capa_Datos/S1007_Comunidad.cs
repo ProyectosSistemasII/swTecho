@@ -50,7 +50,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S1007_com(NoInteresa,FaltaInformacion,FaltaTiempo,CompromisoFamiliar,Otros,Especificar,NSNR) VALUES(@NoInteresa,@FaltaInformacion,@FaltaTiempo,@CompromisoFamiliar,@Otros,@Especificar,@NSNR)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@NoInteresa", this.NoInteresa);
                 comando.Parameters.AddWithValue("@FaltaInformacion", this.FaltaInformacion);
@@ -103,6 +103,27 @@ namespace Capa_Datos
             eliminar.ExecuteNonQuery();
             eliminar.Connection.Close();
             return true;
+        }
+        public Int32 Obtener_Ultima_EncS1007()
+        {
+            int i = 0;
+            MySqlCommand comando = new MySqlCommand("select max(idS1007_Serv) as Contador from S1007_Serv", conex);
+            comando.CommandTimeout = 12280;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            i = Convert.ToInt32(row["Contador"]);
+            if (i == 0)
+            {
+                Error error = new Error("", 41);
+                errores.Add(error);
+            }
+            return i;
+
         }
 
 

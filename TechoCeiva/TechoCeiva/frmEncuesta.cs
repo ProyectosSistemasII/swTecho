@@ -40,6 +40,10 @@ namespace TechoCeiva
         String cbxS10_ConfiazaOrganizaciontxt ="";
         String cbxS10_EstadoPasadotxt="";
         String cbxS10_estadoFuturotxt = "";
+
+        S807_ServiciosLN NuevaS1006 = null;
+        S808_ServiciosLN NuevaS1007 = null;
+        S808_ServiciosLN NuevaS1008 = null;
         /// -----------------------------------------------------------------------------------------------------------
 
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
@@ -224,6 +228,10 @@ namespace TechoCeiva
                 tbpS10.Parent = null;
                 tbpS10Cont.Parent = tbcDatos;
             }
+            else if (NuevaS10_Comunidad.idS1006 == 0)
+            {
+
+            }
             else
             {
                 MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
@@ -401,6 +409,107 @@ namespace TechoCeiva
                 cbxS10_estadoFuturotxt = cbxS10_estadoFuturo.SelectedItem.ToString();
             
             return NumeroCaso;
+        }
+        /*
+        public Boolean IngresarS1008()
+        {
+            this.VerificarRadioBtn_S808();
+            NuevaS808 = new S808_ServiciosLN(rbtS808_Refrigerador, rbtS808_EquipoDeSonido, rbtS808_Televisor, rbtS808_ReproductorDVD, rbtS808_Motocicleta, rbtS808_Automovil, rbtS808_Computadora, rbtS808_Amueblado, rbtS808_Otros, rbtS808_OtroEspecificar.Text);
+            Boolean correcto = NuevaS808.Insertar_EncuS808();
+            if (!correcto)
+            {
+                MessageBox.Show(NuevaS808.obtenerError().mensaje);
+                int cant = NuevaS808.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S1008(NuevaS808.errores[i].NumeroPregunta);
+            }
+            return correcto;
+        }
+
+        private void Comprobar_S808(int pregunta)
+        {
+            switch (pregunta)
+            {
+                case 9:
+                    rbtS808_OtroEspecificar.BackColor = ColorCampsVacios;
+                    rbtS808_OtroEspecificar.Focus();
+                    break;
+            }
+        }
+
+        public void VerificarRadioBtn_S1008()
+        {
+            if (rbtS808_Refrigerador_M.Checked)
+                rbtS808_Refrigerador = 1;
+            else if (rbtS808_Refrigerador_R.Checked)
+                rbtS808_Refrigerador = 2;
+            else if (rbtS808_Refrigerador_B.Checked)
+                rbtS808_Refrigerador = 3;
+            if (rbtS808_EquipoSonido_M.Checked)
+                rbtS808_EquipoDeSonido = 1;
+            else if (rbtS808_EquipoSonido_R.Checked)
+                rbtS808_EquipoDeSonido = 2;
+            else if (rbtS808_EquipoSonido_B.Checked)
+                rbtS808_EquipoDeSonido = 3;
+
+            if (rbtS808_Televisor_M.Checked)
+                rbtS808_Televisor = 1;
+            else if (rbtS808_Televisor_R.Checked)
+                rbtS808_Televisor = 2;
+            else if (rbtS808_Televisor_B.Checked)
+                rbtS808_Televisor = 3;
+            if (rbtS808_DVD_M.Checked)
+                rbtS808_ReproductorDVD = 1;
+            else if (rbtS808_DVD_R.Checked)
+                rbtS808_ReproductorDVD = 2;
+            else if (rbtS808_DVD_B.Checked)
+                rbtS808_ReproductorDVD = 3;
+            if (rbtS808_Motocleta_M.Checked)
+                rbtS808_Motocicleta = 1;
+            else if (rbtS808_Motocleta_R.Checked)
+                rbtS808_Motocicleta = 2;
+            else if (rbtS808_Motocicleta_B.Checked)
+                rbtS808_Motocicleta = 3;
+            if (rbtS808_Automovil_M.Checked)
+                rbtS808_Automovil = 1;
+            else if (rbtS808_Automovil_R.Checked)
+                rbtS808_Automovil = 2;
+            else if (rbtS808_Automovil_B.Checked)
+                rbtS808_Automovil = 3;
+            if (rbtS808_Computadora_M.Checked)
+                rbtS808_Computadora = 1;
+            else if (rbtS808_Computadora_R.Checked)
+                rbtS808_Computadora = 2;
+            else if (rbtS808_Computadora_B.Checked)
+                rbtS808_Computadora = 3;
+            if (rbtS808_Amueblado_M.Checked)
+                rbtS808_Amueblado = 1;
+            else if (rbtS808_Amueblado_R.Checked)
+                rbtS808_Amueblado = 2;
+            else if (rbtS808_Amueblado_B.Checked)
+                rbtS808_Amueblado = 3;
+            if (rbtS808_Otros_M.Checked)
+                rbtS808_Otros = 1;
+            else if (rbtS808_Otros_R.Checked)
+                rbtS808_Otros = 2;
+            else if (rbtS808_Otros_B.Checked)
+                rbtS808_Otros = 3;
+        }
+        */
+        public Boolean IngresarS1006()
+        {
+            NuevaS807 = new S807_ServiciosLN(Convert.ToBoolean(cklS8_S807.GetItemCheckState(0)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(1)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(2)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(3)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(4)));
+            Boolean correcto = NuevaS807.Insertar_EncuS807();
+            if (!correcto)
+            {
+                MessageBox.Show(NuevaS807.obtenerError().mensaje);
+                int cant = NuevaS807.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S10(NuevaS807.errores[i].NumeroPregunta);
+            }
+            return correcto;
         }
 
         /// <summary>

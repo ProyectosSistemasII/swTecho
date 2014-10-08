@@ -59,7 +59,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S1006_com(GrupoPolitico,GrupoDeportivo,GrupoReligioso,GrupoJovenes,GrupoMujeres,OrganizacionComunitaria,MesaTrabajo,Otros,Especificar,NSNR) VALUES(@GrupoPolitico,@GrupoDeportivo,@GrupoReligioso,@GrupoJovenes,@GrupoMujeres,@OrganizacionComunitaria,@MesaTrabajo,@Otros,@Especificar,@NSNR)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@GrupoPolitico", this.GrupoPolitico);
                 comando.Parameters.AddWithValue("@GrupoDeportivo", this.GrupoDeportivo);
@@ -107,14 +107,26 @@ namespace Capa_Datos
             return ListaComunidad;
 
         }
-        public Boolean eliminarS1006(string id)
+        public Int32 Obtener_Ultima_EncS1006()
         {
-            MySqlCommand eliminar = new MySqlCommand("update  S1006_com set Activo=false where idS1006_Com='" + id + "'", conex);
+            int i = 0;
+            MySqlCommand comando = new MySqlCommand("select max(idS1006_Serv) as Contador from S1006_Serv", conex);
+            comando.CommandTimeout = 12280;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            i = Convert.ToInt32(row["Contador"]);
+            if (i == 0)
+            {
+                Error error = new Error("", 41);
+                errores.Add(error);
+            }
+            return i;
 
-            eliminar.Connection.Open();
-            eliminar.ExecuteNonQuery();
-            eliminar.Connection.Close();
-            return true;
         }
 
     }

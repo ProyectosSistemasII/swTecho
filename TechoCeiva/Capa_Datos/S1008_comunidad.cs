@@ -62,7 +62,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S1008_com(Familiar,Vecinos,LideresComunitarios,Municipalidad,OrganizacionGobierno,Ejercito,PartidosPoliticos,Techo,MedioComunicacion,IglesiasReligiosas) VALUES(@Familiar,@Vecinos,@LideresComunitarios,@Municipalidad,@OrganizacionGobierno,@Ejercito,@PartidosPoliticos,@Techo,@MedioComunicacion,@IglesiasReligiosas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Familiar", this.Familiar);
                 comando.Parameters.AddWithValue("@Vecinos", this.Vecinos);
@@ -111,15 +111,28 @@ namespace Capa_Datos
             return Listacomunidad;
 
         }
-        public Boolean eliminarS1008(string id)
+        public Int32 Obtener_Ultima_EncS1008()
         {
-            MySqlCommand eliminar = new MySqlCommand("update  S1008_Com set Activo=false where idS1008_Com='" + id + "'", conex);
+            int i = 0;
+            MySqlCommand comando = new MySqlCommand("select max(idS1008_Serv) as Contador from S1008_Serv", conex);
+            comando.CommandTimeout = 12280;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            i = Convert.ToInt32(row["Contador"]);
+            if (i == 0)
+            {
+                Error error = new Error("", 41);
+                errores.Add(error);
+            }
+            return i;
 
-            eliminar.Connection.Open();
-            eliminar.ExecuteNonQuery();
-            eliminar.Connection.Close();
-            return true;
         }
+
     }
 
 }

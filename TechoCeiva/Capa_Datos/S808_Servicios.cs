@@ -112,6 +112,7 @@ namespace Capa_Datos
         {
             int i = 0;
             MySqlCommand comando = new MySqlCommand("select max(idS808_Serv) as Contador from S808_Serv", conex);
+            comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
             Adapter.SelectCommand = comando;
