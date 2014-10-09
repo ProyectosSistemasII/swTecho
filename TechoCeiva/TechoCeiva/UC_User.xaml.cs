@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_Datos;
+using System.Collections;
 
 namespace TechoCeiva
 {
@@ -22,6 +24,13 @@ namespace TechoCeiva
         public UC_User()
         {
             InitializeComponent();
+        }
+
+        private void Canvas_Loaded(object sender, RoutedEventArgs e)
+        {
+            DatosUsuario datosUsuario = new DatosUsuario();
+            ArrayList datos = datosUsuario.getUsuarios();
+            dtgUsuarios.ItemsSource = datos;
         }
     }
 }
