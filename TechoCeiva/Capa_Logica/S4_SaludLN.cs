@@ -26,12 +26,9 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
-        public Boolean Insertar_EncuS4(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
-            string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas)
+        public Boolean validacion(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
+            string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas, int filas)
         {
-            Boolean correcto = true;
-            S4_Salud salud = new S4_Salud(CodigoS4, AsistenciaSalud, NombreCentro, UbicacionCentro, ProblemaSalud, EspecificarProblemaSalud, Accidente, TipoAccidente, Seguro, Discapacidad, OtraDiscapacidad, OrigenDiscapacidad, OtroOrigen, Encuestas_idEncuestas);
-
             this.CodigoS4 = CodigoS4;
             this.AsistenciaSalud = AsistenciaSalud;
             this.NombreCentro = NombreCentro;
@@ -46,8 +43,21 @@ namespace Capa_Logica
             this.OrigenDiscapacidad = OrigenDiscapacidad;
             this.OtroOrigen = OtroOrigen;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
-
             this.errores = new List<Error>();
+            this.verificarDatos(filas);
+            if (errores.Count > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public Boolean Insertar_EncuS4()
+        {
+            Boolean correcto = true;
+            S4_Salud salud = new S4_Salud(CodigoS4, AsistenciaSalud, NombreCentro, UbicacionCentro, ProblemaSalud, EspecificarProblemaSalud, Accidente, TipoAccidente, Seguro, Discapacidad, OtraDiscapacidad, OrigenDiscapacidad, OtroOrigen, Encuestas_idEncuestas);
+            salud.InsertarS4();
+            this.errores = salud.errores;
             if (errores.Count > 0)
             {
                 correcto = false;
@@ -59,6 +69,60 @@ namespace Capa_Logica
         {
             Error error = errores[0];
             return error.mensaje;
+        }
+
+        public void verificarDatos(int filas)
+        {
+            if (this.AsistenciaSalud == "")
+            {
+                Error error = new Error("Colocar la asistencia a un centro de salud en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.NombreCentro == "")
+            {
+                Error error = new Error("Colocar el nombre del centro de salud en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.UbicacionCentro == "")
+            {
+                Error error = new Error("Colocar la ubicación del centro de salud en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.ProblemaSalud == true && this.EspecificarProblemaSalud == "")
+            {
+                Error error = new Error("Debe especificar el problema de salud o enfermedad en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.Accidente == true && this.TipoAccidente == "")
+            {
+                Error error = new Error("Debe especificar el accidente en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.Seguro == "")
+            {
+                Error error = new Error("Colocar el tipo de seguro de salud en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.Discapacidad == "")
+            {
+                Error error = new Error("Colocar el tipo de discapacidad en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.Discapacidad == "Otra (especificar)" && this.OtraDiscapacidad == "")
+            {
+                Error error = new Error("Debe especificar el tipo de discapacidad en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.Discapacidad != "No tiene ninguna de estas condiciones de larga duración" && this.OrigenDiscapacidad == "")
+            {
+                Error error = new Error("Colocar el origen de discapacidad en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.OrigenDiscapacidad == "Otra (especificar)" && this.OtroOrigen == "")
+            {
+                Error error = new Error("Debe especificar el origen de discapacidad en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
         }
     }
 }

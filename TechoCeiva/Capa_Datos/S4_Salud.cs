@@ -69,7 +69,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S4_Sal(CodigoS4,AsistenciaSalud,NombreCentro,UbicacionCentro,ProblemaSalud,EspecificarProblemaSalud,Accidente,TipoAccidente,Seguro,Discapacidad,OtraDiscapacidad,OrigenDiscapacidad,OtroOrigen,Encuestas_idEncuestas) VALUES(@CodigoS4,@AsistenciaSalud,@NombreCentro,@UbicacionCentro,@ProblemaSalud,@EspecificarProblemaSalud,@Accidente,@TipoAccidente,@Seguro,@Discapacidad,@OtraDiscapacidad,@OrigenDiscapacidad,@OtroOrigen,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S4_Sal(CodigoS4,AsistenciaSalud,NombreCentro,UbicacionCentro,ProblemaSalud,EspecificarProblemaSalud,Accidente,TipoAccidente,Seguro,Discapacidad,OtraDiscapacidad,OrigenDiscapacidad,OtroOrigen,Encuestas_idEncuestas) VALUES(@CodigoS4,@AsistenciaSalud,@NombreCentro,@UbicacionCentro,@ProblemaSalud,@EspecificarProblemaSalud,@Accidente,@TipoAccidente,@Seguro,@Discapacidad,@OtraDiscapacidad,@OrigenDiscapacidad,@OtroOrigen,@Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@CodigoS4", this.CodigoS4);
                 comando.Parameters.AddWithValue("@AsistenciaSalud", this.AsistenciaSalud);
