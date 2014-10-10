@@ -1344,35 +1344,50 @@ namespace TechoCeiva
         //seccion 4
         private void pbS4_Siguiente_Click(object sender, EventArgs e)
         {
-            /*S4_SaludLN S4 = new S4_SaludLN();
-            Boolean correcto = true;//S4.Insertar_EncuS4(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS4.Parent = null;
-                tbpS5.Parent = tbcDatos;
-            }
-            else
-            {
-                MessageBox.Show(S4.obtenerError());
-            }
-            */
             S4_SaludLN S4 = new S4_SaludLN();
-            Boolean correcto = true;//S4.Insertar_EncuS4(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
-            if (correcto)
+            Boolean correcto = false;
+            int Filas = 0;
+            //Recorrer para validar
+            foreach (DataGridViewRow row in dgvS4.Rows)
             {
-                MessageBox.Show("Ingresado Correctamente");
-            }
-            else
-            {
-                MessageBox.Show(S4.obtenerError());
+                dgvS4.CurrentCell = dgvS4.Rows[Filas].Cells[0];
+                Boolean problema = false;
+                Boolean accidente = false;
+                if (row.Cells[4].Value.ToString().Equals("Si (especificar)"))
+                    problema = true;
+                if (row.Cells[6].Value.ToString().Equals("Si (especificar)"))
+                    accidente = true;
+                correcto = S4.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), problema, row.Cells[5].Value.ToString(), accidente, row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(), row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas);
+                if (correcto)
+                    Filas++;
+                else
+                {
+                    Filas = 0;
+                    MessageBox.Show(S4.obtenerError());
+                    break;
+                }
             }
             //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
+                //Recorrer para insertar
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS4.Rows)
+                {
+                    dgvS4.CurrentCell = dgvS4.Rows[Filas].Cells[0];
+                    correcto = S4.Insertar_EncuS4();
+                    if (correcto)
+                        Filas++;
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(S4.obtenerError());
+                        break;
+                    }
+                }
                 tbpS4.Parent = null;
                 tbpS5.Parent = tbcDatos;
-                //para s2
+                //para s5
                 int iS5 = 1;
                 for (iS5 = 1; iS5 < iS1; iS5++)
                 {
