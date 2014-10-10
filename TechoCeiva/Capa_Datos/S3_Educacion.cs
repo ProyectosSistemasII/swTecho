@@ -12,7 +12,6 @@ namespace Capa_Datos
         public int CodigoS3 { get; set; }
         public string LeerEscribir { get; set; }
         public string GradoEducacion { get; set; }
-        public string Tecnico { get; set; }
         public string OtroGrado { get; set; }
         public string AsistenciaEstablecimiento { get; set; }
         public string NombreEstablecimiento { get; set; }
@@ -34,7 +33,6 @@ namespace Capa_Datos
             this.CodigoS3 = 0;
             this.LeerEscribir = "";
             this.GradoEducacion = "";
-            this.Tecnico = "";
             this.OtroGrado = "";
             this.AsistenciaEstablecimiento = "";
             this.NombreEstablecimiento = "";
@@ -48,14 +46,13 @@ namespace Capa_Datos
             this.Encuestas_idEncuestas = 0;
         }
 
-        public S3_Educacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string Tecnico, string OtroGrado,
-            string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento, 
+        public S3_Educacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
+            string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
             string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas)
         {
             this.CodigoS3 = CodigoS3;
             this.LeerEscribir = LeerEscribir;
             this.GradoEducacion = GradoEducacion;
-            this.Tecnico = Tecnico;
             this.OtroGrado = OtroGrado;
             this.AsistenciaEstablecimiento = AsistenciaEstablecimiento;
             this.NombreEstablecimiento = NombreEstablecimiento;
@@ -68,6 +65,7 @@ namespace Capa_Datos
             this.TipoFormacion = TipoFormacion;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
             this.errores = new List<Error>();
+            this.InsertarS3();
         }
 
         public void InsertarS3()
@@ -75,12 +73,11 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S3_Edu(CodigoS3, LeerEscribir, GradoEducacion, Tecnico, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento, OtroTipoEstablecimiento, UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas) VALUES (@CodigoS3, @LeerEscribir, @GradoEducacion, @Tecnico, @OtroGrado, @AsistenciaEstablecimiento, @NombreEstablecimiento, @TipoEstablecimiento, @OtroTipoEstablecimiento, @UbicacionEstablecimiento, @RazonNoAsistencia, @OtraRazon, @FormacionComplementaria, @TipoFormacion, @Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO s3_edu(CodigoS3, LeerEscribir, GradoEducacion, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento, OtroTipoEstablecimiento, UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas) VALUES (@CodigoS3, @LeerEscribir, @GradoEducacion, @OtroGrado, @AsistenciaEstablecimiento, @NombreEstablecimiento, @TipoEstablecimiento, @OtroTipoEstablecimiento, @UbicacionEstablecimiento, @RazonNoAsistencia, @OtraRazon, @FormacionComplementaria, @TipoFormacion, @Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@CodigoS3", this.CodigoS3);
                 comando.Parameters.AddWithValue("@LeerEscribir", this.LeerEscribir);
                 comando.Parameters.AddWithValue("@GradoEducacion", this.GradoEducacion);
-                comando.Parameters.AddWithValue("@Tecnico", this.Tecnico);
                 comando.Parameters.AddWithValue("@OtroGrado", this.OtroGrado);
                 comando.Parameters.AddWithValue("@AsistenciaEstablecimiento", this.AsistenciaEstablecimiento);
                 comando.Parameters.AddWithValue("@NombreEstablecimiento", this.NombreEstablecimiento);

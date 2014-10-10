@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace TechoCeiva
 {
     public partial class frmEncuesta : Form
@@ -1461,13 +1462,15 @@ namespace TechoCeiva
                 {
                     dgvS5.Rows.Add();
                     dgvS5.Rows[iS5 - 1].Cells[0].Value = iS5;
+                    for (int i = 1; i < 15; i++)
+                        dgvS5.Rows[iS5 - 1].Cells[i].Value = "";
                 }
             }
         }
 
         private void frmEncuesta_Load(object sender, EventArgs e)
         {
-            tbpInfo.Parent = null;
+            //tbpInfo.Parent = null;
             tbpS1.Parent = null;
             tbpS2.Parent = null;
             tbpS3.Parent = null;
@@ -1479,7 +1482,7 @@ namespace TechoCeiva
             tbpS9.Parent = null;
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
-            //tbpS11.Parent = null;
+            tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
             dgvS2.Columns[0].ReadOnly = true;
             dgvS3.Columns[0].ReadOnly = true;
@@ -1621,6 +1624,8 @@ namespace TechoCeiva
                 {
                     dgvS3.Rows.Add();
                     dgvS3.Rows[iS3 - 1].Cells[0].Value = iS3;
+                    for (int i = 1; i < 13; i++)
+                        dgvS3.Rows[iS3 - 1].Cells[i].Value = "";
                 }
             }
         }
@@ -1631,17 +1636,15 @@ namespace TechoCeiva
             S3_EducacionLN S3 = new S3_EducacionLN();
             Boolean correcto = false;
             int Filas = 0;
+            //Recorrer para validar
             foreach (DataGridViewRow row in dgvS3.Rows)
             {
                 dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
-                correcto = S3.Insertar_EncuS3(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
+                correcto = S3.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
                     row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
-                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), row.Cells[13].Value.ToString(), idEncu, Filas);
+                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas); 
                 if (correcto)
-                {
-                    //MessageBox.Show("Ingresado Correctamente");
                     Filas++;
-                }
                 else
                 {
                     Filas = 0;
@@ -1649,18 +1652,41 @@ namespace TechoCeiva
                     break;
                 }
             }
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
-                MessageBox.Show("Ingresado correctamente");
-                tbpS3.Parent = null;
-                tbpS4.Parent = tbcDatos;
-                //para s2
-                int iS4 = 1;
-                for (iS4 = 1; iS4 < iS1; iS4++)
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS3.Rows)
                 {
-                    dgvS4.Rows.Add();
-                    dgvS4.Rows[iS4 - 1].Cells[0].Value = iS4;
+                    dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
+                    correcto = S3.Insertar_EncuS3();
+                    if (correcto)
+                    {
+                        //MessageBox.Show("Ingresado Correctamente");
+                        Filas++;
+                    }
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(S3.obtenerError());
+                        break;
+                    }
                 }
+               // if (correcto)
+                //{
+                   // MessageBox.Show("Ingresado correctamente");
+                    tbpS3.Parent = null;
+                    tbpS4.Parent = tbcDatos;
+                    //para s2
+                    int iS4 = 1;
+                    for (iS4 = 1; iS4 < iS1; iS4++)
+                    {
+                        dgvS4.Rows.Add();
+                        dgvS4.Rows[iS4 - 1].Cells[0].Value = iS4;
+                        for (int i = 1; i < 13; i++)
+                            dgvS4.Rows[iS4 - 1].Cells[i].Value = "";
+                    }
+               // }
             }
         }
 
@@ -1987,6 +2013,11 @@ namespace TechoCeiva
                 MessageBox.Show("Debe Continuar con la pregunta 4", "Aviso");
                 cbxS11_4_ViviedaActual.Focus();
             }
+
+        }
+
+        private void tbpS4_Click(object sender, EventArgs e)
+        {
 
         }        
     }
