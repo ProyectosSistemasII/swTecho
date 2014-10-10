@@ -73,19 +73,14 @@ namespace Capa_Logica
 
         public void verificarDatos(int filas)
         {
-            if (this.AsistenciaSalud == "")
+            if (this.AsistenciaSalud.Equals("Nunca") || this.AsistenciaSalud.Equals("NS/NR"))
             {
-                Error error = new Error("Colocar la asistencia a un centro de salud en la fila " + filas.ToString(), 5000, 1);
-                errores.Add(error);
+                this.NombreCentro = "";
+                this.UbicacionCentro = "";
             }
-            if (this.NombreCentro == "")
+            else if (this.NombreCentro.Equals(""))
             {
                 Error error = new Error("Colocar el nombre del centro de salud en la fila " + filas.ToString(), 5000, 1);
-                errores.Add(error);
-            }
-            if (this.UbicacionCentro == "")
-            {
-                Error error = new Error("Colocar la ubicación del centro de salud en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.ProblemaSalud == true && this.EspecificarProblemaSalud == "")
@@ -113,7 +108,11 @@ namespace Capa_Logica
                 Error error = new Error("Debe especificar el tipo de discapacidad en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.Discapacidad != "No tiene ninguna de estas condiciones de larga duración" && this.OrigenDiscapacidad == "")
+            if (this.Discapacidad.Equals("No tiene ninguna de estas condiciones de larga duración") || this.Discapacidad.Equals("NS/NR"))
+            {
+                this.OrigenDiscapacidad = "";
+            }
+            else if (this.OrigenDiscapacidad.Equals(""))
             {
                 Error error = new Error("Colocar el origen de discapacidad en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
