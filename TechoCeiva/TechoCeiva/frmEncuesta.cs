@@ -943,9 +943,18 @@ namespace TechoCeiva
         private void cbxS9_Propietario_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS9_Propietario.SelectedIndex.Equals(3))
+            {
                 txtS9_OtroPropietario.Enabled = true;
+                txtS9_OtroPropietario.Focus();
+                MessageBox.Show("Depues de 'Especificar' debe continuar con la pregunta 5", "Aviso");
+                
+            }
             else
+            {
+                MessageBox.Show("Debe continuar con la pregunta 5", "Aviso");
                 txtS9_OtroPropietario.Enabled = false;
+                cbxS9_OtraPropiedad.Focus();
+            }
         }
 
         private void cbxS9_TipoPropietario_SelectedIndexChanged(object sender, EventArgs e)
@@ -1903,6 +1912,15 @@ namespace TechoCeiva
                 txtS1014_Especificar.Enabled = false;
             else
                 txtS1014_Especificar.Enabled = true;
+        }
+
+        private void cbxS9_1_Propio_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbxS9_1_Propio.SelectedIndex == 1)
+            {
+                MessageBox.Show("Debe Continuar con la pregunta 3","Aviso");
+                cbxS9_TipoPropietario.Focus();
+            }
         }        
     }
 }

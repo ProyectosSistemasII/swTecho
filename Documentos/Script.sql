@@ -700,7 +700,7 @@ CREATE  TABLE IF NOT EXISTS `S9_Prop` (
   `PropietarioTerreno` VARCHAR(45) NULL ,
   `TelefonoPropietarioTerreno` VARCHAR(45) NULL ,
   `NSNR` TINYINT(1) NULL ,
-  `OtraPropiedad` TINYINT(1) NULL ,
+  `OtraPropiedad` VARCHAR(45) NULL ,
   `PropiedadA` VARCHAR(45) NULL ,
   `PropiedadB` VARCHAR(45) NULL ,
   `PropiedadC` VARCHAR(45) NULL ,

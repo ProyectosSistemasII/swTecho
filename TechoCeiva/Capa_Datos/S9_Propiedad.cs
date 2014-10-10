@@ -63,7 +63,7 @@ namespace Capa_Datos
             this.OtraPropiedadC = PropiedadC;
             this.idEncuestas = idEncuestas;
             this.errores = new List<Error>();
-            this.InsertarS9();
+            
         }
         public void InsertarS9()
         {
