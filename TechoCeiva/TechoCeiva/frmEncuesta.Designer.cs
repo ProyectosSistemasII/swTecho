@@ -85,7 +85,6 @@
             this.tbpS2 = new System.Windows.Forms.TabPage();
             this.pbNextS2 = new System.Windows.Forms.PictureBox();
             this.gbS2 = new System.Windows.Forms.GroupBox();
-            this.dgvS2 = new System.Windows.Forms.DataGridView();
             this.tbpS3 = new System.Windows.Forms.TabPage();
             this.pbNextS3 = new System.Windows.Forms.PictureBox();
             this.gbS3 = new System.Windows.Forms.GroupBox();
@@ -639,14 +638,6 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewComboBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -660,6 +651,15 @@
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -674,7 +674,6 @@
             this.tbpS2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS2)).BeginInit();
             this.gbS2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).BeginInit();
             this.tbpS3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS3)).BeginInit();
             this.gbS3.SuspendLayout();
@@ -807,6 +806,7 @@
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -1376,26 +1376,6 @@
             this.gbS2.TabIndex = 1;
             this.gbS2.TabStop = false;
             this.gbS2.Text = "CARACTERÍSTICAS DEMOGRÁFICAS DE LOS INTEGRANTES DEL HOGAR";
-            // 
-            // dgvS2
-            // 
-            this.dgvS2.AllowUserToAddRows = false;
-            this.dgvS2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewComboBoxColumn3,
-            this.dataGridViewComboBoxColumn4,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS2.Location = new System.Drawing.Point(3, 16);
-            this.dgvS2.Name = "dgvS2";
-            this.dgvS2.Size = new System.Drawing.Size(921, 438);
-            this.dgvS2.TabIndex = 0;
             // 
             // tbpS3
             // 
@@ -7230,73 +7210,6 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
                 "urante toda su VIDA FAMILIAR?\r\n";
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "¿A qué núcleo pertenece?";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "¿Me podría indicar el DPI?";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewComboBoxColumn3
-            // 
-            this.dataGridViewComboBoxColumn3.HeaderText = "¿Cuál es el estado civil?";
-            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
-            "Casado/a",
-            "Unido/a de hecho",
-            "Divorciado/a",
-            "Separado/a de hecho",
-            "Viudo/a",
-            "Soltero/a",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
-            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn4
-            // 
-            this.dataGridViewComboBoxColumn4.HeaderText = "¿Cuál es la relación de parentesco con el jefe del hogar?";
-            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
-            "Jefe/a de Hogar",
-            "Cónyuge o pareja",
-            "Hijo/a, hijastro/a",
-            "Padre o madre",
-            "Suegro/a",
-            "Yerno o nuera",
-            "Nieto/a",
-            "Hermano/a",
-            "Cuñado/a",
-            "Sobrino/a",
-            "Tío/a",
-            "Otro familiar (especificar)",
-            "No familiar (especificar)",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
-            this.dataGridViewComboBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "¿Cuál es el lugar de orígen (nacimiento)?";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "¿Cuál es la nacionalidad?";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.HeaderText = "Código";
@@ -7434,6 +7347,94 @@
             this.Column27.HeaderText = "Especificar";
             this.Column27.Name = "Column27";
             // 
+            // dgvS2
+            // 
+            this.dgvS2.AllowUserToAddRows = false;
+            this.dgvS2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewComboBoxColumn3,
+            this.dataGridViewComboBoxColumn4,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvS2.Location = new System.Drawing.Point(3, 16);
+            this.dgvS2.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvS2.Name = "dgvS2";
+            this.dgvS2.Size = new System.Drawing.Size(921, 438);
+            this.dgvS2.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "¿A qué núcleo pertenece?";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "¿Me podría indicar el DPI?";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewComboBoxColumn3
+            // 
+            this.dataGridViewComboBoxColumn3.HeaderText = "¿Cuál es el estado civil?";
+            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
+            "Casado/a",
+            "Unido/a de hecho",
+            "Divorciado/a",
+            "Separado/a de hecho",
+            "Viudo/a",
+            "Soltero/a\t",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
+            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewComboBoxColumn4
+            // 
+            this.dataGridViewComboBoxColumn4.HeaderText = "¿Cuál es la relación de parentesco con el jefe del hogar?";
+            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
+            "Jefe/a de Hogar",
+            "Cónyuge o pareja",
+            "Hijo/a, hijastro/a",
+            "Padre o madre",
+            "Suegro/a",
+            "Yerno o nuera",
+            "Nieto/a",
+            "Hermano/a",
+            "Cuñado/a",
+            "Sobrino/a",
+            "Tío/a",
+            "Otro familiar (especificar)",
+            "No familiar (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
+            this.dataGridViewComboBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "¿Cuál es el lugar de orígen (nacimiento)?";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "¿Cuál es la nacionalidad?";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
             // frmEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7462,7 +7463,6 @@
             this.tbpS2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS2)).EndInit();
             this.gbS2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).EndInit();
             this.tbpS3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS3)).EndInit();
             this.gbS3.ResumeLayout(false);
@@ -7696,6 +7696,7 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7759,7 +7760,6 @@
         private System.Windows.Forms.GroupBox gbS1;
         private System.Windows.Forms.DataGridView dgvS1;
         private System.Windows.Forms.GroupBox gbS2;
-        private System.Windows.Forms.DataGridView dgvS2;
         private System.Windows.Forms.GroupBox gbS3;
         private System.Windows.Forms.DataGridView dgvS3;
         private System.Windows.Forms.TabPage tbpS11;
@@ -8315,14 +8315,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn5;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn6;
@@ -8336,6 +8328,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
+        private System.Windows.Forms.DataGridView dgvS2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
 
 
     }

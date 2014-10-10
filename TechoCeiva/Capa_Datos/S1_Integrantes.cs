@@ -42,7 +42,6 @@ namespace Capa_Datos
             this.Embarazo = Embarazo;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
             this.errores = new List<Error>();
-            this.InsertarS1();
         }
 
         public void InsertarS1()

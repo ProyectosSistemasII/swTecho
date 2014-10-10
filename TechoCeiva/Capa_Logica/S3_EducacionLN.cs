@@ -32,11 +32,10 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
-        public Boolean Insertar_EncuS3(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
+        public S3_EducacionLN(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
-            string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas, int Filas)
+            string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas)
         {
-            Boolean correcto = true;
             this.CodigoS3 = CodigoS3;
             this.LeerEscribir = LeerEscribir;
             this.GradoEducacion = GradoEducacion;
@@ -52,19 +51,17 @@ namespace Capa_Logica
             this.TipoFormacion = TipoFormacion;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
             this.errores = new List<Error>();
-            this.verificarDatos(Filas);
+        }
 
-            if (errores.Count > 0)
-            {
-                return correcto = false;
-            }
-
+        public Boolean Insertar_EncuS3()
+        {
+            Boolean correcto = true;
             S3_Educacion educacion = new S3_Educacion(CodigoS3, LeerEscribir, GradoEducacion, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento,
                 OtroTipoEstablecimiento, UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas);
-
+            educacion.InsertarS3();
             if (errores.Count > 0)
             {
-                return correcto = false;
+                correcto = false;
             }
             return correcto;
         }

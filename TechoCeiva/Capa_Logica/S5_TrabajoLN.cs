@@ -28,6 +28,29 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
+        public S5_TrabajoLN(int CodigoS5, Boolean Trabajo, Boolean Buscando, string RazonNoBusqueda, string OtraRazonNoBusqueda, string Ocupacion,
+            string OtraOcupacion, string ContratoTrabajo, string CondicionLaboral, string UbicacionTrabajo, Boolean OtrosTrabajos, string EspecificarOtrosTrabajos,
+            int DiasTrabajo, float HorasTrabajo, float IngresoMensual, int Encuestas_idEncuestas)
+        {
+            this.CodigoS5 = CodigoS5;
+            this.Trabajo = Trabajo;
+            this.Buscando = Buscando;
+            this.RazonNoBusqueda = RazonNoBusqueda;
+            this.OtraRazonNoBusqueda = OtraRazonNoBusqueda;
+            this.Ocupacion = Ocupacion;
+            this.OtraOcupacion = OtraOcupacion;
+            this.ContratoTrabajo = ContratoTrabajo;
+            this.CondicionLaboral = CondicionLaboral;
+            this.UbicacionTrabajo = UbicacionTrabajo;
+            this.OtrosTrabajos = OtrosTrabajos;
+            this.EspecificarOtrosTrabajos = EspecificarOtrosTrabajos;
+            this.DiasTrabajo = DiasTrabajo;
+            this.HorasTrabajo = HorasTrabajo;
+            this.IngresoMensual = IngresoMensual;
+            this.Encuestas_idEncuestas = Encuestas_idEncuestas;
+            this.errores = new List<Error>();
+        }
+
         public Boolean Insertar_EncuS5()
         {
             Boolean correcto = true;

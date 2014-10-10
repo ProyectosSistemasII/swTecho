@@ -6,7 +6,6 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-
     public class S1_IntegrantesLN : S1_Integrantes
     {
         public S1_IntegrantesLN()
@@ -19,10 +18,10 @@ namespace Capa_Logica
             this.Embarazo = "";
             this.Encuestas_idEncuestas = 0;
         }
-        public Boolean Insertar_EncuS1(int CodigoS1, string NombreCompleto, string ApellidosCompleto, string FechaNac, string Genero,
-            string Embarazo, int Encuestas_idEncuestas, int filas)
+
+        public S1_IntegrantesLN(int CodigoS1, string NombreCompleto, string ApellidosCompleto, string FechaNac, string Genero,
+            string Embarazo, int Encuestas_idEncuestas)
         {
-            Boolean correcto = true;
             this.CodigoS1 = CodigoS1;
             this.NombreCompleto = NombreCompleto;
             this.ApellidosCompleto = ApellidosCompleto;
@@ -31,14 +30,13 @@ namespace Capa_Logica
             this.Embarazo = Embarazo;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
             this.errores = new List<Error>();
-            this.verificarDatos(filas);
-            if (errores.Count > 0)
-            {
-                return correcto = false;
-            }
-            S1_Integrantes integrantes = new S1_Integrantes(CodigoS1, NombreCompleto, ApellidosCompleto, FechaNac, Genero, Embarazo,
-            Encuestas_idEncuestas);
+        }
 
+        public Boolean Insertar_EncuS1()
+        {
+            Boolean correcto = true;
+            S1_Integrantes integrantes = new S1_Integrantes(CodigoS1, NombreCompleto, ApellidosCompleto, FechaNac, Genero, Embarazo, Encuestas_idEncuestas);
+            integrantes.InsertarS1();
             if (errores.Count > 0)
             {
                 return correcto = false;
@@ -58,12 +56,30 @@ namespace Capa_Logica
                 Error error = new Error("Apellidos en fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            //falta validar fechanac
             if (this.FechaNac == "")
             {
                 Error error = new Error("Fecha nacimiento en fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
+        }
+
+        public Boolean validacion(int CodigoS1, string NombreCompleto, string ApellidosCompleto, string FechaNac, string Genero,
+            string Embarazo, int Encuestas_idEncuestas, int filas)
+        {
+            this.CodigoS1 = CodigoS1;
+            this.NombreCompleto = NombreCompleto;
+            this.ApellidosCompleto = ApellidosCompleto;
+            this.FechaNac = FechaNac;
+            this.Genero = Genero;
+            this.Embarazo = Embarazo;
+            this.Encuestas_idEncuestas = Encuestas_idEncuestas;
+            this.errores = new List<Error>();
+            this.verificarDatos(filas + 1);
+            if (errores.Count > 0)
+            {
+                return false;
+            }
+            return true;
         }
 
         public string obtenerError()
