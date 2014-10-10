@@ -45,17 +45,19 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
-        public _Comunidad(string Nombre, string Municipio, string Departamento)
+        public _Comunidad(int idComunidad, string Nombre, string Municipio, string Departamento)
         {
+            this.idComunidad=idComunidad;
             this.Nombre = Nombre;
             this.DepartamentoNombre = Departamento;
             this.MunicipioNombre = Municipio;
         }
 
+
         public List<_Comunidad> ObtenerComunidades()
         {
             List<_Comunidad> ListaComunidad = new List<_Comunidad>();
-            MySqlCommand comando = new MySqlCommand("SELECT Comunidad.Nombre, municipio.NombreM, departamento.NombreD FROM comunidad inner join Departamento on Departamento_idDepartamento = idDepartamento inner join Municipio  on Municipio_idMunicipio = idMunicipio where activo=true group by comunidad.Nombre", conex);
+            MySqlCommand comando = new MySqlCommand("SELECT Comunidad.idComunidad, Comunidad.Nombre, municipio.NombreM, departamento.NombreD FROM comunidad inner join Departamento on Departamento_idDepartamento = idDepartamento inner join Municipio  on Municipio_idMunicipio = idMunicipio where activo=true group by comunidad.Nombre", conex);
             comando.CommandTimeout = 12280;
             DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
@@ -66,7 +68,7 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                _Comunidad Comunidades = new _Comunidad(Convert.ToString(row["Nombre"]), Convert.ToString(row["NombreM"]), Convert.ToString(row["NombreD"]));
+                _Comunidad Comunidades = new _Comunidad(Convert.ToInt32(row["idComunidad"]),Convert.ToString(row["Nombre"]), Convert.ToString(row["NombreM"]), Convert.ToString(row["NombreD"]));
                 ListaComunidad.Add(Comunidades);
             }
             return ListaComunidad;
@@ -117,9 +119,9 @@ namespace Capa_Datos
             }
         }
 
-        public void ModificarComunidad()
+        public void ModificarComunidad(int idComunidad)
         {
-            string consulta = ""; //= "update Comunidad set Nombre = @Nombre, Departamento_idDepartamento = @Departamento_idDepartamento, Municipio_idMunicipio = @Municipio_idMunicipio where idComunidad=@idComunidad)";
+            string consulta = "update Comunidad set Nombre = @Nombre, Departamento_idDepartamento = @Departamento_idDepartamento, Municipio_idMunicipio = @Municipio_idMunicipio where idComunidad="+idComunidad;
             MySqlCommand comando = new MySqlCommand(consulta, conex);
             comando.Parameters.AddWithValue("@idComunidad", this.idComunidad);
             comando.Parameters.AddWithValue("@Nombre", this.Nombre);
@@ -139,9 +141,9 @@ namespace Capa_Datos
             }
         }
 
-        public Boolean eliminarComunidad(string id)
+        public Boolean eliminarComunidad(int id)
         {
-            MySqlCommand eliminar = new MySqlCommand("update Comunidad set Activo=false where idComunidad='" + id + "'", conex);
+            MySqlCommand eliminar = new MySqlCommand("update Comunidad set Activo=false where idComunidad="+id, conex);
 
             eliminar.Connection.Open();
             eliminar.ExecuteNonQuery();

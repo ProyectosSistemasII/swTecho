@@ -22,6 +22,8 @@ namespace TechoCeiva
     /// </summary>
     public partial class UC_Comunidad : UserControl
     {
+        int idComn = 0;
+
         public UC_Comunidad()
         {
             InitializeComponent();
@@ -80,6 +82,61 @@ namespace TechoCeiva
             cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
             cmbMunicipio.SelectedValuePath = "idMunicipio";
             cmbMunicipio.DisplayMemberPath = "nombre";
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            String nombre = txtNombre.Text;
+            int departamento = Convert.ToInt32(cmbDepartamento.SelectedValue);
+            int municipio = Convert.ToInt32(cmbMunicipio.SelectedValue);
+
+            _ComunidadLN comunidad = new _ComunidadLN(nombre, true, departamento, municipio);
+            Boolean correcto = comunidad.Ingresar_C();
+
+
+            if (correcto)
+            {
+                comunidad.ModificarComunidad(idComn);
+                MessageBox.Show("Modificación Exitosa");
+                fillDataGrid(comunidad);
+            }
+            else
+            {
+                MessageBox.Show(comunidad._obtenerError());
+            }
+            
+               
+        }
+
+        private void dataGridComn_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            _Comunidad sele = dataGridComn.SelectedItem as _Comunidad;
+
+            txtNombre.Text = sele.Nombre;
+            cmbDepartamento.Text = sele.DepartamentoNombre;
+            cmbMunicipio.Text = sele.MunicipioNombre;
+            idComn = sele.idComunidad;
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            _ComunidadLN comunidad = new _ComunidadLN();
+            Boolean correcto = comunidad.Ingresar_C();
+
+
+            if (correcto)
+            {
+                comunidad.eliminarComunidad(idComn);
+                MessageBox.Show("Eliminado!!!");
+                txtNombre.Text = "";
+                cmbDepartamento.Text = "";
+                fillDataGrid(comunidad);
+            }
+            else
+            {
+                MessageBox.Show(comunidad._obtenerError());
+            }
+            
         }
     }
 }

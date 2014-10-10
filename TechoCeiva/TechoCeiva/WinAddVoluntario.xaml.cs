@@ -56,6 +56,9 @@ namespace TechoCeiva
             {
                 voluntario.Insertar_V();
                 MessageBox.Show("Ingreso Exitoso");
+                this.Close();
+                UC_Voluntarios vol = new UC_Voluntarios();
+                vol.fillDataGrid(voluntario);
                 
             }
             else

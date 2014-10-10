@@ -34,7 +34,7 @@ namespace TechoCeiva
             
         }
 
-        private void fillDataGrid(_VoluntariosLN voluntarios)
+        public void fillDataGrid(_VoluntariosLN voluntarios)
         {
             List<_Voluntarios> vol = new List<_Voluntarios>();
             vol = voluntarios.Obtener_V();
@@ -47,6 +47,11 @@ namespace TechoCeiva
             WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
             nWinAddVoluntario.Show();
+        }
+
+        private void datagdVoluntarios_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
         }
 	}
 }
