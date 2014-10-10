@@ -1561,19 +1561,29 @@ namespace TechoCeiva
         private void pbNextS3_Click(object sender, EventArgs e)
         {
             S3_EducacionLN S3 = new S3_EducacionLN();
-            Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
-            // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
+            Boolean correcto = false;
+            int Filas = 0;
             foreach (DataGridViewRow row in dgvS3.Rows)
             {
+                dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
+                correcto = S3.Insertar_EncuS3(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
+                    row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
+                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), row.Cells[13].Value.ToString(), idEncu, Filas);
                 if (correcto)
                 {
                     //MessageBox.Show("Ingresado Correctamente");
+                    Filas++;
                 }
                 else
+                {
+                    Filas = 0;
                     MessageBox.Show(S3.obtenerError());
+                    break;
+                }
             }
             if (correcto)
             {
+                MessageBox.Show("Ingresado correctamente");
                 tbpS3.Parent = null;
                 tbpS4.Parent = tbcDatos;
                 //para s2
