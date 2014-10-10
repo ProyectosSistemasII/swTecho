@@ -53,7 +53,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
-        public Boolean Insertar_EncuS3()
+        /*public Boolean Insertar_EncuS3()
         {
             Boolean correcto = true;
             S3_Educacion educacion = new S3_Educacion(CodigoS3, LeerEscribir, GradoEducacion, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento,
@@ -65,7 +65,7 @@ namespace Capa_Logica
             }
             return correcto;
         }
-
+        */
         public Boolean validacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
             string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas, int Filas)
@@ -185,6 +185,8 @@ namespace Capa_Logica
             }
             return correcto;
         }
+
+
         public string obtenerError()
         {
             Error error = errores[0];

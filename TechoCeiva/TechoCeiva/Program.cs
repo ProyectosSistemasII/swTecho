@@ -15,11 +15,7 @@ namespace TechoCeiva
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new frmEncuesta());
-=======
             Application.Run(new frmMenu());
->>>>>>> origin/master
         }
     }
 }

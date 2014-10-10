@@ -1533,7 +1533,7 @@ namespace TechoCeiva
             tbpS7.Parent = null;
             tbpS8.Parent = null;
             tbpS9.Parent = null;
-            //tbpS10.Parent = null;
+            tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
@@ -1616,7 +1616,7 @@ namespace TechoCeiva
             foreach (DataGridViewRow row in dgvS1.Rows)
             {
                 dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
-                correcto = S1.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), 4, Filas);
+                correcto = S1.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), idEncu, Filas);
                 if (correcto)
                     Filas++;
                 else
@@ -2106,7 +2106,7 @@ namespace TechoCeiva
 
         }
 
-<<<<<<< HEAD
+
         private void cbxS10_ParticipacionGrupo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
@@ -2124,11 +2124,6 @@ namespace TechoCeiva
                 MessageBox.Show("Debe Continuar con la pregunta 19", "Aviso");
                 txtS10_LiderA.Focus();
             }
-=======
-        private void tbpS4_Click(object sender, EventArgs e)
-        {
-
->>>>>>> origin/master
-        }        
+        }
     }
 }

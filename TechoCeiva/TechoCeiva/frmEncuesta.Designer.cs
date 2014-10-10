@@ -1446,7 +1446,6 @@
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
             this.tbpS4.UseVisualStyleBackColor = true;
-            this.tbpS4.Click += new System.EventHandler(this.tbpS4_Click);
             // 
             // pbS4_Siguiente
             // 
@@ -4397,11 +4396,7 @@
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
-<<<<<<< HEAD
-            this.cklS8_S807.Size = new System.Drawing.Size(250, 79);
-=======
             this.cklS8_S807.Size = new System.Drawing.Size(250, 34);
->>>>>>> origin/master
             this.cklS8_S807.TabIndex = 9;
             // 
             // label66
@@ -6112,11 +6107,7 @@
             "NS/NR"});
             this.cklS1007_Com.Location = new System.Drawing.Point(20, 25);
             this.cklS1007_Com.Name = "cklS1007_Com";
-<<<<<<< HEAD
             this.cklS1007_Com.Size = new System.Drawing.Size(250, 94);
-=======
-            this.cklS1007_Com.Size = new System.Drawing.Size(250, 64);
->>>>>>> origin/master
             this.cklS1007_Com.TabIndex = 5;
             this.cklS1007_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1007_Com_ItemCheck);
             // 
@@ -6181,11 +6172,7 @@
             "NS/NR"});
             this.cklS1006_Com.Location = new System.Drawing.Point(19, 28);
             this.cklS1006_Com.Name = "cklS1006_Com";
-<<<<<<< HEAD
-            this.cklS1006_Com.Size = new System.Drawing.Size(250, 139);
-=======
             this.cklS1006_Com.Size = new System.Drawing.Size(250, 109);
->>>>>>> origin/master
             this.cklS1006_Com.TabIndex = 9;
             this.cklS1006_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1006_Com_ItemCheck);
             // 
