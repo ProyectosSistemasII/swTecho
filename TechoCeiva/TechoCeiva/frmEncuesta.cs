@@ -1225,16 +1225,67 @@ namespace TechoCeiva
         private void pbS5_Siguiente_Click(object sender, EventArgs e)
         {
             S5_TrabajoLN S5 = new S5_TrabajoLN();
-            Boolean correcto = true;//S5.Insertar_EncuS5(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            Boolean correcto = false;
+            int Filas = 0;
+            //Recorrer para validar
+            foreach (DataGridViewRow row in dgvS5.Rows)
+            {
+                dgvS5.CurrentCell = dgvS5.Rows[Filas].Cells[0];
+                Boolean trabajo = false;
+                Boolean buscando = false;
+                Boolean otrosTrabajos = false;
+                int dias = 0; float horas = 0; float ingreso = 0;
+                if (row.Cells[1].Value.ToString().Equals("Si"))
+                    trabajo = true;
+                if (row.Cells[2].Value.ToString().Equals("Si"))
+                    buscando = true;
+                if (row.Cells[10].Value.ToString().Equals("Si (especificar)"))
+                    otrosTrabajos = true;
+                if (row.Cells[12].Value.ToString() == "")
+                    dias = 0;
+                else
+                    dias = Convert.ToInt32(row.Cells[12].Value.ToString());
+                if (row.Cells[13].Value.ToString() == "")
+                    horas = 0;
+                else
+                    horas = float.Parse(row.Cells[13].Value.ToString());
+                if (row.Cells[14].Value.ToString() == "")
+                    ingreso = 0;
+                else
+                    ingreso = float.Parse(row.Cells[14].Value.ToString());
+                correcto = S5.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), trabajo, buscando, row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), otrosTrabajos, row.Cells[11].Value.ToString(), dias, horas, ingreso, 4, Filas);
+                if (correcto)
+                    Filas++;
+                else
+                {
+                    Filas = 0;
+                    MessageBox.Show(S5.obtenerError());
+                    break;
+                }
+            }
+
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
+                //Recorrer para insertar
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS5.Rows)
+                {
+                    dgvS5.CurrentCell = dgvS5.Rows[Filas].Cells[0];
+                    correcto = S5.Insertar_EncuS5();
+                    if (correcto)
+                    {
+                        Filas++;
+                    }
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(S5.obtenerError());
+                        break;
+                    }
+                }
                 tbpS5.Parent = null;
                 tbpS6.Parent = tbcDatos;
-            }
-            else
-            {
-                MessageBox.Show(S5.obtenerError());
             }
         }
 
