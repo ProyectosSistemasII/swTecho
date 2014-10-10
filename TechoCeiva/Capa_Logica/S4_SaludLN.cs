@@ -26,6 +26,26 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
+        public S4_SaludLN(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
+            string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas)
+        {
+            this.CodigoS4 = CodigoS4;
+            this.AsistenciaSalud = AsistenciaSalud;
+            this.NombreCentro = NombreCentro;
+            this.UbicacionCentro = UbicacionCentro;
+            this.ProblemaSalud = ProblemaSalud;
+            this.EspecificarProblemaSalud = EspecificarProblemaSalud;
+            this.Accidente = Accidente;
+            this.TipoAccidente = TipoAccidente;
+            this.Seguro = Seguro;
+            this.Discapacidad = Discapacidad;
+            this.OtraDiscapacidad = OtraDiscapacidad;
+            this.OrigenDiscapacidad = OrigenDiscapacidad;
+            this.OtroOrigen = OtroOrigen;
+            this.Encuestas_idEncuestas = Encuestas_idEncuestas;
+            this.errores = new List<Error>();
+        }
+
         public Boolean validacion(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
             string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas, int filas)
         {

@@ -333,7 +333,7 @@
 			<ColumnDefinition Width="0"/>
 		</Grid.ColumnDefinitions>
 		<Label x:Name="lblVoluntarios" Content="Voluntarios" Style="{DynamicResource SimpleLabel}" Foreground="#FF626465" FontSize="26.667" Margin="38.815,18,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <DataGrid x:Name="datagdVoluntarios" Margin="19,89.437,33.501,24.053" AutoGenerateColumns="False">
+        <DataGrid x:Name="datagdVoluntarios" Margin="12,89.437,33.501,24.053" AutoGenerateColumns="False" MouseDoubleClick="datagdVoluntarios_MouseDoubleClick" IsReadOnly="True" FontSize="14.667">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombres" Binding="{Binding nombres}"/>
                 <DataGridTextColumn Header="Apellidos" Binding="{Binding apellidos}"/>
@@ -343,6 +343,6 @@
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefonoEmergencia}"/>
             </DataGrid.Columns>            
         </DataGrid>
-		<Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Height="23" Margin="190,30.47,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnPlus_Click" />
+		<Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Height="23" Margin="190,27,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnPlus_Click" />
 	</Grid>
 </UserControl>

@@ -85,32 +85,10 @@
             this.tbpS2 = new System.Windows.Forms.TabPage();
             this.pbNextS2 = new System.Windows.Forms.PictureBox();
             this.gbS2 = new System.Windows.Forms.GroupBox();
-            this.dgvS2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS3 = new System.Windows.Forms.TabPage();
             this.pbNextS3 = new System.Windows.Forms.PictureBox();
             this.gbS3 = new System.Windows.Forms.GroupBox();
             this.dgvS3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS4 = new System.Windows.Forms.TabPage();
             this.pbS4_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -660,6 +638,28 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -674,7 +674,6 @@
             this.tbpS2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS2)).BeginInit();
             this.gbS2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).BeginInit();
             this.tbpS3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS3)).BeginInit();
             this.gbS3.SuspendLayout();
@@ -807,6 +806,7 @@
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -1285,6 +1285,7 @@
             // dgvS1
             // 
             this.dgvS1.AllowUserToAddRows = false;
+            this.dgvS1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvS1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1304,25 +1305,21 @@
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Código";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 140;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 140;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "¿Cuál es la fecha de nacimiento?";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 175;
             // 
             // dataGridViewComboBoxColumn1
             // 
@@ -1334,7 +1331,6 @@
             this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
             this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn1.Width = 175;
             // 
             // dataGridViewComboBoxColumn2
             // 
@@ -1347,7 +1343,6 @@
             this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
             this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn2.Width = 175;
             // 
             // tbpS2
             // 
@@ -1381,96 +1376,6 @@
             this.gbS2.TabIndex = 1;
             this.gbS2.TabStop = false;
             this.gbS2.Text = "CARACTERÍSTICAS DEMOGRÁFICAS DE LOS INTEGRANTES DEL HOGAR";
-            // 
-            // dgvS2
-            // 
-            this.dgvS2.AllowUserToAddRows = false;
-            this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewComboBoxColumn3,
-            this.dataGridViewComboBoxColumn4,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS2.Location = new System.Drawing.Point(3, 16);
-            this.dgvS2.Name = "dgvS2";
-            this.dgvS2.Size = new System.Drawing.Size(921, 438);
-            this.dgvS2.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "¿A qué núcleo pertenece?";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "¿Me podría indicar el DPI?";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewComboBoxColumn3
-            // 
-            this.dataGridViewComboBoxColumn3.HeaderText = "¿Cuál es el estado civil?";
-            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
-            "Casado/a\t",
-            "Unido/a de hecho\t",
-            "Divorciado/a\t",
-            "Separado/a de hecho\t",
-            "Viudo/a\t",
-            "Soltero/a\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
-            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn4
-            // 
-            this.dataGridViewComboBoxColumn4.HeaderText = "¿Cuál es la relación de parentesco con el jefe del hogar?";
-            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
-            "Jefe/a de Hogar\t",
-            "Cónyuge o pareja\t",
-            "Hijo/a, hijastro/a\t",
-            "Padre o madre\t",
-            "Suegro/a\t",
-            "Yerno o nuera\t",
-            "Nieto/a\t",
-            "Hermano/a\t",
-            "Cuñado/a\t",
-            "Sobrino/a\t",
-            "Tío/a\t",
-            "Otro familiar (especificar)\t",
-            "No familiar (especificar)\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
-            this.dataGridViewComboBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 65;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "¿Cuál es el lugar de orígen (nacimiento)?";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "¿Cuál es la nacionalidad?";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 180;
             // 
             // tbpS3
             // 
@@ -1508,6 +1413,7 @@
             // dgvS3
             // 
             this.dgvS3.AllowUserToAddRows = false;
+            this.dgvS3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvS3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
@@ -1529,143 +1435,6 @@
             this.dgvS3.Size = new System.Drawing.Size(940, 440);
             this.dgvS3.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewComboBoxColumn5
-            // 
-            this.dataGridViewComboBoxColumn5.HeaderText = "¿Sabe leer y escribir?";
-            this.dataGridViewComboBoxColumn5.Items.AddRange(new object[] {
-            "Si\t",
-            "No, sólo lee\t",
-            "No, sólo escribe\t",
-            "No, ninguno\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn5.Name = "dataGridViewComboBoxColumn5";
-            this.dataGridViewComboBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn6
-            // 
-            this.dataGridViewComboBoxColumn6.HeaderText = "¿Cuál es el grado más alto de educación que completó?\t\t";
-            this.dataGridViewComboBoxColumn6.Items.AddRange(new object[] {
-            "Ninguno\t",
-            "Pre-primaria\t",
-            "Primero primaria\t",
-            "Segundo primaria\t",
-            "Tercero primaria\t",
-            "Cuarto primaria\t",
-            "Quinto primaria\t",
-            "Sexto primaria\t",
-            "Primero Básico\t",
-            "Segundo Básico\t",
-            "Tercero Básico\t",
-            "Diversificado\t",
-            "Técnico (especificar)\t",
-            "Superior incompleto\t",
-            "Superior completo\t",
-            "Otro (especificar)\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn6.Name = "dataGridViewComboBoxColumn6";
-            this.dataGridViewComboBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewComboBoxColumn7
-            // 
-            this.dataGridViewComboBoxColumn7.HeaderText = "Actualmente, ¿Asiste a algún establecimiento educativo?";
-            this.dataGridViewComboBoxColumn7.Items.AddRange(new object[] {
-            "Si asiste\t",
-            "No asiste\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn7.Name = "dataGridViewComboBoxColumn7";
-            this.dataGridViewComboBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "¿Cuál es el nombre del centro educativo al que asiste?";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewComboBoxColumn8
-            // 
-            this.dataGridViewComboBoxColumn8.HeaderText = "¿Qué tipo de establecimiento es el centro educativo donde estudia?\n";
-            this.dataGridViewComboBoxColumn8.Items.AddRange(new object[] {
-            "Público\t",
-            "Privado\t",
-            "Por cooperativa\t",
-            "Otro (especificar)\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn8.Name = "dataGridViewComboBoxColumn8";
-            this.dataGridViewComboBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewComboBoxColumn9
-            // 
-            this.dataGridViewComboBoxColumn9.HeaderText = "¿Dónde se ubica el establecimiento educativo al que asiste?\t\t\t";
-            this.dataGridViewComboBoxColumn9.Items.AddRange(new object[] {
-            "Dentro de la comunidad\t\t",
-            "Cerca de la comunidad (menos de 1 kilómetro)\t\t",
-            "Lejos de la comunidad pero en el municipio\t\t",
-            "Fuera del municipio\t\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn9.Name = "dataGridViewComboBoxColumn9";
-            this.dataGridViewComboBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn10
-            // 
-            this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
-    "entro educativo?\t\t\t\t\t\t";
-            this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
-            "Actualmente asiste\t\t\t\t\t",
-            "No está en edad escolar aún\t\t\t\t\t",
-            "Problemas económicos\t\t\t\t\t",
-            "Preferencia o necesidad de trabajar\t\t\t\t\t",
-            "Quehaceres domésticos\t\t\t\t\t",
-            "Requiere educación especial\t\t\t\t\t",
-            "Maternidad o paternidad\t\t\t\t\t",
-            "Dificultad de acceso o movilización\t\t\t\t\t",
-            "Falta de interés personal o de padres\t\t\t\t\t",
-            "Problemas de rendimiento o conducta\t\t\t\t\t",
-            "Otra razón (especificar)\t\t\t\t\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn10.Name = "dataGridViewComboBoxColumn10";
-            this.dataGridViewComboBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "Especificar";
-            this.Column26.Name = "Column26";
-            // 
-            // dataGridViewComboBoxColumn11
-            // 
-            this.dataGridViewComboBoxColumn11.HeaderText = "¿Ha recibido algún tipo de formación complementaria?\t\t";
-            this.dataGridViewComboBoxColumn11.Items.AddRange(new object[] {
-            "Si (especificar)\t",
-            "No\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn11.Name = "dataGridViewComboBoxColumn11";
-            this.dataGridViewComboBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column27
-            // 
-            this.Column27.HeaderText = "Especificar";
-            this.Column27.Name = "Column27";
-            // 
             // tbpS4
             // 
             this.tbpS4.Controls.Add(this.pbS4_Siguiente);
@@ -1677,6 +1446,7 @@
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
             this.tbpS4.UseVisualStyleBackColor = true;
+            this.tbpS4.Click += new System.EventHandler(this.tbpS4_Click);
             // 
             // pbS4_Siguiente
             // 
@@ -1702,6 +1472,7 @@
             // dgvS4
             // 
             this.dgvS4.AllowUserToAddRows = false;
+            this.dgvS4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvS4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
@@ -1727,7 +1498,6 @@
             // 
             this.Column10.HeaderText = "Código";
             this.Column10.Name = "Column10";
-            this.Column10.Width = 50;
             // 
             // Columna1
             // 
@@ -1766,7 +1536,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
-    "nar?";
+                "nar?";
             this.Column3.Items.AddRange(new object[] {
             "Si (especificar)",
             "No",
@@ -1779,7 +1549,6 @@
             // 
             this.Column8.HeaderText = "Especificar";
             this.Column8.Name = "Column8";
-            this.Column8.Width = 65;
             // 
             // Column4
             // 
@@ -1796,7 +1565,6 @@
             // 
             this.Column9.HeaderText = "Especificar";
             this.Column9.Name = "Column9";
-            this.Column9.Width = 65;
             // 
             // Column5
             // 
@@ -1831,7 +1599,6 @@
             // 
             this.Especificar.HeaderText = "Especificar";
             this.Especificar.Name = "Especificar";
-            this.Especificar.Width = 65;
             // 
             // Column7
             // 
@@ -1852,7 +1619,6 @@
             // 
             this.Column28.HeaderText = "Especificar";
             this.Column28.Name = "Column28";
-            this.Column28.Width = 65;
             // 
             // tbpS5
             // 
@@ -1890,6 +1656,7 @@
             // dgvS5
             // 
             this.dgvS5.AllowUserToAddRows = false;
+            this.dgvS5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvS5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvS5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column25,
@@ -1907,24 +1674,23 @@
             this.Column22,
             this.Column23,
             this.Column24});
-            this.dgvS5.Location = new System.Drawing.Point(6, 19);
+            this.dgvS5.Location = new System.Drawing.Point(4, 23);
             this.dgvS5.Name = "dgvS5";
             this.dgvS5.Size = new System.Drawing.Size(1326, 435);
-            this.dgvS5.TabIndex = 0;
+            this.dgvS5.TabIndex = 1;
             // 
             // Column25
             // 
             this.Column25.HeaderText = "Código";
             this.Column25.Name = "Column25";
-            this.Column25.Width = 50;
             // 
             // Column11
             // 
             this.Column11.HeaderText = " ¿Cuenta actualmente con trabajo remunerado o por cuenta propia?";
             this.Column11.Items.AddRange(new object[] {
-            "01. Si",
-            "02. No",
-            "03. NS/NR"});
+            "Si",
+            "No",
+            "NS/NR"});
             this.Column11.Name = "Column11";
             this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -1933,9 +1699,9 @@
             // 
             this.Column12.HeaderText = "¿Actualmente está buscando trabajo remunerado o por cuenta propia?";
             this.Column12.Items.AddRange(new object[] {
-            "01. Si",
-            "02. No",
-            "03. NS/NR"});
+            "Si",
+            "No",
+            "NS/NR"});
             this.Column12.Name = "Column12";
             this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -1943,18 +1709,18 @@
             // Column13
             // 
             this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
-    "ropia recientemente?";
+                "ropia recientemente?";
             this.Column13.Items.AddRange(new object[] {
-            "01. Que haceres domésticos",
-            "02. Cuidado de los hijo/as",
-            "03. Enfermedad/discapacidad",
-            "04. Actualmente estudia",
-            "05. Trabaja actualmente",
-            "06. Desistió en la búsqueda",
-            "07. Menor de edad",
-            "08. Edad avanzada",
-            "09. Otro (Especificar)",
-            "10. NS/NR"});
+            "Que haceres domésticos",
+            "Cuidado de los hijo/as",
+            "Enfermedad/discapacidad",
+            "Actualmente estudia",
+            "Trabaja actualmente",
+            "Desistió en la búsqueda",
+            "Menor de edad",
+            "Edad avanzada",
+            "Otro (Especificar)",
+            "NS/NR"});
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -1963,23 +1729,22 @@
             // 
             this.Column14.HeaderText = "Especificar";
             this.Column14.Name = "Column14";
-            this.Column14.Width = 65;
             // 
             // Column15
             // 
             this.Column15.HeaderText = "¿Cuál es la ocupación u oficio principal?";
             this.Column15.Items.AddRange(new object[] {
-            "01. Ama de casa",
-            "02. Estudiante",
-            "03. Productor/a agrícola",
-            "04. Jornalero/a",
-            "05. Trabajo doméstico",
-            "06. Vendedor/a",
-            "07. Albañil",
-            "08. Mecánico/a",
-            "09. Obrero/a",
-            "10. Otro (Especificar)",
-            "11. NS/NR"});
+            "Ama de casa",
+            "Estudiante",
+            "Productor/a agrícola",
+            "Jornalero/a",
+            "Trabajo doméstico",
+            "Vendedor/a",
+            "Albañil",
+            "Mecánico/a",
+            "Obrero/a",
+            "Otro (Especificar)",
+            "NS/NR"});
             this.Column15.Name = "Column15";
             this.Column15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -1988,18 +1753,17 @@
             // 
             this.Column16.HeaderText = "Especificar";
             this.Column16.Name = "Column16";
-            this.Column16.Width = 65;
             // 
             // Column17
             // 
             this.Column17.HeaderText = "¿Cuál el es tipo de contrato que tiene en su trabajo actual?";
             this.Column17.Items.AddRange(new object[] {
-            "01. Permanente",
-            "02. Por temporada",
-            "03. Ocasional",
-            "04. Por tarea",
-            "05. Por plazo (o tiempo determinado)",
-            "06. NS/NR"});
+            "Permanente",
+            "Por temporada",
+            "Ocasional",
+            "Por tarea",
+            "Por plazo (o tiempo determinado)",
+            "NS/NR"});
             this.Column17.Name = "Column17";
             this.Column17.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2008,11 +1772,11 @@
             // 
             this.Column18.HeaderText = "¿Cuál es la condición laboral de en su empleo actual?";
             this.Column18.Items.AddRange(new object[] {
-            "01. Empleado con prestaciones",
-            "02. Empleado sin prestaciones",
-            "03. Trabajo por cuenta propia",
-            "04. Empleador",
-            "05. NS/NR"});
+            "Empleado con prestaciones",
+            "Empleado sin prestaciones",
+            "Trabajo por cuenta propia",
+            "Empleador",
+            "NS/NR"});
             this.Column18.Name = "Column18";
             this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2021,11 +1785,11 @@
             // 
             this.Column19.HeaderText = "¿Dónde se ubica el lugar de trabajo?";
             this.Column19.Items.AddRange(new object[] {
-            "01. Dentro de la comunidad",
-            "02. Cerca de la comunidad (menos de 1 kilómetro)",
-            "03. Lejos de la comunidad pero en el municipio",
-            "04. En otro municipio",
-            "05. NS/NR"});
+            "Dentro de la comunidad",
+            "Cerca de la comunidad (menos de 1 kilómetro)",
+            "Lejos de la comunidad pero en el municipio",
+            "En otro municipio",
+            "NS/NR"});
             this.Column19.Name = "Column19";
             this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2033,11 +1797,11 @@
             // Column20
             // 
             this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
-    "ipal?";
+                "ipal?";
             this.Column20.Items.AddRange(new object[] {
-            "01. Si (especificar)",
-            "02. No",
-            "03. NS/NR"});
+            "Si (especificar)",
+            "No",
+            "NS/NR"});
             this.Column20.Name = "Column20";
             this.Column20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -2046,7 +1810,6 @@
             // 
             this.Column21.HeaderText = "Especificar";
             this.Column21.Name = "Column21";
-            this.Column21.Width = 65;
             // 
             // Column22
             // 
@@ -2061,7 +1824,7 @@
             // Column24
             // 
             this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
-    "";
+                "";
             this.Column24.Name = "Column24";
             // 
             // tbpS6
@@ -2116,7 +1879,7 @@
             this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(254, 39);
             this.lblS6_11_FaltaDinero.TabIndex = 25;
             this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero \r\n      en los últimos doce m" +
-    "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
+                "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
             // 
             // chlbS6_11_CubrirFaltaDinero
             // 
@@ -2133,7 +1896,7 @@
             "NS/NR"});
             this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(21, 80);
             this.chlbS6_11_CubrirFaltaDinero.Name = "chlbS6_11_CubrirFaltaDinero";
-            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(249, 109);
+            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(249, 94);
             this.chlbS6_11_CubrirFaltaDinero.TabIndex = 10;
             // 
             // lblS6_11_Especificar
@@ -2172,8 +1935,8 @@
             this.lblS6_10_Gastos.Size = new System.Drawing.Size(262, 52);
             this.lblS6_10_Gastos.TabIndex = 24;
             this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido \r\n      suficientes para cubri" +
-    "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
-    "\r\n      ingresos?";
+                "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
+                "\r\n      ingresos?";
             // 
             // txtS6_10_CantiGastosaIngresos
             // 
@@ -2211,7 +1974,7 @@
             this.lblS6_9_CantidadAhorro.Size = new System.Drawing.Size(247, 26);
             this.lblS6_9_CantidadAhorro.TabIndex = 23;
             this.lblS6_9_CantidadAhorro.Text = "9. Mensualmente, ¿cuál es el monto promedio que \r\n    logran ahorrar en el hogar?" +
-    "";
+                "";
             // 
             // txtS6_9_CantiAhorro
             // 
@@ -2248,7 +2011,7 @@
             this.lblS6_8_Ahorro.Size = new System.Drawing.Size(261, 39);
             this.lblS6_8_Ahorro.TabIndex = 22;
             this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han \r\n    sido suficientes. ¿Han " +
-    "logrado en ese caso generar\r\n    un ahorro mensual?";
+                "logrado en ese caso generar\r\n    un ahorro mensual?";
             // 
             // cbxS6_8_AhorroMensual
             // 
@@ -2280,7 +2043,7 @@
             this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(255, 26);
             this.lblS6_7_CubrirGastos.TabIndex = 21;
             this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del \r\n     hogar han sido sufi" +
-    "cientes para cubrir su gastos?";
+                "cientes para cubrir su gastos?";
             // 
             // cbxS6_7_CubrenGasto
             // 
@@ -2314,7 +2077,7 @@
             this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(240, 39);
             this.lblS6_6_IngresoTotal.TabIndex = 20;
             this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el\r\n     trabajo de todos los in" +
-    "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
+                "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
             // 
             // txtS6_6_IngresoTotal
             // 
@@ -2464,7 +2227,7 @@
             this.lblS6_2_IngresosRemesas.Size = new System.Drawing.Size(252, 26);
             this.lblS6_2_IngresosRemesas.TabIndex = 17;
             this.lblS6_2_IngresosRemesas.Text = "2. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por remesas? ¿qué cant" +
-    "idad?\r\n";
+                "idad?\r\n";
             // 
             // cbxS6_2_IngRemesas
             // 
@@ -2517,7 +2280,7 @@
             this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(260, 26);
             this.lblS6_1_IngresosEstado.TabIndex = 16;
             this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por apoyo del Estado (" +
-    "programas)? ¿qué cantidad?\r\n";
+                "programas)? ¿qué cantidad?\r\n";
             // 
             // cbxS6_1_IngEstado
             // 
@@ -2623,7 +2386,7 @@
             this.lblS7_8_MaterialPiso.Size = new System.Drawing.Size(269, 26);
             this.lblS7_8_MaterialPiso.TabIndex = 16;
             this.lblS7_8_MaterialPiso.Text = "8. OBSERVE y defina el tipo y el estado del material de \r\n    PISO de la vivienda" +
-    ".";
+                ".";
             // 
             // gbS7_8_Tierra
             // 
@@ -2945,7 +2708,7 @@
             this.lblS7_7_MaterialParedes.Size = new System.Drawing.Size(323, 26);
             this.lblS7_7_MaterialParedes.TabIndex = 15;
             this.lblS7_7_MaterialParedes.Text = "7. OBSERVE y defina el tipo y el estado del material de PAREDES \r\n     de la vivi" +
-    "enda.";
+                "enda.";
             // 
             // gbS7_7_Desechos
             // 
@@ -3391,7 +3154,7 @@
             this.lblS7_6_MaterialTecho.Size = new System.Drawing.Size(314, 26);
             this.lblS7_6_MaterialTecho.TabIndex = 15;
             this.lblS7_6_MaterialTecho.Text = "6. OBSERVE y defina el tipo y el estado del material del TECHO  \r\n     de la vivi" +
-    "enda.";
+                "enda.";
             // 
             // gbS7_6_Desechos
             // 
@@ -3837,7 +3600,7 @@
             this.lblS7_5_Problema.Size = new System.Drawing.Size(288, 26);
             this.lblS7_5_Problema.TabIndex = 15;
             this.lblS7_5_Problema.Text = "5. ¿Cree que su vivienda actual tienen algún problema que \r\n     le gustaría reso" +
-    "lver?";
+                "lver?";
             // 
             // txtS7_5_ProblemaC
             // 
@@ -4165,7 +3928,7 @@
             this.label77.Size = new System.Drawing.Size(358, 39);
             this.label77.TabIndex = 15;
             this.label77.Text = "8. ¿Cuáles artículos de la siguiente lista posee y en qué estado se \r\n    encuent" +
-    "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
+                "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
             // 
             // groupBox65
             // 
@@ -4634,7 +4397,11 @@
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
+<<<<<<< HEAD
             this.cklS8_S807.Size = new System.Drawing.Size(250, 79);
+=======
+            this.cklS8_S807.Size = new System.Drawing.Size(250, 34);
+>>>>>>> origin/master
             this.cklS8_S807.TabIndex = 9;
             // 
             // label66
@@ -4645,7 +4412,7 @@
             this.label66.Size = new System.Drawing.Size(266, 26);
             this.label66.TabIndex = 1;
             this.label66.Text = "7. ¿Cuenta con algún otro servicio adicional?\r\n    [MARCAR TODAS LAS OPCIONES NEC" +
-    "ESARIAS] ";
+                "ESARIAS] ";
             // 
             // groupBox54
             // 
@@ -4783,7 +4550,7 @@
             this.label63.Size = new System.Drawing.Size(220, 26);
             this.label63.TabIndex = 1;
             this.label63.Text = "4. ¿Qué tipo de combustible o energía utiliza \r\n    PREDOMINANTEMENTE para cocina" +
-    "r?\t\t\t\t";
+                "r?\t\t\t\t";
             // 
             // groupBox51
             // 
@@ -5039,7 +4806,7 @@
             this.label94.Size = new System.Drawing.Size(278, 26);
             this.label94.TabIndex = 1;
             this.label94.Text = "5. ¿Posee usted o algún miembro de su familia algún otro \r\n     tipo de bien o de" +
-    " propiedad?\t";
+                " propiedad?\t";
             // 
             // groupBox81
             // 
@@ -5202,7 +4969,7 @@
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(4, 10);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(269, 13);
+            this.label98.Size = new System.Drawing.Size(265, 13);
             this.label98.TabIndex = 1;
             this.label98.Text = "2. En el caso de que sea usted propietario:          ►   (5)";
             // 
@@ -5372,8 +5139,8 @@
             this.label124.Size = new System.Drawing.Size(281, 39);
             this.label124.TabIndex = 1;
             this.label124.Text = "11. ¿Estaría dispuesto a trabajar junto a sus vecinos para \r\n      mejorar algún " +
-    "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
-    "rlo?\t";
+                "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
+                "rlo?\t";
             // 
             // groupBox89
             // 
@@ -5466,7 +5233,7 @@
             this.label120.Size = new System.Drawing.Size(285, 39);
             this.label120.TabIndex = 1;
             this.label120.Text = "10. ¿Considera que existen problemáticas y/o necesidades\r\n      en su comunidad? " +
-    "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
+                "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
             // 
             // groupBox82
             // 
@@ -5559,7 +5326,7 @@
             this.label116.Size = new System.Drawing.Size(297, 39);
             this.label116.TabIndex = 1;
             this.label116.Text = "9. ¿Considera que existe alguna necesidad o problemática en\r\n    su familia? En e" +
-    "l caso de que si ¿cuáles considera que son\r\n    las principales?";
+                "l caso de que si ¿cuáles considera que son\r\n    las principales?";
             // 
             // gbxS1008_Com
             // 
@@ -6345,7 +6112,11 @@
             "NS/NR"});
             this.cklS1007_Com.Location = new System.Drawing.Point(20, 25);
             this.cklS1007_Com.Name = "cklS1007_Com";
+<<<<<<< HEAD
             this.cklS1007_Com.Size = new System.Drawing.Size(250, 94);
+=======
+            this.cklS1007_Com.Size = new System.Drawing.Size(250, 64);
+>>>>>>> origin/master
             this.cklS1007_Com.TabIndex = 5;
             this.cklS1007_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1007_Com_ItemCheck);
             // 
@@ -6410,7 +6181,11 @@
             "NS/NR"});
             this.cklS1006_Com.Location = new System.Drawing.Point(19, 28);
             this.cklS1006_Com.Name = "cklS1006_Com";
+<<<<<<< HEAD
             this.cklS1006_Com.Size = new System.Drawing.Size(250, 139);
+=======
+            this.cklS1006_Com.Size = new System.Drawing.Size(250, 109);
+>>>>>>> origin/master
             this.cklS1006_Com.TabIndex = 9;
             this.cklS1006_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1006_Com_ItemCheck);
             // 
@@ -6419,7 +6194,7 @@
             this.label92.AutoSize = true;
             this.label92.Location = new System.Drawing.Point(3, 10);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(252, 13);
+            this.label92.Size = new System.Drawing.Size(248, 13);
             this.label92.TabIndex = 1;
             this.label92.Text = "6. ¿En cuál o cuáles participa?                   ►(10.08)";
             // 
@@ -6454,7 +6229,7 @@
             this.label91.Size = new System.Drawing.Size(274, 39);
             this.label91.TabIndex = 1;
             this.label91.Text = "5. ¿Ha participado usted o algún miembro de su familia\r\n    en algún grupo u orga" +
-    "nización que actue en beneficio\r\n    de la comunidad?";
+                "nización que actue en beneficio\r\n    de la comunidad?";
             // 
             // groupBox70
             // 
@@ -6547,7 +6322,7 @@
             this.label83.Size = new System.Drawing.Size(308, 26);
             this.label83.TabIndex = 1;
             this.label83.Text = "4. ¿Podría mencionarme si usted se organiza con sus vecinos? \r\n    ¿En qué situac" +
-    "iones lo hacen?\r\n";
+                "iones lo hacen?\r\n";
             // 
             // groupBox71
             // 
@@ -6754,7 +6529,7 @@
             this.label150.Size = new System.Drawing.Size(299, 26);
             this.label150.TabIndex = 1;
             this.label150.Text = "21. ¿Cómo cree que estará su comunidad en años posteriores\r\n      (en el futuro)?" +
-    " ¿Por qué cree eso?";
+                " ¿Por qué cree eso?";
             // 
             // groupBox107
             // 
@@ -6808,7 +6583,7 @@
             this.label147.Size = new System.Drawing.Size(285, 26);
             this.label147.TabIndex = 1;
             this.label147.Text = "20. ¿Cómo cree que está su comunidad en relación a años\r\n      anteriores (al pas" +
-    "ado)? ¿Por qué cree eso?";
+                "ado)? ¿Por qué cree eso?";
             // 
             // groupBox106
             // 
@@ -7016,7 +6791,7 @@
             this.label143.Size = new System.Drawing.Size(289, 26);
             this.label143.TabIndex = 1;
             this.label143.Text = "15. ¿Usted considera que en la comunidad existe algún tipo\r\n      de discriminaci" +
-    "ón? En caso de que si, ¿de qué tipo?";
+                "ón? En caso de que si, ¿de qué tipo?";
             // 
             // groupBox103
             // 
@@ -7084,7 +6859,7 @@
             this.label142.Size = new System.Drawing.Size(300, 26);
             this.label142.TabIndex = 1;
             this.label142.Text = "13. ¿Cuáles son para usted los principales aspectos negativos\r\n      de vivir en " +
-    "esta comunidad?\r\n";
+                "esta comunidad?\r\n";
             // 
             // groupBox100
             // 
@@ -7152,7 +6927,7 @@
             this.label134.Size = new System.Drawing.Size(295, 26);
             this.label134.TabIndex = 1;
             this.label134.Text = "12. ¿Cuáles son para usted los principales aspectos positivos\r\n      de vivir en " +
-    "esta comunidad?\r\n";
+                "esta comunidad?\r\n";
             // 
             // groupBox101
             // 
@@ -7189,7 +6964,7 @@
             "NS/NR"});
             this.cklS1014_Com.Location = new System.Drawing.Point(21, 38);
             this.cklS1014_Com.Name = "cklS1014_Com";
-            this.cklS1014_Com.Size = new System.Drawing.Size(250, 94);
+            this.cklS1014_Com.Size = new System.Drawing.Size(250, 79);
             this.cklS1014_Com.TabIndex = 4;
             this.cklS1014_Com.SelectedIndexChanged += new System.EventHandler(this.cklS1014_Com_SelectedIndexChanged);
             // 
@@ -7201,7 +6976,7 @@
             this.label138.Size = new System.Drawing.Size(301, 26);
             this.label138.TabIndex = 1;
             this.label138.Text = "14. ¿Cuáles considera usted que es el grupo de su comunidad\r\n      más afectado p" +
-    "or los problemas de la comunidad?";
+                "or los problemas de la comunidad?";
             // 
             // groupBox109
             // 
@@ -7385,7 +7160,7 @@
             this.label157.Size = new System.Drawing.Size(296, 26);
             this.label157.TabIndex = 1;
             this.label157.Text = "3. ¿En qué año se traslado su familia a esta comunidad y por \r\n    qué el traslad" +
-    "o?";
+                "o?";
             // 
             // groupBox113
             // 
@@ -7447,7 +7222,232 @@
             this.label159.Size = new System.Drawing.Size(282, 26);
             this.label159.TabIndex = 1;
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
-    "urante toda su VIDA FAMILIAR?\r\n";
+                "urante toda su VIDA FAMILIAR?\r\n";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewComboBoxColumn5
+            // 
+            this.dataGridViewComboBoxColumn5.HeaderText = "¿Sabe leer y escribir?";
+            this.dataGridViewComboBoxColumn5.Items.AddRange(new object[] {
+            "Si",
+            "No, sólo lee",
+            "No, sólo escribe",
+            "No, ninguno",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn5.Name = "dataGridViewComboBoxColumn5";
+            this.dataGridViewComboBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewComboBoxColumn6
+            // 
+            this.dataGridViewComboBoxColumn6.HeaderText = "¿Cuál es el grado más alto de educación que completó?\t\t";
+            this.dataGridViewComboBoxColumn6.Items.AddRange(new object[] {
+            "Ninguno",
+            "Pre-primaria",
+            "Primero primaria",
+            "Segundo primaria",
+            "Tercero primaria",
+            "Cuarto primaria",
+            "Quinto primaria",
+            "Sexto primaria",
+            "Primero Básico",
+            "Segundo Básico",
+            "Tercero Básico",
+            "Diversificado",
+            "Técnico (especificar)",
+            "Superior incompleto",
+            "Superior completo",
+            "Otro (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn6.Name = "dataGridViewComboBoxColumn6";
+            this.dataGridViewComboBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewComboBoxColumn7
+            // 
+            this.dataGridViewComboBoxColumn7.HeaderText = "Actualmente, ¿Asiste a algún establecimiento educativo?";
+            this.dataGridViewComboBoxColumn7.Items.AddRange(new object[] {
+            "Si asiste",
+            "No asiste",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn7.Name = "dataGridViewComboBoxColumn7";
+            this.dataGridViewComboBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "¿Cuál es el nombre del centro educativo al que asiste?";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewComboBoxColumn8
+            // 
+            this.dataGridViewComboBoxColumn8.HeaderText = "¿Qué tipo de establecimiento es el centro educativo donde estudia?\n";
+            this.dataGridViewComboBoxColumn8.Items.AddRange(new object[] {
+            "Público",
+            "Privado",
+            "Por cooperativa",
+            "Otro (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn8.Name = "dataGridViewComboBoxColumn8";
+            this.dataGridViewComboBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewComboBoxColumn9
+            // 
+            this.dataGridViewComboBoxColumn9.HeaderText = "¿Dónde se ubica el establecimiento educativo al que asiste?\t\t\t";
+            this.dataGridViewComboBoxColumn9.Items.AddRange(new object[] {
+            "Dentro de la comunidad",
+            "Cerca de la comunidad (menos de 1 kilómetro)",
+            "Lejos de la comunidad pero en el municipio",
+            "Fuera del municipio",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn9.Name = "dataGridViewComboBoxColumn9";
+            this.dataGridViewComboBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewComboBoxColumn10
+            // 
+            this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
+                "entro educativo?\t\t\t\t\t\t";
+            this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
+            "Actualmente asiste",
+            "No está en edad escolar aún",
+            "Problemas económicos",
+            "Preferencia o necesidad de trabajar",
+            "Quehaceres domésticos",
+            "Requiere educación especial",
+            "Maternidad o paternidad",
+            "Dificultad de acceso o movilización",
+            "Falta de interés personal o de padres",
+            "Problemas de rendimiento o conducta",
+            "Otra razón (especificar)\t\t\t",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn10.Name = "dataGridViewComboBoxColumn10";
+            this.dataGridViewComboBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "Especificar";
+            this.Column26.Name = "Column26";
+            // 
+            // dataGridViewComboBoxColumn11
+            // 
+            this.dataGridViewComboBoxColumn11.HeaderText = "¿Ha recibido algún tipo de formación complementaria?\t\t";
+            this.dataGridViewComboBoxColumn11.Items.AddRange(new object[] {
+            "Si (especificar)",
+            "No",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn11.Name = "dataGridViewComboBoxColumn11";
+            this.dataGridViewComboBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column27
+            // 
+            this.Column27.HeaderText = "Especificar";
+            this.Column27.Name = "Column27";
+            // 
+            // dgvS2
+            // 
+            this.dgvS2.AllowUserToAddRows = false;
+            this.dgvS2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewComboBoxColumn3,
+            this.dataGridViewComboBoxColumn4,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvS2.Location = new System.Drawing.Point(3, 16);
+            this.dgvS2.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvS2.Name = "dgvS2";
+            this.dgvS2.Size = new System.Drawing.Size(921, 438);
+            this.dgvS2.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "¿A qué núcleo pertenece?";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "¿Me podría indicar el DPI?";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewComboBoxColumn3
+            // 
+            this.dataGridViewComboBoxColumn3.HeaderText = "¿Cuál es el estado civil?";
+            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
+            "Casado/a",
+            "Unido/a de hecho",
+            "Divorciado/a",
+            "Separado/a de hecho",
+            "Viudo/a",
+            "Soltero/a\t",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
+            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewComboBoxColumn4
+            // 
+            this.dataGridViewComboBoxColumn4.HeaderText = "¿Cuál es la relación de parentesco con el jefe del hogar?";
+            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
+            "Jefe/a de Hogar",
+            "Cónyuge o pareja",
+            "Hijo/a, hijastro/a",
+            "Padre o madre",
+            "Suegro/a",
+            "Yerno o nuera",
+            "Nieto/a",
+            "Hermano/a",
+            "Cuñado/a",
+            "Sobrino/a",
+            "Tío/a",
+            "Otro familiar (especificar)",
+            "No familiar (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
+            this.dataGridViewComboBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "¿Cuál es el lugar de orígen (nacimiento)?";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "¿Cuál es la nacionalidad?";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // frmEncuesta
             // 
@@ -7477,7 +7477,6 @@
             this.tbpS2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS2)).EndInit();
             this.gbS2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).EndInit();
             this.tbpS3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS3)).EndInit();
             this.gbS3.ResumeLayout(false);
@@ -7711,6 +7710,7 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7771,26 +7771,9 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox gbS5;
-        private System.Windows.Forms.DataGridView dgvS5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.GroupBox gbS1;
         private System.Windows.Forms.DataGridView dgvS1;
         private System.Windows.Forms.GroupBox gbS2;
-        private System.Windows.Forms.DataGridView dgvS2;
         private System.Windows.Forms.GroupBox gbS3;
         private System.Windows.Forms.DataGridView dgvS3;
         private System.Windows.Forms.TabPage tbpS11;
@@ -8100,28 +8083,7 @@
         private System.Windows.Forms.PictureBox pbNext;
         private System.Windows.Forms.PictureBox pbNextS1;
         private System.Windows.Forms.PictureBox pbNextS2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.PictureBox pbNextS3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn5;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn9;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.PictureBox pbS4_Siguiente;
         private System.Windows.Forms.PictureBox pbS5_Siguiente;
         private System.Windows.Forms.PictureBox pbS6_Siguiente;
@@ -8351,6 +8313,44 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Especificar;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
+        private System.Windows.Forms.DataGridView dgvS5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
+        private System.Windows.Forms.DataGridView dgvS2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
 
 
     }

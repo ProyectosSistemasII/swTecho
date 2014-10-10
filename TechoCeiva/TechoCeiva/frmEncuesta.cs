@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace TechoCeiva
 {
     public partial class frmEncuesta : Form
@@ -1248,16 +1249,90 @@ namespace TechoCeiva
         private void pbS5_Siguiente_Click(object sender, EventArgs e)
         {
             S5_TrabajoLN S5 = new S5_TrabajoLN();
-            Boolean correcto = true;//S5.Insertar_EncuS5(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
+            Boolean correcto = false;
+            int Filas = 0;
+            //Recorrer para validar
+            foreach (DataGridViewRow row in dgvS5.Rows)
+            {
+                dgvS5.CurrentCell = dgvS5.Rows[Filas].Cells[0];
+                Boolean trabajo = false;
+                Boolean buscando = false;
+                Boolean otrosTrabajos = false;
+                int dias = 0; float horas = 0; float ingreso = 0;
+                if (row.Cells[1].Value.ToString().Equals("Si"))
+                    trabajo = true;
+                if (row.Cells[2].Value.ToString().Equals("Si"))
+                    buscando = true;
+                if (row.Cells[10].Value.ToString().Equals("Si (especificar)"))
+                    otrosTrabajos = true;
+                if (row.Cells[12].Value.ToString() == "")
+                    dias = 0;
+                else
+                    dias = Convert.ToInt32(row.Cells[12].Value.ToString());
+                if (row.Cells[13].Value.ToString() == "")
+                    horas = 0;
+                else
+                    horas = float.Parse(row.Cells[13].Value.ToString());
+                if (row.Cells[14].Value.ToString() == "")
+                    ingreso = 0;
+                else
+                    ingreso = float.Parse(row.Cells[14].Value.ToString());
+                correcto = S5.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), trabajo, buscando, row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), otrosTrabajos, row.Cells[11].Value.ToString(), dias, horas, ingreso, idEncu, Filas);
+                if (correcto)
+                    Filas++;
+                else
+                {
+                    Filas = 0;
+                    MessageBox.Show(S5.obtenerError());
+                    break;
+                }
+            }
+
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
+                //Recorrer para insertar
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS5.Rows)
+                {
+                    dgvS5.CurrentCell = dgvS5.Rows[Filas].Cells[0];
+                    Boolean trabajo = false;
+                    Boolean buscando = false;
+                    Boolean otrosTrabajos = false;
+                    int dias = 0; float horas = 0; float ingreso = 0;
+                    if (row.Cells[1].Value.ToString().Equals("Si"))
+                        trabajo = true;
+                    if (row.Cells[2].Value.ToString().Equals("Si"))
+                        buscando = true;
+                    if (row.Cells[10].Value.ToString().Equals("Si (especificar)"))
+                        otrosTrabajos = true;
+                    if (row.Cells[12].Value.ToString() == "")
+                        dias = 0;
+                    else
+                        dias = Convert.ToInt32(row.Cells[12].Value.ToString());
+                    if (row.Cells[13].Value.ToString() == "")
+                        horas = 0;
+                    else
+                        horas = float.Parse(row.Cells[13].Value.ToString());
+                    if (row.Cells[14].Value.ToString() == "")
+                        ingreso = 0;
+                    else
+                        ingreso = float.Parse(row.Cells[14].Value.ToString());
+                    S5_TrabajoLN SIn = new S5_TrabajoLN(Convert.ToInt32(row.Cells[0].Value.ToString()), trabajo, buscando, row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), otrosTrabajos, row.Cells[11].Value.ToString(), dias, horas, ingreso, idEncu);
+                    correcto = SIn.Insertar_EncuS5();
+                    if (correcto)
+                    {
+                        Filas++;
+                    }
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(SIn.obtenerError());
+                        break;
+                    }
+                }
                 tbpS5.Parent = null;
                 tbpS6.Parent = tbcDatos;
-            }
-            else
-            {
-                MessageBox.Show(S5.obtenerError());
             }
         }
 
@@ -1415,13 +1490,20 @@ namespace TechoCeiva
                 foreach (DataGridViewRow row in dgvS4.Rows)
                 {
                     dgvS4.CurrentCell = dgvS4.Rows[Filas].Cells[0];
-                    correcto = S4.Insertar_EncuS4();
+                    Boolean problema = false;
+                    Boolean accidente = false;
+                    if (row.Cells[4].Value.ToString().Equals("Si (especificar)"))
+                        problema = true;
+                    if (row.Cells[6].Value.ToString().Equals("Si (especificar)"))
+                        accidente = true;
+                    S4_SaludLN SIn = new S4_SaludLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), problema, row.Cells[5].Value.ToString(), accidente, row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(), row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu);
+                    correcto = SIn.Insertar_EncuS4();
                     if (correcto)
                         Filas++;
                     else
                     {
                         Filas = 0;
-                        MessageBox.Show(S4.obtenerError());
+                        MessageBox.Show(SIn.obtenerError());
                         break;
                     }
                 }
@@ -1433,13 +1515,15 @@ namespace TechoCeiva
                 {
                     dgvS5.Rows.Add();
                     dgvS5.Rows[iS5 - 1].Cells[0].Value = iS5;
+                    for (int i = 1; i < 15; i++)
+                        dgvS5.Rows[iS5 - 1].Cells[i].Value = "";
                 }
             }
         }
 
         private void frmEncuesta_Load(object sender, EventArgs e)
         {
-            tbpInfo.Parent = null;
+            //tbpInfo.Parent = null;
             tbpS1.Parent = null;
             tbpS2.Parent = null;
             tbpS3.Parent = null;
@@ -1528,24 +1612,13 @@ namespace TechoCeiva
             S1_IntegrantesLN S1 = new S1_IntegrantesLN();
             Boolean correcto = false;
             int Filas = 0;
-            //Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
-            // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
-
+            //Recorrer para validar
             foreach (DataGridViewRow row in dgvS1.Rows)
             {
                 dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
-                /*MessageBox.Show(row.Cells[0].Value.ToString());
-                MessageBox.Show(row.Cells[1].Value.ToString());
-                MessageBox.Show(row.Cells[2].Value.ToString());
-                MessageBox.Show(row.Cells[3].Value.ToString());
-                MessageBox.Show(row.Cells[4].Value.ToString());
-                MessageBox.Show(row.Cells[5].Value.ToString());*/
-                correcto = S1.Insertar_EncuS1(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), idEncu, Filas);
+                correcto = S1.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), 4, Filas);
                 if (correcto)
-                {
-                    //MessageBox.Show("Ingresado Correctamente");
                     Filas++;
-                }
                 else
                 {
                     Filas = 0;
@@ -1553,9 +1626,25 @@ namespace TechoCeiva
                     break;
                 }
             }
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
+                //Recorrer para insertar
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS1.Rows)
+                {
+                    dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
+                    S1_IntegrantesLN SIn = new S1_IntegrantesLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), 4);
+                    correcto = SIn.Insertar_EncuS1();
+                    if (correcto)
+                        Filas++;
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(SIn.obtenerError());
+                        break;
+                    }
+                }
                 tbpS1.Parent = null;
                 tbpS2.Parent = tbcDatos;
                 //para s2
@@ -1564,6 +1653,8 @@ namespace TechoCeiva
                 {
                     dgvS2.Rows.Add();
                     dgvS2.Rows[iS2 - 1].Cells[0].Value = iS2;
+                    for (int i = 1; i < 8; i++)
+                        dgvS2.Rows[iS2 - 1].Cells[i].Value = "";
                 }
             }
         }
@@ -1572,27 +1663,56 @@ namespace TechoCeiva
         private void pbNextS2_Click(object sender, EventArgs e)
         {
             S2_DemograficaLN S2 = new S2_DemograficaLN();
-            Boolean correcto = true;//Boolean correcto = S1.Insertar_EncuS1(txtCodigoHogar.Text, Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString()), Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString()), Convert.ToDateTime(dtpFecha.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, txtObservaciones.Text,
-            // txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComunidad);  
+            Boolean correcto = false;
+            int Filas = 0;
+            //Recorrer para validar
             foreach (DataGridViewRow row in dgvS2.Rows)
             {
+                dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
+                correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[7].Value.ToString(), idEncu, 1, 1, Filas);
                 if (correcto)
                 {
-                    //MessageBox.Show("Ingresado Correctamente");
+                    Filas++;
                 }
                 else
+                {
+                    Filas = 0;
                     MessageBox.Show(S2.obtenerError());
+                    break;
+                }
             }
+
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
+                //Recorrer para insertar
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS2.Rows)
+                {
+                    dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
+                    S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[7].Value.ToString(), idEncu, 1, 1);
+                    correcto = SIn.Insertar_EncuS2();
+                    if (correcto)
+                    {
+                        Filas++;
+                    }
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(SIn.obtenerError());
+                        break;
+                    }
+                }
                 tbpS2.Parent = null;
                 tbpS3.Parent = tbcDatos;
-                //para s2
+                //para s3
                 int iS3 = 1;
                 for (iS3 = 1; iS3 < iS1; iS3++)
                 {
                     dgvS3.Rows.Add();
                     dgvS3.Rows[iS3 - 1].Cells[0].Value = iS3;
+                    for (int i = 1; i < 13; i++)
+                        dgvS3.Rows[iS3 - 1].Cells[i].Value = "";
                 }
             }
         }
@@ -1603,17 +1723,15 @@ namespace TechoCeiva
             S3_EducacionLN S3 = new S3_EducacionLN();
             Boolean correcto = false;
             int Filas = 0;
+            //Recorrer para validar
             foreach (DataGridViewRow row in dgvS3.Rows)
             {
                 dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
-                correcto = S3.Insertar_EncuS3(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
+                correcto = S3.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
                     row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
-                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), row.Cells[13].Value.ToString(), idEncu, Filas);
+                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas); 
                 if (correcto)
-                {
-                    //MessageBox.Show("Ingresado Correctamente");
                     Filas++;
-                }
                 else
                 {
                     Filas = 0;
@@ -1621,17 +1739,36 @@ namespace TechoCeiva
                     break;
                 }
             }
+            //este ahorita solo lo uso para esconder la pestana anterior y mostrar la q sigue
             if (correcto)
             {
-                MessageBox.Show("Ingresado correctamente");
+                Filas = 0;
+                foreach (DataGridViewRow row in dgvS3.Rows)
+                {
+                    dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
+                    S3_EducacionLN SIn = new S3_EducacionLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
+                    row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
+                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu);
+                    correcto = S3.Insertar_EncuS3(); 
+                    if (correcto)
+                        Filas++;
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(SIn.obtenerError());
+                        break;
+                    }
+                }
                 tbpS3.Parent = null;
                 tbpS4.Parent = tbcDatos;
-                //para s2
+                //para s4
                 int iS4 = 1;
                 for (iS4 = 1; iS4 < iS1; iS4++)
                 {
                     dgvS4.Rows.Add();
                     dgvS4.Rows[iS4 - 1].Cells[0].Value = iS4;
+                    for (int i = 1; i < 13; i++)
+                        dgvS4.Rows[iS4 - 1].Cells[i].Value = "";
                 }
             }
         }
@@ -1969,6 +2106,7 @@ namespace TechoCeiva
 
         }
 
+<<<<<<< HEAD
         private void cbxS10_ParticipacionGrupo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
@@ -1986,6 +2124,11 @@ namespace TechoCeiva
                 MessageBox.Show("Debe Continuar con la pregunta 19", "Aviso");
                 txtS10_LiderA.Focus();
             }
+=======
+        private void tbpS4_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> origin/master
         }        
     }
 }

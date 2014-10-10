@@ -13,10 +13,7 @@ namespace Capa_Logica
             this.CodigoS3 = 0;
             this.LeerEscribir = "";
             this.GradoEducacion = "";
-            /*uno solo*/
-            this.Tecnico = "";
             this.OtroGrado = "";
-            /*--------*/
             this.AsistenciaEstablecimiento = "";
             this.NombreEstablecimiento = "";
             /*uno solo*/
@@ -35,19 +32,47 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
-        public Boolean Insertar_EncuS3(int CodigoS3, string LeerEscribir, string GradoEducacion, string Tecnico, string OtroGrado,
+        public S3_EducacionLN(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
-            string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas, int Filas)
+            string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas)
         {
-            Boolean correcto = true;
-            S3_Educacion Educacion = new S3_Educacion(CodigoS3, LeerEscribir, GradoEducacion, Tecnico, OtroGrado,
-            AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento, OtroTipoEstablecimiento,
-            UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas);
-
             this.CodigoS3 = CodigoS3;
             this.LeerEscribir = LeerEscribir;
             this.GradoEducacion = GradoEducacion;
-            this.Tecnico = Tecnico;
+            this.OtroGrado = OtroGrado;
+            this.AsistenciaEstablecimiento = AsistenciaEstablecimiento;
+            this.NombreEstablecimiento = NombreEstablecimiento;
+            this.TipoEstablecimiento = TipoEstablecimiento;
+            this.OtroTipoEstablecimiento = OtroTipoEstablecimiento;
+            this.UbicacionEstablecimiento = UbicacionEstablecimiento;
+            this.RazonNoAsistencia = RazonNoAsistencia;
+            this.OtraRazon = OtraRazon;
+            this.FormacionComplementaria = FormacionComplementaria;
+            this.TipoFormacion = TipoFormacion;
+            this.Encuestas_idEncuestas = Encuestas_idEncuestas;
+            this.errores = new List<Error>();
+        }
+
+        public Boolean Insertar_EncuS3()
+        {
+            Boolean correcto = true;
+            S3_Educacion educacion = new S3_Educacion(CodigoS3, LeerEscribir, GradoEducacion, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento,
+                OtroTipoEstablecimiento, UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas);
+            educacion.InsertarS3();
+            if (errores.Count > 0)
+            {
+                correcto = false;
+            }
+            return correcto;
+        }
+
+        public Boolean validacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
+            string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
+            string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas, int Filas)
+        {
+            this.CodigoS3 = CodigoS3;
+            this.LeerEscribir = LeerEscribir;
+            this.GradoEducacion = GradoEducacion;
             this.OtroGrado = OtroGrado;
             this.AsistenciaEstablecimiento = AsistenciaEstablecimiento;
             this.NombreEstablecimiento = NombreEstablecimiento;
@@ -64,16 +89,16 @@ namespace Capa_Logica
 
             if (errores.Count > 0)
             {
-                correcto = false;
+                return false;
             }
-            return correcto;
+            return true;
         }
 
         public void verificarDatos(int filas)
         {
             if (this.LeerEscribir == "")
             {
-                Error error = new Error("¿Sabe leer y escribir? " + filas.ToString(), 5000, 1);
+                Error error = new Error("¿Sabe leer y escribir? Fila:" + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.GradoEducacion == "")
@@ -81,19 +106,11 @@ namespace Capa_Logica
                 Error error = new Error("¿Cuál es el grado más alto de educación que completó? " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.GradoEducacion == "Técnico (especificar)")
-            {
-                if (this.Tecnico == "")
-                {
-                    Error error = new Error("Especificar nivel de educación Técnico" + filas.ToString(), 5000, 1);
-                    errores.Add(error);
-                }
-            }
-            if (this.GradoEducacion == "Otro (especificar)")
+            if (this.GradoEducacion == "Técnico (especificar)" || this.GradoEducacion == "Otro (especificar)")
             {
                 if (this.OtroGrado == "")
                 {
-                    Error error = new Error("Especificar otro grado de educación" + filas.ToString(), 5000, 1);
+                    Error error = new Error("Especificar grado de educación" + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
             }
@@ -102,7 +119,7 @@ namespace Capa_Logica
                 Error error = new Error("Actualmente ¿Asiste a algún establecimiento educativo?" + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.AsistenciaEstablecimiento == "No asiste")
+            if (this.AsistenciaEstablecimiento == "Si asiste")// || this.AsistenciaEstablecimiento == "NR/NR")
             {
                 if (this.NombreEstablecimiento == "")
                 {
@@ -135,15 +152,18 @@ namespace Capa_Logica
             }
             if (this.RazonNoAsistencia == "Otra razón (especificar)")
             {
-                Error error = new Error("Especificar otra razón de no asistencia" + filas.ToString(), 5000, 1);
-                errores.Add(error);
+                if (this.OtraRazon == "")
+                {
+                    Error error = new Error("Especificar otra razón de no asistencia" + filas.ToString(), 5000, 1);
+                    errores.Add(error);
+                }
             }
             if (this.FormacionComplementaria == "")
             {
                 Error error = new Error("¿Ha recibido algún tipo de formación complementaria?" + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.FormacionComplementaria == "SI (especificar)")
+            if (this.FormacionComplementaria == "Si (especificar)")
             {
                 if (this.TipoFormacion == "")
                 {
@@ -153,6 +173,18 @@ namespace Capa_Logica
             }
         }
 
+        public Boolean Insertar_EncuS3()
+        {
+            Boolean correcto = true;
+            S3_Educacion educacion = new S3_Educacion(CodigoS3,LeerEscribir,GradoEducacion,OtroGrado,AsistenciaEstablecimiento,NombreEstablecimiento,TipoEstablecimiento,OtroTipoEstablecimiento,UbicacionEstablecimiento,RazonNoAsistencia,OtraRazon,FormacionComplementaria, TipoFormacion,Encuestas_idEncuestas);
+            educacion.InsertarS3();
+            this.errores = educacion.errores;
+            if (errores.Count > 0)
+            {
+                correcto = false;
+            }
+            return correcto;
+        }
         public string obtenerError()
         {
             Error error = errores[0];

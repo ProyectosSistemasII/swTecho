@@ -76,7 +76,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S5_Tra(CodigoS5,Trabajo,Buscando,RazonNoBusqueda,OtraRazonNoBusqueda,Ocupacion,OtraOcupacion,ContratoTrabajo,CondicionLaboral,UbicacionTrabajo,OtrosTrabajos,EspecificarOtrosTrabajos,DiasTrabajo,HorasTrabajo,IngresoMensual,Encuestas_idEncuestas) VALUES(@CodigoS5,@Trabajo,@Buscando,@RazonNoBusqueda,@OtraRazonNoBusqueda,@Ocupacion,@OtraOcupacion,@ContratoTrabajo,@CondicionLaboral,@UbicacionTrabajo,@OtrosTrabajos,@EspecificarOtrosTrabajos,@DiasTrabajo,@HorasTrabajo,@IngresoMensual,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S5_Tra(CodigoS5,Trabajo,Buscando,RazonNoBusqueda,OtraRazonNoBusqueda,Ocupacion,OtraOcupacion,ContratoTrabajo,CondicionLaboral,UbicacionTrabajo,OtrosTrabajos,EspecificarOtrosTrabajos,DiasTrabajo,HorasTrabajo,IngresoMensual,Encuestas_idEncuestas) VALUES(@CodigoS5,@Trabajo,@Buscando,@RazonNoBusqueda,@OtraRazonNoBusqueda,@Ocupacion,@OtraOcupacion,@ContratoTrabajo,@CondicionLaboral,@UbicacionTrabajo,@OtrosTrabajos,@EspecificarOtrosTrabajos,@DiasTrabajo,@HorasTrabajo,@IngresoMensual,@Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@CodigoS5", this.CodigoS5);
                 comando.Parameters.AddWithValue("@Trabajo", this.Trabajo);
@@ -110,4 +110,3 @@ namespace Capa_Datos
         }
     }
 }
-

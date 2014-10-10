@@ -11,9 +11,9 @@ namespace Capa_Datos
     {
         public static String ConexionDireccion =
            "Server=localhost;" +
-           "Database=swtecho;" +
+           "Database=techo;" +
            "UID=root;" +
-           "Password=12345;";
+           "Password=1610;";
         //public static String ConexionDireccion = 
             //"Server=" + Properties.Settings.Default.server + ";" + 
             //"Database=" + Properties.Settings.Default.database + ";" + 
