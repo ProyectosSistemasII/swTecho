@@ -30,14 +30,14 @@ namespace Capa_Logica
             this.PorqueTraslado = PorqueTraslado;
             this.ViviendaActual = ViviendaActual;
             this.ComentarioFinal = Comentario;
-            this.idEncuestas = idEncuestas;
+            this.idEncuestas = idEncuesta;
             this.errores = new List<Error>();
             
         }
-        public Boolean Ingresar_S11() {
+        public Boolean Ingresar_S11(int caso) {
             Boolean correcto = true;
             //verificar sintaxis de los datos y comprobar errores antes de ser enviado a la capa de datos
-            this.verificarDatos();
+            this.verificarDatos(caso);
             if (errores.Count > 0)
             {
                 return false;
@@ -54,11 +54,11 @@ namespace Capa_Logica
             
         }
 
-        public void verificarDatos()
+        public void verificarDatos(int NoCaso)
         {
-            string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
+            
             string expresion_TextoNumero = @"^[a-zA-Z0-9]|[0-9a-zA-Z]+\s*[a-zA-Z0-9]*$";
-            string expresion_Año = @"^[0-9]{4}$";
+            string expresion_Año = @"^19[0-9]{2}|2[0-9]{3}$";
             string expresion_TextoNSNR = @"^[a-zA-Z]{1,50}/|[a-zA-Z]+\s*[a-zA-Z]*$";
             Regex regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.VidaFamiliar))
@@ -68,21 +68,28 @@ namespace Capa_Logica
             //    goto fin;
             }
             regex = new Regex(expresion_TextoNumero);
-            if (!regex.IsMatch(this.DireccionPasada))
+            if (!regex.IsMatch(this.DireccionPasada) && NoCaso == 2)
             {
                 Error error = new Error("Debe ingresar datos de la pregunta 2", 5000,2);
                 errores.Add(error);
               //  goto fin;
             }
             regex = new Regex(expresion_Año);
-            if (!regex.IsMatch(this.AnioTranslado))
+            if (!regex.IsMatch(this.AnioTranslado) && NoCaso == 2)
             {
-                Error error = new Error("Debe ingresar datos de año en formato 'AAAA'", 5000,3);
+                Error error = new Error("Debe ingresar datos el año en formato '19XX' o '20XX'", 5000, 3);
                 errores.Add(error);
-                //goto fin;
             }
-            regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.PorqueTraslado))
+            else if (this.AnioTranslado != "" && NoCaso==2)
+            {
+                if (Convert.ToInt32(AnioTranslado) > DateTime.Now.Year)
+                {
+                    Error error = new Error("Debe ingresar un año Menos o igual al Año Actual", 5000, 3);
+                    errores.Add(error);
+                }
+            }
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.PorqueTraslado) && NoCaso == 2)
             {
                 Error error = new Error("Debe ingresar datos de la pregunta 3", 5000,301);
                 errores.Add(error);

@@ -53,7 +53,7 @@ namespace Capa_Datos
             
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S11_Mov(VidaFamiliar,DireccionPasada,AnioTraslado,PorqueTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@PorqueTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S11_Mov(VidaFamiliar,DireccionPasada,AnioTraslado,PorqueAnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@VidaFamiliar,@DireccionPasada,@AnioTraslado,@PorqueTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
                     MySqlCommand comando = new MySqlCommand(consulta, conex);                    
                     comando.Parameters.AddWithValue("@VidaFamiliar", this.VidaFamiliar);
                     comando.Parameters.AddWithValue("@DireccionPasada", this.DireccionPasada);

@@ -149,9 +149,9 @@ namespace TechoCeiva
         /// <param name="e"></param>
         private void pbS11_Siguiente_Click(object sender, EventArgs e)
         {
-            this.VerificarCombobox_S11();            
+            int caso = this.VerificarCombobox_S11();            
             S11_MovilidadLN S11 = new S11_MovilidadLN(cbxS11_1_VidaFamiliartxt, txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActualtxt, txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
-            Boolean correcto = S11.Ingresar_S11();
+            Boolean correcto = S11.Ingresar_S11(caso);
             if (correcto)
             {
                 DialogResult pregunta = MessageBox.Show("Desea Ingresar una nueva Encuesta?", "Pregunta!", MessageBoxButtons.YesNo);
@@ -204,13 +204,19 @@ namespace TechoCeiva
             }            
         }
 
-        public void VerificarCombobox_S11()
+        public int VerificarCombobox_S11()
         {
+            int caso=0;
             //comprobar cada combox si no estan vacios
             if (cbxS11_1_VidaFamiliar.SelectedIndex != -1)
                 cbxS11_1_VidaFamiliartxt = cbxS11_1_VidaFamiliar.SelectedItem.ToString();
             if (cbxS11_4_ViviedaActual.SelectedIndex != -1)
                 cbxS11_4_ViviedaActualtxt = cbxS11_4_ViviedaActual.SelectedItem.ToString();
+            if (cbxS11_1_VidaFamiliar.SelectedIndex == 0)
+                caso = 1;
+            else
+                caso = 2;
+            return caso;
         }
 
         /// <summary>
@@ -1419,10 +1425,10 @@ namespace TechoCeiva
             tbpS6.Parent = null;
             tbpS7.Parent = null;
             tbpS8.Parent = null;
-            //tbpS9.Parent = null;
+            tbpS9.Parent = null;
             tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
-            tbpS11.Parent = null;
+            //tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
             dgvS2.Columns[0].ReadOnly = true;
             dgvS3.Columns[0].ReadOnly = true;
@@ -1921,6 +1927,16 @@ namespace TechoCeiva
                 MessageBox.Show("Debe Continuar con la pregunta 3","Aviso");
                 cbxS9_TipoPropietario.Focus();
             }
+        }
+
+        private void cbxS11_1_VidaFamiliar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxS11_1_VidaFamiliar.SelectedIndex == 0)
+            {
+                MessageBox.Show("Debe Continuar con la pregunta 4", "Aviso");
+                cbxS11_4_ViviedaActual.Focus();
+            }
+
         }        
     }
 }

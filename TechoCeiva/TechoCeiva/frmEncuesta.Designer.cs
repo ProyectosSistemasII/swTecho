@@ -7435,6 +7435,7 @@
             this.cbxS11_1_VidaFamiliar.Size = new System.Drawing.Size(250, 21);
             this.cbxS11_1_VidaFamiliar.TabIndex = 2;
             this.cbxS11_1_VidaFamiliar.ValueMember = "1";
+            this.cbxS11_1_VidaFamiliar.SelectedIndexChanged += new System.EventHandler(this.cbxS11_1_VidaFamiliar_SelectedIndexChanged);
             // 
             // label159
             // 
