@@ -131,8 +131,10 @@ namespace TechoCeiva
         int Madera8 = 0;
         int Tierra = 0;
         ///-----------------------------------
-          
-        Int32 CodigoEncuesta { get; set; }
+
+        ///-----------------------------------
+        
+        Int32 CodigoEncuesta = 1; 
         Color ColorCampsVacios = Color.Red;
 
         public frmEncuesta()
@@ -620,7 +622,7 @@ namespace TechoCeiva
             if (caso == 1)
                 S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_Propietariotxt, txtS9_OtroPropietario.Text, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
             else 
-                S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_TipoPropietariotxt, txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked.ToString(), cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+                S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_TipoPropietariotxt, txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
             
             Boolean correcto = S9.Insertar_EncS9(caso);
             if (correcto)
@@ -739,8 +741,8 @@ namespace TechoCeiva
             if (correcto)
             {
                 MessageBox.Show("Ingresado Correctamente");
-                //tbpS8.Parent = null;
-                //tbpS9.Parent = tbcDatos;
+                tbpS8.Parent = null;
+                tbpS9.Parent = tbcDatos;
             }            
             else
             {
@@ -1393,9 +1395,9 @@ namespace TechoCeiva
             tbpS6.Parent = null;
             tbpS7.Parent = null;
             tbpS8.Parent = null;
-            tbpS9.Parent = null;
+            //tbpS9.Parent = null;
             tbpS10.Parent = null;
-           // tbpS10Cont.Parent = null;
+            tbpS10Cont.Parent = null;
             tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
             dgvS2.Columns[0].ReadOnly = true;

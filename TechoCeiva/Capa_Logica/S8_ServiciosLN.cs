@@ -40,7 +40,7 @@ namespace Capa_Logica
             this.OtroTipoSanitario = OtroTipoSanitario;
             this.BasuraHogar = BasuraHogar;
             this.OtroTipoBasura = OtroTipoBasura;
-            this.idEncuestas = idEncuestas;
+            this.idEncuestas = idEncuesta;
             this.errores = new List<Error>();
         }
 

@@ -19,7 +19,7 @@ namespace Capa_Logica
             this.OtroTipoPropiedad = "";
             this.PropietarioTerreno = "";
             this.TelefonoPropietarioTerreno = "";
-            this.NSNR = "";
+            this.NSNR = false;
             this.OtraPropiedad = "";
             this.OtraPropiedadA = "";
             this.OtraPropiedadB = "";
@@ -40,7 +40,7 @@ namespace Capa_Logica
             
         }
         
-        public S9_PropiedadLN(String Propio, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, String NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas)
+        public S9_PropiedadLN(String Propio, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, Boolean NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas)
         {
             this.Propio = Propio;
             this.TipoPropiedad = TipoPropiedad;
@@ -154,14 +154,14 @@ namespace Capa_Logica
             //    goto fin;
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.PropietarioTerreno) && this.NSNR == "False")
+            if (!regex.IsMatch(this.PropietarioTerreno) && this.NSNR == false)
             {
                 Error error = new Error("Debe ingresar datos del 'Propietario terreno' de la pregunta 4", 5000, 4);
                 errores.Add(error);
           //      goto fin;
             }
             regex = new Regex(expresion_Numero);
-            if (!regex.IsMatch(this.TelefonoPropietarioTerreno) && this.NSNR == "False")
+            if (!regex.IsMatch(this.TelefonoPropietarioTerreno) && this.NSNR == false)
             {
                 Error error = new Error("El 'Telefono de propietario de terreno' debe ser de 8-10 digitos", 5000, 401);
                 errores.Add(error);

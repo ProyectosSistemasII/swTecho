@@ -18,7 +18,7 @@ namespace Capa_Datos
         public String OtroTipoPropiedad { get; set; }
         public String PropietarioTerreno { get; set; }
         public String TelefonoPropietarioTerreno { get; set; }
-        public String NSNR { get; set; }
+        public Boolean NSNR { get; set; }
         public String OtraPropiedad { get; set; }
         public String OtraPropiedadA { get; set; }
         public String OtraPropiedadB { get; set; }
@@ -38,7 +38,7 @@ namespace Capa_Datos
             this.OtroTipoPropiedad= "";
             this.PropietarioTerreno = "";
             this.TelefonoPropietarioTerreno = "";
-            this.NSNR ="";
+            this.NSNR =false;
             this.OtraPropiedad="";
             this.OtraPropiedadA= "";
             this.OtraPropiedadB ="";
@@ -46,7 +46,8 @@ namespace Capa_Datos
             this.idEncuestas = 0;
 
         }
-        public S9_Propiedad(int idS9_Prop, String Propio, String Propietario, String OtroPropietario, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, String NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas){
+        public S9_Propiedad(int idS9_Prop, String Propio, String Propietario, String OtroPropietario, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, Boolean NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas)
+        {
             this.idS9_Prop = idS9_Prop;           
             this.Propio = Propio;
             this.Propietario = Propietario;
@@ -69,13 +70,13 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S9_prop(Propio,Propietario,OtroPropietario,TipoPropiedad,OtroTipoPropiedad,PropietarioTerreno,TelefonoPropietarioTerreno,NSNR,OtraPropiedad,PropiedadA,PropiedadB,PropiedadC,Encuestas_idEncuestas) VALUES(@Propio,@Propietario,@OtroPropietario,@TipoPropiedad,@OtroTipoPropiedad,@PropietarioTerreno,@TelefonoPropietarioTerreno,@NSNR,@OtraPropiedad,@OtraPropiedadA,@OtraPropiedadB,@OtraPropiedadC,@Encuestas_idEncuestas)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                
                 comando.Parameters.AddWithValue("@Propio", this.Propio);
                 comando.Parameters.AddWithValue("@Propietario", this.Propietario);
                 comando.Parameters.AddWithValue("@OtroPropietario", this.OtroPropietario);
-                comando.Parameters.AddWithValue("@TipoPropietario", this.TipoPropiedad);
+                comando.Parameters.AddWithValue("@TipoPropiedad", this.TipoPropiedad);
                 comando.Parameters.AddWithValue("@OtroTipoPropiedad", this.OtroTipoPropiedad);
                 comando.Parameters.AddWithValue("@PropietarioTerreno", this.PropietarioTerreno);
                 comando.Parameters.AddWithValue("@TelefonoPropietarioTerreno", this.TelefonoPropietarioTerreno);
@@ -115,7 +116,7 @@ namespace Capa_Datos
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 DataRow row = tabla.Rows[i];
-                S9_Propiedad propiedad = new S9_Propiedad(Convert.ToInt32(row["idS9_Prop"]), Convert.ToString(row["Propio"]), Convert.ToString(row["Propietario"]), Convert.ToString(row["OtroPropietario"]), Convert.ToString(row["TipoPropietario"]), Convert.ToString(row["OtroTipoPropietario"]), Convert.ToString(row["PropietarioTerreno"]), Convert.ToString(row["TelefonoPropietarioTerreno"]), Convert.ToString(row["NSNR"]), Convert.ToString(row["OtraPropiedad"]), Convert.ToString(row["OtraPropiedadA"]), Convert.ToString(row["OtraPropiedadB"]), Convert.ToString(row["OtraPropiedadC"]), Convert.ToInt32(row["Encuestas_idEncuestas"]));
+                S9_Propiedad propiedad = new S9_Propiedad(Convert.ToInt32(row["idS9_Prop"]), Convert.ToString(row["Propio"]), Convert.ToString(row["Propietario"]), Convert.ToString(row["OtroPropietario"]), Convert.ToString(row["TipoPropietario"]), Convert.ToString(row["OtroTipoPropietario"]), Convert.ToString(row["PropietarioTerreno"]), Convert.ToString(row["TelefonoPropietarioTerreno"]), Convert.ToBoolean(row["NSNR"]), Convert.ToString(row["OtraPropiedad"]), Convert.ToString(row["OtraPropiedadA"]), Convert.ToString(row["OtraPropiedadB"]), Convert.ToString(row["OtraPropiedadC"]), Convert.ToInt32(row["Encuestas_idEncuestas"]));
                 ListaPropiedad.Add(propiedad);
             }
             return ListaPropiedad;

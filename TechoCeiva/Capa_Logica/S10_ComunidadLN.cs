@@ -8,7 +8,7 @@ namespace Capa_Logica
 {
     public class S10_ComunidadLN : S10_Comunidad
     {
-        S10_Comunidad NuevaComS10 = null;
+        S10_Comunidad NuevaComS10 = new S10_Comunidad();
         public S10_ComunidadLN()
         {
             this.idS10_Com = 0;
@@ -158,15 +158,18 @@ namespace Capa_Logica
             }
             // se ingresa los datos a la capa de datos            
             if (this.idS1006 != 0 && this.idS1007 != 0 && this.idS1008 != 0 && this.idS1014 != 0)
-                NuevaComS10.S10_ComunidadCOnt( this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoNegativo, this.AspectoNegativoA, this.AspectoNegativoB,  this.Discriminacion, this.TipoDiscriminacion, this.OrganizacionComunitaria, this.TipoOrganizacion, this.ConfianzaOrganizacion, this.ComentarioConfianza, this.Lider,this.LiderA, this.LiderB, this.LiderC, this.EstadoComunidadPasada, this.ComentarioEstadoPasado, this.EstadoComunidadFuturo, this.ComentarioEstadoFuturo, this.idS1014);
-            NuevaComS10.InsertarS10();
-            this.errores = NuevaComS10.errores;
+            {
+                NuevaComS10.S10_ComunidadCOnt(this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoNegativo, this.AspectoNegativoA, this.AspectoNegativoB, this.Discriminacion, this.TipoDiscriminacion, this.OrganizacionComunitaria, this.TipoOrganizacion, this.ConfianzaOrganizacion, this.ComentarioConfianza, this.Lider, this.LiderA, this.LiderB, this.LiderC, this.EstadoComunidadPasada, this.ComentarioEstadoPasado, this.EstadoComunidadFuturo, this.ComentarioEstadoFuturo, this.idS1014);
+                NuevaComS10.InsertarS10();
+                this.errores = NuevaComS10.errores;
+                if (errores.Count > 0)
+                {
+                    correcto = false;
+                }
+            } 
 
             //Comprobar errores para la capa de datos
-            if (errores.Count > 0)
-            {
-                correcto = false;
-            }
+            
             return correcto;
         }
         public void verificarDatos()
@@ -264,7 +267,7 @@ namespace Capa_Logica
             regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.AspectoPositivoA) && this.AspectoPositivo == false)
             {
-                Error error = new Error("Debe ingresar datos de los 'Aspectos positivos' de la pregunta 12", 5000, 1201);
+                Error error = new Error("Debe ingresar datos de los 'Aspectos positivos' de la pregunta 12", 5000, 12);
                 errores.Add(error);
             }
 
@@ -272,7 +275,7 @@ namespace Capa_Logica
             regex = new Regex(expresion_Texto);
             if (!regex.IsMatch(this.AspectoNegativoA) && this.AspectoNegativo == false)
             {
-                Error error = new Error("Debe ingresar datos sobre los 'Aspectos negativos' de la pregunta 13", 5000, 1301);
+                Error error = new Error("Debe ingresar datos sobre los 'Aspectos negativos' de la pregunta 13", 5000, 13);
                 errores.Add(error);
             }
 
@@ -308,7 +311,7 @@ namespace Capa_Logica
                 errores.Add(error);
             }
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.ComentarioConfianza))
+            if (!regex.IsMatch(this.ComentarioConfianza)&& this.ConfianzaOrganizacion != "NS/NR")
             {
                 Error error = new Error("Debe ingresar datos sobre 'Por que razon' de la pregunta 18", 5000, 1801);
                 errores.Add(error);
@@ -320,7 +323,7 @@ namespace Capa_Logica
                 Error error = new Error("Debe ingresar datos sobre 'Quienes identifica como lideres' de la pregunta 19", 5000, 19);
                 errores.Add(error);
             }
-
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.EstadoComunidadPasada))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 20", 5000, 20);
@@ -328,12 +331,12 @@ namespace Capa_Logica
             }
 
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.ComentarioEstadoPasado)) 
+            if (!regex.IsMatch(this.ComentarioEstadoPasado)&& this.EstadoComunidadPasada !="NS/NR") 
             {
                 Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 20", 5000, 2001);
                 errores.Add(error);
             }
-
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.EstadoComunidadFuturo))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 21", 5000, 21);
@@ -341,9 +344,9 @@ namespace Capa_Logica
             }
 
             regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.ComentarioEstadoFuturo))
+            if (!regex.IsMatch(this.ComentarioEstadoFuturo) && this.EstadoComunidadFuturo != "NS/NR")
             {
-                Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 22", 5000, 2201);
+                Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 21", 5000, 2101);
                 errores.Add(error);
             }
 

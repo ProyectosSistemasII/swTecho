@@ -652,7 +652,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtS11_3b_Porque = new System.Windows.Forms.TextBox();
             this.label161 = new System.Windows.Forms.Label();
-            this.txtS11_3a_AñoTraslado = new System.Windows.Forms.TextBox();
             this.label157 = new System.Windows.Forms.Label();
             this.groupBox113 = new System.Windows.Forms.GroupBox();
             this.txtS11_2_DireccionPasada = new System.Windows.Forms.TextBox();
@@ -660,6 +659,7 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
+            this.txtS11_3a_AñoTraslado = new System.Windows.Forms.MaskedTextBox();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -7333,10 +7333,10 @@
             // 
             // groupBox112
             // 
+            this.groupBox112.Controls.Add(this.txtS11_3a_AñoTraslado);
             this.groupBox112.Controls.Add(this.label1);
             this.groupBox112.Controls.Add(this.txtS11_3b_Porque);
             this.groupBox112.Controls.Add(this.label161);
-            this.groupBox112.Controls.Add(this.txtS11_3a_AñoTraslado);
             this.groupBox112.Controls.Add(this.label157);
             this.groupBox112.Location = new System.Drawing.Point(12, 174);
             this.groupBox112.Name = "groupBox112";
@@ -7369,14 +7369,6 @@
             this.label161.Size = new System.Drawing.Size(28, 13);
             this.label161.TabIndex = 11;
             this.label161.Text = "año:\t\t\r\n";
-            // 
-            // txtS11_3a_AñoTraslado
-            // 
-            this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(72, 39);
-            this.txtS11_3a_AñoTraslado.Multiline = true;
-            this.txtS11_3a_AñoTraslado.Name = "txtS11_3a_AñoTraslado";
-            this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(194, 20);
-            this.txtS11_3a_AñoTraslado.TabIndex = 10;
             // 
             // label157
             // 
@@ -7448,6 +7440,14 @@
             this.label159.TabIndex = 1;
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
     "urante toda su VIDA FAMILIAR?\r\n";
+            // 
+            // txtS11_3a_AñoTraslado
+            // 
+            this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(72, 37);
+            this.txtS11_3a_AñoTraslado.Mask = "0000";
+            this.txtS11_3a_AñoTraslado.Name = "txtS11_3a_AñoTraslado";
+            this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(194, 20);
+            this.txtS11_3a_AñoTraslado.TabIndex = 9;
             // 
             // frmEncuesta
             // 
@@ -7815,7 +7815,6 @@
         private System.Windows.Forms.GroupBox groupBox112;
         private System.Windows.Forms.TextBox txtS11_3b_Porque;
         private System.Windows.Forms.Label label161;
-        private System.Windows.Forms.TextBox txtS11_3a_AñoTraslado;
         private System.Windows.Forms.Label label157;
         private System.Windows.Forms.GroupBox groupBox113;
         private System.Windows.Forms.TextBox txtS11_2_DireccionPasada;
@@ -8350,6 +8349,7 @@
         private System.Windows.Forms.Label lblS7_1_X;
         private System.Windows.Forms.TextBox txtS10_TipoOrganizaciones;
         private System.Windows.Forms.TextBox txtS1014_Especificar;
+        private System.Windows.Forms.MaskedTextBox txtS11_3a_AñoTraslado;
 
     }
 }

@@ -74,9 +74,9 @@ namespace Capa_Logica
             }
             string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
             Regex regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.Especificar) && this.Otros != true)
+            if (!regex.IsMatch(this.Especificar) && this.Otros == true)
             {
-                Error error = new Error("Debe Especificar 'el grupo mas afectada' de la pregunta 14", 5000, 1401);
+                Error error = new Error("Debe Especificar 'El grupo mas afectado' de la pregunta 14", 5000, 1401);
                 errores.Add(error);
             }
         }

@@ -58,6 +58,8 @@ namespace Capa_Datos
             this.OtraEnergiaCocina = OtraCocina;
             this.Sanitario = Sanitario;
             this.OtroTipoSanitario = OtroTipoSanitario;
+            this.BasuraHogar = BasuraHogar;
+            this.OtroTipoBasura = OtroTipoBasura;
             this.idEncuestas = idEncuesta;
             this.idS807_serv = idS807;
             this.idS808_serv = idS808;
@@ -69,7 +71,7 @@ namespace Capa_Datos
 
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                string consulta = "INSERT INTO S8_Serv(AccesoAgua,FuenteAgua,OtraFuente,EnergiaElectrica,OtraEnergiaElectrica,EnergiaCocina,OtraEnergiaCocina,Sanitario,otroTipoSanitario,Encuestas_idEncuestas,S807_Serv_idS807_Serv,S808_Serv_idS808_Serv) VALUES(@AccesoAgua,@FuenteAgua,@OtraFuente,@EnergiaElectrica,@OtraEnergiaElectrica,@EnergiaCocina,@OtraEnergiaCocina,@Sanitario,@otroTipoSanitario,@Encuestas_idEncuestas,@S807_Serv_idS807_Serv,@S808_Serv_idS808_Serv)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@AccesoAgua", this.AccesoAgua);
                 comando.Parameters.AddWithValue("@FuenteAgua", this.FuenteAgua);
