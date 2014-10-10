@@ -20,6 +20,7 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_Voluntarios : UserControl
 	{
+        int idVol = 0;
 		public UC_Voluntarios()
 		{
 			this.InitializeComponent();
@@ -46,12 +47,33 @@ namespace TechoCeiva
         {
             WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
+            nWinAddVoluntario.btnEliminar.Visibility = Visibility.Hidden;
+            nWinAddVoluntario.btnModificar.Visibility = Visibility.Hidden;
             nWinAddVoluntario.Show();
         }
 
         private void datagdVoluntarios_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            _Voluntarios selec = datagdVoluntarios.SelectedItem as _Voluntarios;
+
+            idVol = selec.idVoluntarios;
+
+            WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
             
+            nWinAddVoluntario.txtNombres.Text = selec.nombres;
+            nWinAddVoluntario.txtApellidos.Text = selec.apellidos;
+            nWinAddVoluntario.txtDireccion.Text = selec.direccion;
+            nWinAddVoluntario.txtTelefono.Text = selec.telefono;
+            nWinAddVoluntario.txtCorreo.Text = selec.correo;
+            nWinAddVoluntario.txtNombreEmergencia.Text = selec.personaEmergencia;
+            nWinAddVoluntario.txtTelEmergencia.Text = selec.telefonoEmergencia;
+            nWinAddVoluntario.btnGuardar.Visibility = Visibility.Hidden;
+            nWinAddVoluntario.getId(idVol);
+            nWinAddVoluntario.Show();
+
         }
+
+        
 	}
 }

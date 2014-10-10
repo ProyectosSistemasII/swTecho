@@ -19,6 +19,9 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class WinAddVoluntario : Window
 	{
+        int currentid = 0;
+        UC_Voluntarios newUcVol = new UC_Voluntarios();
+
 		public WinAddVoluntario()
 		{
 			this.InitializeComponent();
@@ -28,6 +31,7 @@ namespace TechoCeiva
             cmbDepartamento.ItemsSource = depto.Obtener_D();
             cmbDepartamento.SelectedValuePath = "idDepartamento";
             cmbDepartamento.DisplayMemberPath = "nombre";
+
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
@@ -56,10 +60,8 @@ namespace TechoCeiva
             {
                 voluntario.Insertar_V();
                 MessageBox.Show("Ingreso Exitoso");
-                this.Close();
-                UC_Voluntarios vol = new UC_Voluntarios();
-                vol.fillDataGrid(voluntario);
-                
+                newUcVol.fillDataGrid(voluntario);
+                this.Close();               
             }
             else
             {
@@ -82,6 +84,59 @@ namespace TechoCeiva
             cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
             cmbMunicipio.SelectedValuePath = "idMunicipio";
             cmbMunicipio.DisplayMemberPath = "nombre";
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            String nombres = txtNombres.Text;
+            String apellidos = txtApellidos.Text;
+            String direccion = txtDireccion.Text;
+            String telefono = txtTelefono.Text;
+            String correo = txtCorreo.Text;
+            int dpto = Convert.ToInt32(cmbDepartamento.SelectedValue);
+            int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
+            String persEm = txtNombreEmergencia.Text;
+            String telEm = txtTelEmergencia.Text;
+
+            _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
+            Boolean correcto = voluntario.Ingresar_V();
+
+
+            if (correcto)
+            {
+                voluntario.Modificar_V(currentid);
+                MessageBox.Show("Modificación Exitosa");
+                this.Close();
+                newUcVol.fillDataGrid(voluntario);
+            }
+            else
+            {
+                MessageBox.Show(voluntario._obtenerError());
+            }
+
+        }
+
+        public void getId(int idVol) 
+        {
+            currentid=idVol;
+        }
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            _VoluntariosLN voluntario = new _VoluntariosLN();
+            Boolean correcto = voluntario.Ingresar_V();
+
+
+            if (correcto)
+            {
+                voluntario.Eliminar_V(currentid);
+                MessageBox.Show("Eliminado!");
+                this.Close();
+                newUcVol.fillDataGrid(voluntario);
+            }
+            else
+            {
+                MessageBox.Show(voluntario._obtenerError());
+            }
         }
 
 	}

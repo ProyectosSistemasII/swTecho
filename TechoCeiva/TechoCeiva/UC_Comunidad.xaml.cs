@@ -57,6 +57,8 @@ namespace TechoCeiva
             {
                 comunidad.InsertarComunidad();
                 MessageBox.Show("Ingreso Exitoso");
+                txtNombre.Text = "";
+                cmbDepartamento.Text = "";
                 fillDataGrid(comunidad);
             }
             else
@@ -98,6 +100,8 @@ namespace TechoCeiva
             {
                 comunidad.ModificarComunidad(idComn);
                 MessageBox.Show("Modificación Exitosa");
+                txtNombre.Text = "";
+                cmbDepartamento.Text = "";
                 fillDataGrid(comunidad);
             }
             else
