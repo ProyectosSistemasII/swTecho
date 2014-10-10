@@ -177,13 +177,14 @@ namespace Capa_Datos
             this.idS1014 = idS1014;
             this.errores = new List<Error>();
         }
-        public void InsertarS10()
-        {
-
+        public void InsertarS10A()
+        {         
+         
             if (this.errores.Count == 0)
             {
-                string consulta = ""; //= "INSERT INTO S9_prop(CodigoS11,VidaFamiliar,DireccionPasada,AnioTraslado,ViviendaActual,ComentarioFinal,Encuestas_idEncuestas) VALUES(@CodigoS11,VidaFamiliar,@DireccionPasada,@AnioTraslado,@ViviendaActual,@ComentarioFinal,@Encuestas_idEncuestas)";
+                String consulta = "INSERT INTO S10_Com(Ayudo, AyudaVecinos, RelacionVecinos, ComentarioRelacion, OrganizarVecinos, OrganizarA, OrganizarB, OrganizarC, ParticipacionGrupo, Necesidad,NecesidadA,NecesidadB,NecesidadC,NecesidadCom,NecesidadComA,NecesidadComB,NecesidadComC,ProyectosVecinos,ProyectoA,ProyectoB,ProyectoC,AspectoPositivo,AspectoPositivoA,AspectoPositivoB,AspectoNegativo, AspectoNegativoA,AspectoNegativoB,Discriminacion,TipoDiscriminacion,OrganizacionComunitaria,TipoOrganizacion,ConfianzaOrganizacion,ComentarioConfianza,Lider,LiderA,LiderB, LiderC,EstadoComunidadPasado,ComentarioEstadoPasado,EstadoComunidadFuturo,ComentarioEstadoFuturo, Encuestas_idEncuestas,S1006_Com_idS1006_Com,S1008_Com_idS1008_Com,S1014_Com_idS1014_Com) VALUES(@Ayudo, @AyudaVecinos, @RelacionVecinos, @ComentarioRelacion, @OrganizarVecinos, @OrganizarA, @OrganizarB, @OrganizarC, @ParticipacionGrupo,@Necesidad,@NecesidadA,@NecesidadB,@NecesidadC,@NecesidadCom,@NecesidadComA,@NecesidadComB,@NecesidadComC,@ProyectosVecinos,@ProyectoA,@ProyectoB,@ProyectoC,@AspectoPositivo,@AspectoPositivoA,@AspectoPositivoB,@AspectoNegativo,@AspectoNegativoA,@AspectoNegativoB,@Discriminacion,@TipoDiscriminacion,@OrganizacionComunitaria,@TipoOrganizacion,@ConfianzaOrganizacion,@ComentarioConfianza,@Lider,@LiderA,@LiderB, @LiderC,@EstadoComunidadPasado,@ComentarioEstadoPasado,@EstadoComunidadFuturo,@ComentarioEstadoFuturo, @Encuestas_idEncuestas,@S1006_Com_idS1006_Com,@S1008_Com_idS1008_Com,@S1014_Com_idS1014_Com)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
+                comando.Parameters.AddWithValue("@S1006_Com_idS1006_Com", this.idS1006);
                 comando.Parameters.AddWithValue("@Ayudo", this.Ayudo);
                 comando.Parameters.AddWithValue("@AyudaVecinos", this.AyudaVecinos);
                 comando.Parameters.AddWithValue("@RelacionVecinos", this.RelacionVecinos);
@@ -221,13 +222,80 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@LiderA", this.LiderA);
                 comando.Parameters.AddWithValue("@LiderB", this.LiderB);
                 comando.Parameters.AddWithValue("@LiderC", this.LiderC);
-                comando.Parameters.AddWithValue("@EstadoComunidadPasada", this.EstadoComunidadPasada);
+                comando.Parameters.AddWithValue("@EstadoComunidadPasado", this.EstadoComunidadPasada);
                 comando.Parameters.AddWithValue("@ComentarioEstadoPasado", this.ComentarioEstadoPasado);
                 comando.Parameters.AddWithValue("@EstadoComunidadFuturo", this.EstadoComunidadFuturo);
                 comando.Parameters.AddWithValue("@ComentarioEstadoFuturo", this.ComentarioEstadoFuturo);
                 comando.Parameters.AddWithValue("@Encuestas_idEncuestas", this.idEncuestas);
-                comando.Parameters.AddWithValue("@S1006_Com_idS1006_Com", this.idS1006);
+                comando.Parameters.AddWithValue("@S1008_Com_idS1008_Com", this.idS1008);
+                comando.Parameters.AddWithValue("@S1014_Com_idS1014_Com", this.idS1014);
+
+                try
+                {
+                    comando.Connection.Open();
+                    comando.ExecuteNonQuery();
+                    comando.Connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    Error error = new Error(ex.Message + "   " + ex.Number, 2);
+                    errores.Add(error);
+                }
+            }
+        }
+        public void InsertarS10B()
+        {
+
+           
+                
+            if (this.errores.Count == 0 )
+            {
+                
+                string consulta = "INSERT INTO S10_Com(Ayudo, AyudaVecinos, RelacionVecinos, ComentarioRelacion, OrganizarVecinos, OrganizarA, OrganizarB, OrganizarC, ParticipacionGrupo, Necesidad,NecesidadA,NecesidadB,NecesidadC,NecesidadCom,NecesidadComA,NecesidadComB,NecesidadComC,ProyectosVecinos,ProyectoA,ProyectoB,ProyectoC,AspectoPositivo,AspectoPositivoA,AspectoPositivoB,AspectoNegativo, AspectoNegativoA,AspectoNegativoB,Discriminacion,TipoDiscriminacion,OrganizacionComunitaria,TipoOrganizacion,ConfianzaOrganizacion,ComentarioConfianza,Lider,LiderA,LiderB, LiderC,EstadoComunidadPasado,ComentarioEstadoPasado,EstadoComunidadFuturo,ComentarioEstadoFuturo, Encuestas_idEncuestas, S1007_Com_idS1007_Com,S1008_Com_idS1008_Com,S1014_Com_idS1014_Com) VALUES(@Ayudo, @AyudaVecinos, @RelacionVecinos, @ComentarioRelacion, @OrganizarVecinos, @OrganizarA, @OrganizarB, @OrganizarC, @ParticipacionGrupo,@Necesidad,@NecesidadA,@NecesidadB,@NecesidadC,@NecesidadCom,@NecesidadComA,@NecesidadComB,@NecesidadComC,@ProyectosVecinos,@ProyectoA,@ProyectoB,@ProyectoC,@AspectoPositivo,@AspectoPositivoA,@AspectoPositivoB,@AspectoNegativo,@AspectoNegativoA,@AspectoNegativoB,@Discriminacion,@TipoDiscriminacion,@OrganizacionComunitaria,@TipoOrganizacion,@ConfianzaOrganizacion,@ComentarioConfianza,@Lider,@LiderA,@LiderB, @LiderC,@EstadoComunidadPasado,@ComentarioEstadoPasado,@EstadoComunidadFuturo,@ComentarioEstadoFuturo, @Encuestas_idEncuestas, @S1007_Com_idS1007_Com,@S1008_Com_idS1008_Com,@S1014_Com_idS1014_Com)";
+                MySqlCommand comando = new MySqlCommand(consulta, conex);    
                 comando.Parameters.AddWithValue("@S1007_Com_idS1007_Com", this.idS1007);
+                comando.Parameters.AddWithValue("@Ayudo", this.Ayudo);
+                comando.Parameters.AddWithValue("@AyudaVecinos", this.AyudaVecinos);
+                comando.Parameters.AddWithValue("@RelacionVecinos", this.RelacionVecinos);
+                comando.Parameters.AddWithValue("@ComentarioRelacion", this.ComentarioRelacion);
+                comando.Parameters.AddWithValue("@OrganizarVecinos", this.OrganizarVecinos);
+                comando.Parameters.AddWithValue("@OrganizarA", this.OrganizarA);
+                comando.Parameters.AddWithValue("@OrganizarB", this.OrganizarB);
+                comando.Parameters.AddWithValue("@OrganizarC", this.OrganizarC);
+                comando.Parameters.AddWithValue("@ParticipacionGrupo", this.ParticipacionGrupo);
+                comando.Parameters.AddWithValue("@Necesidad", this.Necesidad);
+                comando.Parameters.AddWithValue("@NecesidadA", this.NecesidadA);
+                comando.Parameters.AddWithValue("@NecesidadB", this.NecesidadB);
+                comando.Parameters.AddWithValue("@NecesidadC", this.NecesidadC);
+                comando.Parameters.AddWithValue("@NecesidadCom", this.NecesidadCom);
+                comando.Parameters.AddWithValue("@NecesidadComA", this.NecesidadComA);
+                comando.Parameters.AddWithValue("@NecesidadComB", this.NecesidadComB);
+                comando.Parameters.AddWithValue("@NecesidadComC", this.NecesidadComC);
+                comando.Parameters.AddWithValue("@ProyectosVecinos", this.ProyectosVecinos);
+                comando.Parameters.AddWithValue("@ProyectoA", this.ProyectoA);
+                comando.Parameters.AddWithValue("@ProyectoB", this.ProyectoB);
+                comando.Parameters.AddWithValue("@ProyectoC", this.ProyectoC);
+                comando.Parameters.AddWithValue("@AspectoPositivo", this.AspectoPositivo);
+                comando.Parameters.AddWithValue("@AspectoPositivoA", this.AspectoPositivoA);
+                comando.Parameters.AddWithValue("@AspectoPositivoB", this.AspectoPositivoB);
+                comando.Parameters.AddWithValue("@AspectoNegativo", this.AspectoNegativo);
+                comando.Parameters.AddWithValue("@AspectoNegativoA", this.AspectoNegativoA);
+                comando.Parameters.AddWithValue("@AspectoNegativoB", this.AspectoNegativoB);
+                comando.Parameters.AddWithValue("@Discriminacion", this.Discriminacion);
+                comando.Parameters.AddWithValue("@TipoDiscriminacion", this.TipoDiscriminacion);
+                comando.Parameters.AddWithValue("@OrganizacionComunitaria", this.OrganizacionComunitaria);
+                comando.Parameters.AddWithValue("@TipoOrganizacion", this.TipoOrganizacion);
+                comando.Parameters.AddWithValue("@ConfianzaOrganizacion", this.ConfianzaOrganizacion);
+                comando.Parameters.AddWithValue("@ComentarioConfianza", this.ComentarioConfianza);
+                comando.Parameters.AddWithValue("@Lider", this.Lider);
+                comando.Parameters.AddWithValue("@LiderA", this.LiderA);
+                comando.Parameters.AddWithValue("@LiderB", this.LiderB);
+                comando.Parameters.AddWithValue("@LiderC", this.LiderC);
+                comando.Parameters.AddWithValue("@EstadoComunidadPasado", this.EstadoComunidadPasada);
+                comando.Parameters.AddWithValue("@ComentarioEstadoPasado", this.ComentarioEstadoPasado);
+                comando.Parameters.AddWithValue("@EstadoComunidadFuturo", this.EstadoComunidadFuturo);
+                comando.Parameters.AddWithValue("@ComentarioEstadoFuturo", this.ComentarioEstadoFuturo);
+                comando.Parameters.AddWithValue("@Encuestas_idEncuestas", this.idEncuestas);
                 comando.Parameters.AddWithValue("@S1008_Com_idS1008_Com", this.idS1008);
                 comando.Parameters.AddWithValue("@S1014_Com_idS1014_Com", this.idS1014);
 

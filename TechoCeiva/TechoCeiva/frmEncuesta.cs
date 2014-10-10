@@ -49,6 +49,8 @@ namespace TechoCeiva
         Boolean Pregunta1007 = false;
         Boolean Pregunta1008 = false;
         Boolean Pregunta1014 = false;
+        Boolean Pregunta1006Mensaje = false;
+
         //selecciones en la pregunta 1008
         int rbtS1008_Familiar = -1;
         int rbtS1008_Vecinos = -1;
@@ -133,14 +135,14 @@ namespace TechoCeiva
         ///-----------------------------------
 
         ///-----------------------------------
-        
-        Int32 CodigoEncuesta = 1; 
+
+        Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
 
         public frmEncuesta()
         {
             InitializeComponent();
-            CodigoEncuesta = 1;
+            CodigoEncuesta = 2;
         }
         /// <summary>
         /// Seccion 11
@@ -226,34 +228,49 @@ namespace TechoCeiva
         /// <param name="e"></param>
         private void pbS10Cont_Siguiente_Click(object sender, EventArgs e)
         {
-            this.VerificarCombox_S10();
+            int caso = this.VerificarCombox_S10();
             NuevaS10_Comunidad.S10_ComunidadLNCont(this.ckbS10_Positivo.Checked, txtS10_ApectosPositivosA.Text,txtS10_ApectosPositivosB.Text, ckbS10_Negativo.Checked,txtS10_ApectosNegativosA.Text, txtS10_ApectosNegativosB.Text, cbxS10_Discriminaciontxt,txtS10_TipoDiscriminacion.Text,cbxS10_OrganizacionComunitariatxt,txtS10_TipoOrganizaciones.Text, cbxS10_ConfiazaOrganizaciontxt,txtS10_ComentarioConfianza.Text, ckbS10_Lider.Checked, txtS10_LiderA.Text, txtS10_LiderB.Text, txtS10_LiderC.Text,cbxS10_EstadoPasadotxt, txtS10_ComentarioEstadoPasado.Text,cbxS10_estadoFuturotxt, txtS10_ComentarioEstadoFuturo.Text,NuevaS1014.idS1014_com);
-            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10Cont();
+            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10Cont(caso);
             if (!correcto)
             {
-                MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
-                int cant = NuevaS10_Comunidad.errores.Count - 1;
-
-                for (int i = cant; i >= 0; i--)
-                    this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+                goto Errores;
             }
             if (Pregunta1014 == false)
             {
                 if (this.IngresarS1014() == true)
-                    Pregunta1014=true;
+                {
+                    Pregunta1014 = true;
+                    goto Ingresar;
+                }
             }
-            else
-            {
-                MessageBox.Show("Ingresado Correctamente");
-                tbpS10Cont.Parent = null;
-                tbpS11.Parent = tbcDatos;     
-            }
+             
+            Errores:
+                MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
+                    int cant = NuevaS10_Comunidad.errores.Count - 1;
+
+                    for (int i = cant; i >= 0; i--)
+                        this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+                    goto Fin;
+            Ingresar:
+                NuevaS10_Comunidad.idS1014 = NuevaS1014.idS1014_com;
+                Boolean correcto2 = NuevaS10_Comunidad.Insertar_S10_Com(Pregunta1014);
+                    if (!correcto2 == true)
+                        goto Errores;
+                    else
+                    {
+                        MessageBox.Show("Ingresado Correctamente");
+                        tbpS10Cont.Parent = null;
+                        tbpS11.Parent = tbcDatos;
+                    }
+                Fin:
+                return;
+
 
         }
        
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
-            this.VerificarCombox_S10();
+            int caso = this.VerificarCombox_S10();
             NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.CodigoEncuesta,NuevaS1006.idS1006_com,NuevaS1007.idS1007_com, NuevaS1008.idS1008_Com);
             Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10();
             if (!correcto)
@@ -265,12 +282,12 @@ namespace TechoCeiva
                     this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
                 
             }
-            if (Pregunta1006 == false )
+            if (Pregunta1006 == false && caso == 1)
             {
                 if (this.IngresarS1006() == true) 
                     Pregunta1006=true;
            }
-            if (Pregunta1007 == false)
+            if (Pregunta1007 == false&& caso ==2)
             {
                 if(this.IngresarS1007() == true)
                     Pregunta1007= true;
@@ -457,7 +474,13 @@ namespace TechoCeiva
                 cbxS10_EstadoPasadotxt = cbxS10_EstadoPasado.SelectedItem.ToString();
             if (cbxS10_estadoFuturo.SelectedIndex != -1)
                 cbxS10_estadoFuturotxt = cbxS10_estadoFuturo.SelectedItem.ToString();
-            
+            /// salto de preguntas
+            if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
+                NumeroCaso = 2;
+            if (Pregunta1006Mensaje == true)
+                NumeroCaso = 1;
+            if (cbxS10_OrganizacionComunitaria.SelectedIndex == 1)
+                NumeroCaso =3;
             return NumeroCaso;
         }
         public Boolean IngresarS1014()
@@ -602,7 +625,7 @@ namespace TechoCeiva
         }
         public Boolean IngresarS1006()
         {
-            NuevaS1006 = new S1006_ComunidadLN(Convert.ToBoolean(cklS1006_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), txtS1006_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)));
+            NuevaS1006 = new S1006_ComunidadLN(Convert.ToBoolean(cklS1006_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)), txtS1006_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(8)));
 
             Boolean correcto = NuevaS1006.Insertar_EncuS1006();
             if (!correcto)
@@ -1426,9 +1449,9 @@ namespace TechoCeiva
             tbpS7.Parent = null;
             tbpS8.Parent = null;
             tbpS9.Parent = null;
-            tbpS10.Parent = null;
+            //tbpS10.Parent = null;
             tbpS10Cont.Parent = null;
-            //tbpS11.Parent = null;
+            tbpS11.Parent = null;
             dgvS1.Columns[0].ReadOnly = true;
             dgvS2.Columns[0].ReadOnly = true;
             dgvS3.Columns[0].ReadOnly = true;
@@ -1898,26 +1921,33 @@ namespace TechoCeiva
 
         private void cklS1007_Com_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (Convert.ToBoolean(cklS1007_Com.GetItemCheckState(4)) == true)
-                txtS1007_Especificar.Enabled = false;
-            else
+            if (cklS1007_Com.GetSelected(4) == true)
                 txtS1007_Especificar.Enabled = true;
+            else
+                txtS1007_Especificar.Enabled = false;
         }
 
         private void cklS1006_Com_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)) == true)
-                txtS1006_Especificar.Enabled = false;
-            else
+            if (cklS1006_Com.GetSelected(7) == true)
                 txtS1006_Especificar.Enabled = true;
+            else 
+                txtS1006_Especificar.Enabled = false;
+            
+            if (Pregunta1006Mensaje == false)
+            {
+                MessageBox.Show("Despues de marcar las opciones necesarias \n Debe continuar con la pregunta 8", "Aviso");
+                Pregunta1006Mensaje = true;
+            }
+            
         }
 
         private void cklS1014_Com_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToBoolean(cklS1014_Com.GetItemCheckState(7)) == true)                
-                txtS1014_Especificar.Enabled = false;
-            else
+            if (cklS1014_Com.GetSelected(7) == true)                
                 txtS1014_Especificar.Enabled = true;
+            else
+                txtS1014_Especificar.Enabled = false;
         }
 
         private void cbxS9_1_Propio_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -1937,6 +1967,25 @@ namespace TechoCeiva
                 cbxS11_4_ViviedaActual.Focus();
             }
 
+        }
+
+        private void cbxS10_ParticipacionGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
+            {
+                MessageBox.Show("Debe Continuar con la pregunta 7", "Aviso");
+                cklS1007_Com.Focus();
+            }
+            
+        }
+
+        private void cbxS10_OrganizacionComunitaria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxS10_OrganizacionComunitaria.SelectedIndex == 1)
+            {
+                MessageBox.Show("Debe Continuar con la pregunta 19", "Aviso");
+                txtS10_LiderA.Focus();
+            }
         }        
     }
 }

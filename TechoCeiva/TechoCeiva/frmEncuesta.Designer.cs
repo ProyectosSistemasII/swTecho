@@ -4634,7 +4634,7 @@
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
-            this.cklS8_S807.Size = new System.Drawing.Size(250, 49);
+            this.cklS8_S807.Size = new System.Drawing.Size(250, 79);
             this.cklS8_S807.TabIndex = 9;
             // 
             // label66
@@ -6345,7 +6345,7 @@
             "NS/NR"});
             this.cklS1007_Com.Location = new System.Drawing.Point(20, 25);
             this.cklS1007_Com.Name = "cklS1007_Com";
-            this.cklS1007_Com.Size = new System.Drawing.Size(250, 79);
+            this.cklS1007_Com.Size = new System.Drawing.Size(250, 94);
             this.cklS1007_Com.TabIndex = 5;
             this.cklS1007_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1007_Com_ItemCheck);
             // 
@@ -6399,18 +6399,18 @@
             // 
             this.cklS1006_Com.FormattingEnabled = true;
             this.cklS1006_Com.Items.AddRange(new object[] {
-            "01. Grupo político\t\t\t\t",
-            "02.  Grupo o equipo deportivo\t\t\t\t",
-            "03. Grupo religioso o de Iglesia\t\t\t\t",
-            "04. Grupo de jóvenes\t\t\t\t",
-            "05. Grupo de mujeres\t\t\t\t",
-            "06. Organización Comunitaria (COCODE, CUB, etc.)\t\t\t\t",
-            "07. Mesa de Trabajo de TECHO\t\t\t\t",
-            "08. Otra (especificar)\t\t\t\t",
-            "NS/NR\t\t\t\t"});
+            "01. Grupo político",
+            "02.  Grupo o equipo deportivo\t",
+            "03. Grupo religioso o de Iglesia",
+            "04. Grupo de jóvenes",
+            "05. Grupo de mujeres",
+            "06. Organización Comunitaria (COCODE, CUB, etc.)",
+            "07. Mesa de Trabajo de TECHO",
+            "08. Otra (especificar)",
+            "NS/NR"});
             this.cklS1006_Com.Location = new System.Drawing.Point(19, 28);
             this.cklS1006_Com.Name = "cklS1006_Com";
-            this.cklS1006_Com.Size = new System.Drawing.Size(250, 124);
+            this.cklS1006_Com.Size = new System.Drawing.Size(250, 139);
             this.cklS1006_Com.TabIndex = 9;
             this.cklS1006_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1006_Com_ItemCheck);
             // 
@@ -6444,6 +6444,7 @@
             this.cbxS10_ParticipacionGrupo.Name = "cbxS10_ParticipacionGrupo";
             this.cbxS10_ParticipacionGrupo.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_ParticipacionGrupo.TabIndex = 2;
+            this.cbxS10_ParticipacionGrupo.SelectedIndexChanged += new System.EventHandler(this.cbxS10_ParticipacionGrupo_SelectedIndexChanged);
             // 
             // label91
             // 
@@ -7223,6 +7224,7 @@
             this.cbxS10_OrganizacionComunitaria.Name = "cbxS10_OrganizacionComunitaria";
             this.cbxS10_OrganizacionComunitaria.Size = new System.Drawing.Size(250, 21);
             this.cbxS10_OrganizacionComunitaria.TabIndex = 2;
+            this.cbxS10_OrganizacionComunitaria.SelectedIndexChanged += new System.EventHandler(this.cbxS10_OrganizacionComunitaria_SelectedIndexChanged);
             // 
             // label139
             // 
@@ -7343,10 +7345,10 @@
             // 
             // txtS11_3a_AñoTraslado
             // 
-            this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(54, 30);
+            this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(72, 39);
             this.txtS11_3a_AñoTraslado.Mask = "0000";
             this.txtS11_3a_AñoTraslado.Name = "txtS11_3a_AñoTraslado";
-            this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(146, 20);
+            this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(44, 20);
             this.txtS11_3a_AñoTraslado.TabIndex = 9;
             // 
             // label1

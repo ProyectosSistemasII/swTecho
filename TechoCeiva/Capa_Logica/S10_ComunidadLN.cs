@@ -147,34 +147,44 @@ namespace Capa_Logica
             }
             return correcto;
         }
-        public Boolean Insertar_EncuS10Cont()
+        public Boolean Insertar_EncuS10Cont(int caso)
         {
             Boolean correcto = true;
             //verificar sintaxis de los datos y comprobar errores antes de ser enviado a la capa de datos
-           this.verificarDatosContS10();
+           this.verificarDatosContS10(caso);
             if (errores.Count > 0)
             {
                 return false;
             }
+            
+            
+            return correcto;
+        }
+        public Boolean Insertar_S10_Com(Boolean s1014)
+        {
+            Boolean correcto = true;
             // se ingresa los datos a la capa de datos            
-            if (this.idS1006 != 0 && this.idS1007 != 0 && this.idS1008 != 0 && this.idS1014 != 0)
+            if (s1014 == true)
             {
                 NuevaComS10.S10_ComunidadCOnt(this.AspectoPositivo, this.AspectoPositivoA, this.AspectoPositivoB, this.AspectoNegativo, this.AspectoNegativoA, this.AspectoNegativoB, this.Discriminacion, this.TipoDiscriminacion, this.OrganizacionComunitaria, this.TipoOrganizacion, this.ConfianzaOrganizacion, this.ComentarioConfianza, this.Lider, this.LiderA, this.LiderB, this.LiderC, this.EstadoComunidadPasada, this.ComentarioEstadoPasado, this.EstadoComunidadFuturo, this.ComentarioEstadoFuturo, this.idS1014);
-                NuevaComS10.InsertarS10();
+                if(this.idS1006 ==0)
+                    NuevaComS10.InsertarS10B();
+                else
+                    NuevaComS10.InsertarS10A();
                 this.errores = NuevaComS10.errores;
                 if (errores.Count > 0)
                 {
                     correcto = false;
                 }
-            } 
+            }
 
             //Comprobar errores para la capa de datos
-            
+
             return correcto;
         }
         public void verificarDatos()
         {
-            string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
+            
             string expresion_TextoNSNR = @"^[a-zA-Z]{1,50}/|([a-zA-Z]{1,50})|[a-zA-Z]+\s*[a-zA-Z]|/|[a-zA-Z]/*$";
             Regex regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.Ayudo))
@@ -207,7 +217,7 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 4", 5000, 4);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.OrganizarA) && this.OrganizarVecinos == "Si (especificar)")
             {
                 Error error = new Error("Debe ingresar datos de 'Otra energia cocina' de la pregunta 4", 5000, 401);
@@ -226,7 +236,7 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 9", 5000, 9);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.NecesidadA) && this.Necesidad == "Si (especificar)")
             {
                 Error error = new Error("Debe ingresar datos de 'Necesidad y Problematica familiar' de la pregunta 9", 5000, 901);
@@ -238,7 +248,7 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 10", 5000, 10);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.NecesidadComA) && this.NecesidadCom == "Si (especificar)")
             {
                 Error error = new Error("Debe ingresar datos de 'Problemas o Necesidades de la Comunidad' de la pregunta 10", 5000, 1001);
@@ -250,7 +260,7 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 11", 5000, 11);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.ProyectoA) && this.ProyectosVecinos == "Si estaría dispuesto a trabajar en:")
             {
                 Error error = new Error("Debe ingresar datos de 'Cuales proyecto puntuales' de la pregunta 11", 5000, 1101);
@@ -258,9 +268,9 @@ namespace Capa_Logica
             }
         }
 
-        public void verificarDatosContS10()
+        public void verificarDatosContS10(int NoCaso)
         {
-            string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
+            //string expresion_Texto = @"^[a-zA-Z]+\s*[a-zA-Z]*$";
             string expresion_TextoNSNR = @"^[a-zA-Z]{1,50}/|([a-zA-Z]{1,50})|[a-zA-Z]+\s*[a-zA-Z]|/|[a-zA-Z]/*$";
             Regex regex = new Regex(expresion_TextoNSNR);
             
@@ -271,8 +281,8 @@ namespace Capa_Logica
                 errores.Add(error);
             }
 
-            
-            regex = new Regex(expresion_Texto);
+
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.AspectoNegativoA) && this.AspectoNegativo == false)
             {
                 Error error = new Error("Debe ingresar datos sobre los 'Aspectos negativos' de la pregunta 13", 5000, 13);
@@ -285,7 +295,7 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 15", 5000, 15);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.TipoDiscriminacion) && this.Discriminacion == "Si  (especificar)")
             {
                 Error error = new Error("Debe ingresar datos de la 'Discriminacion' de la pregunta 15", 5000, 1501);
@@ -298,26 +308,26 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 16", 5000, 16);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.TipoOrganizacion))
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.TipoOrganizacion) && NoCaso != 3)
             {
                 Error error = new Error("Debe ingresar datos sobre 'Tipo de organizacion' de la pregunta 17", 5000, 17);
                 errores.Add(error);
             }
             regex = new Regex(expresion_TextoNSNR);
-            if (!regex.IsMatch(this.ConfianzaOrganizacion))
+            if (!regex.IsMatch(this.ConfianzaOrganizacion) && NoCaso != 3)
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 18", 5000, 18);
                 errores.Add(error);
             }
-            regex = new Regex(expresion_Texto);
-            if (!regex.IsMatch(this.ComentarioConfianza)&& this.ConfianzaOrganizacion != "NS/NR")
+            regex = new Regex(expresion_TextoNSNR);
+            if (!regex.IsMatch(this.ComentarioConfianza) && this.ConfianzaOrganizacion != "NS/NR" && NoCaso != 3)
             {
                 Error error = new Error("Debe ingresar datos sobre 'Por que razon' de la pregunta 18", 5000, 1801);
                 errores.Add(error);
             }
-          
-            regex = new Regex(expresion_Texto);
+
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.LiderA) && this.Lider == false)
             {
                 Error error = new Error("Debe ingresar datos sobre 'Quienes identifica como lideres' de la pregunta 19", 5000, 19);
@@ -330,7 +340,7 @@ namespace Capa_Logica
                 errores.Add(error);
             }
 
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.ComentarioEstadoPasado)&& this.EstadoComunidadPasada !="NS/NR") 
             {
                 Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 20", 5000, 2001);
@@ -343,7 +353,7 @@ namespace Capa_Logica
                 errores.Add(error);
             }
 
-            regex = new Regex(expresion_Texto);
+            regex = new Regex(expresion_TextoNSNR);
             if (!regex.IsMatch(this.ComentarioEstadoFuturo) && this.EstadoComunidadFuturo != "NS/NR")
             {
                 Error error = new Error("Debe ingresar datos sobre 'por que' de la pregunta 21", 5000, 2101);
