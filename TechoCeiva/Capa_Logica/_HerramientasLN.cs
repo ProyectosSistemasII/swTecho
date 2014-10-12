@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Capa_Datos;
+using System.Collections;
 
 namespace Capa_Logica
 {
     public class _HerramientasLN : _Herramientas
     {
+        ArrayList detallePrestamo = new ArrayList();
+
         public _HerramientasLN()
         {
             this.idHerramientas = 0;
@@ -54,6 +57,16 @@ namespace Capa_Logica
         {
             Error error = _errores[0];
             return error.mensaje;
+        }
+
+        public void ingresarDetalle(int id, string herramienta, int cantidad)
+        {
+            string[] detalle;
+            string _id = Convert.ToString(id);
+            string _cantidad = Convert.ToString(cantidad);
+
+            detalle = new string[] {_id, herramienta, _cantidad};
+            detallePrestamo.Add(detalle);
         }
     }
 }

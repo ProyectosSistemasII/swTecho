@@ -69,6 +69,15 @@ namespace Capa_Datos
         }
 
  
+        /// <summary>
+        /// para --> Obtener listado de todas las herrameintas ingresadas
+        /// 
+        /// value --> No value
+        /// 
+        /// query --> "Select * FROM Herramientas WHERE Activo = true"
+        /// </summary>
+        /// <returns> _listaHerramientas </_Herramientas> </returns>
+        
         public List<_Herramientas> _Obtener_H()
         {
             string query = "Select * FROM Herramientas WHERE Activo = true";
@@ -93,6 +102,16 @@ namespace Capa_Datos
             return _listHerramientas;
         }
 
+        /// <summary>
+        /// para --> Realiza eliminación "setea activo = false"
+        /// 
+        /// value --> id de la herramienta a eliminar
+        /// 
+        /// query --> "UPDATE Herramientas SET Activo = false WHERE idHerramientas = " + _id;
+        /// </summary>
+        /// <param name="_id"></param>
+        /// <returns></returns>
+
         public Boolean _Eliminar(int _id)
         {
             string query = "UPDATE Herramientas SET Activo = false WHERE idHerramientas = " + _id;
@@ -112,6 +131,14 @@ namespace Capa_Datos
 
             return true;
         }
+
+        /// <summary>
+        /// para --> Realizar UPDATE de la información modificada por el usuario
+        /// 
+        /// query --> "UPDATE Herramientas SET Existencia = @Existencia WHERE idHerramientas = " + _id;
+        /// </summary>
+        /// <param name="_id"></param>
+        /// <param name="valor"></param>
 
         public void _Modificar(int _id, int valor)
         {

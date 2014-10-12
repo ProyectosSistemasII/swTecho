@@ -42,5 +42,10 @@ namespace TechoCeiva
             cbxHerramienta.SelectedValuePath = "idHerramienta";
             cbxHerramienta.DisplayMemberPath = "Nombre";
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            DataGridPrestamo.Items.Add(new DataGridRow() { });
+        }
 	}
 }
