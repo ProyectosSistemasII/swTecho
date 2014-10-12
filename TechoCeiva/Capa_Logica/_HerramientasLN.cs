@@ -20,11 +20,11 @@ namespace Capa_Logica
             this._errores = new List<Error>();
         }
 
-        public _HerramientasLN(String nombre)
+        public _HerramientasLN(String nombre, int existencia)
         {
             this.idHerramientas = 0;
             this.Nombre = nombre;
-            this.Existencia = 0;
+            this.Existencia = existencia;
             this.Activo = true;
             this._errores = new List<Error>();
         }

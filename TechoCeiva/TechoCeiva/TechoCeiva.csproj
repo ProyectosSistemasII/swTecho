@@ -147,6 +147,9 @@
     <Compile Include="WinDevolverHelp.xaml.cs">
       <DependentUpon>WinDevolverHelp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinModifyTool.xaml.cs">
+      <DependentUpon>WinModifyTool.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmEncuesta.resx">
       <DependentUpon>frmEncuesta.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -266,6 +269,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="WinDevolverHelp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WinModifyTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

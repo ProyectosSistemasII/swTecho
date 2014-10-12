@@ -14,26 +14,27 @@ using Capa_Logica;
 namespace TechoCeiva
 {
 	/// <summary>
-	/// Lógica de interacción para WinAddTool.xaml
+	/// Lógica de interacción para WinModifyTool.xaml
 	/// </summary>
-	public partial class WinAddTool : Window
+	public partial class WinModifyTool : Window
 	{
-		public WinAddTool()
+        public int id = 0;
+
+		public WinModifyTool()
 		{
 			this.InitializeComponent();
-            txtHerramienta.Focus();
-			
+            txtHerramienta.SelectAll();
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            modifyTool();
         }
 
-        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
         {
-            addHerramienta();
+            this.Close();
         }
 
         private void txtHerramienta_KeyDown(object sender, KeyEventArgs e)
@@ -41,6 +42,7 @@ namespace TechoCeiva
             if (e.Key == Key.Enter)
             {
                 txtCantidad.Focus();
+                txtCantidad.SelectAll();
             }
         }
 
@@ -48,34 +50,33 @@ namespace TechoCeiva
         {
             if (e.Key == Key.Enter)
             {
-                btnAgregar.Focus();
-                addHerramienta();
+                btnGuardar.Focus();
+                modifyTool();
             }
         }
 
-        private void addHerramienta()
+        private void modifyTool()
         {
-            _HerramientasLN nuevaHerramienta = new _HerramientasLN(txtHerramienta.Text.ToString(), Convert.ToInt32(txtCantidad.Text));
-            Boolean correcto = nuevaHerramienta.Ingresar_Herramienta();
+            _HerramientasLN modificarHerramienta = new _HerramientasLN(txtHerramienta.Text.ToString(), Convert.ToInt32(txtCantidad.Text));
+            Boolean correcto = modificarHerramienta.Ingresar_Herramienta();
             txtHerramienta.Clear();
             txtCantidad.Clear();
 
             if (correcto)
             {
-                nuevaHerramienta._Insertar_H();
+                modificarHerramienta._Modificar(id);
 
-                if (MessageBox.Show("Herramienta guardada. ¿Desea agregar una nueva?", "Guardado Exitoso", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.No)
+                if (MessageBox.Show("Herramienta actualizada correctamente.", "Actualizado Exitoso", MessageBoxButton.OK, MessageBoxImage.Information) == MessageBoxResult.OK)
                 {
                     this.Close();
                 }
                 else
                 {
-                    txtHerramienta.Focus();
                 }
             }
             else
             {
-                MessageBox.Show(nuevaHerramienta._Obtener_Error());
+                MessageBox.Show(modificarHerramienta._Obtener_Error());
             }
         }
 	}

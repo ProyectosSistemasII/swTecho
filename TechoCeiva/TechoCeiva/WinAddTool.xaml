@@ -16,9 +16,9 @@
 
 	<Grid x:Name="LayoutRoot">
 		<Label x:Name="lblHerramienta" Content="Herramienta:" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" ToolTip="Nombre de la nueva herramienta"/>
-		<TextBox x:Name="txtHerramienta" Margin="23,42.507,0,0" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="327" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+		<TextBox x:Name="txtHerramienta" Margin="23,42.507,0,0" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="327" HorizontalAlignment="Left" d:LayoutOverrides="Width" KeyDown="txtHerramienta_KeyDown" />
 		<Label Content="Cantidad:" HorizontalAlignment="Left" Margin="23,92.007,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top" ToolTip="Cantidad para la nueva herramienta"/>
-		<TextBox x:Name="txtCantidad" Margin="23,111.513,23,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+		<TextBox x:Name="txtCantidad" Margin="23,111.513,23,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" d:LayoutOverrides="Height" KeyDown="txtCantidad_KeyDown" />
 		<Button x:Name="btnAgregar" Content="Agregar" Margin="23,0,0,21.8" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnAgregar_Click" HorizontalAlignment="Left" Width="109" Background="#FF0092DD" Foreground="White" Height="36" VerticalAlignment="Bottom" ToolTip="Guardar Herramienta" />
 		<Button x:Name="btnCancelar" Content="Cerrar" Margin="155,0,0,21.8" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnCancelar_Click" HorizontalAlignment="Left" Width="109" Foreground="White" Background="#FFC52023" Height="36" VerticalAlignment="Bottom" ToolTip="Cerrar" />
 	</Grid>

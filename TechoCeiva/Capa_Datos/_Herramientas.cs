@@ -138,16 +138,15 @@ namespace Capa_Datos
         /// query --> "UPDATE Herramientas SET Existencia = @Existencia WHERE idHerramientas = " + _id;
         /// </summary>
         /// <param name="_id"></param>
-        /// <param name="valor"></param>
 
-        public void _Modificar(int _id, int valor)
+        public void _Modificar(int _id)
         {
             if (this._errores.Count == 0)
             {
-                string query = "UPDATE Herramientas SET Existencia = @Existencia WHERE idHerramientas = " + _id;
+                string query = "UPDATE Herramientas SET Nombre = @Nombre, Existencia = @Existencia WHERE idHerramientas = " + _id;
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@Nomre", this.Nombre);
-                _comando.Parameters.AddWithValue("@Existencia", valor);
+                _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
+                _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
 
                 try
