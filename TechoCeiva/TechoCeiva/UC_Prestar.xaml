@@ -259,73 +259,30 @@
 	<Grid x:Name="LayoutRoot">
 		<Label x:Name="lblHeader" Content="Prestar Herramienta" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="17.333"/>
 		<Canvas x:Name="Canvas1" Margin="23,46.053,0,8" HorizontalAlignment="Left" Width="1092.501">
-			<Rectangle Height="413.386" Width="1068.501" Stroke="#FF626465" Opacity="0.85"/>
-			<Label x:Name="lblResponsables" Content="Responsable" Style="{DynamicResource SimpleLabel}" FontSize="16" Canvas.Left="23" Margin="0" Canvas.Top="23" FontWeight="Bold"/>
-			<Label x:Name="lblVoluntrio" Content="Nombre:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Top="44.28" Canvas.Left="23"/>
-			<Label x:Name="lblFech" Content="Fecha de préstamo:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" RenderTransformOrigin="0.493,0.461" Canvas.Left="23" Canvas.Top="112.292"/>
-			<ComboBox x:Name="cbxVoluntario" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="63.786" Canvas.Left="23"/>
-			<DatePicker Width="270" FontSize="14.667" Canvas.Left="23" Canvas.Top="131.798"/>
-			<Button x:Name="btnAgregar" Content="Agregar" Canvas.Left="23" Style="{DynamicResource SimpleButton}" Canvas.Top="320.307" Width="133" Height="36" BorderBrush="{x:Null}" FontSize="14.667" Background="#FF0092DD" Foreground="White"/>
-			<Label x:Name="lblHerramienta" Content="Herramienta:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Left="23" Canvas.Top="189.964"/>
-			<Label x:Name="lblCantidad" Content="Cantidad:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Top="250.294" Canvas.Left="23"/>
-			<ComboBox x:Name="cbxHerramienta" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Left="23" Canvas.Top="209.47"/>
-			<TextBox x:Name="txbxCantidad" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Width="270" Canvas.Left="23" Canvas.Top="269.8"/>
-			<DataGrid x:Name="DataGridPrestamo" Canvas.Left="551.341" Height="245.294" Width="458.001" Canvas.Top="52.013"/>
-			<Button x:Name="btnGuardar" Content="Guardar" Canvas.Left="551.341" Style="{DynamicResource SimpleButton}" Canvas.Top="320.307" Width="133" Height="36" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White"/>
-			<Button x:Name="btnCancelar" Content="Cancelar" Canvas.Left="717.841" Style="{DynamicResource SimpleButton}" Canvas.Top="320.307" Width="133" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667"/>
-			<Button x:Name="btnX" Content="" Style="{DynamicResource btnTrash}" Width="41.959" Height="55.28" BorderBrush="{x:Null}" Foreground="#FFF7F7F7" FontSize="14.667" FontWeight="Bold" Canvas.Left="1009.342" Canvas.Top="52.013" Background="#FF9E9999">
-				<Button.Resources>
-<!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->
-					<Style x:Key="btnTrash" TargetType="{x:Type Button}" BasedOn="{x:Null}">
-						<Setter Property="FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}"/>
-						<Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
-						<Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
-						<Setter Property="Template">
-							<Setter.Value>
-								<ControlTemplate TargetType="{x:Type Button}">
-					
-					<!-- Grid se usa como raíz porque resulta sencillo agregarle más elementos para personalizar el botón -->
-									<Grid x:Name="Grid" Margin="0,0,8,12.8">
-										<Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" Margin="0"/>
-						
-										<!-- Content Presenter es donde el control coloca el contenido de texto, etc. -->
-						<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
-										<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
-									</Grid>
-					
-					<!--Cada estado establece un pincel en el elemento Border de la plantilla -->
-									<ControlTemplate.Triggers>
-										<Trigger Property="IsKeyboardFocused" Value="true">
-											<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
-										</Trigger>
-										<Trigger Property="IsMouseOver" Value="true">
-											<Setter Property="Margin" TargetName="Grid" Value="2.8,4.8,2,2.4"/>
-											<Setter Property="Opacity" TargetName="Border" Value="0.25"/>
-											<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
-										</Trigger>
-										<Trigger Property="IsPressed" Value="true">
-											<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
-											<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
-										</Trigger>
-										<Trigger Property="IsEnabled" Value="true"/>
-										<Trigger Property="IsEnabled" Value="false">
-											<Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border"/>
-											<Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border"/>
-											<Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
-										</Trigger>
-									</ControlTemplate.Triggers>
-								</ControlTemplate>
-							</Setter.Value>
-						</Setter>
-					</Style>
-	
-				</Button.Resources>
-			</Button>
-			<Separator Height="333.307" Canvas.Left="315.5" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="23" Width="0.5" Background="#FFA0A0A0" Opacity="0.85"/>
-			<Label x:Name="lblDetallePrestamo" Content="Detalle del préstamo" Canvas.Left="551.341" Style="{DynamicResource SimpleLabel}" Canvas.Top="28.506" FontSize="14.667" FontWeight="Bold"/>
-			<Label Content="Observaciones" Canvas.Left="330.818" Style="{DynamicResource SimpleLabel}" Canvas.Top="28.506" FontSize="14.667" FontWeight="Bold"/>
-			<TextBox Canvas.Left="330.841" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="52.013" FontSize="14.667" Height="245.294" Width="186"/>
-			<Separator Height="0.5" Canvas.Left="23" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="174.146" Width="270" Background="#FFA0A0A0" Opacity="0.85"/>
+			<Rectangle Height="431" Width="1092.501" Stroke="#FF626465" Opacity="0.85"/>
+			<Label x:Name="lblVoluntrio" Content="Nombre:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Top="23" Canvas.Left="23"/>
+			<Label x:Name="lblFech" Content="Fecha de préstamo:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" RenderTransformOrigin="0.493,0.461" Canvas.Left="327.5" Canvas.Top="23"/>
+			<ComboBox x:Name="cbxVoluntario" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="42.506" Canvas.Left="23" ToolTip="Nombre de voluntario" Height="26.5"/>
+			<DatePicker Width="270" FontSize="14.667" Canvas.Left="327.5" Canvas.Top="42.506" ToolTip="Seleccionar una fecha" Height="26.5"/>
+			<Button x:Name="btnAdd" Content="+" Canvas.Left="607.1" Style="{DynamicResource SimpleButton}" Canvas.Top="114.67" Width="41.959" Height="36" BorderBrush="{x:Null}" FontSize="14.667" Background="#FF0092DD" Foreground="White" ToolTip="Agregar a detalla" Click="btnAdd_Click" />
+			<Label x:Name="lblHerramienta" Content="Herramienta:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Left="23" Canvas.Top="101.164"/>
+			<Label x:Name="lblCantidad" Content="Cantidad:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Top="101.164" Canvas.Left="327.5"/>
+			<ComboBox x:Name="cbxHerramienta" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Left="23" Canvas.Top="120.67" ToolTip="Nombre de Herramienta" Height="26.5"/>
+			<TextBox x:Name="txbxCantidad" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Width="270" Canvas.Left="327.5" Canvas.Top="120.67" Height="26.5"/>
+			<DataGrid x:Name="DataGridPrestamo" Canvas.Left="23" Height="123.161" Width="574.5" Canvas.Top="184.053" BorderBrush="{x:Null}" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Herramienta" Binding="{Binding herramienta}" Width="390"/>
+					<DataGridTextColumn Header="Cantidad" Binding="{Binding cantidad}" Width="175"/>
+				</DataGrid.Columns>
+			</DataGrid>
+			<Button x:Name="btnGuardar" Content="Guardar" Canvas.Left="607.1" Style="{DynamicResource SimpleButton}" Canvas.Top="378.554" Width="133" Height="36" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White"/>
+			<Button x:Name="btnCancelar" Content="Cancelar" Canvas.Left="756.601" Style="{DynamicResource SimpleButton}" Canvas.Top="378.554" Width="133" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667"/>
+			<Separator Height="106.013" Canvas.Left="970.7" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="175.094" Width="0.5" Background="#FFA0A0A0" Opacity="0.85"/>
+			<Label x:Name="lblDetallePrestamo" Content="Detalle del préstamo:" Canvas.Left="23" Style="{DynamicResource SimpleLabel}" Canvas.Top="164.546" FontSize="14.667"/>
+			<Label Content="Observaciones:" Canvas.Left="23" Style="{DynamicResource SimpleLabel}" Canvas.Top="324.553" FontSize="14.667"/>
+			<TextBox Canvas.Left="23" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="344.06" FontSize="14.667" Height="66.494" Width="574.5"/>
+			<Separator Height="0.5" Canvas.Left="23" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="84.146" Width="626.059" Background="#FFA0A0A0" Opacity="0.85"/>
+			<Button x:Name="btnQuit" Content="-" Canvas.Left="607.1" Style="{DynamicResource SimpleButton}" Canvas.Top="184.053" Width="41.959" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667"/>
 		</Canvas>
 	</Grid>
 </UserControl>

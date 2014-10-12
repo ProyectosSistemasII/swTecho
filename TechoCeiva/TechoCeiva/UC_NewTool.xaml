@@ -69,12 +69,12 @@
 			</Button.Resources>
 		</Button>
         
-		<DataGrid Margin="396,81.47,0,25.03" HorizontalAlignment="Left" Width="559" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True">
+		<DataGrid Margin="396,81.47,0,25.03" HorizontalAlignment="Left" Width="559" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="275" FontSize="14"/>           
                 <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="275" FontSize="14"/>
             </DataGrid.Columns>
         </DataGrid>
-		<Button x:Name="btnPlus" Content="+" Margin="360,100.976,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="26" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Width="36" FontSize="21.333" FontWeight="Bold" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" />
+		<Button x:Name="btnPlus" Content="+" Margin="274.683,23,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="35.47" BorderBrush="{x:Null}" Background="#FF0092DD" HorizontalAlignment="Left" Width="36" FontSize="16" FontWeight="Bold" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" Foreground="White" />
 	</Grid>
 </UserControl>
