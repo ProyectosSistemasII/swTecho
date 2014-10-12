@@ -17,14 +17,14 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Label Content="Nueva Herramienta" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="26.667"/>
+		<Label Content="Nueva Herramienta" HorizontalAlignment="Left" Margin="23,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="26.667"/>
         
-		<DataGrid Margin="23,80.47,0,26.03" HorizontalAlignment="Left" Width="559" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" MouseDoubleClick="DataGridHerramientas_MouseDoubleClick">
+		<DataGrid Margin="23,66.47,0,31.03" HorizontalAlignment="Left" Width="562.2" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" MouseDoubleClick="DataGridHerramientas_MouseDoubleClick" Background="White">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="275" FontSize="14"/>           
                 <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="275" FontSize="14"/>
             </DataGrid.Columns>
         </DataGrid>
-		<Button x:Name="btnPlus" Content="+" Margin="274.683,23,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="35.47" BorderBrush="{x:Null}" Background="#FF0092DD" HorizontalAlignment="Left" Width="36" FontSize="16" FontWeight="Bold" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" Foreground="White" />
+		<Button x:Name="btnPlus" Content="+" Margin="274.683,8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="35.47" BorderBrush="{x:Null}" Background="#FF0092DD" HorizontalAlignment="Left" Width="36" FontSize="14.667" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" Foreground="White" />
 	</Grid>
 </UserControl>

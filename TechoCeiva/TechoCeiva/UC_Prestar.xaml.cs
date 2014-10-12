@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 using Capa_Logica;
 using Capa_Datos;
 
@@ -20,9 +21,12 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_Manage : UserControl
 	{
+        ObservableCollection<_HerramientasLN> detalle = new ObservableCollection<_HerramientasLN>();
+
 		public UC_Manage()
 		{
 			this.InitializeComponent();
+            dpFecha.SelectedDate = DateTime.Now.Date;
             _VoluntariosLN Personas = new _VoluntariosLN();
             _HerramientasLN Tools = new _HerramientasLN();
             fillCboxNombre(Personas);
@@ -45,7 +49,9 @@ namespace TechoCeiva
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            DataGridPrestamo.Items.Add(new DataGridRow() { });
+            DataGridPrestamo.Items.Add(new _HerramientasLN() { Nombre = cbxHerramienta.Text, Existencia = Convert.ToInt32(txbxCantidad.Text)});
+            //detalle.Add(new _HerramientasLN(cbxHerramienta.Text, Convert.ToInt32(txbxCantidad.Text)));
+            //DataGridPrestamo.ItemsSource = detalle;
         }
 	}
 }
