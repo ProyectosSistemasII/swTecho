@@ -1545,9 +1545,25 @@ namespace TechoCeiva
 
             cmbEncuestador1.DataSource = Voluntarios.Obtener_VNomCompleto();
             cmbEncuestador1.Text = null;
+            cmbEncuestador1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbEncuestador1.AutoCompleteSource = AutoCompleteSource.ListItems;
 
             cmbEncuestador2.DataSource = Voluntarios.Obtener_VNomCompleto();
             cmbEncuestador2.Text = null;
+            cmbEncuestador2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbEncuestador2.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            _Departamento depto = new _Departamento();
+            dgvCmbDepto.DataSource = depto.Obtener_D();
+            dgvCmbDepto.DisplayMember = "nombre";
+            //dgvCmbDepto.ValueMember = "idDepartamento";
+            
+            _Municipio muni = new _Municipio();
+            dgvCmbMuni.DisplayMember = "nombre";
+            //dgvCmbMuni.ValueMember = "idMunicipio";*/
+            
+            
+            dgvCmbMuni.DataSource = muni.ObtenerTodosMuni();
         }
 
         //Informacion
@@ -1647,6 +1663,7 @@ namespace TechoCeiva
                 }
                 tbpS1.Parent = null;
                 tbpS2.Parent = tbcDatos;
+
                 //para s2
                 int iS2 = 1;
                 for (iS2 = 1; iS2 < iS1; iS2++)
@@ -1669,7 +1686,8 @@ namespace TechoCeiva
             foreach (DataGridViewRow row in dgvS2.Rows)
             {
                 dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[7].Value.ToString(), idEncu, 1, 1, Filas);
+                //MessageBox.Show(row.Cells[6].Value.ToString());
+                correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1, Filas);
                 if (correcto)
                 {
                     Filas++;
@@ -1690,7 +1708,7 @@ namespace TechoCeiva
                 foreach (DataGridViewRow row in dgvS2.Rows)
                 {
                     dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                    S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[7].Value.ToString(), idEncu, 1, 1);
+                    S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1);
                     correcto = SIn.Insertar_EncuS2();
                     if (correcto)
                     {
@@ -1704,7 +1722,8 @@ namespace TechoCeiva
                     }
                 }
                 tbpS2.Parent = null;
-                tbpS3.Parent = tbcDatos;
+                tbpS3.Parent = tbcDatos;            
+
                 //para s3
                 int iS3 = 1;
                 for (iS3 = 1; iS3 < iS1; iS3++)
@@ -2123,6 +2142,16 @@ namespace TechoCeiva
             {
                 MessageBox.Show("Debe Continuar con la pregunta 19", "Aviso");
                 txtS10_LiderA.Focus();
+            }
+        }
+
+        private void dgvS2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is DataGridViewComboBoxEditingControl)
+            {
+                ((ComboBox)e.Control).DropDownStyle = ComboBoxStyle.DropDown;
+                ((ComboBox)e.Control).AutoCompleteSource = AutoCompleteSource.ListItems;
+                ((ComboBox)e.Control).AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             }
         }
     }

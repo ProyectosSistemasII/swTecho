@@ -51,5 +51,25 @@ namespace Capa_Datos
             }
             return Lista_M;
         }
+
+        public List<_Municipio> ObtenerTodosMuni()
+        {
+            List<_Municipio> Lista_M = new List<_Municipio>();
+            MySqlCommand _comando = new MySqlCommand("SELECT * FROM municipio ORDER BY NombreM ASC", _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+            for (int i = 0; i < _tabla.Rows.Count; i++)
+            {
+                DataRow _row = _tabla.Rows[i];
+                _Municipio _propiedad = new _Municipio(Convert.ToInt32(_row["idMunicipio"]), Convert.ToString(_row["NombreM"]), Convert.ToInt32(_row["Departamento_idDepartamento"]));
+                Lista_M.Add(_propiedad);
+            }
+            return Lista_M;
+        }
     }
 }
