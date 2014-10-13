@@ -18,6 +18,7 @@ namespace Capa_Logica
             this.CantidadPerdida = 0;
             this.Activo = 0;
             this.Devolucion = DateTime.Parse("YYYY/MM/DD");
+            this._errores = new List<Error>();
         }
 
         public _DetallePrestamoLN(int idHerramienta, int idDetalle, int activo)
@@ -25,6 +26,7 @@ namespace Capa_Logica
             this.Herramientas_idHerramientas = idHerramienta;
             this.Prestamo_idDetallePrestamo = idDetalle;
             this.Activo = activo;
+            this._errores = new List<Error>();
         }
     }
 }
