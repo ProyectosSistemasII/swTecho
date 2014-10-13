@@ -4,18 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="366" d:DesignWidth="846">
+             d:DesignHeight="396" d:DesignWidth="839" Width="518">
     <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="Canvas_Loaded">
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Canvas.Left="60" Canvas.Top="318" Content="Guardar" FontSize="14.667" Foreground="White" Height="26" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Width="160" />
-        <Label Canvas.Left="12" Canvas.Top="20" Content="Nuevo Usuario" FontSize="26.667" Foreground="#FF626465" Style="{DynamicResource SimpleLabel}" />
-        <TextBox Canvas.Left="161" Canvas.Top="76" Height="23" Name="txtNombre" Width="160" />
-        <Label Canvas.Left="25" Canvas.Top="71" Content="Nombre de usuario" FontSize="14" Height="28" Name="label1" />
-        <Label Canvas.Left="25" Canvas.Top="115" Content="Contraseña" FontSize="14" Height="28" Name="label2" />
-        <ComboBox Canvas.Left="161" Canvas.Top="163" Height="23" Name="cmbTipo" Width="160" />
-        <Label Canvas.Left="25" Canvas.Top="158" Content="Tipo de usuario" FontSize="14" Height="28" Name="label4" />
-        <Label Canvas.Left="25" Canvas.Top="200" Content="Voluntario" FontSize="14" Height="28" Name="label5" />
-        <PasswordBox Canvas.Left="161" Canvas.Top="120" Height="23" Name="pswContrasenia" Width="160" />
-        <DataGrid AutoGenerateColumns="False" Canvas.Left="357" Canvas.Top="42" Height="275" Name="dtgUsuarios" Width="469" />
-        <ListBox Canvas.Left="161" Canvas.Top="200" Height="100" Name="lstVoluntarios" Width="160" />
+        <Label Canvas.Left="12" Canvas.Top="20" Content="Usuarios" FontSize="26.667" Foreground="#FF626465" Style="{DynamicResource SimpleLabel}" />
+        <DataGrid AutoGenerateColumns="True" Canvas.Left="12" Canvas.Top="80" Height="304" Name="dtgUsuarios" Width="494" />
+        <Button Canvas.Left="129" Canvas.Top="36" Content="+" FontSize="14.667" Height="23" Name="btnPlus" Style="{DynamicResource SimpleButton}" Width="32" Click="btnPlus_Click" />
     </Canvas>
 </UserControl>

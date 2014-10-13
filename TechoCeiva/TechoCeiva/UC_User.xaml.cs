@@ -28,9 +28,36 @@ namespace TechoCeiva
 
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
+            //inicializacion de los componentes
+            //
+            //carga de datos a datagrid
+            refrescar();
+        }
+
+        private void refrescar()
+        {
             DatosUsuario datosUsuario = new DatosUsuario();
-            ArrayList datos = datosUsuario.getUsuarios();
-            dtgUsuarios.ItemsSource = datos;
+            List<DatosUsuario> tmp = datosUsuario.getUsuarios();
+            dtgUsuarios.ItemsSource = tmp;
+            dtgUsuarios.Columns[0].Header = "Nombre de Usuario";
+            dtgUsuarios.Columns[1].Header = "Nombres";
+            dtgUsuarios.Columns[2].Header = "Apellidos";
+            dtgUsuarios.Columns[3].Header = "Tipo de usuario";
+            dtgUsuarios.DisplayMemberPath = "Nombres";
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            //DatosVoluntario tmp = (DatosVoluntario)lstVoluntarios.SelectedItem;
+            
+            refrescar();
+        }
+
+        private void btnPlus_Click(object sender, RoutedEventArgs e)
+        {
+            WinAddUsuario usuario = new WinAddUsuario();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(usuario);
+            usuario.Show();
         }
     }
 }
