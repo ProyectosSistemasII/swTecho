@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_Logica_Negocio;
 
 namespace TechoCeiva
 {
@@ -18,13 +19,24 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_Prestamo : UserControl
 	{
+        public UsuarioLN currentUser { get; set; }
+
 		public UC_Prestamo()
 		{
 			this.InitializeComponent();
 		}
 
+        public UC_Prestamo(UsuarioLN user)
+        {
+            this.currentUser = user;
+        }
+
         private void btnPrestar_Click(object sender, RoutedEventArgs e)
         {
+            ///
+            /// UC_Manage() es el equivalente a UC_Prestar
+            /// se necesita parámetro this.currentUser
+            ///
             CanvasBotton.Children.Clear();
             CanvasBotton.Children.Add(new UC_Manage());
         }

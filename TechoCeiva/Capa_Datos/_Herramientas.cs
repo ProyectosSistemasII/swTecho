@@ -179,10 +179,5 @@ namespace Capa_Datos
                 return false;
             }
         }
-
-        public void guardarComoTransaccion(List<_Herramientas> listadoHerramientas)
-        {
-
-        }
     }
 }

@@ -274,7 +274,7 @@
 					<DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="177.3"/>
 				</DataGrid.Columns>
 			</DataGrid>
-			<TextBox Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="344.06" FontSize="14.667" Height="66.494" Width="574.5" Foreground="#FF333333"/>
+			<TextBox x:Name="txtObservaciones" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="344.06" FontSize="14.667" Height="66.494" Width="574.5" Foreground="#FF333333"/>
 			<Button x:Name="btnGuardar" Content="Guardar" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="378.554" Width="133" Height="36" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" Click="btnGuardar_Click" ToolTip="Guardar préstamo" />
 			<Button x:Name="btnCancelar" Content="Cancelar" Canvas.Left="749.401" Style="{DynamicResource SimpleButton}" Canvas.Top="378.554" Width="133" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667" ToolTip="Cancelar"/>
 			<Label x:Name="lblDetallePrestamo" Content="Detalle del préstamo:" Style="{DynamicResource SimpleLabel}" Canvas.Top="140.514" FontSize="14.667"/>

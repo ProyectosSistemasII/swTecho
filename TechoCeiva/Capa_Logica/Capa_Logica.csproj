@@ -13,6 +13,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -80,10 +82,12 @@
     <Compile Include="UsuarioLN.cs" />
     <Compile Include="_ComunidadLN.cs" />
     <Compile Include="_DepartamentoLN.cs" />
+    <Compile Include="_DetallePrestamoLN.cs" />
     <Compile Include="_HerramientasLN.cs" />
     <Compile Include="_InsumosLN.cs" />
     <Compile Include="_MunicipioLN.cs" />
     <Compile Include="_PresentacionLN.cs" />
+    <Compile Include="_PrestamosLN.cs" />
     <Compile Include="_VoluntariosLN.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

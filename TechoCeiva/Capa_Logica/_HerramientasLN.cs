@@ -115,15 +115,13 @@ namespace Capa_Logica
             return colection;
         }
 
-        public void guardarElementos(ObservableCollection<_HerramientasLN> listado)
+        public void guardarElementos(ObservableCollection<_HerramientasLN> listado, int idPrestamo)
         {
             List<_Herramientas> nuevoListado = new List<_Herramientas>();
             foreach (_HerramientasLN herramienta in listado)
             {
                 nuevoListado.Add(herramienta);
             }
-
-            this.guardarComoTransaccion(nuevoListado);
         }
     }
 }

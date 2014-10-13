@@ -33,7 +33,7 @@ namespace TechoCeiva
 
         private void btnSigno_Click(object sender, RoutedEventArgs e)
         {
-            WinAddInsumo nform = new WinAddInsumo();
+            WinAddInsumos nform = new WinAddInsumos();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nform);
             nform.ShowDialog();
             fillComboBox();

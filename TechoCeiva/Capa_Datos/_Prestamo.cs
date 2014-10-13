@@ -10,7 +10,6 @@ namespace Capa_Datos
     public class _Prestamo
     {
         public int iDPrestamo { get; set; }
-        public int idDetallePrestamo { get; set; }
         public int idUsuario { get; set; }
         public int idVoluntario { get; set; }
         public DateTime fechaPrestamo { get; set; }
@@ -26,7 +25,6 @@ namespace Capa_Datos
         public _Prestamo()
         {
             this.iDPrestamo = 0;
-            this.idDetallePrestamo = 0;
             this.idUsuario = 0;
             this.idVoluntario = 0;
             this.fechaPrestamo =  DateTime.Parse("YYYY/MM/DD");
@@ -36,10 +34,9 @@ namespace Capa_Datos
 
         }
 
-        public _Prestamo(int _idPrestamo, int _idDetallePrestamo, int _idUsuario, int _idVoluntario, DateTime _fechaPrestamo, String _Observaciones, int _Activo, DateTime _fechaFinPrestamo)
+        public _Prestamo(int _idPrestamo, int _idUsuario, int _idVoluntario, DateTime _fechaPrestamo, String _Observaciones, int _Activo, DateTime _fechaFinPrestamo)
         {
             this.iDPrestamo = _idPrestamo;
-            this.idDetallePrestamo = _idDetallePrestamo;
             this.idUsuario = _idUsuario;
             this.idVoluntario = _idVoluntario;
             this.fechaPrestamo = _fechaPrestamo;
@@ -52,9 +49,8 @@ namespace Capa_Datos
         {
             if (this._errores.Count == 0)
             {
-                string query = "";
+                string query = "INSERT INTO Prestamo (Usuarios_idUsuarios, Voluntarios_idVoluntarios, FechaPrestamo, Observaciones, Activo, FechaFinPrestamo) VALUES (@idUsuario, @idVoluntario, @FechaPrestamo, @Observaciones, @Activo, @FechaFinPrestamo";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@idDestallePrestamo", this.idDetallePrestamo);
                 _comando.Parameters.AddWithValue("@idUsuario", this.idUsuario);
                 _comando.Parameters.AddWithValue("@idVoluntario", this.idVoluntario);
                 _comando.Parameters.AddWithValue("@FechaPrestamo", this.fechaPrestamo);
@@ -74,6 +70,26 @@ namespace Capa_Datos
                     _errores.Add(_error);
                 }
             }
+        }
+
+        public int ultimaInsercion()
+        {
+            string query = "";
+            _Prestamo ultimoPrestamo;
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            DataRow _row = _tabla.Rows[0];
+            ultimoPrestamo = new _Prestamo(Convert.ToInt32(_row["idPrestamo"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaPrestamo"]), Convert.ToString(_row["Observaciones"]), Convert.ToInt32(_row["Activo"]), Convert.ToDateTime(_row["FechaFinPrestamo"]));
+
+            return ultimoPrestamo.iDPrestamo;
         }
     }
 }

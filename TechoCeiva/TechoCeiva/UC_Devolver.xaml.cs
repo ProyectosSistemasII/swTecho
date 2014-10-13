@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
+using Capa_Logica_Negocio;
 
 namespace TechoCeiva
 {
@@ -22,8 +23,6 @@ namespace TechoCeiva
 		public UC_Devolver()
 		{
 			this.InitializeComponent();
-            _VoluntariosLN Personas = new _VoluntariosLN();
-            fillCboxVoluntarios(Personas);
 		}
 
         private void btnAddSingle_Click(object sender, RoutedEventArgs e)
@@ -31,13 +30,6 @@ namespace TechoCeiva
             WinDevolverHelp _nWin = new WinDevolverHelp();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(_nWin);
             _nWin.Show();
-        }
-
-        private void fillCboxVoluntarios(_VoluntariosLN Voluntarios)
-        {
-            cbxVoluntarios.ItemsSource = Voluntarios.Obtener_V();
-            cbxVoluntarios.SelectedValuePath = "idVoluntarios";
-            cbxVoluntarios.DisplayMemberPath = "nombres";
         }
 	}
 }

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Capa_Logica_Negocio;
 
 namespace TechoCeiva
 {
@@ -18,10 +19,17 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_Menu : UserControl
 	{
+        public UsuarioLN currentUser { get; set; }
+
 		public UC_Menu()
 		{
 			this.InitializeComponent();
 		}
+
+        public UC_Menu(UsuarioLN user)
+        {
+            this.currentUser = user;
+        }
 
 		private void btnToolsIngresar_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
@@ -33,6 +41,9 @@ namespace TechoCeiva
 
         private void btnToolsPrestamos_Click(object sender, RoutedEventArgs e)
         {
+            ///
+            /// Se necesita parámetro this.currentUser
+            ///
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(new UC_Prestamo());
         }
@@ -126,9 +137,7 @@ namespace TechoCeiva
 
         private void btnInsumosIngresar_Click(object sender, RoutedEventArgs e)
         {
-            UC_NewInsumo nInsumo = new UC_NewInsumo();
-            canvasMenu.Children.Clear();
-            canvasMenu.Children.Add(nInsumo);
+
         }
 	}
 }

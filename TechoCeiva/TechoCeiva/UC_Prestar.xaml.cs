@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Capa_Logica;
 using Capa_Datos;
+using Capa_Logica_Negocio;
 
 namespace TechoCeiva
 {
@@ -21,9 +22,11 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_Manage : UserControl
 	{
-        ObservableCollection<_HerramientasLN> detalle = new ObservableCollection<_HerramientasLN>();
+        public UsuarioLN currentUser { get; set; }
 
-		public UC_Manage()
+        private ObservableCollection<_HerramientasLN> detalle = new ObservableCollection<_HerramientasLN>();
+		
+        public UC_Manage()
 		{
 			this.InitializeComponent();
             dpFecha.SelectedDate = DateTime.Now.Date;
@@ -35,6 +38,11 @@ namespace TechoCeiva
             cbxVoluntario.IsDropDownOpen = true;
             cbxVoluntario.Focus();
 		}
+
+        public UC_Manage(UsuarioLN user)
+        {
+            this.currentUser = user;
+        }
 
         private void fillCboxNombre(_VoluntariosLN Voluntarios)
         {
@@ -176,8 +184,22 @@ namespace TechoCeiva
         {
             try
             {
+                _Voluntarios voluntario = cbxVoluntario.SelectedItem as _Voluntarios;
+                _PrestamosLN datosPrestamo = new _PrestamosLN(currentUser.idUsuarios, voluntario.idVoluntarios, Convert.ToDateTime(dpFecha.SelectedDate), txtObservaciones.Text);
+                Boolean correcto = datosPrestamo.ingresarPrestamo();
+
+                if (correcto)
+                {
+                    datosPrestamo._InsertarPrestamo();
+                }
+                else
+                {
+                    MessageBox.Show(datosPrestamo.obtenerError());
+                }
+
+                int idPrestamo = datosPrestamo.ultimaInsercion();
                 _HerramientasLN contenido = new _HerramientasLN();
-                contenido.guardarElementos(detalle);
+                contenido.guardarElementos(detalle, idPrestamo);
             }
             catch (Exception ex)
             {
