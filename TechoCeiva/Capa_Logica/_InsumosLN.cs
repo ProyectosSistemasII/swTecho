@@ -14,22 +14,22 @@ namespace Capa_Logica
             this.Nombre = "";
             this.Existencia= 0;
             this.Rango = "";
-            this.AnioCaducidad = DateTime.Now;
+            this.AnioCaducidad = 2014;
             this.Activo = true;
             this.Presentacion_idPresentacion = 0;
             this._errores = new List<Error>();
             
         }
 
-        public _InsumosLN(String _nombre)
+        public _InsumosLN(String _nombre,int _existencia,String _rango,int _anio)
         {
             this.idAlimentos = 0;
             this.Nombre = _nombre;
-            this.Existencia = 0;
-            this.Rango= "";
-            this.AnioCaducidad = DateTime.Now;
+            this.Existencia = _existencia;
+            this.Rango= _rango;
+            this.AnioCaducidad = _anio;
             this.Activo = true;
-            this.Presentacion_idPresentacion = 0;
+            this.Presentacion_idPresentacion = 1;
             this._errores = new List<Error>();
         }
 

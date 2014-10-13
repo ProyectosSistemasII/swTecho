@@ -7,58 +7,41 @@ using System.Data;
 
 namespace Capa_Datos
 {
-    public class _Insumos
+    public class _Presentacion
     {
-        public int idAlimentos { get; set; }
+        public int idPresentacion { get; set; }
         public String Nombre { get; set; }
-        public int Existencia { get; set; }
-        public String Rango { get; set; }
-        public int AnioCaducidad { get; set; }
         public Boolean Activo { get; set; }
-        public int Presentacion_idPresentacion { get; set; }
         public List<Error> _errores { get; set; }
 
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;
 
 
-        public _Insumos()
+        public _Presentacion()
         {
-            this.idAlimentos = 0;
+            this.idPresentacion = 0;
             this.Nombre = "";
-            this.Existencia = 0;
-            this.Rango = "";
-            this.AnioCaducidad = 2014;
             this.Activo = true;
-            this.Presentacion_idPresentacion = 0;
-
         }
 
-        public _Insumos(int _idAlimentos,String _nombre, int _existencia, String _rango, int _anioCaducidad, Boolean _activo, int _presentacion)
+        public _Presentacion(int _idPresentacion,String _nombre, Boolean _activo)
         {
-            this.idAlimentos = _idAlimentos;
+            this.idPresentacion = _idPresentacion;
             this.Nombre = _nombre;
-            this.Existencia = _existencia;
-            this.Rango = _rango;
-            this.AnioCaducidad = _anioCaducidad;
             this.Activo = _activo;
-            this.Presentacion_idPresentacion = _presentacion;
             this._errores = new List<Error>();
         }
 
-        public void _Insertar_I()
+        public void _Insertar_P()
         {
             if (this._errores.Count == 0)
             {
-                string query = "INSERT INTO Alimentos (idAlimentos,Nombre,Existencia,Rango,AnioCaducidad,Activo,Presentacion_idPresentacion) VALUES (@id,@Nombre,@Existencia,@Rango,@Anio,@Activo,@Presentacion_idPresentacion)";
+                string query = "INSERT INTO Presentacion (Nombre,Activo) VALUES (@Nombre,@Activo)";
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
-                _comando.Parameters.AddWithValue("@id", this.idAlimentos);
+                _comando.Parameters.AddWithValue("@id", this.idPresentacion);
                 _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
-                _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
-                _comando.Parameters.AddWithValue("@Rango", this.Rango);
-                _comando.Parameters.AddWithValue("@Anio", this.AnioCaducidad);
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
-                _comando.Parameters.AddWithValue("@Presentacion_idPresentacion", this.Presentacion_idPresentacion);
 
                 try
                 {
@@ -75,10 +58,10 @@ namespace Capa_Datos
             }
         }
             
-             public List<_Insumos> _Obtener_I()
+             public List<_Presentacion> _Obtener_P()
         {
-            string query = "Select * FROM Alimentos WHERE Activo = true";
-            List<_Insumos> _listInsumos = new List<_Insumos>();
+            string query = "Select * FROM Presentacion WHERE Activo = true";
+            List<_Presentacion> _listPresentacion = new List<_Presentacion>();
 
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
             _comando.CommandTimeout = 12280;
@@ -92,11 +75,11 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]),Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]), Convert.ToBoolean(_row["Activo"]), Convert.ToInt32(_row["Presentacion_idPresentacion"]));
-                _listInsumos.Add(_insumos);
+                _Presentacion _presentacion = new _Presentacion(Convert.ToInt32(_row["idPresentacion"]),Convert.ToString(_row["Nombre"]), Convert.ToBoolean(_row["Activo"]));
+                _listPresentacion.Add(_presentacion);
             }
 
-            return _listInsumos;
+            return _listPresentacion;
         }
 
              /*public List<String> _Obtener_P()
@@ -125,7 +108,7 @@ namespace Capa_Datos
             
         public Boolean _Eliminar(int _id)
         {
-            string query = "UPDATE Alimentos SET Activo = false WHERE idAlimentos = " + _id;
+            string query = "UPDATE Presentacion SET Activo = false WHERE idPresentacion = " + _id;
             MySqlCommand _comandoEliminar = new MySqlCommand(query, _conexion);
 
             try
@@ -142,35 +125,6 @@ namespace Capa_Datos
 
             return true;
         }
-
-        public void _Modificar(String _nombre, int _cantidad)
-        {
-            if (this._errores.Count == 0)
-            {
-                string query = "UPDATE Alimentos SET Existencia = @Existencia WHERE Nombre = " + _nombre;
-                MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
-                _comando.Parameters.AddWithValue("@Existencia", this.Existencia + _cantidad);
-                _comando.Parameters.AddWithValue("@Rango", this.Rango);
-                _comando.Parameters.AddWithValue("@AnioCaducidad", this.AnioCaducidad);
-                _comando.Parameters.AddWithValue("@Activo", this.Activo);
-                _comando.Parameters.AddWithValue("@Presentacion", this.Presentacion_idPresentacion);
-
-                try
-                {
-                    _comando.Connection.Open();
-                    _comando.ExecuteNonQuery();
-                    _comando.Connection.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    Error _error = new Error(ex.Message + " " + ex.Number, 2);
-                    _errores.Add(_error);
-                }
-            }
-        }
-        
+    
     }
 }
-
-

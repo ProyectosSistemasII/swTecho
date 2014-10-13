@@ -11,7 +11,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
-using Capa_Datos;
 
 namespace TechoCeiva
 {
@@ -34,7 +33,7 @@ namespace TechoCeiva
 
         private void btnSigno_Click(object sender, RoutedEventArgs e)
         {
-            WinAddInsumos nform = new WinAddInsumos();
+            WinAddInsumo nform = new WinAddInsumo();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nform);
             nform.ShowDialog();
             fillComboBox();
@@ -43,7 +42,22 @@ namespace TechoCeiva
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            actionAdd();
+
+            _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text));
+            Boolean correcto = nInsumo.Ingresar_Insumo();
+
+            _PresentacionLN nPresentacion = new _PresentacionLN(Convert.ToString(cmxPresentacion.Text));
+            Boolean correcto2 = nPresentacion.Ingresar_Presentacion();
+
+            if (correcto & correcto2)
+            {
+                nInsumo._Insertar_I();
+                nPresentacion._Insertar_P();
+            }
+            else
+            {
+                MessageBox.Show(nInsumo._Obtener_Error());
+            }
         }
 
         private void fillComboBox()
@@ -52,6 +66,11 @@ namespace TechoCeiva
             comboBoxInsumos.ItemsSource = insumos._Obtener_I();
             comboBoxInsumos.SelectedValuePath = "idInsumos";
             comboBoxInsumos.DisplayMemberPath = "Nombre";
+
+            _PresentacionLN presentacion = new _PresentacionLN();
+            cmxPresentacion.ItemsSource = presentacion._Obtener_P();
+            cmxPresentacion.SelectedValuePath = "idPresentacion";
+            cmxPresentacion.DisplayMemberPath = "Nombre";
         }
 
         private void fillDataGrid()
@@ -63,7 +82,7 @@ namespace TechoCeiva
         private void actionAdd()
         {
             _InsumosLN Insumos = new _InsumosLN();
-            Insumos._Modificar(Convert.ToInt32(comboBoxInsumos.SelectedValue), Convert.ToInt32(txtCantida.Text.ToString()));
+            Insumos._Modificar(comboBoxInsumos.Text, Convert.ToInt32(txtCantida.Text.ToString()));
 
             txtCantida.Clear();
             MessageBox.Show("Existencia de " + comboBoxInsumos.Text + " modificada correctamente");
@@ -76,6 +95,11 @@ namespace TechoCeiva
         }
 
         private void cbxRangoFecha_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void dgInsumos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

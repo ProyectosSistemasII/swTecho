@@ -90,6 +90,7 @@
     <Compile Include="_Herramientas.cs" />
     <Compile Include="_Insumos.cs" />
     <Compile Include="_Municipio.cs" />
+    <Compile Include="_Presentacion.cs" />
     <Compile Include="_Prestamo.cs" />
     <Compile Include="_Voluntarios.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

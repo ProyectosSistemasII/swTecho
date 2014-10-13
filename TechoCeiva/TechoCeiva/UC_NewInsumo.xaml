@@ -473,13 +473,13 @@
 		<TextBox x:Name="txtCantida" HorizontalAlignment="Left" Margin="163.273,173,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="80.553" FontSize="14.667" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 		<Label x:Name="lblCaduca" Content="Caduca:" HorizontalAlignment="Left" Margin="108.376,211,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<ComboBox x:Name="cbxRangoFecha" HorizontalAlignment="Left" Margin="163.273,210.506,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="314" FontSize="14.667" SelectionChanged="cbxRangoFecha_SelectionChanged" />
-		<DataGrid x:Name="dgInsumos" Margin="53,0,0,46" HorizontalAlignment="Left" Width="559" Height="204.053" VerticalAlignment="Bottom" AutoGenerateColumns="False" />
-		<Label x:Name="lblInsumo1" Content="Insumo:" HorizontalAlignment="Left" Margin="108.139,99,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<DataGrid x:Name="dgInsumos" Margin="53,0,0,46" HorizontalAlignment="Left" Width="559" Height="204.053" VerticalAlignment="Bottom" AutoGenerateColumns="True" SelectionChanged="dgInsumos_SelectionChanged"></DataGrid>
+        <Label x:Name="lblInsumo1" Content="Insumo:" HorizontalAlignment="Left" Margin="108.139,99,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<Label x:Name="lblPresentacion" Content="Presentacion:" HorizontalAlignment="Left" Margin="73.261,137,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<ComboBox x:Name="cmxPresentacion" HorizontalAlignment="Left" Margin="163.273,136,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="150" FontSize="14.667" IsEditable="True" />
-		<Label x:Name="lblanio" Content="Anio:" HorizontalAlignment="Left" Height="23" Margin="126.184,247,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label x:Name="lblanio" Content="Año:" HorizontalAlignment="Left" Height="23" Margin="126.184,247,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<TextBox x:Name="txtAni" HorizontalAlignment="Left" Margin="163.271,247,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="80.553" FontSize="14.667"/>
-		<Button x:Name="btnSigno" HorizontalAlignment="Left" Margin="437,89,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Content="+" FontSize="26.667" FontWeight="Bold" Click="btnSigno_Click" />
+		<Button x:Name="btnSigno" HorizontalAlignment="Left" Margin="437,89,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Content="+" FontSize="26.667" FontWeight="Bold" Click="btnSigno_Click" Visibility="Hidden" />
 		<ComboBox x:Name="comboBoxInsumos" HorizontalAlignment="Left" Margin="163.273,99,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="269.727" FontSize="14.667" IsEditable="True" SelectionChanged="comboBoxInsumos_SelectionChanged" />
 	</Grid>
 </UserControl>
