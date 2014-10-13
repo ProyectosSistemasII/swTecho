@@ -46,7 +46,6 @@ namespace Capa_Datos
 
         public void InsertarS1()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S1_Integr(CodigoS1, NombreCompleto, ApellidosCompleto, FechaNac, Genero, Embarazo, Encuestas_idEncuestas) VALUES(@CodigoS1, @NombreCompleto, @ApellidosCompleto, @FechaNac, @Genero, @Embarazo, @Encuestas_idEncuestas)";
@@ -63,7 +62,7 @@ namespace Capa_Datos
                 {
                     comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {

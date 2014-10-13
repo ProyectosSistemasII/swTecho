@@ -33,6 +33,7 @@ namespace Capa_Datos
             this.Especificar = "";
             this.NSNR = false;
         }
+
         public S1007_Comunidad(int idS1007,Boolean nointeresa, Boolean faltainformacion, Boolean faltatiempo, Boolean compromisofamiliar, Boolean otros, String especificar, Boolean NSNR )
         {
             this.idS1007_com = idS1007;
@@ -45,9 +46,9 @@ namespace Capa_Datos
             this.NSNR = NSNR;
             this.errores = new List<Error>();
         }
+
         public void InsertarS1007()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S1007_com(NoInteresa,FaltaInformacion,FaltaTiempo,CompromisoFamiliar,Otro,Especificar,NSNR) VALUES(@NoInteresa,@FaltaInformacion,@FaltaTiempo,@CompromisoFamiliar,@Otros,@Especificar,@NSNR)";
@@ -62,9 +63,9 @@ namespace Capa_Datos
                 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -72,7 +73,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
 
         public List<S1007_Comunidad> ObtenerS1007()
@@ -95,6 +95,7 @@ namespace Capa_Datos
             return ListaComunidad;
 
         }
+
         public Boolean eliminarS1007(string id)
         {
             MySqlCommand eliminar = new MySqlCommand("update  S1007_com set Activo=false where idS1007_Com='" + id + "'", conex);
@@ -104,6 +105,7 @@ namespace Capa_Datos
             eliminar.Connection.Close();
             return true;
         }
+
         public Int32 Obtener_Ultima_EncS1007()
         {
             int i = 0;
@@ -123,10 +125,6 @@ namespace Capa_Datos
                 errores.Add(error);
             }
             return i;
-
         }
-
-
     }
-
 }

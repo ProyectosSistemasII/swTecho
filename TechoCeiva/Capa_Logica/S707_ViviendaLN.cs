@@ -32,7 +32,6 @@ namespace Capa_Logica
         public Boolean Insertar_EncuS707()
         {
             Boolean correcto = true;
-            //this.verificarDatos();
             if (errores.Count > 0)
             {
                 return false;

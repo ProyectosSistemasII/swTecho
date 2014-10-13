@@ -41,6 +41,7 @@ namespace Capa_Datos
             this.MedioComunicacion = 0;
             this.IglesiasReligiosos = 0;
         }
+
         public S1008_comunidad(int idS1008, int familiar, int vecinos, int liderescom, int policia, int municipalidad, int orgaGobierno, int ejercito, int partidopoliticos, int techo, int mediocomunicacion, int iglesias)
         {
             this.idS1008_Com = idS1008;
@@ -57,9 +58,9 @@ namespace Capa_Datos
             this.IglesiasReligiosos = iglesias;
             this.errores = new List<Error>();
         }
+
         public void InsertarS1008()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S1008_com(Familiar,Vecinos,LideresComunitarios,Policia,Municipalidad,OrganizacionGobierno,Ejercito,PartidosPoliticos,Techo,MedioComunicacion,IglesiasReligiosos) VALUES(@Familiar,@Vecinos,@LideresComunitarios,@Policia,@Municipalidad,@OrganizacionGobierno,@Ejercito,@PartidosPoliticos,@Techo,@MedioComunicacion,@IglesiasReligiosos)";
@@ -78,9 +79,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -88,7 +89,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
 
         public List<S1008_comunidad> ObtenerS1008()
@@ -109,8 +109,8 @@ namespace Capa_Datos
                 Listacomunidad.Add(comunidad);
             }
             return Listacomunidad;
-
         }
+
         public Int32 Obtener_Ultima_EncS1008()
         {
             int i = 0;
@@ -130,9 +130,6 @@ namespace Capa_Datos
                 errores.Add(error);
             }
             return i;
-
         }
-
     }
-
 }

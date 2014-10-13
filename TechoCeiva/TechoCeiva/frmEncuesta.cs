@@ -254,7 +254,6 @@ namespace TechoCeiva
                         goto Errores;
                     else
                     {
-                        MessageBox.Show("Ingresado Correctamente");
                         tbpS10Cont.Parent = null;
                         tbpS11.Parent = tbcDatos;
                     }
@@ -293,7 +292,6 @@ namespace TechoCeiva
             }            
             else
             {
-                MessageBox.Show("Debe Ingresar la Continuacion de la Seccion 10");
                 tbpS10.Parent = null;
                 tbpS10Cont.Parent = tbcDatos;
             }    
@@ -642,7 +640,6 @@ namespace TechoCeiva
             Boolean correcto = S9.Insertar_EncS9(caso);
             if (correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
                 tbpS9.Parent = null;
                 tbpS10.Parent = tbcDatos;
             }
@@ -755,7 +752,6 @@ namespace TechoCeiva
             Boolean correcto = S8.Insertar_EncuS8();
             if (correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
                 tbpS8.Parent = null;
                 tbpS9.Parent = tbcDatos;
             }            
@@ -960,12 +956,10 @@ namespace TechoCeiva
             if (cbxS9_Propietario.SelectedIndex.Equals(3))
             {
                 txtS9_OtroPropietario.Enabled = true;
-                txtS9_OtroPropietario.Focus();
-                MessageBox.Show("Depues de 'Especificar' debe continuar con la pregunta 5", "Aviso");                
+                txtS9_OtroPropietario.Focus();            
             }
             else
             {
-                MessageBox.Show("Debe continuar con la pregunta 5", "Aviso");
                 txtS9_OtroPropietario.Enabled = false;
                 cbxS9_OtraPropiedad.Focus();
             }
@@ -1205,7 +1199,6 @@ namespace TechoCeiva
             Boolean correcto = true;//S7.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
             if (correcto)
             {
-                MessageBox.Show("Ingresado Correctamente");
                 tbpS7.Parent = null;
                 tbpS8.Parent = tbcDatos;
             }
@@ -1541,7 +1534,6 @@ namespace TechoCeiva
                        txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
                 if (correcto)
                 {
-                    MessageBox.Show("Ingresado Correctamente");
                     tbpInfo.Parent = null;
                     tbpS1.Parent = tbcDatos;
                     idEncu = InfoEnc.UltimoId();
@@ -1639,7 +1631,6 @@ namespace TechoCeiva
             foreach (DataGridViewRow row in dgvS2.Rows)
             {
                 dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                //MessageBox.Show(row.Cells[6].Value.ToString());
                 correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1, Filas);
                 if (correcto)
                     Filas++;                
@@ -1729,6 +1720,7 @@ namespace TechoCeiva
                 }
                 tbpS3.Parent = null;
                 tbpS4.Parent = tbcDatos;
+
                 //para s4
                 int iS4 = 1;
                 for (iS4 = 1; iS4 < iS1; iS4++)
@@ -1739,12 +1731,6 @@ namespace TechoCeiva
                         dgvS4.Rows[iS4 - 1].Cells[i].Value = "";
                 }
             }
-        }
-
-        private void cbxS9_1_Propio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbxS9_1_Propio.SelectedIndex == 1)
-                MessageBox.Show("Debe continuar con la pregunta 3");
         }
         
         private void rbtS808_Otros_B_CheckedChanged(object sender, EventArgs e)
@@ -2040,7 +2026,6 @@ namespace TechoCeiva
             
             if (Pregunta1006Mensaje == false)
             {
-                MessageBox.Show("Despues de marcar las opciones necesarias \n Debe continuar con la pregunta 8", "Aviso");
                 Pregunta1006Mensaje = true;
             }            
         }
@@ -2057,7 +2042,6 @@ namespace TechoCeiva
         {
             if (cbxS9_1_Propio.SelectedIndex == 1)
             {
-                MessageBox.Show("Debe Continuar con la pregunta 3","Aviso");
                 cbxS9_TipoPropietario.Focus();
             }
         }
@@ -2066,7 +2050,6 @@ namespace TechoCeiva
         {
             if (cbxS11_1_VidaFamiliar.SelectedIndex == 0)
             {
-                MessageBox.Show("Debe Continuar con la pregunta 4", "Aviso");
                 cbxS11_4_ViviedaActual.Focus();
             }
 
@@ -2076,7 +2059,6 @@ namespace TechoCeiva
         {
             if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
             {
-                MessageBox.Show("Debe Continuar con la pregunta 7", "Aviso");
                 cklS1007_Com.Focus();
             }            
         }
@@ -2085,7 +2067,6 @@ namespace TechoCeiva
         {
             if (cbxS10_OrganizacionComunitaria.SelectedIndex == 1)
             {
-                MessageBox.Show("Debe Continuar con la pregunta 19", "Aviso");
                 txtS10_LiderA.Focus();
             }
         }

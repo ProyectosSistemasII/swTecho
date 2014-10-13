@@ -5,7 +5,6 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-
 namespace Capa_Datos
 {
     public class S9_Propiedad
@@ -28,6 +27,7 @@ namespace Capa_Datos
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
+
         public S9_Propiedad()
         {
             this.idS9_Prop = 0;            
@@ -44,8 +44,8 @@ namespace Capa_Datos
             this.OtraPropiedadB ="";
             this.OtraPropiedadC="";
             this.idEncuestas = 0;
-
         }
+
         public S9_Propiedad(int idS9_Prop, String Propio, String Propietario, String OtroPropietario, String TipoPropiedad, String OtroTipoPropiedad, String PropietarioTerreno, String TelefonoPropietarioTerreno, Boolean NSNR, String OtraPropiedad, String PropiedadA, String PropiedadB, String PropiedadC, int idEncuestas)
         {
             this.idS9_Prop = idS9_Prop;           
@@ -62,17 +62,15 @@ namespace Capa_Datos
             this.OtraPropiedadB = PropiedadB;
             this.OtraPropiedadC = PropiedadC;
             this.idEncuestas = idEncuestas;
-            this.errores = new List<Error>();
-            
+            this.errores = new List<Error>();            
         }
+
         public void InsertarS9()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S9_prop(Propio,Propietario,OtroPropietario,TipoPropiedad,OtroTipoPropiedad,PropietarioTerreno,TelefonoPropietarioTerreno,NSNR,OtraPropiedad,PropiedadA,PropiedadB,PropiedadC,Encuestas_idEncuestas) VALUES(@Propio,@Propietario,@OtroPropietario,@TipoPropiedad,@OtroTipoPropiedad,@PropietarioTerreno,@TelefonoPropietarioTerreno,@NSNR,@OtraPropiedad,@OtraPropiedadA,@OtraPropiedadB,@OtraPropiedadC,@Encuestas_idEncuestas)";
-                MySqlCommand comando = new MySqlCommand(consulta, conex);
-               
+                MySqlCommand comando = new MySqlCommand(consulta, conex);               
                 comando.Parameters.AddWithValue("@Propio", this.Propio);
                 comando.Parameters.AddWithValue("@Propietario", this.Propietario);
                 comando.Parameters.AddWithValue("@OtroPropietario", this.OtroPropietario);
@@ -89,9 +87,9 @@ namespace Capa_Datos
                 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -99,7 +97,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
 
         public List<S9_Propiedad> ObtenerS9()
@@ -120,8 +117,6 @@ namespace Capa_Datos
                 ListaPropiedad.Add(propiedad);
             }
             return ListaPropiedad;
-
         }
-
     }
 }

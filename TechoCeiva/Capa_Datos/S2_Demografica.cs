@@ -74,7 +74,7 @@ namespace Capa_Datos
                 {
                     //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {

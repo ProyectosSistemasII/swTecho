@@ -29,7 +29,6 @@ namespace TechoCeiva
         {
             frmEncuesta nEncuesta = new frmEncuesta();
             nEncuesta.idComuni = Convert.ToInt32(cmbComunidad.SelectedValue.ToString());
-            MessageBox.Show(cmbComunidad.SelectedValue.ToString());
             nEncuesta.ShowDialog();
         }
 

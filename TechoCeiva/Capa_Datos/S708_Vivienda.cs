@@ -46,9 +46,9 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@Tierra", this.Tierra);                
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -65,9 +65,9 @@ namespace Capa_Datos
             MySqlCommand comando = new MySqlCommand(consulta, conex);
             try
             {
-                comando.Connection.Open();
+                //comando.Connection.Open();
                 id = (Int32)comando.ExecuteScalar();
-                comando.Connection.Close();
+                //comando.Connection.Close();
             }
             catch (MySqlException ex)
             {

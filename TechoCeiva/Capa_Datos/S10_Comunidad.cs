@@ -111,6 +111,7 @@ namespace Capa_Datos
             this.idS1008 = 0;
             this.idS1014 = 0; 
         }
+
         public S10_Comunidad(int idS10_Com, String Ayudo, String AyudaVecinos, String RelacionVecinos,
         String ComentarioRelacion, String OrganizarVecinos, String OrganizarA, String OrganizarB, String OrganizarC,
         String ParticipacionGrupo,String Necesidad, String NecesidadA, String NecesidadB, String NecesidadC,
@@ -177,9 +178,9 @@ namespace Capa_Datos
             this.idS1014 = idS1014;
             this.errores = new List<Error>();
         }
+
         public void InsertarS10A()
-        {         
-         
+        {             
             if (this.errores.Count == 0)
             {
                 String consulta = "INSERT INTO S10_Com(Ayudo, AyudaVecinos, RelacionVecinos, ComentarioRelacion, OrganizarVecinos, OrganizarA, OrganizarB, OrganizarC, ParticipacionGrupo, Necesidad,NecesidadA,NecesidadB,NecesidadC,NecesidadCom,NecesidadComA,NecesidadComB,NecesidadComC,ProyectosVecinos,ProyectoA,ProyectoB,ProyectoC,AspectoPositivo,AspectoPositivoA,AspectoPositivoB,AspectoNegativo, AspectoNegativoA,AspectoNegativoB,Discriminacion,TipoDiscriminacion,OrganizacionComunitaria,TipoOrganizacion,ConfianzaOrganizacion,ComentarioConfianza,Lider,LiderA,LiderB, LiderC,EstadoComunidadPasado,ComentarioEstadoPasado,EstadoComunidadFuturo,ComentarioEstadoFuturo, Encuestas_idEncuestas,S1006_Com_idS1006_Com,S1008_Com_idS1008_Com,S1014_Com_idS1014_Com) VALUES(@Ayudo, @AyudaVecinos, @RelacionVecinos, @ComentarioRelacion, @OrganizarVecinos, @OrganizarA, @OrganizarB, @OrganizarC, @ParticipacionGrupo,@Necesidad,@NecesidadA,@NecesidadB,@NecesidadC,@NecesidadCom,@NecesidadComA,@NecesidadComB,@NecesidadComC,@ProyectosVecinos,@ProyectoA,@ProyectoB,@ProyectoC,@AspectoPositivo,@AspectoPositivoA,@AspectoPositivoB,@AspectoNegativo,@AspectoNegativoA,@AspectoNegativoB,@Discriminacion,@TipoDiscriminacion,@OrganizacionComunitaria,@TipoOrganizacion,@ConfianzaOrganizacion,@ComentarioConfianza,@Lider,@LiderA,@LiderB, @LiderC,@EstadoComunidadPasado,@ComentarioEstadoPasado,@EstadoComunidadFuturo,@ComentarioEstadoFuturo, @Encuestas_idEncuestas,@S1006_Com_idS1006_Com,@S1008_Com_idS1008_Com,@S1014_Com_idS1014_Com)";
@@ -232,9 +233,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -243,14 +244,11 @@ namespace Capa_Datos
                 }
             }
         }
-        public void InsertarS10B()
-        {
 
-           
-                
+        public void InsertarS10B()
+        {               
             if (this.errores.Count == 0 )
-            {
-                
+            {                
                 string consulta = "INSERT INTO S10_Com(Ayudo, AyudaVecinos, RelacionVecinos, ComentarioRelacion, OrganizarVecinos, OrganizarA, OrganizarB, OrganizarC, ParticipacionGrupo, Necesidad,NecesidadA,NecesidadB,NecesidadC,NecesidadCom,NecesidadComA,NecesidadComB,NecesidadComC,ProyectosVecinos,ProyectoA,ProyectoB,ProyectoC,AspectoPositivo,AspectoPositivoA,AspectoPositivoB,AspectoNegativo, AspectoNegativoA,AspectoNegativoB,Discriminacion,TipoDiscriminacion,OrganizacionComunitaria,TipoOrganizacion,ConfianzaOrganizacion,ComentarioConfianza,Lider,LiderA,LiderB, LiderC,EstadoComunidadPasado,ComentarioEstadoPasado,EstadoComunidadFuturo,ComentarioEstadoFuturo, Encuestas_idEncuestas, S1007_Com_idS1007_Com,S1008_Com_idS1008_Com,S1014_Com_idS1014_Com) VALUES(@Ayudo, @AyudaVecinos, @RelacionVecinos, @ComentarioRelacion, @OrganizarVecinos, @OrganizarA, @OrganizarB, @OrganizarC, @ParticipacionGrupo,@Necesidad,@NecesidadA,@NecesidadB,@NecesidadC,@NecesidadCom,@NecesidadComA,@NecesidadComB,@NecesidadComC,@ProyectosVecinos,@ProyectoA,@ProyectoB,@ProyectoC,@AspectoPositivo,@AspectoPositivoA,@AspectoPositivoB,@AspectoNegativo,@AspectoNegativoA,@AspectoNegativoB,@Discriminacion,@TipoDiscriminacion,@OrganizacionComunitaria,@TipoOrganizacion,@ConfianzaOrganizacion,@ComentarioConfianza,@Lider,@LiderA,@LiderB, @LiderC,@EstadoComunidadPasado,@ComentarioEstadoPasado,@EstadoComunidadFuturo,@ComentarioEstadoFuturo, @Encuestas_idEncuestas, @S1007_Com_idS1007_Com,@S1008_Com_idS1008_Com,@S1014_Com_idS1014_Com)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);    
                 comando.Parameters.AddWithValue("@S1007_Com_idS1007_Com", this.idS1007);
@@ -301,9 +299,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -311,7 +309,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
     }
 }

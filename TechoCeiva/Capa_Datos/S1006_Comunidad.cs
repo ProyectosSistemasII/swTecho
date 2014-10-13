@@ -54,9 +54,9 @@ namespace Capa_Datos
             this.NSNR = NSNR;
             this.errores = new List<Error>();
         }
+
         public void InsertarS1006()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S1006_com(GrupoPolitico,GrupoDeportivo,GrupoReligioso,GrupoJovenes,GrupoMujeres,OrganizacionComunitaria,MesaTrabajo,Otro,Especificar,NSNR) VALUES(@GrupoPolitico,@GrupoDeportivo,@GrupoReligioso,@GrupoJovenes,@GrupoMujeres,@OrganizacionComunitaria,@MesaTrabajo,@Otro,@Especificar,@NSNR)";
@@ -74,9 +74,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -126,8 +126,6 @@ namespace Capa_Datos
                 errores.Add(error);
             }
             return i;
-
         }
-
     }
 }

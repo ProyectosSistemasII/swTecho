@@ -38,8 +38,8 @@ namespace Capa_Datos
             this.Otros = false;
             this.Especificar = "";
             this.NSNR = false;
-
         }
+
         public S1014_Comunidad(int idS1014, Boolean Niño, Boolean jovenes, Boolean mujeres,Boolean terceraedad, Boolean discapacitados, Boolean gruposetnicos, Boolean nogruposVulnerables, Boolean otros, String especificar, Boolean NSNR)
         {
             this.idS1014_com = idS1014;
@@ -55,9 +55,9 @@ namespace Capa_Datos
             this.NSNR = NSNR;
             this.errores = new List<Error>();
         }
+
         public void InsertarS1014()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S1014_com(Niños,Jovenes,Mujeres,TerceraEdad,Discapacitados,GruposEtnicos,NoGruposVulnerables,Otros,Especificar,NSNR) VALUES(@Niños,@Jovenes,@Mujeres,@TerceraEdad,@Discapacitados,@GruposEtnicos,@NoGruposVulnerables,@Otros,@Especificar,@NSNR)";
@@ -75,9 +75,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -85,7 +85,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
 
         public List<S1014_Comunidad> ObtenerS1014()
@@ -106,8 +105,8 @@ namespace Capa_Datos
                 ListaComunidad.Add(comunidad);
             }
             return ListaComunidad;
-
         }
+
         public Int32 Obtener_Ultima_EncS1014()
         {
             int i = 0;
@@ -127,8 +126,6 @@ namespace Capa_Datos
                 errores.Add(error);
             }
             return i;
-
         }
-
     }
 }

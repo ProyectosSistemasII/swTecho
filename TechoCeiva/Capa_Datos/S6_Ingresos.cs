@@ -90,9 +90,9 @@ namespace Capa_Datos
                     comando.Parameters.AddWithValue("@S611_Ingre_idS611_Ingre", this.S611_Ingre_idS611_Ingre);
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {

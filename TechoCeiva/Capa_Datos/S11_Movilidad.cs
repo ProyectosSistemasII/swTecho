@@ -5,7 +5,6 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-
 namespace Capa_Datos
 {
     public class S11_Movilidad
@@ -47,8 +46,8 @@ namespace Capa_Datos
             this.ComentarioFinal = Comentario;
             this.idEncuestas = idEncuesta;
             this.errores = new List<Error>();
-
         }
+
         public void InsertarS11() {
             
             if (this.errores.Count == 0)
@@ -65,7 +64,7 @@ namespace Capa_Datos
                                   
                     try
                     {
-                        comando.Connection.Open();
+                        //comando.Connection.Open();
                         comando.ExecuteNonQuery();
                         comando.Connection.Close();
                     }
@@ -74,8 +73,7 @@ namespace Capa_Datos
                         Error error = new Error(ex.Message + "   " + ex.Number, 2);
                         errores.Add(error);
                     }
-            }
-            
+            }            
         }
         
         public List<S11_Movilidad> ObtenerS11()
@@ -96,7 +94,6 @@ namespace Capa_Datos
                 ListaMovilidad.Add(movilidad);
             }
             return ListaMovilidad;
-
         }
     }
 }

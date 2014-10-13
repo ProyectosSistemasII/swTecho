@@ -39,6 +39,7 @@ namespace Capa_Datos
             this.Otros = 0;
             this.Especificar = "";
         }
+
         public S808_Servicios(int idS808, int refrigerador, int EquipoSonido, int Televisor, int DVD, int Motocicleta, int Automovil, int computadora, int aumeblado,int Otros, String Especificar ) 
         {
             this.idS808_Serv = idS808;
@@ -52,12 +53,11 @@ namespace Capa_Datos
             this.Amueblado = aumeblado;
             this.Otros = Otros;
             this.Especificar = Especificar;
-            this.errores = new List<Error>();
-            
+            this.errores = new List<Error>();            
         }
+
         public void InsertarS808()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S808_Serv(Refrigerador,EquipoSonido,Televisor,DVD,Motocicleta,Automovil,Computadora,Amueblado,Otros,Especificar) VALUES(@Refrigerador,@EquipoSonido,@Televisor,@DVD,@Motocicleta,@Automovil,@Computadora,@Amueblado,@Otros,@Especificar)";
@@ -75,9 +75,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -85,7 +85,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
 
         public List<S808_Servicios> ObtenerS808()
@@ -106,8 +105,8 @@ namespace Capa_Datos
                 ListaServicios.Add(Servicio);
             }
             return ListaServicios;
-
         }
+
         public Int32 Obtener_Ultima_EncS808()
         {
             int i = 0;
@@ -127,7 +126,6 @@ namespace Capa_Datos
                 errores.Add(error);
             }
             return i;
-
         }
     }
 }

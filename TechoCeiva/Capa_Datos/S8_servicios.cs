@@ -47,6 +47,7 @@ namespace Capa_Datos
             this.idS807_serv = 0;
             this.idS808_serv = 0;
         }
+
         public S8_Servicios(int idS8_serv, String AccesoAgua, String FuenteAgua, String OtraFuente,String Energia, String OtraEnergia, String Cocina, String OtraCocina, String Sanitario, String OtroTipoSanitario, String BasuraHogar, String OtroTipoBasura, int idEncuesta, int idS807, int idS808) {
             this.idS808_serv = idS8_serv;
             this.AccesoAgua = AccesoAgua;
@@ -63,12 +64,11 @@ namespace Capa_Datos
             this.idEncuestas = idEncuesta;
             this.idS807_serv = idS807;
             this.idS808_serv = idS808;
-            this.errores = new List<Error>();
-            
+            this.errores = new List<Error>();            
         }
+
         public void InsertarS8()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S8_Serv(AccesoAgua,FuenteAgua,OtraFuente,EnergiaElectrica,OtraEnergiaElectrica,EnergiaCocina,OtraEnergiaCocina,Sanitario,otroTipoSanitario,Encuestas_idEncuestas,S807_Serv_idS807_Serv,S808_Serv_idS808_Serv) VALUES(@AccesoAgua,@FuenteAgua,@OtraFuente,@EnergiaElectrica,@OtraEnergiaElectrica,@EnergiaCocina,@OtraEnergiaCocina,@Sanitario,@otroTipoSanitario,@Encuestas_idEncuestas,@S807_Serv_idS807_Serv,@S808_Serv_idS808_Serv)";
@@ -90,9 +90,9 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -100,7 +100,6 @@ namespace Capa_Datos
                     errores.Add(error);
                 }
             }
-
         }
 
         public List<S8_Servicios> ObtenerS8()
@@ -121,7 +120,6 @@ namespace Capa_Datos
                 ListaServicios.Add(servicios);
             }
             return ListaServicios;
-
         }
     }
 }

@@ -9,7 +9,6 @@ namespace Capa_Datos
 {
     public class S807_Servicios
     {
-
         public int idS807_serv {get; set;}
         public Boolean Ninguno { get; set; }
         public Boolean CableTV { get; set; }
@@ -29,8 +28,8 @@ namespace Capa_Datos
             this.TelefonoResid = false;
             this.Internet = false;
             this.NSNR = false;
-
         }
+
         public S807_Servicios(int idS08, Boolean Ninguno, Boolean Cable, Boolean Telefono, Boolean Internet, Boolean NSNR)
         {
             this.idS807_serv = idS08;
@@ -39,12 +38,11 @@ namespace Capa_Datos
             this.TelefonoResid = Telefono;
             this.Internet = Internet;
             this.NSNR = NSNR;
-            this.errores = new List<Error>();
-            
+            this.errores = new List<Error>();            
         }
+
         public void InsertarS807()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO S807_Serv(Ninguno,CableTV,TelefonoResid,Internet,NSNR) VALUES(@Ninguno,@CableTV,@TelefonoResid,@Internet,@NSNR)";
@@ -57,9 +55,9 @@ namespace Capa_Datos
                 
                 try
                 {
-                    comando.Connection.Open();
+                    //comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
@@ -88,8 +86,8 @@ namespace Capa_Datos
                 ListaServicios.Add(Servicio);
             }
             return ListaServicios;
-
         }
+
         public Int32 Obtener_Ultima_EncS807()
         {
             int i = 0;
@@ -108,9 +106,6 @@ namespace Capa_Datos
                 errores.Add(error);
             }
             return i;
-
         }
- 
-
     }
 }
