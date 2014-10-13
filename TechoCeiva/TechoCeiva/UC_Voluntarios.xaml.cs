@@ -7,6 +7,10 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+//using System.Windows.Forms;
+using System.ComponentModel;
+using System.Drawing;
+using System.Collections;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -47,7 +51,6 @@ namespace TechoCeiva
         {
             WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
-            nWinAddVoluntario.btnEliminar.Visibility = Visibility.Hidden;
             nWinAddVoluntario.btnModificar.Visibility = Visibility.Hidden;
             nWinAddVoluntario.Show();
         }
@@ -74,6 +77,35 @@ namespace TechoCeiva
 
         }
 
-        
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDelet_Click(object sender, RoutedEventArgs e)
+        {
+            _Voluntarios selec = datagdVoluntarios.SelectedItem as _Voluntarios;           
+            _VoluntariosLN voluntario = new _VoluntariosLN();
+            Boolean correcto = voluntario.Ingresar_V();
+            idVol = selec.idVoluntarios;
+
+            if (correcto)
+            {
+
+                if (MessageBox.Show("¿Desea eliminar a este voluntario?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    voluntario.Eliminar_V(idVol);
+                    fillDataGrid(voluntario);
+                }
+                else
+                {
+                    fillDataGrid(voluntario);
+                }
+            }
+            else
+            {
+                MessageBox.Show(voluntario._obtenerError());
+            }
+        }        
 	}
 }

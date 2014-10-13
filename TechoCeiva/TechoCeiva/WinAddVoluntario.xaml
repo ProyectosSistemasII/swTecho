@@ -39,7 +39,6 @@
 		<TextBox x:Name="txtTelEmergencia" Margin="23,339,396,76.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" TextAlignment="Center" Height="26.5" Width="220"/>
 		<Button Content="Guardar" Height="36" Margin="287,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" d:LayoutOverrides="HorizontalAlignment" Name="btnGuardar" />
 		<RadioButton Content="   Activo" Margin="320,295,213,121.5" Style="{DynamicResource SimpleRadioButton}" FontSize="14.667"/>
-		<Button Content="Modificar" HorizontalAlignment="Right" Height="36" Margin="0,0,131,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="109" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" />
-		<Button Content="Eliminar" HorizontalAlignment="Right" Height="36" Margin="0,0,19,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="109" FontSize="14.667" Name="btnEliminar" Click="btnEliminar_Click" />
-	</Grid>
+		<Button Content="Guardar" HorizontalAlignment="Right" Height="36" Margin="0,0,131,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="109" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" />
+    </Grid>
 </Window>

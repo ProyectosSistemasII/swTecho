@@ -23,6 +23,7 @@ namespace TechoCeiva
     public partial class UC_Comunidad : UserControl
     {
         int idComn = 0;
+        bool mod = false;
 
         public UC_Comunidad()
         {
@@ -52,19 +53,38 @@ namespace TechoCeiva
             _ComunidadLN comunidad = new _ComunidadLN(nombre,true, departamento, municipio);
             Boolean correcto = comunidad.Ingresar_C();
 
-
-            if (correcto)
+            if (mod==false)
             {
-                comunidad.InsertarComunidad();
-                MessageBox.Show("Ingreso Exitoso");
-                txtNombre.Text = "";
-                cmbDepartamento.Text = "";
-                fillDataGrid(comunidad);
+                if (correcto)
+                {
+                    comunidad.InsertarComunidad();
+                    MessageBox.Show("Ingreso Exitoso");
+                    txtNombre.Text = "";
+                    cmbDepartamento.Text = "";
+                    fillDataGrid(comunidad);
+                }
+                else
+                {
+                    MessageBox.Show(comunidad._obtenerError());
+                }
             }
             else
             {
-                MessageBox.Show(comunidad._obtenerError());
+                if (correcto)
+                {
+                    comunidad.ModificarComunidad(idComn);
+                    MessageBox.Show("Modificación Exitosa", "", MessageBoxButton.OK, MessageBoxImage.Information);
+                    txtNombre.Text = "";
+                    cmbDepartamento.Text = "";
+                    fillDataGrid(comunidad);
+                    mod = false;
+                }
+                else
+                {
+                    MessageBox.Show(comunidad._obtenerError());
+                }
             }
+            
             
         }
 
@@ -99,7 +119,7 @@ namespace TechoCeiva
             if (correcto)
             {
                 comunidad.ModificarComunidad(idComn);
-                MessageBox.Show("Modificación Exitosa");
+                MessageBox.Show("Modificación Exitosa","",MessageBoxButton.OK,MessageBoxImage.Information);
                 txtNombre.Text = "";
                 cmbDepartamento.Text = "";
                 fillDataGrid(comunidad);
@@ -115,7 +135,7 @@ namespace TechoCeiva
         private void dataGridComn_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             _Comunidad sele = dataGridComn.SelectedItem as _Comunidad;
-
+            mod = true;
             txtNombre.Text = sele.Nombre;
             cmbDepartamento.Text = sele.DepartamentoNombre;
             cmbMunicipio.Text = sele.MunicipioNombre;
@@ -124,23 +144,30 @@ namespace TechoCeiva
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
+            _Comunidad sele = dataGridComn.SelectedItem as _Comunidad;
             _ComunidadLN comunidad = new _ComunidadLN();
             Boolean correcto = comunidad.Ingresar_C();
 
-
             if (correcto)
             {
-                comunidad.eliminarComunidad(idComn);
-                MessageBox.Show("Eliminado!!!");
-                txtNombre.Text = "";
-                cmbDepartamento.Text = "";
-                fillDataGrid(comunidad);
+
+                if (MessageBox.Show("¿Desea eliminar esta comunidad?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    comunidad.eliminarComunidad(sele.idComunidad);
+                    txtNombre.Text = "";
+                    cmbDepartamento.Text = "";
+                    fillDataGrid(comunidad);
+                }
+                else
+                {
+                    fillDataGrid(comunidad);
+                }
             }
             else
             {
                 MessageBox.Show(comunidad._obtenerError());
             }
-            
+                      
         }
     }
 }
