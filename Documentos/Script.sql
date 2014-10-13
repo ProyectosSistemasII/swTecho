@@ -483,7 +483,7 @@ CREATE  TABLE IF NOT EXISTS `S6_Ingre` (
   `MontoAhorro` FLOAT NULL ,
   `DineroGasto` FLOAT NULL ,
   `Encuestas_idEncuestas` INT NOT NULL ,
-  `S611_Ingre_idS611_Ingre` INT NOT NULL ,
+  `S611_Ingre_idS611_Ingre` INT NULL ,
   PRIMARY KEY (`idS6_Ingre`) ,
   INDEX `fk_S6_Ingre_Encuestas1_idx` (`Encuestas_idEncuestas` ASC) ,
   INDEX `fk_S6_Ingre_S611_Ingre1_idx` (`S611_Ingre_idS611_Ingre` ASC) ,
@@ -524,7 +524,7 @@ DROP TABLE IF EXISTS `S707_Viv` ;
 
 CREATE  TABLE IF NOT EXISTS `S707_Viv` (
   `idS707_Viv` INT NOT NULL AUTO_INCREMENT ,
-  `BlockLadrillloPrefabr` INT NULL ,
+  `BlockLadrilloPrefabr` INT NULL ,
   `Madera` INT NULL ,
   `Adobe` INT NULL ,
   `Lamina` INT NULL ,
