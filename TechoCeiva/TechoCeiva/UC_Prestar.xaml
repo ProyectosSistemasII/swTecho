@@ -268,10 +268,10 @@
 			<ComboBox x:Name="cbxHerramienta" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="101.014" ToolTip="Nombre de Herramienta" Height="26.5" Foreground="#FF333333"/>
 			<TextBox x:Name="txbxCantidad" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Width="270" Canvas.Left="304.5" Canvas.Top="101.014" Height="26.5" Foreground="#FF333333"/>
 			<Button x:Name="btnAdd" Content="+" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="97.014" Width="41.959" Height="36" BorderBrush="{x:Null}" FontSize="14.667" Background="#FF0092DD" Foreground="White" ToolTip="Agregar a detalla" Click="btnAdd_Click" />
-			<DataGrid x:Name="DataGridPrestamo" AutoGenerateColumns="False" Height="147.193" Width="574.5" Canvas.Top="160.021" BorderBrush="{x:Null}" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" FontSize="14.667" Background="White" Foreground="#FF333333">
+			<DataGrid x:Name="DataGridPrestamo" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" Height="147.193" Width="574.5" Canvas.Top="160.021" BorderBrush="{x:Null}" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" FontSize="14.667" Background="White" Foreground="#FF333333">
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Herramienta" Binding="{Binding Nombre}" Width="390"/>
-					<DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="175"/>
+					<DataGridTextColumn Header="Herramienta" Binding="{Binding Nombre}" Width="372.3"/>
+					<DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="177.3"/>
 				</DataGrid.Columns>
 			</DataGrid>
 			<TextBox Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="344.06" FontSize="14.667" Height="66.494" Width="574.5" Foreground="#FF333333"/>
@@ -281,6 +281,7 @@
 			<Label Content="Observaciones:" Style="{DynamicResource SimpleLabel}" Canvas.Top="324.553" FontSize="14.667"/>
 			<Separator Height="0.5" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="68.507" Width="626.059" Background="#FFA0A0A0" Opacity="0.85"/>
 			<Button x:Name="btnQuit" Content="-" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="160.021" Width="41.959" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667"/>
+			<Canvas Height="100" Canvas.Left="670" Canvas.Top="258.347" Width="100" Background="#FFE7E6E6"/>
 		</Canvas>
 	</Grid>
 </UserControl>

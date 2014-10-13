@@ -49,7 +49,22 @@ namespace TechoCeiva
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            DataGridPrestamo.Items.Add(new _HerramientasLN() { Nombre = cbxHerramienta.Text, Existencia = Convert.ToInt32(txbxCantidad.Text)});
+            _HerramientasLN chosenTool = new _HerramientasLN(cbxHerramienta.SelectedIndex, cbxHerramienta.Text, Convert.ToInt32(txbxCantidad.Text));
+            Boolean correco = chosenTool.verificarExistencia();
+
+            if (correco)
+            {
+                detalle.Add(chosenTool);
+                DataGridPrestamo.Items.Add(chosenTool);
+            }
+            else
+            {
+                MessageBox.Show("No puede prestar más de lo que tiene en inventario", "Error en préstamo",MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(chosenTool.Nombre + " tiene " + chosenTool.ExistenciaActual + " unidades actualmente", "Existencia actual", MessageBoxButton.OK, MessageBoxImage.Information);
+                txbxCantidad.SelectAll();
+            }
+            
+            //DataGridPrestamo.Items.Add(new _HerramientasLN() { Nombre = cbxHerramienta.Text, Existencia = Convert.ToInt32(txbxCantidad.Text)});
             //detalle.Add(new _HerramientasLN(cbxHerramienta.Text, Convert.ToInt32(txbxCantidad.Text)));
             //DataGridPrestamo.ItemsSource = detalle;
         }

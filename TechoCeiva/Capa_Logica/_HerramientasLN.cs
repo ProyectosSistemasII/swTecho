@@ -29,6 +29,24 @@ namespace Capa_Logica
             this._errores = new List<Error>();
         }
 
+        /// <summary>
+        /// Constructor utilizado para el préstamo de las herramientas.
+        /// 
+        /// Se requiere para la lista que se utiliza para manejas los detalles que se
+        /// muestran el el grid al Prestar una Herrameinta.
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="herramienta"></param>
+        /// <param name="cantidad_a_Prestar"></param>
+
+        public _HerramientasLN(int id, String herramienta, int cantidad_a_Prestar)
+        {
+            this.idHerramientas = id;
+            this.Nombre = herramienta;
+            this.Existencia = cantidad_a_Prestar;
+        }
+
         public Boolean Ingresar_Herramienta()
         {
             Boolean _correcto = true;
