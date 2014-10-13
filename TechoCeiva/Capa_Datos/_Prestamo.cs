@@ -43,6 +43,7 @@ namespace Capa_Datos
             this.Observaciones = _Observaciones;
             this.Activo = _Activo;
             this.fechaFinPrestamo = _fechaFinPrestamo;
+            this._errores = new List<Error>();
         }
 
         public void _InsertarPrestamo()

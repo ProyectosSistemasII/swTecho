@@ -50,7 +50,7 @@ namespace Capa_Datos
 
         public List<_DetallePrestamo> obtenerDetalles()
         {
-            string query = "";
+            string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1";
             List<_DetallePrestamo> listaPrestamos = new List<_DetallePrestamo>();
 
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
@@ -79,9 +79,9 @@ namespace Capa_Datos
             MySqlTransaction transaction = _conexion.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
             MySqlCommand comando = _conexion.CreateCommand();
 
-            foreach (_Herramientas herramienta in listado)
+            try
             {
-                try
+                foreach (_Herramientas herramienta in listado)
                 {
                     comando.CommandText = "INSERT INTO DetallePrestamo (Herramientas_idHerramientas, Prestamo_idPrestamo, CantidadBuenEstado, CantidadMalEstado, CantidadPerdida, Activo, FechaDevolucion) VALUES (@idHerramienta, @idPrestamo, @cantidadBuenEstado, @cantidadMalEstado, @cantidadPerdida, @activo, @fechaDevolucion)";
                     comando.Parameters.AddWithValue("@idHerramienta", herramienta.idHerramientas);
@@ -92,15 +92,16 @@ namespace Capa_Datos
                     comando.Parameters.AddWithValue("@activo", 1);
                     comando.Parameters.AddWithValue("@fechaDevolucion", null);
                 }
-                catch (Exception e)
-                {
-                    transaction.Rollback();
-                }
-                finally
-                {
-                    comando.Dispose();
-                    transaction.Dispose();
-                }
+                transaction.Commit();
+            }
+            catch (Exception e)
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                comando.Dispose();
+                transaction.Dispose();
             }
         }
     }
