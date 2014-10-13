@@ -70,7 +70,6 @@ namespace Capa_Datos
 
         public void InsertarS3()
         {
-
             if (this.errores.Count == 0)
             {
                 string consulta = "INSERT INTO s3_edu(CodigoS3, LeerEscribir, GradoEducacion, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento, OtroTipoEstablecimiento, UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas) VALUES (@CodigoS3, @LeerEscribir, @GradoEducacion, @OtroGrado, @AsistenciaEstablecimiento, @NombreEstablecimiento, @TipoEstablecimiento, @OtroTipoEstablecimiento, @UbicacionEstablecimiento, @RazonNoAsistencia, @OtraRazon, @FormacionComplementaria, @TipoFormacion, @Encuestas_idEncuestas)";

@@ -67,12 +67,12 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@ApoyoEstado", this.ApoyoEstado);
                 comando.Parameters.AddWithValue("@Otro", this.Otro);
                 comando.Parameters.AddWithValue("@Especificar", this.Especificar);
-                comando.Parameters.AddWithValue("@NSNR", this.NSNR);                
+                comando.Parameters.AddWithValue("@NSNR", this.NSNR);
                 try
                 {
                     comando.Connection.Open();
                     //comando.CommandTimeout = 0;
-                    comando.ExecuteNonQuery();                    
+                    comando.ExecuteNonQuery();
                     comando.Connection.Close();
                 }
                 catch (MySqlException ex)
@@ -87,18 +87,18 @@ namespace Capa_Datos
         {
             int id = 0;
             String consulta = "SELECT MAX(idS611_Ingre) FROM S611_Ingre";
-            MySqlCommand comando = new MySqlCommand(consulta,conex);
+            MySqlCommand comando = new MySqlCommand(consulta, conex);
             try
-                {
-                    comando.Connection.Open();
-                    id = (Int32)comando.ExecuteScalar();
-                    comando.Connection.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    Error error = new Error(ex.Message + "   " + ex.Number, 0);
-                    errores.Add(error);
-                }
+            {
+                comando.Connection.Open();
+                id = (Int32)comando.ExecuteScalar();
+                comando.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Error error = new Error(ex.Message + "   " + ex.Number, 0);
+                errores.Add(error);
+            }
             return id;
         }
     }

@@ -84,7 +84,7 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@MontoAhorro", this.MontoAhorro);
                 comando.Parameters.AddWithValue("@DineroGasto", this.DineroGasto);
                 comando.Parameters.AddWithValue("@Encuestas_idEncuestas", this.Encuestas_idEncuestas);
-                if(S611_Ingre_idS611_Ingre == 0)
+                if (S611_Ingre_idS611_Ingre == 0)
                     comando.Parameters.AddWithValue("@S611_Ingre_idS611_Ingre", null);
                 else
                     comando.Parameters.AddWithValue("@S611_Ingre_idS611_Ingre", this.S611_Ingre_idS611_Ingre);

@@ -53,19 +53,6 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
-        /*public Boolean Insertar_EncuS3()
-        {
-            Boolean correcto = true;
-            S3_Educacion educacion = new S3_Educacion(CodigoS3, LeerEscribir, GradoEducacion, OtroGrado, AsistenciaEstablecimiento, NombreEstablecimiento, TipoEstablecimiento,
-                OtroTipoEstablecimiento, UbicacionEstablecimiento, RazonNoAsistencia, OtraRazon, FormacionComplementaria, TipoFormacion, Encuestas_idEncuestas);
-            educacion.InsertarS3();
-            if (errores.Count > 0)
-            {
-                correcto = false;
-            }
-            return correcto;
-        }
-        */
         public Boolean validacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
             string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas, int Filas)
@@ -177,7 +164,6 @@ namespace Capa_Logica
         {
             Boolean correcto = true;
             S3_Educacion educacion = new S3_Educacion(CodigoS3,LeerEscribir,GradoEducacion,OtroGrado,AsistenciaEstablecimiento,NombreEstablecimiento,TipoEstablecimiento,OtroTipoEstablecimiento,UbicacionEstablecimiento,RazonNoAsistencia,OtraRazon,FormacionComplementaria, TipoFormacion,Encuestas_idEncuestas);
-            educacion.InsertarS3();
             this.errores = educacion.errores;
             if (errores.Count > 0)
             {
@@ -186,12 +172,10 @@ namespace Capa_Logica
             return correcto;
         }
 
-
         public string obtenerError()
         {
             Error error = errores[0];
             return error.mensaje;
         }
-
     }
 }

@@ -74,8 +74,8 @@ namespace Capa_Logica
         }
 
         public void Validar11()
-        { 
-            if(this.RecorteGastos == false && this.Prestamo == false && this.VentaMaterial == false && this.TrabajoOcasional == false && this.Ahorros == false && this.AyudaFamiliar == false && this.ApoyoEstado == false && this.Otro == false && this.NSNR == false)
+        {
+            if (this.RecorteGastos == false && this.Prestamo == false && this.VentaMaterial == false && this.TrabajoOcasional == false && this.Ahorros == false && this.AyudaFamiliar == false && this.ApoyoEstado == false && this.Otro == false && this.NSNR == false)
             {
                 Error error = new Error("Debe especificar en la pregunta 11", 5000, 1);
                 errores.Add(error);

@@ -116,17 +116,12 @@ namespace Capa_Logica
                 Error error = new Error("Debe seleccionar datos de la pregunta 7", 5000, 7);
                 errores.Add(error);
             }
-            if (!this.CubreGastos.Equals("No") && this.Ahorro.Equals("null") && !this.CubreGastos.Equals("Iguales") && !this.CubreGastos.Equals("NS/NR"))
+            if (this.CubreGastos.Equals("Si") && this.Ahorro.Equals("null"))
             {
                 Error error = new Error("Debe seleccionar datos de la pregunta 8", 5000, 8);
-                errores.Add(error);
+                errores.Add(error); 
             }
-            if (!this.CubreGastos.Equals("No") && this.MontoAhorro.Equals(0) && !this.CubreGastos.Equals("Iguales") && !this.CubreGastos.Equals("NS/NR"))
-            {
-                Error error = new Error("Debe ingresar el monto del ahorro en la pregunta 9", 5000, 9);
-                errores.Add(error);
-            }
-            if (!this.CubreGastos.Equals("Si") && this.DineroGasto.Equals(0) && !this.CubreGastos.Equals("Iguales") && !this.CubreGastos.Equals("NS/NR"))
+            if (this.CubreGastos.Equals("No") && this.DineroGasto.Equals(0))
             {
                 Error error = new Error("Debe ingresar la cantidad en la pregunta 10", 5000, 10);
                 errores.Add(error);

@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace TechoCeiva
 {
     public partial class frmEncuesta : Form
@@ -63,9 +62,7 @@ namespace TechoCeiva
         int rbtS1008_partidosPoliticos = -1;
         int rbtS1008_Techo = -1;
         int rbtS1008_MedioComunicacion = -1;
-        int rbtS1008_IglesiasReligiosos = -1;
-         
-            
+        int rbtS1008_IglesiasReligiosos = -1;           
         /// -----------------------------------------------------------------------------------------------------------
 
         // variables para que no deje error los combobox cuando estan vacios Seccion 8
@@ -135,8 +132,6 @@ namespace TechoCeiva
         int Tierra = 0;
         ///-----------------------------------
 
-        ///-----------------------------------
-
         Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
 
@@ -145,6 +140,7 @@ namespace TechoCeiva
             InitializeComponent();
             CodigoEncuesta = 2;
         }
+
         /// <summary>
         /// Seccion 11
         /// </summary>
@@ -265,8 +261,6 @@ namespace TechoCeiva
                     }
                 Fin:
                 return;
-
-
         }
        
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
@@ -310,8 +304,7 @@ namespace TechoCeiva
         {
             switch (pregunta)
             {
-
-                    case 1:
+                case 1:
                     txtS10_Ayudo.BackColor = ColorCampsVacios;
                     txtS10_Ayudo.Focus();
                     break;
@@ -327,22 +320,18 @@ namespace TechoCeiva
                     txtS10_CometarioRelacion.BackColor = ColorCampsVacios;
                     txtS10_CometarioRelacion.Focus();
                     break;
-
                 case 4:
                     cbxS10_OrganizarVecinos.BackColor = ColorCampsVacios;
                     cbxS10_OrganizarVecinos.Focus();
                     break;
-
                 case 401:
                     txtS10_OrganizarA.BackColor = ColorCampsVacios;
                     txtS10_OrganizarA.Focus();
                     break;
-
                 case 5:
                     cbxS10_ParticipacionGrupo.BackColor = ColorCampsVacios;
                     cbxS10_ParticipacionGrupo.Focus();
                     break;
-
                 case 6:
                     cklS1006_Com.BackColor = ColorCampsVacios;
                     cklS1006_Com.Focus();
@@ -354,7 +343,7 @@ namespace TechoCeiva
                 case 7:
                     cklS1007_Com.BackColor = ColorCampsVacios;
                     cklS1007_Com.Focus();
-                        break;
+                    break;
                 case 701:
                     txtS1007_Especificar.BackColor = ColorCampsVacios;
                     txtS1007_Especificar.Focus();
@@ -363,7 +352,6 @@ namespace TechoCeiva
                     cbxS10_Necesidad.BackColor = ColorCampsVacios;
                     cbxS10_Necesidad.Focus();
                     break;
-
                 case 901:
                     txtS10_NecesidadA.BackColor = ColorCampsVacios;
                     txtS10_NecesidadA.Focus();
@@ -372,7 +360,6 @@ namespace TechoCeiva
                     cbxS10_NecesidadCom.BackColor = ColorCampsVacios;
                     cbxS10_NecesidadCom.Focus();
                     break;
-
                 case 1001:
                     txtS10_NecesidadComA.BackColor = ColorCampsVacios;
                     txtS10_NecesidadComA.Focus();
@@ -381,7 +368,6 @@ namespace TechoCeiva
                     cbxS10_ProyectosVecinos.BackColor = ColorCampsVacios;
                     cbxS10_ProyectosVecinos.Focus();
                     break;
-
                 case 1101:
                     txtS10_ProyectosVecinosA.BackColor = ColorCampsVacios;
                     txtS10_ProyectosVecinosA.Focus();
@@ -446,7 +432,6 @@ namespace TechoCeiva
                     txtS10_ComentarioEstadoFuturo.BackColor = ColorCampsVacios;
                     txtS10_ComentarioEstadoFuturo.Focus();
                     break;
-
             }
         }
 
@@ -484,6 +469,7 @@ namespace TechoCeiva
                 NumeroCaso =3;
             return NumeroCaso;
         }
+
         public Boolean IngresarS1014()
         {
             NuevaS1014 = new S1014_ComunidadLN(Convert.ToBoolean(cklS1014_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)), txtS1014_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(8)));
@@ -499,8 +485,7 @@ namespace TechoCeiva
             }
             return correcto;
         }
-
-       
+               
         public Boolean IngresarS1008()
         {
             this.VerificarRadioBtn_S1008();
@@ -516,6 +501,7 @@ namespace TechoCeiva
             }
             return correcto;
         }
+
         public void VerificarRadioBtn_S1008()
         {
             if (rbtS1008_Familia_NS.Checked)
@@ -605,8 +591,7 @@ namespace TechoCeiva
             else if (rbtS1008_Iglesia_I.Checked)
                 rbtS1008_IglesiasReligiosos = 2;
             else if (rbtS1008_Iglesia_S.Checked)
-                rbtS1008_IglesiasReligiosos = 3;
-            
+                rbtS1008_IglesiasReligiosos = 3;            
         }
         
         public Boolean IngresarS1007()
@@ -624,6 +609,7 @@ namespace TechoCeiva
             }
             return correcto;
         }
+
         public Boolean IngresarS1006()
         {
             NuevaS1006 = new S1006_ComunidadLN(Convert.ToBoolean(cklS1006_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)), txtS1006_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(8)));
@@ -976,8 +962,7 @@ namespace TechoCeiva
             {
                 txtS9_OtroPropietario.Enabled = true;
                 txtS9_OtroPropietario.Focus();
-                MessageBox.Show("Depues de 'Especificar' debe continuar con la pregunta 5", "Aviso");
-                
+                MessageBox.Show("Depues de 'Especificar' debe continuar con la pregunta 5", "Aviso");                
             }
             else
             {
@@ -1193,20 +1178,6 @@ namespace TechoCeiva
             }
         }
 
-        private void btnS6_Siguiente_Click(object sender, EventArgs e)
-        {
-            S6_IngresosLN S6 = new S6_IngresosLN();
-            Boolean correcto = true;//S6.Insertar_IngreS6(Convert.ToInt32(txtS8_CodigoS8.Text),txtS8_
-            if (correcto)
-            {
-                MessageBox.Show("Ingresado Correctamente");
-            }
-            else
-            {
-                MessageBox.Show(S6.obtenerError());
-            }
-        }
-
         private void cbsS7_5_ProbViv_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbsS7_5_ProbViv.SelectedIndex.Equals(0))
@@ -1240,9 +1211,7 @@ namespace TechoCeiva
                 tbpS8.Parent = tbcDatos;
             }
             else
-            {
                 MessageBox.Show(S7.obtenerError());
-            }
         }
 
         //seccion 5
@@ -1321,9 +1290,7 @@ namespace TechoCeiva
                     S5_TrabajoLN SIn = new S5_TrabajoLN(Convert.ToInt32(row.Cells[0].Value.ToString()), trabajo, buscando, row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), otrosTrabajos, row.Cells[11].Value.ToString(), dias, horas, ingreso, idEncu);
                     correcto = SIn.Insertar_EncuS5();
                     if (correcto)
-                    {
                         Filas++;
-                    }
                     else
                     {
                         Filas = 0;
@@ -1376,29 +1343,17 @@ namespace TechoCeiva
         public void IgualarText()
         {
             if (txtS6_1_CantidadIngEstado.Text == "")
-            {
-                txtS6_1_CantidadIngEstado.Text = "0";
-            }
+                txtS6_1_CantidadIngEstado.Text = "0";            
             if (txtS6_2_CantidadRemesas.Text == "")
-            {
                 txtS6_2_CantidadRemesas.Text = "0";
-            }
             if (txtS6_4_CantiDeuda.Text == "")
-            {
                 txtS6_4_CantiDeuda.Text = "0";
-            }
             if (txtS6_6_IngresoTotal.Text == "")
-            {
                 txtS6_6_IngresoTotal.Text = "0";
-            }
             if (txtS6_9_CantiAhorro.Text == "")
-            {
                 txtS6_9_CantiAhorro.Text = "0";
-            }
             if (txtS6_10_CantiGastosaIngresos.Text == "")
-            {
                 txtS6_10_CantiGastosaIngresos.Text = "0";
-            }
         }
 
         private void pbS6_Siguiente_Click(object sender, EventArgs e)
@@ -1406,7 +1361,7 @@ namespace TechoCeiva
             int ids611 = 0;
             // Ingresar la seccion 6 por completo
             IgualarText();
-            S6_IngresosLN SDatos = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), 3, ids611);
+            S6_IngresosLN SDatos = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), idEncu, ids611);
             Boolean campos = SDatos.VerificarCampos();
             if (campos)
             {
@@ -1415,12 +1370,12 @@ namespace TechoCeiva
                 S611_IngresosLN S611 = new S611_IngresosLN(this.RecorteGastos, this.Prestamo, this.VentaMaterial, this.TrabajoOcasional, this.Ahorros, this.AyudaFamiliar, this.ApoyoEstado, this.Otro, txtS6_11_EspecificarFaltaDinero.Text, this.NSNR);
                 if (cbxS6_7_CubrenGasto.Text.Equals("No"))
                     S611.Validar11();
-
+                
                 //Por si hay saltos y no tienen q contestar unas preguntas
                 if (cbxS6_7_CubrenGasto.Text.Equals("Iguales") || cbxS6_7_CubrenGasto.Text.Equals("NS/NR") || cbxS6_7_CubrenGasto.Text.Equals("Si"))
                 {
                     //Ingresar la seccion 6 completa
-                    S6_IngresosLN S6 = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), 3, ids611);
+                    S6_IngresosLN S6 = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), idEncu, ids611);
                     Boolean correcto = S6.Insertar_EncuS6();
                     if (correcto)
                     {
@@ -1438,7 +1393,7 @@ namespace TechoCeiva
                         S611_Ingresos s611 = new S611_Ingresos();
                         ids611 = s611.UltimoId();
                         //Ingresar la seccion 6 completa
-                        S6_IngresosLN S6 = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), 3, ids611);
+                        S6_IngresosLN S6 = new S6_IngresosLN(cbxS6_1_IngEstado.Text, float.Parse(txtS6_1_CantidadIngEstado.Text), cbxS6_2_IngRemesas.Text, float.Parse(txtS6_2_CantidadRemesas.Text), cbxS6_3_Deuda.Text, float.Parse(txtS6_4_CantiDeuda.Text), cbxS6_5_TiempoPagoDeuda.Text, float.Parse(txtS6_6_IngresoTotal.Text), cbxS6_7_CubrenGasto.Text, cbxS6_8_AhorroMensual.Text, float.Parse(txtS6_9_CantiAhorro.Text), float.Parse(txtS6_10_CantiGastosaIngresos.Text), idEncu, ids611);
                         Boolean correcto = S6.Insertar_EncuS6();
                         if (correcto)
                         {
@@ -1561,8 +1516,7 @@ namespace TechoCeiva
             _Municipio muni = new _Municipio();
             dgvCmbMuni.DisplayMember = "nombre";
             //dgvCmbMuni.ValueMember = "idMunicipio";*/
-            
-            
+                        
             dgvCmbMuni.DataSource = muni.ObtenerTodosMuni();
         }
 
@@ -1689,9 +1643,7 @@ namespace TechoCeiva
                 //MessageBox.Show(row.Cells[6].Value.ToString());
                 correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1, Filas);
                 if (correcto)
-                {
-                    Filas++;
-                }
+                    Filas++;                
                 else
                 {
                     Filas = 0;
@@ -1711,9 +1663,7 @@ namespace TechoCeiva
                     S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1);
                     correcto = SIn.Insertar_EncuS2();
                     if (correcto)
-                    {
                         Filas++;
-                    }
                     else
                     {
                         Filas = 0;
@@ -1748,7 +1698,7 @@ namespace TechoCeiva
                 dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
                 correcto = S3.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
                     row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
-                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas); 
+                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas);
                 if (correcto)
                     Filas++;
                 else
@@ -1768,7 +1718,7 @@ namespace TechoCeiva
                     S3_EducacionLN SIn = new S3_EducacionLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
                     row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
                     row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu);
-                    correcto = S3.Insertar_EncuS3(); 
+                    correcto = S3.Insertar_EncuS3();
                     if (correcto)
                         Filas++;
                     else
@@ -1797,7 +1747,6 @@ namespace TechoCeiva
             if (cbxS9_1_Propio.SelectedIndex == 1)
                 MessageBox.Show("Debe continuar con la pregunta 3");
         }
-
         
         private void rbtS808_Otros_B_CheckedChanged(object sender, EventArgs e)
         {
@@ -2011,7 +1960,7 @@ namespace TechoCeiva
             int ids706 = 0, ids707 = 0, ids708 = 0;
             // Ingresar la seccion 7 por completo
             IgualarTextS7();
-            S7_ViviendaLN SDatos = new S7_ViviendaLN(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, 3, ids706, ids707, ids708);
+            S7_ViviendaLN SDatos = new S7_ViviendaLN(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, idEncu, ids706, ids707, ids708);
             Boolean campos = SDatos.VerificarCampos();
             if (campos)
             {
@@ -2061,7 +2010,7 @@ namespace TechoCeiva
                 }
 
                 //Ingresar la seccion 7 completa
-                S7_ViviendaLN S7 = new S7_ViviendaLN(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, 3, ids706, ids707, ids708);
+                S7_ViviendaLN S7 = new S7_ViviendaLN(Convert.ToInt32(txtS7_1_AnchoViv.Text), Convert.ToInt32(txtS7_1_LargoViv.Text), txtS7_2_Cuartos.Text, txtS7_3_CantDormitorios.Text, txtS7_4_CantCamas.Text, cbsS7_5_ProbViv.Text, txtS7_5_ProblemaA.Text, txtS7_5_ProblemaB.Text, txtS7_5_ProblemaC.Text, idEncu, ids706, ids707, ids708);
                 Boolean correcto = S7.Insertar_EncuS7();
                 if (correcto)
                 {
@@ -2094,8 +2043,7 @@ namespace TechoCeiva
             {
                 MessageBox.Show("Despues de marcar las opciones necesarias \n Debe continuar con la pregunta 8", "Aviso");
                 Pregunta1006Mensaje = true;
-            }
-            
+            }            
         }
 
         private void cklS1014_Com_SelectedIndexChanged(object sender, EventArgs e)
@@ -2125,15 +2073,13 @@ namespace TechoCeiva
 
         }
 
-
         private void cbxS10_ParticipacionGrupo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
             {
                 MessageBox.Show("Debe Continuar con la pregunta 7", "Aviso");
                 cklS1007_Com.Focus();
-            }
-            
+            }            
         }
 
         private void cbxS10_OrganizacionComunitaria_SelectedIndexChanged(object sender, EventArgs e)
@@ -2152,6 +2098,56 @@ namespace TechoCeiva
                 ((ComboBox)e.Control).DropDownStyle = ComboBoxStyle.DropDown;
                 ((ComboBox)e.Control).AutoCompleteSource = AutoCompleteSource.ListItems;
                 ((ComboBox)e.Control).AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            }
+        }
+
+        private void cbsS7_5_ProbViv_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbsS7_5_ProbViv.SelectedIndex == 0)
+            {
+                lblS7_5_A.Enabled = true;
+                txtS7_5_ProblemaA.Enabled = true;
+                lblS7_5_B.Enabled = true;
+                txtS7_5_ProblemaB.Enabled = true;
+                lblS7_5_C.Enabled = true;
+                txtS7_5_ProblemaC.Enabled = true;
+            }
+            else
+            {
+                lblS7_5_A.Enabled = false;
+                txtS7_5_ProblemaA.Enabled = false;
+                lblS7_5_B.Enabled = false;
+                txtS7_5_ProblemaB.Enabled = false;
+                lblS7_5_C.Enabled = false;
+                txtS7_5_ProblemaC.Enabled = false;
+            }
+        }
+
+        private void cbxS6_1_IngEstado_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbxS6_1_IngEstado.SelectedIndex == 0)
+            {
+                lblS6_1_QEstado.Enabled = true;
+                txtS6_1_CantidadIngEstado.Enabled = true;
+            }
+            else
+            {
+                lblS6_1_QEstado.Enabled = false;
+                txtS6_1_CantidadIngEstado.Enabled = false;
+            }
+        }
+
+        private void cbxS6_2_IngRemesas_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbxS6_2_IngRemesas.SelectedIndex == 0)
+            {
+                lblS6_2_QRemesas.Enabled = true;
+                txtS6_2_CantidadRemesas.Enabled = true;
+            }
+            else
+            {
+                lblS6_2_QRemesas.Enabled = false;
+                txtS6_2_CantidadRemesas.Enabled = false;
             }
         }
     }

@@ -66,7 +66,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S7_Viv(Ancho,Largo,Cuartos,Dormitorio,Camas,ProblemaVivienda,ProblemaA,ProblemaB,ProblemaC,Encuestas_idEncuestas,S706_Viv_ids706,S707_Viv_ids707,S708_Viv_ids708) VALUES(@CodigoS7,@Ancho,@Largo,@Cuartos,@Dormitorio,@Camas,@ProblemaVivienda,@ProblemaA,@ProblemaB,@ProblemaC,@Encuestas_idEncuestas,@S706_Viv_ids706,@S707_Viv_ids707,@S708_Viv_ids708)";
+                string consulta = "INSERT INTO S7_Viv(Ancho,Largo,Cuartos,Dormitorio,Camas,ProblemaVivienda,ProblemaA,ProblemaB,ProblemaC,Encuestas_idEncuestas,S706_Viv_idS706_Viv,S707_Viv_idS707_Viv,S708_Viv_idS708_Viv) VALUES(@Ancho,@Largo,@Cuartos,@Dormitorio,@Camas,@ProblemaVivienda,@ProblemaA,@ProblemaB,@ProblemaC,@Encuestas_idEncuestas,@S706_Viv_ids706,@S707_Viv_ids707,@S708_Viv_ids708)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@Ancho", this.Ancho);
                 comando.Parameters.AddWithValue("@Largo", this.Largo);
