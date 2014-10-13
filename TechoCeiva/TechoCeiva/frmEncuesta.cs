@@ -132,13 +132,12 @@ namespace TechoCeiva
         int Tierra = 0;
         ///-----------------------------------
 
-        Int32 CodigoEncuesta { get; set; }
         Color ColorCampsVacios = Color.Red;
 
         public frmEncuesta()
         {
             InitializeComponent();
-            CodigoEncuesta = 2;
+            
         }
 
         /// <summary>
@@ -149,7 +148,7 @@ namespace TechoCeiva
         private void pbS11_Siguiente_Click(object sender, EventArgs e)
         {
             int caso = this.VerificarCombobox_S11();            
-            S11_MovilidadLN S11 = new S11_MovilidadLN(cbxS11_1_VidaFamiliartxt, txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActualtxt, txt_S11_ComentarioFinal.Text, this.CodigoEncuesta);
+            S11_MovilidadLN S11 = new S11_MovilidadLN(cbxS11_1_VidaFamiliartxt, txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActualtxt, txt_S11_ComentarioFinal.Text, this.idEncu);
             Boolean correcto = S11.Ingresar_S11(caso);
             if (correcto)
             {
@@ -266,7 +265,7 @@ namespace TechoCeiva
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
             int caso = this.VerificarCombox_S10();
-            NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.CodigoEncuesta,NuevaS1006.idS1006_com,NuevaS1007.idS1007_com, NuevaS1008.idS1008_Com);
+            NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.idEncu,NuevaS1006.idS1006_com,NuevaS1007.idS1007_com, NuevaS1008.idS1008_Com);
             Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10();
             if (!correcto)
             {
@@ -636,9 +635,9 @@ namespace TechoCeiva
             int caso = this.VerificarCombox_S9();
             S9_PropiedadLN S9 ;
             if (caso == 1)
-                S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_Propietariotxt, txtS9_OtroPropietario.Text, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+                S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_Propietariotxt, txtS9_OtroPropietario.Text, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.idEncu);
             else 
-                S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_TipoPropietariotxt, txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.CodigoEncuesta);
+                S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_TipoPropietariotxt, txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.idEncu);
             
             Boolean correcto = S9.Insertar_EncS9(caso);
             if (correcto)
@@ -733,7 +732,7 @@ namespace TechoCeiva
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {            
             this.VerificarCombox_S8();
-            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.CodigoEncuesta);
+            S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.idEncu);
             if (Pregunta807 == false)
             { 
                 if(this.IngresarS807() == true)

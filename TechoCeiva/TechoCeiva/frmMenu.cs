@@ -11,7 +11,7 @@ namespace TechoCeiva
 {
     public partial class frmMenu : Form
     {
-        public frmLogin _nLog;
+        public frmLogin _nLog = new frmLogin();
 
         public frmMenu()
         {

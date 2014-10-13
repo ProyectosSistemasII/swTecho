@@ -244,6 +244,7 @@ CREATE  TABLE IF NOT EXISTS `Salida` (
   `FechaSalida` DATE NOT NULL ,
   `Usuarios_idUsuarios` INT NOT NULL ,
   `Activo` TINYINT(1) NULL DEFAULT 1 ,
+  `Descripcion` VARCHAR(255) NULL ,
   PRIMARY KEY (`idSalida`) ,
   INDEX `fk_SalidaAlimentos_Usuarios1_idx` (`Usuarios_idUsuarios` ASC) ,
   CONSTRAINT `fk_SalidaAlimentos_Usuarios1`
@@ -267,11 +268,9 @@ CREATE  TABLE IF NOT EXISTS `Prestamo` (
   `Observaciones` VARCHAR(255) NULL ,
   `Activo` INT NULL DEFAULT 1 ,
   `FechaFinPrestamo` DATE NULL ,
-  `Comunidad_idComunidad` INT NOT NULL ,
   PRIMARY KEY (`idPrestamo`) ,
   INDEX `fk_DetallePrestamo_Voluntarios_idx` (`Voluntarios_idVoluntarios` ASC) ,
   INDEX `fk_Prestamo_Usuarios1_idx` (`Usuarios_idUsuarios` ASC) ,
-  INDEX `fk_Prestamo_Comunidad1_idx` (`Comunidad_idComunidad` ASC) ,
   CONSTRAINT `fk_DetallePrestamo_Voluntarios`
     FOREIGN KEY (`Voluntarios_idVoluntarios` )
     REFERENCES `Voluntarios` (`idVoluntarios` )
@@ -280,11 +279,6 @@ CREATE  TABLE IF NOT EXISTS `Prestamo` (
   CONSTRAINT `fk_Prestamo_Usuarios1`
     FOREIGN KEY (`Usuarios_idUsuarios` )
     REFERENCES `Usuarios` (`idUsuarios` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Prestamo_Comunidad1`
-    FOREIGN KEY (`Comunidad_idComunidad` )
-    REFERENCES `Comunidad` (`idComunidad` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -327,7 +321,6 @@ CREATE  TABLE IF NOT EXISTS `S2_Dem` (
   `EstadoCivil` VARCHAR(45) NULL ,
   `Parentesco` VARCHAR(45) NULL ,
   `OtroFamiliar` VARCHAR(45) NULL ,
-  `NoFamiliar` VARCHAR(45) NULL ,
   `Nacionalidad` VARCHAR(45) NULL ,
   `Encuestas_idEncuestas` INT NOT NULL ,
   `Departamento_idDepartamento` INT NOT NULL ,
@@ -364,13 +357,12 @@ CREATE  TABLE IF NOT EXISTS `S3_Edu` (
   `CodigoS3` INT NULL ,
   `LeerEscribir` VARCHAR(45) NULL ,
   `GradoEducacion` VARCHAR(45) NULL ,
-  `Tecnico` VARCHAR(45) NULL ,
   `OtroGrado` VARCHAR(45) NULL ,
   `AsistenciaEstablecimiento` VARCHAR(45) NULL ,
   `NombreEstablecimiento` VARCHAR(100) NULL ,
   `TipoEstablecimiento` VARCHAR(45) NULL ,
   `OtroTipoEstablecimiento` VARCHAR(45) NULL ,
-  `UbicacionEstablecimento` VARCHAR(45) NULL ,
+  `UbicacionEstablecimiento` VARCHAR(45) NULL ,
   `RazonNoAsistencia` VARCHAR(100) NULL ,
   `OtraRazon` VARCHAR(100) NULL ,
   `FormacionComplementaria` VARCHAR(45) NULL ,
@@ -570,9 +562,9 @@ CREATE  TABLE IF NOT EXISTS `S7_Viv` (
   `Dormitorio` VARCHAR(45) NULL ,
   `Camas` VARCHAR(45) NULL ,
   `ProblemaVivienda` VARCHAR(45) NULL ,
-  `ProblemaA` VARCHAR(45) NULL ,
-  `ProblemaB` VARCHAR(45) NULL ,
-  `ProblemaC` VARCHAR(45) NULL ,
+  `ProblemaA` VARCHAR(100) NULL ,
+  `ProblemaB` VARCHAR(100) NULL ,
+  `ProblemaC` VARCHAR(100) NULL ,
   `Encuestas_idEncuestas` INT NOT NULL ,
   `S706_Viv_idS706_Viv` INT NOT NULL ,
   `S707_Viv_idS707_Viv` INT NOT NULL ,
@@ -954,20 +946,20 @@ DROP TABLE IF EXISTS `DetalleSalida` ;
 CREATE  TABLE IF NOT EXISTS `DetalleSalida` (
   `idDetalleSalida` INT NOT NULL AUTO_INCREMENT ,
   `Cantidad` INT NOT NULL ,
-  `Donacion_idDonacion` INT NOT NULL ,
   `Alimentos_idAlimentos` INT NOT NULL ,
   `Activo` TINYINT(1) NULL DEFAULT 1 ,
+  `Salida_idSalida` INT NOT NULL ,
   INDEX `fk_Donacion_has_Alimentos_Alimentos1_idx` (`Alimentos_idAlimentos` ASC) ,
-  INDEX `fk_Donacion_has_Alimentos_Donacion1_idx` (`Donacion_idDonacion` ASC) ,
   PRIMARY KEY (`idDetalleSalida`) ,
-  CONSTRAINT `fk_Donacion_has_Alimentos_Donacion1`
-    FOREIGN KEY (`Donacion_idDonacion` )
-    REFERENCES `Salida` (`idSalida` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_DetalleSalida_Salida1_idx` (`Salida_idSalida` ASC) ,
   CONSTRAINT `fk_Donacion_has_Alimentos_Alimentos1`
     FOREIGN KEY (`Alimentos_idAlimentos` )
     REFERENCES `Alimentos` (`idAlimentos` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_DetalleSalida_Salida1`
+    FOREIGN KEY (`Salida_idSalida` )
+    REFERENCES `Salida` (`idSalida` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
