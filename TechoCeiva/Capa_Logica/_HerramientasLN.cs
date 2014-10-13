@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Capa_Datos;
 using System.Collections;
+using System.Collections.ObjectModel;
 
 namespace Capa_Logica
 {
@@ -32,7 +33,7 @@ namespace Capa_Logica
         /// <summary>
         /// Constructor utilizado para el préstamo de las herramientas.
         /// 
-        /// Se requiere para la lista que se utiliza para manejas los detalles que se
+        /// Se requiere para la lista que se utiliza para manejar los detalles que se
         /// muestran el el grid al Prestar una Herrameinta.
         /// 
         /// </summary>
@@ -85,6 +86,44 @@ namespace Capa_Logica
 
             detalle = new string[] {_id, herramienta, _cantidad};
             detallePrestamo.Add(detalle);
+        }
+
+        public Boolean buscarElemento(ObservableCollection<_HerramientasLN> colection)
+        {
+            foreach (_HerramientasLN valor in colection)
+            {
+                if (valor.idHerramientas.Equals(this.idHerramientas))
+                    return true;
+                else
+                    return false;
+            }
+            return false;
+        }
+
+        public ObservableCollection<_HerramientasLN> eliminarDeColeccion(ObservableCollection<_HerramientasLN> colection)
+        {
+            int cont = 0;
+            foreach (_HerramientasLN herramienta in colection)
+            {
+                if (herramienta.idHerramientas.Equals(this.idHerramientas))
+                {
+                    colection.RemoveAt(cont);
+                    break;
+                }
+                cont++;
+            }
+            return colection;
+        }
+
+        public void guardarElementos(ObservableCollection<_HerramientasLN> listado)
+        {
+            List<_Herramientas> nuevoListado = new List<_Herramientas>();
+            foreach (_HerramientasLN herramienta in listado)
+            {
+                nuevoListado.Add(herramienta);
+            }
+
+            this.guardarComoTransaccion(nuevoListado);
         }
     }
 }
