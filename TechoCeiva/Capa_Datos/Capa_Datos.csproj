@@ -88,6 +88,7 @@
     <Compile Include="_Departamento.cs" />
     <Compile Include="_DetallePrestamo.cs" />
     <Compile Include="_Herramientas.cs" />
+    <Compile Include="_Insumos.cs" />
     <Compile Include="_Municipio.cs" />
     <Compile Include="_Prestamo.cs" />
     <Compile Include="_Voluntarios.cs" />
