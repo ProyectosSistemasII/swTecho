@@ -18,7 +18,7 @@ namespace Capa_Datos
         /// <summary>
         /// variable utilizada para el método verificarExistencia()
         /// </summary>
-        public int ExistenciaActual { get; set; }
+        //public int ExistenciaActual { get; set; }
 
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;        
@@ -168,32 +168,21 @@ namespace Capa_Datos
             }
         }
 
-        public Boolean verificarExistencia()
+        public Boolean verificarExistencia(int cantidad)
         {
-            string query = "Select * FROM Herramientas WHERE idHerramientas = " + this.idHerramientas;
-            _Herramientas herramienta;
-
-            MySqlCommand _comando = new MySqlCommand(query, _conexion);
-            _comando.CommandTimeout = 12280;
-            DataSet _ds = new DataSet();
-            MySqlDataAdapter _adapter = new MySqlDataAdapter();
-            _adapter.SelectCommand = _comando;
-            _adapter.Fill(_ds);
-            DataTable _tabla = new DataTable();
-            _tabla = _ds.Tables[0];
-
-            DataRow _row = _tabla.Rows[0];
-            herramienta = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
-
-            if (this.Existencia > herramienta.Existencia)
+            if (this.Existencia > cantidad)
             {
                 return true;
             }
             else
             {
-                this.ExistenciaActual = herramienta.Existencia;
                 return false;
             }
+        }
+
+        public void guardarComoTransaccion(List<_Herramientas> listadoHerramientas)
+        {
+
         }
     }
 }
