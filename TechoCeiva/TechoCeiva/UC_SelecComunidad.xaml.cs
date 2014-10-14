@@ -31,9 +31,16 @@ namespace TechoCeiva
             nEncuesta.Reiniciar = true;
             while (nEncuesta.Reiniciar)
             {
-                nEncuesta = new frmEncuesta();
-                nEncuesta.idComuni = Convert.ToInt32(cmbComunidad.SelectedValue.ToString());
-                nEncuesta.ShowDialog();
+                try
+                {
+                    nEncuesta = new frmEncuesta();
+                    nEncuesta.idComuni = Convert.ToInt32(cmbComunidad.SelectedValue.ToString());
+                    nEncuesta.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se ha seleccionado una comunidad", "Informacion", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
             }
         }
 

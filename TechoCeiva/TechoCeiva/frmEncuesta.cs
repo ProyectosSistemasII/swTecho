@@ -158,6 +158,7 @@ namespace TechoCeiva
                     DialogResult pregunta = MessageBox.Show("Desea Ingresar una nueva Encuesta?", "Pregunta!", MessageBoxButtons.YesNo);
                     if (pregunta == DialogResult.Yes)
                     {
+                        transaccion = false;
                         Reiniciar = true;
                         this.Close();
                         //tbpS11.Parent = null;
