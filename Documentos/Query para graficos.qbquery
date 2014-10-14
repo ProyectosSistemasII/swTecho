@@ -1,0 +1,1 @@
+﻿SELECT S8_serv.AccesoAgua,Encuestas.idEncuestas FROM S8_serv   inner join Encuestas on Comunidad_idComunidad = @parametro(idComunidad) group by AccesoAgua
