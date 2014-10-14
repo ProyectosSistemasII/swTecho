@@ -52,7 +52,8 @@
             this.lblAldea = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbInfo = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtHoraF = new System.Windows.Forms.MaskedTextBox();
+            this.txtHoraI = new System.Windows.Forms.MaskedTextBox();
             this.cmbEncuestador2 = new System.Windows.Forms.ComboBox();
             this.cmbEncuestador1 = new System.Windows.Forms.ComboBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -61,8 +62,6 @@
             this.lblEstadoEn = new System.Windows.Forms.Label();
             this.txtNombreEn = new System.Windows.Forms.TextBox();
             this.lblNombreEn = new System.Windows.Forms.Label();
-            this.txtHoraF = new System.Windows.Forms.TextBox();
-            this.txtHoraI = new System.Windows.Forms.TextBox();
             this.lblHoraF = new System.Windows.Forms.Label();
             this.lblHoraI = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -874,7 +873,7 @@
             this.gbContacto.Location = new System.Drawing.Point(475, 227);
             this.gbContacto.Name = "gbContacto";
             this.gbContacto.Size = new System.Drawing.Size(462, 232);
-            this.gbContacto.TabIndex = 4;
+            this.gbContacto.TabIndex = 10;
             this.gbContacto.TabStop = false;
             this.gbContacto.Text = "CONTACTO DEL HOGAR";
             // 
@@ -883,14 +882,14 @@
             this.txtDireccion.Location = new System.Drawing.Point(151, 82);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(291, 20);
-            this.txtDireccion.TabIndex = 39;
+            this.txtDireccion.TabIndex = 13;
             // 
             // txtTelefono2
             // 
             this.txtTelefono2.Location = new System.Drawing.Point(317, 52);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(128, 20);
-            this.txtTelefono2.TabIndex = 38;
+            this.txtTelefono2.TabIndex = 12;
             // 
             // label25
             // 
@@ -906,14 +905,14 @@
             this.txtTelefono1.Location = new System.Drawing.Point(151, 52);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(131, 20);
-            this.txtTelefono1.TabIndex = 35;
+            this.txtTelefono1.TabIndex = 11;
             // 
             // txtJefe
             // 
             this.txtJefe.Location = new System.Drawing.Point(151, 22);
             this.txtJefe.Name = "txtJefe";
             this.txtJefe.Size = new System.Drawing.Size(291, 20);
-            this.txtJefe.TabIndex = 34;
+            this.txtJefe.TabIndex = 10;
             // 
             // txtEspecificaciones
             // 
@@ -921,7 +920,7 @@
             this.txtEspecificaciones.Multiline = true;
             this.txtEspecificaciones.Name = "txtEspecificaciones";
             this.txtEspecificaciones.Size = new System.Drawing.Size(421, 83);
-            this.txtEspecificaciones.TabIndex = 30;
+            this.txtEspecificaciones.TabIndex = 14;
             // 
             // lblEspecificaciones
             // 
@@ -971,25 +970,27 @@
             this.gbUbicacion.Location = new System.Drawing.Point(11, 227);
             this.gbUbicacion.Name = "gbUbicacion";
             this.gbUbicacion.Size = new System.Drawing.Size(462, 232);
-            this.gbUbicacion.TabIndex = 3;
+            this.gbUbicacion.TabIndex = 8;
             this.gbUbicacion.TabStop = false;
             this.gbUbicacion.Text = "UBICACIÓN GEOGRÁFICA DE LA VIVIENDA";
             // 
             // txtYGPS
             // 
+            this.txtYGPS.Enabled = false;
             this.txtYGPS.Location = new System.Drawing.Point(328, 158);
             this.txtYGPS.Name = "txtYGPS";
             this.txtYGPS.Size = new System.Drawing.Size(80, 20);
-            this.txtYGPS.TabIndex = 37;
+            this.txtYGPS.TabIndex = 20;
             this.txtYGPS.Text = "0";
             this.txtYGPS.Visible = false;
             // 
             // txtXGPS
             // 
+            this.txtXGPS.Enabled = false;
             this.txtXGPS.Location = new System.Drawing.Point(242, 158);
             this.txtXGPS.Name = "txtXGPS";
             this.txtXGPS.Size = new System.Drawing.Size(80, 20);
-            this.txtXGPS.TabIndex = 36;
+            this.txtXGPS.TabIndex = 20;
             this.txtXGPS.Text = "0";
             this.txtXGPS.Visible = false;
             // 
@@ -998,18 +999,19 @@
             this.txtCanton.Location = new System.Drawing.Point(225, 75);
             this.txtCanton.Name = "txtCanton";
             this.txtCanton.Size = new System.Drawing.Size(195, 20);
-            this.txtCanton.TabIndex = 34;
+            this.txtCanton.TabIndex = 9;
             // 
             // txtAldea
             // 
             this.txtAldea.Location = new System.Drawing.Point(225, 52);
             this.txtAldea.Name = "txtAldea";
             this.txtAldea.Size = new System.Drawing.Size(195, 20);
-            this.txtAldea.TabIndex = 33;
+            this.txtAldea.TabIndex = 8;
             // 
             // lblCoordenadas
             // 
             this.lblCoordenadas.AutoSize = true;
+            this.lblCoordenadas.Enabled = false;
             this.lblCoordenadas.Location = new System.Drawing.Point(30, 161);
             this.lblCoordenadas.Name = "lblCoordenadas";
             this.lblCoordenadas.Size = new System.Drawing.Size(136, 13);
@@ -1047,7 +1049,8 @@
             // 
             // gbInfo
             // 
-            this.gbInfo.Controls.Add(this.btnBuscar);
+            this.gbInfo.Controls.Add(this.txtHoraF);
+            this.gbInfo.Controls.Add(this.txtHoraI);
             this.gbInfo.Controls.Add(this.cmbEncuestador2);
             this.gbInfo.Controls.Add(this.cmbEncuestador1);
             this.gbInfo.Controls.Add(this.txtObservaciones);
@@ -1056,8 +1059,6 @@
             this.gbInfo.Controls.Add(this.lblEstadoEn);
             this.gbInfo.Controls.Add(this.txtNombreEn);
             this.gbInfo.Controls.Add(this.lblNombreEn);
-            this.gbInfo.Controls.Add(this.txtHoraF);
-            this.gbInfo.Controls.Add(this.txtHoraI);
             this.gbInfo.Controls.Add(this.lblHoraF);
             this.gbInfo.Controls.Add(this.lblHoraI);
             this.gbInfo.Controls.Add(this.dtpFecha);
@@ -1066,18 +1067,27 @@
             this.gbInfo.Location = new System.Drawing.Point(11, 50);
             this.gbInfo.Name = "gbInfo";
             this.gbInfo.Size = new System.Drawing.Size(923, 171);
-            this.gbInfo.TabIndex = 2;
+            this.gbInfo.TabIndex = 6;
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "INFORMACIÓN GENERAL DEL ENCUESTAMIENTO";
             // 
-            // btnBuscar
+            // txtHoraF
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(494, 21);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(57, 45);
-            this.btnBuscar.TabIndex = 31;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.txtHoraF.Location = new System.Drawing.Point(388, 104);
+            this.txtHoraF.Mask = "00:00";
+            this.txtHoraF.Name = "txtHoraF";
+            this.txtHoraF.Size = new System.Drawing.Size(100, 20);
+            this.txtHoraF.TabIndex = 10;
+            this.txtHoraF.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtHoraI
+            // 
+            this.txtHoraI.Location = new System.Drawing.Point(188, 104);
+            this.txtHoraI.Mask = "00:00";
+            this.txtHoraI.Name = "txtHoraI";
+            this.txtHoraI.Size = new System.Drawing.Size(100, 20);
+            this.txtHoraI.TabIndex = 9;
+            this.txtHoraI.ValidatingType = typeof(System.DateTime);
             // 
             // cmbEncuestador2
             // 
@@ -1086,7 +1096,7 @@
             this.cmbEncuestador2.Location = new System.Drawing.Point(186, 46);
             this.cmbEncuestador2.Name = "cmbEncuestador2";
             this.cmbEncuestador2.Size = new System.Drawing.Size(302, 21);
-            this.cmbEncuestador2.TabIndex = 30;
+            this.cmbEncuestador2.TabIndex = 7;
             this.cmbEncuestador2.ValueMember = "idVoluntarios";
             // 
             // cmbEncuestador1
@@ -1097,7 +1107,7 @@
             this.cmbEncuestador1.Location = new System.Drawing.Point(186, 19);
             this.cmbEncuestador1.Name = "cmbEncuestador1";
             this.cmbEncuestador1.Size = new System.Drawing.Size(302, 21);
-            this.cmbEncuestador1.TabIndex = 29;
+            this.cmbEncuestador1.TabIndex = 6;
             this.cmbEncuestador1.ValueMember = "idVoluntarios";
             // 
             // txtObservaciones
@@ -1106,7 +1116,7 @@
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(289, 65);
-            this.txtObservaciones.TabIndex = 28;
+            this.txtObservaciones.TabIndex = 13;
             // 
             // lblObservaciones
             // 
@@ -1131,7 +1141,7 @@
             this.cmbEstadoEn.Location = new System.Drawing.Point(576, 34);
             this.cmbEstadoEn.Name = "cmbEstadoEn";
             this.cmbEstadoEn.Size = new System.Drawing.Size(289, 21);
-            this.cmbEstadoEn.TabIndex = 26;
+            this.cmbEstadoEn.TabIndex = 12;
             // 
             // lblEstadoEn
             // 
@@ -1147,7 +1157,7 @@
             this.txtNombreEn.Location = new System.Drawing.Point(188, 132);
             this.txtNombreEn.Name = "txtNombreEn";
             this.txtNombreEn.Size = new System.Drawing.Size(300, 20);
-            this.txtNombreEn.TabIndex = 24;
+            this.txtNombreEn.TabIndex = 11;
             // 
             // lblNombreEn
             // 
@@ -1157,20 +1167,6 @@
             this.lblNombreEn.Size = new System.Drawing.Size(170, 13);
             this.lblNombreEn.TabIndex = 23;
             this.lblNombreEn.Text = "7. NOMBRE DEL ENCUESTADO:";
-            // 
-            // txtHoraF
-            // 
-            this.txtHoraF.Location = new System.Drawing.Point(386, 102);
-            this.txtHoraF.Name = "txtHoraF";
-            this.txtHoraF.Size = new System.Drawing.Size(102, 20);
-            this.txtHoraF.TabIndex = 22;
-            // 
-            // txtHoraI
-            // 
-            this.txtHoraI.Location = new System.Drawing.Point(188, 106);
-            this.txtHoraI.Name = "txtHoraI";
-            this.txtHoraI.Size = new System.Drawing.Size(102, 20);
-            this.txtHoraI.TabIndex = 21;
             // 
             // lblHoraF
             // 
@@ -1196,7 +1192,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(188, 80);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(102, 20);
-            this.dtpFecha.TabIndex = 18;
+            this.dtpFecha.TabIndex = 8;
             // 
             // lblFecha
             // 
@@ -1221,7 +1217,7 @@
             this.txtCodigoHogar.Location = new System.Drawing.Point(749, 19);
             this.txtCodigoHogar.Name = "txtCodigoHogar";
             this.txtCodigoHogar.Size = new System.Drawing.Size(168, 20);
-            this.txtCodigoHogar.TabIndex = 1;
+            this.txtCodigoHogar.TabIndex = 2;
             // 
             // lblCodigoHogar
             // 
@@ -2106,7 +2102,7 @@
             this.groupBox16.Location = new System.Drawing.Point(975, 177);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(300, 242);
-            this.groupBox16.TabIndex = 10;
+            this.groupBox16.TabIndex = 22;
             this.groupBox16.TabStop = false;
             // 
             // lblS6_11_FaltaDinero
@@ -2132,10 +2128,10 @@
             "Apoyos del Estado",
             "Otro (especifique)",
             "NS/NR"});
-            this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(21, 80);
+            this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(21, 67);
             this.chlbS6_11_CubrirFaltaDinero.Name = "chlbS6_11_CubrirFaltaDinero";
-            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(249, 124);
-            this.chlbS6_11_CubrirFaltaDinero.TabIndex = 10;
+            this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(249, 139);
+            this.chlbS6_11_CubrirFaltaDinero.TabIndex = 2;
             // 
             // lblS6_11_Especificar
             // 
@@ -2152,7 +2148,7 @@
             this.txtS6_11_EspecificarFaltaDinero.Multiline = true;
             this.txtS6_11_EspecificarFaltaDinero.Name = "txtS6_11_EspecificarFaltaDinero";
             this.txtS6_11_EspecificarFaltaDinero.Size = new System.Drawing.Size(178, 23);
-            this.txtS6_11_EspecificarFaltaDinero.TabIndex = 2;
+            this.txtS6_11_EspecificarFaltaDinero.TabIndex = 4;
             // 
             // groupBox15
             // 
@@ -2162,7 +2158,7 @@
             this.groupBox15.Location = new System.Drawing.Point(975, 29);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(300, 142);
-            this.groupBox15.TabIndex = 9;
+            this.groupBox15.TabIndex = 20;
             this.groupBox15.TabStop = false;
             // 
             // lblS6_10_Gastos
@@ -2201,7 +2197,7 @@
             this.groupBox14.Location = new System.Drawing.Point(669, 279);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(300, 119);
-            this.groupBox14.TabIndex = 8;
+            this.groupBox14.TabIndex = 18;
             this.groupBox14.TabStop = false;
             // 
             // lblS6_9_CantidadAhorro
@@ -2238,7 +2234,7 @@
             this.groupBox13.Location = new System.Drawing.Point(669, 154);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(300, 119);
-            this.groupBox13.TabIndex = 7;
+            this.groupBox13.TabIndex = 16;
             this.groupBox13.TabStop = false;
             // 
             // lblS6_8_Ahorro
@@ -2270,7 +2266,7 @@
             this.groupBox12.Location = new System.Drawing.Point(669, 29);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(300, 119);
-            this.groupBox12.TabIndex = 6;
+            this.groupBox12.TabIndex = 14;
             this.groupBox12.TabStop = false;
             // 
             // lblS6_7_CubrirGastos
@@ -2304,7 +2300,7 @@
             this.groupBox11.Location = new System.Drawing.Point(363, 279);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(300, 119);
-            this.groupBox11.TabIndex = 5;
+            this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
             // 
             // lblS6_6_IngresoTotal
@@ -2341,7 +2337,7 @@
             this.groupBox10.Location = new System.Drawing.Point(363, 154);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(300, 119);
-            this.groupBox10.TabIndex = 4;
+            this.groupBox10.TabIndex = 10;
             this.groupBox10.TabStop = false;
             // 
             // lblS6_5_TiempoDeuda
@@ -2376,7 +2372,7 @@
             this.groupBox9.Location = new System.Drawing.Point(363, 29);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(300, 119);
-            this.groupBox9.TabIndex = 3;
+            this.groupBox9.TabIndex = 8;
             this.groupBox9.TabStop = false;
             // 
             // lblS6_4_CantiDeudas
@@ -2421,7 +2417,7 @@
             this.groupBox8.Location = new System.Drawing.Point(57, 279);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(300, 119);
-            this.groupBox8.TabIndex = 2;
+            this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             // 
             // lblS6_3_Deuda
@@ -2443,7 +2439,7 @@
             this.cbxS6_3_Deuda.Location = new System.Drawing.Point(21, 73);
             this.cbxS6_3_Deuda.Name = "cbxS6_3_Deuda";
             this.cbxS6_3_Deuda.Size = new System.Drawing.Size(249, 21);
-            this.cbxS6_3_Deuda.TabIndex = 3;
+            this.cbxS6_3_Deuda.TabIndex = 2;
             // 
             // groupBox7
             // 
@@ -2454,7 +2450,7 @@
             this.groupBox7.Location = new System.Drawing.Point(57, 154);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(300, 119);
-            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             // 
             // lblS6_2_IngresosRemesas
@@ -2477,7 +2473,7 @@
             this.cbxS6_2_IngRemesas.Location = new System.Drawing.Point(21, 73);
             this.cbxS6_2_IngRemesas.Name = "cbxS6_2_IngRemesas";
             this.cbxS6_2_IngRemesas.Size = new System.Drawing.Size(125, 21);
-            this.cbxS6_2_IngRemesas.TabIndex = 3;
+            this.cbxS6_2_IngRemesas.TabIndex = 4;
             this.cbxS6_2_IngRemesas.SelectedIndexChanged += new System.EventHandler(this.cbxS6_2_IngRemesas_SelectedIndexChanged_1);
             // 
             // txtS6_2_CantidadRemesas
@@ -2487,7 +2483,7 @@
             this.txtS6_2_CantidadRemesas.Multiline = true;
             this.txtS6_2_CantidadRemesas.Name = "txtS6_2_CantidadRemesas";
             this.txtS6_2_CantidadRemesas.Size = new System.Drawing.Size(87, 23);
-            this.txtS6_2_CantidadRemesas.TabIndex = 2;
+            this.txtS6_2_CantidadRemesas.TabIndex = 5;
             // 
             // lblS6_2_QRemesas
             // 
@@ -2508,7 +2504,7 @@
             this.groupBox6.Location = new System.Drawing.Point(57, 29);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(300, 119);
-            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             // 
             // lblS6_1_IngresosEstado
@@ -2531,7 +2527,7 @@
             this.cbxS6_1_IngEstado.Location = new System.Drawing.Point(21, 73);
             this.cbxS6_1_IngEstado.Name = "cbxS6_1_IngEstado";
             this.cbxS6_1_IngEstado.Size = new System.Drawing.Size(125, 21);
-            this.cbxS6_1_IngEstado.TabIndex = 3;
+            this.cbxS6_1_IngEstado.TabIndex = 2;
             this.cbxS6_1_IngEstado.SelectedIndexChanged += new System.EventHandler(this.cbxS6_1_IngEstado_SelectedIndexChanged_1);
             // 
             // txtS6_1_CantidadIngEstado
@@ -2541,7 +2537,7 @@
             this.txtS6_1_CantidadIngEstado.Multiline = true;
             this.txtS6_1_CantidadIngEstado.Name = "txtS6_1_CantidadIngEstado";
             this.txtS6_1_CantidadIngEstado.Size = new System.Drawing.Size(87, 23);
-            this.txtS6_1_CantidadIngEstado.TabIndex = 2;
+            this.txtS6_1_CantidadIngEstado.TabIndex = 3;
             // 
             // lblS6_1_QEstado
             // 
@@ -2615,7 +2611,7 @@
             this.groupBox24.Location = new System.Drawing.Point(1005, 19);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(307, 332);
-            this.groupBox24.TabIndex = 8;
+            this.groupBox24.TabIndex = 16;
             this.groupBox24.TabStop = false;
             // 
             // lblS7_8_MaterialPiso
@@ -2937,7 +2933,7 @@
             this.groupBox25.Location = new System.Drawing.Point(637, 10);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(362, 341);
-            this.groupBox25.TabIndex = 7;
+            this.groupBox25.TabIndex = 14;
             this.groupBox25.TabStop = false;
             // 
             // lblS7_7_MaterialParedes
@@ -3383,7 +3379,7 @@
             this.groupBox23.Location = new System.Drawing.Point(294, 204);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(336, 284);
-            this.groupBox23.TabIndex = 6;
+            this.groupBox23.TabIndex = 12;
             this.groupBox23.TabStop = false;
             // 
             // lblS7_6_MaterialTecho
@@ -3829,7 +3825,7 @@
             this.groupBox22.Location = new System.Drawing.Point(294, 8);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(336, 192);
-            this.groupBox22.TabIndex = 5;
+            this.groupBox22.TabIndex = 10;
             this.groupBox22.TabStop = false;
             // 
             // lblS7_5_Problema
@@ -3849,7 +3845,7 @@
             this.txtS7_5_ProblemaC.Multiline = true;
             this.txtS7_5_ProblemaC.Name = "txtS7_5_ProblemaC";
             this.txtS7_5_ProblemaC.Size = new System.Drawing.Size(227, 23);
-            this.txtS7_5_ProblemaC.TabIndex = 7;
+            this.txtS7_5_ProblemaC.TabIndex = 5;
             // 
             // lblS7_5_C
             // 
@@ -3868,7 +3864,7 @@
             this.txtS7_5_ProblemaB.Multiline = true;
             this.txtS7_5_ProblemaB.Name = "txtS7_5_ProblemaB";
             this.txtS7_5_ProblemaB.Size = new System.Drawing.Size(227, 23);
-            this.txtS7_5_ProblemaB.TabIndex = 5;
+            this.txtS7_5_ProblemaB.TabIndex = 4;
             // 
             // lblS7_5_B
             // 
@@ -3890,7 +3886,7 @@
             this.cbsS7_5_ProbViv.Location = new System.Drawing.Point(55, 67);
             this.cbsS7_5_ProbViv.Name = "cbsS7_5_ProbViv";
             this.cbsS7_5_ProbViv.Size = new System.Drawing.Size(225, 21);
-            this.cbsS7_5_ProbViv.TabIndex = 3;
+            this.cbsS7_5_ProbViv.TabIndex = 2;
             this.cbsS7_5_ProbViv.SelectedIndexChanged += new System.EventHandler(this.cbsS7_5_ProbViv_SelectedIndexChanged_1);
             // 
             // txtS7_5_ProblemaA
@@ -3900,7 +3896,7 @@
             this.txtS7_5_ProblemaA.Multiline = true;
             this.txtS7_5_ProblemaA.Name = "txtS7_5_ProblemaA";
             this.txtS7_5_ProblemaA.Size = new System.Drawing.Size(227, 23);
-            this.txtS7_5_ProblemaA.TabIndex = 2;
+            this.txtS7_5_ProblemaA.TabIndex = 3;
             // 
             // lblS7_5_A
             // 
@@ -3919,7 +3915,7 @@
             this.groupBox21.Location = new System.Drawing.Point(18, 333);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(270, 116);
-            this.groupBox21.TabIndex = 4;
+            this.groupBox21.TabIndex = 8;
             this.groupBox21.TabStop = false;
             // 
             // lblS7_4_Camas
@@ -3946,7 +3942,7 @@
             this.groupBox20.Location = new System.Drawing.Point(18, 221);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(270, 106);
-            this.groupBox20.TabIndex = 3;
+            this.groupBox20.TabIndex = 6;
             this.groupBox20.TabStop = false;
             // 
             // lblS7_3_Dormitorio
@@ -3973,7 +3969,7 @@
             this.groupBox19.Location = new System.Drawing.Point(18, 120);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(270, 95);
-            this.groupBox19.TabIndex = 2;
+            this.groupBox19.TabIndex = 4;
             this.groupBox19.TabStop = false;
             // 
             // lblS7_2_Cuartos
@@ -4002,7 +3998,7 @@
             this.groupBox18.Location = new System.Drawing.Point(18, 6);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(270, 108);
-            this.groupBox18.TabIndex = 1;
+            this.groupBox18.TabIndex = 2;
             this.groupBox18.TabStop = false;
             // 
             // lblS7_1_Dimensiones
@@ -4020,7 +4016,7 @@
             this.txtS7_1_AnchoViv.Multiline = true;
             this.txtS7_1_AnchoViv.Name = "txtS7_1_AnchoViv";
             this.txtS7_1_AnchoViv.Size = new System.Drawing.Size(87, 23);
-            this.txtS7_1_AnchoViv.TabIndex = 3;
+            this.txtS7_1_AnchoViv.TabIndex = 2;
             // 
             // txtS7_1_LargoViv
             // 
@@ -4028,7 +4024,7 @@
             this.txtS7_1_LargoViv.Multiline = true;
             this.txtS7_1_LargoViv.Name = "txtS7_1_LargoViv";
             this.txtS7_1_LargoViv.Size = new System.Drawing.Size(87, 23);
-            this.txtS7_1_LargoViv.TabIndex = 2;
+            this.txtS7_1_LargoViv.TabIndex = 3;
             // 
             // lblS7_1_X
             // 
@@ -4631,10 +4627,10 @@
             // 
             this.cklS8_S807.FormattingEnabled = true;
             this.cklS8_S807.Items.AddRange(new object[] {
-            "01. No cuenta con ningun otro\t\t\t",
-            "02. Cable de televisión\t\t\t",
-            "03. Teléfono residencial\t\t\t",
-            "04. Internet\t\t\t",
+            "No cuenta con ningun otro\t\t\t",
+            "Cable de televisión\t\t\t",
+            "Teléfono residencial\t\t\t",
+            "Internet\t\t\t",
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(19, 41);
             this.cklS8_S807.Name = "cklS8_S807";
@@ -6341,15 +6337,15 @@
             // 
             this.cklS1007_Com.FormattingEnabled = true;
             this.cklS1007_Com.Items.AddRange(new object[] {
-            "01. No le interesa",
-            "02. Falta de información",
-            "03. Falta de tiempo",
-            "04. Compromisos familiares",
-            "05. Otro (especificar)\t",
+            "No le interesa",
+            "Falta de información",
+            "Falta de tiempo",
+            "Compromisos familiares",
+            "Otro (especificar)\t",
             "NS/NR"});
             this.cklS1007_Com.Location = new System.Drawing.Point(20, 25);
             this.cklS1007_Com.Name = "cklS1007_Com";
-            this.cklS1007_Com.Size = new System.Drawing.Size(250, 79);
+            this.cklS1007_Com.Size = new System.Drawing.Size(250, 94);
             this.cklS1007_Com.TabIndex = 5;
             this.cklS1007_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1007_Com_ItemCheck);
             // 
@@ -6403,18 +6399,18 @@
             // 
             this.cklS1006_Com.FormattingEnabled = true;
             this.cklS1006_Com.Items.AddRange(new object[] {
-            "01. Grupo político",
-            "02.  Grupo o equipo deportivo\t",
-            "03. Grupo religioso o de Iglesia",
-            "04. Grupo de jóvenes",
-            "05. Grupo de mujeres",
-            "06. Organización Comunitaria (COCODE, CUB, etc.)",
-            "07. Mesa de Trabajo de TECHO",
-            "08. Otra (especificar)",
+            "Grupo político",
+            "Grupo o equipo deportivo\t",
+            "Grupo religioso o de Iglesia",
+            "Grupo de jóvenes",
+            "Grupo de mujeres",
+            "Organización Comunitaria (COCODE, CUB, etc.)",
+            "Mesa de Trabajo de TECHO",
+            "Otra (especificar)",
             "NS/NR"});
             this.cklS1006_Com.Location = new System.Drawing.Point(19, 28);
             this.cklS1006_Com.Name = "cklS1006_Com";
-            this.cklS1006_Com.Size = new System.Drawing.Size(250, 94);
+            this.cklS1006_Com.Size = new System.Drawing.Size(250, 139);
             this.cklS1006_Com.TabIndex = 9;
             this.cklS1006_Com.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cklS1006_Com_ItemCheck);
             // 
@@ -6701,7 +6697,7 @@
             this.groupBox98.Controls.Add(this.groupBox109);
             this.groupBox98.Location = new System.Drawing.Point(8, 8);
             this.groupBox98.Name = "groupBox98";
-            this.groupBox98.Size = new System.Drawing.Size(1301, 479);
+            this.groupBox98.Size = new System.Drawing.Size(1301, 487);
             this.groupBox98.TabIndex = 5;
             this.groupBox98.TabStop = false;
             this.groupBox98.Text = "...CONTINUACIÓN DE COMUNIDAD";
@@ -7165,14 +7161,14 @@
             this.groupBox101.Controls.Add(this.label138);
             this.groupBox101.Location = new System.Drawing.Point(9, 252);
             this.groupBox101.Name = "groupBox101";
-            this.groupBox101.Size = new System.Drawing.Size(300, 203);
+            this.groupBox101.Size = new System.Drawing.Size(300, 216);
             this.groupBox101.TabIndex = 4;
             this.groupBox101.TabStop = false;
             // 
             // txtS1014_Especificar
             // 
             this.txtS1014_Especificar.Enabled = false;
-            this.txtS1014_Especificar.Location = new System.Drawing.Point(31, 153);
+            this.txtS1014_Especificar.Location = new System.Drawing.Point(31, 186);
             this.txtS1014_Especificar.Multiline = true;
             this.txtS1014_Especificar.Name = "txtS1014_Especificar";
             this.txtS1014_Especificar.Size = new System.Drawing.Size(225, 20);
@@ -7182,18 +7178,18 @@
             // 
             this.cklS1014_Com.FormattingEnabled = true;
             this.cklS1014_Com.Items.AddRange(new object[] {
-            "01. Niños(as)",
-            "02. Jóvenes",
-            "0.3 Mujeres",
-            "04. Tercera edad",
-            "05. Discapacitados",
-            "06. Grupos étnicos",
-            "07. No hay grupos vulnerables",
-            "08. Otro (especificar)\t\t",
+            "Niños(as)",
+            "Jóvenes",
+            "Mujeres",
+            "Tercera edad",
+            "Discapacitados",
+            "Grupos étnicos",
+            "No hay grupos vulnerables",
+            "Otro (especificar)\t\t",
             "NS/NR"});
             this.cklS1014_Com.Location = new System.Drawing.Point(21, 38);
             this.cklS1014_Com.Name = "cklS1014_Com";
-            this.cklS1014_Com.Size = new System.Drawing.Size(250, 64);
+            this.cklS1014_Com.Size = new System.Drawing.Size(250, 139);
             this.cklS1014_Com.TabIndex = 4;
             this.cklS1014_Com.SelectedIndexChanged += new System.EventHandler(this.cklS1014_Com_SelectedIndexChanged);
             // 
@@ -7458,7 +7454,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1005, 620);
+            this.ClientSize = new System.Drawing.Size(1005, 637);
             this.Controls.Add(this.tbcDatos);
             this.Name = "frmEncuesta";
             this.Text = "frmEncuesta";
@@ -7743,8 +7739,6 @@
         private System.Windows.Forms.GroupBox gbUbicacion;
         private System.Windows.Forms.Label lblEncuestadores;
         private System.Windows.Forms.Label lblNombreEn;
-        private System.Windows.Forms.TextBox txtHoraF;
-        private System.Windows.Forms.TextBox txtHoraI;
         private System.Windows.Forms.Label lblHoraF;
         private System.Windows.Forms.Label lblHoraI;
         private System.Windows.Forms.DateTimePicker dtpFecha;
@@ -7773,7 +7767,6 @@
         private System.Windows.Forms.TextBox txtYGPS;
         private System.Windows.Forms.ComboBox cmbEncuestador2;
         private System.Windows.Forms.ComboBox cmbEncuestador1;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox gbS5;
         private System.Windows.Forms.GroupBox gbS1;
@@ -8357,6 +8350,8 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dgvCmbDepto;
         private System.Windows.Forms.DataGridViewComboBoxColumn dgvCmbMuni;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.MaskedTextBox txtHoraF;
+        private System.Windows.Forms.MaskedTextBox txtHoraI;
 
 
     }
