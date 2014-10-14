@@ -58,6 +58,7 @@ namespace TechoCeiva
             {
                 MessageBox.Show(nInsumo._Obtener_Error());
             }
+            fillDataGrid();
         }
 
         private void fillComboBox()

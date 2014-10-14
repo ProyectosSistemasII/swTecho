@@ -26,7 +26,7 @@ CREATE  TABLE IF NOT EXISTS `Alimentos` (
   `Nombre` VARCHAR(100) NOT NULL ,
   `Existencia` INT NOT NULL ,
   `Rango` VARCHAR(100) NOT NULL ,
-  `AnioCaducidad` DATE NOT NULL ,
+  `AnioCaducidad` INT NOT NULL ,
   `Activo` TINYINT(1) NULL DEFAULT 1 ,
   `Presentacion_idPresentacion` INT NOT NULL ,
   PRIMARY KEY (`idAlimentos`) ,
