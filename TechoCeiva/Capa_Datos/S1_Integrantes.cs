@@ -60,7 +60,8 @@ namespace Capa_Datos
 
                 try
                 {
-                    comando.Connection.Open();
+
+                   // comando.Connection.Open();
                     comando.ExecuteNonQuery();
                     //comando.Connection.Close();
                 }

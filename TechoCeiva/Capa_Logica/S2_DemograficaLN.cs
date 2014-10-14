@@ -18,12 +18,12 @@ namespace Capa_Logica
             this.OtroFamiliar = "";
             this.Nacionalidad = "";
             this.Encuestas_idEncuestas = 0;
-            this.Departamento_idDepartamento = 0;
-            this.Municipio_idMunicipio = 0;
+            this.Departamento = "";
+            this.Municipio = "";
         }
 
         public S2_DemograficaLN(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar,
-            string Nacionalidad, int Encuestas_idEncuestas, int Departamento_idDepartamento, int Municipio_idMunicipio)
+            string Nacionalidad, int Encuestas_idEncuestas, string Departamento, string Municipio)
         {
             this.CodigoS2 = CodigoS2;
             this.Nucleo = Nucleo;
@@ -33,15 +33,15 @@ namespace Capa_Logica
             this.OtroFamiliar = OtroFamiliar;
             this.Nacionalidad = Nacionalidad;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
-            this.Departamento_idDepartamento = Departamento_idDepartamento;
-            this.Municipio_idMunicipio = Municipio_idMunicipio;
+            this.Departamento = Departamento;
+            this.Municipio = Municipio;
             this.errores = new List<Error>();
         }
 
         public Boolean Insertar_EncuS2()
         {
             Boolean correcto = true;
-            S2_Demografica demografica = new S2_Demografica(CodigoS2, Nucleo, DPICedula, EstadoCivil, Parentesco, OtroFamiliar, Nacionalidad, Encuestas_idEncuestas, Departamento_idDepartamento, Municipio_idMunicipio);
+            S2_Demografica demografica = new S2_Demografica(CodigoS2, Nucleo, DPICedula, EstadoCivil, Parentesco, OtroFamiliar, Nacionalidad, Encuestas_idEncuestas, Departamento, Municipio);
             demografica.InsertarS2();
             if (errores.Count > 0)
             {
@@ -51,7 +51,7 @@ namespace Capa_Logica
         }
 
         public Boolean validacion(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar,
-            string Nacionalidad, int Encuestas_idEncuestas, int Departamento_idDepartamento, int Municipio_idMunicipio, int filas)
+            string Nacionalidad, int Encuestas_idEncuestas, string Departamento, string Municipio, int filas)
         {
             this.CodigoS2 = CodigoS2;
             this.Nucleo = Nucleo;
@@ -61,8 +61,8 @@ namespace Capa_Logica
             this.OtroFamiliar = OtroFamiliar;
             this.Nacionalidad = Nacionalidad;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
-            this.Departamento_idDepartamento = Departamento_idDepartamento;
-            this.Municipio_idMunicipio = Municipio_idMunicipio;
+            this.Departamento = Departamento;
+            this.Municipio= Municipio;
             this.errores = new List<Error>();
             this.verificarDatos(filas + 1);
             if (errores.Count > 0)

@@ -17,8 +17,8 @@ namespace Capa_Datos
         public string OtroFamiliar { get; set; }
         public string Nacionalidad { get; set; }
         public int Encuestas_idEncuestas { get; set; }
-        public int Departamento_idDepartamento { get; set; }
-        public int Municipio_idMunicipio { get; set; }
+        public string Departamento { get; set; }
+        public string Municipio { get; set; }
 
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
@@ -34,11 +34,11 @@ namespace Capa_Datos
             this.OtroFamiliar = "";
             this.Nacionalidad = "";
             this.Encuestas_idEncuestas = 0;
-            this.Departamento_idDepartamento = 0;
-            this.Municipio_idMunicipio = 0;
+            this.Departamento = "";
+            this.Municipio = "";
         }
 
-        public S2_Demografica(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar, string Nacionalidad, int Encuestas_idEncuestas, int Departamento_idDepartamento, int Municipio_idMunicipio)
+        public S2_Demografica(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar, string Nacionalidad, int Encuestas_idEncuestas, string Departamento, string Municipio)
         {
             this.CodigoS2 = CodigoS2;
             this.Nucleo = Nucleo;
@@ -48,8 +48,8 @@ namespace Capa_Datos
             this.OtroFamiliar = OtroFamiliar;
             this.Nacionalidad = Nacionalidad;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
-            this.Departamento_idDepartamento = Departamento_idDepartamento;
-            this.Municipio_idMunicipio = Municipio_idMunicipio;
+            this.Departamento = Departamento;
+            this.Municipio = Municipio;
             this.errores = new List<Error>();
         }
 
@@ -57,7 +57,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string consulta = "INSERT INTO S2_Dem(CodigoS2, Nucleo, DPICedula, EstadoCivil, Parentesco, OtroFamiliar, Nacionalidad, Encuestas_idEncuestas, Departamento_idDepartamento, Municipio_idMunicipio) VALUES (@CodigoS2, @Nucleo, @DPICedula, @EstadoCivil, @Parentesco, @OtroFamiliar, @Nacionalidad, @Encuestas_idEncuestas, @Departamento_idDepartamento, @Municipio_idMunicipio)";
+                string consulta = "INSERT INTO S2_Dem(CodigoS2, Nucleo, DPICedula, EstadoCivil, Parentesco, OtroFamiliar, Nacionalidad, Encuestas_idEncuestas, Departamento, Municipio) VALUES (@CodigoS2, @Nucleo, @DPICedula, @EstadoCivil, @Parentesco, @OtroFamiliar, @Nacionalidad, @Encuestas_idEncuestas, @Departamento, @Municipio)";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@CodigoS2", this.CodigoS2);
                 comando.Parameters.AddWithValue("@Nucleo", this.Nucleo);
@@ -67,8 +67,8 @@ namespace Capa_Datos
                 comando.Parameters.AddWithValue("@OtroFamiliar", this.OtroFamiliar);
                 comando.Parameters.AddWithValue("@Nacionalidad", this.Nacionalidad);
                 comando.Parameters.AddWithValue("@Encuestas_idEncuestas", this.Encuestas_idEncuestas);
-                comando.Parameters.AddWithValue("@Departamento_idDepartamento", this.Departamento_idDepartamento);
-                comando.Parameters.AddWithValue("@Municipio_idMunicipio", this.Municipio_idMunicipio);
+                comando.Parameters.AddWithValue("@Departamento", this.Departamento);
+                comando.Parameters.AddWithValue("@Municipio", this.Municipio);
 
                 try
                 {

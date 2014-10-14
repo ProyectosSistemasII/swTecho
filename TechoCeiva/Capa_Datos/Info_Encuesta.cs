@@ -32,7 +32,7 @@ namespace Capa_Datos
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
-
+       
         public Info_Encuesta()
         {
             this.CodigoHogar = "";
@@ -115,12 +115,12 @@ namespace Capa_Datos
 
                 try
                 {
-                 comando.Connection.Open();
                     comando.ExecuteNonQuery();
-                    comando.Connection.Close();
+                    //comando.Connection.Close();
                 }
                 catch (MySqlException ex)
                 {
+                    comando.Connection.Close();
                     Error error = new Error(ex.Message + "   " + ex.Number, 2);
                     errores.Add(error);
                 }
@@ -134,9 +134,9 @@ namespace Capa_Datos
             MySqlCommand comando = new MySqlCommand(consulta, conex);
             try
             {
-                comando.Connection.Open();
+                //comando.Connection.Open();
                 id = (Int32)comando.ExecuteScalar();
-                comando.Connection.Close();
+                //comando.Connection.Close();
             }
             catch (MySqlException ex)
             {

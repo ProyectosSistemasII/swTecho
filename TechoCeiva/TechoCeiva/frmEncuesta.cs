@@ -12,7 +12,8 @@ using System.Windows.Forms;
 namespace TechoCeiva
 {
     public partial class frmEncuesta : Form
-    {   
+    {
+        public Boolean Reiniciar = false;
         // variables para que no deje error los combobox cuando estan vacios cuando la pregunta
         //salta o otras dejan algunas vacios Seccion 9 
         String cbxS9_Propiotxt = "";
@@ -152,14 +153,21 @@ namespace TechoCeiva
             Boolean correcto = S11.Ingresar_S11(caso);
             if (correcto)
             {
-                DialogResult pregunta = MessageBox.Show("Desea Ingresar una nueva Encuesta?", "Pregunta!", MessageBoxButtons.YesNo);
-                if (pregunta == DialogResult.Yes)
+                if (!tran.TerminarTransaccion())
                 {
-                    tbpS11.Parent = null;
-                    tbpInfo.Parent = tbcDatos;
+                    DialogResult pregunta = MessageBox.Show("Desea Ingresar una nueva Encuesta?", "Pregunta!", MessageBoxButtons.YesNo);
+                    if (pregunta == DialogResult.Yes)
+                    {
+                        Reiniciar = true;
+                        this.Close();
+                        //tbpS11.Parent = null;
+                        //tbpInfo.Parent = tbcDatos;
+                    }
+                    else if (pregunta == DialogResult.No)
+                        this.Close();
                 }
-                else if (pregunta == DialogResult.No)
-                    this.Close();
+                else
+                    MessageBox.Show("No se ha podido ingresar encuesta, intente de nuevo", "Advertencia", MessageBoxButtons.OK);
             }
             else
             {
@@ -1513,10 +1521,11 @@ namespace TechoCeiva
         }
 
         //Informacion
+        public Boolean transaccion = false;
+        TransEncuesta tran = new TransEncuesta();
         private void pbNext_Click(object sender, EventArgs e)
         {
             Info_EncuestaLN InfoEnc = new Info_EncuestaLN();
-
             int codVoluntario1 = 0, codVoluntario2 = 0;
             if (cmbEncuestador1.Text == cmbEncuestador2.Text)
                 MessageBox.Show("no puede ser igual");
@@ -1526,20 +1535,25 @@ namespace TechoCeiva
                     codVoluntario1 = 0;
                 else
                     codVoluntario1 = Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString());
-                if (cmbEncuestador2.Text == "")
+                if (cmbEncuestador2.Text == "" || cmbEncuestador2.Text == null)
                     codVoluntario2 = 0;
                 else
                     codVoluntario2 = Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString());
-                Boolean correcto = InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, codVoluntario1, codVoluntario2, Convert.ToDateTime(dtpFecha.Value.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, cmbEstadoEn.Text, txtObservaciones.Text,
-                       txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
-                if (correcto)
+                if (transaccion = tran.IniciarTransaccion())
                 {
-                    tbpInfo.Parent = null;
-                    tbpS1.Parent = tbcDatos;
-                    idEncu = InfoEnc.UltimoId();
+                    Boolean correcto = InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, codVoluntario1, codVoluntario2, Convert.ToDateTime(dtpFecha.Value.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, cmbEstadoEn.Text, txtObservaciones.Text,
+                           txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
+                    if (correcto)
+                    {
+                        tbpInfo.Parent = null;
+                        tbpS1.Parent = tbcDatos;
+                        idEncu = InfoEnc.UltimoId();
+                    }
+                    else
+                        MessageBox.Show(InfoEnc.obtenerError());
                 }
                 else
-                    MessageBox.Show(InfoEnc.obtenerError());
+                    MessageBox.Show("Ha ocurrido un error, intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1595,7 +1609,7 @@ namespace TechoCeiva
                 foreach (DataGridViewRow row in dgvS1.Rows)
                 {
                     dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
-                    S1_IntegrantesLN SIn = new S1_IntegrantesLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), 4);
+                    S1_IntegrantesLN SIn = new S1_IntegrantesLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), idEncu);
                     correcto = SIn.Insertar_EncuS1();
                     if (correcto)
                         Filas++;
@@ -1631,7 +1645,7 @@ namespace TechoCeiva
             foreach (DataGridViewRow row in dgvS2.Rows)
             {
                 dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1, Filas);
+                correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), Filas);
                 if (correcto)
                     Filas++;                
                 else
@@ -1650,7 +1664,7 @@ namespace TechoCeiva
                 foreach (DataGridViewRow row in dgvS2.Rows)
                 {
                     dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                    S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, 1, 1);
+                    S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString());
                     correcto = SIn.Insertar_EncuS2();
                     if (correcto)
                         Filas++;
@@ -2129,6 +2143,13 @@ namespace TechoCeiva
                 lblS6_2_QRemesas.Enabled = false;
                 txtS6_2_CantidadRemesas.Enabled = false;
             }
+        }
+
+        private void frmEncuesta_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (transaccion)
+                tran.Deshacer();
+            //InfoEnc.TerminarTransaccion();
         }
     }
 }
