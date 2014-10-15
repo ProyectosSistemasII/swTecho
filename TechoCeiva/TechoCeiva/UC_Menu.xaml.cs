@@ -139,5 +139,11 @@ namespace TechoCeiva
         {
 
         }
+
+        private void btnEncuentaReportes_Click(object sender, RoutedEventArgs e)
+        {
+            frmReportes GenerarRpt = new frmReportes();
+            GenerarRpt.ShowDialog();
+        }
 	}
 }

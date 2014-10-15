@@ -133,7 +133,7 @@
 	
 								</Button.Resources>
 							</Button>
-							<Button x:Name="btnEncuentaReportes" Content="Reportes" Style="{DynamicResource btn_Encuesta_Reportes}" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" Height="26">
+							<Button x:Name="btnEncuentaReportes" Content="Reportes" Style="{DynamicResource btn_Encuesta_Reportes}" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" Height="26" Click="btnEncuentaReportes_Click">
 								<Button.Resources>
 <!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->
 									<Style x:Key="btn_Encuesta_Reportes" TargetType="{x:Type Button}" BasedOn="{x:Null}">
