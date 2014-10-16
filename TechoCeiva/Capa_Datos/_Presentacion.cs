@@ -81,8 +81,42 @@ namespace Capa_Datos
 
             return _listPresentacion;
         }
+        /*
+             public List<_Presentacion> _Obtener_id(String _nombre)
+             {
+                 string query = "Select idPresentacion FROM Presentacion WHERE nombre = @nombre";
+                 List<_Presentacion> _listPresentacion = new List<_Presentacion>();
 
-             /*public List<String> _Obtener_P()
+                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                 _comando.CommandTimeout = 12280;
+                 _comando.Parameters.AddWithValue("@nombre", _nombre);
+                 DataSet _ds = new DataSet();
+                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
+                 _adapter.SelectCommand = _comando;
+                 _adapter.Fill(_ds);
+                 DataTable _tabla = new DataTable();
+                 _tabla = _ds.Tables[0];
+
+                 for (int i = 0; i < _tabla.Rows.Count; i++)
+                 {
+                     DataRow _row = _tabla.Rows[i];
+                     _Presentacion _presentacion = new _Presentacion(Convert.ToInt32(_row["idPresentacion"]), Convert.ToString(_row["Nombre"]), Convert.ToBoolean(_row["Activo"]));
+                     _listPresentacion.Add(_presentacion);
+                 }
+
+                 return _listPresentacion;
+             }
+
+             public int _Obtener_ID(String _nombre)
+             {
+                 String query  = "select idPresentacion from Presentacion where nombre = " + _nombre;
+                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                 _comando.CommandTimeout = 12280;
+
+             }
+
+
+             public List<String> _Obtener_P()
              {
                  string query = "Select Nombre FROM Alimentos WHERE Activo = true";
                  List<String> presentacion = new List<String>();

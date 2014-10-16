@@ -143,11 +143,11 @@ namespace Capa_Datos
             return true;
         }
 
-        public void _Modificar(String _nombre, int _cantidad)
+        public void _Modificar(int _id, int _cantidad)
         {
             if (this._errores.Count == 0)
             {
-                string query = "UPDATE Alimentos SET Existencia = @Existencia WHERE Nombre = " + _nombre;
+                string query = "UPDATE Alimentos SET Existencia = @Existencia WHERE id = " + _id;
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
                 _comando.Parameters.AddWithValue("@Existencia", this.Existencia + _cantidad);

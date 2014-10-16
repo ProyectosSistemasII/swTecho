@@ -137,13 +137,22 @@ namespace TechoCeiva
 
         private void btnInsumosIngresar_Click(object sender, RoutedEventArgs e)
         {
-
+            UC_NewInsumo nInsumo = new UC_NewInsumo();
+            canvasMenu.Children.Clear();
+            canvasMenu.Children.Add(nInsumo);
         }
 
         private void btnEncuentaReportes_Click(object sender, RoutedEventArgs e)
         {
             frmReportes GenerarRpt = new frmReportes();
             GenerarRpt.ShowDialog();
+        }
+
+        private void btnInsumosReportes_Click(object sender, RoutedEventArgs e)
+        {
+            UC_SalidaInsumo sInsumo = new UC_SalidaInsumo();
+            canvasMenu.Children.Clear();
+            canvasMenu.Children.Add(sInsumo);
         }
 	}
 }

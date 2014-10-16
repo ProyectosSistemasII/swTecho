@@ -476,6 +476,7 @@
         <DataGrid x:Name="dgInsumos" Margin="53,0,0,46" Width="559" Height="204.053" VerticalAlignment="Bottom" AutoGenerateColumns="False" SelectionChanged="dgInsumos_SelectionChanged" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" FontSize="14.667">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Presentacion" Binding="{Binding Presentacion_idPresentacion}"/>
                 <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}"/>
             </DataGrid.Columns>
         </DataGrid>

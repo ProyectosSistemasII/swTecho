@@ -40,19 +40,20 @@ namespace TechoCeiva
             fillDataGrid();
         }
 
+        
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
-        {
-
-            _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text));
-            Boolean correcto = nInsumo.Ingresar_Insumo();
+       {
 
             _PresentacionLN nPresentacion = new _PresentacionLN(Convert.ToString(cmxPresentacion.Text));
             Boolean correcto2 = nPresentacion.Ingresar_Presentacion();
 
+            _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text),cmxPresentacion.SelectedIndex);
+            Boolean correcto = nInsumo.Ingresar_Insumo();
+
             if (correcto & correcto2)
             {
-                nInsumo._Insertar_I();
                 nPresentacion._Insertar_P();
+                nInsumo._Insertar_I();                
             }
             else
             {
@@ -60,6 +61,23 @@ namespace TechoCeiva
             }
             fillDataGrid();
         }
+
+        /*{
+            _InsumosLN modificar = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text), Convert.ToInt32(txtCantida.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), cmxPresentacion.SelectedIndex);
+            Boolean correcto = modificar.Ingresar_Insumo();
+            
+            if (correcto)
+            {
+                
+                modificar._Modificar(comboBoxInsumos.SelectedIndex,Convert.ToInt32(txtCantida.Text));
+
+                
+            }
+            else
+            {
+                MessageBox.Show(modificar._Obtener_Error());
+            }
+        }*/
 
         private void fillComboBox()
         {
@@ -73,7 +91,6 @@ namespace TechoCeiva
             cmxPresentacion.SelectedValuePath = "idPresentacion";
             cmxPresentacion.DisplayMemberPath = "Nombre";
         }
-
         private void fillDataGrid()
         {
             _InsumosLN insumos = new _InsumosLN();
@@ -83,7 +100,7 @@ namespace TechoCeiva
         private void actionAdd()
         {
             _InsumosLN Insumos = new _InsumosLN();
-            Insumos._Modificar(comboBoxInsumos.Text, Convert.ToInt32(txtCantida.Text.ToString()));
+            Insumos._Modificar(comboBoxInsumos.SelectedIndex, Convert.ToInt32(txtCantida.Text.ToString()));
 
             txtCantida.Clear();
             MessageBox.Show("Existencia de " + comboBoxInsumos.Text + " modificada correctamente");

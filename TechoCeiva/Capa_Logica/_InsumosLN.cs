@@ -16,12 +16,12 @@ namespace Capa_Logica
             this.Rango = "";
             this.AnioCaducidad = 2014;
             this.Activo = true;
-            this.Presentacion_idPresentacion = 0;
+            this.Presentacion_idPresentacion = 1;
             this._errores = new List<Error>();
             
         }
 
-        public _InsumosLN(String _nombre,int _existencia,String _rango,int _anio)
+        public _InsumosLN(String _nombre,int _existencia,String _rango,int _anio, int _id)
         {
             this.idAlimentos = 0;
             this.Nombre = _nombre;
@@ -29,7 +29,7 @@ namespace Capa_Logica
             this.Rango= _rango;
             this.AnioCaducidad = _anio;
             this.Activo = true;
-            this.Presentacion_idPresentacion = 1;
+            this.Presentacion_idPresentacion = _id;
             this._errores = new List<Error>();
         }
 
