@@ -30,46 +30,97 @@
         {
             this.crvReportes = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btnGenerar = new System.Windows.Forms.Button();
+            this.cmbComunidad = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbSeleccionReporte = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // crvReportes
             // 
             this.crvReportes.ActiveViewIndex = -1;
-            this.crvReportes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvReportes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.crvReportes.CachedPageNumberPerDoc = 10;
             this.crvReportes.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvReportes.Location = new System.Drawing.Point(2, 47);
+            this.crvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvReportes.Location = new System.Drawing.Point(0, 0);
             this.crvReportes.Name = "crvReportes";
-            this.crvReportes.Size = new System.Drawing.Size(769, 419);
+            this.crvReportes.Size = new System.Drawing.Size(769, 465);
             this.crvReportes.TabIndex = 0;
-            this.crvReportes.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(672, 18);
+            this.btnGenerar.Location = new System.Drawing.Point(53, 208);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 1;
-            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.Text = "Generar Reporte";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // cmbComunidad
+            // 
+            this.cmbComunidad.FormattingEnabled = true;
+            this.cmbComunidad.Location = new System.Drawing.Point(12, 79);
+            this.cmbComunidad.Name = "cmbComunidad";
+            this.cmbComunidad.Size = new System.Drawing.Size(178, 21);
+            this.cmbComunidad.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Seleccione Comunidad";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Seleccione Seccion Encuesta";
+            // 
+            // cmbSeleccionReporte
+            // 
+            this.cmbSeleccionReporte.FormattingEnabled = true;
+            this.cmbSeleccionReporte.Items.AddRange(new object[] {
+            "Servicios",
+            "Propiedad",
+            "Comunidad"});
+            this.cmbSeleccionReporte.Location = new System.Drawing.Point(12, 163);
+            this.cmbSeleccionReporte.Name = "cmbSeleccionReporte";
+            this.cmbSeleccionReporte.Size = new System.Drawing.Size(178, 21);
+            this.cmbSeleccionReporte.TabIndex = 5;
             // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 465);
+            this.Controls.Add(this.cmbSeleccionReporte);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbComunidad);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.crvReportes);
             this.Name = "frmReportes";
             this.Text = "frmReportes";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReportes;
         private System.Windows.Forms.Button btnGenerar;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReportes;
+        private System.Windows.Forms.ComboBox cmbComunidad;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbSeleccionReporte;
     }
 }

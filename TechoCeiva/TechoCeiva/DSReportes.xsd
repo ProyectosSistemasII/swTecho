@@ -19,6 +19,18 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="S8_Servicios" msprop:Generator_TableClassName="S8_ServiciosDataTable" msprop:Generator_TableVarName="tableS8_Servicios" msprop:Generator_RowChangedName="S8_ServiciosRowChanged" msprop:Generator_TablePropName="S8_Servicios" msprop:Generator_RowDeletingName="S8_ServiciosRowDeleting" msprop:Generator_RowChangingName="S8_ServiciosRowChanging" msprop:Generator_RowEvHandlerName="S8_ServiciosRowChangeEventHandler" msprop:Generator_RowDeletedName="S8_ServiciosRowDeleted" msprop:Generator_RowClassName="S8_ServiciosRow" msprop:Generator_UserTableName="S8_Servicios" msprop:Generator_RowEvArgName="S8_ServiciosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccesoAgua" msprop:Generator_ColumnVarNameInTable="columnAccesoAgua" msprop:Generator_ColumnPropNameInRow="AccesoAgua" msprop:Generator_ColumnPropNameInTable="AccesoAguaColumn" msprop:Generator_UserColumnName="AccesoAgua" type="xs:string" minOccurs="0" />
+              <xs:element name="FuenteAgua" msprop:Generator_ColumnVarNameInTable="columnFuenteAgua" msprop:Generator_ColumnPropNameInRow="FuenteAgua" msprop:Generator_ColumnPropNameInTable="FuenteAguaColumn" msprop:Generator_UserColumnName="FuenteAgua" type="xs:string" minOccurs="0" />
+              <xs:element name="EnergiaElectrica" msprop:Generator_ColumnVarNameInTable="columnEnergiaElectrica" msprop:Generator_ColumnPropNameInRow="EnergiaElectrica" msprop:Generator_ColumnPropNameInTable="EnergiaElectricaColumn" msprop:Generator_UserColumnName="EnergiaElectrica" type="xs:string" minOccurs="0" />
+              <xs:element name="EnergiaCocina" msprop:Generator_ColumnVarNameInTable="columnEnergiaCocina" msprop:Generator_ColumnPropNameInRow="EnergiaCocina" msprop:Generator_ColumnPropNameInTable="EnergiaCocinaColumn" msprop:Generator_UserColumnName="EnergiaCocina" type="xs:string" minOccurs="0" />
+              <xs:element name="Sanitario" msprop:Generator_ColumnVarNameInTable="columnSanitario" msprop:Generator_ColumnPropNameInRow="Sanitario" msprop:Generator_ColumnPropNameInTable="SanitarioColumn" msprop:Generator_UserColumnName="Sanitario" type="xs:string" minOccurs="0" />
+              <xs:element name="BasuraHogar" msprop:Generator_ColumnVarNameInTable="columnBasuraHogar" msprop:Generator_ColumnPropNameInRow="BasuraHogar" msprop:Generator_ColumnPropNameInTable="BasuraHogarColumn" msprop:Generator_UserColumnName="BasuraHogar" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

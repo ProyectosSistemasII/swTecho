@@ -122,6 +122,12 @@
       <DependentUpon>RptDepto.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RptS8_Servicios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptS8_Servicios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UC_Comunidad.xaml.cs">
       <DependentUpon>UC_Comunidad.xaml</DependentUpon>
     </Compile>
@@ -214,6 +220,10 @@
     <EmbeddedResource Include="RptDepto.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptDepto.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptS8_Servicios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptS8_Servicios.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DSReportes.xsc">

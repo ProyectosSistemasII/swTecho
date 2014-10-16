@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Capa_Datos;
 using System.Text.RegularExpressions;
+using System.Data;
+
 namespace Capa_Logica
 {
     public class S8_ServiciosLN : S8_Servicios
@@ -145,6 +147,13 @@ namespace Capa_Logica
         {
             Error error = errores[0];
             return error;
+        }
+
+        public DataTable ObtnerReporte(int comunidad)
+        {
+            S8_Servicios servicios = new S8_Servicios();      
+            return servicios.GenerarReporte(comunidad);
+
         }
     }
 }

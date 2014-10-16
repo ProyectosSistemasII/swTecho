@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Capa_Datos
 {
@@ -121,5 +122,28 @@ namespace Capa_Datos
             }
             return ListaServicios;
         }
+        public DataTable GenerarReporte(int comunidad)
+        {
+            try
+            {
+                string consulta = "SELECT S8_serv.AccesoAgua, S8_serv.FuenteAgua, S8_serv.EnergiaElectrica,S8_serv.EnergiaCocina, S8_serv.Sanitario, S8_serv.BasuraHogar   FROM S8_serv    inner join Encuestas on Comunidad_idComunidad = @idComunidad Order by AccesoAgua";
+                MySqlCommand comando = new MySqlCommand(consulta, conex);
+                comando.Parameters.AddWithValue("@idComunidad", comunidad);
+                comando.CommandTimeout = 12280;
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (MySqlException ex)
+            {
+                 MessageBox.Show("No se ha podido generar reporte", "Error",  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                ///Error error = new Error(ex.Message + "   " + ex.Number, 2);
+                //errores.Add(error);
+                return null;
+            }
+        }
+
     }
 }
