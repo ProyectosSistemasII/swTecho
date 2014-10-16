@@ -44,6 +44,14 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpt;
 
             }
+            else if (cmbSeleccionReporte.SelectedItem == "Propiedad")
+            {
+                S9_PropiedadLN NReporte = new S9_PropiedadLN();
+                RptS9_Propiedad rpt = new RptS9_Propiedad();
+                rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt;
+
+            }
 
         }
     }
