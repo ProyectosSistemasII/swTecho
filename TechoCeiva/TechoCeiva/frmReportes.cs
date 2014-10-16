@@ -24,6 +24,7 @@ namespace TechoCeiva
         
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            this.btnGenerar.Enabled = false;
             //Clase donde se encuentran las consultas de los reportes
             _Reportes llenar = new _Reportes();
             //El reporte hecho en crystal reports
@@ -53,6 +54,7 @@ namespace TechoCeiva
 
             }
 
+            this.btnGenerar.Enabled = true;
         }
     }
 }

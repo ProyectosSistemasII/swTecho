@@ -46,9 +46,8 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
-        public Boolean Insertar_EncuS8()
+        public Boolean Verficar_EncS8()
         {
-            Boolean correcto = true;
             //verificar sintaxis de los datos y comprobar errores antes de ser enviado a la capa de datos
             this.verificarDatos();
             if (errores.Count > 0)
@@ -56,16 +55,20 @@ namespace Capa_Logica
                 return false;
             }
             // se ingresa los datos a la capa de datos            
-            S8_Servicios servicios = new S8_Servicios(0, this.AccesoAgua, this.FuenteAgua, this.OtraFuente, this.EnergiaElectrica, this.OtraEnergiaElectrica, this.OtraEnergiaCocina,this.OtraEnergiaCocina,this.Sanitario, this.OtroTipoSanitario, this.BasuraHogar, this.OtroTipoBasura, this.idEncuestas, this.idS807_serv, this.idS808_serv);
+            return true;
+        }
+        public Boolean Insertar_EcS8()
+        {
+            S8_Servicios servicios = new S8_Servicios(0, this.AccesoAgua, this.FuenteAgua, this.OtraFuente, this.EnergiaElectrica, this.OtraEnergiaElectrica, this.EnergiaCocina, this.OtraEnergiaCocina, this.Sanitario, this.OtroTipoSanitario, this.BasuraHogar, this.OtroTipoBasura, this.idEncuestas, this.idS807_serv, this.idS808_serv);
             servicios.InsertarS8();
             this.errores = servicios.errores;
-            
+
             //Comprobar errores para la capa de datos
             if (errores.Count > 0)
             {
-                correcto = false;
+                return false;
             }
-            return correcto;
+            return true;
         }
 
         public void verificarDatos()

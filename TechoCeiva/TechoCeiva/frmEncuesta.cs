@@ -739,6 +739,15 @@ namespace TechoCeiva
         {            
             this.VerificarCombox_S8();
             S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.idEncu);
+             Boolean correcto = S8.Verficar_EncS8();
+            if (!correcto)
+            {
+                 MessageBox.Show(S8.obtenerError().mensaje);
+                int cant = S8.errores.Count - 1;
+
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S8(S8.errores[i].NumeroPregunta);                
+            } 
             if (Pregunta807 == false)
             { 
                 if(this.IngresarS807() == true)
@@ -754,25 +763,22 @@ namespace TechoCeiva
             else
                 goto Fin;
             
-            Ingresar:
-            
-            S8.idS807_serv = NuevaS807.idS807_serv;
-            S8.idS808_serv = NuevaS808.idS808_Serv;
-            Boolean correcto = S8.Insertar_EncuS8();
-            if (correcto)
-            {
+            Ingresar:            
+                S8.idS807_serv = NuevaS807.idS807_serv;
+                S8.idS808_serv = NuevaS808.idS808_Serv;
+                Boolean correcto2 = S8.Insertar_EcS8();
+                if (!correcto2)
+                {
+                    MessageBox.Show(S8.obtenerError().mensaje);
+                    int cant = S8.errores.Count - 1;
+
+                    for (int i = cant; i >= 0; i--)
+                        this.Comprobar_S8(S8.errores[i].NumeroPregunta);
+                }                       
+           
+            Fin:
                 tbpS8.Parent = null;
                 tbpS9.Parent = tbcDatos;
-            }            
-            else
-            {
-                MessageBox.Show(S8.obtenerError().mensaje);
-                int cant = S8.errores.Count - 1;
-
-                for (int i = cant; i >= 0; i--)
-                    this.Comprobar_S8(S8.errores[i].NumeroPregunta);
-            }
-            Fin:
                 return;
         }
 
