@@ -1,1 +1,1 @@
-﻿SELECT S8_serv.AccesoAgua,Encuestas.idEncuestas FROM S8_serv   inner join Encuestas on Comunidad_idComunidad = @parametro(idComunidad) group by AccesoAgua
+﻿SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad   FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad and idS9_prop = idencuestas Order by Propio

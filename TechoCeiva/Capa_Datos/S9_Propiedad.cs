@@ -123,7 +123,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad   FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad Order by Propio";
+                string consulta = "SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad   FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad and idS9_prop = idencuestas Order by Propio";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
                 comando.CommandTimeout = 12280;
@@ -134,7 +134,7 @@ namespace Capa_Datos
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message + "   " + ex.Number, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ///Error error = new Error(ex.Message + "   " + ex.Number, 2);
                 //errores.Add(error);

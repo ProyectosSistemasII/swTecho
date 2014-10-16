@@ -1,1 +1,0 @@
-﻿SELECT S8_serv.AccesoAgua,Encuestas.idEncuestas FROM S8_serv    inner join Encuestas on Comunidad_idComunidad = 1 and AccesoAgua = 'Cada varios dias o semanal' group by AccesoAgua
