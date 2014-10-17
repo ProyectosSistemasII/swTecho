@@ -6,7 +6,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    class ValidarDatosUsuarios
+    public class ValidarDatosUsuarios
     {
         public static String insertarUsuario(String username, String password, String passwordConfirm, int idTipoUsuario, int idVoluntario, string pregunta, string respuesta)
         {
