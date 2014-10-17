@@ -39,10 +39,9 @@ namespace TechoCeiva
             
         }
 
-        public void fillDataGrid(_VoluntariosLN voluntarios)
+        public void fillDataGrid()
         {
-            List<_Voluntarios> vol = new List<_Voluntarios>();
-            vol = voluntarios.Obtener_V();
+            _VoluntariosLN voluntarios = new _VoluntariosLN();
             datagdVoluntarios.ItemsSource = voluntarios.Obtener_V();
 
         }
@@ -50,15 +49,18 @@ namespace TechoCeiva
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
             WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
+            _VoluntariosLN voluntario = new _VoluntariosLN();
+
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddVoluntario);
             nWinAddVoluntario.btnModificar.Visibility = Visibility.Hidden;
-            nWinAddVoluntario.Show();
+            nWinAddVoluntario.ShowDialog();
+            fillDataGrid();
         }
 
         private void datagdVoluntarios_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             _Voluntarios selec = datagdVoluntarios.SelectedItem as _Voluntarios;
-
+            _VoluntariosLN voluntario = new _VoluntariosLN();
             idVol = selec.idVoluntarios;
 
             WinAddVoluntario nWinAddVoluntario = new WinAddVoluntario();
@@ -73,8 +75,8 @@ namespace TechoCeiva
             nWinAddVoluntario.txtTelEmergencia.Text = selec.telefonoEmergencia;
             nWinAddVoluntario.btnGuardar.Visibility = Visibility.Hidden;
             nWinAddVoluntario.getId(idVol);
-            nWinAddVoluntario.Show();
-
+            nWinAddVoluntario.ShowDialog();
+            fillDataGrid();
         }
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
@@ -95,11 +97,11 @@ namespace TechoCeiva
                 if (MessageBox.Show("¿Desea eliminar a este voluntario?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     voluntario.Eliminar_V(idVol);
-                    fillDataGrid(voluntario);
+                    fillDataGrid();
                 }
                 else
                 {
-                    fillDataGrid(voluntario);
+                    fillDataGrid();
                 }
             }
             else

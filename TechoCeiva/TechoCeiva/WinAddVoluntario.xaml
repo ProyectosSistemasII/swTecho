@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddVoluntario"
 	x:Name="Window"
 	Title="Añadir Voluntario"
-	Width="655" Height="480">
+	Width="655" Height="480" Background="#FFC4C2C2" WindowStyle="None">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -30,20 +30,19 @@
 		<Label x:Name="lblTelEm" Content="Teléfono:" HorizontalAlignment="Left" Margin="23,317,0,103" Style="{DynamicResource SimpleLabel}" Width="59" FontSize="14.667"/>
 		<ComboBox x:Name="cmbDepartamento" Margin="320,181.5,99,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220" SelectionChanged="cmbDepartamento_SelectionChanged" />
 		<ComboBox x:Name="cmbMunicipio" Margin="320,249,99,166.5" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" Width="220" SelectionChanged="cmbMunicipio_SelectionChanged" />
-		<TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="26.5" Margin="23,45,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" TextAlignment="Center"/>
-		<TextBox x:Name="txtApellidos" Height="26.5" Margin="320,45,99,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" TextAlignment="Center" Width="220"/>
-		<TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="26.5" Margin="23,113,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" TextAlignment="Center"/>
-		<TextBox x:Name="txtDireccion" Height="26.5" Margin="320,113,99,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" TextAlignment="Center" Width="220"/>
-		<TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="23,181.5,0,234" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Width="220" FontSize="14.667" TextAlignment="Center" Height="26.5"/>
-		<TextBox x:Name="txtNombreEmergencia" Margin="23,271.5,396,144" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" TextAlignment="Center" Height="26.5" Width="220"/>
-		<TextBox x:Name="txtTelEmergencia" Margin="23,339,396,76.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" TextAlignment="Center" Height="26.5" Width="220"/>
+		<TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="26.5" Margin="23,45,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667"/>
+		<TextBox x:Name="txtApellidos" Height="26.5" Margin="320,45,99,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Width="220" HorizontalAlignment="Left"/>
+		<TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="26.5" Margin="23,113,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667"/>
+		<TextBox x:Name="txtDireccion" Height="26.5" Margin="320,113,99,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Width="220" HorizontalAlignment="Left"/>
+		<TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="23,181.5,0,234" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Width="220" FontSize="14.667" Height="26.5"/>
+		<TextBox x:Name="txtNombreEmergencia" Margin="23,271.5,396,144" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
+		<TextBox x:Name="txtTelEmergencia" Margin="23,339,396,76.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
 		<Button Content="" Height="32" Margin="287,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" d:LayoutOverrides="HorizontalAlignment" Name="btnGuardar" Width="32" BorderBrush="{x:Null}" >
 			<Button.Background>
-				<ImageBrush ImageSource="save.png" Stretch="Uniform"/>
+                <ImageBrush ImageSource="save.png" Stretch="None" TileMode="Tile"/>
 			</Button.Background>
 		</Button>
-		<RadioButton Content="   Activo" Margin="320,295,213,121.5" Style="{DynamicResource SimpleRadioButton}" FontSize="14.667"/>
-		<Button Content="" HorizontalAlignment="Right" Height="32" Margin="0,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="32" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" >
+        <Button Content="" HorizontalAlignment="Right" Height="32" Margin="0,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="32" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" >
 			<Button.Background>
 				<ImageBrush Stretch="None" ImageSource="save.png"/>
 			</Button.Background>

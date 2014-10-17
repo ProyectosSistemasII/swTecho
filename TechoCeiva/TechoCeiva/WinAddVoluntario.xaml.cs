@@ -21,6 +21,7 @@ namespace TechoCeiva
 	{
         int currentid = 0;
         UC_Voluntarios newUcVol = new UC_Voluntarios();
+        _VoluntariosLN dataVol = new _VoluntariosLN();
 
 		public WinAddVoluntario()
 		{
@@ -59,8 +60,6 @@ namespace TechoCeiva
             if (correcto)
             {
                 voluntario.Insertar_V();
-                MessageBox.Show("Ingreso Exitoso");
-                newUcVol.fillDataGrid(voluntario);
                 this.Close();               
             }
             else
@@ -105,9 +104,7 @@ namespace TechoCeiva
             if (correcto)
             {
                 voluntario.Modificar_V(currentid);
-                MessageBox.Show("Modificación Exitosa");
                 this.Close();
-                newUcVol.fillDataGrid(voluntario);
             }
             else
             {
@@ -128,10 +125,16 @@ namespace TechoCeiva
 
             if (correcto)
             {
-                voluntario.Eliminar_V(currentid);
-                MessageBox.Show("Eliminado!");
-                this.Close();
-                newUcVol.fillDataGrid(voluntario);
+                if (MessageBox.Show("¿Desea eliminar a este voluntario?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    voluntario.Eliminar_V(currentid);
+                    this.Close();
+                    newUcVol.fillDataGrid();
+                }
+                else
+                {
+                    newUcVol.fillDataGrid();
+                }
             }
             else
             {

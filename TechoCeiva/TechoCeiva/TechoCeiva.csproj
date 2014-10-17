@@ -371,6 +371,8 @@
     <Resource Include="add.png" />
     <Resource Include="img\logo-techo.png" />
     <Resource Include="img\o.png" />
+    <Resource Include="save.png" />
+    <Resource Include="star.png" />
     <Resource Include="trash %282%29.png" />
     <Resource Include="trash.png" />
     <Resource Include="waste.png" />
