@@ -41,6 +41,20 @@ namespace TechoCeiva
 
         public UC_Manage(UsuarioLN user)
         {
+            this.InitializeComponent();
+            this.currentUser = user;
+            dpFecha.SelectedDate = DateTime.Now.Date;
+            _VoluntariosLN Personas = new _VoluntariosLN();
+            _HerramientasLN Tools = new _HerramientasLN();
+            fillCboxNombre(Personas);
+            fillCboxHerramientas(Tools);
+            cbxVoluntario.Focus();
+            cbxVoluntario.IsDropDownOpen = true;
+            cbxVoluntario.Focus();
+        }
+
+        public void setUser(UsuarioLN user)
+        {
             this.currentUser = user;
         }
 
@@ -182,29 +196,33 @@ namespace TechoCeiva
 
         private void saveContent()
         {
-            try
-            {
+            int idPrestamo = 0;
+            _DetallePrestamoLN detallesPrestamo = new _DetallePrestamoLN();
+            _HerramientasLN contenido = new _HerramientasLN();
+            List<_Herramientas> listTools = new List<_Herramientas>();
+            listTools = contenido.obtenerListado(detalle);
+
+            //try
+            //{
                 _Voluntarios voluntario = cbxVoluntario.SelectedItem as _Voluntarios;
                 _PrestamosLN datosPrestamo = new _PrestamosLN(currentUser.idUsuarios, voluntario.idVoluntarios, Convert.ToDateTime(dpFecha.SelectedDate), txtObservaciones.Text);
                 Boolean correcto = datosPrestamo.ingresarPrestamo();
 
                 if (correcto)
                 {
-                    datosPrestamo._InsertarPrestamo();
+                    idPrestamo = datosPrestamo._InsertarPrestamo();
+                    //detallesPrestamo.insertarDetalle(listTools,idPrestamo);
                 }
                 else
                 {
                     MessageBox.Show(datosPrestamo.obtenerError());
                 }
 
-                int idPrestamo = datosPrestamo.ultimaInsercion();
-                _HerramientasLN contenido = new _HerramientasLN();
-                contenido.guardarElementos(detalle, idPrestamo);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Debe completar la información para poder guardar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Debe completar la información para poder guardar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+           // }
         }
 	}
 }

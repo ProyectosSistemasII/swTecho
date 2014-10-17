@@ -13,10 +13,10 @@ namespace Capa_Logica
             this.iDPrestamo = 0;
             this.idUsuario = 0;
             this.idVoluntario = 0;
-            this.fechaPrestamo = DateTime.Parse("YYYY/MM/DD");
+            this.fechaPrestamo = DateTime.MinValue;
             this.Observaciones = "";
             this.Activo = 0;
-            this.fechaFinPrestamo = DateTime.Parse("YYYY/MM/DD");
+            this.fechaFinPrestamo = DateTime.MaxValue;
             this._errores = new List<Error>();
         }
 
@@ -32,7 +32,8 @@ namespace Capa_Logica
         public Boolean ingresarPrestamo()
         {
             Boolean correcto = true;
-            _Prestamo nPrestamo = new _Prestamo(this.iDPrestamo, this.idUsuario, this.idVoluntario, this.fechaPrestamo, this.Observaciones, this.Activo, this.fechaFinPrestamo);
+            //_Prestamo nPrestamo = new _Prestamo(this.iDPrestamo, this.idUsuario, this.idVoluntario, this.fechaPrestamo, this.Observaciones, this.Activo, this.fechaFinPrestamo);
+            _Prestamo nPrestamo = new _Prestamo(this.iDPrestamo, this.idUsuario, this.idVoluntario, this.fechaPrestamo, this.Observaciones, this.Activo);
 
             this.iDPrestamo = nPrestamo.iDPrestamo;
             this.idUsuario = nPrestamo.idUsuario;

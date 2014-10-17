@@ -17,7 +17,7 @@ namespace Capa_Logica
             this.CantidadMalEstado = 0;
             this.CantidadPerdida = 0;
             this.Activo = 0;
-            this.Devolucion = DateTime.Parse("YYYY/MM/DD");
+            this.Devolucion = DateTime.MinValue;
             this._errores = new List<Error>();
         }
 

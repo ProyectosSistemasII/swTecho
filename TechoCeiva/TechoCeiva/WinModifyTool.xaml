@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinModifyTool"
 	x:Name="Window"
 	Title="Editar Herramienta"
-	Width="379" Height="246" ResizeMode="NoResize">
+	Width="379" Height="275.6" ResizeMode="NoResize" WindowStyle="None" Background="#FFC4C2C2" WindowStartupLocation="CenterScreen">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -15,11 +15,12 @@
 	</Window.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Label Content="Herramienta:" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<Label Content="Cantidad:" HorizontalAlignment="Left" Margin="23,0,0,105.287" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontSize="14.667"/>
-		<TextBox x:Name="txtHerramienta" Margin="23,42.506,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="&#xd;&#xa;" d:LayoutOverrides="Width" Width="327" HorizontalAlignment="Left" Height="26.5" VerticalAlignment="Top" KeyDown="txtHerramienta_KeyDown" FontSize="14.667" />
-		<TextBox x:Name="txtCantidad" Margin="23,111.513,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="&#xa;" VerticalAlignment="Top" Width="327" Height="26.5" HorizontalAlignment="Left" d:LayoutOverrides="Width" KeyDown="txtCantidad_KeyDown" FontSize="14.667" />
-		<Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="23,157.8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="36" BorderBrush="{x:Null}" Foreground="White" Background="#FF0092DD" Click="btnGuardar_Click" />
-		<Button x:Name="btnCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="155,157.8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="36" Background="#FFC52023" BorderBrush="{x:Null}" Foreground="White" Click="btnCerrar_Click" />
+		<Label Content="Nombre:" HorizontalAlignment="Left" Margin="23,52,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label Content="Cantidad:" HorizontalAlignment="Left" Margin="23,121.006,0,135.087" Style="{DynamicResource SimpleLabel}" FontSize="14.667" d:LayoutOverrides="Height"/>
+		<TextBox x:Name="txtHerramienta" Margin="23,71.506,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="&#xd;&#xa;" d:LayoutOverrides="Width" Width="327" HorizontalAlignment="Left" Height="26.5" VerticalAlignment="Top" KeyDown="txtHerramienta_KeyDown" FontSize="14.667" />
+		<TextBox x:Name="txtCantidad" Margin="23,140.513,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="&#xa;" VerticalAlignment="Top" Width="327" Height="26.5" HorizontalAlignment="Left" d:LayoutOverrides="Width" KeyDown="txtCantidad_KeyDown" FontSize="14.667" />
+		<Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="23,186.8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="36" BorderBrush="{x:Null}" Foreground="White" Background="#FF0092DD" Click="btnGuardar_Click" />
+		<Button x:Name="btnCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="155,186.8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="36" Background="#FFC52023" BorderBrush="{x:Null}" Foreground="White" Click="btnCerrar_Click" />
+		<Label Content="Modificar Herramienta" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="18.667"/>
 	</Grid>
 </Window>
