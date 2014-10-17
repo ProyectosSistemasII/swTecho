@@ -143,18 +143,20 @@ namespace Capa_Datos
             return true;
         }
 
-        public void _Modificar(int _id, int _cantidad)
+        public void _Modificar(int _id,int _cantidad)
         {
             if (this._errores.Count == 0)
             {
-                string query = "UPDATE Alimentos SET Existencia = @Existencia WHERE id = " + _id;
+                string query = "UPDATE Alimentos SET Existencia = @Existencia WHERE idAlimentos = " + _id;
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                _comando.Parameters.AddWithValue("@idAlimentos", this.idAlimentos);
                 _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
-                _comando.Parameters.AddWithValue("@Existencia", this.Existencia + _cantidad);
+                _comando.Parameters.AddWithValue("@Existencia", _cantidad);
                 _comando.Parameters.AddWithValue("@Rango", this.Rango);
                 _comando.Parameters.AddWithValue("@AnioCaducidad", this.AnioCaducidad);
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
-                _comando.Parameters.AddWithValue("@Presentacion", this.Presentacion_idPresentacion);
+                _comando.Parameters.AddWithValue("@Presentacion_idPresentacion", this.Presentacion_idPresentacion);
+              
 
                 try
                 {
@@ -169,7 +171,24 @@ namespace Capa_Datos
                 }
             }
         }
-        
+
+        public Boolean verificarExistencia(int cantidad)
+        {
+            if (this.Existencia > cantidad)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Boolean verificarduplicado(String nombre, string rango, int año, int presentacion)
+        {
+            return true;
+        }
+
     }
 }
 

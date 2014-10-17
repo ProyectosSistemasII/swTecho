@@ -89,6 +89,7 @@
     <Compile Include="_MunicipioLN.cs" />
     <Compile Include="_PresentacionLN.cs" />
     <Compile Include="_PrestamosLN.cs" />
+    <Compile Include="_SalidaLN.cs" />
     <Compile Include="_VoluntariosLN.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

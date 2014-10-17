@@ -47,7 +47,7 @@ namespace TechoCeiva
             _PresentacionLN nPresentacion = new _PresentacionLN(Convert.ToString(cmxPresentacion.Text));
             Boolean correcto2 = nPresentacion.Ingresar_Presentacion();
 
-            _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text),cmxPresentacion.SelectedIndex);
+            _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text),1);
             Boolean correcto = nInsumo.Ingresar_Insumo();
 
             if (correcto & correcto2)

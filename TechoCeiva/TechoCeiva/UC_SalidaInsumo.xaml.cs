@@ -10,8 +10,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Capa_Datos;
+using System.Collections.ObjectModel;
 using Capa_Logica;
+using Capa_Datos;
+using Capa_Logica_Negocio;
 
 namespace TechoCeiva
 {
@@ -20,9 +22,11 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_SalidaInsumo : UserControl
 	{
+        private ObservableCollection<_InsumosLN> detalle = new ObservableCollection<_InsumosLN>();
+
 		public UC_SalidaInsumo()
 		{
-			this.InitializeComponent();
+            this.InitializeComponent();
             fillComboBox();
 		}
 
@@ -33,14 +37,22 @@ namespace TechoCeiva
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (cbxInsumos.Text.Equals("") || txtCantidad.Text.Equals(""))
+            {
+                MessageBox.Show("Debe seleccionar un Insumo y asignar una cantidad para agregar", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                _Insumos seleccion = cbxInsumos.SelectedItem as _Insumos;
+                addToGrid(seleccion);
+            }
         }
 
         private void fillComboBox()
         {
             _InsumosLN insumos = new _InsumosLN();
             cbxInsumos.ItemsSource = insumos._Obtener_I();
-            cbxInsumos.SelectedValuePath = "idInsumos";
+            cbxInsumos.SelectedValuePath = "idAlimentos";
             cbxInsumos.DisplayMemberPath = "Nombre";
 
             _Voluntarios voluntario = new _Voluntarios();
@@ -48,5 +60,95 @@ namespace TechoCeiva
             cbxVoluntarios.SelectedValuePath = "idVoluntario";
             cbxVoluntarios.DisplayMemberPath = "nombres";
         }
+
+        private void acctionAdd(int valor)
+        {
+            _InsumosLN Insumos = new _InsumosLN();
+            Insumos._Modificar(this.cbxInsumos.SelectedIndex,int.Parse(txtCantidad.Text));
+
+        }
+
+        private void addToGrid(_Insumos seleccion)
+        {
+            try
+            {
+                Boolean correcto = seleccion.verificarExistencia(Convert.ToInt32(txtCantidad.Text));
+
+                if (correcto && seleccion.Existencia > 0)
+                {
+                    if (Convert.ToInt32(txtCantidad.Text) > 0)
+                    {
+                        _InsumosLN insumo = new _InsumosLN(seleccion.idAlimentos,seleccion.Nombre, Convert.ToInt32(txtCantidad.Text),seleccion.Rango,seleccion.AnioCaducidad,seleccion.Presentacion_idPresentacion);
+                        Boolean existe = insumo.buscarElemento(detalle);
+
+                        if (!existe)
+                        {
+                            detalle.Add(insumo);
+                            dgdDetalle.Items.Add(insumo);
+                            txtCantidad.Clear();
+                            cbxInsumos.Focus();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ya existe un elemento de este tipo, eliminelo o agrege uno nuevo", "Elemento existente", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR: No puede prestar una cantidad con valor 0 ó valor netagivo", "Error en préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+                        txtCantidad.Focus();
+                        txtCantidad.SelectAll();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No puede prestar más de lo que tiene en inventario", "Error en préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(seleccion.Nombre + " tiene " + seleccion.Existencia + " unidades actualmente", "Existencia actual", MessageBoxButton.OK, MessageBoxImage.Information);
+                    txtCantidad.Focus();
+                    txtCantidad.SelectAll();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese una cantidad válida", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            acctionAdd(5);
+        }
+
+        private void btnX_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                deleteFromGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese datos válidos", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void deleteFromGrid()
+        {
+            try
+            {
+                _InsumosLN eliminar = dgdDetalle.SelectedItem as _InsumosLN;
+                detalle = eliminar.eliminarDeColeccion(detalle);
+                dgdDetalle.Items.Clear();
+                foreach (_InsumosLN h in detalle)
+                {
+                    dgdDetalle.Items.Add(h);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al borrar datos: Debe seleccionar una herramienta para eliminar", "Error al borrar datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
 	}
 }

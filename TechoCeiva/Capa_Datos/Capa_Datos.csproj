@@ -94,6 +94,7 @@
     <Compile Include="_Presentacion.cs" />
     <Compile Include="_Prestamo.cs" />
     <Compile Include="_Reportes.cs" />
+    <Compile Include="_Salida.cs" />
     <Compile Include="_Voluntarios.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

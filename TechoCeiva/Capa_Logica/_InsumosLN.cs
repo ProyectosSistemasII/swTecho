@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Capa_Datos;
+using System.Collections;
+using System.Collections.ObjectModel;
+
 
 namespace Capa_Logica
 {
     public class _InsumosLN : _Insumos
     {
+        ArrayList detalleSalida = new ArrayList();
         public _InsumosLN()
         {
             this.idAlimentos = 0;
@@ -31,6 +35,17 @@ namespace Capa_Logica
             this.Activo = true;
             this.Presentacion_idPresentacion = _id;
             this._errores = new List<Error>();
+        }
+
+        public _InsumosLN(int _idAlimentos,String _nombre, int _existencia, String _rango, int _anio, int _id)
+        {
+            this.idAlimentos = _idAlimentos;
+            this.Nombre = _nombre;
+            this.Existencia = _existencia;
+            this.Rango = _rango;
+            this.AnioCaducidad = _anio;
+            this.Activo = true;
+            this.Presentacion_idPresentacion = _id;
         }
 
         public Boolean Ingresar_Insumo()
@@ -62,6 +77,46 @@ namespace Capa_Logica
         {
             Error error = _errores[0];
             return error.mensaje;
+        }
+
+        public ObservableCollection<_InsumosLN> eliminarDeColeccion(ObservableCollection<_InsumosLN> colection)
+        {
+            int cont = 0;
+            foreach (_InsumosLN insumos in colection)
+            {
+                if (insumos.idAlimentos.Equals(this.idAlimentos))
+                {
+                    colection.RemoveAt(cont);
+                    break;
+                }
+                cont++;
+            }
+            return colection;
+        }
+
+        public void ingresarDetalle(int id, string Insumo, int cantidad, string rango, int año,Boolean activo, int idPresentacion)
+        {
+            string[] detalle;
+            string _id = Convert.ToString(id);
+            string _cantidad = Convert.ToString(cantidad);
+            string _año = Convert.ToString(año);
+            string _idPresentacion = Convert.ToString(idPresentacion);
+            string _activo = Convert.ToString(activo);
+
+            detalle = new string[] { _id, Insumo, _cantidad, rango, _año, _activo,_idPresentacion };
+            detalleSalida.Add(detalle);
+        }
+
+        public Boolean buscarElemento(ObservableCollection<_InsumosLN> colection)
+        {
+            foreach (_InsumosLN valor in colection)
+            {
+                if (valor.idAlimentos.Equals(this.idAlimentos))
+                    return true;
+                else
+                    return false;
+            }
+            return false;
         }
     }
 }

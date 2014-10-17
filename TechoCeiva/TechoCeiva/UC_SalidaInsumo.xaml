@@ -426,10 +426,15 @@
 		<TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Margin="138.667,188,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="125.129" FontSize="14.667"/>
 		<TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="138.667,226,0,233.494" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Width="360" FontSize="14.667" Height="25.506"/>
 		<Canvas x:Name="Canvas2" Margin="526.283,41.053,-3.283,74.333" Width="595" Height="400">
-			<DataGrid x:Name="dgdDetalle" Height="260" Canvas.Left="27.217" Canvas.Top="29.614" Width="510"/>
-			<Button x:Name="btnCancelar" Height="26" Canvas.Left="43.217" Style="{DynamicResource SimpleButton}" Canvas.Top="328" Width="160" Content="Cancelar" FontSize="14.667" Background="#FFC52023" Foreground="White"/>
-			<Button x:Name="btnGuardar" Height="26" Canvas.Left="369.884" Style="{DynamicResource SimpleButton}" Canvas.Top="328" Width="160" Content="Guardar" FontSize="14.667" Background="#FF0092DD" Foreground="White"/>
-			<Button x:Name="btnX" Content="X" Canvas.Left="541.217" Style="{DynamicResource SimpleButton}" Canvas.Top="29.614" Width="37" FontSize="14.667" FontWeight="Bold" Background="#FFC52023" Foreground="White" Height="26"/>
+			<DataGrid x:Name="dgdDetalle" Height="260" Canvas.Left="27.217" Canvas.Top="29.614" Width="510">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Insumo" Binding="{Binding Nombre}" Width="250.3"/>
+                    <DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="256.3"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="btnCancelar" Height="26" Canvas.Left="43.217" Style="{DynamicResource SimpleButton}" Canvas.Top="328" Width="160" Content="Cancelar" FontSize="14.667" Background="#FFC52023" Foreground="White"/>
+			<Button x:Name="btnGuardar" Height="26" Canvas.Left="369.884" Style="{DynamicResource SimpleButton}" Canvas.Top="328" Width="160" Content="Guardar" FontSize="14.667" Background="#FF0092DD" Foreground="White" Click="btnGuardar_Click" />
+			<Button x:Name="btnX" Content="X" Canvas.Left="541.217" Style="{DynamicResource SimpleButton}" Canvas.Top="29.614" Width="37" FontSize="14.667" FontWeight="Bold" Background="#FFC52023" Foreground="White" Height="26" Click="btnX_Click" />
 		</Canvas>
 	</Grid>
 </UserControl>
