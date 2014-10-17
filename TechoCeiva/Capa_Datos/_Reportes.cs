@@ -18,12 +18,13 @@ namespace Capa_Datos
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;
 
-        public DataTable Generar()
+        public DataTable GenerarTrabajo(int idComunidad)
         {
             try
             {
-                string consulta = "Select NombreD from Departamento";
+                string consulta = "SELECT IF(Trabajo = 1, 'Si Trabaja','No Trabaja') as Trabajo from s5_tra inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();
                 comando.ExecuteNonQuery();
                 comando.Connection.Close();

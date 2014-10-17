@@ -144,8 +144,8 @@ namespace TechoCeiva
 
         private void btnEncuentaReportes_Click(object sender, RoutedEventArgs e)
         {
-            //frmReportes GenerarRpt = new frmReportes();
-            //GenerarRpt.ShowDialog();
+            frmReportes GenerarRpt = new frmReportes();
+            GenerarRpt.ShowDialog();
         }
 
         private void btnInsumosReportes_Click(object sender, RoutedEventArgs e)

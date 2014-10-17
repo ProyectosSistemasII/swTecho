@@ -26,7 +26,7 @@ namespace TechoCeiva
         {
             this.btnGenerar.Enabled = false;
             //Clase donde se encuentran las consultas de los reportes
-            _Reportes llenar = new _Reportes();
+            _Reportes generar = new _Reportes();
             //El reporte hecho en crystal reports
             /*
              * El dataSet lo tuve que agregar en la vista porque a la hora de enlazar el informe con el dataset no lo encuentra 
@@ -37,6 +37,14 @@ namespace TechoCeiva
             */
 
             //// Reporte S8_Servicios
+            if (cmbSeleccionReporte.SelectedItem == "Trabajo")
+            {
+                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
+                RptS5_Trabajo rpts5 = new RptS5_Trabajo();
+                rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpts5;
+
+            }
             if (cmbSeleccionReporte.SelectedItem == "Servicios")
             {
                 S8_ServiciosLN NReporte = new S8_ServiciosLN();
