@@ -62,6 +62,8 @@ namespace Capa_Datos
         public String nombresVoluntario { get; set; }
         public String apellidosVoluntario { get; set; }
         public String tipoUsuario { get; set; }
+        //public String pregunta { get; set; }
+        //public String respuesta { get; set; }
 
         //Metodo que devuelve una lista con los usuarios en el sistema
         public List<DatosUsuario> getUsuarios()
@@ -99,7 +101,7 @@ namespace Capa_Datos
             try
             {
                 MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
-                MySqlCommand comando = new MySqlCommand("select COUNT(*)  from Usuarios where UserName=@usuario", conexion);
+                MySqlCommand comando = new MySqlCommand("select COUNT(*)  from Usuarios where UserName=@usuario and Activo=true", conexion);
                 comando.Parameters.AddWithValue("@usuario", usuario);
                 conexion.Open();
                 int numero = Convert.ToInt16(comando.ExecuteScalar());
@@ -114,20 +116,44 @@ namespace Capa_Datos
             return false;
         }
 
-        //metodo que inserta un registro de usuarios
-        public string insertarUsuario(string userName, string password, int idTipoUsuario, int idVoluntario)
+        //metodo que determina si un voluntario tiene un usuario existente
+        public bool buscarVoluntario(int idVoluntario)
         {
-            //Your code here
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("select count(*) from Usuarios where Voluntarios_idVoluntarios=@id and Activo=true", conexion);
+                comando.Parameters.AddWithValue("@id", idVoluntario);
+                conexion.Open();
+                int numero = Convert.ToInt16(comando.ExecuteScalar());
+                conexion.Close();
+                if (numero > 0)
+                    return true;
+            }
+            catch
+            {
+                return true;
+            }
+            return false;
+        }
+
+        //metodo que inserta un registro de usuarios
+        public string insertarUsuario(string userName, string password, int idTipoUsuario, int idVoluntario, string pregunta, string respuesta)
+        {
             try
             {
                 if (buscarUsuario(userName))
                     return "El nombre de usuario ya fue ingresado";
+                if (buscarVoluntario(idVoluntario))
+                    return "El voluntario ya tiene un usuario";
                 MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
-                MySqlCommand comando = new MySqlCommand("INSERT INTO Usuarios (Username, Password,TipoUsuarios_idTipoUsuarios,Voluntarios_idVoluntarios,Activo)VALUES (@userName,SHA2(@password,512),@idTipo,@idVoluntario,true);", conexion);
+                MySqlCommand comando = new MySqlCommand("INSERT INTO Usuarios (Username, Password,TipoUsuarios_idTipoUsuarios,Voluntarios_idVoluntarios,Activo,PreguntaSecreta,Respuesta)VALUES (@userName,SHA2(@password,512),@idTipo,@idVoluntario,true,@pregunta,@respuesta);", conexion);
                 comando.Parameters.AddWithValue("@userName", userName);
                 comando.Parameters.AddWithValue("@password", password);
                 comando.Parameters.AddWithValue("@idTipo", idTipoUsuario);
                 comando.Parameters.AddWithValue("@idVoluntario", idVoluntario);
+                comando.Parameters.AddWithValue("@pregunta", pregunta);
+                comando.Parameters.AddWithValue("@respuesta", respuesta);
                 conexion.Open();
                 comando.ExecuteNonQuery();
                 conexion.Close();
@@ -137,6 +163,25 @@ namespace Capa_Datos
                 return ex.Message;
             }
             return "Registro agregado";
+        }
+
+        //Metodo que dehabilida los usuarios
+        public string deshabilitarUsuario(string username)
+        {
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("update Usuarios set Activo=false where UserName=@username;", conexion);
+                comando.Parameters.AddWithValue("@username", username);
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (MySqlException ex)
+            {
+                return ex.Message;
+            }
+            return "Registro eliminado";
         }
     }
 
@@ -149,7 +194,9 @@ namespace Capa_Datos
     public class DatosTipoUsuario 
     {
         public int idTipoUsuarios { get; set; }
-        public string nombreTipo { get; set; }
+        public String nombreTipo { get; set; }
+        public String permisos { get; set; }
+        private List<String> listaPermisos { get; set; }
 
         //Metodo que devuelve una lista con los tipos de usuarios en el sistema
         public List<DatosTipoUsuario> getTipoUsuarios()
@@ -175,5 +222,45 @@ namespace Capa_Datos
             }
             return tipos;
         }
+
+        //Metodo que devuelve una lista con los tipos de usuarios en el sistema
+        public List<DatosTipoUsuario> listaTiposUsuarios()
+        {
+            List<DatosTipoUsuario> tipos = new List<DatosTipoUsuario>();
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("select idTipoUsuarios,NombreTipo from TipoUsuarios where Activo=true;", conexion);
+                conexion.Open();
+                MySqlDataReader datos = comando.ExecuteReader();
+                while (datos.Read())
+                {
+                    DatosTipoUsuario tmp = new DatosTipoUsuario();
+                    tmp.idTipoUsuarios = Convert.ToInt16(datos["idTipoUsuarios"]);
+                    tmp.nombreTipo = datos["NombreTipo"].ToString();
+
+                    //MySqlCommand cmd = new MySqlCommand("select Permisos.Nombre from Permisos_has_TipoUsuarios inner join Permisos on Permisos.idPermisos =Permisos_has_TipoUsuarios.Permisos_idPermisos  where TipoUsuarios_idTipoUsuarios=idTipo;", conexion);
+                    //cmd.Parameters.AddWithValue("@idTipo",tmp.idTipoUsuarios);
+                    //conexion.Open();
+                    //MySqlDataReader datosTmp = comando.ExecuteReader();
+                    //List<String> permisosTmp= new List<String>();
+                    //while (datosTmp.Read())
+                    //    permisosTmp.Add(datos["Nombre"].ToString());
+                    //String cadenaPermisos="";
+                    //for (int i = 0; i < permisosTmp.Count; i++)
+                    //    cadenaPermisos += permisosTmp[i] + " ";
+                    //tmp.listaPermisos = permisosTmp;
+                    //tmp.permisos = cadenaPermisos;
+
+                    tipos.Add(tmp);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return tipos;
+        }
     }
+
 }

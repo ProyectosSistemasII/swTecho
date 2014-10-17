@@ -19,17 +19,19 @@
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 		<Label x:Name="lblNombres" Content="Nombre de usuario:" HorizontalAlignment="Left" Height="22" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" FontSize="14.667"/>
-		<Label x:Name="lblApellidos" Content="Voluntario:" Height="22" Margin="320,23,194,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label x:Name="lblApellidos" Content="Voluntario:" Height="22" Margin="320,160,194,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<Label x:Name="lblTelefono" Content="Contraseña:" HorizontalAlignment="Left" Height="22" Margin="23,91,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="87" FontSize="14.667"/>
         <Label x:Name="lblCorreo" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="23,159.5,0,0" Style="{DynamicResource SimpleLabel}" Width="155" Height="22" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
         <ComboBox x:Name="cmbTipo" Margin="23,262,390,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220" />
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="26.5" Margin="23,45,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" TextAlignment="Center" IsEnabled="True" Text="" />
         <Button Content="Guardar" Height="36" Margin="287,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" FontSize="14.667" d:LayoutOverrides="HorizontalAlignment" Name="btnGuardar" />
-        <Button Content="Modificar" HorizontalAlignment="Right" Height="36" Margin="0,0,131,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="109" FontSize="14.667" Name="btnModificar"/>
-		<Button Content="Eliminar" HorizontalAlignment="Right" Height="36" Margin="0,0,19,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="109" FontSize="14.667" Name="btnEliminar" />
         <Label Content="Tipo de usuario:" Height="28" HorizontalAlignment="Left" Margin="23,228,0,0" Name="label1" VerticalAlignment="Top" FontSize="15" />
-        <PasswordBox Height="35" HorizontalAlignment="Left" Margin="23,119,0,0" Name="pswPassword" VerticalAlignment="Top" Width="220" IsEnabled="True" />
-        <PasswordBox Height="34" HorizontalAlignment="Left" Margin="23,188,0,0" Name="pswPassworConfirm" VerticalAlignment="Top" Width="220" />
-        <ListBox Height="234" HorizontalAlignment="Left" Margin="320,54,0,0" Name="lstVoluntarios" VerticalAlignment="Top" Width="207" />
+        <PasswordBox Height="27" HorizontalAlignment="Left" Margin="23,119,0,0" Name="pswPassword" VerticalAlignment="Top" Width="220" IsEnabled="True" />
+        <PasswordBox Height="26" HorizontalAlignment="Left" Margin="23,188,0,0" Name="pswPassworConfirm" VerticalAlignment="Top" Width="220" />
+        <ListBox Height="128" HorizontalAlignment="Left" Margin="320,188,0,0" Name="lstVoluntarios" VerticalAlignment="Top" Width="207" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="320,49,0,0" Name="cmbPregunta" VerticalAlignment="Top" Width="221" IsEditable="True"></ComboBox>
+        <TextBox Height="27" HorizontalAlignment="Left" Margin="320,119,0,0" Name="txtRespuesta" VerticalAlignment="Top" Width="221" Text="" />
+        <Label Content="Pregunta secreta:" FontSize="14.667" Height="22" HorizontalAlignment="Left" Margin="320,23,0,0" Name="label3" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" />
+        <Label Content="Respuesta:" FontSize="14.667" Height="22" HorizontalAlignment="Left" Margin="320,91,0,0" Name="label4" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" />
     </Grid>
 </Window>

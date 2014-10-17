@@ -7,7 +7,8 @@
              d:DesignHeight="396" d:DesignWidth="839" Width="518">
     <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="Canvas_Loaded">
         <Label Canvas.Left="12" Canvas.Top="20" Content="Usuarios" FontSize="26.667" Foreground="#FF626465" Style="{DynamicResource SimpleLabel}" />
-        <DataGrid AutoGenerateColumns="True" Canvas.Left="12" Canvas.Top="80" Height="304" Name="dtgUsuarios" Width="494" />
+        <DataGrid AutoGenerateColumns="True" Canvas.Left="12" Canvas.Top="80" Height="304" Name="dtgUsuarios" Width="494" IsReadOnly="True" />
         <Button Canvas.Left="129" Canvas.Top="36" Content="+" FontSize="14.667" Height="23" Name="btnPlus" Style="{DynamicResource SimpleButton}" Width="32" Click="btnPlus_Click" />
+        <Button Canvas.Left="167" Canvas.Top="36" Content="-" FontSize="14.667" Height="23" Name="btnEliminar" Style="{DynamicResource SimpleButton}" Width="32" Click="btnEliminar_Click" />
     </Canvas>
 </UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Datos;
+using Capa_Logica;
 using System.Collections;
 
 namespace TechoCeiva
@@ -43,6 +44,10 @@ namespace TechoCeiva
             dtgUsuarios.Columns[1].Header = "Nombres";
             dtgUsuarios.Columns[2].Header = "Apellidos";
             dtgUsuarios.Columns[3].Header = "Tipo de usuario";
+            dtgUsuarios.Columns[0].Width = 120;
+            dtgUsuarios.Columns[1].Width = 120;
+            dtgUsuarios.Columns[2].Width = 120;
+            dtgUsuarios.Columns[3].Width = 120;
             dtgUsuarios.DisplayMemberPath = "Nombres";
         }
 
@@ -59,5 +64,19 @@ namespace TechoCeiva
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(usuario);
             usuario.Show();
         }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            if (dtgUsuarios.SelectedIndex == -1)
+                return;
+            MessageBoxResult resultado = MessageBox.Show("Desea eliminar los datos del usario seleccionado?", "", MessageBoxButton.YesNo);
+            if (resultado == MessageBoxResult.Yes)
+            {
+                DatosUsuario usuario = (DatosUsuario) dtgUsuarios.SelectedItem;
+                ValidarDatosUsuarios.eliminarUsuario(usuario.userName);
+                refrescar();
+            }
+        }
+
     }
 }
