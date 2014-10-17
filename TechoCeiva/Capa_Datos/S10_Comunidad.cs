@@ -315,7 +315,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad   FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad and idS10_com = idencuestas Order by Propio";
+                string consulta = "SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad   FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by Propio";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
                 comando.CommandTimeout = 12280;
