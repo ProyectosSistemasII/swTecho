@@ -35,7 +35,8 @@ namespace TechoCeiva
             Boolean correcto = usuario.iniciarSesion(txt_username.Text, txt_password.Password);
             if (correcto)
             {
-                frmMenu menu = new frmMenu();
+                frmMenu menu = new frmMenu(usuario);
+                int id = usuario.idUsuarios;
                 menu._nLog = _new;
                 _new.Hide();
                 menu.Show();

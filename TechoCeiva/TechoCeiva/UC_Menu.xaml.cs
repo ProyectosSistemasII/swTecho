@@ -28,6 +28,12 @@ namespace TechoCeiva
 
         public UC_Menu(UsuarioLN user)
         {
+            this.InitializeComponent();
+            this.currentUser = user;
+        }
+
+        public void setUser(UsuarioLN user)
+        {
             this.currentUser = user;
         }
 
@@ -44,8 +50,10 @@ namespace TechoCeiva
             ///
             /// Se necesita parámetro this.currentUser
             ///
+            //UC_Prestamo ucPrestamo = new UC_Prestamo();
+            //ucPrestamo.setUser(this.currentUser);
             canvasMenu.Children.Clear();
-            canvasMenu.Children.Add(new UC_Prestamo());
+            canvasMenu.Children.Add(new UC_Prestamo(this.currentUser));
         }
 
         private void btnToolsIngresar_Click_1(object sender, RoutedEventArgs e)

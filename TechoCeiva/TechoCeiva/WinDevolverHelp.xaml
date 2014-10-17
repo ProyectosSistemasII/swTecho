@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinDevolverHelp"
 	x:Name="Window"
 	Title="Detalle"
-	Width="352" Height="605" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+	Width="352" Height="605" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FFA1A0A0">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -21,7 +21,7 @@
 		<Label x:Name="lblDañadas" Content="Dañadas:" HorizontalAlignment="Left" Margin="23,238,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
 		<Label x:Name="lblBuenEstado" Content="Pendientes:" HorizontalAlignment="Left" Margin="23,378.028,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
 		<Label x:Name="lblPendientes" Content="Perdídas:" HorizontalAlignment="Left" Margin="23,308.014,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<Separator Margin="8,220.037,8,0" Height="13" VerticalAlignment="Top"/>
+		<Separator Margin="23,220.037,29,0" Height="13" VerticalAlignment="Top" Background="#FF8F8D8D"/>
 		<TextBox x:Name="txtHerramienta" HorizontalAlignment="Left" Margin="23,42.506,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Width="300" IsEnabled="False"/>
 		<TextBox x:Name="txtFechaPrestamo" Margin="23,112.518,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300" IsEnabled="False"/>
 		<TextBox x:Name="txtCantidad" Margin="23,182.53,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left" Width="300" IsEnabled="False"/>

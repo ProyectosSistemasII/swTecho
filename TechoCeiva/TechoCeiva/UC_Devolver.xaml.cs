@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
 using Capa_Logica_Negocio;
+using Capa_Datos;
 
 namespace TechoCeiva
 {
@@ -20,9 +21,12 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class UC_Devolver : UserControl
 	{
+        private _Voluntarios voluntario = new _Voluntarios();
+
 		public UC_Devolver()
 		{
 			this.InitializeComponent();
+            fillGrid();
 		}
 
         private void btnAddSingle_Click(object sender, RoutedEventArgs e)
@@ -30,6 +34,18 @@ namespace TechoCeiva
             WinDevolverHelp _nWin = new WinDevolverHelp();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(_nWin);
             _nWin.Show();
+        }
+
+        private void btnFiltro_Click(object sender, RoutedEventArgs e)
+        {
+            WinFiltro nWinFiltro = new WinFiltro();
+            nWinFiltro.ShowDialog();
+            voluntario = nWinFiltro.getChosen();
+        }
+
+        private void fillGrid()
+        {
+            DataGridListadoPrestamos.ItemsSource = new _PrestamosLN().obtenerTodosPrestamos();
         }
 	}
 }

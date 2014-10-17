@@ -28,6 +28,12 @@ namespace TechoCeiva
 
         public UC_Prestamo(UsuarioLN user)
         {
+            this.InitializeComponent();
+            this.currentUser = user;
+        }
+
+        public void setUser(UsuarioLN user)
+        {
             this.currentUser = user;
         }
 
@@ -37,8 +43,10 @@ namespace TechoCeiva
             /// UC_Manage() es el equivalente a UC_Prestar
             /// se necesita parámetro this.currentUser
             ///
+            //UC_Manage ucPrestar = new UC_Manage();
+            //ucPrestar.setUser(this.currentUser);
             CanvasBotton.Children.Clear();
-            CanvasBotton.Children.Add(new UC_Manage());
+            CanvasBotton.Children.Add(new UC_Manage(this.currentUser));
         }
 
         private void btnDevolver_Click(object sender, RoutedEventArgs e)

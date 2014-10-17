@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddTool"
 	x:Name="Window"
 	Title="Agregar Herramienta"
-	Width="379" Height="246" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+	Width="379" Height="275.6" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFC4C2C2" WindowStyle="None">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -15,11 +15,12 @@
 	</Window.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Label x:Name="lblHerramienta" Content="Herramienta:" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" ToolTip="Nombre de la nueva herramienta"/>
-		<TextBox x:Name="txtHerramienta" Margin="23,42.507,0,0" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="327" HorizontalAlignment="Left" d:LayoutOverrides="Width" KeyDown="txtHerramienta_KeyDown" />
-		<Label Content="Cantidad:" HorizontalAlignment="Left" Margin="23,92.007,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top" ToolTip="Cantidad para la nueva herramienta"/>
-		<TextBox x:Name="txtCantidad" Margin="23,111.513,23,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" d:LayoutOverrides="Height" KeyDown="txtCantidad_KeyDown" />
-		<Button x:Name="btnAgregar" Content="Agregar" Margin="23,0,0,21.8" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnAgregar_Click" HorizontalAlignment="Left" Width="109" Background="#FF0092DD" Foreground="White" Height="36" VerticalAlignment="Bottom" ToolTip="Guardar Herramienta" />
-		<Button x:Name="btnCancelar" Content="Cerrar" Margin="155,0,0,21.8" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnCancelar_Click" HorizontalAlignment="Left" Width="109" Foreground="White" Background="#FFC52023" Height="36" VerticalAlignment="Bottom" ToolTip="Cerrar" />
+		<Label x:Name="lblHerramienta" Content="Nombre:" HorizontalAlignment="Left" Margin="23,58.8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" ToolTip="Nombre de la nueva herramienta"/>
+		<TextBox x:Name="txtHerramienta" Margin="23,78.307,0,0" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="327" HorizontalAlignment="Left" d:LayoutOverrides="Width" KeyDown="txtHerramienta_KeyDown" />
+		<Label Content="Cantidad:" HorizontalAlignment="Left" Margin="23,127.807,0,98.686" Style="{DynamicResource SimpleLabel}" FontSize="14.667" ToolTip="Cantidad para la nueva herramienta" d:LayoutOverrides="Height"/>
+		<TextBox x:Name="txtCantidad" Margin="23,147.313,23,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" VerticalAlignment="Top" d:LayoutOverrides="Height" KeyDown="txtCantidad_KeyDown" />
+		<Button x:Name="btnAgregar" Content="Agregar" Margin="23,194.8,0,0" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnAgregar_Click" HorizontalAlignment="Left" Width="109" Background="#FF0092DD" Foreground="White" Height="36" VerticalAlignment="Top" ToolTip="Guardar Herramienta" />
+		<Button x:Name="btnCancelar" Content="Cerrar" Margin="155,194.8,0,0" Style="{DynamicResource SimpleButton}" BorderBrush="{x:Null}" Click="btnCancelar_Click" HorizontalAlignment="Left" Width="109" Foreground="White" Background="#FFC52023" Height="36" VerticalAlignment="Top" ToolTip="Cerrar" />
+		<Label Content="Nueva Herramienta" HorizontalAlignment="Left" Margin="23,23,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="18.667" d:LayoutOverrides="HorizontalAlignment"/>
 	</Grid>
 </Window>

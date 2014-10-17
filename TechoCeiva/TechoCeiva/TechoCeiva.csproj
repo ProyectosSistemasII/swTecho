@@ -197,6 +197,9 @@
     <Compile Include="WinDevolverHelp.xaml.cs">
       <DependentUpon>WinDevolverHelp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinFiltro.xaml.cs">
+      <DependentUpon>WinFiltro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinModifyTool.xaml.cs">
       <DependentUpon>WinModifyTool.xaml</DependentUpon>
     </Compile>
@@ -352,6 +355,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="WinDevolverHelp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WinFiltro.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -17,14 +17,14 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Label Content="Nueva Herramienta" HorizontalAlignment="Left" Margin="23,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="26.667"/>
+		<Label Content="Herramientas" HorizontalAlignment="Left" Margin="23,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF020202" FontSize="26.667"/>
         
-		<DataGrid Margin="23,79.47,0,18.03" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" Width="562.2" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" MouseDoubleClick="DataGridHerramientas_MouseDoubleClick" Background="White">
+		<DataGrid Margin="23,56.27,0,41.23" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" Width="562.2" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" MouseDoubleClick="DataGridHerramientas_MouseDoubleClick" Background="White">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="360" FontSize="14"/>           
                 <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="177.3" FontSize="14"/>
             </DataGrid.Columns>
         </DataGrid>
-		<Button x:Name="btnPlus" Content="+" Margin="274.683,8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="35.47" BorderBrush="{x:Null}" Background="#FF0092DD" HorizontalAlignment="Left" Width="36" FontSize="14.667" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" Foreground="White" />
+		<Button x:Name="btnPlus" Content="+" Margin="273.883,18.168,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Height="25.07" BorderBrush="{x:Null}" Background="#FF0092DD" HorizontalAlignment="Left" Width="36" FontSize="14.667" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" Foreground="White" />
 	</Grid>
 </UserControl>

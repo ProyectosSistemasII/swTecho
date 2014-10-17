@@ -33,7 +33,7 @@ namespace Capa_Datos
             this.CantidadMalEstado = 0;
             this.CantidadPerdida = 0;
             this.Activo = 0;
-            this.Devolucion = DateTime.Parse("YYYY/MM/DD");
+            this.Devolucion = DateTime.MinValue;
         }
 
         public _DetallePrestamo(int idDetalle, int idHerramienta, int idDetallePrestamo, int cantidadBuena, int cantidadMala, int cantidadPerdida, int activo, DateTime fechaDev)

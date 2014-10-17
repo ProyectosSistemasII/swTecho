@@ -90,14 +90,15 @@ namespace Capa_Logica
 
         public Boolean buscarElemento(ObservableCollection<_HerramientasLN> colection)
         {
+            Boolean exist = false;
             foreach (_HerramientasLN valor in colection)
             {
                 if (valor.idHerramientas.Equals(this.idHerramientas))
-                    return true;
+                    exist = true;
                 else
-                    return false;
+                    exist = false;
             }
-            return false;
+            return exist;
         }
 
         public ObservableCollection<_HerramientasLN> eliminarDeColeccion(ObservableCollection<_HerramientasLN> colection)
@@ -115,13 +116,15 @@ namespace Capa_Logica
             return colection;
         }
 
-        public void guardarElementos(ObservableCollection<_HerramientasLN> listado, int idPrestamo)
+        public List<_Herramientas> obtenerListado(ObservableCollection<_HerramientasLN> listadoObjetos)
         {
-            List<_Herramientas> nuevoListado = new List<_Herramientas>();
-            foreach (_HerramientasLN herramienta in listado)
+            List<_Herramientas> listado = new List<_Herramientas>();
+
+            foreach (_HerramientasLN herramienta in listadoObjetos)
             {
-                nuevoListado.Add(herramienta);
+                listado.Add(herramienta);
             }
+            return listado;
         }
     }
 }
