@@ -184,9 +184,16 @@ namespace Capa_Datos
             }
         }
 
-        public Boolean verificarduplicado(String nombre, string rango, int año, int presentacion)
+        public Boolean verificarduplicado(String nombre, String rango, int año, int presentacion)
         {
-            return true;
+            if (this.Nombre == nombre & this.Rango == rango & this.AnioCaducidad == año & this.Presentacion_idPresentacion == presentacion)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
     }
