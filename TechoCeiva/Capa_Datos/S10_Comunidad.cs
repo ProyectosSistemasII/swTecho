@@ -315,7 +315,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad   FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by Propio";
+                string consulta = "SELECT S10_com.Ayudo,S10_com.AyudaVecinos, S10_com.RelacionVecinos, S10_com.OrganizarVecinos,S10_com.OrganizarA,S10_com.OrganizarB,S10_com.OrganizarC, S10_com.ParticipacionGrupo,S10_com.Necesidad ,S10_com.NecesidadCom, S10_com.AspectoPositivoA,S10_com.AspectoPositivoB,S10_com.AspectoNegativoA,S10_com.AspectoNegativoB,S10_com.confianzaOrganizacion,S10_com.LiderA,S10_com.LiderB,S10_com.LiderC, S10_com.EstadoComunidadPasado, S10_com.EstadoComunidadFuturo   FROM S10_com    inner join Encuestas on Comunidad_idComunidad = 1 and Encuestas_idEncuestas = idencuestas Order by Ayudo";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
                 comando.CommandTimeout = 12280;
@@ -326,7 +326,7 @@ namespace Capa_Datos
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message + "   " + ex.Number, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ///Error error = new Error(ex.Message + "   " + ex.Number, 2);
                 //errores.Add(error);

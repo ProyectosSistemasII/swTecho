@@ -122,6 +122,12 @@
       <DependentUpon>RptDepto.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptS10_Comunidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptS10_Comunidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RptS11_Movilidad.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -241,6 +247,10 @@
     <EmbeddedResource Include="RptDepto.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptDepto.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptS10_Comunidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptS10_Comunidad.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RptS11_Movilidad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
