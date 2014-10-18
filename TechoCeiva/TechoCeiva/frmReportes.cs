@@ -61,6 +61,14 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpt;
 
             }
+            else if (cmbSeleccionReporte.SelectedItem == "Movilidad")
+            {
+                S11_MovilidadLN NReporte = new S11_MovilidadLN();
+                RptS11_Movilidad rpt = new RptS11_Movilidad();
+                rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt;
+
+            }
 
             this.btnGenerar.Enabled = true;
         }

@@ -1,0 +1,1 @@
+﻿SELECT GrupoPolitico   FROM S1006_com   inner join S10_Com on S1006_com_idS1006_com = idS1006_Com inner join Encuestas on Comunidad_idComunidad = 1 and Encuestas_idEncuestas = idencuestas Order by GrupoPolitico

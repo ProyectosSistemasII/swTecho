@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Capa_Datos
 {
@@ -94,6 +95,28 @@ namespace Capa_Datos
                 ListaMovilidad.Add(movilidad);
             }
             return ListaMovilidad;
+        }
+        public DataTable GenerarReporte(int comunidad)
+        {
+            try
+            {
+                string consulta = "SELECT S11_mov.VidaFamiliar, S11_mov.DireccionPasada, S11_mov.AnioTraslado ,S11_mov.ViviendaActual   FROM S11_mov    inner join Encuestas on Comunidad_idComunidad = 1 and Encuestas_idEncuestas = idencuestas Order by VidaFamiliar";
+                MySqlCommand comando = new MySqlCommand(consulta, conex);
+                comando.Parameters.AddWithValue("@idComunidad", comunidad);
+                comando.CommandTimeout = 12280;
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message + "   " + ex.Number, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ///Error error = new Error(ex.Message + "   " + ex.Number, 2);
+                //errores.Add(error);
+                return null;
+            }
         }
     }
 }
