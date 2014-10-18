@@ -91,6 +91,7 @@ namespace Capa_Logica
             return Comunidad.GenerarReporte(comunidad);
 
         }
+        
     }
 
 }

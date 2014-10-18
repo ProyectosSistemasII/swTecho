@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Data;
 using Capa_Datos;
 
 namespace Capa_Logica
@@ -86,6 +87,11 @@ namespace Capa_Logica
             Error error = errores[0];
             return error;
         }
+        public DataTable ObtnerReporte(int comunidad)
+        {
+            S1014_Comunidad Propiedad = new S1014_Comunidad();
+            return Propiedad.GenerarReporte(comunidad);
 
+        }
     }
 }

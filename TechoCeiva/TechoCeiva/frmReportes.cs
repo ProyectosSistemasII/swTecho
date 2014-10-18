@@ -25,6 +25,8 @@ namespace TechoCeiva
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             this.btnGenerar.Enabled = false;
+           
+
             //Clase donde se encuentran las consultas de los reportes
             _Reportes generar = new _Reportes();
             //El reporte hecho en crystal reports
@@ -61,6 +63,51 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpt;
 
             }
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad")
+            {
+                S10_ComunidadLN NReporte = new S10_ComunidadLN();
+                rptS10_Comunidad rpt = new rptS10_Comunidad();
+                rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                //rpt.SetParameterValue("Comunidad", cmbComunidad.SelectedText);
+                crvReportes.ReportSource = rpt;
+
+            }
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 6")
+            {
+                S1006_ComunidadLN NReporte06 = new S1006_ComunidadLN();
+                S1006_Comunidad rpt1 = new S1006_Comunidad();
+                rpt1.SetDataSource(NReporte06.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt1;
+                
+                
+               /* S10_ComunidadLN NReporte = new S10_ComunidadLN();
+                rptS10_Comunidad rpt = new rptS10_Comunidad();
+                rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt;
+                /*
+               S1007_ComunidadLN NReporte07 = new S1007_ComunidadLN();
+                rptS10_Comunidad rpt2 = new rptS10_Comunidad();
+                rpt2.SetDataSource(NReporte07.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt2;
+
+              
+
+                
+                
+
+            
+                
+            
+                S1008_ComunidadLN NReporte08 = new S1008_ComunidadLN();
+                rptS10_Comunidad rpt3 = new rptS10_Comunidad();
+                rpt3.SetDataSource(NReporte08.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt3;
+
+                rptS10_Comunidad rpt4 = new rptS10_Comunidad();
+                S1014_ComunidadLN NReporte14 = new S1014_ComunidadLN();
+                rpt4.SetDataSource(NReporte14.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpt4;*/
+            }
             else if (cmbSeleccionReporte.SelectedItem == "Movilidad")
             {
                 S11_MovilidadLN NReporte = new S11_MovilidadLN();
@@ -69,6 +116,7 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpt;
 
             }
+            
 
             this.btnGenerar.Enabled = true;
         }

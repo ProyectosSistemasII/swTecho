@@ -374,6 +374,6 @@ namespace Capa_Logica
             S10_Comunidad Comunidad = new S10_Comunidad();
             return Comunidad.GenerarReporte(comunidad);
 
-        }
+        }        
     }
 }

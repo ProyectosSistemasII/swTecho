@@ -152,6 +152,12 @@
       <DependentUpon>RptS9_Propiedad.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="S1006_Comunidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>S1006_Comunidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UC_Comunidad.xaml.cs">
       <DependentUpon>UC_Comunidad.xaml</DependentUpon>
     </Compile>
@@ -267,6 +273,10 @@
     <EmbeddedResource Include="RptS9_Propiedad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptS9_Propiedad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S1006_Comunidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>S1006_Comunidad.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DSReportes.xsc">

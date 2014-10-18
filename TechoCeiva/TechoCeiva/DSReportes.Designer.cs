@@ -571,6 +571,8 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnBasuraHogar;
             
+            private global::System.Data.DataColumn columnComunidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public S8_ServiciosDataTable() {
@@ -654,6 +656,14 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ComunidadColumn {
+                get {
+                    return this.columnComunidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -689,7 +699,7 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public S8_ServiciosRow AddS8_ServiciosRow(string AccesoAgua, string FuenteAgua, string EnergiaElectrica, string EnergiaCocina, string Sanitario, string BasuraHogar) {
+            public S8_ServiciosRow AddS8_ServiciosRow(string AccesoAgua, string FuenteAgua, string EnergiaElectrica, string EnergiaCocina, string Sanitario, string BasuraHogar, string Comunidad) {
                 S8_ServiciosRow rowS8_ServiciosRow = ((S8_ServiciosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AccesoAgua,
@@ -697,7 +707,8 @@ namespace TechoCeiva {
                         EnergiaElectrica,
                         EnergiaCocina,
                         Sanitario,
-                        BasuraHogar};
+                        BasuraHogar,
+                        Comunidad};
                 rowS8_ServiciosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowS8_ServiciosRow);
                 return rowS8_ServiciosRow;
@@ -726,6 +737,7 @@ namespace TechoCeiva {
                 this.columnEnergiaCocina = base.Columns["EnergiaCocina"];
                 this.columnSanitario = base.Columns["Sanitario"];
                 this.columnBasuraHogar = base.Columns["BasuraHogar"];
+                this.columnComunidad = base.Columns["Comunidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -743,6 +755,8 @@ namespace TechoCeiva {
                 base.Columns.Add(this.columnSanitario);
                 this.columnBasuraHogar = new global::System.Data.DataColumn("BasuraHogar", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBasuraHogar);
+                this.columnComunidad = new global::System.Data.DataColumn("Comunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComunidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -882,6 +896,8 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnTipoPropiedad;
             
+            private global::System.Data.DataColumn columnComunidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public S9_PropiedadDataTable() {
@@ -941,6 +957,14 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ComunidadColumn {
+                get {
+                    return this.columnComunidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -976,12 +1000,13 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public S9_PropiedadRow AddS9_PropiedadRow(string Propio, string Propietario, string TipoPropiedad) {
+            public S9_PropiedadRow AddS9_PropiedadRow(string Propio, string Propietario, string TipoPropiedad, string Comunidad) {
                 S9_PropiedadRow rowS9_PropiedadRow = ((S9_PropiedadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Propio,
                         Propietario,
-                        TipoPropiedad};
+                        TipoPropiedad,
+                        Comunidad};
                 rowS9_PropiedadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowS9_PropiedadRow);
                 return rowS9_PropiedadRow;
@@ -1007,6 +1032,7 @@ namespace TechoCeiva {
                 this.columnPropio = base.Columns["Propio"];
                 this.columnPropietario = base.Columns["Propietario"];
                 this.columnTipoPropiedad = base.Columns["TipoPropiedad"];
+                this.columnComunidad = base.Columns["Comunidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1018,6 +1044,8 @@ namespace TechoCeiva {
                 base.Columns.Add(this.columnPropietario);
                 this.columnTipoPropiedad = new global::System.Data.DataColumn("TipoPropiedad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTipoPropiedad);
+                this.columnComunidad = new global::System.Data.DataColumn("Comunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComunidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1406,6 +1434,8 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnDireccionPasada;
             
+            private global::System.Data.DataColumn columnComunidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public S11_MovilidadDataTable() {
@@ -1473,6 +1503,14 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ComunidadColumn {
+                get {
+                    return this.columnComunidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1508,13 +1546,14 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public S11_MovilidadRow AddS11_MovilidadRow(string VidaFamiliar, string AnioTraslado, string ViviendaActual, string DireccionPasada) {
+            public S11_MovilidadRow AddS11_MovilidadRow(string VidaFamiliar, string AnioTraslado, string ViviendaActual, string DireccionPasada, string Comunidad) {
                 S11_MovilidadRow rowS11_MovilidadRow = ((S11_MovilidadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         VidaFamiliar,
                         AnioTraslado,
                         ViviendaActual,
-                        DireccionPasada};
+                        DireccionPasada,
+                        Comunidad};
                 rowS11_MovilidadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowS11_MovilidadRow);
                 return rowS11_MovilidadRow;
@@ -1541,6 +1580,7 @@ namespace TechoCeiva {
                 this.columnAnioTraslado = base.Columns["AnioTraslado"];
                 this.columnViviendaActual = base.Columns["ViviendaActual"];
                 this.columnDireccionPasada = base.Columns["DireccionPasada"];
+                this.columnComunidad = base.Columns["Comunidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1554,6 +1594,8 @@ namespace TechoCeiva {
                 base.Columns.Add(this.columnViviendaActual);
                 this.columnDireccionPasada = new global::System.Data.DataColumn("DireccionPasada", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDireccionPasada);
+                this.columnComunidad = new global::System.Data.DataColumn("Comunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComunidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2776,6 +2818,8 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnEstadoComunidadFuturo;
             
+            private global::System.Data.DataColumn columnComunidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public S10_ComunidadDataTable() {
@@ -2971,6 +3015,14 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ComunidadColumn {
+                get {
+                    return this.columnComunidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3026,7 +3078,8 @@ namespace TechoCeiva {
                         string LiderB, 
                         string LiderC, 
                         string EstadoComunidadPasado, 
-                        string EstadoComunidadFuturo) {
+                        string EstadoComunidadFuturo, 
+                        string Comunidad) {
                 S10_ComunidadRow rowS10_ComunidadRow = ((S10_ComunidadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Ayudo,
@@ -3048,7 +3101,8 @@ namespace TechoCeiva {
                         LiderB,
                         LiderC,
                         EstadoComunidadPasado,
-                        EstadoComunidadFuturo};
+                        EstadoComunidadFuturo,
+                        Comunidad};
                 rowS10_ComunidadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowS10_ComunidadRow);
                 return rowS10_ComunidadRow;
@@ -3091,6 +3145,7 @@ namespace TechoCeiva {
                 this.columnLiderC = base.Columns["LiderC"];
                 this.columnEstadoComunidadPasado = base.Columns["EstadoComunidadPasado"];
                 this.columnEstadoComunidadFuturo = base.Columns["EstadoComunidadFuturo"];
+                this.columnComunidad = base.Columns["Comunidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3136,6 +3191,8 @@ namespace TechoCeiva {
                 base.Columns.Add(this.columnEstadoComunidadPasado);
                 this.columnEstadoComunidadFuturo = new global::System.Data.DataColumn("EstadoComunidadFuturo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEstadoComunidadFuturo);
+                this.columnComunidad = new global::System.Data.DataColumn("Comunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComunidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3733,6 +3790,22 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comunidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableS8_Servicios.ComunidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Comunidad\' de la tabla \'S8_Servicios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS8_Servicios.ComunidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAccesoAguaNull() {
                 return this.IsNull(this.tableS8_Servicios.AccesoAguaColumn);
             }
@@ -3802,6 +3875,18 @@ namespace TechoCeiva {
             public void SetBasuraHogarNull() {
                 this[this.tableS8_Servicios.BasuraHogarColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsComunidadNull() {
+                return this.IsNull(this.tableS8_Servicios.ComunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetComunidadNull() {
+                this[this.tableS8_Servicios.ComunidadColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -3868,6 +3953,22 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comunidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableS9_Propiedad.ComunidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Comunidad\' de la tabla \'S9_Propiedad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS9_Propiedad.ComunidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPropioNull() {
                 return this.IsNull(this.tableS9_Propiedad.PropioColumn);
             }
@@ -3900,6 +4001,18 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTipoPropiedadNull() {
                 this[this.tableS9_Propiedad.TipoPropiedadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsComunidadNull() {
+                return this.IsNull(this.tableS9_Propiedad.ComunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetComunidadNull() {
+                this[this.tableS9_Propiedad.ComunidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4026,6 +4139,22 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comunidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableS11_Movilidad.ComunidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Comunidad\' de la tabla \'S11_Movilidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS11_Movilidad.ComunidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsVidaFamiliarNull() {
                 return this.IsNull(this.tableS11_Movilidad.VidaFamiliarColumn);
             }
@@ -4070,6 +4199,18 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDireccionPasadaNull() {
                 this[this.tableS11_Movilidad.DireccionPasadaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsComunidadNull() {
+                return this.IsNull(this.tableS11_Movilidad.ComunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetComunidadNull() {
+                this[this.tableS11_Movilidad.ComunidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5159,6 +5300,22 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comunidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableS10_Comunidad.ComunidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Comunidad\' de la tabla \'S10_Comunidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS10_Comunidad.ComunidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAyudoNull() {
                 return this.IsNull(this.tableS10_Comunidad.AyudoColumn);
             }
@@ -5395,6 +5552,18 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEstadoComunidadFuturoNull() {
                 this[this.tableS10_Comunidad.EstadoComunidadFuturoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsComunidadNull() {
+                return this.IsNull(this.tableS10_Comunidad.ComunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetComunidadNull() {
+                this[this.tableS10_Comunidad.ComunidadColumn] = global::System.Convert.DBNull;
             }
         }
         
