@@ -93,6 +93,9 @@
             "Propiedad",
             "Comunidad",
             "Comunidad Pregunta 6",
+            "Comunidad Pregunta 7",
+            "Comunidad Pregunta 8",
+            "Comunidad Pregunta 14",
             "Movilidad"});
             this.cmbSeleccionReporte.Location = new System.Drawing.Point(12, 163);
             this.cmbSeleccionReporte.Name = "cmbSeleccionReporte";

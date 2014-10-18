@@ -158,6 +158,24 @@
       <DependentUpon>S1006_Comunidad.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="S1007_Comunidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>S1007_Comunidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="S1008_Comunidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>S1008_Comunidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="S1014_Comunidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>S1014_Comunidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UC_Comunidad.xaml.cs">
       <DependentUpon>UC_Comunidad.xaml</DependentUpon>
     </Compile>
@@ -277,6 +295,18 @@
     <EmbeddedResource Include="S1006_Comunidad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>S1006_Comunidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S1007_Comunidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>S1007_Comunidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S1008_Comunidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>S1008_Comunidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S1014_Comunidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>S1014_Comunidad.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DSReportes.xsc">
