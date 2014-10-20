@@ -1,0 +1,29 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TechoCeiva.UC_ShowDetalle"
+	x:Name="UserControl" d:DesignHeight="480" Height="439" Width="696.8">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Simple Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<DataGrid Height="336.47" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" Width="665.783" Margin="0,62.013,0,0" Background="White" BorderBrush="{x:Null}" Foreground="#FF333333" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" FontSize="14.667">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Herramienta" Width="300" Binding="{Binding Herramienta}"/>
+				<DataGridTextColumn Header="Cantidad" Width="150" Binding="{Binding Cantidad}"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label Content="Fecha:" HorizontalAlignment="Left" Margin="0,38.506,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Button x:Name="btnDevolver" Content="Devolver" HorizontalAlignment="Right" Margin="0,33.013,52.617,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="25" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" FontSize="14.667" Click="btnDevolver_Click" />
+		<Button x:Name="btnRegresar" Content="&lt;- Regresar" HorizontalAlignment="Right" Margin="0,0,52.617,11.517" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="109" Height="25" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" FontSize="14.667"/>
+	</Grid>
+</UserControl>

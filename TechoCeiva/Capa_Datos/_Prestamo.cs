@@ -52,14 +52,9 @@ namespace Capa_Datos
             {
                 int  lastID = 0;
                 string consulta = "insert into prestamo (Usuarios_idUsuarios, Voluntarios_idVoluntarios, FechaPrestamo," +
-                                                        "Observaciones, Activo, FechaFinPrestamo,Comunidad_idComunidad)" +
+                                                        "Observaciones, Activo, FechaFinPrestamo)" +
                                                 "values (@idUsuario, @idVoluntario, @FechaPrestamo, @Observaciones," +
-                                                        "@Activo, @FechaFinPrestamo, @idComunidad)";
-                /*
-                string query = "INSERT INTO prestamo (Usuarios_idUsuarios, Voluntarios_idVoluntarios, FechaPrestamo, Observaciones,"
-                                + " Activo, FechaFinPrestamo, Comunidad_idComunidad) VALUES (@idUsuario, @idVoluntario, @FechaPrestamo,"
-                                + " @Observaciones, @Activo, @FechaFinPrestamo, @idComunidad";
-                 * */
+                                                        "@Activo, @FechaFinPrestamo)";
 
                 MySqlCommand _comando = new MySqlCommand(consulta, ConexionBD.conexion);
                 _comando.Parameters.AddWithValue("@idUsuario", this.idUsuario);
@@ -68,7 +63,6 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@Observaciones", this.Observaciones);
                 _comando.Parameters.AddWithValue("@Activo", 1);
                 _comando.Parameters.AddWithValue("@FechaFinPrestamo", this.fechaFinPrestamo);
-                _comando.Parameters.AddWithValue("@idComunidad", 1);
 
                 try
                 {
@@ -80,6 +74,7 @@ namespace Capa_Datos
                 }
                 catch (MySqlException ex)
                 {
+                    _comando.Connection.Close();
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
@@ -130,6 +125,30 @@ namespace Capa_Datos
             }
 
             return listadoPrestamos;
+        }
+        
+        public List<_Prestamo> buscarPrestamosPor(int idVoluntario)
+        {
+            string query = "Select * FROM Prestamo WHERE Activo = 1 AND Voluntarios_idVoluntarios = "+idVoluntario;
+            List<_Prestamo> listadoPrestamosEspecificos = new List<_Prestamo>();
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            for (int i = 0; i < _tabla.Rows.Count; i++)
+            {
+                DataRow _row = _tabla.Rows[i];
+                _Prestamo prestamo = new _Prestamo(Convert.ToInt32(_row["idPrestamo"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaPrestamo"]), Convert.ToString(_row["Observaciones"]), Convert.ToInt32(_row["Activo"]));
+                listadoPrestamosEspecificos.Add(prestamo);
+            }
+
+            return listadoPrestamosEspecificos;
         }
     }
 }

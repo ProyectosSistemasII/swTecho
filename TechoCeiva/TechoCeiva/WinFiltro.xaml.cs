@@ -19,11 +19,13 @@ namespace TechoCeiva
 	/// </summary>
 	public partial class WinFiltro : Window
 	{
-        public _Voluntarios chosen { get; set; }
+        private _Voluntarios chosen { get; set; }
+        private Boolean flag { get; set; }
 
 		public WinFiltro()
 		{
 			this.InitializeComponent();
+            this.flag = false;
             fillComboBox();
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
@@ -33,9 +35,19 @@ namespace TechoCeiva
             this.chosen = v;
         }
 
+        public void setIsVolunteerSelected(Boolean b)
+        {
+            this.flag = b;
+        }
+
         public _Voluntarios getChosen()
         {
             return this.chosen;
+        }
+
+        public Boolean isVolunteerSelected()
+        {
+            return flag;
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -54,6 +66,7 @@ namespace TechoCeiva
         {
             _Voluntarios elegido = cbxVoluntario.SelectedItem as _Voluntarios;
             this.setChosen(elegido);
+            this.setIsVolunteerSelected(true);
             this.Close();
         }
 	}

@@ -176,6 +176,9 @@
     <Compile Include="UC_Settings.xaml.cs">
       <DependentUpon>UC_Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UC_ShowDetalle.xaml.cs">
+      <DependentUpon>UC_ShowDetalle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UC_User.xaml.cs">
       <DependentUpon>UC_User.xaml</DependentUpon>
     </Compile>
@@ -327,6 +330,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UC_Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UC_ShowDetalle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
