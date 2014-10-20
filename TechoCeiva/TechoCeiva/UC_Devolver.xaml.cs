@@ -40,12 +40,29 @@ namespace TechoCeiva
         {
             WinFiltro nWinFiltro = new WinFiltro();
             nWinFiltro.ShowDialog();
-            voluntario = nWinFiltro.getChosen();
+            if (nWinFiltro.isVolunteerSelected())
+            {
+                voluntario = nWinFiltro.getChosen();
+                lblFiltro.Content = "Filtrado por " + voluntario.nombres;
+                filtrarPrestamo(voluntario.idVoluntarios);
+            }
         }
 
         private void fillGrid()
         {
             DataGridListadoPrestamos.ItemsSource = new _PrestamosLN().obtenerTodosPrestamos();
+        }
+
+        private void filtrarPrestamo(int idVoluntario)
+        {
+            DataGridListadoPrestamos.ItemsSource = null;
+            DataGridListadoPrestamos.ItemsSource = new _PrestamosLN().buscarPrestamosPor(idVoluntario);
+        }
+
+        private void btnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            lblFiltro.Content = "";
+            fillGrid();
         }
 	}
 }

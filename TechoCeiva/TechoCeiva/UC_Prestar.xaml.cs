@@ -202,8 +202,8 @@ namespace TechoCeiva
             List<_Herramientas> listTools = new List<_Herramientas>();
             listTools = contenido.obtenerListado(detalle);
 
-            //try
-            //{
+            try
+            {
                 _Voluntarios voluntario = cbxVoluntario.SelectedItem as _Voluntarios;
                 _PrestamosLN datosPrestamo = new _PrestamosLN(currentUser.idUsuarios, voluntario.idVoluntarios, Convert.ToDateTime(dpFecha.SelectedDate), txtObservaciones.Text);
                 Boolean correcto = datosPrestamo.ingresarPrestamo();
@@ -211,18 +211,30 @@ namespace TechoCeiva
                 if (correcto)
                 {
                     idPrestamo = datosPrestamo._InsertarPrestamo();
-                    //detallesPrestamo.insertarDetalle(listTools,idPrestamo);
+                    detallesPrestamo.insertarDetalle(listTools,idPrestamo);
+                    MessageBox.Show("Préstmo asignado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    clearContent();
                 }
                 else
                 {
                     MessageBox.Show(datosPrestamo.obtenerError());
                 }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Debe completar la información para poder guardar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
-           // }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Debe completar la información para poder guardar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void clearContent()
+        {
+            DataGridPrestamo.Items.Clear();
+            txtObservaciones.Clear();
+            txbxCantidad.Clear();
+            cbxVoluntario.SelectedIndex = -1;
+            cbxHerramienta.SelectedIndex = -1;
+            cbxVoluntario.IsDropDownOpen = true;
         }
 	}
 }
