@@ -149,42 +149,44 @@ namespace TechoCeiva
         /// <param name="e"></param>
         private void pbS11_Siguiente_Click(object sender, EventArgs e)
         {
+            // se verfica todos los combox de la seccion 11 por si alguno no se ha selecionado.
             int caso = this.VerificarCombobox_S11();            
+           //se instancia la clase para enviar datos a la capa logica
             S11_MovilidadLN S11 = new S11_MovilidadLN(cbxS11_1_VidaFamiliartxt, txtS11_2_DireccionPasada.Text, txtS11_3a_AñoTraslado.Text, txtS11_3b_Porque.Text, cbxS11_4_ViviedaActualtxt, txt_S11_ComentarioFinal.Text, this.idEncu);
-            Boolean correcto = S11.Ingresar_S11(caso);
+            Boolean correcto = S11.Ingresar_S11(caso); // si es verdadero significa que no tiene errores
             if (correcto)
-            {
+            { // terminamos la transaccion para realizar el commit
                 if (!tran.TerminarTransaccion())
                 {
                     DialogResult pregunta = MessageBox.Show("Desea Ingresar una nueva Encuesta?", "Pregunta!", MessageBoxButtons.YesNo);
                     if (pregunta == DialogResult.Yes)
                     {
-                        transaccion = false;
+                        transaccion = false; // la trasaccion a sido existosa y se reinicia la ventana para ingresar una nueva
                         Reiniciar = true;
                         this.Close();
                         //tbpS11.Parent = null;
                         //tbpInfo.Parent = tbcDatos;
                     }
                     else if (pregunta == DialogResult.No)
-                        this.Close();
+                        this.Close(); // sino responde no solo se cierra la ventana
                 }
                 else
                     MessageBox.Show("No se ha podido ingresar encuesta, intente de nuevo", "Advertencia", MessageBoxButtons.OK);
             }
             else
-            {
+            { // mostramos los posibles errores que hayan ocurrido tanto en la capa logica como datos
                 MessageBox.Show(S11.obtenerError().mensaje);
                 int cant =  S11.errores.Count -1;
 
-                for (int i= cant; i >=0; i--)
-                    this.Comprobar_S11(S11.errores[i].NumeroPregunta);
+                for (int i= cant; i >=0; i--) //el recorido es decendente, asi no queda el utilmo como el primer error encontrado y ayuda a que el focus se las primeras preguntas
+                    this.Comprobar_S11(S11.errores[i].NumeroPregunta); //verifica en que componente ocurrio el error
             }
         }
       
         public void Comprobar_S11(int pregunta)
         {
             switch (pregunta)
-            {
+            {// dependiendo del componente que poseea el error por su numero recibido, se verfificar y se colorea dicho componente con color rojo.
                 case 1:
                     cbxS11_1_VidaFamiliar.BackColor = ColorCampsVacios;
                     cbxS11_1_VidaFamiliar.Focus();
@@ -220,7 +222,7 @@ namespace TechoCeiva
                 cbxS11_1_VidaFamiliartxt = cbxS11_1_VidaFamiliar.SelectedItem.ToString();
             if (cbxS11_4_ViviedaActual.SelectedIndex != -1)
                 cbxS11_4_ViviedaActualtxt = cbxS11_4_ViviedaActual.SelectedItem.ToString();
-            if (cbxS11_1_VidaFamiliar.SelectedIndex == 0)
+            if (cbxS11_1_VidaFamiliar.SelectedIndex == 0) // dependiendo que contenido es selecionado para dar un salto y dejar algunos campos vacios
                 caso = 1;
             else
                 caso = 2;
@@ -234,83 +236,90 @@ namespace TechoCeiva
         /// <param name="e"></param>
         private void pbS10Cont_Siguiente_Click(object sender, EventArgs e)
         {
-            int caso = this.VerificarCombox_S10();
+            int caso = this.VerificarCombox_S10(); // se verfican los combobox se la seccion 10 para que no queden vacios o no seleccionados
             NuevaS10_Comunidad.S10_ComunidadLNCont(this.ckbS10_Positivo.Checked, txtS10_ApectosPositivosA.Text,txtS10_ApectosPositivosB.Text, ckbS10_Negativo.Checked,txtS10_ApectosNegativosA.Text, txtS10_ApectosNegativosB.Text, cbxS10_Discriminaciontxt,txtS10_TipoDiscriminacion.Text,cbxS10_OrganizacionComunitariatxt,txtS10_TipoOrganizaciones.Text, cbxS10_ConfiazaOrganizaciontxt,txtS10_ComentarioConfianza.Text, ckbS10_Lider.Checked, txtS10_LiderA.Text, txtS10_LiderB.Text, txtS10_LiderC.Text,cbxS10_EstadoPasadotxt, txtS10_ComentarioEstadoPasado.Text,cbxS10_estadoFuturotxt, txtS10_ComentarioEstadoFuturo.Text,NuevaS1014.idS1014_com);
-            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10Cont(caso);
+            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10Cont(caso); // se agrega la segunda parte de la encuestas y se verfica en la capa logica de negocio
             if (!correcto)
             {
-                goto Errores;
+                goto Errores; // si contiene errores se dirige en esa seccion
             }
-            if (Pregunta1014 == false)
+            if (Pregunta1014 == false) // se verfica si ya se ingreso es pregunta S1014 
             {
-                if (this.IngresarS1014() == true)
+                if (this.IngresarS1014() == true) 
                 {
                     Pregunta1014 = true;
-                    goto Ingresar;
+                    goto Ingresar; // no redirige a la apartado ingresar ya se obtuvo el id de la S1014_comunidad
                 }
             }
              
-            Errores:
+            Errores: // se reccorren los errores y muestra el mensaje del primer error
                 MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
                     int cant = NuevaS10_Comunidad.errores.Count - 1;
 
                     for (int i = cant; i >= 0; i--)
-                        this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
+                        this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta); //se corre de orden descendente para el focus.
                     goto Fin;
-            Ingresar:
+            Ingresar: // se ingresa el ID de la pregutna 14 
                 NuevaS10_Comunidad.idS1014 = NuevaS1014.idS1014_com;
-                Boolean correcto2 = NuevaS10_Comunidad.Insertar_S10_Com(Pregunta1014);
-                    if (!correcto2 == true)
+                Boolean correcto2 = NuevaS10_Comunidad.Insertar_S10_Com(Pregunta1014); // se envia para enviar la capa de datos
+                    if (!correcto2 == true) //si contine errore de regresa al apartado de errores
                         goto Errores;
                     else
                     {
-                        tbpS10Cont.Parent = null;
+                        tbpS10Cont.Parent = null; // se avanza a la siguiente seccion.
                         tbpS11.Parent = tbcDatos;
                     }
                 Fin:
-                return;
+                return; // sirve para terminar el evento y no retorna nada.
         }
        
         private void pbS10_Siguiente_Click(object sender, EventArgs e)
         {
-            int caso = this.VerificarCombox_S10();
+            int caso = this.VerificarCombox_S10(); // se verfican los combobox se la seccion 10 para que no queden vacios o no seleccionados
             NuevaS10_Comunidad = new S10_ComunidadLN(txtS10_Ayudo.Text, txtS10_AyudaVecinos.Text, cbxS10_RelacionVecinostxt,txtS10_CometarioRelacion.Text,cbxS10_OrganizarVecinostxt,txtS10_OrganizarA.Text,txtS10_OrganizarB.Text, txtS10_OrganizarC.Text, cbxS10_ParticipacionGrupotxt, cbxS10_Necesidadtxt, txtS10_NecesidadA.Text, txtS10_NecesidadB.Text,txtS10_NecesidadC.Text, cbxS10_NecesidadComtxt, txtS10_NecesidadComA.Text, txtS10_NecesidadComB.Text, txtS10_NecesidadComC.Text , cbxS10_ProyectosVecinostxt, txtS10_ProyectosVecinosA.Text, txtS10_ProyectosVecinosB.Text, txtS10_ProyectosVecinosC.Text, this.idEncu,NuevaS1006.idS1006_com,NuevaS1007.idS1007_com, NuevaS1008.idS1008_Com);
-            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10();
-            if (!correcto)
+            Boolean correcto = NuevaS10_Comunidad.Insertar_EncuS10(); // se ingresa la primera parte de esta seccion
+            if (!correcto) // si exsite error en capa logica
+            {//nos muestra el primer error y recorremos todos los errores en orden descendente.
+                goto Errores;
+            }
+            if (Pregunta1006 == false && caso == 1)// se compuesta si ya se ingreso pregunta 10-06 :: si es caso uno se debe ingresar y dejar vacio 10-07
             {
+                if (this.IngresarS1006() == true) 
+                    Pregunta1006=true;
+           }
+            if (Pregunta1007 == false && caso == 2)// se compuesta si ya se ingreso pregunta 10-07 :: si casi 2 se debe ingresar y dejar vacio 10-06
+            {
+                if(this.IngresarS1007() == true)
+                    Pregunta1007= true;
+            }
+            if (Pregunta1008 == false)// se compuesta si ya se ingreso pregunta 10-08
+            {
+                if (this.IngresarS1008() == true)
+                    Pregunta1008 = true;
+            }
+            if(correcto == true)
+            {
+                goto Avanzar; // esta seccion no tiene errores se puede avanzar a la siguiente seccion
+            }
+            
+            Errores:// muesta lo posibles erores siempre en orden ascendente
                 MessageBox.Show(NuevaS10_Comunidad.obtenerError().mensaje);
                 int cant = NuevaS10_Comunidad.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
-                
-            }
-            if (Pregunta1006 == false && caso == 1)
-            {
-                if (this.IngresarS1006() == true) 
-                    Pregunta1006=true;
-           }
-            if (Pregunta1007 == false&& caso ==2)
-            {
-                if(this.IngresarS1007() == true)
-                    Pregunta1007= true;
-           }
-            if (Pregunta1008 == false)
-            {
-                if (this.IngresarS1008() == true)
-                    Pregunta1008=true;
-            }            
-            else
-            {
+                goto fin;
+            Avanzar: // se activa la siguiente seccion y de oculta el actual.
                 tbpS10.Parent = null;
                 tbpS10Cont.Parent = tbcDatos;
-            }    
+            fin:
+                return; // finaliza el envento no envia nada
         }
 
         private void Comprobar_S10(int pregunta)
         {
             switch (pregunta)
-            {
+            {// se verfican tipo de errores y se pone el color rojo los compontes con contenido erroneo.
                 case 1:
                     txtS10_Ayudo.BackColor = ColorCampsVacios;
                     txtS10_Ayudo.Focus();
@@ -443,7 +452,7 @@ namespace TechoCeiva
         }
 
         public int VerificarCombox_S10()
-        {
+        {// se pone como vacio cuando combobox no se selecciona
             int NumeroCaso = 0;
             if ( cbxS10_RelacionVecinos.SelectedIndex!= -1)
                 cbxS10_RelacionVecinostxt = cbxS10_RelacionVecinos.SelectedItem.ToString();
@@ -467,7 +476,7 @@ namespace TechoCeiva
                 cbxS10_EstadoPasadotxt = cbxS10_EstadoPasado.SelectedItem.ToString();
             if (cbxS10_estadoFuturo.SelectedIndex != -1)
                 cbxS10_estadoFuturotxt = cbxS10_estadoFuturo.SelectedItem.ToString();
-            /// salto de preguntas
+            /// salto de preguntas y asi poder dejar algunos vacios
             if (cbxS10_ParticipacionGrupo.SelectedIndex == 1)
                 NumeroCaso = 2;
             if (Pregunta1006Mensaje == true)

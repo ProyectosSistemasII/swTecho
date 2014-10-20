@@ -13,7 +13,7 @@ namespace Capa_Datos
            "Server=localhost;" +
            "Database=swtecho;" +
            "UID=root;" +
-           "Password=12345;";
+           "Password=1302Tini;";
         //public static String ConexionDireccion = 
             //"Server=" + Properties.Settings.Default.server + ";" + 
             //"Database=" + Properties.Settings.Default.database + ";" + 
