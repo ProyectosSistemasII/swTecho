@@ -14,20 +14,26 @@ namespace TechoCeiva
     public partial class frmEncuesta : Form
     {
         public Boolean Reiniciar = false;
+        Color ColorCampsVacios = Color.Red; //variable para el colorer de los campos con errores.
         // variables para que no deje error los combobox cuando estan vacios cuando la pregunta
         //salta o otras dejan algunas vacios Seccion 9 
+      
+       /// varaibles para se seccion 9
+       
         String cbxS9_Propiotxt = "";
         String cbxS9_Propietariotxt = "";
         String cbxS9_TipoPropietariotxt = "";
         String cbxS9_OtraPropiedadtxt = "";
         ///---------------------------------------------------------------------------------------------------------
        
-        // variables para que no deje error los combobox cuando estan vacios Seccion 11
+        /// variables para que no deje error los combobox cuando estan vacios Seccion 11
         String cbxS11_1_VidaFamiliartxt= "";
         String cbxS11_4_ViviedaActualtxt= "";
-        /// -----------------------------------------------------------------------------------------------------------
+        ///
+        ///-----------------------------------------------------------------------------------------------------------
         
-        // variables para que no deje error los combobox cuando estan vacios Seccion 10
+        /// variables para que no deje error los combobox cuando estan vacios Seccion 10
+        
         S10_ComunidadLN NuevaS10_Comunidad = new S10_ComunidadLN();
         
         String cbxS10_RelacionVecinostxt ="";
@@ -51,8 +57,8 @@ namespace TechoCeiva
         Boolean Pregunta1008 = false;
         Boolean Pregunta1014 = false;
         Boolean Pregunta1006Mensaje = false;
-
-        //selecciones en la pregunta 1008
+        ///
+        ///selecciones en la pregunta 1008
         int rbtS1008_Familiar = -1;
         int rbtS1008_Vecinos = -1;
         int rbtS1008_lideresComunitarios = -1;
@@ -91,7 +97,7 @@ namespace TechoCeiva
         int rbtS808_Otros = 0;
         /// -----------------------------------------------------------------------------------------------------------
           
-        // variable de idComunidad
+        /// variable de idComunidad
         public int idComuni = 0;
         // ultimo idEncuesta
         public int idEncu = 0;
@@ -133,7 +139,7 @@ namespace TechoCeiva
         int Tierra = 0;
         ///-----------------------------------
 
-        Color ColorCampsVacios = Color.Red;
+       
 
         public frmEncuesta()
         {
@@ -487,39 +493,40 @@ namespace TechoCeiva
         }
 
         public Boolean IngresarS1014()
-        {
+        {   // ser instacia una nueva clase para pregunta 14 y se envia los datos
             NuevaS1014 = new S1014_ComunidadLN(Convert.ToBoolean(cklS1014_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1014_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)), txtS1014_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(8)));
 
-            Boolean correcto = NuevaS1014.Insertar_EncuS1014();
+            Boolean correcto = NuevaS1014.Insertar_EncuS1014(); // verficar sino poseen errores en capa logica
             if (!correcto)
-            {
+            {//se recorre el listado de errores posibles en orden descendente
                 MessageBox.Show(NuevaS1014.obtenerError().mensaje);
                 int cant = NuevaS1014.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S10(NuevaS1014.errores[i].NumeroPregunta);
             }
-            return correcto;
+            return correcto; // si todo a ido bien se envia un true para poder seguir y sacar el ID.
         }
                
         public Boolean IngresarS1008()
-        {
+        {// ser instacia una nueva clase para pregunta 10-08 y se envia los datos
             this.VerificarRadioBtn_S1008();
             NuevaS1008 = new S1008_ComunidadLN(rbtS1008_Familiar, rbtS1008_Vecinos, rbtS1008_lideresComunitarios, rbtS1008_Policia,rbtS1008_Municipalidad,rbtS1008_OrganizacionGobierno,rbtS1008_Ejercito,rbtS1008_partidosPoliticos,rbtS1008_Techo,rbtS1008_MedioComunicacion,rbtS1008_IglesiasReligiosos);
-            Boolean correcto = NuevaS1008.Insertar_EncuS1008();
+            Boolean correcto = NuevaS1008.Insertar_EncuS1008();// verficar sino poseen errores en capa logica
             if (!correcto)
-            {
+            {//se recorre el listado de errores posibles en orden descendente
                 MessageBox.Show(NuevaS1008.obtenerError().mensaje);
                 int cant = NuevaS1008.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S10(NuevaS1008.errores[i].NumeroPregunta);
             }
-            return correcto;
+            return correcto;// si todo a ido bien se envia un true para poder seguir y sacar el ID
         }
 
         public void VerificarRadioBtn_S1008()
-        {
+        {// se verfica los radioButton's selecionados y asi asignales un valor
+            // Nota valor: 0 = NS/NR ; 1 = NO; 2 = Indiferente ; 3 = SI.
             if (rbtS1008_Familia_NS.Checked)
                 rbtS1008_Familiar = 0;
             else if (rbtS1008_Familia_N.Checked)
@@ -611,35 +618,35 @@ namespace TechoCeiva
         }
         
         public Boolean IngresarS1007()
-        {
+        {// ser instacia una nueva clase para pregunta 10-07 y se envia los datos
             NuevaS1007 = new S1007_ComunidadLN(Convert.ToBoolean(cklS1007_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1007_Com.GetItemCheckState(4)),txtS1007_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)));
 
-            Boolean correcto = NuevaS1007.Insertar_EncuS1007();
+            Boolean correcto = NuevaS1007.Insertar_EncuS1007();// verficar sino poseen errores en capa logica
             if (!correcto)
-            {
+            {//se recorre el listado de errores posibles en orden descendente
                 MessageBox.Show(NuevaS1007.obtenerError().mensaje);
                 int cant = NuevaS1007.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S10(NuevaS1007.errores[i].NumeroPregunta);
             }
-            return correcto;
+            return correcto;// si todo a ido bien se envia un true para poder seguir y sacar el ID
         }
 
         public Boolean IngresarS1006()
-        {
+        {// ser instacia una nueva clase para pregunta 10-06 y se envia los datos
             NuevaS1006 = new S1006_ComunidadLN(Convert.ToBoolean(cklS1006_Com.GetItemCheckState(0)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(1)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(2)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(3)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(4)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(5)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(6)), Convert.ToBoolean(cklS1006_Com.GetItemCheckState(7)), txtS1006_Especificar.Text, Convert.ToBoolean(cklS1006_Com.GetItemCheckState(8)));
 
-            Boolean correcto = NuevaS1006.Insertar_EncuS1006();
+            Boolean correcto = NuevaS1006.Insertar_EncuS1006();// verficar sino poseen errores en capa logica
             if (!correcto)
-            {
+            {//se recorre el listado de errores posibles en orden descendente
                 MessageBox.Show(NuevaS1006.obtenerError().mensaje);
                 int cant = NuevaS1006.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S10(NuevaS1006.errores[i].NumeroPregunta);
             }
-            return correcto;
+            return correcto;// si todo a ido bien se envia un true para poder seguir y sacar el ID
         }
 
         /// <summary>
@@ -648,32 +655,32 @@ namespace TechoCeiva
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void pbS9_Siguiente_Click(object sender, EventArgs e)
-        {
+        {// verficar contenido de los combobox en caso de no selecionar alguno.
             int caso = this.VerificarCombox_S9();
             S9_PropiedadLN S9 ;
-            if (caso == 1)
+            if (caso == 1) // se segun sean los casos se envia solo algunos parametros y asi dejar algunos vacios con existen saltos en la preguntas.
                 S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_Propietariotxt, txtS9_OtroPropietario.Text, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.idEncu);
             else 
                 S9 = new S9_PropiedadLN(cbxS9_Propiotxt, cbxS9_TipoPropietariotxt, txtS9_OtroTipoPropietario.Text, txtS9_PropietarioTerreno.Text, txtS9_TelefonoPropietarioTerreno.Text, ckbS9_NSNR.Checked, cbxS9_OtraPropiedadtxt, txtS9_OtraPropiedadA.Text, txtS9_OtraPropiedadB.Text, txtS9_OtraPropiedadC.Text, this.idEncu);
             
             Boolean correcto = S9.Insertar_EncS9(caso);
-            if (correcto)
+            if (correcto) // cuando no existe error, se avanza a la siguiente seccion
             {
                 tbpS9.Parent = null;
                 tbpS10.Parent = tbcDatos;
             }
             else
-            {
+            { // se recorre el lsita de errores posibles que tengan la preguntas.
                 MessageBox.Show(S9.obtenerError().mensaje);
                 int cant = S9.errores.Count - 1;
-
+                //se recorrece en orden ascendente para mayor control del focus.
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S9(S9.errores[i].NumeroPregunta);
             }            
         }
          
         private void Comprobar_S9(int pregunta) 
-        {
+        {// se verfica los componentes que tenga errores para marcarlos con otro color.
             switch (pregunta)
             {
                 case 1:
@@ -716,7 +723,7 @@ namespace TechoCeiva
         }
 
         public int VerificarCombox_S9()
-        {   
+        {  //se verfica los combobox en caso que no se hayan seleccionados   y tambien los campos que se pueden dejar vacios.
             int NumeroCaso=0; 
             if (cbxS9_1_Propio.SelectedIndex != -1)
                 cbxS9_Propiotxt = cbxS9_1_Propio.SelectedItem.ToString();
@@ -747,55 +754,56 @@ namespace TechoCeiva
         /// <param name="e"></param>
         private void pbS8_Siguiente_Click(object sender, EventArgs e)
         {            
-            this.VerificarCombox_S8();
+            this.VerificarCombox_S8(); // se verifican los combobox por si existe alguno que no se haya seleccionado.
             S8_ServiciosLN S8 = new S8_ServiciosLN(cbxS8_AccesoAguatxt,cbxS8_FuenteAguatxt,txtS8_OtraFuente.Text,cbxS8_EnergiaElectricatxt,txtS8_OtraEnergiaElectrica.Text,cbxS8_EnergiaCocinatxt,txtS8_OtraEnergiaCocina.Text,cbxS8_Sanitariotxt,txtS8_OtroTipoSanitario.Text,cbxS8_BasuraHogartxt,txtS8_OtroTipoBasura.Text,this.idEncu);
              Boolean correcto = S8.Verficar_EncS8();
-            if (!correcto)
-            {
-                 MessageBox.Show(S8.obtenerError().mensaje);
-                int cant = S8.errores.Count - 1;
-
-                for (int i = cant; i >= 0; i--)
-                    this.Comprobar_S8(S8.errores[i].NumeroPregunta);                
-            } 
-            if (Pregunta807 == false)
+            
+            if (Pregunta807 == false) // sirve para el control de la pregunta 8.07 para solo ingresarla una vez.
             { 
                 if(this.IngresarS807() == true)
                     Pregunta807 = true;
             }
-            if (Pregunta808 == false)
+            if (Pregunta808 == false)// sirve para el control de la pregunta 8.06 para solo ingresarla una vez.
             {
                 if(this.IngresarS808() == true)
                     Pregunta808 = true;
-            } 
-            if (Pregunta807 == true && Pregunta808 == true)
+            }
+            if (Pregunta807 == true && Pregunta808 == true) // si ya se ingresaron los dos se va a inserta todas las preguntas de esta seccion
+            {
                 goto Ingresar;
-            else
+            }
+            if (!correcto)// si nos retorna falso recorremos el lista de errores
+            {
+                goto Errores;
+            } 
+
+            Errores:
+                MessageBox.Show(S8.obtenerError().mensaje);
+                int cant = S8.errores.Count - 1;
+                 //se recorre en orden descendente para mayor control del focus.
+                for (int i = cant; i >= 0; i--)
+                    this.Comprobar_S8(S8.errores[i].NumeroPregunta);
                 goto Fin;
-            
-            Ingresar:            
+            Ingresar: // sino existe error se el asigna los id de ls pregutnas 8.07 y 8.08             
                 S8.idS807_serv = NuevaS807.idS807_serv;
                 S8.idS808_serv = NuevaS808.idS808_Serv;
                 Boolean correcto2 = S8.Insertar_EcS8();
-                if (!correcto2)
+                if (!correcto2) // se ingresa en la seccion 8 hacia la base de datos.
                 {
-                    MessageBox.Show(S8.obtenerError().mensaje);
-                    int cant = S8.errores.Count - 1;
-
-                    for (int i = cant; i >= 0; i--)
-                        this.Comprobar_S8(S8.errores[i].NumeroPregunta);
-                }                       
+                    goto Errores;
+                }//se avanza a la siguiente seccion
+                tbpS8.Parent = null;
+                tbpS9.Parent = tbcDatos;          
            
             Fin:
-                tbpS8.Parent = null;
-                tbpS9.Parent = tbcDatos;
-                return;
+                
+                return; // termina el evento y no retorna nada.
         }
 
         private void Comprobar_S8(int pregunta)
         {
             switch (pregunta)
-            {
+            { // se comprueba cada error de cada seccion 8 y marcarlos con diferentes color.
                 case 1:
                     cbxS8_AccesoAgua.BackColor = Color.Red;
                     cbxS8_AccesoAgua.Focus();
@@ -844,7 +852,7 @@ namespace TechoCeiva
         }
 
         public void VerificarCombox_S8()
-        {
+        {// se verfica que todos los combobox han sido seleccionado de lo contrario se marcara con contenido vacio.
             if (cbxS8_AccesoAgua.SelectedIndex != -1)
                 cbxS8_AccesoAguatxt = cbxS8_AccesoAgua.SelectedItem.ToString();
             if (cbxS8_FuenteAgua.SelectedIndex != -1)
@@ -861,24 +869,24 @@ namespace TechoCeiva
 
         public Boolean IngresarS808()
         {
-            this.VerificarRadioBtn_S808();
+            this.VerificarRadioBtn_S808(); // se verfica a cada radio button de la pregunta 8.8
             NuevaS808 = new S808_ServiciosLN(rbtS808_Refrigerador, rbtS808_EquipoDeSonido, rbtS808_Televisor, rbtS808_ReproductorDVD, rbtS808_Motocicleta, rbtS808_Automovil, rbtS808_Computadora, rbtS808_Amueblado, rbtS808_Otros, rbtS808_OtroEspecificar.Text);
             Boolean correcto = NuevaS808.Insertar_EncuS808();
             if (!correcto)
-            {
+            {// se reccore los posibles errores que puedan existir y se envia el numero para ser marcado con otro color.
                 MessageBox.Show(NuevaS808.obtenerError().mensaje);
                 int cant = NuevaS808.errores.Count - 1;
 
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S808(NuevaS808.errores[i].NumeroPregunta);
             }
-            return correcto;
+            return correcto; // se retorna un true si toda ha ido bien
         }
 
         private void Comprobar_S808(int pregunta)
         {
             switch (pregunta)
-            {
+            {// se compralos componenetes que tiene errores y de marca con otro color
                 case 9:
                     rbtS808_OtroEspecificar.BackColor = ColorCampsVacios;
                     rbtS808_OtroEspecificar.Focus();
@@ -887,7 +895,7 @@ namespace TechoCeiva
         }
 
         public void VerificarRadioBtn_S808()
-        {
+        {/// se verifica cada radio button para asignarle una valor, donde 1:Malo, 2:regular , 3: bueno
             if (rbtS808_Refrigerador_M.Checked)
                 rbtS808_Refrigerador = 1;
             else if (rbtS808_Refrigerador_R.Checked)
@@ -900,7 +908,6 @@ namespace TechoCeiva
                 rbtS808_EquipoDeSonido = 2;
             else if (rbtS808_EquipoSonido_B.Checked)
                 rbtS808_EquipoDeSonido = 3;
-
             if (rbtS808_Televisor_M.Checked)
                 rbtS808_Televisor = 1;
             else if (rbtS808_Televisor_R.Checked)
@@ -946,24 +953,24 @@ namespace TechoCeiva
         }
 
         public Boolean IngresarS807()
-        {
+        {// se instancia una clase de la pregunta 8-07 y se envia los datos
             NuevaS807 = new S807_ServiciosLN(Convert.ToBoolean(cklS8_S807.GetItemCheckState(0)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(1)),Convert.ToBoolean(cklS8_S807.GetItemCheckState(2)), Convert.ToBoolean(cklS8_S807.GetItemCheckState(3)),Convert.ToBoolean(cklS8_S807.GetItemCheckState(4)));
             Boolean correcto = NuevaS807.Insertar_EncuS807();
             if (!correcto)
-            {
+            {// si al momento de validarlos e ingresarlos a la base de datos existe error retorna un false
                 MessageBox.Show(NuevaS807.obtenerError().mensaje);
                 int cant = NuevaS807.errores.Count - 1;
-
+                // se recorre el error el orden descendente para el focus
                 for (int i = cant; i >= 0; i--)
                     this.Comprobar_S807(NuevaS807.errores[i].NumeroPregunta);
             }
-            return correcto;
+            return correcto; // no todo ha ido bien se la funcion envia un true;
         }
 
         private void Comprobar_S807(int pregunta)
         {
             switch (pregunta)
-            {
+            {// se compraba el componenete que tenga error para marcarlo con color 
                 case 1:
                     cklS8_S807.BackColor = ColorCampsVacios;
                     cklS8_S807.Focus();
@@ -972,7 +979,8 @@ namespace TechoCeiva
         }
 
         /// <summary>
-        /// Cambios de Indices en Combobox seccion 9
+        /// Cambios de Indices en Combobox seccion 9 
+        /// Se utiliza para activar campos en caso de que las preguntas necesitan ser especificadas.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1016,6 +1024,7 @@ namespace TechoCeiva
 
         /// <summary>
         /// Cambios de Indices en Combobox seccion 8
+        /// Se utiliza para activar campos en caso de que las preguntas necesitan ser especificadas.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1061,6 +1070,7 @@ namespace TechoCeiva
 
         /// <summary>
         /// Cambios de Indices en Combobox seccion 10
+        /// Se utiliza para activar campos en caso de que las preguntas necesitan ser especificadas.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -2164,9 +2174,15 @@ namespace TechoCeiva
 
         private void frmEncuesta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (transaccion)
+            if (transaccion == true) //se recodifico por da error al cerrar la ventana.
+            {
                 tran.Deshacer();
-            //InfoEnc.TerminarTransaccion();
+                return;
+            }
+            else
+                return;
+
+                //InfoEnc.TerminarTransaccion();
         }
     }
 }
