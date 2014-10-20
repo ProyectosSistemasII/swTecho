@@ -138,6 +138,7 @@ namespace TechoCeiva
         public frmEncuesta()
         {
             InitializeComponent();
+            txtCodigoHogar.Focus();
             
         }
 

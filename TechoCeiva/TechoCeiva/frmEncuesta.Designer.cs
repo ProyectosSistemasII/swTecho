@@ -30,6 +30,7 @@
         {
             this.tbcDatos = new System.Windows.Forms.TabControl();
             this.tbpInfo = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.gbContacto = new System.Windows.Forms.GroupBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -195,8 +196,8 @@
             this.lblS6_1_QEstado = new System.Windows.Forms.Label();
             this.pbS6_Siguiente = new System.Windows.Forms.PictureBox();
             this.tbpS7 = new System.Windows.Forms.TabPage();
-            this.gbS7 = new System.Windows.Forms.GroupBox();
             this.pbS7_Siguiente = new System.Windows.Forms.PictureBox();
+            this.gbS7 = new System.Windows.Forms.GroupBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.lblS7_8_MaterialPiso = new System.Windows.Forms.Label();
             this.gbS7_8_Tierra = new System.Windows.Forms.GroupBox();
@@ -702,8 +703,8 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).BeginInit();
             this.tbpS7.SuspendLayout();
-            this.gbS7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).BeginInit();
+            this.gbS7.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.gbS7_8_Tierra.SuspendLayout();
             this.gbS7_8_Madera.SuspendLayout();
@@ -832,6 +833,7 @@
             // 
             // tbpInfo
             // 
+            this.tbpInfo.Controls.Add(this.button1);
             this.tbpInfo.Controls.Add(this.pbNext);
             this.tbpInfo.Controls.Add(this.gbContacto);
             this.tbpInfo.Controls.Add(this.gbUbicacion);
@@ -846,6 +848,15 @@
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
             this.tbpInfo.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(749, 489);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 54);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pbNext
             // 
@@ -1298,6 +1309,7 @@
             this.dgvS1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvS1.Location = new System.Drawing.Point(3, 16);
             this.dgvS1.Name = "dgvS1";
+            this.dgvS1.RowHeadersWidth = 25;
             this.dgvS1.Size = new System.Drawing.Size(907, 448);
             this.dgvS1.TabIndex = 0;
             this.dgvS1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvS1_CellClick);
@@ -1397,6 +1409,7 @@
             this.dgvS2.Location = new System.Drawing.Point(3, 16);
             this.dgvS2.Margin = new System.Windows.Forms.Padding(4);
             this.dgvS2.Name = "dgvS2";
+            this.dgvS2.RowHeadersWidth = 25;
             this.dgvS2.Size = new System.Drawing.Size(921, 438);
             this.dgvS2.TabIndex = 1;
             this.dgvS2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvS2_EditingControlShowing);
@@ -1490,7 +1503,7 @@
             // pbNextS3
             // 
             this.pbNextS3.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbNextS3.Location = new System.Drawing.Point(886, 471);
+            this.pbNextS3.Location = new System.Drawing.Point(896, 471);
             this.pbNextS3.Name = "pbNextS3";
             this.pbNextS3.Size = new System.Drawing.Size(53, 59);
             this.pbNextS3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1530,6 +1543,7 @@
             this.dgvS3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvS3.Location = new System.Drawing.Point(3, 16);
             this.dgvS3.Name = "dgvS3";
+            this.dgvS3.RowHeadersWidth = 25;
             this.dgvS3.Size = new System.Drawing.Size(940, 440);
             this.dgvS3.TabIndex = 0;
             // 
@@ -1631,7 +1645,7 @@
             // dataGridViewComboBoxColumn10
             // 
             this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
-                "entro educativo?\t\t\t\t\t\t";
+    "entro educativo?\t\t\t\t\t\t";
             this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
             "Actualmente asiste",
             "No está en edad escolar aún",
@@ -1685,7 +1699,7 @@
             // pbS4_Siguiente
             // 
             this.pbS4_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS4_Siguiente.Location = new System.Drawing.Point(1255, 482);
+            this.pbS4_Siguiente.Location = new System.Drawing.Point(1271, 479);
             this.pbS4_Siguiente.Name = "pbS4_Siguiente";
             this.pbS4_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS4_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1725,6 +1739,7 @@
             this.dgvS4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvS4.Location = new System.Drawing.Point(3, 16);
             this.dgvS4.Name = "dgvS4";
+            this.dgvS4.RowHeadersWidth = 25;
             this.dgvS4.Size = new System.Drawing.Size(1326, 448);
             this.dgvS4.TabIndex = 1;
             // 
@@ -1770,7 +1785,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
-                "nar?";
+    "nar?";
             this.Column3.Items.AddRange(new object[] {
             "Si (especificar)",
             "No",
@@ -1869,7 +1884,7 @@
             // pbS5_Siguiente
             // 
             this.pbS5_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS5_Siguiente.Location = new System.Drawing.Point(1230, 492);
+            this.pbS5_Siguiente.Location = new System.Drawing.Point(1271, 487);
             this.pbS5_Siguiente.Name = "pbS5_Siguiente";
             this.pbS5_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS5_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1910,6 +1925,7 @@
             this.Column24});
             this.dgvS5.Location = new System.Drawing.Point(4, 23);
             this.dgvS5.Name = "dgvS5";
+            this.dgvS5.RowHeadersWidth = 25;
             this.dgvS5.Size = new System.Drawing.Size(1326, 435);
             this.dgvS5.TabIndex = 1;
             // 
@@ -1943,7 +1959,7 @@
             // Column13
             // 
             this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
-                "ropia recientemente?";
+    "ropia recientemente?";
             this.Column13.Items.AddRange(new object[] {
             "Que haceres domésticos",
             "Cuidado de los hijo/as",
@@ -2031,7 +2047,7 @@
             // Column20
             // 
             this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
-                "ipal?";
+    "ipal?";
             this.Column20.Items.AddRange(new object[] {
             "Si (especificar)",
             "No",
@@ -2058,7 +2074,7 @@
             // Column24
             // 
             this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
-                "";
+    "";
             this.Column24.Name = "Column24";
             // 
             // tbpS6
@@ -2099,7 +2115,7 @@
             this.groupBox16.Controls.Add(this.chlbS6_11_CubrirFaltaDinero);
             this.groupBox16.Controls.Add(this.lblS6_11_Especificar);
             this.groupBox16.Controls.Add(this.txtS6_11_EspecificarFaltaDinero);
-            this.groupBox16.Location = new System.Drawing.Point(975, 177);
+            this.groupBox16.Location = new System.Drawing.Point(939, 162);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(300, 242);
             this.groupBox16.TabIndex = 22;
@@ -2113,7 +2129,7 @@
             this.lblS6_11_FaltaDinero.Size = new System.Drawing.Size(254, 39);
             this.lblS6_11_FaltaDinero.TabIndex = 25;
             this.lblS6_11_FaltaDinero.Text = "11. ¿Qué han hecho para cubrir esta falta de dinero \r\n      en los últimos doce m" +
-                "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
+    "eses?  [MARCAR TODAS\r\n      LAS OPCIONES NECESARIAS] ";
             // 
             // chlbS6_11_CubrirFaltaDinero
             // 
@@ -2155,7 +2171,7 @@
             this.groupBox15.Controls.Add(this.lblS6_10_Gastos);
             this.groupBox15.Controls.Add(this.txtS6_10_CantiGastosaIngresos);
             this.groupBox15.Controls.Add(this.lblS6_10_QGastos);
-            this.groupBox15.Location = new System.Drawing.Point(975, 29);
+            this.groupBox15.Location = new System.Drawing.Point(939, 14);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(300, 142);
             this.groupBox15.TabIndex = 20;
@@ -2169,8 +2185,8 @@
             this.lblS6_10_Gastos.Size = new System.Drawing.Size(262, 52);
             this.lblS6_10_Gastos.TabIndex = 24;
             this.lblS6_10_Gastos.Text = "10. Me ha dicho usted que los ingresos no han sido \r\n      suficientes para cubri" +
-                "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
-                "\r\n      ingresos?";
+    "r sus gastos. Mensualmente, \r\n     ¿Por cuánto dinero superan esos gastos a los " +
+    "\r\n      ingresos?";
             // 
             // txtS6_10_CantiGastosaIngresos
             // 
@@ -2194,7 +2210,7 @@
             this.groupBox14.Controls.Add(this.lblS6_9_CantidadAhorro);
             this.groupBox14.Controls.Add(this.txtS6_9_CantiAhorro);
             this.groupBox14.Controls.Add(this.lblS6_9_QAhorro);
-            this.groupBox14.Location = new System.Drawing.Point(669, 279);
+            this.groupBox14.Location = new System.Drawing.Point(630, 254);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(300, 119);
             this.groupBox14.TabIndex = 18;
@@ -2208,7 +2224,7 @@
             this.lblS6_9_CantidadAhorro.Size = new System.Drawing.Size(247, 26);
             this.lblS6_9_CantidadAhorro.TabIndex = 23;
             this.lblS6_9_CantidadAhorro.Text = "9. Mensualmente, ¿cuál es el monto promedio que \r\n    logran ahorrar en el hogar?" +
-                "";
+    "";
             // 
             // txtS6_9_CantiAhorro
             // 
@@ -2231,7 +2247,7 @@
             // 
             this.groupBox13.Controls.Add(this.lblS6_8_Ahorro);
             this.groupBox13.Controls.Add(this.cbxS6_8_AhorroMensual);
-            this.groupBox13.Location = new System.Drawing.Point(669, 154);
+            this.groupBox13.Location = new System.Drawing.Point(630, 134);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(300, 119);
             this.groupBox13.TabIndex = 16;
@@ -2245,7 +2261,7 @@
             this.lblS6_8_Ahorro.Size = new System.Drawing.Size(261, 39);
             this.lblS6_8_Ahorro.TabIndex = 22;
             this.lblS6_8_Ahorro.Text = "8. Me ha dicho usted que los ingresos del hogar han \r\n    sido suficientes. ¿Han " +
-                "logrado en ese caso generar\r\n    un ahorro mensual?";
+    "logrado en ese caso generar\r\n    un ahorro mensual?";
             // 
             // cbxS6_8_AhorroMensual
             // 
@@ -2263,7 +2279,7 @@
             // 
             this.groupBox12.Controls.Add(this.lblS6_7_CubrirGastos);
             this.groupBox12.Controls.Add(this.cbxS6_7_CubrenGasto);
-            this.groupBox12.Location = new System.Drawing.Point(669, 29);
+            this.groupBox12.Location = new System.Drawing.Point(630, 14);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(300, 119);
             this.groupBox12.TabIndex = 14;
@@ -2277,7 +2293,7 @@
             this.lblS6_7_CubrirGastos.Size = new System.Drawing.Size(255, 26);
             this.lblS6_7_CubrirGastos.TabIndex = 21;
             this.lblS6_7_CubrirGastos.Text = "7. ¿En el último año, diría usted que los ingresos del \r\n     hogar han sido sufi" +
-                "cientes para cubrir su gastos?";
+    "cientes para cubrir su gastos?";
             // 
             // cbxS6_7_CubrenGasto
             // 
@@ -2297,7 +2313,7 @@
             this.groupBox11.Controls.Add(this.lblS6_6_IngresoTotal);
             this.groupBox11.Controls.Add(this.txtS6_6_IngresoTotal);
             this.groupBox11.Controls.Add(this.lblS6_6_QIngresosTotales);
-            this.groupBox11.Location = new System.Drawing.Point(363, 279);
+            this.groupBox11.Location = new System.Drawing.Point(323, 254);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(300, 119);
             this.groupBox11.TabIndex = 12;
@@ -2311,7 +2327,7 @@
             this.lblS6_6_IngresoTotal.Size = new System.Drawing.Size(240, 39);
             this.lblS6_6_IngresoTotal.TabIndex = 20;
             this.lblS6_6_IngresoTotal.Text = "6. ¿Cuál es el ingreso total del hogar, contando el\r\n     trabajo de todos los in" +
-                "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
+    "tegrantes, apoyos \r\n     gubernamentales, remesas y otras ayudas?";
             // 
             // txtS6_6_IngresoTotal
             // 
@@ -2334,7 +2350,7 @@
             // 
             this.groupBox10.Controls.Add(this.lblS6_5_TiempoDeuda);
             this.groupBox10.Controls.Add(this.cbxS6_5_TiempoPagoDeuda);
-            this.groupBox10.Location = new System.Drawing.Point(363, 154);
+            this.groupBox10.Location = new System.Drawing.Point(323, 134);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(300, 119);
             this.groupBox10.TabIndex = 10;
@@ -2369,7 +2385,7 @@
             this.groupBox9.Controls.Add(this.lblS6_4_Valor0);
             this.groupBox9.Controls.Add(this.txtS6_4_CantiDeuda);
             this.groupBox9.Controls.Add(this.lblS6_4_QDeuda);
-            this.groupBox9.Location = new System.Drawing.Point(363, 29);
+            this.groupBox9.Location = new System.Drawing.Point(323, 14);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(300, 119);
             this.groupBox9.TabIndex = 8;
@@ -2414,7 +2430,7 @@
             // 
             this.groupBox8.Controls.Add(this.lblS6_3_Deuda);
             this.groupBox8.Controls.Add(this.cbxS6_3_Deuda);
-            this.groupBox8.Location = new System.Drawing.Point(57, 279);
+            this.groupBox8.Location = new System.Drawing.Point(17, 254);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(300, 119);
             this.groupBox8.TabIndex = 6;
@@ -2447,7 +2463,7 @@
             this.groupBox7.Controls.Add(this.cbxS6_2_IngRemesas);
             this.groupBox7.Controls.Add(this.txtS6_2_CantidadRemesas);
             this.groupBox7.Controls.Add(this.lblS6_2_QRemesas);
-            this.groupBox7.Location = new System.Drawing.Point(57, 154);
+            this.groupBox7.Location = new System.Drawing.Point(17, 134);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(300, 119);
             this.groupBox7.TabIndex = 4;
@@ -2461,7 +2477,7 @@
             this.lblS6_2_IngresosRemesas.Size = new System.Drawing.Size(252, 26);
             this.lblS6_2_IngresosRemesas.TabIndex = 17;
             this.lblS6_2_IngresosRemesas.Text = "2. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por remesas? ¿qué cant" +
-                "idad?\r\n";
+    "idad?\r\n";
             // 
             // cbxS6_2_IngRemesas
             // 
@@ -2501,7 +2517,7 @@
             this.groupBox6.Controls.Add(this.cbxS6_1_IngEstado);
             this.groupBox6.Controls.Add(this.txtS6_1_CantidadIngEstado);
             this.groupBox6.Controls.Add(this.lblS6_1_QEstado);
-            this.groupBox6.Location = new System.Drawing.Point(57, 29);
+            this.groupBox6.Location = new System.Drawing.Point(17, 14);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(300, 119);
             this.groupBox6.TabIndex = 2;
@@ -2515,7 +2531,7 @@
             this.lblS6_1_IngresosEstado.Size = new System.Drawing.Size(260, 26);
             this.lblS6_1_IngresosEstado.TabIndex = 16;
             this.lblS6_1_IngresosEstado.Text = "1. ¿Sus ingresos totales del hogar incluyeron dinero \r\n    por apoyo del Estado (" +
-                "programas)? ¿qué cantidad?\r\n";
+    "programas)? ¿qué cantidad?\r\n";
             // 
             // cbxS6_1_IngEstado
             // 
@@ -2552,7 +2568,7 @@
             // pbS6_Siguiente
             // 
             this.pbS6_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS6_Siguiente.Location = new System.Drawing.Point(1195, 490);
+            this.pbS6_Siguiente.Location = new System.Drawing.Point(1220, 487);
             this.pbS6_Siguiente.Name = "pbS6_Siguiente";
             this.pbS6_Siguiente.Size = new System.Drawing.Size(53, 59);
             this.pbS6_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2562,6 +2578,7 @@
             // 
             // tbpS7
             // 
+            this.tbpS7.Controls.Add(this.pbS7_Siguiente);
             this.tbpS7.Controls.Add(this.gbS7);
             this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
@@ -2571,9 +2588,19 @@
             this.tbpS7.Text = "Sección 7";
             this.tbpS7.UseVisualStyleBackColor = true;
             // 
+            // pbS7_Siguiente
+            // 
+            this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
+            this.pbS7_Siguiente.Location = new System.Drawing.Point(1019, 484);
+            this.pbS7_Siguiente.Name = "pbS7_Siguiente";
+            this.pbS7_Siguiente.Size = new System.Drawing.Size(53, 59);
+            this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbS7_Siguiente.TabIndex = 13;
+            this.pbS7_Siguiente.TabStop = false;
+            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click_1);
+            // 
             // gbS7
             // 
-            this.gbS7.Controls.Add(this.pbS7_Siguiente);
             this.gbS7.Controls.Add(this.groupBox24);
             this.gbS7.Controls.Add(this.groupBox25);
             this.gbS7.Controls.Add(this.groupBox23);
@@ -2584,21 +2611,10 @@
             this.gbS7.Controls.Add(this.groupBox18);
             this.gbS7.Location = new System.Drawing.Point(3, 3);
             this.gbS7.Name = "gbS7";
-            this.gbS7.Size = new System.Drawing.Size(1332, 510);
+            this.gbS7.Size = new System.Drawing.Size(1332, 499);
             this.gbS7.TabIndex = 1;
             this.gbS7.TabStop = false;
             this.gbS7.Text = "VIVIENDA";
-            // 
-            // pbS7_Siguiente
-            // 
-            this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
-            this.pbS7_Siguiente.Location = new System.Drawing.Point(1218, 437);
-            this.pbS7_Siguiente.Name = "pbS7_Siguiente";
-            this.pbS7_Siguiente.Size = new System.Drawing.Size(53, 59);
-            this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbS7_Siguiente.TabIndex = 13;
-            this.pbS7_Siguiente.TabStop = false;
-            this.pbS7_Siguiente.Click += new System.EventHandler(this.pbS7_Siguiente_Click_1);
             // 
             // groupBox24
             // 
@@ -2608,21 +2624,21 @@
             this.groupBox24.Controls.Add(this.gbS7_8_LadrilloBarro);
             this.groupBox24.Controls.Add(this.gbS7_8_Encementado);
             this.groupBox24.Controls.Add(this.gbS7_8_EstadoPiso);
-            this.groupBox24.Location = new System.Drawing.Point(1005, 19);
+            this.groupBox24.Location = new System.Drawing.Point(638, 290);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(307, 332);
+            this.groupBox24.Size = new System.Drawing.Size(362, 207);
             this.groupBox24.TabIndex = 16;
             this.groupBox24.TabStop = false;
             // 
             // lblS7_8_MaterialPiso
             // 
             this.lblS7_8_MaterialPiso.AutoSize = true;
-            this.lblS7_8_MaterialPiso.Location = new System.Drawing.Point(10, 23);
+            this.lblS7_8_MaterialPiso.Location = new System.Drawing.Point(11, 18);
             this.lblS7_8_MaterialPiso.Name = "lblS7_8_MaterialPiso";
-            this.lblS7_8_MaterialPiso.Size = new System.Drawing.Size(269, 26);
+            this.lblS7_8_MaterialPiso.Size = new System.Drawing.Size(297, 26);
             this.lblS7_8_MaterialPiso.TabIndex = 16;
-            this.lblS7_8_MaterialPiso.Text = "8. OBSERVE y defina el tipo y el estado del material de \r\n    PISO de la vivienda" +
-                ".";
+            this.lblS7_8_MaterialPiso.Text = "8. OBSERVE y defina el tipo y el estado del material de PISO \r\n    de la vivienda" +
+    ".";
             // 
             // gbS7_8_Tierra
             // 
@@ -2631,9 +2647,9 @@
             this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_Malo);
             this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_MuyMalo);
             this.gbS7_8_Tierra.Controls.Add(this.label34);
-            this.gbS7_8_Tierra.Location = new System.Drawing.Point(5, 209);
+            this.gbS7_8_Tierra.Location = new System.Drawing.Point(7, 167);
             this.gbS7_8_Tierra.Name = "gbS7_8_Tierra";
-            this.gbS7_8_Tierra.Size = new System.Drawing.Size(289, 37);
+            this.gbS7_8_Tierra.Size = new System.Drawing.Size(327, 32);
             this.gbS7_8_Tierra.TabIndex = 17;
             this.gbS7_8_Tierra.TabStop = false;
             // 
@@ -2693,9 +2709,9 @@
             this.gbS7_8_Madera.Controls.Add(this.rbS7_83_Malo);
             this.gbS7_8_Madera.Controls.Add(this.rbS7_83_MuyMalo);
             this.gbS7_8_Madera.Controls.Add(this.label53);
-            this.gbS7_8_Madera.Location = new System.Drawing.Point(5, 172);
+            this.gbS7_8_Madera.Location = new System.Drawing.Point(7, 133);
             this.gbS7_8_Madera.Name = "gbS7_8_Madera";
-            this.gbS7_8_Madera.Size = new System.Drawing.Size(289, 37);
+            this.gbS7_8_Madera.Size = new System.Drawing.Size(327, 32);
             this.gbS7_8_Madera.TabIndex = 16;
             this.gbS7_8_Madera.TabStop = false;
             // 
@@ -2755,9 +2771,9 @@
             this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_Malo);
             this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_MuyMalo);
             this.gbS7_8_LadrilloBarro.Controls.Add(this.label54);
-            this.gbS7_8_LadrilloBarro.Location = new System.Drawing.Point(6, 134);
+            this.gbS7_8_LadrilloBarro.Location = new System.Drawing.Point(8, 100);
             this.gbS7_8_LadrilloBarro.Name = "gbS7_8_LadrilloBarro";
-            this.gbS7_8_LadrilloBarro.Size = new System.Drawing.Size(288, 37);
+            this.gbS7_8_LadrilloBarro.Size = new System.Drawing.Size(327, 32);
             this.gbS7_8_LadrilloBarro.TabIndex = 15;
             this.gbS7_8_LadrilloBarro.TabStop = false;
             // 
@@ -2817,9 +2833,9 @@
             this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_Malo);
             this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_MuyMalo);
             this.gbS7_8_Encementado.Controls.Add(this.label55);
-            this.gbS7_8_Encementado.Location = new System.Drawing.Point(6, 97);
+            this.gbS7_8_Encementado.Location = new System.Drawing.Point(8, 68);
             this.gbS7_8_Encementado.Name = "gbS7_8_Encementado";
-            this.gbS7_8_Encementado.Size = new System.Drawing.Size(288, 37);
+            this.gbS7_8_Encementado.Size = new System.Drawing.Size(327, 32);
             this.gbS7_8_Encementado.TabIndex = 14;
             this.gbS7_8_Encementado.TabStop = false;
             // 
@@ -2878,9 +2894,9 @@
             this.gbS7_8_EstadoPiso.Controls.Add(this.label57);
             this.gbS7_8_EstadoPiso.Controls.Add(this.label58);
             this.gbS7_8_EstadoPiso.Controls.Add(this.label59);
-            this.gbS7_8_EstadoPiso.Location = new System.Drawing.Point(6, 67);
+            this.gbS7_8_EstadoPiso.Location = new System.Drawing.Point(8, 39);
             this.gbS7_8_EstadoPiso.Name = "gbS7_8_EstadoPiso";
-            this.gbS7_8_EstadoPiso.Size = new System.Drawing.Size(295, 29);
+            this.gbS7_8_EstadoPiso.Size = new System.Drawing.Size(327, 29);
             this.gbS7_8_EstadoPiso.TabIndex = 13;
             this.gbS7_8_EstadoPiso.TabStop = false;
             // 
@@ -2932,7 +2948,7 @@
             this.groupBox25.Controls.Add(this.gbS7_7_EstadoParedes);
             this.groupBox25.Location = new System.Drawing.Point(637, 10);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(362, 341);
+            this.groupBox25.Size = new System.Drawing.Size(362, 279);
             this.groupBox25.TabIndex = 14;
             this.groupBox25.TabStop = false;
             // 
@@ -2944,7 +2960,7 @@
             this.lblS7_7_MaterialParedes.Size = new System.Drawing.Size(323, 26);
             this.lblS7_7_MaterialParedes.TabIndex = 15;
             this.lblS7_7_MaterialParedes.Text = "7. OBSERVE y defina el tipo y el estado del material de PAREDES \r\n     de la vivi" +
-                "enda.";
+    "enda.";
             // 
             // gbS7_7_Desechos
             // 
@@ -2953,9 +2969,9 @@
             this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_Malo);
             this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_MuyMalo);
             this.gbS7_7_Desechos.Controls.Add(this.label35);
-            this.gbS7_7_Desechos.Location = new System.Drawing.Point(11, 282);
+            this.gbS7_7_Desechos.Location = new System.Drawing.Point(11, 239);
             this.gbS7_7_Desechos.Name = "gbS7_7_Desechos";
-            this.gbS7_7_Desechos.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Desechos.Size = new System.Drawing.Size(327, 32);
             this.gbS7_7_Desechos.TabIndex = 14;
             this.gbS7_7_Desechos.TabStop = false;
             // 
@@ -3015,9 +3031,9 @@
             this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_Malo);
             this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_MuyMalo);
             this.gbS7_7_BaharequeBambu.Controls.Add(this.label44);
-            this.gbS7_7_BaharequeBambu.Location = new System.Drawing.Point(11, 244);
+            this.gbS7_7_BaharequeBambu.Location = new System.Drawing.Point(11, 206);
             this.gbS7_7_BaharequeBambu.Name = "gbS7_7_BaharequeBambu";
-            this.gbS7_7_BaharequeBambu.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_BaharequeBambu.Size = new System.Drawing.Size(327, 32);
             this.gbS7_7_BaharequeBambu.TabIndex = 13;
             this.gbS7_7_BaharequeBambu.TabStop = false;
             // 
@@ -3077,9 +3093,9 @@
             this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_Malo);
             this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_MuyMalo);
             this.gbS7_7_Lamina.Controls.Add(this.label45);
-            this.gbS7_7_Lamina.Location = new System.Drawing.Point(11, 207);
+            this.gbS7_7_Lamina.Location = new System.Drawing.Point(11, 173);
             this.gbS7_7_Lamina.Name = "gbS7_7_Lamina";
-            this.gbS7_7_Lamina.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Lamina.Size = new System.Drawing.Size(327, 32);
             this.gbS7_7_Lamina.TabIndex = 12;
             this.gbS7_7_Lamina.TabStop = false;
             // 
@@ -3139,9 +3155,9 @@
             this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_Malo);
             this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_MuyMalo);
             this.gbS7_7_Adobe.Controls.Add(this.label46);
-            this.gbS7_7_Adobe.Location = new System.Drawing.Point(11, 170);
+            this.gbS7_7_Adobe.Location = new System.Drawing.Point(11, 140);
             this.gbS7_7_Adobe.Name = "gbS7_7_Adobe";
-            this.gbS7_7_Adobe.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Adobe.Size = new System.Drawing.Size(327, 32);
             this.gbS7_7_Adobe.TabIndex = 11;
             this.gbS7_7_Adobe.TabStop = false;
             // 
@@ -3201,9 +3217,9 @@
             this.gbS7_7_Madera.Controls.Add(this.rbS7_72_Malo);
             this.gbS7_7_Madera.Controls.Add(this.rbS7_72_MuyMalo);
             this.gbS7_7_Madera.Controls.Add(this.label47);
-            this.gbS7_7_Madera.Location = new System.Drawing.Point(12, 132);
+            this.gbS7_7_Madera.Location = new System.Drawing.Point(12, 107);
             this.gbS7_7_Madera.Name = "gbS7_7_Madera";
-            this.gbS7_7_Madera.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_Madera.Size = new System.Drawing.Size(327, 32);
             this.gbS7_7_Madera.TabIndex = 10;
             this.gbS7_7_Madera.TabStop = false;
             // 
@@ -3263,9 +3279,9 @@
             this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_Malo);
             this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_MuyMalo);
             this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.label48);
-            this.gbS7_7_BlockLadriPrefabr.Location = new System.Drawing.Point(12, 95);
+            this.gbS7_7_BlockLadriPrefabr.Location = new System.Drawing.Point(12, 74);
             this.gbS7_7_BlockLadriPrefabr.Name = "gbS7_7_BlockLadriPrefabr";
-            this.gbS7_7_BlockLadriPrefabr.Size = new System.Drawing.Size(327, 37);
+            this.gbS7_7_BlockLadriPrefabr.Size = new System.Drawing.Size(327, 32);
             this.gbS7_7_BlockLadriPrefabr.TabIndex = 9;
             this.gbS7_7_BlockLadriPrefabr.TabStop = false;
             // 
@@ -3324,7 +3340,7 @@
             this.gbS7_7_EstadoParedes.Controls.Add(this.label50);
             this.gbS7_7_EstadoParedes.Controls.Add(this.label51);
             this.gbS7_7_EstadoParedes.Controls.Add(this.label52);
-            this.gbS7_7_EstadoParedes.Location = new System.Drawing.Point(12, 65);
+            this.gbS7_7_EstadoParedes.Location = new System.Drawing.Point(12, 45);
             this.gbS7_7_EstadoParedes.Name = "gbS7_7_EstadoParedes";
             this.gbS7_7_EstadoParedes.Size = new System.Drawing.Size(327, 29);
             this.gbS7_7_EstadoParedes.TabIndex = 8;
@@ -3376,9 +3392,9 @@
             this.groupBox23.Controls.Add(this.gbS7_6_Barro);
             this.groupBox23.Controls.Add(this.gbS7_6_Concreto);
             this.groupBox23.Controls.Add(this.gbS7_6_EstadoTecho);
-            this.groupBox23.Location = new System.Drawing.Point(294, 204);
+            this.groupBox23.Location = new System.Drawing.Point(294, 185);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(336, 284);
+            this.groupBox23.Size = new System.Drawing.Size(336, 273);
             this.groupBox23.TabIndex = 12;
             this.groupBox23.TabStop = false;
             // 
@@ -3390,7 +3406,7 @@
             this.lblS7_6_MaterialTecho.Size = new System.Drawing.Size(314, 26);
             this.lblS7_6_MaterialTecho.TabIndex = 15;
             this.lblS7_6_MaterialTecho.Text = "6. OBSERVE y defina el tipo y el estado del material del TECHO  \r\n     de la vivi" +
-                "enda.";
+    "enda.";
             // 
             // gbS7_6_Desechos
             // 
@@ -3399,9 +3415,9 @@
             this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_Malo);
             this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_MuyMalo);
             this.gbS7_6_Desechos.Controls.Add(this.label43);
-            this.gbS7_6_Desechos.Location = new System.Drawing.Point(17, 236);
+            this.gbS7_6_Desechos.Location = new System.Drawing.Point(17, 231);
             this.gbS7_6_Desechos.Name = "gbS7_6_Desechos";
-            this.gbS7_6_Desechos.Size = new System.Drawing.Size(296, 37);
+            this.gbS7_6_Desechos.Size = new System.Drawing.Size(296, 32);
             this.gbS7_6_Desechos.TabIndex = 7;
             this.gbS7_6_Desechos.TabStop = false;
             // 
@@ -3461,9 +3477,9 @@
             this.gbS7_6_Paja.Controls.Add(this.rbS7_65_Malo);
             this.gbS7_6_Paja.Controls.Add(this.rbS7_65_MuyMalo);
             this.gbS7_6_Paja.Controls.Add(this.label42);
-            this.gbS7_6_Paja.Location = new System.Drawing.Point(17, 203);
+            this.gbS7_6_Paja.Location = new System.Drawing.Point(17, 198);
             this.gbS7_6_Paja.Name = "gbS7_6_Paja";
-            this.gbS7_6_Paja.Size = new System.Drawing.Size(296, 37);
+            this.gbS7_6_Paja.Size = new System.Drawing.Size(296, 32);
             this.gbS7_6_Paja.TabIndex = 6;
             this.gbS7_6_Paja.TabStop = false;
             // 
@@ -3523,9 +3539,9 @@
             this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_Malo);
             this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_MuyMalo);
             this.gbS7_6_Duralita.Controls.Add(this.label41);
-            this.gbS7_6_Duralita.Location = new System.Drawing.Point(17, 172);
+            this.gbS7_6_Duralita.Location = new System.Drawing.Point(17, 167);
             this.gbS7_6_Duralita.Name = "gbS7_6_Duralita";
-            this.gbS7_6_Duralita.Size = new System.Drawing.Size(296, 37);
+            this.gbS7_6_Duralita.Size = new System.Drawing.Size(296, 32);
             this.gbS7_6_Duralita.TabIndex = 5;
             this.gbS7_6_Duralita.TabStop = false;
             // 
@@ -3585,9 +3601,9 @@
             this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_Malo);
             this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_MuyMalo);
             this.gbS7_6_Lamina.Controls.Add(this.label40);
-            this.gbS7_6_Lamina.Location = new System.Drawing.Point(15, 140);
+            this.gbS7_6_Lamina.Location = new System.Drawing.Point(15, 135);
             this.gbS7_6_Lamina.Name = "gbS7_6_Lamina";
-            this.gbS7_6_Lamina.Size = new System.Drawing.Size(298, 37);
+            this.gbS7_6_Lamina.Size = new System.Drawing.Size(298, 32);
             this.gbS7_6_Lamina.TabIndex = 4;
             this.gbS7_6_Lamina.TabStop = false;
             // 
@@ -3647,9 +3663,9 @@
             this.gbS7_6_Barro.Controls.Add(this.rbS7_62_Malo);
             this.gbS7_6_Barro.Controls.Add(this.rbS7_62_MuyMalo);
             this.gbS7_6_Barro.Controls.Add(this.label39);
-            this.gbS7_6_Barro.Location = new System.Drawing.Point(14, 109);
+            this.gbS7_6_Barro.Location = new System.Drawing.Point(14, 103);
             this.gbS7_6_Barro.Name = "gbS7_6_Barro";
-            this.gbS7_6_Barro.Size = new System.Drawing.Size(299, 37);
+            this.gbS7_6_Barro.Size = new System.Drawing.Size(299, 32);
             this.gbS7_6_Barro.TabIndex = 3;
             this.gbS7_6_Barro.TabStop = false;
             // 
@@ -3709,9 +3725,9 @@
             this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_Malo);
             this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_MuyMalo);
             this.gbS7_6_Concreto.Controls.Add(this.label33);
-            this.gbS7_6_Concreto.Location = new System.Drawing.Point(13, 76);
+            this.gbS7_6_Concreto.Location = new System.Drawing.Point(13, 67);
             this.gbS7_6_Concreto.Name = "gbS7_6_Concreto";
-            this.gbS7_6_Concreto.Size = new System.Drawing.Size(300, 37);
+            this.gbS7_6_Concreto.Size = new System.Drawing.Size(300, 32);
             this.gbS7_6_Concreto.TabIndex = 2;
             this.gbS7_6_Concreto.TabStop = false;
             // 
@@ -3770,7 +3786,7 @@
             this.gbS7_6_EstadoTecho.Controls.Add(this.label38);
             this.gbS7_6_EstadoTecho.Controls.Add(this.label36);
             this.gbS7_6_EstadoTecho.Controls.Add(this.label31);
-            this.gbS7_6_EstadoTecho.Location = new System.Drawing.Point(13, 50);
+            this.gbS7_6_EstadoTecho.Location = new System.Drawing.Point(13, 39);
             this.gbS7_6_EstadoTecho.Name = "gbS7_6_EstadoTecho";
             this.gbS7_6_EstadoTecho.Size = new System.Drawing.Size(300, 29);
             this.gbS7_6_EstadoTecho.TabIndex = 1;
@@ -3824,7 +3840,7 @@
             this.groupBox22.Controls.Add(this.lblS7_5_A);
             this.groupBox22.Location = new System.Drawing.Point(294, 8);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(336, 192);
+            this.groupBox22.Size = new System.Drawing.Size(336, 171);
             this.groupBox22.TabIndex = 10;
             this.groupBox22.TabStop = false;
             // 
@@ -3836,12 +3852,12 @@
             this.lblS7_5_Problema.Size = new System.Drawing.Size(288, 26);
             this.lblS7_5_Problema.TabIndex = 15;
             this.lblS7_5_Problema.Text = "5. ¿Cree que su vivienda actual tienen algún problema que \r\n     le gustaría reso" +
-                "lver?";
+    "lver?";
             // 
             // txtS7_5_ProblemaC
             // 
             this.txtS7_5_ProblemaC.Enabled = false;
-            this.txtS7_5_ProblemaC.Location = new System.Drawing.Point(53, 153);
+            this.txtS7_5_ProblemaC.Location = new System.Drawing.Point(53, 135);
             this.txtS7_5_ProblemaC.Multiline = true;
             this.txtS7_5_ProblemaC.Name = "txtS7_5_ProblemaC";
             this.txtS7_5_ProblemaC.Size = new System.Drawing.Size(227, 23);
@@ -3851,7 +3867,7 @@
             // 
             this.lblS7_5_C.AutoSize = true;
             this.lblS7_5_C.Enabled = false;
-            this.lblS7_5_C.Location = new System.Drawing.Point(32, 157);
+            this.lblS7_5_C.Location = new System.Drawing.Point(32, 139);
             this.lblS7_5_C.Name = "lblS7_5_C";
             this.lblS7_5_C.Size = new System.Drawing.Size(16, 13);
             this.lblS7_5_C.TabIndex = 6;
@@ -3860,7 +3876,7 @@
             // txtS7_5_ProblemaB
             // 
             this.txtS7_5_ProblemaB.Enabled = false;
-            this.txtS7_5_ProblemaB.Location = new System.Drawing.Point(53, 124);
+            this.txtS7_5_ProblemaB.Location = new System.Drawing.Point(53, 106);
             this.txtS7_5_ProblemaB.Multiline = true;
             this.txtS7_5_ProblemaB.Name = "txtS7_5_ProblemaB";
             this.txtS7_5_ProblemaB.Size = new System.Drawing.Size(227, 23);
@@ -3870,7 +3886,7 @@
             // 
             this.lblS7_5_B.AutoSize = true;
             this.lblS7_5_B.Enabled = false;
-            this.lblS7_5_B.Location = new System.Drawing.Point(32, 128);
+            this.lblS7_5_B.Location = new System.Drawing.Point(32, 110);
             this.lblS7_5_B.Name = "lblS7_5_B";
             this.lblS7_5_B.Size = new System.Drawing.Size(16, 13);
             this.lblS7_5_B.TabIndex = 4;
@@ -3883,7 +3899,7 @@
             "Si (especificar cuales)",
             "No",
             "NS/NR"});
-            this.cbsS7_5_ProbViv.Location = new System.Drawing.Point(55, 67);
+            this.cbsS7_5_ProbViv.Location = new System.Drawing.Point(55, 49);
             this.cbsS7_5_ProbViv.Name = "cbsS7_5_ProbViv";
             this.cbsS7_5_ProbViv.Size = new System.Drawing.Size(225, 21);
             this.cbsS7_5_ProbViv.TabIndex = 2;
@@ -3892,7 +3908,7 @@
             // txtS7_5_ProblemaA
             // 
             this.txtS7_5_ProblemaA.Enabled = false;
-            this.txtS7_5_ProblemaA.Location = new System.Drawing.Point(53, 95);
+            this.txtS7_5_ProblemaA.Location = new System.Drawing.Point(53, 77);
             this.txtS7_5_ProblemaA.Multiline = true;
             this.txtS7_5_ProblemaA.Name = "txtS7_5_ProblemaA";
             this.txtS7_5_ProblemaA.Size = new System.Drawing.Size(227, 23);
@@ -3902,7 +3918,7 @@
             // 
             this.lblS7_5_A.AutoSize = true;
             this.lblS7_5_A.Enabled = false;
-            this.lblS7_5_A.Location = new System.Drawing.Point(32, 99);
+            this.lblS7_5_A.Location = new System.Drawing.Point(32, 81);
             this.lblS7_5_A.Name = "lblS7_5_A";
             this.lblS7_5_A.Size = new System.Drawing.Size(16, 13);
             this.lblS7_5_A.TabIndex = 1;
@@ -3995,7 +4011,7 @@
             this.groupBox18.Controls.Add(this.txtS7_1_AnchoViv);
             this.groupBox18.Controls.Add(this.txtS7_1_LargoViv);
             this.groupBox18.Controls.Add(this.lblS7_1_X);
-            this.groupBox18.Location = new System.Drawing.Point(18, 6);
+            this.groupBox18.Location = new System.Drawing.Point(18, 9);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(270, 108);
             this.groupBox18.TabIndex = 2;
@@ -4165,7 +4181,7 @@
             this.label77.Size = new System.Drawing.Size(358, 39);
             this.label77.TabIndex = 15;
             this.label77.Text = "8. ¿Cuáles artículos de la siguiente lista posee y en qué estado se \r\n    encuent" +
-                "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
+    "ran (bueno / regular / malo)? [NO PREGUNTAR, OBSERVAR] \t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n";
             // 
             // groupBox65
             // 
@@ -4645,7 +4661,7 @@
             this.label66.Size = new System.Drawing.Size(266, 26);
             this.label66.TabIndex = 1;
             this.label66.Text = "7. ¿Cuenta con algún otro servicio adicional?\r\n    [MARCAR TODAS LAS OPCIONES NEC" +
-                "ESARIAS] ";
+    "ESARIAS] ";
             // 
             // groupBox54
             // 
@@ -4783,7 +4799,7 @@
             this.label63.Size = new System.Drawing.Size(220, 26);
             this.label63.TabIndex = 1;
             this.label63.Text = "4. ¿Qué tipo de combustible o energía utiliza \r\n    PREDOMINANTEMENTE para cocina" +
-                "r?\t\t\t\t";
+    "r?\t\t\t\t";
             // 
             // groupBox51
             // 
@@ -5039,7 +5055,7 @@
             this.label94.Size = new System.Drawing.Size(278, 26);
             this.label94.TabIndex = 1;
             this.label94.Text = "5. ¿Posee usted o algún miembro de su familia algún otro \r\n     tipo de bien o de" +
-                " propiedad?\t";
+    " propiedad?\t";
             // 
             // groupBox81
             // 
@@ -5202,7 +5218,7 @@
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(4, 10);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(265, 13);
+            this.label98.Size = new System.Drawing.Size(269, 13);
             this.label98.TabIndex = 1;
             this.label98.Text = "2. En el caso de que sea usted propietario:          ►   (5)";
             // 
@@ -5372,8 +5388,8 @@
             this.label124.Size = new System.Drawing.Size(281, 39);
             this.label124.TabIndex = 1;
             this.label124.Text = "11. ¿Estaría dispuesto a trabajar junto a sus vecinos para \r\n      mejorar algún " +
-                "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
-                "rlo?\t";
+    "aspecto de su comunidad? ¿En cuáles \r\n      proyectos puntuales le gustaría hace" +
+    "rlo?\t";
             // 
             // groupBox89
             // 
@@ -5466,7 +5482,7 @@
             this.label120.Size = new System.Drawing.Size(285, 39);
             this.label120.TabIndex = 1;
             this.label120.Text = "10. ¿Considera que existen problemáticas y/o necesidades\r\n      en su comunidad? " +
-                "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
+    "En el caso de que si, ¿cuáles cree \r\n      que son los principales?";
             // 
             // groupBox82
             // 
@@ -5559,7 +5575,7 @@
             this.label116.Size = new System.Drawing.Size(297, 39);
             this.label116.TabIndex = 1;
             this.label116.Text = "9. ¿Considera que existe alguna necesidad o problemática en\r\n    su familia? En e" +
-                "l caso de que si ¿cuáles considera que son\r\n    las principales?";
+    "l caso de que si ¿cuáles considera que son\r\n    las principales?";
             // 
             // gbxS1008_Com
             // 
@@ -6380,7 +6396,7 @@
             this.groupBox74.Controls.Add(this.txtS1006_Especificar);
             this.groupBox74.Controls.Add(this.cklS1006_Com);
             this.groupBox74.Controls.Add(this.label92);
-            this.groupBox74.Location = new System.Drawing.Point(322, 98);
+            this.groupBox74.Location = new System.Drawing.Point(322, 97);
             this.groupBox74.Name = "groupBox74";
             this.groupBox74.Size = new System.Drawing.Size(300, 202);
             this.groupBox74.TabIndex = 9;
@@ -6419,7 +6435,7 @@
             this.label92.AutoSize = true;
             this.label92.Location = new System.Drawing.Point(3, 10);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(248, 13);
+            this.label92.Size = new System.Drawing.Size(252, 13);
             this.label92.TabIndex = 1;
             this.label92.Text = "6. ¿En cuál o cuáles participa?                   ►(10.08)";
             // 
@@ -6454,7 +6470,7 @@
             this.label91.Size = new System.Drawing.Size(274, 39);
             this.label91.TabIndex = 1;
             this.label91.Text = "5. ¿Ha participado usted o algún miembro de su familia\r\n    en algún grupo u orga" +
-                "nización que actue en beneficio\r\n    de la comunidad?";
+    "nización que actue en beneficio\r\n    de la comunidad?";
             // 
             // groupBox70
             // 
@@ -6547,7 +6563,7 @@
             this.label83.Size = new System.Drawing.Size(308, 26);
             this.label83.TabIndex = 1;
             this.label83.Text = "4. ¿Podría mencionarme si usted se organiza con sus vecinos? \r\n    ¿En qué situac" +
-                "iones lo hacen?\r\n";
+    "iones lo hacen?\r\n";
             // 
             // groupBox71
             // 
@@ -6711,7 +6727,7 @@
             this.groupBox108.Location = new System.Drawing.Point(622, 278);
             this.groupBox108.Name = "groupBox108";
             this.groupBox108.Size = new System.Drawing.Size(300, 137);
-            this.groupBox108.TabIndex = 15;
+            this.groupBox108.TabIndex = 20;
             this.groupBox108.TabStop = false;
             // 
             // label148
@@ -6730,7 +6746,7 @@
             this.txtS10_ComentarioEstadoFuturo.Multiline = true;
             this.txtS10_ComentarioEstadoFuturo.Name = "txtS10_ComentarioEstadoFuturo";
             this.txtS10_ComentarioEstadoFuturo.Size = new System.Drawing.Size(250, 40);
-            this.txtS10_ComentarioEstadoFuturo.TabIndex = 3;
+            this.txtS10_ComentarioEstadoFuturo.TabIndex = 4;
             // 
             // cbxS10_estadoFuturo
             // 
@@ -6754,7 +6770,7 @@
             this.label150.Size = new System.Drawing.Size(299, 26);
             this.label150.TabIndex = 1;
             this.label150.Text = "21. ¿Cómo cree que estará su comunidad en años posteriores\r\n      (en el futuro)?" +
-                " ¿Por qué cree eso?";
+    " ¿Por qué cree eso?";
             // 
             // groupBox107
             // 
@@ -6765,7 +6781,7 @@
             this.groupBox107.Location = new System.Drawing.Point(623, 140);
             this.groupBox107.Name = "groupBox107";
             this.groupBox107.Size = new System.Drawing.Size(300, 137);
-            this.groupBox107.TabIndex = 14;
+            this.groupBox107.TabIndex = 18;
             this.groupBox107.TabStop = false;
             // 
             // label149
@@ -6784,7 +6800,7 @@
             this.txtS10_ComentarioEstadoPasado.Multiline = true;
             this.txtS10_ComentarioEstadoPasado.Name = "txtS10_ComentarioEstadoPasado";
             this.txtS10_ComentarioEstadoPasado.Size = new System.Drawing.Size(250, 40);
-            this.txtS10_ComentarioEstadoPasado.TabIndex = 3;
+            this.txtS10_ComentarioEstadoPasado.TabIndex = 4;
             // 
             // cbxS10_EstadoPasado
             // 
@@ -6808,7 +6824,7 @@
             this.label147.Size = new System.Drawing.Size(285, 26);
             this.label147.TabIndex = 1;
             this.label147.Text = "20. ¿Cómo cree que está su comunidad en relación a años\r\n      anteriores (al pas" +
-                "ado)? ¿Por qué cree eso?";
+    "ado)? ¿Por qué cree eso?";
             // 
             // groupBox106
             // 
@@ -6823,7 +6839,7 @@
             this.groupBox106.Location = new System.Drawing.Point(623, 13);
             this.groupBox106.Name = "groupBox106";
             this.groupBox106.Size = new System.Drawing.Size(300, 125);
-            this.groupBox106.TabIndex = 14;
+            this.groupBox106.TabIndex = 16;
             this.groupBox106.TabStop = false;
             // 
             // ckbS10_Lider
@@ -6905,7 +6921,7 @@
             this.groupBox105.Location = new System.Drawing.Point(316, 315);
             this.groupBox105.Name = "groupBox105";
             this.groupBox105.Size = new System.Drawing.Size(300, 143);
-            this.groupBox105.TabIndex = 13;
+            this.groupBox105.TabIndex = 14;
             this.groupBox105.TabStop = false;
             // 
             // label2
@@ -6924,7 +6940,7 @@
             this.txtS10_ComentarioConfianza.Multiline = true;
             this.txtS10_ComentarioConfianza.Name = "txtS10_ComentarioConfianza";
             this.txtS10_ComentarioConfianza.Size = new System.Drawing.Size(250, 40);
-            this.txtS10_ComentarioConfianza.TabIndex = 3;
+            this.txtS10_ComentarioConfianza.TabIndex = 4;
             // 
             // cbxS10_ConfiazaOrganizacion
             // 
@@ -6983,7 +6999,7 @@
             this.groupBox104.Location = new System.Drawing.Point(316, 13);
             this.groupBox104.Name = "groupBox104";
             this.groupBox104.Size = new System.Drawing.Size(300, 125);
-            this.groupBox104.TabIndex = 11;
+            this.groupBox104.TabIndex = 8;
             this.groupBox104.TabStop = false;
             // 
             // txtS10_TipoDiscriminacion
@@ -6993,7 +7009,7 @@
             this.txtS10_TipoDiscriminacion.Multiline = true;
             this.txtS10_TipoDiscriminacion.Name = "txtS10_TipoDiscriminacion";
             this.txtS10_TipoDiscriminacion.Size = new System.Drawing.Size(250, 40);
-            this.txtS10_TipoDiscriminacion.TabIndex = 3;
+            this.txtS10_TipoDiscriminacion.TabIndex = 4;
             // 
             // cbxS10_Discriminacion
             // 
@@ -7016,7 +7032,7 @@
             this.label143.Size = new System.Drawing.Size(289, 26);
             this.label143.TabIndex = 1;
             this.label143.Text = "15. ¿Usted considera que en la comunidad existe algún tipo\r\n      de discriminaci" +
-                "ón? En caso de que si, ¿de qué tipo?";
+    "ón? En caso de que si, ¿de qué tipo?";
             // 
             // groupBox103
             // 
@@ -7029,7 +7045,7 @@
             this.groupBox103.Location = new System.Drawing.Point(9, 134);
             this.groupBox103.Name = "groupBox103";
             this.groupBox103.Size = new System.Drawing.Size(300, 112);
-            this.groupBox103.TabIndex = 10;
+            this.groupBox103.TabIndex = 4;
             this.groupBox103.TabStop = false;
             // 
             // ckbS10_Negativo
@@ -7084,7 +7100,7 @@
             this.label142.Size = new System.Drawing.Size(300, 26);
             this.label142.TabIndex = 1;
             this.label142.Text = "13. ¿Cuáles son para usted los principales aspectos negativos\r\n      de vivir en " +
-                "esta comunidad?\r\n";
+    "esta comunidad?\r\n";
             // 
             // groupBox100
             // 
@@ -7097,7 +7113,7 @@
             this.groupBox100.Location = new System.Drawing.Point(9, 13);
             this.groupBox100.Name = "groupBox100";
             this.groupBox100.Size = new System.Drawing.Size(300, 115);
-            this.groupBox100.TabIndex = 7;
+            this.groupBox100.TabIndex = 2;
             this.groupBox100.TabStop = false;
             // 
             // ckbS10_Positivo
@@ -7152,7 +7168,7 @@
             this.label134.Size = new System.Drawing.Size(295, 26);
             this.label134.TabIndex = 1;
             this.label134.Text = "12. ¿Cuáles son para usted los principales aspectos positivos\r\n      de vivir en " +
-                "esta comunidad?\r\n";
+    "esta comunidad?\r\n";
             // 
             // groupBox101
             // 
@@ -7162,7 +7178,7 @@
             this.groupBox101.Location = new System.Drawing.Point(9, 252);
             this.groupBox101.Name = "groupBox101";
             this.groupBox101.Size = new System.Drawing.Size(300, 216);
-            this.groupBox101.TabIndex = 4;
+            this.groupBox101.TabIndex = 6;
             this.groupBox101.TabStop = false;
             // 
             // txtS1014_Especificar
@@ -7201,7 +7217,7 @@
             this.label138.Size = new System.Drawing.Size(301, 26);
             this.label138.TabIndex = 1;
             this.label138.Text = "14. ¿Cuáles considera usted que es el grupo de su comunidad\r\n      más afectado p" +
-                "or los problemas de la comunidad?";
+    "or los problemas de la comunidad?";
             // 
             // groupBox109
             // 
@@ -7210,7 +7226,7 @@
             this.groupBox109.Location = new System.Drawing.Point(316, 144);
             this.groupBox109.Name = "groupBox109";
             this.groupBox109.Size = new System.Drawing.Size(300, 67);
-            this.groupBox109.TabIndex = 3;
+            this.groupBox109.TabIndex = 10;
             this.groupBox109.TabStop = false;
             // 
             // cbxS10_OrganizacionComunitaria
@@ -7385,7 +7401,7 @@
             this.label157.Size = new System.Drawing.Size(296, 26);
             this.label157.TabIndex = 1;
             this.label157.Text = "3. ¿En qué año se traslado su familia a esta comunidad y por \r\n    qué el traslad" +
-                "o?";
+    "o?";
             // 
             // groupBox113
             // 
@@ -7447,7 +7463,7 @@
             this.label159.Size = new System.Drawing.Size(282, 26);
             this.label159.TabIndex = 1;
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
-                "urante toda su VIDA FAMILIAR?\r\n";
+    "urante toda su VIDA FAMILIAR?\r\n";
             // 
             // frmEncuesta
             // 
@@ -7517,8 +7533,8 @@
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS6_Siguiente)).EndInit();
             this.tbpS7.ResumeLayout(false);
-            this.gbS7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS7_Siguiente)).EndInit();
+            this.gbS7.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             this.gbS7_8_Tierra.ResumeLayout(false);
@@ -8087,12 +8103,6 @@
         private System.Windows.Forms.PictureBox pbS6_Siguiente;
         private System.Windows.Forms.Button btnRemS1;
         private System.Windows.Forms.Button btnAddS1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.PictureBox pbS8_Siguiente;
         private System.Windows.Forms.PictureBox pbS9_Siguiente;
         private System.Windows.Forms.PictureBox pbS10_Siguiente;
@@ -8352,6 +8362,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.MaskedTextBox txtHoraF;
         private System.Windows.Forms.MaskedTextBox txtHoraI;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
 
 
     }
