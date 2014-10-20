@@ -82,21 +82,21 @@ namespace TechoCeiva
             else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 7")
             {
                  S1007_ComunidadLN NReporte07 = new S1007_ComunidadLN();
-                 rptS10_Comunidad rpt2 = new rptS10_Comunidad();
+                 S1007_Comunidad rpt2 = new S1007_Comunidad();
                  rpt2.SetDataSource(NReporte07.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                  crvReportes.ReportSource = rpt2;
             }
             else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 8")
             {
                 S1008_ComunidadLN NReporte08 = new S1008_ComunidadLN();
-                rptS10_Comunidad rpt3 = new rptS10_Comunidad();
+                S1008_Comunidad rpt3 = new S1008_Comunidad();
                 rpt3.SetDataSource(NReporte08.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 crvReportes.ReportSource = rpt3;
             }
             else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 14")
             {
-                rptS10_Comunidad rpt4 = new rptS10_Comunidad();
                 S1014_ComunidadLN NReporte14 = new S1014_ComunidadLN();
+                S1014_Comunidad rpt4 = new S1014_Comunidad();
                 rpt4.SetDataSource(NReporte14.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 crvReportes.ReportSource = rpt4;
             }

@@ -3326,7 +3326,7 @@ namespace TechoCeiva {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class S1014_ComDataTable : global::System.Data.TypedTableBase<S1014_ComRow> {
             
-            private global::System.Data.DataColumn columnNiños;
+            private global::System.Data.DataColumn columnNinos;
             
             private global::System.Data.DataColumn columnJovenes;
             
@@ -3379,9 +3379,9 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NiñosColumn {
+            public global::System.Data.DataColumn NinosColumn {
                 get {
-                    return this.columnNiños;
+                    return this.columnNinos;
                 }
             }
             
@@ -3486,10 +3486,10 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public S1014_ComRow AddS1014_ComRow(string Niños, string Jovenes, string Mujeres, string TerceraEdad, string Discapacitados, string GruposEtnicos, string NoGruposVulnerables, string Otros, string NSNR) {
+            public S1014_ComRow AddS1014_ComRow(string Ninos, string Jovenes, string Mujeres, string TerceraEdad, string Discapacitados, string GruposEtnicos, string NoGruposVulnerables, string Otros, string NSNR) {
                 S1014_ComRow rowS1014_ComRow = ((S1014_ComRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Niños,
+                        Ninos,
                         Jovenes,
                         Mujeres,
                         TerceraEdad,
@@ -3520,7 +3520,7 @@ namespace TechoCeiva {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNiños = base.Columns["Niños"];
+                this.columnNinos = base.Columns["Ninos"];
                 this.columnJovenes = base.Columns["Jovenes"];
                 this.columnMujeres = base.Columns["Mujeres"];
                 this.columnTerceraEdad = base.Columns["TerceraEdad"];
@@ -3534,8 +3534,8 @@ namespace TechoCeiva {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNiños = new global::System.Data.DataColumn("Niños", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNiños);
+                this.columnNinos = new global::System.Data.DataColumn("Ninos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNinos);
                 this.columnJovenes = new global::System.Data.DataColumn("Jovenes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJovenes);
                 this.columnMujeres = new global::System.Data.DataColumn("Mujeres", typeof(string), null, global::System.Data.MappingType.Element);
@@ -5583,17 +5583,17 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Niños {
+            public string Ninos {
                 get {
                     try {
-                        return ((string)(this[this.tableS1014_Com.NiñosColumn]));
+                        return ((string)(this[this.tableS1014_Com.NinosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Niños\' de la tabla \'S1014_Com\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ninos\' de la tabla \'S1014_Com\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableS1014_Com.NiñosColumn] = value;
+                    this[this.tableS1014_Com.NinosColumn] = value;
                 }
             }
             
@@ -5727,14 +5727,14 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNiñosNull() {
-                return this.IsNull(this.tableS1014_Com.NiñosColumn);
+            public bool IsNinosNull() {
+                return this.IsNull(this.tableS1014_Com.NinosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNiñosNull() {
-                this[this.tableS1014_Com.NiñosColumn] = global::System.Convert.DBNull;
+            public void SetNinosNull() {
+                this[this.tableS1014_Com.NinosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

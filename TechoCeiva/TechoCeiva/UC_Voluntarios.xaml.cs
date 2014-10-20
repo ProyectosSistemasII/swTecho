@@ -29,7 +29,7 @@ namespace TechoCeiva
 		{
 			this.InitializeComponent();
             _VoluntariosLN vol = new _VoluntariosLN();
-            fillDataGrid(vol);
+            fillDataGrid();
 		}
 
         private void Button_Click(object sender, RoutedEventArgs e)
