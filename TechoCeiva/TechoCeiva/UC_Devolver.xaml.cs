@@ -22,47 +22,36 @@ namespace TechoCeiva
 	public partial class UC_Devolver : UserControl
 	{
         private _Voluntarios voluntario = new _Voluntarios();
+        private UC_ShowPrestamo prestamos;
 
 		public UC_Devolver()
 		{
 			this.InitializeComponent();
-            fillGrid();
+            prestamos = new UC_ShowPrestamo();
+            CanvasDevTool.Children.Clear();
+            CanvasDevTool.Children.Add(prestamos);
 		}
 
-        private void btnAddSingle_Click(object sender, RoutedEventArgs e)
+        private void btnVerDetalle_Click(object sender, RoutedEventArgs e)
         {
-            WinDevolverHelp _nWin = new WinDevolverHelp();
-            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(_nWin);
-            _nWin.Show();
+            verDetalle();
         }
 
-        private void btnFiltro_Click(object sender, RoutedEventArgs e)
+        private void verDetalle()
         {
-            WinFiltro nWinFiltro = new WinFiltro();
-            nWinFiltro.ShowDialog();
-            if (nWinFiltro.isVolunteerSelected())
-            {
-                voluntario = nWinFiltro.getChosen();
-                lblFiltro.Content = "Filtrado por " + voluntario.nombres;
-                filtrarPrestamo(voluntario.idVoluntarios);
-            }
+            btnVerDetalle.IsEnabled = false;
+            btnBack.IsEnabled = true;
+            _Prestamo detalle = prestamos.DataGridListadoPrestamos.SelectedItem as _Prestamo;
+            CanvasDevTool.Children.Clear();
+            CanvasDevTool.Children.Add(new UC_ShowDetalle(detalle.iDPrestamo, detalle.fechaPrestamo));
         }
 
-        private void fillGrid()
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            DataGridListadoPrestamos.ItemsSource = new _PrestamosLN().obtenerTodosPrestamos();
-        }
-
-        private void filtrarPrestamo(int idVoluntario)
-        {
-            DataGridListadoPrestamos.ItemsSource = null;
-            DataGridListadoPrestamos.ItemsSource = new _PrestamosLN().buscarPrestamosPor(idVoluntario);
-        }
-
-        private void btnVolver_Click(object sender, RoutedEventArgs e)
-        {
-            lblFiltro.Content = "";
-            fillGrid();
+            btnBack.IsEnabled = false;
+            btnVerDetalle.IsEnabled = true;
+            CanvasDevTool.Children.Clear();
+            CanvasDevTool.Children.Add(prestamos);
         }
 	}
 }

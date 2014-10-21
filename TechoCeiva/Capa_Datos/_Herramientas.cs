@@ -12,6 +12,9 @@ namespace Capa_Datos
         public int idHerramientas { get; set; }
         public String Nombre { get; set; }
         public int Existencia { get; set; }
+        public int buenEstado { get; set; }
+        public int malEstado { get; set; }
+        public int perdidas { get; set; }
         public Boolean Activo { get; set; }
         public List<Error> _errores { get; set; }
 
@@ -27,6 +30,9 @@ namespace Capa_Datos
         {
             this.idHerramientas = 0;
             this.Nombre = "";
+            this.buenEstado = 0;
+            this.malEstado = 0;
+            this.perdidas = 0;
             this.Existencia = 0;
             this.Activo = true;
         }

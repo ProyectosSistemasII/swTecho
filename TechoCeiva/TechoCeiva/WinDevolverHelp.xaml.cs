@@ -20,14 +20,44 @@ namespace TechoCeiva
 		public WinDevolverHelp()
 		{
 			this.InitializeComponent();
-			
-			// A partir de este punto se requiere la inserción de código para la creación del objeto.
             txtDañadas.Focus();
 		}
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void txtDañadas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txtPerdidas.Focus();
+            }
+        }
+
+        private void txtPerdidas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txtPendientes.Focus();
+            }
+        }
+
+        private void txtPendientes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txtBuenEstado.Focus();
+            }
+        }
+
+        private void txtBuenEstado_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnAceptar.Focus();
+            }
         }
 	}
 }
