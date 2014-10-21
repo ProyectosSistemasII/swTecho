@@ -12,7 +12,8 @@ namespace Capa_Datos
     {
         public int idDetallePrestamo { get; set; }
         public int Herramientas_idHerramientas { get; set; }
-        public int Prestamo_idDetallePrestamo { get; set; }
+        public int Prestamo_idPrestamo { get; set; }
+        public int CantidadPrestada { get; set; }
         public int CantidadBuenEtsado { get; set; }
         public int CantidadMalEstado { get; set; }
         public int CantidadPerdida { get; set; }
@@ -28,7 +29,8 @@ namespace Capa_Datos
         {
             this.idDetallePrestamo = 0;
             this.Herramientas_idHerramientas = 0;
-            this.Prestamo_idDetallePrestamo = 0;
+            this.Prestamo_idPrestamo = 0;
+            this.CantidadPrestada = 0;
             this.CantidadBuenEtsado = 0;
             this.CantidadMalEstado = 0;
             this.CantidadPerdida = 0;
@@ -36,11 +38,12 @@ namespace Capa_Datos
             this.Devolucion = DateTime.MaxValue;
         }
 
-        public _DetallePrestamo(int idDetalle, int idHerramienta, int idDetallePrestamo, int cantidadBuena, int cantidadMala, int cantidadPerdida, int activo)
+        public _DetallePrestamo(int idDetalle, int idHerramienta, int idPrestamo, int cantidadPrestada, int cantidadBuena, int cantidadMala, int cantidadPerdida, int activo)
         {
             this.idDetallePrestamo = idDetalle;
             this.Herramientas_idHerramientas = idHerramienta;
-            this.Prestamo_idDetallePrestamo = idDetallePrestamo;
+            this.Prestamo_idPrestamo = idPrestamo;
+            this.CantidadPrestada = cantidadPrestada;
             this.CantidadBuenEtsado = cantidadBuena;
             this.CantidadMalEstado = cantidadMala;
             this.CantidadPerdida = cantidadPerdida;
@@ -66,7 +69,7 @@ namespace Capa_Datos
             {
                 DataRow _row = _tabla.Rows[i];
                 //_DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]), Convert.ToDateTime(_row["FechaDevolucion"]));
-                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]));
+                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]));
                 listaPrestamos.Add(detallePrestamo);
             }
 
@@ -85,13 +88,14 @@ namespace Capa_Datos
                 foreach (_Herramientas herramienta in listado)
                 {
                     comando.CommandText = "insert into detalleprestamo (Herramientas_idHerramientas, Prestamo_idPrestamo,"+
-                                                                        "CantidadBuenEstado, CantidadMalEstado, CantidadPerdida,"+
-                                                                        "Activo, FechaDevolucion)"+
-                                                                 "values(@idHerramienta, @idPrestamo, @buenEstado, @malEstado,"+
-                                                                        "@perdidas, @activo, @fechaDevolucion)";
+                                                                        "CantidadPrestada, CantidadBuenEstado, CantidadMalEstado,"+
+                                                                        "CantidadPerdida, Activo, FechaDevolucion)" +
+                                                                 "values(@idHerramienta, @idPrestamo, @prestado, @buenEstado,"+
+                                                                        "@malEstado, @perdidas, @activo, @fechaDevolucion)";
                     
                     comando.Parameters.AddWithValue("@idHerramienta",herramienta.idHerramientas);
                     comando.Parameters.AddWithValue("@idPrestamo", idPrestamo);
+                    comando.Parameters.AddWithValue("@prestado",herramienta.Existencia);
                     comando.Parameters.AddWithValue("@buenEstado", 0);
                     comando.Parameters.AddWithValue("@malEstado", 0);
                     comando.Parameters.AddWithValue("@perdidas", 0);
@@ -134,10 +138,9 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]));
+                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]));
                 listaDetallesEspecificos.Add(detallePrestamo);
             }
-
             return listaDetallesEspecificos;
         }
     }
