@@ -48,7 +48,6 @@ namespace TechoCeiva
             dtgUsuarios.Columns[1].Width = 120;
             dtgUsuarios.Columns[2].Width = 120;
             dtgUsuarios.Columns[3].Width = 120;
-            dtgUsuarios.DisplayMemberPath = "Nombres";
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
@@ -76,6 +75,13 @@ namespace TechoCeiva
                 ValidarDatosUsuarios.eliminarUsuario(usuario.userName);
                 refrescar();
             }
+        }
+
+        private void dtgUsuarios_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            WinAddUsuario win = new WinAddUsuario((DatosUsuario)dtgUsuarios.SelectedItem);
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(win);
+            win.Show();
         }
 
     }

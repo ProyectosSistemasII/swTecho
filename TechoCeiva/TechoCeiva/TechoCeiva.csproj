@@ -245,6 +245,9 @@
     <Compile Include="WinModifyTool.xaml.cs">
       <DependentUpon>WinModifyTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinRecuperarPassword.xaml.cs">
+      <DependentUpon>WinRecuperarPassword.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmEncuesta.resx">
       <DependentUpon>frmEncuesta.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -437,6 +440,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="WinModifyTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WinRecuperarPassword.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

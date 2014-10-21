@@ -65,7 +65,7 @@
 			</Button.Resources>
 		</Button>
 		<Image Margin="30,74,35.446,0" Source="img/logo-techo.png" Stretch="Fill" Height="83" VerticalAlignment="Top"/>
-		<Button Content="Problemas tu contraseña?" Margin="30,0,0,229.04" Height="20.96" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Left" d:LayoutOverrides="HorizontalAlignment">
+		<Button Content="Problemas tu contraseña?" Margin="30,0,0,229.04" Height="20.96" VerticalAlignment="Bottom" HorizontalAlignment="Left" HorizontalContentAlignment="Left" d:LayoutOverrides="HorizontalAlignment" MouseDoubleClick="Button_MouseDoubleClick">
 			<Button.Template>
 				<ControlTemplate TargetType="Button">
 					<TextBlock>

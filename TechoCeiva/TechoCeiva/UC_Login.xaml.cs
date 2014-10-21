@@ -55,5 +55,12 @@ namespace TechoCeiva
         {
             new frmSettings().Show();
         }
+
+        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            WinRecuperarPassword usuario = new WinRecuperarPassword();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(usuario);
+            usuario.Show();
+        }
 	}
 }

@@ -62,8 +62,10 @@ namespace Capa_Datos
         public String nombresVoluntario { get; set; }
         public String apellidosVoluntario { get; set; }
         public String tipoUsuario { get; set; }
-        //public String pregunta { get; set; }
-        //public String respuesta { get; set; }
+        private int idVoluntarios;
+        private int idTipo;
+        private String pregunta;
+        private String respuesta;
 
         //Metodo que devuelve una lista con los usuarios en el sistema
         public List<DatosUsuario> getUsuarios()
@@ -73,7 +75,7 @@ namespace Capa_Datos
             {
                 MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
                 MySqlCommand comando = new MySqlCommand(
-                   "Select Usuarios.UserName,Voluntarios.Nombres, Voluntarios.Apellidos,TipoUsuarios.NombreTipo from Usuarios " +
+                   "Select Usuarios.UserName,Voluntarios.Nombres, Voluntarios.Apellidos,TipoUsuarios.NombreTipo,Voluntarios.idVoluntarios,TipoUsuarios.idTipoUsuarios, Usuarios.PreguntaSecreta, Usuarios.Respuesta from Usuarios " +
                    "inner join Voluntarios on Voluntarios.idVoluntarios=Usuarios.Voluntarios_idVoluntarios " +
                    "inner join TipoUsuarios on TipoUsuarios.idTipoUsuarios=Usuarios.TipoUsuarios_idTipoUsuarios where Usuarios.Activo=true;", conexion);
                 conexion.Open();
@@ -85,6 +87,10 @@ namespace Capa_Datos
                     tmp.nombresVoluntario = datos["Nombres"].ToString();
                     tmp.apellidosVoluntario = datos["Apellidos"].ToString();
                     tmp.tipoUsuario = datos["NombreTipo"].ToString();
+                    tmp.idTipo = Convert.ToInt16(datos["idTipoUsuarios"]);
+                    tmp.idVoluntarios = Convert.ToInt16(datos["idVoluntarios"]);
+                    tmp.pregunta = datos["PreguntaSecreta"].ToString();
+                    tmp.respuesta = datos["Respuesta"].ToString();
                     usuarios.Add(tmp);
                 }
             }
@@ -93,6 +99,26 @@ namespace Capa_Datos
                 return null;
             }
             return usuarios;
+        }
+
+        public int getIdTipoUsuario()
+        {
+            return idTipo;
+        }
+
+        public int getIdVoluntario()
+        {
+            return idVoluntarios;
+        }
+
+        public string getPregunta()
+        {
+            return pregunta;
+        }
+
+        public string getRespuesta()
+        {
+            return respuesta;
         }
 
         //metodo que determina si existe un usuario con un determinado nombre
@@ -165,6 +191,51 @@ namespace Capa_Datos
             return "Registro agregado";
         }
 
+        //Metodo que modifica los datos del usuario sin incluir el password
+        public string modificarUsuario(string userName,int idTipoUsuario, string pregunta, string respuesta)
+        {
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("update Usuarios set TipoUsuarios_idTipoUsuarios=@idTipo, PreguntaSecreta=@pregunta, Respuesta=@respuesta where UserName=@userName;", conexion);
+                comando.Parameters.AddWithValue("@userName", userName);
+                comando.Parameters.AddWithValue("@idTipo", idTipoUsuario);
+                comando.Parameters.AddWithValue("@pregunta", pregunta);
+                comando.Parameters.AddWithValue("@respuesta", respuesta);
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (MySqlException ex)
+            {
+                return ex.Message;
+            }
+            return "Datos modificados, la contraseña no cambio";
+        }
+
+        //metodo que modifica todos los datos incluyendo el password
+        public string modificarUsuarioConPassword(string userName, string password, int idTipoUsuario, string pregunta, string respuesta)
+        {
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("update Usuarios set Password=SHA2(@password,512), TipoUsuarios_idTipoUsuarios=@idTipo, PreguntaSecreta=@pregunta, Respuesta=@respuesta where UserName=@userName;", conexion);
+                comando.Parameters.AddWithValue("@userName", userName);
+                comando.Parameters.AddWithValue("@password", password);
+                comando.Parameters.AddWithValue("@idTipo", idTipoUsuario);
+                comando.Parameters.AddWithValue("@pregunta", pregunta);
+                comando.Parameters.AddWithValue("@respuesta", respuesta);
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (MySqlException ex)
+            {
+                return ex.Message;
+            }
+            return "Datos modificados";
+        }
+
         //Metodo que dehabilida los usuarios
         public string deshabilitarUsuario(string username)
         {
@@ -182,6 +253,71 @@ namespace Capa_Datos
                 return ex.Message;
             }
             return "Registro eliminado";
+        }
+
+        //Metodo que devuelve la pregutna de un usuario
+        public String getPregunta(String username)
+        {
+            String pregunta;
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("Select PreguntaSecreta from Usuarios where UserName=@username and Activo=true", conexion);
+                comando.Parameters.AddWithValue("@username", username);
+                conexion.Open();
+                pregunta = Convert.ToString(comando.ExecuteScalar());
+                conexion.Close();
+            }
+            catch (MySqlException ex)
+            {
+                return ex.Message;
+            }
+            return pregunta;
+        }
+
+        //Metodo que verifica si la respuesta del usuario es valida
+        public Boolean isRespuesta(String username, String respuesta)
+        {
+            String respuestaUsuario;
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("Select Respuesta from Usuarios where UserName=@username and Activo=true", conexion);
+                comando.Parameters.AddWithValue("@username", username);
+                conexion.Open();
+                respuestaUsuario = Convert.ToString(comando.ExecuteScalar());
+                conexion.Close();
+                if (respuesta == respuestaUsuario)
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+            return false;
+        }
+
+        //metodo que genera un nuevo password y lo guarda
+        public String reiniciarPassword(String username)
+        {
+            Random clave = new Random();
+            String nuevaclave = Convert.ToString(clave.Next(1000, 9999));
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("update Usuarios set Password=SHA2(@clave,512) where UserName=@user", conexion);
+                comando.Parameters.AddWithValue("@clave", nuevaclave);
+                comando.Parameters.AddWithValue("@user", username);
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch
+            {
+                return "No se pudo recuperar la contraseña";
+            }
+            return nuevaclave;
         }
     }
 

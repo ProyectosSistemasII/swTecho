@@ -21,23 +21,31 @@ namespace TechoCeiva
 	public partial class WinAddUsuario : Window
 	{
         int currentid = 0;
-
+        private bool isModificar;
+        private DatosUsuario usuario;
 		public WinAddUsuario()
 		{
+            isModificar = false;
 			this.InitializeComponent();
 		}
 
         public WinAddUsuario(DatosUsuario usuario)
         {
+            isModificar = true;
+            this.usuario = usuario;
             this.InitializeComponent();
-            btnGuardar.Content = "Modificar";
-            txtUsername.IsEnabled = false;
-            txtUsername.Text = usuario.userName;
-            
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (isModificar)
+            {
+                MessageBoxResult result = MessageBox.Show("¿Esta seguro de modificar los datos?", "", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                    MessageBox.Show(ValidarDatosUsuarios.modificarUsuario(txtUsername.Text,pswPassword.Password,pswPassworConfirm.Password,Convert.ToInt16(cmbTipo.SelectedValue),cmbPregunta.Text,txtRespuesta.Text));
+                return;
+            }
             MessageBox.Show(ValidarDatosUsuarios.insertarUsuario(txtUsername.Text, pswPassword.Password, pswPassworConfirm.Password, Convert.ToInt16(cmbTipo.SelectedValue), Convert.ToInt16(lstVoluntarios.SelectedValue), Convert.ToString(cmbPregunta.SelectedValue), txtRespuesta.Text));
         }
 
@@ -67,6 +75,18 @@ namespace TechoCeiva
             cmbPregunta.Items.Add("¿Nombre de la cuidad donde nació mi padre?");
             cmbPregunta.Items.Add("¿Personaje de ficción favorito?");
             cmbPregunta.Items.Add("¿Pelicula favorita?");
+            if (isModificar)
+            {
+                this.Title = "Modificar datos de usuario";
+                this.btnGuardar.Content = "Modificar";
+                txtUsername.IsEnabled = false;
+                lstVoluntarios.IsEnabled = false;
+                lstVoluntarios.SelectedValue = usuario.getIdVoluntario();
+                txtUsername.Text = usuario.userName;
+                cmbTipo.SelectedValue = usuario.getIdTipoUsuario();
+                txtRespuesta.Text = usuario.getRespuesta();
+                cmbPregunta.Text = usuario.getPregunta();
+            }
         }
 
 	}

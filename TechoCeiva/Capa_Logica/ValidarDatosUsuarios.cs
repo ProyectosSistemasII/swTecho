@@ -31,6 +31,35 @@ namespace Capa_Logica
             DatosUsuario usuario = new DatosUsuario();
             return usuario.insertarUsuario(username, password, idTipoUsuario, idVoluntario,pregunta,respuesta);
         }
+
+        public static String modificarUsuario(String username, String password, String passwordConfirm, int idTipoUsuario, string pregunta, string respuesta)
+        {
+            if (idTipoUsuario == 0)
+                return "Debe seleccionar un tipo de usuario";
+            if (pregunta == "")
+                return "Debes seleccionar una pregunta o ingresarla";
+            if (respuesta == "")
+                return "Debes ingresar una prespuesta a la pregunta secreta";
+            DatosUsuario usuario = new DatosUsuario();
+            if (password != "")
+            {
+                if (passwordConfirm != "")
+                {
+                    if (password == passwordConfirm)
+                    {
+                        if (password.Length < 6)
+                        {
+                            return usuario.modificarUsuarioConPassword(username,password, idTipoUsuario, pregunta, respuesta);
+
+                        }
+                    }
+                        
+                }
+                    
+            }
+            return usuario.modificarUsuario(username, idTipoUsuario, pregunta, respuesta);
+        }
+
         public static String eliminarUsuario(string username)
         {
             DatosUsuario usuario = new DatosUsuario();
