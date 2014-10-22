@@ -82,65 +82,7 @@ namespace Capa_Datos
             return _listPresentacion;
         }
 
-        /*
-             public List<_Presentacion> _Obtener_id(String _nombre)
-             {
-                 string query = "Select idPresentacion FROM Presentacion WHERE nombre = @nombre";
-                 List<_Presentacion> _listPresentacion = new List<_Presentacion>();
-
-                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                 _comando.CommandTimeout = 12280;
-                 _comando.Parameters.AddWithValue("@nombre", _nombre);
-                 DataSet _ds = new DataSet();
-                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
-                 _adapter.SelectCommand = _comando;
-                 _adapter.Fill(_ds);
-                 DataTable _tabla = new DataTable();
-                 _tabla = _ds.Tables[0];
-
-                 for (int i = 0; i < _tabla.Rows.Count; i++)
-                 {
-                     DataRow _row = _tabla.Rows[i];
-                     _Presentacion _presentacion = new _Presentacion(Convert.ToInt32(_row["idPresentacion"]), Convert.ToString(_row["Nombre"]), Convert.ToBoolean(_row["Activo"]));
-                     _listPresentacion.Add(_presentacion);
-                 }
-
-                 return _listPresentacion;
-             }
-
-             public int _Obtener_ID(String _nombre)
-             {
-                 String query  = "select idPresentacion from Presentacion where nombre = " + _nombre;
-                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                 _comando.CommandTimeout = 12280;
-
-             }
-
-
-             public List<String> _Obtener_P()
-             {
-                 string query = "Select Nombre FROM Alimentos WHERE Activo = true";
-                 List<String> presentacion = new List<String>();
-
-                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                 _comando.CommandTimeout = 12280;
-                 DataSet _ds = new DataSet();
-                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
-                 _adapter.SelectCommand = _comando;
-                 _adapter.Fill(_ds);
-                 DataTable _tabla = new DataTable();
-                 _tabla = _ds.Tables[0];
-
-                 for (int i = 0; i < _tabla.Rows.Count; i++)
-                 {
-                     DataRow _row = _tabla.Rows[i];
-                     String nombre = new String(Convert.ToString(_row["Nombre"]));
-                     _listInsumos.Add(_insumos);
-                 }
-
-                 return _listInsumos;
-             }*/
-            
+                    
         public Boolean _Eliminar(int _id)
         {
             string query = "UPDATE Presentacion SET Activo = false WHERE idPresentacion = " + _id;
@@ -159,6 +101,33 @@ namespace Capa_Datos
             }
 
             return true;
+        }
+
+        public int verificarPresentacion(String nombre)
+        {
+            MySqlCommand comando = new MySqlCommand("SELECT COUNT(idPresentacion) AS Contador, idPresentacion FROM Presentacion WHERE Nombre = @Presentacion", _conexion);
+            comando.Parameters.AddWithValue("@Presentacion", this.Nombre);
+            comando.CommandTimeout = 12280;
+
+            int i = 0;
+            int id = 0;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            i = Convert.ToInt32(row["Contador"]);
+            if (i == 0)
+            {
+                return id;
+            }
+            else
+            {
+                id = Convert.ToInt32(row["idPresentacion"]);
+                return id;
+            }
         }
     
     }

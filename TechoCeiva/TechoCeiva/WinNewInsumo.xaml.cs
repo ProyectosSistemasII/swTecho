@@ -35,15 +35,16 @@ namespace TechoCeiva
         {
             _PresentacionLN nPresentacion = new _PresentacionLN(Convert.ToString(cmxPresentacion.Text));
             Boolean correcto2 = nPresentacion.Ingresar_Presentacion();
+            int verificarPresentacion = nPresentacion.verificarPresentacion(Convert.ToString(cmxPresentacion.Text));
 
             _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text),1);
             Boolean correcto = nInsumo.Ingresar_Insumo();
-            Boolean verificar = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), 1);
-            if (verificar)
+            int verificarInsumo = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), verificarPresentacion);
+            if (verificarPresentacion == 0)
             {
-                if (correcto & correcto2)
+                nPresentacion._Insertar_P();
+                if (correcto && correcto2)
                 {
-                    nPresentacion._Insertar_P();
                     nInsumo._Insertar_I();
                     if (MessageBox.Show("Insumo guardado. ¿Desea agregar uno nuevo?", "Guardado Exitoso", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.No)
                     {
@@ -62,7 +63,31 @@ namespace TechoCeiva
             }
             else
             {
+                if (verificarInsumo != 0)
+                {
+                    nInsumo._Modificar(verificarInsumo, verificarPresentacion);
+                    MessageBox.Show("Insumo existente Modificado");
+                }
+                else
+                {
+                    if (correcto && correcto2)
+                    {
+                        nInsumo._Insertar_I();
+                        if (MessageBox.Show("Insumo guardado. ¿Desea agregar uno nuevo?", "Guardado Exitoso", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.No)
+                        {
+                            this.Close();
+                        }
+                        else
+                        {
+                            comboBoxInsumos.Focus();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(nInsumo._Obtener_Error());
+                    }
 
+                }
             }
             
         }

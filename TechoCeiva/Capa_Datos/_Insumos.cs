@@ -98,30 +98,6 @@ namespace Capa_Datos
 
             return _listInsumos;
         }
-
-             /*public List<String> _Obtener_P()
-             {
-                 string query = "Select Nombre FROM Alimentos WHERE Activo = true";
-                 List<String> presentacion = new List<String>();
-
-                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                 _comando.CommandTimeout = 12280;
-                 DataSet _ds = new DataSet();
-                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
-                 _adapter.SelectCommand = _comando;
-                 _adapter.Fill(_ds);
-                 DataTable _tabla = new DataTable();
-                 _tabla = _ds.Tables[0];
-
-                 for (int i = 0; i < _tabla.Rows.Count; i++)
-                 {
-                     DataRow _row = _tabla.Rows[i];
-                     String nombre = new String(Convert.ToString(_row["Nombre"]));
-                     _listInsumos.Add(_insumos);
-                 }
-
-                 return _listInsumos;
-             }*/
             
         public Boolean _Eliminar(int _id)
         {
@@ -184,16 +160,35 @@ namespace Capa_Datos
             }
         }
 
-        public Boolean verificarduplicado(String nombre, String rango, int año, int presentacion)
+        public int verificarduplicado(String nombre, String rango, int año, int presentacion)
         {
-            if (this.Nombre == nombre && this.Rango == rango && this.AnioCaducidad == año && this.Presentacion_idPresentacion == presentacion)
+            MySqlCommand comando = new MySqlCommand("SELECT COUNT(idAlimentos) AS Contador, idAlimentos  FROM Alimentos WHERE Nombre = @nombre AND AnioCaducidad = @año AND Rango = @rango AND Presentacion_idPresentacion = @id", _conexion);
+            comando.Parameters.AddWithValue("@nombre", this.Nombre);
+            comando.Parameters.AddWithValue("@año", this.AnioCaducidad);
+            comando.Parameters.AddWithValue("@rango", this.Rango);
+            comando.Parameters.AddWithValue("@id", this.Presentacion_idPresentacion);
+            comando.CommandTimeout = 12280;
+
+            int i = 0;
+            int id = 0;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            i = Convert.ToInt32(row["Contador"]);
+            if (i == 0)
             {
-                return false;
+                return id;
             }
             else
             {
-                return true;
+                id = Convert.ToInt32(row["idAlimentos"]);
+                return id;
             }
+                        
         }
 
     }

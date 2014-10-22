@@ -32,7 +32,7 @@ namespace TechoCeiva
             //inicializacion de los componentes
             //
             //carga de datos a datagrid
-            refrescar();
+           // refrescar();
         }
 
         private void refrescar()

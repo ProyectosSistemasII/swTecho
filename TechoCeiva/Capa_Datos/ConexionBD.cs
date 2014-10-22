@@ -11,9 +11,9 @@ namespace Capa_Datos
     {
         public static String ConexionDireccion =
            "Server=localhost;" +
-           "Database=dbtecho;" +
+           "Database=techo;" +
            "UID=root;" +
-           "Password=Mysql123.";
+           "Password=123";
         //public static String ConexionDireccion = 
             //"Server=" + Properties.Settings.Default.server + ";" + 
             //"Database=" + Properties.Settings.Default.database + ";" + 

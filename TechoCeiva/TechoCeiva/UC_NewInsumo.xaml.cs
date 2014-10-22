@@ -49,8 +49,8 @@ namespace TechoCeiva
 
             _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text),1);
             Boolean correcto = nInsumo.Ingresar_Insumo();
-            Boolean verificar = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), 1);
-            if (verificar)
+            int verificar = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), 1);
+            if (verificar == 0)
             {
                 if (correcto & correcto2)
                 {
