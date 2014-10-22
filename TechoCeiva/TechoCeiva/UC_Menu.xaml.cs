@@ -145,7 +145,7 @@ namespace TechoCeiva
 
         private void btnInsumosIngresar_Click(object sender, RoutedEventArgs e)
         {
-            UC_NewInsumo nInsumo = new UC_NewInsumo();
+            UC_NuevoInsumo nInsumo = new UC_NuevoInsumo();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nInsumo);
         }

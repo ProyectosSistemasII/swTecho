@@ -19,10 +19,11 @@ namespace Capa_Logica
 
         }
 
-        public _SalidaLN(DateTime fechaSalida, int Usuario, String descripcion)
+        public _SalidaLN(DateTime fechaSalida, int Usuario, Boolean Activo, String descripcion)
         {
             this.FechaSalida = fechaSalida;
             this.Usuarios_idUsuarios = Usuario;
+            this.Activo = Activo;
             this.Descripcion = descripcion;
             this._errores = new List<Error>();
         }

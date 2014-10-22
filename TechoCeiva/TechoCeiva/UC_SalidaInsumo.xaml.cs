@@ -143,12 +143,13 @@ namespace TechoCeiva
             List<_Insumos> listaInsumos = new List<_Insumos>();
             listaInsumos = contenido.obtenerListado(detalle);
 
-                _SalidaLN datosSalida = new _SalidaLN(DateTime.Today,currentUser.idUsuarios,Convert.ToString(txtDescripcion.Text));
+                _SalidaLN datosSalida = new _SalidaLN(DateTime.Today,1,true,Convert.ToString(txtDescripcion.Text));
                 Boolean correcto = datosSalida.ingresarSalida();
 
                 if (correcto)
                 {
-                    idSalida = datosSalida._InsertarSalida();
+                    datosSalida._InsertarSalida();
+                    MessageBox.Show("Datos Guardados");
                 }
                 else
                 {

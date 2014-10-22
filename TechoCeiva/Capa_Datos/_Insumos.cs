@@ -186,7 +186,7 @@ namespace Capa_Datos
 
         public Boolean verificarduplicado(String nombre, String rango, int año, int presentacion)
         {
-            if (this.Nombre == nombre & this.Rango == rango & this.AnioCaducidad == año & this.Presentacion_idPresentacion == presentacion)
+            if (this.Nombre == nombre && this.Rango == rango && this.AnioCaducidad == año && this.Presentacion_idPresentacion == presentacion)
             {
                 return false;
             }

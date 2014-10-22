@@ -61,13 +61,13 @@
 		</Button>
 		<TextBox x:Name="txtCantida" HorizontalAlignment="Left" Margin="175,175,0,168" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="1" Width="80.553" FontSize="14.667" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" d:LayoutOverrides="Height"/>
 		<Label x:Name="lblCaduca" Content="Caduca:" HorizontalAlignment="Left" Margin="108,0,0,134" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontSize="14.667"/>
-		<ComboBox x:Name="cbxRangoFecha" Margin="175,0,81,134" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Bottom" FontSize="14.667" SelectionChanged="cbxRangoFecha_SelectionChanged" />
+		<ComboBox x:Name="cbxRangoFecha" Margin="175,0,125,134" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Bottom" FontSize="14.667" IsEditable="False" />
 		<Label x:Name="lblInsumo1" Content="Insumo:" HorizontalAlignment="Left" Margin="108.139,99,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<Label x:Name="lblPresentacion" Content="Presentacion:" HorizontalAlignment="Left" Margin="73.261,137,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<ComboBox x:Name="cmxPresentacion" Margin="175,137,245,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" FontSize="14.667" IsEditable="True" />
 		<Label x:Name="lblanio" Content="Año:" HorizontalAlignment="Left" Height="33" Margin="126.184,0,0,89" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontSize="14.667" Width="41" />
 		<TextBox x:Name="txtAni" HorizontalAlignment="Left" Margin="175,0,0,96" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="80.553" FontSize="14.667"/>
-		<ComboBox x:Name="comboBoxInsumos" Margin="175,99,125,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" FontSize="14.667" IsEditable="True" SelectionChanged="comboBoxInsumos_SelectionChanged" />
+		<ComboBox x:Name="comboBoxInsumos" Margin="175,99,125,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" FontSize="14.667" IsEditable="True" />
 		<Label x:Name="lblAgregarInsumo" Content="Agregar Insumo" HorizontalAlignment="Left" Margin="38,20,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="Black" FontSize="26.667"/>
 		<Button Content="Cancelar" HorizontalAlignment="Right" Height="26" Margin="0,0,81,38" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="185" Foreground="White" Background="#FFC52023" FontSize="14.667" Click="Button_Click">
 			<Button.BorderBrush>
