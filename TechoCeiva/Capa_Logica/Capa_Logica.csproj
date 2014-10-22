@@ -84,6 +84,7 @@
     <Compile Include="_ComunidadLN.cs" />
     <Compile Include="_DepartamentoLN.cs" />
     <Compile Include="_DetallePrestamoLN.cs" />
+    <Compile Include="_DetalleSalidaLN.cs" />
     <Compile Include="_HerramientasLN.cs" />
     <Compile Include="_InsumosLN.cs" />
     <Compile Include="_MunicipioLN.cs" />

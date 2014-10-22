@@ -21,7 +21,10 @@ namespace TechoCeiva
 	/// Lógica de interacción para UC_SalidaInsumo.xaml
 	/// </summary>
 	public partial class UC_SalidaInsumo : UserControl
+
 	{
+        public UsuarioLN currentUser { get; set; }
+
         private ObservableCollection<_InsumosLN> detalle = new ObservableCollection<_InsumosLN>();
 
 		public UC_SalidaInsumo()
@@ -116,7 +119,7 @@ namespace TechoCeiva
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            acctionAdd(5);
+            Guardar();
         }
 
         private void btnX_Click(object sender, RoutedEventArgs e)
@@ -131,6 +134,28 @@ namespace TechoCeiva
                 MessageBox.Show("Ingrese datos válidos", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void Guardar()
+        {
+            int idSalida = 0;
+            _DetalleSalidaLN detalleSalida = new _DetalleSalidaLN();
+            _InsumosLN contenido = new _InsumosLN();
+            List<_Insumos> listaInsumos = new List<_Insumos>();
+            listaInsumos = contenido.obtenerListado(detalle);
+
+                _SalidaLN datosSalida = new _SalidaLN(DateTime.Today,currentUser.idUsuarios,Convert.ToString(txtDescripcion.Text));
+                Boolean correcto = datosSalida.ingresarSalida();
+
+                if (correcto)
+                {
+                    idSalida = datosSalida._InsertarSalida();
+                }
+                else
+                {
+                    MessageBox.Show(datosSalida.obtenerError());
+                }
+        }
+        
 
         private void deleteFromGrid()
         {

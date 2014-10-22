@@ -236,5 +236,10 @@ namespace TechoCeiva
             cbxHerramienta.SelectedIndex = -1;
             cbxVoluntario.IsDropDownOpen = true;
         }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 	}
 }

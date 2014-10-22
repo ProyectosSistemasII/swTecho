@@ -6,7 +6,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    class _SalidaLN : _Salida
+    public class _SalidaLN : _Salida
     {
         public _SalidaLN()
         {
@@ -27,7 +27,7 @@ namespace Capa_Logica
             this._errores = new List<Error>();
         }
 
-        public Boolean ingresarPrestamo()
+        public Boolean ingresarSalida()
         {
             Boolean correcto = true;
             _Salida nSalida = new _Salida(this.idSalida, this.FechaSalida, this.Usuarios_idUsuarios, this.Activo, this.Descripcion);

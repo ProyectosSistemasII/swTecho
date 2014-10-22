@@ -118,5 +118,16 @@ namespace Capa_Logica
             }
             return false;
         }
+
+        public List<_Insumos> obtenerListado(ObservableCollection<_InsumosLN> listadoObjetos)
+        {
+            List<_Insumos> listado = new List<_Insumos>();
+
+            foreach (_InsumosLN insumo in listadoObjetos)
+            {
+                listado.Add(insumo);
+            }
+            return listado;
+        }
     }
 }

@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TechoCeiva.UC_NuevoInsumo"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="1123" Height="577">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Simple Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Label x:Name="lblInsumos" Content="Insumos" HorizontalAlignment="Left" Margin="23,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="26.667"/>
+		<DataGrid x:Name="dgInsumos" Margin="23,68,475.125,47" MouseDoubleClick="dgInsumos_MouseDoubleClick" />
+		<Button x:Name="btnMas" Content="+" HorizontalAlignment="Left" Margin="315,18.168,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" FontSize="14.667" Width="36" Height="25.07" Foreground="White" Background="#FF0092DD" BorderBrush="{x:Null}" Click="btnMas_Click" />
+	</Grid>
+</UserControl>

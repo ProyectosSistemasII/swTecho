@@ -40,7 +40,7 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
-        public void _InsertarSalida()
+        public int _InsertarSalida()
         {
             if (this._errores.Count == 0)
             {
@@ -64,6 +64,7 @@ namespace Capa_Datos
                     _errores.Add(_error);
                 }
             }
+            return 0;
         }
 
         public int ultimaInsercion()

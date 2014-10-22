@@ -89,6 +89,7 @@
     <Compile Include="_Comunidad.cs" />
     <Compile Include="_Departamento.cs" />
     <Compile Include="_DetallePrestamo.cs" />
+    <Compile Include="_DetalleSalida.cs" />
     <Compile Include="_Herramientas.cs" />
     <Compile Include="_Insumos.cs" />
     <Compile Include="_Municipio.cs" />
