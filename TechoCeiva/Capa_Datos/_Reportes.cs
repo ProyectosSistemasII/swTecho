@@ -41,5 +41,148 @@ namespace Capa_Datos
                 return null;
             }
         }
+
+        public DataTable NumeroTotalPersonas(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT idS1_Integr from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad;";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable ClasificacionTotalPersonas(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT idS1_Integr AS 'Mujeres no embarazadas' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Mujer' AND Embarazo = 'No' AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17;"
+                                + "SELECT idS1_Integr AS 'Mujeres embarazdas' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Mujer' AND Embarazo = 'Si' AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17;"
+                                + "SELECT idS1_Integr AS 'Hombres' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Hombre'AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17;"
+                                + "SELECT idS1_Integr AS 'Niños' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 < 18;";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable EstadoCiviles(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT EstadoCivil from s2_dem inner join Encuestas on Encuestas.idEncuestas = s2_dem.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable DepartamentoOrigen(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT Departamento from s2_dem inner join Encuestas on Encuestas.idEncuestas = s2_dem.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+
+        public DataTable LeerEscribir(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT IF(LeerEscribir = 'Si', 'Sabe leer y escribir','No sabe leer y escribir') as Total from s3_edu inner join Encuestas on Encuestas.idEncuestas = s3_edu.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable GradoEducacion(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT GradoEducacion from s3_edu inner join Encuestas on Encuestas.idEncuestas = s3_edu.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }
