@@ -1,5 +1,4 @@
-﻿namespace TechoCeiva
-{
+﻿namespace TechoCeiva {
     
     
     public partial class DSReportes {

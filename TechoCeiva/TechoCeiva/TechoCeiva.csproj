@@ -134,6 +134,12 @@
       <DependentUpon>RptS11_Movilidad.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptS1_Integrantes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptS1_Integrantes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RptS5_Trabajo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -294,6 +300,10 @@
     <EmbeddedResource Include="RptS11_Movilidad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptS11_Movilidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptS1_Integrantes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptS1_Integrantes.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RptS5_Trabajo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

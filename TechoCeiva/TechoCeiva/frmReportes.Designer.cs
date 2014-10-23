@@ -88,6 +88,9 @@
             // 
             this.cmbSeleccionReporte.FormattingEnabled = true;
             this.cmbSeleccionReporte.Items.AddRange(new object[] {
+            "Estadísticas de personas",
+            "Datos demográficos",
+            "Educación",
             "Trabajo",
             "Servicios",
             "Propiedad",

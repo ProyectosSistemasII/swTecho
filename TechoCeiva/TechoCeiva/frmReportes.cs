@@ -38,6 +38,35 @@ namespace TechoCeiva
             crvReportes.ReportSource = rpt;
             */
 
+            if (cmbSeleccionReporte.SelectedItem == "Estadísticas de personas")
+            {
+                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
+                rptS1_Integrantes rpt = new rptS1_Integrantes();
+                rpt.SetDataSource(generar.NumeroTotalPersonas(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                rpt.SetParameterValue("Comunidad", NombreComunidad);
+                crvReportes.ReportSource = rpt;
+
+            }
+
+            if (cmbSeleccionReporte.SelectedItem == "Datos demográficos")
+            {
+                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
+                RptS5_Trabajo rpts5 = new RptS5_Trabajo();
+                rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpts5;
+
+            }
+
+            if (cmbSeleccionReporte.SelectedItem == "Educación")
+            {
+                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
+                RptS5_Trabajo rpts5 = new RptS5_Trabajo();
+                rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                crvReportes.ReportSource = rpts5;
+
+            }
+
+
             //// Reporte S8_Servicios
             if (cmbSeleccionReporte.SelectedItem == "Trabajo")
             {
