@@ -84,69 +84,15 @@
             this.tbpS2 = new System.Windows.Forms.TabPage();
             this.pbNextS2 = new System.Windows.Forms.PictureBox();
             this.gbS2 = new System.Windows.Forms.GroupBox();
-            this.dgvS2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCmbDepto = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgvCmbMuni = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS3 = new System.Windows.Forms.TabPage();
             this.pbNextS3 = new System.Windows.Forms.PictureBox();
             this.gbS3 = new System.Windows.Forms.GroupBox();
-            this.dgvS3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS4 = new System.Windows.Forms.TabPage();
             this.pbS4_Siguiente = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgvS4 = new System.Windows.Forms.DataGridView();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Especificar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS5 = new System.Windows.Forms.TabPage();
             this.pbS5_Siguiente = new System.Windows.Forms.PictureBox();
             this.gbS5 = new System.Windows.Forms.GroupBox();
-            this.dgvS5 = new System.Windows.Forms.DataGridView();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpS6 = new System.Windows.Forms.TabPage();
             this.gbS6 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
@@ -660,6 +606,60 @@
             this.groupBox114 = new System.Windows.Forms.GroupBox();
             this.cbxS11_1_VidaFamiliar = new System.Windows.Forms.ComboBox();
             this.label159 = new System.Windows.Forms.Label();
+            this.dgvS2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCmbDepto = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgvCmbMuni = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewComboBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS4 = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Especificar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvS5 = new System.Windows.Forms.DataGridView();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcDatos.SuspendLayout();
             this.tbpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -674,19 +674,15 @@
             this.tbpS2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS2)).BeginInit();
             this.gbS2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).BeginInit();
             this.tbpS3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS3)).BeginInit();
             this.gbS3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS3)).BeginInit();
             this.tbpS4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS4_Siguiente)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS4)).BeginInit();
             this.tbpS5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbS5_Siguiente)).BeginInit();
             this.gbS5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).BeginInit();
             this.tbpS6.SuspendLayout();
             this.gbS6.SuspendLayout();
             this.groupBox16.SuspendLayout();
@@ -807,6 +803,10 @@
             this.groupBox112.SuspendLayout();
             this.groupBox113.SuspendLayout();
             this.groupBox114.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcDatos
@@ -825,7 +825,7 @@
             this.tbcDatos.Controls.Add(this.tbpS10Cont);
             this.tbcDatos.Controls.Add(this.tbpS11);
             this.tbcDatos.Location = new System.Drawing.Point(3, 0);
-            this.tbcDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbcDatos.Margin = new System.Windows.Forms.Padding(4);
             this.tbcDatos.Name = "tbcDatos";
             this.tbcDatos.SelectedIndex = 0;
             this.tbcDatos.Size = new System.Drawing.Size(1787, 708);
@@ -841,9 +841,9 @@
             this.tbpInfo.Controls.Add(this.txtCodigoHogar);
             this.tbpInfo.Controls.Add(this.lblCodigoHogar);
             this.tbpInfo.Location = new System.Drawing.Point(4, 25);
-            this.tbpInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tbpInfo.Name = "tbpInfo";
-            this.tbpInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tbpInfo.Size = new System.Drawing.Size(1779, 679);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
@@ -853,7 +853,7 @@
             // 
             this.pbNext.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbNext.Location = new System.Drawing.Point(1175, 585);
-            this.pbNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNext.Margin = new System.Windows.Forms.Padding(4);
             this.pbNext.Name = "pbNext";
             this.pbNext.Size = new System.Drawing.Size(71, 73);
             this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -874,9 +874,9 @@
             this.gbContacto.Controls.Add(this.lblTelefonos);
             this.gbContacto.Controls.Add(this.lblJefe);
             this.gbContacto.Location = new System.Drawing.Point(633, 279);
-            this.gbContacto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbContacto.Margin = new System.Windows.Forms.Padding(4);
             this.gbContacto.Name = "gbContacto";
-            this.gbContacto.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbContacto.Padding = new System.Windows.Forms.Padding(4);
             this.gbContacto.Size = new System.Drawing.Size(616, 286);
             this.gbContacto.TabIndex = 10;
             this.gbContacto.TabStop = false;
@@ -885,7 +885,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(201, 101);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(387, 22);
             this.txtDireccion.TabIndex = 13;
@@ -893,7 +893,7 @@
             // txtTelefono2
             // 
             this.txtTelefono2.Location = new System.Drawing.Point(423, 64);
-            this.txtTelefono2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(169, 22);
             this.txtTelefono2.TabIndex = 12;
@@ -911,7 +911,7 @@
             // txtTelefono1
             // 
             this.txtTelefono1.Location = new System.Drawing.Point(201, 64);
-            this.txtTelefono1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(173, 22);
             this.txtTelefono1.TabIndex = 11;
@@ -919,7 +919,7 @@
             // txtJefe
             // 
             this.txtJefe.Location = new System.Drawing.Point(201, 27);
-            this.txtJefe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtJefe.Margin = new System.Windows.Forms.Padding(4);
             this.txtJefe.Name = "txtJefe";
             this.txtJefe.Size = new System.Drawing.Size(387, 22);
             this.txtJefe.TabIndex = 10;
@@ -927,7 +927,7 @@
             // txtEspecificaciones
             // 
             this.txtEspecificaciones.Location = new System.Drawing.Point(28, 161);
-            this.txtEspecificaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEspecificaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtEspecificaciones.Multiline = true;
             this.txtEspecificaciones.Name = "txtEspecificaciones";
             this.txtEspecificaciones.Size = new System.Drawing.Size(560, 101);
@@ -983,9 +983,9 @@
             this.gbUbicacion.Controls.Add(this.lblCanton);
             this.gbUbicacion.Controls.Add(this.lblAldea);
             this.gbUbicacion.Location = new System.Drawing.Point(15, 279);
-            this.gbUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbUbicacion.Margin = new System.Windows.Forms.Padding(4);
             this.gbUbicacion.Name = "gbUbicacion";
-            this.gbUbicacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbUbicacion.Padding = new System.Windows.Forms.Padding(4);
             this.gbUbicacion.Size = new System.Drawing.Size(616, 286);
             this.gbUbicacion.TabIndex = 8;
             this.gbUbicacion.TabStop = false;
@@ -995,7 +995,7 @@
             // 
             this.txtYGPS.Enabled = false;
             this.txtYGPS.Location = new System.Drawing.Point(437, 194);
-            this.txtYGPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtYGPS.Margin = new System.Windows.Forms.Padding(4);
             this.txtYGPS.Name = "txtYGPS";
             this.txtYGPS.Size = new System.Drawing.Size(105, 22);
             this.txtYGPS.TabIndex = 20;
@@ -1006,7 +1006,7 @@
             // 
             this.txtXGPS.Enabled = false;
             this.txtXGPS.Location = new System.Drawing.Point(323, 194);
-            this.txtXGPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtXGPS.Margin = new System.Windows.Forms.Padding(4);
             this.txtXGPS.Name = "txtXGPS";
             this.txtXGPS.Size = new System.Drawing.Size(105, 22);
             this.txtXGPS.TabIndex = 20;
@@ -1016,7 +1016,7 @@
             // txtCanton
             // 
             this.txtCanton.Location = new System.Drawing.Point(300, 92);
-            this.txtCanton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCanton.Margin = new System.Windows.Forms.Padding(4);
             this.txtCanton.Name = "txtCanton";
             this.txtCanton.Size = new System.Drawing.Size(259, 22);
             this.txtCanton.TabIndex = 9;
@@ -1024,7 +1024,7 @@
             // txtAldea
             // 
             this.txtAldea.Location = new System.Drawing.Point(300, 64);
-            this.txtAldea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAldea.Margin = new System.Windows.Forms.Padding(4);
             this.txtAldea.Name = "txtAldea";
             this.txtAldea.Size = new System.Drawing.Size(259, 22);
             this.txtAldea.TabIndex = 8;
@@ -1065,7 +1065,7 @@
             // 
             this.pbLogo.Image = global::TechoCeiva.Properties.Resources.Logo;
             this.pbLogo.Location = new System.Drawing.Point(33, 4);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(173, 50);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1090,9 +1090,9 @@
             this.gbInfo.Controls.Add(this.lblFecha);
             this.gbInfo.Controls.Add(this.lblEncuestadores);
             this.gbInfo.Location = new System.Drawing.Point(15, 62);
-            this.gbInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbInfo.Margin = new System.Windows.Forms.Padding(4);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbInfo.Padding = new System.Windows.Forms.Padding(4);
             this.gbInfo.Size = new System.Drawing.Size(1231, 210);
             this.gbInfo.TabIndex = 6;
             this.gbInfo.TabStop = false;
@@ -1101,7 +1101,7 @@
             // txtHoraF
             // 
             this.txtHoraF.Location = new System.Drawing.Point(517, 128);
-            this.txtHoraF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraF.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraF.Mask = "00:00";
             this.txtHoraF.Name = "txtHoraF";
             this.txtHoraF.Size = new System.Drawing.Size(132, 22);
@@ -1111,7 +1111,7 @@
             // txtHoraI
             // 
             this.txtHoraI.Location = new System.Drawing.Point(251, 128);
-            this.txtHoraI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraI.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraI.Mask = "00:00";
             this.txtHoraI.Name = "txtHoraI";
             this.txtHoraI.Size = new System.Drawing.Size(132, 22);
@@ -1123,7 +1123,7 @@
             this.cmbEncuestador2.DisplayMember = "Datos";
             this.cmbEncuestador2.FormattingEnabled = true;
             this.cmbEncuestador2.Location = new System.Drawing.Point(248, 57);
-            this.cmbEncuestador2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEncuestador2.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEncuestador2.Name = "cmbEncuestador2";
             this.cmbEncuestador2.Size = new System.Drawing.Size(401, 24);
             this.cmbEncuestador2.TabIndex = 7;
@@ -1135,7 +1135,7 @@
             this.cmbEncuestador1.DisplayMember = "Datos";
             this.cmbEncuestador1.FormattingEnabled = true;
             this.cmbEncuestador1.Location = new System.Drawing.Point(248, 23);
-            this.cmbEncuestador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEncuestador1.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEncuestador1.Name = "cmbEncuestador1";
             this.cmbEncuestador1.Size = new System.Drawing.Size(401, 24);
             this.cmbEncuestador1.TabIndex = 6;
@@ -1144,7 +1144,7 @@
             // txtObservaciones
             // 
             this.txtObservaciones.Location = new System.Drawing.Point(768, 107);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(384, 79);
@@ -1172,7 +1172,7 @@
             "Vivienda desocupada",
             "Indisposición"});
             this.cmbEstadoEn.Location = new System.Drawing.Point(768, 42);
-            this.cmbEstadoEn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoEn.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoEn.Name = "cmbEstadoEn";
             this.cmbEstadoEn.Size = new System.Drawing.Size(384, 24);
             this.cmbEstadoEn.TabIndex = 12;
@@ -1190,7 +1190,7 @@
             // txtNombreEn
             // 
             this.txtNombreEn.Location = new System.Drawing.Point(251, 162);
-            this.txtNombreEn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEn.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreEn.Name = "txtNombreEn";
             this.txtNombreEn.Size = new System.Drawing.Size(399, 22);
             this.txtNombreEn.TabIndex = 11;
@@ -1229,7 +1229,7 @@
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(251, 98);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(135, 22);
             this.dtpFecha.TabIndex = 8;
@@ -1257,7 +1257,7 @@
             // txtCodigoHogar
             // 
             this.txtCodigoHogar.Location = new System.Drawing.Point(999, 23);
-            this.txtCodigoHogar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoHogar.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoHogar.Name = "txtCodigoHogar";
             this.txtCodigoHogar.Size = new System.Drawing.Size(223, 22);
             this.txtCodigoHogar.TabIndex = 2;
@@ -1279,9 +1279,9 @@
             this.tbpS1.Controls.Add(this.pbNextS1);
             this.tbpS1.Controls.Add(this.gbS1);
             this.tbpS1.Location = new System.Drawing.Point(4, 25);
-            this.tbpS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS1.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS1.Name = "tbpS1";
-            this.tbpS1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS1.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS1.Size = new System.Drawing.Size(1779, 679);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
@@ -1290,7 +1290,7 @@
             // btnRemS1
             // 
             this.btnRemS1.Location = new System.Drawing.Point(1229, 94);
-            this.btnRemS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemS1.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemS1.Name = "btnRemS1";
             this.btnRemS1.Size = new System.Drawing.Size(35, 28);
             this.btnRemS1.TabIndex = 11;
@@ -1301,7 +1301,7 @@
             // btnAddS1
             // 
             this.btnAddS1.Location = new System.Drawing.Point(1229, 58);
-            this.btnAddS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddS1.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddS1.Name = "btnAddS1";
             this.btnAddS1.Size = new System.Drawing.Size(35, 28);
             this.btnAddS1.TabIndex = 10;
@@ -1313,7 +1313,7 @@
             // 
             this.pbNextS1.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbNextS1.Location = new System.Drawing.Point(1151, 590);
-            this.pbNextS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNextS1.Margin = new System.Windows.Forms.Padding(4);
             this.pbNextS1.Name = "pbNextS1";
             this.pbNextS1.Size = new System.Drawing.Size(71, 73);
             this.pbNextS1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1325,9 +1325,9 @@
             // 
             this.gbS1.Controls.Add(this.dgvS1);
             this.gbS1.Location = new System.Drawing.Point(8, 7);
-            this.gbS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS1.Margin = new System.Windows.Forms.Padding(4);
             this.gbS1.Name = "gbS1";
-            this.gbS1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS1.Padding = new System.Windows.Forms.Padding(4);
             this.gbS1.Size = new System.Drawing.Size(1217, 575);
             this.gbS1.TabIndex = 1;
             this.gbS1.TabStop = false;
@@ -1347,7 +1347,7 @@
             this.dataGridViewComboBoxColumn2});
             this.dgvS1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvS1.Location = new System.Drawing.Point(4, 19);
-            this.dgvS1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS1.Margin = new System.Windows.Forms.Padding(4);
             this.dgvS1.Name = "dgvS1";
             this.dgvS1.RowHeadersWidth = 25;
             this.dgvS1.Size = new System.Drawing.Size(1209, 552);
@@ -1402,9 +1402,9 @@
             this.tbpS2.Controls.Add(this.pbNextS2);
             this.tbpS2.Controls.Add(this.gbS2);
             this.tbpS2.Location = new System.Drawing.Point(4, 25);
-            this.tbpS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS2.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS2.Name = "tbpS2";
-            this.tbpS2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS2.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS2.Size = new System.Drawing.Size(1779, 679);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
@@ -1414,7 +1414,7 @@
             // 
             this.pbNextS2.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbNextS2.Location = new System.Drawing.Point(1169, 577);
-            this.pbNextS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNextS2.Margin = new System.Windows.Forms.Padding(4);
             this.pbNextS2.Name = "pbNextS2";
             this.pbNextS2.Size = new System.Drawing.Size(71, 73);
             this.pbNextS2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1426,120 +1426,22 @@
             // 
             this.gbS2.Controls.Add(this.dgvS2);
             this.gbS2.Location = new System.Drawing.Point(8, 7);
-            this.gbS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS2.Margin = new System.Windows.Forms.Padding(4);
             this.gbS2.Name = "gbS2";
-            this.gbS2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbS2.Size = new System.Drawing.Size(1236, 562);
+            this.gbS2.Padding = new System.Windows.Forms.Padding(4);
+            this.gbS2.Size = new System.Drawing.Size(1763, 574);
             this.gbS2.TabIndex = 1;
             this.gbS2.TabStop = false;
             this.gbS2.Text = "CARACTERÍSTICAS DEMOGRÁFICAS DE LOS INTEGRANTES DEL HOGAR";
-            // 
-            // dgvS2
-            // 
-            this.dgvS2.AllowUserToAddRows = false;
-            this.dgvS2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewComboBoxColumn3,
-            this.dataGridViewComboBoxColumn4,
-            this.dataGridViewTextBoxColumn8,
-            this.dgvCmbDepto,
-            this.dgvCmbMuni,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS2.Location = new System.Drawing.Point(4, 19);
-            this.dgvS2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.dgvS2.Name = "dgvS2";
-            this.dgvS2.RowHeadersWidth = 25;
-            this.dgvS2.Size = new System.Drawing.Size(1228, 539);
-            this.dgvS2.TabIndex = 1;
-            this.dgvS2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvS2_EditingControlShowing);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "¿A qué núcleo pertenece?";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "¿Me podría indicar el DPI?";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewComboBoxColumn3
-            // 
-            this.dataGridViewComboBoxColumn3.HeaderText = "¿Cuál es el estado civil?";
-            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
-            "Casado/a",
-            "Unido/a de hecho",
-            "Divorciado/a",
-            "Separado/a de hecho",
-            "Viudo/a",
-            "Soltero/a\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
-            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn4
-            // 
-            this.dataGridViewComboBoxColumn4.HeaderText = "¿Cuál es la relación de parentesco con el jefe del hogar?";
-            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
-            "Jefe/a de Hogar",
-            "Cónyuge o pareja",
-            "Hijo/a, hijastro/a",
-            "Padre o madre",
-            "Suegro/a",
-            "Yerno o nuera",
-            "Nieto/a",
-            "Hermano/a",
-            "Cuñado/a",
-            "Sobrino/a",
-            "Tío/a",
-            "Otro familiar (especificar)",
-            "No familiar (especificar)",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
-            this.dataGridViewComboBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dgvCmbDepto
-            // 
-            this.dgvCmbDepto.HeaderText = "¿Cuál es el lugar de orígen (nacimiento - Departamento)?";
-            this.dgvCmbDepto.Name = "dgvCmbDepto";
-            this.dgvCmbDepto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCmbDepto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dgvCmbMuni
-            // 
-            this.dgvCmbMuni.HeaderText = "¿Cuál es el lugar de orígen (nacimiento - Municipio)?";
-            this.dgvCmbMuni.Name = "dgvCmbMuni";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "¿Cuál es la nacionalidad?";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // tbpS3
             // 
             this.tbpS3.Controls.Add(this.pbNextS3);
             this.tbpS3.Controls.Add(this.gbS3);
             this.tbpS3.Location = new System.Drawing.Point(4, 25);
-            this.tbpS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS3.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS3.Name = "tbpS3";
-            this.tbpS3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS3.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS3.Size = new System.Drawing.Size(1779, 679);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
@@ -1549,7 +1451,7 @@
             // 
             this.pbNextS3.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbNextS3.Location = new System.Drawing.Point(1195, 580);
-            this.pbNextS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbNextS3.Margin = new System.Windows.Forms.Padding(4);
             this.pbNextS3.Name = "pbNextS3";
             this.pbNextS3.Size = new System.Drawing.Size(71, 73);
             this.pbNextS3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1561,186 +1463,22 @@
             // 
             this.gbS3.Controls.Add(this.dgvS3);
             this.gbS3.Location = new System.Drawing.Point(8, 7);
-            this.gbS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS3.Margin = new System.Windows.Forms.Padding(4);
             this.gbS3.Name = "gbS3";
-            this.gbS3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbS3.Size = new System.Drawing.Size(1261, 565);
+            this.gbS3.Padding = new System.Windows.Forms.Padding(4);
+            this.gbS3.Size = new System.Drawing.Size(1767, 575);
             this.gbS3.TabIndex = 1;
             this.gbS3.TabStop = false;
             this.gbS3.Text = "EDUCACIÓN (PARA TODOS LOS INTEGRANTES DEL HOGAR)";
-            // 
-            // dgvS3
-            // 
-            this.dgvS3.AllowUserToAddRows = false;
-            this.dgvS3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvS3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvS3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewComboBoxColumn5,
-            this.dataGridViewComboBoxColumn6,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewComboBoxColumn7,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewComboBoxColumn8,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewComboBoxColumn9,
-            this.dataGridViewComboBoxColumn10,
-            this.Column26,
-            this.dataGridViewComboBoxColumn11,
-            this.Column27});
-            this.dgvS3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS3.Location = new System.Drawing.Point(4, 19);
-            this.dgvS3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvS3.Name = "dgvS3";
-            this.dgvS3.RowHeadersWidth = 25;
-            this.dgvS3.Size = new System.Drawing.Size(1253, 542);
-            this.dgvS3.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewComboBoxColumn5
-            // 
-            this.dataGridViewComboBoxColumn5.HeaderText = "¿Sabe leer y escribir?";
-            this.dataGridViewComboBoxColumn5.Items.AddRange(new object[] {
-            "Si",
-            "No, sólo lee",
-            "No, sólo escribe",
-            "No, ninguno",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn5.Name = "dataGridViewComboBoxColumn5";
-            this.dataGridViewComboBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn6
-            // 
-            this.dataGridViewComboBoxColumn6.HeaderText = "¿Cuál es el grado más alto de educación que completó?\t\t";
-            this.dataGridViewComboBoxColumn6.Items.AddRange(new object[] {
-            "Ninguno",
-            "Pre-primaria",
-            "Primero primaria",
-            "Segundo primaria",
-            "Tercero primaria",
-            "Cuarto primaria",
-            "Quinto primaria",
-            "Sexto primaria",
-            "Primero Básico",
-            "Segundo Básico",
-            "Tercero Básico",
-            "Diversificado",
-            "Técnico (especificar)",
-            "Superior incompleto",
-            "Superior completo",
-            "Otro (especificar)",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn6.Name = "dataGridViewComboBoxColumn6";
-            this.dataGridViewComboBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewComboBoxColumn7
-            // 
-            this.dataGridViewComboBoxColumn7.HeaderText = "Actualmente, ¿Asiste a algún establecimiento educativo?";
-            this.dataGridViewComboBoxColumn7.Items.AddRange(new object[] {
-            "Si asiste",
-            "No asiste",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn7.Name = "dataGridViewComboBoxColumn7";
-            this.dataGridViewComboBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "¿Cuál es el nombre del centro educativo al que asiste?";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewComboBoxColumn8
-            // 
-            this.dataGridViewComboBoxColumn8.HeaderText = "¿Qué tipo de establecimiento es el centro educativo donde estudia?\n";
-            this.dataGridViewComboBoxColumn8.Items.AddRange(new object[] {
-            "Público",
-            "Privado",
-            "Por cooperativa",
-            "Otro (especificar)",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn8.Name = "dataGridViewComboBoxColumn8";
-            this.dataGridViewComboBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Especificar";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewComboBoxColumn9
-            // 
-            this.dataGridViewComboBoxColumn9.HeaderText = "¿Dónde se ubica el establecimiento educativo al que asiste?\t\t\t";
-            this.dataGridViewComboBoxColumn9.Items.AddRange(new object[] {
-            "Dentro de la comunidad",
-            "Cerca de la comunidad (menos de 1 kilómetro)",
-            "Lejos de la comunidad pero en el municipio",
-            "Fuera del municipio",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn9.Name = "dataGridViewComboBoxColumn9";
-            this.dataGridViewComboBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn10
-            // 
-            this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
-                "entro educativo?\t\t\t\t\t\t";
-            this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
-            "Actualmente asiste",
-            "No está en edad escolar aún",
-            "Problemas económicos",
-            "Preferencia o necesidad de trabajar",
-            "Quehaceres domésticos",
-            "Requiere educación especial",
-            "Maternidad o paternidad",
-            "Dificultad de acceso o movilización",
-            "Falta de interés personal o de padres",
-            "Problemas de rendimiento o conducta",
-            "Otra razón (especificar)\t\t\t",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn10.Name = "dataGridViewComboBoxColumn10";
-            this.dataGridViewComboBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "Especificar";
-            this.Column26.Name = "Column26";
-            // 
-            // dataGridViewComboBoxColumn11
-            // 
-            this.dataGridViewComboBoxColumn11.HeaderText = "¿Ha recibido algún tipo de formación complementaria?\t\t";
-            this.dataGridViewComboBoxColumn11.Items.AddRange(new object[] {
-            "Si (especificar)",
-            "No",
-            "NS/NR"});
-            this.dataGridViewComboBoxColumn11.Name = "dataGridViewComboBoxColumn11";
-            this.dataGridViewComboBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column27
-            // 
-            this.Column27.HeaderText = "Especificar";
-            this.Column27.Name = "Column27";
             // 
             // tbpS4
             // 
             this.tbpS4.Controls.Add(this.pbS4_Siguiente);
             this.tbpS4.Controls.Add(this.groupBox4);
             this.tbpS4.Location = new System.Drawing.Point(4, 25);
-            this.tbpS4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS4.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS4.Name = "tbpS4";
-            this.tbpS4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS4.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS4.Size = new System.Drawing.Size(1779, 679);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
@@ -1750,7 +1488,7 @@
             // 
             this.pbS4_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS4_Siguiente.Location = new System.Drawing.Point(1695, 590);
-            this.pbS4_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS4_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS4_Siguiente.Name = "pbS4_Siguiente";
             this.pbS4_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS4_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1762,175 +1500,22 @@
             // 
             this.groupBox4.Controls.Add(this.dgvS4);
             this.groupBox4.Location = new System.Drawing.Point(8, 7);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1776, 575);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "SALUD (PARA TODOS LOS INTEGRANTES DEL HOGAR)";
-            // 
-            // dgvS4
-            // 
-            this.dgvS4.AllowUserToAddRows = false;
-            this.dgvS4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvS4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvS4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column10,
-            this.Columna1,
-            this.Column2,
-            this.Column1,
-            this.Column3,
-            this.Column8,
-            this.Column4,
-            this.Column9,
-            this.Column5,
-            this.Column6,
-            this.Especificar,
-            this.Column7,
-            this.Column28});
-            this.dgvS4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvS4.Location = new System.Drawing.Point(4, 19);
-            this.dgvS4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvS4.Name = "dgvS4";
-            this.dgvS4.RowHeadersWidth = 25;
-            this.dgvS4.Size = new System.Drawing.Size(1768, 552);
-            this.dgvS4.TabIndex = 1;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Código";
-            this.Column10.Name = "Column10";
-            // 
-            // Columna1
-            // 
-            this.Columna1.FillWeight = 50F;
-            this.Columna1.HeaderText = "¿Cada cuánto asiste a un centro de salud?";
-            this.Columna1.Items.AddRange(new object[] {
-            "Cada mes",
-            "Cada 3 meses",
-            "Cada 6 meses",
-            "Cada año",
-            "Nunca",
-            "NS/NR"});
-            this.Columna1.Name = "Columna1";
-            this.Columna1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Columna1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "¿Cuál es el nombre del centro de salud al que asiste regularmente?";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "¿Dónde se ubica el centro de salud donde asiste?";
-            this.Column1.Items.AddRange(new object[] {
-            "Dentro de la comunidad",
-            "Cerca de la comunidad (menos de 1 kilómetro)",
-            "Lejos de la comunidad pero en el municipio",
-            "Fuera del municipio",
-            "NS/NR"});
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
-                "nar?";
-            this.Column3.Items.AddRange(new object[] {
-            "Si (especificar)",
-            "No",
-            "NS/NR"});
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Especificar";
-            this.Column8.Name = "Column8";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Recientemente, ¿ha sufrido algún accidente importante de mencionar?";
-            this.Column4.Items.AddRange(new object[] {
-            "Si (especificar)",
-            "No",
-            "NS/NR"});
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Especificar";
-            this.Column9.Name = "Column9";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "¿Con qué tipo de seguro de salud cuenta?";
-            this.Column5.Items.AddRange(new object[] {
-            "IGSS",
-            "Público",
-            "Privado",
-            "No posee",
-            "NS/NR"});
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "¿Tiene alguna de las siguientes discapacidades?";
-            this.Column6.Items.AddRange(new object[] {
-            "Ceguera o dificultad para ver",
-            "Sordera o dificultad para oír",
-            "Mudez o dificultad en el habla",
-            "Dificultad física y/o movilidad",
-            "Retraso mental",
-            "Otra (especificar)",
-            "No tiene ninguna de estas condiciones de larga duración",
-            "NS/NR"});
-            this.Column6.Name = "Column6";
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Especificar
-            // 
-            this.Especificar.HeaderText = "Especificar";
-            this.Especificar.Name = "Especificar";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "¿Cuál es el orígen de esta discapacidad?";
-            this.Column7.Items.AddRange(new object[] {
-            "De nacimiendo",
-            "Por enfermedad",
-            "Por accidente",
-            "Por edad",
-            "Hereditaria",
-            "Otra (especificar)",
-            "NS/NR"});
-            this.Column7.Name = "Column7";
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column28
-            // 
-            this.Column28.HeaderText = "Especificar";
-            this.Column28.Name = "Column28";
             // 
             // tbpS5
             // 
             this.tbpS5.Controls.Add(this.pbS5_Siguiente);
             this.tbpS5.Controls.Add(this.gbS5);
             this.tbpS5.Location = new System.Drawing.Point(4, 25);
-            this.tbpS5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS5.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS5.Name = "tbpS5";
-            this.tbpS5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS5.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS5.Size = new System.Drawing.Size(1779, 679);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
@@ -1940,7 +1525,7 @@
             // 
             this.pbS5_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS5_Siguiente.Location = new System.Drawing.Point(1695, 599);
-            this.pbS5_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS5_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS5_Siguiente.Name = "pbS5_Siguiente";
             this.pbS5_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS5_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1952,198 +1537,22 @@
             // 
             this.gbS5.Controls.Add(this.dgvS5);
             this.gbS5.Location = new System.Drawing.Point(8, 7);
-            this.gbS5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS5.Margin = new System.Windows.Forms.Padding(4);
             this.gbS5.Name = "gbS5";
-            this.gbS5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS5.Padding = new System.Windows.Forms.Padding(4);
             this.gbS5.Size = new System.Drawing.Size(1780, 590);
             this.gbS5.TabIndex = 0;
             this.gbS5.TabStop = false;
             this.gbS5.Text = "TRABAJO (PARA TODOS LOS INTEGRANTES DEL HOGAR)";
-            // 
-            // dgvS5
-            // 
-            this.dgvS5.AllowUserToAddRows = false;
-            this.dgvS5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvS5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvS5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column25,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column21,
-            this.Column22,
-            this.Column23,
-            this.Column24});
-            this.dgvS5.Location = new System.Drawing.Point(5, 28);
-            this.dgvS5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvS5.Name = "dgvS5";
-            this.dgvS5.RowHeadersWidth = 25;
-            this.dgvS5.Size = new System.Drawing.Size(1768, 535);
-            this.dgvS5.TabIndex = 1;
-            // 
-            // Column25
-            // 
-            this.Column25.HeaderText = "Código";
-            this.Column25.Name = "Column25";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = " ¿Cuenta actualmente con trabajo remunerado o por cuenta propia?";
-            this.Column11.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "NS/NR"});
-            this.Column11.Name = "Column11";
-            this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "¿Actualmente está buscando trabajo remunerado o por cuenta propia?";
-            this.Column12.Items.AddRange(new object[] {
-            "Si",
-            "No",
-            "NS/NR"});
-            this.Column12.Name = "Column12";
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
-                "ropia recientemente?";
-            this.Column13.Items.AddRange(new object[] {
-            "Que haceres domésticos",
-            "Cuidado de los hijo/as",
-            "Enfermedad/discapacidad",
-            "Actualmente estudia",
-            "Trabaja actualmente",
-            "Desistió en la búsqueda",
-            "Menor de edad",
-            "Edad avanzada",
-            "Otro (Especificar)",
-            "NS/NR"});
-            this.Column13.Name = "Column13";
-            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Especificar";
-            this.Column14.Name = "Column14";
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "¿Cuál es la ocupación u oficio principal?";
-            this.Column15.Items.AddRange(new object[] {
-            "Ama de casa",
-            "Estudiante",
-            "Productor/a agrícola",
-            "Jornalero/a",
-            "Trabajo doméstico",
-            "Vendedor/a",
-            "Albañil",
-            "Mecánico/a",
-            "Obrero/a",
-            "Otro (Especificar)",
-            "NS/NR"});
-            this.Column15.Name = "Column15";
-            this.Column15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Especificar";
-            this.Column16.Name = "Column16";
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "¿Cuál el es tipo de contrato que tiene en su trabajo actual?";
-            this.Column17.Items.AddRange(new object[] {
-            "Permanente",
-            "Por temporada",
-            "Ocasional",
-            "Por tarea",
-            "Por plazo (o tiempo determinado)",
-            "NS/NR"});
-            this.Column17.Name = "Column17";
-            this.Column17.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "¿Cuál es la condición laboral de en su empleo actual?";
-            this.Column18.Items.AddRange(new object[] {
-            "Empleado con prestaciones",
-            "Empleado sin prestaciones",
-            "Trabajo por cuenta propia",
-            "Empleador",
-            "NS/NR"});
-            this.Column18.Name = "Column18";
-            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "¿Dónde se ubica el lugar de trabajo?";
-            this.Column19.Items.AddRange(new object[] {
-            "Dentro de la comunidad",
-            "Cerca de la comunidad (menos de 1 kilómetro)",
-            "Lejos de la comunidad pero en el municipio",
-            "En otro municipio",
-            "NS/NR"});
-            this.Column19.Name = "Column19";
-            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
-                "ipal?";
-            this.Column20.Items.AddRange(new object[] {
-            "Si (especificar)",
-            "No",
-            "NS/NR"});
-            this.Column20.Name = "Column20";
-            this.Column20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "Especificar";
-            this.Column21.Name = "Column21";
-            // 
-            // Column22
-            // 
-            this.Column22.HeaderText = "¿Cuántos días trabaja a la semana?";
-            this.Column22.Name = "Column22";
-            // 
-            // Column23
-            // 
-            this.Column23.HeaderText = "¿Cuántas horas trabaja al día?";
-            this.Column23.Name = "Column23";
-            // 
-            // Column24
-            // 
-            this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
-                "";
-            this.Column24.Name = "Column24";
             // 
             // tbpS6
             // 
             this.tbpS6.Controls.Add(this.gbS6);
             this.tbpS6.Controls.Add(this.pbS6_Siguiente);
             this.tbpS6.Location = new System.Drawing.Point(4, 25);
-            this.tbpS6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS6.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS6.Name = "tbpS6";
-            this.tbpS6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS6.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS6.Size = new System.Drawing.Size(1779, 679);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
@@ -2163,9 +1572,9 @@
             this.gbS6.Controls.Add(this.groupBox7);
             this.gbS6.Controls.Add(this.groupBox6);
             this.gbS6.Location = new System.Drawing.Point(4, 0);
-            this.gbS6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS6.Margin = new System.Windows.Forms.Padding(4);
             this.gbS6.Name = "gbS6";
-            this.gbS6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS6.Padding = new System.Windows.Forms.Padding(4);
             this.gbS6.Size = new System.Drawing.Size(1771, 599);
             this.gbS6.TabIndex = 13;
             this.gbS6.TabStop = false;
@@ -2178,9 +1587,9 @@
             this.groupBox16.Controls.Add(this.lblS6_11_Especificar);
             this.groupBox16.Controls.Add(this.txtS6_11_EspecificarFaltaDinero);
             this.groupBox16.Location = new System.Drawing.Point(1252, 199);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox16.Size = new System.Drawing.Size(400, 298);
             this.groupBox16.TabIndex = 22;
             this.groupBox16.TabStop = false;
@@ -2210,7 +1619,7 @@
             "Otro (especifique)",
             "NS/NR"});
             this.chlbS6_11_CubrirFaltaDinero.Location = new System.Drawing.Point(28, 82);
-            this.chlbS6_11_CubrirFaltaDinero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chlbS6_11_CubrirFaltaDinero.Margin = new System.Windows.Forms.Padding(4);
             this.chlbS6_11_CubrirFaltaDinero.Name = "chlbS6_11_CubrirFaltaDinero";
             this.chlbS6_11_CubrirFaltaDinero.Size = new System.Drawing.Size(331, 157);
             this.chlbS6_11_CubrirFaltaDinero.TabIndex = 2;
@@ -2228,7 +1637,7 @@
             // txtS6_11_EspecificarFaltaDinero
             // 
             this.txtS6_11_EspecificarFaltaDinero.Location = new System.Drawing.Point(123, 263);
-            this.txtS6_11_EspecificarFaltaDinero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_11_EspecificarFaltaDinero.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_11_EspecificarFaltaDinero.Multiline = true;
             this.txtS6_11_EspecificarFaltaDinero.Name = "txtS6_11_EspecificarFaltaDinero";
             this.txtS6_11_EspecificarFaltaDinero.Size = new System.Drawing.Size(236, 27);
@@ -2240,9 +1649,9 @@
             this.groupBox15.Controls.Add(this.txtS6_10_CantiGastosaIngresos);
             this.groupBox15.Controls.Add(this.lblS6_10_QGastos);
             this.groupBox15.Location = new System.Drawing.Point(1252, 17);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox15.Size = new System.Drawing.Size(400, 175);
             this.groupBox15.TabIndex = 20;
             this.groupBox15.TabStop = false;
@@ -2262,7 +1671,7 @@
             // txtS6_10_CantiGastosaIngresos
             // 
             this.txtS6_10_CantiGastosaIngresos.Location = new System.Drawing.Point(56, 123);
-            this.txtS6_10_CantiGastosaIngresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_10_CantiGastosaIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_10_CantiGastosaIngresos.Multiline = true;
             this.txtS6_10_CantiGastosaIngresos.Name = "txtS6_10_CantiGastosaIngresos";
             this.txtS6_10_CantiGastosaIngresos.Size = new System.Drawing.Size(303, 27);
@@ -2284,9 +1693,9 @@
             this.groupBox14.Controls.Add(this.txtS6_9_CantiAhorro);
             this.groupBox14.Controls.Add(this.lblS6_9_QAhorro);
             this.groupBox14.Location = new System.Drawing.Point(840, 313);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox14.Size = new System.Drawing.Size(400, 146);
             this.groupBox14.TabIndex = 18;
             this.groupBox14.TabStop = false;
@@ -2305,7 +1714,7 @@
             // txtS6_9_CantiAhorro
             // 
             this.txtS6_9_CantiAhorro.Location = new System.Drawing.Point(69, 90);
-            this.txtS6_9_CantiAhorro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_9_CantiAhorro.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_9_CantiAhorro.Multiline = true;
             this.txtS6_9_CantiAhorro.Name = "txtS6_9_CantiAhorro";
             this.txtS6_9_CantiAhorro.Size = new System.Drawing.Size(289, 27);
@@ -2326,9 +1735,9 @@
             this.groupBox13.Controls.Add(this.lblS6_8_Ahorro);
             this.groupBox13.Controls.Add(this.cbxS6_8_AhorroMensual);
             this.groupBox13.Location = new System.Drawing.Point(840, 165);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox13.Size = new System.Drawing.Size(400, 146);
             this.groupBox13.TabIndex = 16;
             this.groupBox13.TabStop = false;
@@ -2352,7 +1761,7 @@
             "No",
             "NS/NR"});
             this.cbxS6_8_AhorroMensual.Location = new System.Drawing.Point(28, 96);
-            this.cbxS6_8_AhorroMensual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS6_8_AhorroMensual.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS6_8_AhorroMensual.Name = "cbxS6_8_AhorroMensual";
             this.cbxS6_8_AhorroMensual.Size = new System.Drawing.Size(331, 24);
             this.cbxS6_8_AhorroMensual.TabIndex = 3;
@@ -2362,9 +1771,9 @@
             this.groupBox12.Controls.Add(this.lblS6_7_CubrirGastos);
             this.groupBox12.Controls.Add(this.cbxS6_7_CubrenGasto);
             this.groupBox12.Location = new System.Drawing.Point(840, 17);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox12.Size = new System.Drawing.Size(400, 146);
             this.groupBox12.TabIndex = 14;
             this.groupBox12.TabStop = false;
@@ -2389,7 +1798,7 @@
             "Iguales",
             "NS/NR"});
             this.cbxS6_7_CubrenGasto.Location = new System.Drawing.Point(28, 101);
-            this.cbxS6_7_CubrenGasto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS6_7_CubrenGasto.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS6_7_CubrenGasto.Name = "cbxS6_7_CubrenGasto";
             this.cbxS6_7_CubrenGasto.Size = new System.Drawing.Size(331, 24);
             this.cbxS6_7_CubrenGasto.TabIndex = 3;
@@ -2400,9 +1809,9 @@
             this.groupBox11.Controls.Add(this.txtS6_6_IngresoTotal);
             this.groupBox11.Controls.Add(this.lblS6_6_QIngresosTotales);
             this.groupBox11.Location = new System.Drawing.Point(431, 313);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox11.Size = new System.Drawing.Size(400, 146);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
@@ -2421,7 +1830,7 @@
             // txtS6_6_IngresoTotal
             // 
             this.txtS6_6_IngresoTotal.Location = new System.Drawing.Point(56, 98);
-            this.txtS6_6_IngresoTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_6_IngresoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_6_IngresoTotal.Multiline = true;
             this.txtS6_6_IngresoTotal.Name = "txtS6_6_IngresoTotal";
             this.txtS6_6_IngresoTotal.Size = new System.Drawing.Size(303, 27);
@@ -2442,9 +1851,9 @@
             this.groupBox10.Controls.Add(this.lblS6_5_TiempoDeuda);
             this.groupBox10.Controls.Add(this.cbxS6_5_TiempoPagoDeuda);
             this.groupBox10.Location = new System.Drawing.Point(431, 165);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(400, 146);
             this.groupBox10.TabIndex = 10;
             this.groupBox10.TabStop = false;
@@ -2469,7 +1878,7 @@
             "No las paga",
             "NS/NR"});
             this.cbxS6_5_TiempoPagoDeuda.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_5_TiempoPagoDeuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS6_5_TiempoPagoDeuda.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS6_5_TiempoPagoDeuda.Name = "cbxS6_5_TiempoPagoDeuda";
             this.cbxS6_5_TiempoPagoDeuda.Size = new System.Drawing.Size(331, 24);
             this.cbxS6_5_TiempoPagoDeuda.TabIndex = 3;
@@ -2481,9 +1890,9 @@
             this.groupBox9.Controls.Add(this.txtS6_4_CantiDeuda);
             this.groupBox9.Controls.Add(this.lblS6_4_QDeuda);
             this.groupBox9.Location = new System.Drawing.Point(431, 17);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox9.Size = new System.Drawing.Size(400, 146);
             this.groupBox9.TabIndex = 8;
             this.groupBox9.TabStop = false;
@@ -2511,7 +1920,7 @@
             // txtS6_4_CantiDeuda
             // 
             this.txtS6_4_CantiDeuda.Location = new System.Drawing.Point(75, 103);
-            this.txtS6_4_CantiDeuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_4_CantiDeuda.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_4_CantiDeuda.Multiline = true;
             this.txtS6_4_CantiDeuda.Name = "txtS6_4_CantiDeuda";
             this.txtS6_4_CantiDeuda.Size = new System.Drawing.Size(273, 27);
@@ -2532,9 +1941,9 @@
             this.groupBox8.Controls.Add(this.lblS6_3_Deuda);
             this.groupBox8.Controls.Add(this.cbxS6_3_Deuda);
             this.groupBox8.Location = new System.Drawing.Point(23, 313);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox8.Size = new System.Drawing.Size(400, 146);
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
@@ -2557,7 +1966,7 @@
             "No",
             "NS/NR"});
             this.cbxS6_3_Deuda.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_3_Deuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS6_3_Deuda.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS6_3_Deuda.Name = "cbxS6_3_Deuda";
             this.cbxS6_3_Deuda.Size = new System.Drawing.Size(331, 24);
             this.cbxS6_3_Deuda.TabIndex = 2;
@@ -2569,9 +1978,9 @@
             this.groupBox7.Controls.Add(this.txtS6_2_CantidadRemesas);
             this.groupBox7.Controls.Add(this.lblS6_2_QRemesas);
             this.groupBox7.Location = new System.Drawing.Point(23, 165);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(400, 146);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
@@ -2595,7 +2004,7 @@
             "No",
             "NS/NR"});
             this.cbxS6_2_IngRemesas.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_2_IngRemesas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS6_2_IngRemesas.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS6_2_IngRemesas.Name = "cbxS6_2_IngRemesas";
             this.cbxS6_2_IngRemesas.Size = new System.Drawing.Size(165, 24);
             this.cbxS6_2_IngRemesas.TabIndex = 4;
@@ -2605,7 +2014,7 @@
             // 
             this.txtS6_2_CantidadRemesas.Enabled = false;
             this.txtS6_2_CantidadRemesas.Location = new System.Drawing.Point(244, 90);
-            this.txtS6_2_CantidadRemesas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_2_CantidadRemesas.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_2_CantidadRemesas.Multiline = true;
             this.txtS6_2_CantidadRemesas.Name = "txtS6_2_CantidadRemesas";
             this.txtS6_2_CantidadRemesas.Size = new System.Drawing.Size(115, 27);
@@ -2629,9 +2038,9 @@
             this.groupBox6.Controls.Add(this.txtS6_1_CantidadIngEstado);
             this.groupBox6.Controls.Add(this.lblS6_1_QEstado);
             this.groupBox6.Location = new System.Drawing.Point(23, 17);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(400, 146);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
@@ -2655,7 +2064,7 @@
             "No",
             "NS/NR"});
             this.cbxS6_1_IngEstado.Location = new System.Drawing.Point(28, 90);
-            this.cbxS6_1_IngEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS6_1_IngEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS6_1_IngEstado.Name = "cbxS6_1_IngEstado";
             this.cbxS6_1_IngEstado.Size = new System.Drawing.Size(165, 24);
             this.cbxS6_1_IngEstado.TabIndex = 2;
@@ -2665,7 +2074,7 @@
             // 
             this.txtS6_1_CantidadIngEstado.Enabled = false;
             this.txtS6_1_CantidadIngEstado.Location = new System.Drawing.Point(244, 90);
-            this.txtS6_1_CantidadIngEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS6_1_CantidadIngEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtS6_1_CantidadIngEstado.Multiline = true;
             this.txtS6_1_CantidadIngEstado.Name = "txtS6_1_CantidadIngEstado";
             this.txtS6_1_CantidadIngEstado.Size = new System.Drawing.Size(115, 27);
@@ -2686,7 +2095,7 @@
             // 
             this.pbS6_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS6_Siguiente.Location = new System.Drawing.Point(1627, 599);
-            this.pbS6_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS6_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS6_Siguiente.Name = "pbS6_Siguiente";
             this.pbS6_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS6_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2699,9 +2108,9 @@
             this.tbpS7.Controls.Add(this.pbS7_Siguiente);
             this.tbpS7.Controls.Add(this.gbS7);
             this.tbpS7.Location = new System.Drawing.Point(4, 25);
-            this.tbpS7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS7.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS7.Name = "tbpS7";
-            this.tbpS7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS7.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS7.Size = new System.Drawing.Size(1779, 679);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
@@ -2711,7 +2120,7 @@
             // 
             this.pbS7_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS7_Siguiente.Location = new System.Drawing.Point(1359, 596);
-            this.pbS7_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS7_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS7_Siguiente.Name = "pbS7_Siguiente";
             this.pbS7_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS7_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2730,9 +2139,9 @@
             this.gbS7.Controls.Add(this.groupBox19);
             this.gbS7.Controls.Add(this.groupBox18);
             this.gbS7.Location = new System.Drawing.Point(4, 4);
-            this.gbS7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7.Name = "gbS7";
-            this.gbS7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7.Size = new System.Drawing.Size(1776, 614);
             this.gbS7.TabIndex = 1;
             this.gbS7.TabStop = false;
@@ -2747,9 +2156,9 @@
             this.groupBox24.Controls.Add(this.gbS7_8_Encementado);
             this.groupBox24.Controls.Add(this.gbS7_8_EstadoPiso);
             this.groupBox24.Location = new System.Drawing.Point(851, 357);
-            this.groupBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox24.Size = new System.Drawing.Size(483, 255);
             this.groupBox24.TabIndex = 16;
             this.groupBox24.TabStop = false;
@@ -2773,9 +2182,9 @@
             this.gbS7_8_Tierra.Controls.Add(this.rbS7_84_MuyMalo);
             this.gbS7_8_Tierra.Controls.Add(this.label34);
             this.gbS7_8_Tierra.Location = new System.Drawing.Point(9, 206);
-            this.gbS7_8_Tierra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_Tierra.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_8_Tierra.Name = "gbS7_8_Tierra";
-            this.gbS7_8_Tierra.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_Tierra.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_8_Tierra.Size = new System.Drawing.Size(436, 39);
             this.gbS7_8_Tierra.TabIndex = 17;
             this.gbS7_8_Tierra.TabStop = false;
@@ -2784,7 +2193,7 @@
             // 
             this.rbS7_84_MuyBueno.AutoSize = true;
             this.rbS7_84_MuyBueno.Location = new System.Drawing.Point(340, 16);
-            this.rbS7_84_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_84_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_84_MuyBueno.Name = "rbS7_84_MuyBueno";
             this.rbS7_84_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_84_MuyBueno.TabIndex = 4;
@@ -2795,7 +2204,7 @@
             // 
             this.rbS7_84_Bueno.AutoSize = true;
             this.rbS7_84_Bueno.Location = new System.Drawing.Point(271, 16);
-            this.rbS7_84_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_84_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_84_Bueno.Name = "rbS7_84_Bueno";
             this.rbS7_84_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_84_Bueno.TabIndex = 3;
@@ -2806,7 +2215,7 @@
             // 
             this.rbS7_84_Malo.AutoSize = true;
             this.rbS7_84_Malo.Location = new System.Drawing.Point(213, 16);
-            this.rbS7_84_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_84_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_84_Malo.Name = "rbS7_84_Malo";
             this.rbS7_84_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_84_Malo.TabIndex = 2;
@@ -2817,7 +2226,7 @@
             // 
             this.rbS7_84_MuyMalo.AutoSize = true;
             this.rbS7_84_MuyMalo.Location = new System.Drawing.Point(141, 16);
-            this.rbS7_84_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_84_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_84_MuyMalo.Name = "rbS7_84_MuyMalo";
             this.rbS7_84_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_84_MuyMalo.TabIndex = 1;
@@ -2842,9 +2251,9 @@
             this.gbS7_8_Madera.Controls.Add(this.rbS7_83_MuyMalo);
             this.gbS7_8_Madera.Controls.Add(this.label53);
             this.gbS7_8_Madera.Location = new System.Drawing.Point(9, 164);
-            this.gbS7_8_Madera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_Madera.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_8_Madera.Name = "gbS7_8_Madera";
-            this.gbS7_8_Madera.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_Madera.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_8_Madera.Size = new System.Drawing.Size(436, 39);
             this.gbS7_8_Madera.TabIndex = 16;
             this.gbS7_8_Madera.TabStop = false;
@@ -2853,7 +2262,7 @@
             // 
             this.rbS7_83_MuyBueno.AutoSize = true;
             this.rbS7_83_MuyBueno.Location = new System.Drawing.Point(341, 16);
-            this.rbS7_83_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_83_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_83_MuyBueno.Name = "rbS7_83_MuyBueno";
             this.rbS7_83_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_83_MuyBueno.TabIndex = 4;
@@ -2864,7 +2273,7 @@
             // 
             this.rbS7_83_Bueno.AutoSize = true;
             this.rbS7_83_Bueno.Location = new System.Drawing.Point(272, 16);
-            this.rbS7_83_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_83_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_83_Bueno.Name = "rbS7_83_Bueno";
             this.rbS7_83_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_83_Bueno.TabIndex = 3;
@@ -2875,7 +2284,7 @@
             // 
             this.rbS7_83_Malo.AutoSize = true;
             this.rbS7_83_Malo.Location = new System.Drawing.Point(215, 16);
-            this.rbS7_83_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_83_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_83_Malo.Name = "rbS7_83_Malo";
             this.rbS7_83_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_83_Malo.TabIndex = 2;
@@ -2886,7 +2295,7 @@
             // 
             this.rbS7_83_MuyMalo.AutoSize = true;
             this.rbS7_83_MuyMalo.Location = new System.Drawing.Point(143, 16);
-            this.rbS7_83_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_83_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_83_MuyMalo.Name = "rbS7_83_MuyMalo";
             this.rbS7_83_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_83_MuyMalo.TabIndex = 1;
@@ -2911,9 +2320,9 @@
             this.gbS7_8_LadrilloBarro.Controls.Add(this.rbS7_82_MuyMalo);
             this.gbS7_8_LadrilloBarro.Controls.Add(this.label54);
             this.gbS7_8_LadrilloBarro.Location = new System.Drawing.Point(11, 123);
-            this.gbS7_8_LadrilloBarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_LadrilloBarro.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_8_LadrilloBarro.Name = "gbS7_8_LadrilloBarro";
-            this.gbS7_8_LadrilloBarro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_LadrilloBarro.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_8_LadrilloBarro.Size = new System.Drawing.Size(436, 39);
             this.gbS7_8_LadrilloBarro.TabIndex = 15;
             this.gbS7_8_LadrilloBarro.TabStop = false;
@@ -2922,7 +2331,7 @@
             // 
             this.rbS7_82_MuyBueno.AutoSize = true;
             this.rbS7_82_MuyBueno.Location = new System.Drawing.Point(343, 16);
-            this.rbS7_82_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_82_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_82_MuyBueno.Name = "rbS7_82_MuyBueno";
             this.rbS7_82_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_82_MuyBueno.TabIndex = 4;
@@ -2933,7 +2342,7 @@
             // 
             this.rbS7_82_Bueno.AutoSize = true;
             this.rbS7_82_Bueno.Location = new System.Drawing.Point(273, 16);
-            this.rbS7_82_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_82_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_82_Bueno.Name = "rbS7_82_Bueno";
             this.rbS7_82_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_82_Bueno.TabIndex = 3;
@@ -2944,7 +2353,7 @@
             // 
             this.rbS7_82_Malo.AutoSize = true;
             this.rbS7_82_Malo.Location = new System.Drawing.Point(216, 16);
-            this.rbS7_82_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_82_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_82_Malo.Name = "rbS7_82_Malo";
             this.rbS7_82_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_82_Malo.TabIndex = 2;
@@ -2955,7 +2364,7 @@
             // 
             this.rbS7_82_MuyMalo.AutoSize = true;
             this.rbS7_82_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_82_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_82_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_82_MuyMalo.Name = "rbS7_82_MuyMalo";
             this.rbS7_82_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_82_MuyMalo.TabIndex = 1;
@@ -2980,9 +2389,9 @@
             this.gbS7_8_Encementado.Controls.Add(this.rbS7_81_MuyMalo);
             this.gbS7_8_Encementado.Controls.Add(this.label55);
             this.gbS7_8_Encementado.Location = new System.Drawing.Point(11, 84);
-            this.gbS7_8_Encementado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_Encementado.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_8_Encementado.Name = "gbS7_8_Encementado";
-            this.gbS7_8_Encementado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_Encementado.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_8_Encementado.Size = new System.Drawing.Size(436, 39);
             this.gbS7_8_Encementado.TabIndex = 14;
             this.gbS7_8_Encementado.TabStop = false;
@@ -2991,7 +2400,7 @@
             // 
             this.rbS7_81_MuyBueno.AutoSize = true;
             this.rbS7_81_MuyBueno.Location = new System.Drawing.Point(341, 16);
-            this.rbS7_81_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_81_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_81_MuyBueno.Name = "rbS7_81_MuyBueno";
             this.rbS7_81_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_81_MuyBueno.TabIndex = 4;
@@ -3002,7 +2411,7 @@
             // 
             this.rbS7_81_Bueno.AutoSize = true;
             this.rbS7_81_Bueno.Location = new System.Drawing.Point(272, 16);
-            this.rbS7_81_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_81_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_81_Bueno.Name = "rbS7_81_Bueno";
             this.rbS7_81_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_81_Bueno.TabIndex = 3;
@@ -3013,7 +2422,7 @@
             // 
             this.rbS7_81_Malo.AutoSize = true;
             this.rbS7_81_Malo.Location = new System.Drawing.Point(215, 16);
-            this.rbS7_81_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_81_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_81_Malo.Name = "rbS7_81_Malo";
             this.rbS7_81_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_81_Malo.TabIndex = 2;
@@ -3024,7 +2433,7 @@
             // 
             this.rbS7_81_MuyMalo.AutoSize = true;
             this.rbS7_81_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_81_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_81_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_81_MuyMalo.Name = "rbS7_81_MuyMalo";
             this.rbS7_81_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_81_MuyMalo.TabIndex = 1;
@@ -3048,9 +2457,9 @@
             this.gbS7_8_EstadoPiso.Controls.Add(this.label58);
             this.gbS7_8_EstadoPiso.Controls.Add(this.label59);
             this.gbS7_8_EstadoPiso.Location = new System.Drawing.Point(11, 48);
-            this.gbS7_8_EstadoPiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_EstadoPiso.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_8_EstadoPiso.Name = "gbS7_8_EstadoPiso";
-            this.gbS7_8_EstadoPiso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_8_EstadoPiso.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_8_EstadoPiso.Size = new System.Drawing.Size(436, 36);
             this.gbS7_8_EstadoPiso.TabIndex = 13;
             this.gbS7_8_EstadoPiso.TabStop = false;
@@ -3106,9 +2515,9 @@
             this.groupBox25.Controls.Add(this.gbS7_7_BlockLadriPrefabr);
             this.groupBox25.Controls.Add(this.gbS7_7_EstadoParedes);
             this.groupBox25.Location = new System.Drawing.Point(849, 12);
-            this.groupBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox25.Size = new System.Drawing.Size(483, 343);
             this.groupBox25.TabIndex = 14;
             this.groupBox25.TabStop = false;
@@ -3132,9 +2541,9 @@
             this.gbS7_7_Desechos.Controls.Add(this.rbS7_76_MuyMalo);
             this.gbS7_7_Desechos.Controls.Add(this.label35);
             this.gbS7_7_Desechos.Location = new System.Drawing.Point(15, 294);
-            this.gbS7_7_Desechos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Desechos.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Desechos.Name = "gbS7_7_Desechos";
-            this.gbS7_7_Desechos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Desechos.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Desechos.Size = new System.Drawing.Size(436, 39);
             this.gbS7_7_Desechos.TabIndex = 14;
             this.gbS7_7_Desechos.TabStop = false;
@@ -3143,7 +2552,7 @@
             // 
             this.rbS7_76_MuyBueno.AutoSize = true;
             this.rbS7_76_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_76_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_76_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_76_MuyBueno.Name = "rbS7_76_MuyBueno";
             this.rbS7_76_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_76_MuyBueno.TabIndex = 4;
@@ -3154,7 +2563,7 @@
             // 
             this.rbS7_76_Bueno.AutoSize = true;
             this.rbS7_76_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_76_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_76_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_76_Bueno.Name = "rbS7_76_Bueno";
             this.rbS7_76_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_76_Bueno.TabIndex = 3;
@@ -3165,7 +2574,7 @@
             // 
             this.rbS7_76_Malo.AutoSize = true;
             this.rbS7_76_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_76_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_76_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_76_Malo.Name = "rbS7_76_Malo";
             this.rbS7_76_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_76_Malo.TabIndex = 2;
@@ -3176,7 +2585,7 @@
             // 
             this.rbS7_76_MuyMalo.AutoSize = true;
             this.rbS7_76_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_76_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_76_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_76_MuyMalo.Name = "rbS7_76_MuyMalo";
             this.rbS7_76_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_76_MuyMalo.TabIndex = 1;
@@ -3201,9 +2610,9 @@
             this.gbS7_7_BaharequeBambu.Controls.Add(this.rbS7_75_MuyMalo);
             this.gbS7_7_BaharequeBambu.Controls.Add(this.label44);
             this.gbS7_7_BaharequeBambu.Location = new System.Drawing.Point(15, 254);
-            this.gbS7_7_BaharequeBambu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_BaharequeBambu.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_BaharequeBambu.Name = "gbS7_7_BaharequeBambu";
-            this.gbS7_7_BaharequeBambu.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_BaharequeBambu.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_BaharequeBambu.Size = new System.Drawing.Size(436, 39);
             this.gbS7_7_BaharequeBambu.TabIndex = 13;
             this.gbS7_7_BaharequeBambu.TabStop = false;
@@ -3212,7 +2621,7 @@
             // 
             this.rbS7_75_MuyBueno.AutoSize = true;
             this.rbS7_75_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_75_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_75_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_75_MuyBueno.Name = "rbS7_75_MuyBueno";
             this.rbS7_75_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_75_MuyBueno.TabIndex = 4;
@@ -3223,7 +2632,7 @@
             // 
             this.rbS7_75_Bueno.AutoSize = true;
             this.rbS7_75_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_75_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_75_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_75_Bueno.Name = "rbS7_75_Bueno";
             this.rbS7_75_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_75_Bueno.TabIndex = 3;
@@ -3234,7 +2643,7 @@
             // 
             this.rbS7_75_Malo.AutoSize = true;
             this.rbS7_75_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_75_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_75_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_75_Malo.Name = "rbS7_75_Malo";
             this.rbS7_75_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_75_Malo.TabIndex = 2;
@@ -3245,7 +2654,7 @@
             // 
             this.rbS7_75_MuyMalo.AutoSize = true;
             this.rbS7_75_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_75_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_75_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_75_MuyMalo.Name = "rbS7_75_MuyMalo";
             this.rbS7_75_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_75_MuyMalo.TabIndex = 1;
@@ -3270,9 +2679,9 @@
             this.gbS7_7_Lamina.Controls.Add(this.rbS7_74_MuyMalo);
             this.gbS7_7_Lamina.Controls.Add(this.label45);
             this.gbS7_7_Lamina.Location = new System.Drawing.Point(15, 213);
-            this.gbS7_7_Lamina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Lamina.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Lamina.Name = "gbS7_7_Lamina";
-            this.gbS7_7_Lamina.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Lamina.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Lamina.Size = new System.Drawing.Size(436, 39);
             this.gbS7_7_Lamina.TabIndex = 12;
             this.gbS7_7_Lamina.TabStop = false;
@@ -3281,7 +2690,7 @@
             // 
             this.rbS7_74_MuyBueno.AutoSize = true;
             this.rbS7_74_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_74_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_74_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_74_MuyBueno.Name = "rbS7_74_MuyBueno";
             this.rbS7_74_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_74_MuyBueno.TabIndex = 4;
@@ -3292,7 +2701,7 @@
             // 
             this.rbS7_74_Bueno.AutoSize = true;
             this.rbS7_74_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_74_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_74_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_74_Bueno.Name = "rbS7_74_Bueno";
             this.rbS7_74_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_74_Bueno.TabIndex = 3;
@@ -3303,7 +2712,7 @@
             // 
             this.rbS7_74_Malo.AutoSize = true;
             this.rbS7_74_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_74_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_74_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_74_Malo.Name = "rbS7_74_Malo";
             this.rbS7_74_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_74_Malo.TabIndex = 2;
@@ -3314,7 +2723,7 @@
             // 
             this.rbS7_74_MuyMalo.AutoSize = true;
             this.rbS7_74_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_74_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_74_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_74_MuyMalo.Name = "rbS7_74_MuyMalo";
             this.rbS7_74_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_74_MuyMalo.TabIndex = 1;
@@ -3339,9 +2748,9 @@
             this.gbS7_7_Adobe.Controls.Add(this.rbS7_73_MuyMalo);
             this.gbS7_7_Adobe.Controls.Add(this.label46);
             this.gbS7_7_Adobe.Location = new System.Drawing.Point(15, 172);
-            this.gbS7_7_Adobe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Adobe.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Adobe.Name = "gbS7_7_Adobe";
-            this.gbS7_7_Adobe.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Adobe.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Adobe.Size = new System.Drawing.Size(436, 39);
             this.gbS7_7_Adobe.TabIndex = 11;
             this.gbS7_7_Adobe.TabStop = false;
@@ -3350,7 +2759,7 @@
             // 
             this.rbS7_73_MuyBueno.AutoSize = true;
             this.rbS7_73_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_73_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_73_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_73_MuyBueno.Name = "rbS7_73_MuyBueno";
             this.rbS7_73_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_73_MuyBueno.TabIndex = 4;
@@ -3361,7 +2770,7 @@
             // 
             this.rbS7_73_Bueno.AutoSize = true;
             this.rbS7_73_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_73_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_73_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_73_Bueno.Name = "rbS7_73_Bueno";
             this.rbS7_73_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_73_Bueno.TabIndex = 3;
@@ -3372,7 +2781,7 @@
             // 
             this.rbS7_73_Malo.AutoSize = true;
             this.rbS7_73_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_73_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_73_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_73_Malo.Name = "rbS7_73_Malo";
             this.rbS7_73_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_73_Malo.TabIndex = 2;
@@ -3383,7 +2792,7 @@
             // 
             this.rbS7_73_MuyMalo.AutoSize = true;
             this.rbS7_73_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_73_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_73_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_73_MuyMalo.Name = "rbS7_73_MuyMalo";
             this.rbS7_73_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_73_MuyMalo.TabIndex = 1;
@@ -3408,9 +2817,9 @@
             this.gbS7_7_Madera.Controls.Add(this.rbS7_72_MuyMalo);
             this.gbS7_7_Madera.Controls.Add(this.label47);
             this.gbS7_7_Madera.Location = new System.Drawing.Point(16, 132);
-            this.gbS7_7_Madera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Madera.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Madera.Name = "gbS7_7_Madera";
-            this.gbS7_7_Madera.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_Madera.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_Madera.Size = new System.Drawing.Size(436, 39);
             this.gbS7_7_Madera.TabIndex = 10;
             this.gbS7_7_Madera.TabStop = false;
@@ -3419,7 +2828,7 @@
             // 
             this.rbS7_72_MuyBueno.AutoSize = true;
             this.rbS7_72_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_72_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_72_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_72_MuyBueno.Name = "rbS7_72_MuyBueno";
             this.rbS7_72_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_72_MuyBueno.TabIndex = 4;
@@ -3430,7 +2839,7 @@
             // 
             this.rbS7_72_Bueno.AutoSize = true;
             this.rbS7_72_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_72_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_72_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_72_Bueno.Name = "rbS7_72_Bueno";
             this.rbS7_72_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_72_Bueno.TabIndex = 3;
@@ -3441,7 +2850,7 @@
             // 
             this.rbS7_72_Malo.AutoSize = true;
             this.rbS7_72_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_72_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_72_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_72_Malo.Name = "rbS7_72_Malo";
             this.rbS7_72_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_72_Malo.TabIndex = 2;
@@ -3452,7 +2861,7 @@
             // 
             this.rbS7_72_MuyMalo.AutoSize = true;
             this.rbS7_72_MuyMalo.Location = new System.Drawing.Point(177, 16);
-            this.rbS7_72_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_72_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_72_MuyMalo.Name = "rbS7_72_MuyMalo";
             this.rbS7_72_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_72_MuyMalo.TabIndex = 1;
@@ -3477,9 +2886,9 @@
             this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.rbS7_71_MuyMalo);
             this.gbS7_7_BlockLadriPrefabr.Controls.Add(this.label48);
             this.gbS7_7_BlockLadriPrefabr.Location = new System.Drawing.Point(16, 91);
-            this.gbS7_7_BlockLadriPrefabr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_BlockLadriPrefabr.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_BlockLadriPrefabr.Name = "gbS7_7_BlockLadriPrefabr";
-            this.gbS7_7_BlockLadriPrefabr.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_BlockLadriPrefabr.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_BlockLadriPrefabr.Size = new System.Drawing.Size(436, 39);
             this.gbS7_7_BlockLadriPrefabr.TabIndex = 9;
             this.gbS7_7_BlockLadriPrefabr.TabStop = false;
@@ -3488,7 +2897,7 @@
             // 
             this.rbS7_71_MuyBueno.AutoSize = true;
             this.rbS7_71_MuyBueno.Location = new System.Drawing.Point(376, 16);
-            this.rbS7_71_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_71_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_71_MuyBueno.Name = "rbS7_71_MuyBueno";
             this.rbS7_71_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_71_MuyBueno.TabIndex = 4;
@@ -3499,7 +2908,7 @@
             // 
             this.rbS7_71_Bueno.AutoSize = true;
             this.rbS7_71_Bueno.Location = new System.Drawing.Point(307, 16);
-            this.rbS7_71_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_71_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_71_Bueno.Name = "rbS7_71_Bueno";
             this.rbS7_71_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_71_Bueno.TabIndex = 3;
@@ -3510,7 +2919,7 @@
             // 
             this.rbS7_71_Malo.AutoSize = true;
             this.rbS7_71_Malo.Location = new System.Drawing.Point(249, 16);
-            this.rbS7_71_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_71_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_71_Malo.Name = "rbS7_71_Malo";
             this.rbS7_71_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_71_Malo.TabIndex = 2;
@@ -3521,7 +2930,7 @@
             // 
             this.rbS7_71_MuyMalo.AutoSize = true;
             this.rbS7_71_MuyMalo.Location = new System.Drawing.Point(179, 16);
-            this.rbS7_71_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_71_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_71_MuyMalo.Name = "rbS7_71_MuyMalo";
             this.rbS7_71_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_71_MuyMalo.TabIndex = 1;
@@ -3545,9 +2954,9 @@
             this.gbS7_7_EstadoParedes.Controls.Add(this.label51);
             this.gbS7_7_EstadoParedes.Controls.Add(this.label52);
             this.gbS7_7_EstadoParedes.Location = new System.Drawing.Point(16, 55);
-            this.gbS7_7_EstadoParedes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_EstadoParedes.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_7_EstadoParedes.Name = "gbS7_7_EstadoParedes";
-            this.gbS7_7_EstadoParedes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_7_EstadoParedes.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_7_EstadoParedes.Size = new System.Drawing.Size(436, 36);
             this.gbS7_7_EstadoParedes.TabIndex = 8;
             this.gbS7_7_EstadoParedes.TabStop = false;
@@ -3603,9 +3012,9 @@
             this.groupBox23.Controls.Add(this.gbS7_6_Concreto);
             this.groupBox23.Controls.Add(this.gbS7_6_EstadoTecho);
             this.groupBox23.Location = new System.Drawing.Point(392, 228);
-            this.groupBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox23.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox23.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox23.Size = new System.Drawing.Size(448, 336);
             this.groupBox23.TabIndex = 12;
             this.groupBox23.TabStop = false;
@@ -3629,9 +3038,9 @@
             this.gbS7_6_Desechos.Controls.Add(this.rbS7_66_MuyMalo);
             this.gbS7_6_Desechos.Controls.Add(this.label43);
             this.gbS7_6_Desechos.Location = new System.Drawing.Point(23, 284);
-            this.gbS7_6_Desechos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Desechos.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Desechos.Name = "gbS7_6_Desechos";
-            this.gbS7_6_Desechos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Desechos.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Desechos.Size = new System.Drawing.Size(395, 39);
             this.gbS7_6_Desechos.TabIndex = 7;
             this.gbS7_6_Desechos.TabStop = false;
@@ -3640,7 +3049,7 @@
             // 
             this.rbS7_66_MuyBueno.AutoSize = true;
             this.rbS7_66_MuyBueno.Location = new System.Drawing.Point(327, 16);
-            this.rbS7_66_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_66_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_66_MuyBueno.Name = "rbS7_66_MuyBueno";
             this.rbS7_66_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_66_MuyBueno.TabIndex = 4;
@@ -3651,7 +3060,7 @@
             // 
             this.rbS7_66_Bueno.AutoSize = true;
             this.rbS7_66_Bueno.Location = new System.Drawing.Point(257, 16);
-            this.rbS7_66_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_66_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_66_Bueno.Name = "rbS7_66_Bueno";
             this.rbS7_66_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_66_Bueno.TabIndex = 3;
@@ -3662,7 +3071,7 @@
             // 
             this.rbS7_66_Malo.AutoSize = true;
             this.rbS7_66_Malo.Location = new System.Drawing.Point(203, 16);
-            this.rbS7_66_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_66_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_66_Malo.Name = "rbS7_66_Malo";
             this.rbS7_66_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_66_Malo.TabIndex = 2;
@@ -3673,7 +3082,7 @@
             // 
             this.rbS7_66_MuyMalo.AutoSize = true;
             this.rbS7_66_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_66_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_66_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_66_MuyMalo.Name = "rbS7_66_MuyMalo";
             this.rbS7_66_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_66_MuyMalo.TabIndex = 1;
@@ -3698,9 +3107,9 @@
             this.gbS7_6_Paja.Controls.Add(this.rbS7_65_MuyMalo);
             this.gbS7_6_Paja.Controls.Add(this.label42);
             this.gbS7_6_Paja.Location = new System.Drawing.Point(23, 244);
-            this.gbS7_6_Paja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Paja.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Paja.Name = "gbS7_6_Paja";
-            this.gbS7_6_Paja.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Paja.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Paja.Size = new System.Drawing.Size(395, 39);
             this.gbS7_6_Paja.TabIndex = 6;
             this.gbS7_6_Paja.TabStop = false;
@@ -3709,7 +3118,7 @@
             // 
             this.rbS7_65_MuyBueno.AutoSize = true;
             this.rbS7_65_MuyBueno.Location = new System.Drawing.Point(328, 16);
-            this.rbS7_65_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_65_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_65_MuyBueno.Name = "rbS7_65_MuyBueno";
             this.rbS7_65_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_65_MuyBueno.TabIndex = 4;
@@ -3720,7 +3129,7 @@
             // 
             this.rbS7_65_Bueno.AutoSize = true;
             this.rbS7_65_Bueno.Location = new System.Drawing.Point(259, 16);
-            this.rbS7_65_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_65_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_65_Bueno.Name = "rbS7_65_Bueno";
             this.rbS7_65_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_65_Bueno.TabIndex = 3;
@@ -3731,7 +3140,7 @@
             // 
             this.rbS7_65_Malo.AutoSize = true;
             this.rbS7_65_Malo.Location = new System.Drawing.Point(201, 16);
-            this.rbS7_65_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_65_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_65_Malo.Name = "rbS7_65_Malo";
             this.rbS7_65_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_65_Malo.TabIndex = 2;
@@ -3742,7 +3151,7 @@
             // 
             this.rbS7_65_MuyMalo.AutoSize = true;
             this.rbS7_65_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_65_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_65_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_65_MuyMalo.Name = "rbS7_65_MuyMalo";
             this.rbS7_65_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_65_MuyMalo.TabIndex = 1;
@@ -3767,9 +3176,9 @@
             this.gbS7_6_Duralita.Controls.Add(this.rbS7_64_MuyMalo);
             this.gbS7_6_Duralita.Controls.Add(this.label41);
             this.gbS7_6_Duralita.Location = new System.Drawing.Point(23, 206);
-            this.gbS7_6_Duralita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Duralita.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Duralita.Name = "gbS7_6_Duralita";
-            this.gbS7_6_Duralita.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Duralita.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Duralita.Size = new System.Drawing.Size(395, 39);
             this.gbS7_6_Duralita.TabIndex = 5;
             this.gbS7_6_Duralita.TabStop = false;
@@ -3778,7 +3187,7 @@
             // 
             this.rbS7_64_MuyBueno.AutoSize = true;
             this.rbS7_64_MuyBueno.Location = new System.Drawing.Point(329, 16);
-            this.rbS7_64_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_64_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_64_MuyBueno.Name = "rbS7_64_MuyBueno";
             this.rbS7_64_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_64_MuyBueno.TabIndex = 4;
@@ -3789,7 +3198,7 @@
             // 
             this.rbS7_64_Bueno.AutoSize = true;
             this.rbS7_64_Bueno.Location = new System.Drawing.Point(260, 16);
-            this.rbS7_64_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_64_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_64_Bueno.Name = "rbS7_64_Bueno";
             this.rbS7_64_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_64_Bueno.TabIndex = 3;
@@ -3800,7 +3209,7 @@
             // 
             this.rbS7_64_Malo.AutoSize = true;
             this.rbS7_64_Malo.Location = new System.Drawing.Point(204, 16);
-            this.rbS7_64_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_64_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_64_Malo.Name = "rbS7_64_Malo";
             this.rbS7_64_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_64_Malo.TabIndex = 2;
@@ -3811,7 +3220,7 @@
             // 
             this.rbS7_64_MuyMalo.AutoSize = true;
             this.rbS7_64_MuyMalo.Location = new System.Drawing.Point(144, 16);
-            this.rbS7_64_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_64_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_64_MuyMalo.Name = "rbS7_64_MuyMalo";
             this.rbS7_64_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_64_MuyMalo.TabIndex = 1;
@@ -3836,9 +3245,9 @@
             this.gbS7_6_Lamina.Controls.Add(this.rbS7_63_MuyMalo);
             this.gbS7_6_Lamina.Controls.Add(this.label40);
             this.gbS7_6_Lamina.Location = new System.Drawing.Point(20, 166);
-            this.gbS7_6_Lamina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Lamina.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Lamina.Name = "gbS7_6_Lamina";
-            this.gbS7_6_Lamina.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Lamina.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Lamina.Size = new System.Drawing.Size(397, 39);
             this.gbS7_6_Lamina.TabIndex = 4;
             this.gbS7_6_Lamina.TabStop = false;
@@ -3847,7 +3256,7 @@
             // 
             this.rbS7_63_MuyBueno.AutoSize = true;
             this.rbS7_63_MuyBueno.Location = new System.Drawing.Point(331, 16);
-            this.rbS7_63_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_63_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_63_MuyBueno.Name = "rbS7_63_MuyBueno";
             this.rbS7_63_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_63_MuyBueno.TabIndex = 4;
@@ -3858,7 +3267,7 @@
             // 
             this.rbS7_63_Bueno.AutoSize = true;
             this.rbS7_63_Bueno.Location = new System.Drawing.Point(261, 16);
-            this.rbS7_63_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_63_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_63_Bueno.Name = "rbS7_63_Bueno";
             this.rbS7_63_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_63_Bueno.TabIndex = 3;
@@ -3869,7 +3278,7 @@
             // 
             this.rbS7_63_Malo.AutoSize = true;
             this.rbS7_63_Malo.Location = new System.Drawing.Point(204, 16);
-            this.rbS7_63_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_63_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_63_Malo.Name = "rbS7_63_Malo";
             this.rbS7_63_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_63_Malo.TabIndex = 2;
@@ -3880,7 +3289,7 @@
             // 
             this.rbS7_63_MuyMalo.AutoSize = true;
             this.rbS7_63_MuyMalo.Location = new System.Drawing.Point(148, 16);
-            this.rbS7_63_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_63_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_63_MuyMalo.Name = "rbS7_63_MuyMalo";
             this.rbS7_63_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_63_MuyMalo.TabIndex = 1;
@@ -3905,9 +3314,9 @@
             this.gbS7_6_Barro.Controls.Add(this.rbS7_62_MuyMalo);
             this.gbS7_6_Barro.Controls.Add(this.label39);
             this.gbS7_6_Barro.Location = new System.Drawing.Point(19, 127);
-            this.gbS7_6_Barro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Barro.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Barro.Name = "gbS7_6_Barro";
-            this.gbS7_6_Barro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Barro.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Barro.Size = new System.Drawing.Size(399, 39);
             this.gbS7_6_Barro.TabIndex = 3;
             this.gbS7_6_Barro.TabStop = false;
@@ -3916,7 +3325,7 @@
             // 
             this.rbS7_62_MuyBueno.AutoSize = true;
             this.rbS7_62_MuyBueno.Location = new System.Drawing.Point(332, 16);
-            this.rbS7_62_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_62_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_62_MuyBueno.Name = "rbS7_62_MuyBueno";
             this.rbS7_62_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_62_MuyBueno.TabIndex = 4;
@@ -3927,7 +3336,7 @@
             // 
             this.rbS7_62_Bueno.AutoSize = true;
             this.rbS7_62_Bueno.Location = new System.Drawing.Point(263, 16);
-            this.rbS7_62_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_62_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_62_Bueno.Name = "rbS7_62_Bueno";
             this.rbS7_62_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_62_Bueno.TabIndex = 3;
@@ -3938,7 +3347,7 @@
             // 
             this.rbS7_62_Malo.AutoSize = true;
             this.rbS7_62_Malo.Location = new System.Drawing.Point(207, 16);
-            this.rbS7_62_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_62_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_62_Malo.Name = "rbS7_62_Malo";
             this.rbS7_62_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_62_Malo.TabIndex = 2;
@@ -3949,7 +3358,7 @@
             // 
             this.rbS7_62_MuyMalo.AutoSize = true;
             this.rbS7_62_MuyMalo.Location = new System.Drawing.Point(149, 16);
-            this.rbS7_62_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_62_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_62_MuyMalo.Name = "rbS7_62_MuyMalo";
             this.rbS7_62_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_62_MuyMalo.TabIndex = 1;
@@ -3974,9 +3383,9 @@
             this.gbS7_6_Concreto.Controls.Add(this.rbS7_61_MuyMalo);
             this.gbS7_6_Concreto.Controls.Add(this.label33);
             this.gbS7_6_Concreto.Location = new System.Drawing.Point(17, 82);
-            this.gbS7_6_Concreto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Concreto.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Concreto.Name = "gbS7_6_Concreto";
-            this.gbS7_6_Concreto.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_Concreto.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_Concreto.Size = new System.Drawing.Size(400, 39);
             this.gbS7_6_Concreto.TabIndex = 2;
             this.gbS7_6_Concreto.TabStop = false;
@@ -3985,7 +3394,7 @@
             // 
             this.rbS7_61_MuyBueno.AutoSize = true;
             this.rbS7_61_MuyBueno.Location = new System.Drawing.Point(333, 16);
-            this.rbS7_61_MuyBueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_61_MuyBueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_61_MuyBueno.Name = "rbS7_61_MuyBueno";
             this.rbS7_61_MuyBueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_61_MuyBueno.TabIndex = 4;
@@ -3996,7 +3405,7 @@
             // 
             this.rbS7_61_Bueno.AutoSize = true;
             this.rbS7_61_Bueno.Location = new System.Drawing.Point(264, 16);
-            this.rbS7_61_Bueno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_61_Bueno.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_61_Bueno.Name = "rbS7_61_Bueno";
             this.rbS7_61_Bueno.Size = new System.Drawing.Size(17, 16);
             this.rbS7_61_Bueno.TabIndex = 3;
@@ -4007,7 +3416,7 @@
             // 
             this.rbS7_61_Malo.AutoSize = true;
             this.rbS7_61_Malo.Location = new System.Drawing.Point(207, 16);
-            this.rbS7_61_Malo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_61_Malo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_61_Malo.Name = "rbS7_61_Malo";
             this.rbS7_61_Malo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_61_Malo.TabIndex = 2;
@@ -4018,7 +3427,7 @@
             // 
             this.rbS7_61_MuyMalo.AutoSize = true;
             this.rbS7_61_MuyMalo.Location = new System.Drawing.Point(151, 16);
-            this.rbS7_61_MuyMalo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbS7_61_MuyMalo.Margin = new System.Windows.Forms.Padding(4);
             this.rbS7_61_MuyMalo.Name = "rbS7_61_MuyMalo";
             this.rbS7_61_MuyMalo.Size = new System.Drawing.Size(17, 16);
             this.rbS7_61_MuyMalo.TabIndex = 1;
@@ -4042,9 +3451,9 @@
             this.gbS7_6_EstadoTecho.Controls.Add(this.label36);
             this.gbS7_6_EstadoTecho.Controls.Add(this.label31);
             this.gbS7_6_EstadoTecho.Location = new System.Drawing.Point(17, 48);
-            this.gbS7_6_EstadoTecho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_EstadoTecho.Margin = new System.Windows.Forms.Padding(4);
             this.gbS7_6_EstadoTecho.Name = "gbS7_6_EstadoTecho";
-            this.gbS7_6_EstadoTecho.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbS7_6_EstadoTecho.Padding = new System.Windows.Forms.Padding(4);
             this.gbS7_6_EstadoTecho.Size = new System.Drawing.Size(400, 36);
             this.gbS7_6_EstadoTecho.TabIndex = 1;
             this.gbS7_6_EstadoTecho.TabStop = false;
@@ -4100,9 +3509,9 @@
             this.groupBox22.Controls.Add(this.txtS7_5_ProblemaA);
             this.groupBox22.Controls.Add(this.lblS7_5_A);
             this.groupBox22.Location = new System.Drawing.Point(392, 10);
-            this.groupBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox22.Size = new System.Drawing.Size(448, 210);
             this.groupBox22.TabIndex = 10;
             this.groupBox22.TabStop = false;
@@ -4122,7 +3531,7 @@
             // 
             this.txtS7_5_ProblemaC.Enabled = false;
             this.txtS7_5_ProblemaC.Location = new System.Drawing.Point(71, 166);
-            this.txtS7_5_ProblemaC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_5_ProblemaC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_5_ProblemaC.Multiline = true;
             this.txtS7_5_ProblemaC.Name = "txtS7_5_ProblemaC";
             this.txtS7_5_ProblemaC.Size = new System.Drawing.Size(301, 27);
@@ -4143,7 +3552,7 @@
             // 
             this.txtS7_5_ProblemaB.Enabled = false;
             this.txtS7_5_ProblemaB.Location = new System.Drawing.Point(71, 130);
-            this.txtS7_5_ProblemaB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_5_ProblemaB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_5_ProblemaB.Multiline = true;
             this.txtS7_5_ProblemaB.Name = "txtS7_5_ProblemaB";
             this.txtS7_5_ProblemaB.Size = new System.Drawing.Size(301, 27);
@@ -4168,7 +3577,7 @@
             "No",
             "NS/NR"});
             this.cbsS7_5_ProbViv.Location = new System.Drawing.Point(73, 60);
-            this.cbsS7_5_ProbViv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbsS7_5_ProbViv.Margin = new System.Windows.Forms.Padding(4);
             this.cbsS7_5_ProbViv.Name = "cbsS7_5_ProbViv";
             this.cbsS7_5_ProbViv.Size = new System.Drawing.Size(299, 24);
             this.cbsS7_5_ProbViv.TabIndex = 2;
@@ -4178,7 +3587,7 @@
             // 
             this.txtS7_5_ProblemaA.Enabled = false;
             this.txtS7_5_ProblemaA.Location = new System.Drawing.Point(71, 95);
-            this.txtS7_5_ProblemaA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_5_ProblemaA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_5_ProblemaA.Multiline = true;
             this.txtS7_5_ProblemaA.Name = "txtS7_5_ProblemaA";
             this.txtS7_5_ProblemaA.Size = new System.Drawing.Size(301, 27);
@@ -4200,9 +3609,9 @@
             this.groupBox21.Controls.Add(this.lblS7_4_Camas);
             this.groupBox21.Controls.Add(this.txtS7_4_CantCamas);
             this.groupBox21.Location = new System.Drawing.Point(24, 410);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox21.Size = new System.Drawing.Size(360, 143);
             this.groupBox21.TabIndex = 8;
             this.groupBox21.TabStop = false;
@@ -4220,7 +3629,7 @@
             // txtS7_4_CantCamas
             // 
             this.txtS7_4_CantCamas.Location = new System.Drawing.Point(36, 90);
-            this.txtS7_4_CantCamas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_4_CantCamas.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_4_CantCamas.Multiline = true;
             this.txtS7_4_CantCamas.Name = "txtS7_4_CantCamas";
             this.txtS7_4_CantCamas.Size = new System.Drawing.Size(276, 27);
@@ -4231,9 +3640,9 @@
             this.groupBox20.Controls.Add(this.lblS7_3_Dormitorio);
             this.groupBox20.Controls.Add(this.txtS7_3_CantDormitorios);
             this.groupBox20.Location = new System.Drawing.Point(24, 272);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox20.Size = new System.Drawing.Size(360, 130);
             this.groupBox20.TabIndex = 6;
             this.groupBox20.TabStop = false;
@@ -4251,7 +3660,7 @@
             // txtS7_3_CantDormitorios
             // 
             this.txtS7_3_CantDormitorios.Location = new System.Drawing.Point(43, 82);
-            this.txtS7_3_CantDormitorios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_3_CantDormitorios.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_3_CantDormitorios.Multiline = true;
             this.txtS7_3_CantDormitorios.Name = "txtS7_3_CantDormitorios";
             this.txtS7_3_CantDormitorios.Size = new System.Drawing.Size(276, 27);
@@ -4262,9 +3671,9 @@
             this.groupBox19.Controls.Add(this.lblS7_2_Cuartos);
             this.groupBox19.Controls.Add(this.txtS7_2_Cuartos);
             this.groupBox19.Location = new System.Drawing.Point(24, 148);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox19.Size = new System.Drawing.Size(360, 117);
             this.groupBox19.TabIndex = 4;
             this.groupBox19.TabStop = false;
@@ -4282,7 +3691,7 @@
             // txtS7_2_Cuartos
             // 
             this.txtS7_2_Cuartos.Location = new System.Drawing.Point(36, 66);
-            this.txtS7_2_Cuartos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_2_Cuartos.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_2_Cuartos.Multiline = true;
             this.txtS7_2_Cuartos.Name = "txtS7_2_Cuartos";
             this.txtS7_2_Cuartos.Size = new System.Drawing.Size(293, 27);
@@ -4295,9 +3704,9 @@
             this.groupBox18.Controls.Add(this.txtS7_1_LargoViv);
             this.groupBox18.Controls.Add(this.lblS7_1_X);
             this.groupBox18.Location = new System.Drawing.Point(24, 11);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox18.Size = new System.Drawing.Size(360, 133);
             this.groupBox18.TabIndex = 2;
             this.groupBox18.TabStop = false;
@@ -4315,7 +3724,7 @@
             // txtS7_1_AnchoViv
             // 
             this.txtS7_1_AnchoViv.Location = new System.Drawing.Point(47, 75);
-            this.txtS7_1_AnchoViv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_1_AnchoViv.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_1_AnchoViv.Multiline = true;
             this.txtS7_1_AnchoViv.Name = "txtS7_1_AnchoViv";
             this.txtS7_1_AnchoViv.Size = new System.Drawing.Size(115, 27);
@@ -4324,7 +3733,7 @@
             // txtS7_1_LargoViv
             // 
             this.txtS7_1_LargoViv.Location = new System.Drawing.Point(208, 75);
-            this.txtS7_1_LargoViv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS7_1_LargoViv.Margin = new System.Windows.Forms.Padding(4);
             this.txtS7_1_LargoViv.Multiline = true;
             this.txtS7_1_LargoViv.Name = "txtS7_1_LargoViv";
             this.txtS7_1_LargoViv.Size = new System.Drawing.Size(115, 27);
@@ -4345,9 +3754,9 @@
             this.tbpS8.Controls.Add(this.pbS8_Siguiente);
             this.tbpS8.Controls.Add(this.groupBox47);
             this.tbpS8.Location = new System.Drawing.Point(4, 25);
-            this.tbpS8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS8.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS8.Name = "tbpS8";
-            this.tbpS8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS8.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS8.Size = new System.Drawing.Size(1779, 679);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
@@ -4357,7 +3766,7 @@
             // 
             this.pbS8_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS8_Siguiente.Location = new System.Drawing.Point(1272, 596);
-            this.pbS8_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS8_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS8_Siguiente.Name = "pbS8_Siguiente";
             this.pbS8_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS8_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -4376,9 +3785,9 @@
             this.groupBox47.Controls.Add(this.groupBox49);
             this.groupBox47.Controls.Add(this.groupBox48);
             this.groupBox47.Location = new System.Drawing.Point(11, 10);
-            this.groupBox47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox47.Size = new System.Drawing.Size(1771, 578);
             this.groupBox47.TabIndex = 1;
             this.groupBox47.TabStop = false;
@@ -4398,9 +3807,9 @@
             this.groupBox56.Controls.Add(this.gbxS808_Refrigerador);
             this.groupBox56.Controls.Add(this.groupBox63);
             this.groupBox56.Location = new System.Drawing.Point(849, 15);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox56.Size = new System.Drawing.Size(483, 516);
             this.groupBox56.TabIndex = 9;
             this.groupBox56.TabStop = false;
@@ -4413,9 +3822,9 @@
             this.groupBox64.Controls.Add(this.rbtS808_Otros_B);
             this.groupBox64.Controls.Add(this.label74);
             this.groupBox64.Location = new System.Drawing.Point(27, 422);
-            this.groupBox64.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox64.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox64.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox64.Size = new System.Drawing.Size(440, 75);
             this.groupBox64.TabIndex = 17;
             this.groupBox64.TabStop = false;
@@ -4424,7 +3833,7 @@
             // 
             this.rbtS808_OtroEspecificar.Enabled = false;
             this.rbtS808_OtroEspecificar.Location = new System.Drawing.Point(25, 32);
-            this.rbtS808_OtroEspecificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_OtroEspecificar.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_OtroEspecificar.Name = "rbtS808_OtroEspecificar";
             this.rbtS808_OtroEspecificar.Size = new System.Drawing.Size(171, 22);
             this.rbtS808_OtroEspecificar.TabIndex = 5;
@@ -4433,7 +3842,7 @@
             // 
             this.rbtS808_Otros_M.AutoSize = true;
             this.rbtS808_Otros_M.Location = new System.Drawing.Point(372, 32);
-            this.rbtS808_Otros_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Otros_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Otros_M.Name = "rbtS808_Otros_M";
             this.rbtS808_Otros_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Otros_M.TabIndex = 4;
@@ -4445,7 +3854,7 @@
             // 
             this.rbtS808_Otros_R.AutoSize = true;
             this.rbtS808_Otros_R.Location = new System.Drawing.Point(297, 32);
-            this.rbtS808_Otros_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Otros_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Otros_R.Name = "rbtS808_Otros_R";
             this.rbtS808_Otros_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Otros_R.TabIndex = 2;
@@ -4457,7 +3866,7 @@
             // 
             this.rbtS808_Otros_B.AutoSize = true;
             this.rbtS808_Otros_B.Location = new System.Drawing.Point(220, 32);
-            this.rbtS808_Otros_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Otros_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Otros_B.Name = "rbtS808_Otros_B";
             this.rbtS808_Otros_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Otros_B.TabIndex = 1;
@@ -4493,9 +3902,9 @@
             this.groupBox65.Controls.Add(this.rbtS808_Amueblado_B);
             this.groupBox65.Controls.Add(this.label78);
             this.groupBox65.Location = new System.Drawing.Point(27, 372);
-            this.groupBox65.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox65.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox65.Name = "groupBox65";
-            this.groupBox65.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox65.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox65.Size = new System.Drawing.Size(440, 49);
             this.groupBox65.TabIndex = 16;
             this.groupBox65.TabStop = false;
@@ -4504,7 +3913,7 @@
             // 
             this.rbtS808_Amueblado_M.AutoSize = true;
             this.rbtS808_Amueblado_M.Location = new System.Drawing.Point(372, 14);
-            this.rbtS808_Amueblado_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Amueblado_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Amueblado_M.Name = "rbtS808_Amueblado_M";
             this.rbtS808_Amueblado_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Amueblado_M.TabIndex = 4;
@@ -4515,7 +3924,7 @@
             // 
             this.rbtS808_Amueblado_R.AutoSize = true;
             this.rbtS808_Amueblado_R.Location = new System.Drawing.Point(297, 14);
-            this.rbtS808_Amueblado_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Amueblado_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Amueblado_R.Name = "rbtS808_Amueblado_R";
             this.rbtS808_Amueblado_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Amueblado_R.TabIndex = 2;
@@ -4526,7 +3935,7 @@
             // 
             this.rbtS808_Amueblado_B.AutoSize = true;
             this.rbtS808_Amueblado_B.Location = new System.Drawing.Point(220, 14);
-            this.rbtS808_Amueblado_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Amueblado_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Amueblado_B.Name = "rbtS808_Amueblado_B";
             this.rbtS808_Amueblado_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Amueblado_B.TabIndex = 1;
@@ -4550,9 +3959,9 @@
             this.groupBox57.Controls.Add(this.rbtS808_Automovil_B);
             this.groupBox57.Controls.Add(this.label67);
             this.groupBox57.Location = new System.Drawing.Point(27, 287);
-            this.groupBox57.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox57.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox57.Name = "groupBox57";
-            this.groupBox57.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox57.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox57.Size = new System.Drawing.Size(440, 37);
             this.groupBox57.TabIndex = 14;
             this.groupBox57.TabStop = false;
@@ -4561,7 +3970,7 @@
             // 
             this.rbtS808_Automovil_M.AutoSize = true;
             this.rbtS808_Automovil_M.Location = new System.Drawing.Point(372, 14);
-            this.rbtS808_Automovil_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Automovil_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Automovil_M.Name = "rbtS808_Automovil_M";
             this.rbtS808_Automovil_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Automovil_M.TabIndex = 4;
@@ -4572,7 +3981,7 @@
             // 
             this.rbtS808_Automovil_R.AutoSize = true;
             this.rbtS808_Automovil_R.Location = new System.Drawing.Point(297, 12);
-            this.rbtS808_Automovil_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Automovil_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Automovil_R.Name = "rbtS808_Automovil_R";
             this.rbtS808_Automovil_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Automovil_R.TabIndex = 2;
@@ -4583,7 +3992,7 @@
             // 
             this.rbtS808_Automovil_B.AutoSize = true;
             this.rbtS808_Automovil_B.Location = new System.Drawing.Point(220, 14);
-            this.rbtS808_Automovil_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Automovil_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Automovil_B.Name = "rbtS808_Automovil_B";
             this.rbtS808_Automovil_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Automovil_B.TabIndex = 1;
@@ -4607,9 +4016,9 @@
             this.groupBox66.Controls.Add(this.rbtS808_Computadora_B);
             this.groupBox66.Controls.Add(this.label79);
             this.groupBox66.Location = new System.Drawing.Point(27, 332);
-            this.groupBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox66.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox66.Name = "groupBox66";
-            this.groupBox66.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox66.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox66.Size = new System.Drawing.Size(440, 37);
             this.groupBox66.TabIndex = 15;
             this.groupBox66.TabStop = false;
@@ -4618,7 +4027,7 @@
             // 
             this.rbtS808_Computadora_M.AutoSize = true;
             this.rbtS808_Computadora_M.Location = new System.Drawing.Point(372, 14);
-            this.rbtS808_Computadora_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Computadora_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Computadora_M.Name = "rbtS808_Computadora_M";
             this.rbtS808_Computadora_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Computadora_M.TabIndex = 4;
@@ -4629,7 +4038,7 @@
             // 
             this.rbtS808_Computadora_R.AutoSize = true;
             this.rbtS808_Computadora_R.Location = new System.Drawing.Point(297, 14);
-            this.rbtS808_Computadora_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Computadora_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Computadora_R.Name = "rbtS808_Computadora_R";
             this.rbtS808_Computadora_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Computadora_R.TabIndex = 2;
@@ -4640,7 +4049,7 @@
             // 
             this.rbtS808_Computadora_B.AutoSize = true;
             this.rbtS808_Computadora_B.Location = new System.Drawing.Point(220, 14);
-            this.rbtS808_Computadora_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Computadora_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Computadora_B.Name = "rbtS808_Computadora_B";
             this.rbtS808_Computadora_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Computadora_B.TabIndex = 1;
@@ -4664,9 +4073,9 @@
             this.groupBox58.Controls.Add(this.rbtS808_Motocicleta_B);
             this.groupBox58.Controls.Add(this.label68);
             this.groupBox58.Location = new System.Drawing.Point(27, 249);
-            this.groupBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox58.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox58.Name = "groupBox58";
-            this.groupBox58.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox58.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox58.Size = new System.Drawing.Size(440, 37);
             this.groupBox58.TabIndex = 13;
             this.groupBox58.TabStop = false;
@@ -4675,7 +4084,7 @@
             // 
             this.rbtS808_Motocleta_M.AutoSize = true;
             this.rbtS808_Motocleta_M.Location = new System.Drawing.Point(372, 15);
-            this.rbtS808_Motocleta_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Motocleta_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Motocleta_M.Name = "rbtS808_Motocleta_M";
             this.rbtS808_Motocleta_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Motocleta_M.TabIndex = 4;
@@ -4686,7 +4095,7 @@
             // 
             this.rbtS808_Motocleta_R.AutoSize = true;
             this.rbtS808_Motocleta_R.Location = new System.Drawing.Point(297, 14);
-            this.rbtS808_Motocleta_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Motocleta_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Motocleta_R.Name = "rbtS808_Motocleta_R";
             this.rbtS808_Motocleta_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Motocleta_R.TabIndex = 2;
@@ -4697,7 +4106,7 @@
             // 
             this.rbtS808_Motocicleta_B.AutoSize = true;
             this.rbtS808_Motocicleta_B.Location = new System.Drawing.Point(220, 15);
-            this.rbtS808_Motocicleta_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Motocicleta_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Motocicleta_B.Name = "rbtS808_Motocicleta_B";
             this.rbtS808_Motocicleta_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Motocicleta_B.TabIndex = 1;
@@ -4721,9 +4130,9 @@
             this.groupBox59.Controls.Add(this.rbtS808_DVD_B);
             this.groupBox59.Controls.Add(this.label69);
             this.groupBox59.Location = new System.Drawing.Point(27, 209);
-            this.groupBox59.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox59.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox59.Name = "groupBox59";
-            this.groupBox59.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox59.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox59.Size = new System.Drawing.Size(440, 37);
             this.groupBox59.TabIndex = 12;
             this.groupBox59.TabStop = false;
@@ -4732,7 +4141,7 @@
             // 
             this.rbtS808_DVD_M.AutoSize = true;
             this.rbtS808_DVD_M.Location = new System.Drawing.Point(372, 12);
-            this.rbtS808_DVD_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_DVD_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_DVD_M.Name = "rbtS808_DVD_M";
             this.rbtS808_DVD_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_DVD_M.TabIndex = 4;
@@ -4743,7 +4152,7 @@
             // 
             this.rbtS808_DVD_R.AutoSize = true;
             this.rbtS808_DVD_R.Location = new System.Drawing.Point(297, 12);
-            this.rbtS808_DVD_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_DVD_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_DVD_R.Name = "rbtS808_DVD_R";
             this.rbtS808_DVD_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_DVD_R.TabIndex = 2;
@@ -4754,7 +4163,7 @@
             // 
             this.rbtS808_DVD_B.AutoSize = true;
             this.rbtS808_DVD_B.Location = new System.Drawing.Point(220, 12);
-            this.rbtS808_DVD_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_DVD_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_DVD_B.Name = "rbtS808_DVD_B";
             this.rbtS808_DVD_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_DVD_B.TabIndex = 1;
@@ -4778,9 +4187,9 @@
             this.groupBox60.Controls.Add(this.rbtS808_Televisor_B);
             this.groupBox60.Controls.Add(this.label70);
             this.groupBox60.Location = new System.Drawing.Point(27, 170);
-            this.groupBox60.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox60.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox60.Name = "groupBox60";
-            this.groupBox60.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox60.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox60.Size = new System.Drawing.Size(440, 37);
             this.groupBox60.TabIndex = 11;
             this.groupBox60.TabStop = false;
@@ -4789,7 +4198,7 @@
             // 
             this.rbtS808_Televisor_M.AutoSize = true;
             this.rbtS808_Televisor_M.Location = new System.Drawing.Point(372, 12);
-            this.rbtS808_Televisor_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Televisor_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Televisor_M.Name = "rbtS808_Televisor_M";
             this.rbtS808_Televisor_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Televisor_M.TabIndex = 4;
@@ -4800,7 +4209,7 @@
             // 
             this.rbtS808_Televisor_R.AutoSize = true;
             this.rbtS808_Televisor_R.Location = new System.Drawing.Point(297, 11);
-            this.rbtS808_Televisor_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Televisor_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Televisor_R.Name = "rbtS808_Televisor_R";
             this.rbtS808_Televisor_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Televisor_R.TabIndex = 2;
@@ -4811,7 +4220,7 @@
             // 
             this.rbtS808_Televisor_B.AutoSize = true;
             this.rbtS808_Televisor_B.Location = new System.Drawing.Point(220, 11);
-            this.rbtS808_Televisor_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Televisor_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Televisor_B.Name = "rbtS808_Televisor_B";
             this.rbtS808_Televisor_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Televisor_B.TabIndex = 1;
@@ -4835,9 +4244,9 @@
             this.groupBox61.Controls.Add(this.rbtS808_EquipoSonido_B);
             this.groupBox61.Controls.Add(this.label71);
             this.groupBox61.Location = new System.Drawing.Point(27, 132);
-            this.groupBox61.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox61.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox61.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox61.Size = new System.Drawing.Size(440, 37);
             this.groupBox61.TabIndex = 10;
             this.groupBox61.TabStop = false;
@@ -4846,7 +4255,7 @@
             // 
             this.rbtS808_EquipoSonido_M.AutoSize = true;
             this.rbtS808_EquipoSonido_M.Location = new System.Drawing.Point(372, 11);
-            this.rbtS808_EquipoSonido_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_EquipoSonido_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_EquipoSonido_M.Name = "rbtS808_EquipoSonido_M";
             this.rbtS808_EquipoSonido_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_EquipoSonido_M.TabIndex = 4;
@@ -4857,7 +4266,7 @@
             // 
             this.rbtS808_EquipoSonido_R.AutoSize = true;
             this.rbtS808_EquipoSonido_R.Location = new System.Drawing.Point(297, 11);
-            this.rbtS808_EquipoSonido_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_EquipoSonido_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_EquipoSonido_R.Name = "rbtS808_EquipoSonido_R";
             this.rbtS808_EquipoSonido_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_EquipoSonido_R.TabIndex = 2;
@@ -4868,7 +4277,7 @@
             // 
             this.rbtS808_EquipoSonido_B.AutoSize = true;
             this.rbtS808_EquipoSonido_B.Location = new System.Drawing.Point(220, 11);
-            this.rbtS808_EquipoSonido_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_EquipoSonido_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_EquipoSonido_B.Name = "rbtS808_EquipoSonido_B";
             this.rbtS808_EquipoSonido_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_EquipoSonido_B.TabIndex = 1;
@@ -4892,9 +4301,9 @@
             this.gbxS808_Refrigerador.Controls.Add(this.rbtS808_Refrigerador_B);
             this.gbxS808_Refrigerador.Controls.Add(this.label72);
             this.gbxS808_Refrigerador.Location = new System.Drawing.Point(27, 92);
-            this.gbxS808_Refrigerador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxS808_Refrigerador.Margin = new System.Windows.Forms.Padding(4);
             this.gbxS808_Refrigerador.Name = "gbxS808_Refrigerador";
-            this.gbxS808_Refrigerador.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxS808_Refrigerador.Padding = new System.Windows.Forms.Padding(4);
             this.gbxS808_Refrigerador.Size = new System.Drawing.Size(440, 37);
             this.gbxS808_Refrigerador.TabIndex = 9;
             this.gbxS808_Refrigerador.TabStop = false;
@@ -4903,7 +4312,7 @@
             // 
             this.rbtS808_Refrigerador_M.AutoSize = true;
             this.rbtS808_Refrigerador_M.Location = new System.Drawing.Point(372, 12);
-            this.rbtS808_Refrigerador_M.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Refrigerador_M.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Refrigerador_M.Name = "rbtS808_Refrigerador_M";
             this.rbtS808_Refrigerador_M.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Refrigerador_M.TabIndex = 3;
@@ -4914,7 +4323,7 @@
             // 
             this.rbtS808_Refrigerador_R.AutoSize = true;
             this.rbtS808_Refrigerador_R.Location = new System.Drawing.Point(297, 12);
-            this.rbtS808_Refrigerador_R.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Refrigerador_R.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Refrigerador_R.Name = "rbtS808_Refrigerador_R";
             this.rbtS808_Refrigerador_R.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Refrigerador_R.TabIndex = 2;
@@ -4925,7 +4334,7 @@
             // 
             this.rbtS808_Refrigerador_B.AutoSize = true;
             this.rbtS808_Refrigerador_B.Location = new System.Drawing.Point(220, 12);
-            this.rbtS808_Refrigerador_B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS808_Refrigerador_B.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS808_Refrigerador_B.Name = "rbtS808_Refrigerador_B";
             this.rbtS808_Refrigerador_B.Size = new System.Drawing.Size(17, 16);
             this.rbtS808_Refrigerador_B.TabIndex = 1;
@@ -4948,9 +4357,9 @@
             this.groupBox63.Controls.Add(this.label75);
             this.groupBox63.Controls.Add(this.label76);
             this.groupBox63.Location = new System.Drawing.Point(27, 53);
-            this.groupBox63.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox63.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox63.Name = "groupBox63";
-            this.groupBox63.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox63.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox63.Size = new System.Drawing.Size(440, 37);
             this.groupBox63.TabIndex = 8;
             this.groupBox63.TabStop = false;
@@ -4990,9 +4399,9 @@
             this.groupBox55.Controls.Add(this.cklS8_S807);
             this.groupBox55.Controls.Add(this.label66);
             this.groupBox55.Location = new System.Drawing.Point(432, 303);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox55.Size = new System.Drawing.Size(400, 171);
             this.groupBox55.TabIndex = 8;
             this.groupBox55.TabStop = false;
@@ -5007,7 +4416,7 @@
             "Internet\t\t\t",
             "NS/NR\t\t\t"});
             this.cklS8_S807.Location = new System.Drawing.Point(25, 50);
-            this.cklS8_S807.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS8_S807.Margin = new System.Windows.Forms.Padding(4);
             this.cklS8_S807.Name = "cklS8_S807";
             this.cklS8_S807.Size = new System.Drawing.Size(332, 89);
             this.cklS8_S807.TabIndex = 9;
@@ -5029,9 +4438,9 @@
             this.groupBox54.Controls.Add(this.cbxS8_BasuraHogar);
             this.groupBox54.Controls.Add(this.label65);
             this.groupBox54.Location = new System.Drawing.Point(429, 150);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox54.Size = new System.Drawing.Size(400, 151);
             this.groupBox54.TabIndex = 7;
             this.groupBox54.TabStop = false;
@@ -5040,7 +4449,7 @@
             // 
             this.txtS8_OtroTipoBasura.Enabled = false;
             this.txtS8_OtroTipoBasura.Location = new System.Drawing.Point(27, 84);
-            this.txtS8_OtroTipoBasura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtroTipoBasura.Margin = new System.Windows.Forms.Padding(4);
             this.txtS8_OtroTipoBasura.Multiline = true;
             this.txtS8_OtroTipoBasura.Name = "txtS8_OtroTipoBasura";
             this.txtS8_OtroTipoBasura.Size = new System.Drawing.Size(332, 38);
@@ -5058,7 +4467,7 @@
             "Otro (especifique)",
             "NS/NR"});
             this.cbxS8_BasuraHogar.Location = new System.Drawing.Point(25, 49);
-            this.cbxS8_BasuraHogar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_BasuraHogar.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS8_BasuraHogar.Name = "cbxS8_BasuraHogar";
             this.cbxS8_BasuraHogar.Size = new System.Drawing.Size(332, 24);
             this.cbxS8_BasuraHogar.TabIndex = 2;
@@ -5080,9 +4489,9 @@
             this.groupBox53.Controls.Add(this.cbxS8_Sanitario);
             this.groupBox53.Controls.Add(this.label64);
             this.groupBox53.Location = new System.Drawing.Point(428, 15);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox53.Size = new System.Drawing.Size(400, 135);
             this.groupBox53.TabIndex = 6;
             this.groupBox53.TabStop = false;
@@ -5091,7 +4500,7 @@
             // 
             this.txtS8_OtroTipoSanitario.Enabled = false;
             this.txtS8_OtroTipoSanitario.Location = new System.Drawing.Point(28, 63);
-            this.txtS8_OtroTipoSanitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtroTipoSanitario.Margin = new System.Windows.Forms.Padding(4);
             this.txtS8_OtroTipoSanitario.Multiline = true;
             this.txtS8_OtroTipoSanitario.Name = "txtS8_OtroTipoSanitario";
             this.txtS8_OtroTipoSanitario.Size = new System.Drawing.Size(332, 48);
@@ -5108,7 +4517,7 @@
             "Otro (especificar)",
             "NS/NR"});
             this.cbxS8_Sanitario.Location = new System.Drawing.Point(27, 31);
-            this.cbxS8_Sanitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_Sanitario.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS8_Sanitario.Name = "cbxS8_Sanitario";
             this.cbxS8_Sanitario.Size = new System.Drawing.Size(332, 24);
             this.cbxS8_Sanitario.TabIndex = 2;
@@ -5130,9 +4539,9 @@
             this.groupBox52.Controls.Add(this.cbxS8_EnergiaCocina);
             this.groupBox52.Controls.Add(this.label63);
             this.groupBox52.Location = new System.Drawing.Point(11, 370);
-            this.groupBox52.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox52.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox52.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox52.Size = new System.Drawing.Size(400, 149);
             this.groupBox52.TabIndex = 5;
             this.groupBox52.TabStop = false;
@@ -5141,7 +4550,7 @@
             // 
             this.txtS8_OtraEnergiaCocina.Enabled = false;
             this.txtS8_OtraEnergiaCocina.Location = new System.Drawing.Point(25, 80);
-            this.txtS8_OtraEnergiaCocina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtraEnergiaCocina.Margin = new System.Windows.Forms.Padding(4);
             this.txtS8_OtraEnergiaCocina.Multiline = true;
             this.txtS8_OtraEnergiaCocina.Name = "txtS8_OtraEnergiaCocina";
             this.txtS8_OtraEnergiaCocina.Size = new System.Drawing.Size(332, 48);
@@ -5159,7 +4568,7 @@
             "Otro (especifique)",
             "NS/NR"});
             this.cbxS8_EnergiaCocina.Location = new System.Drawing.Point(25, 47);
-            this.cbxS8_EnergiaCocina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_EnergiaCocina.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS8_EnergiaCocina.Name = "cbxS8_EnergiaCocina";
             this.cbxS8_EnergiaCocina.Size = new System.Drawing.Size(332, 24);
             this.cbxS8_EnergiaCocina.TabIndex = 2;
@@ -5182,9 +4591,9 @@
             this.groupBox51.Controls.Add(this.cbxS8_EnergiaElectrica);
             this.groupBox51.Controls.Add(this.label62);
             this.groupBox51.Location = new System.Drawing.Point(11, 240);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox51.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox51.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox51.Size = new System.Drawing.Size(400, 129);
             this.groupBox51.TabIndex = 4;
             this.groupBox51.TabStop = false;
@@ -5193,7 +4602,7 @@
             // 
             this.txtS8_OtraEnergiaElectrica.Enabled = false;
             this.txtS8_OtraEnergiaElectrica.Location = new System.Drawing.Point(25, 66);
-            this.txtS8_OtraEnergiaElectrica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtraEnergiaElectrica.Margin = new System.Windows.Forms.Padding(4);
             this.txtS8_OtraEnergiaElectrica.Multiline = true;
             this.txtS8_OtraEnergiaElectrica.Name = "txtS8_OtraEnergiaElectrica";
             this.txtS8_OtraEnergiaElectrica.Size = new System.Drawing.Size(332, 48);
@@ -5211,7 +4620,7 @@
             "Otro (especifique)",
             "NS/NR"});
             this.cbxS8_EnergiaElectrica.Location = new System.Drawing.Point(25, 36);
-            this.cbxS8_EnergiaElectrica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_EnergiaElectrica.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS8_EnergiaElectrica.Name = "cbxS8_EnergiaElectrica";
             this.cbxS8_EnergiaElectrica.Size = new System.Drawing.Size(332, 24);
             this.cbxS8_EnergiaElectrica.TabIndex = 2;
@@ -5233,9 +4642,9 @@
             this.groupBox49.Controls.Add(this.cbxS8_FuenteAgua);
             this.groupBox49.Controls.Add(this.label61);
             this.groupBox49.Location = new System.Drawing.Point(8, 101);
-            this.groupBox49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox49.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox49.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox49.Size = new System.Drawing.Size(400, 138);
             this.groupBox49.TabIndex = 3;
             this.groupBox49.TabStop = false;
@@ -5244,7 +4653,7 @@
             // 
             this.txtS8_OtraFuente.Enabled = false;
             this.txtS8_OtraFuente.Location = new System.Drawing.Point(28, 65);
-            this.txtS8_OtraFuente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS8_OtraFuente.Margin = new System.Windows.Forms.Padding(4);
             this.txtS8_OtraFuente.Multiline = true;
             this.txtS8_OtraFuente.Name = "txtS8_OtraFuente";
             this.txtS8_OtraFuente.Size = new System.Drawing.Size(332, 48);
@@ -5264,7 +4673,7 @@
             "Otro (especifique)",
             "NS/NR"});
             this.cbxS8_FuenteAgua.Location = new System.Drawing.Point(28, 32);
-            this.cbxS8_FuenteAgua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_FuenteAgua.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS8_FuenteAgua.Name = "cbxS8_FuenteAgua";
             this.cbxS8_FuenteAgua.Size = new System.Drawing.Size(332, 24);
             this.cbxS8_FuenteAgua.TabIndex = 2;
@@ -5285,9 +4694,9 @@
             this.groupBox48.Controls.Add(this.cbxS8_AccesoAgua);
             this.groupBox48.Controls.Add(this.label60);
             this.groupBox48.Location = new System.Drawing.Point(8, 16);
-            this.groupBox48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox48.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox48.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox48.Size = new System.Drawing.Size(400, 84);
             this.groupBox48.TabIndex = 0;
             this.groupBox48.TabStop = false;
@@ -5301,7 +4710,7 @@
             "Quincenal o más",
             "NS/NR"});
             this.cbxS8_AccesoAgua.Location = new System.Drawing.Point(28, 39);
-            this.cbxS8_AccesoAgua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS8_AccesoAgua.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS8_AccesoAgua.Name = "cbxS8_AccesoAgua";
             this.cbxS8_AccesoAgua.Size = new System.Drawing.Size(332, 24);
             this.cbxS8_AccesoAgua.TabIndex = 2;
@@ -5321,9 +4730,9 @@
             this.tbpS9.Controls.Add(this.pbS9_Siguiente);
             this.tbpS9.Controls.Add(this.groupBox67);
             this.tbpS9.Location = new System.Drawing.Point(4, 25);
-            this.tbpS9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS9.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS9.Name = "tbpS9";
-            this.tbpS9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS9.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS9.Size = new System.Drawing.Size(1779, 679);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
@@ -5333,7 +4742,7 @@
             // 
             this.pbS9_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS9_Siguiente.Location = new System.Drawing.Point(773, 598);
-            this.pbS9_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS9_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS9_Siguiente.Name = "pbS9_Siguiente";
             this.pbS9_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS9_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -5349,9 +4758,9 @@
             this.groupBox67.Controls.Add(this.groupBox84);
             this.groupBox67.Controls.Add(this.groupBox85);
             this.groupBox67.Location = new System.Drawing.Point(11, 10);
-            this.groupBox67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox67.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox67.Name = "groupBox67";
-            this.groupBox67.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox67.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox67.Size = new System.Drawing.Size(1771, 581);
             this.groupBox67.TabIndex = 3;
             this.groupBox67.TabStop = false;
@@ -5368,9 +4777,9 @@
             this.groupBox80.Controls.Add(this.cbxS9_OtraPropiedad);
             this.groupBox80.Controls.Add(this.label94);
             this.groupBox80.Location = new System.Drawing.Point(433, 170);
-            this.groupBox80.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox80.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox80.Name = "groupBox80";
-            this.groupBox80.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox80.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox80.Size = new System.Drawing.Size(400, 208);
             this.groupBox80.TabIndex = 7;
             this.groupBox80.TabStop = false;
@@ -5389,7 +4798,7 @@
             // 
             this.txtS9_OtraPropiedadC.Enabled = false;
             this.txtS9_OtraPropiedadC.Location = new System.Drawing.Point(60, 155);
-            this.txtS9_OtraPropiedadC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtraPropiedadC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_OtraPropiedadC.Multiline = true;
             this.txtS9_OtraPropiedadC.Name = "txtS9_OtraPropiedadC";
             this.txtS9_OtraPropiedadC.Size = new System.Drawing.Size(299, 24);
@@ -5409,7 +4818,7 @@
             // 
             this.txtS9_OtraPropiedadB.Enabled = false;
             this.txtS9_OtraPropiedadB.Location = new System.Drawing.Point(60, 121);
-            this.txtS9_OtraPropiedadB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtraPropiedadB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_OtraPropiedadB.Multiline = true;
             this.txtS9_OtraPropiedadB.Name = "txtS9_OtraPropiedadB";
             this.txtS9_OtraPropiedadB.Size = new System.Drawing.Size(299, 24);
@@ -5429,7 +4838,7 @@
             // 
             this.txtS9_OtraPropiedadA.Enabled = false;
             this.txtS9_OtraPropiedadA.Location = new System.Drawing.Point(60, 84);
-            this.txtS9_OtraPropiedadA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtraPropiedadA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_OtraPropiedadA.Multiline = true;
             this.txtS9_OtraPropiedadA.Name = "txtS9_OtraPropiedadA";
             this.txtS9_OtraPropiedadA.Size = new System.Drawing.Size(299, 24);
@@ -5443,7 +4852,7 @@
             "No",
             "NS/NR"});
             this.cbxS9_OtraPropiedad.Location = new System.Drawing.Point(27, 50);
-            this.cbxS9_OtraPropiedad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_OtraPropiedad.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS9_OtraPropiedad.Name = "cbxS9_OtraPropiedad";
             this.cbxS9_OtraPropiedad.Size = new System.Drawing.Size(332, 24);
             this.cbxS9_OtraPropiedad.TabIndex = 2;
@@ -5470,9 +4879,9 @@
             this.groupBox81.Controls.Add(this.txtS9_PropietarioTerreno);
             this.groupBox81.Controls.Add(this.label95);
             this.groupBox81.Location = new System.Drawing.Point(433, 21);
-            this.groupBox81.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox81.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox81.Name = "groupBox81";
-            this.groupBox81.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox81.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox81.Size = new System.Drawing.Size(400, 148);
             this.groupBox81.TabIndex = 6;
             this.groupBox81.TabStop = false;
@@ -5481,7 +4890,7 @@
             // 
             this.ckbS9_NSNR.AutoSize = true;
             this.ckbS9_NSNR.Location = new System.Drawing.Point(27, 113);
-            this.ckbS9_NSNR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbS9_NSNR.Margin = new System.Windows.Forms.Padding(4);
             this.ckbS9_NSNR.Name = "ckbS9_NSNR";
             this.ckbS9_NSNR.Size = new System.Drawing.Size(69, 21);
             this.ckbS9_NSNR.TabIndex = 9;
@@ -5520,7 +4929,7 @@
             // txtS9_TelefonoPropietarioTerreno
             // 
             this.txtS9_TelefonoPropietarioTerreno.Location = new System.Drawing.Point(180, 80);
-            this.txtS9_TelefonoPropietarioTerreno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_TelefonoPropietarioTerreno.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_TelefonoPropietarioTerreno.Multiline = true;
             this.txtS9_TelefonoPropietarioTerreno.Name = "txtS9_TelefonoPropietarioTerreno";
             this.txtS9_TelefonoPropietarioTerreno.Size = new System.Drawing.Size(175, 30);
@@ -5529,7 +4938,7 @@
             // txtS9_PropietarioTerreno
             // 
             this.txtS9_PropietarioTerreno.Location = new System.Drawing.Point(111, 47);
-            this.txtS9_PropietarioTerreno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_PropietarioTerreno.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_PropietarioTerreno.Multiline = true;
             this.txtS9_PropietarioTerreno.Name = "txtS9_PropietarioTerreno";
             this.txtS9_PropietarioTerreno.Size = new System.Drawing.Size(244, 24);
@@ -5551,9 +4960,9 @@
             this.groupBox83.Controls.Add(this.cbxS9_TipoPropietario);
             this.groupBox83.Controls.Add(this.label97);
             this.groupBox83.Location = new System.Drawing.Point(12, 228);
-            this.groupBox83.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox83.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox83.Name = "groupBox83";
-            this.groupBox83.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox83.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox83.Size = new System.Drawing.Size(400, 150);
             this.groupBox83.TabIndex = 4;
             this.groupBox83.TabStop = false;
@@ -5562,7 +4971,7 @@
             // 
             this.txtS9_OtroTipoPropietario.Enabled = false;
             this.txtS9_OtroTipoPropietario.Location = new System.Drawing.Point(33, 91);
-            this.txtS9_OtroTipoPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtroTipoPropietario.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_OtroTipoPropietario.Multiline = true;
             this.txtS9_OtroTipoPropietario.Name = "txtS9_OtroTipoPropietario";
             this.txtS9_OtroTipoPropietario.Size = new System.Drawing.Size(332, 48);
@@ -5579,7 +4988,7 @@
             "Otro (especifique)",
             "NS/NR"});
             this.cbxS9_TipoPropietario.Location = new System.Drawing.Point(31, 55);
-            this.cbxS9_TipoPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_TipoPropietario.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS9_TipoPropietario.Name = "cbxS9_TipoPropietario";
             this.cbxS9_TipoPropietario.Size = new System.Drawing.Size(332, 24);
             this.cbxS9_TipoPropietario.TabIndex = 2;
@@ -5601,9 +5010,9 @@
             this.groupBox84.Controls.Add(this.cbxS9_Propietario);
             this.groupBox84.Controls.Add(this.label98);
             this.groupBox84.Location = new System.Drawing.Point(15, 96);
-            this.groupBox84.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox84.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox84.Name = "groupBox84";
-            this.groupBox84.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox84.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox84.Size = new System.Drawing.Size(400, 129);
             this.groupBox84.TabIndex = 3;
             this.groupBox84.TabStop = false;
@@ -5612,7 +5021,7 @@
             // 
             this.txtS9_OtroPropietario.Enabled = false;
             this.txtS9_OtroPropietario.Location = new System.Drawing.Point(28, 68);
-            this.txtS9_OtroPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS9_OtroPropietario.Margin = new System.Windows.Forms.Padding(4);
             this.txtS9_OtroPropietario.Multiline = true;
             this.txtS9_OtroPropietario.Name = "txtS9_OtroPropietario";
             this.txtS9_OtroPropietario.Size = new System.Drawing.Size(332, 48);
@@ -5628,7 +5037,7 @@
             "Otra (especificar)",
             "NS/NR"});
             this.cbxS9_Propietario.Location = new System.Drawing.Point(27, 33);
-            this.cbxS9_Propietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_Propietario.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS9_Propietario.Name = "cbxS9_Propietario";
             this.cbxS9_Propietario.Size = new System.Drawing.Size(332, 24);
             this.cbxS9_Propietario.TabIndex = 2;
@@ -5649,9 +5058,9 @@
             this.groupBox85.Controls.Add(this.cbxS9_1_Propio);
             this.groupBox85.Controls.Add(this.label99);
             this.groupBox85.Location = new System.Drawing.Point(15, 22);
-            this.groupBox85.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox85.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox85.Name = "groupBox85";
-            this.groupBox85.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox85.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox85.Size = new System.Drawing.Size(400, 73);
             this.groupBox85.TabIndex = 0;
             this.groupBox85.TabStop = false;
@@ -5664,7 +5073,7 @@
             "No",
             "NS/NR"});
             this.cbxS9_1_Propio.Location = new System.Drawing.Point(27, 34);
-            this.cbxS9_1_Propio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS9_1_Propio.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS9_1_Propio.Name = "cbxS9_1_Propio";
             this.cbxS9_1_Propio.Size = new System.Drawing.Size(332, 24);
             this.cbxS9_1_Propio.TabIndex = 2;
@@ -5685,9 +5094,9 @@
             this.tbpS10.Controls.Add(this.pbS10_Siguiente);
             this.tbpS10.Controls.Add(this.groupBox68);
             this.tbpS10.Location = new System.Drawing.Point(4, 25);
-            this.tbpS10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS10.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS10.Name = "tbpS10";
-            this.tbpS10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS10.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS10.Size = new System.Drawing.Size(1779, 679);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
@@ -5697,7 +5106,7 @@
             // 
             this.pbS10_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS10_Siguiente.Location = new System.Drawing.Point(1676, 601);
-            this.pbS10_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS10_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS10_Siguiente.Name = "pbS10_Siguiente";
             this.pbS10_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS10_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -5719,9 +5128,9 @@
             this.groupBox68.Controls.Add(this.groupBox72);
             this.groupBox68.Controls.Add(this.groupBox97);
             this.groupBox68.Location = new System.Drawing.Point(11, 14);
-            this.groupBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox68.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox68.Name = "groupBox68";
-            this.groupBox68.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox68.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox68.Size = new System.Drawing.Size(1771, 606);
             this.groupBox68.TabIndex = 6;
             this.groupBox68.TabStop = false;
@@ -5738,9 +5147,9 @@
             this.groupBox90.Controls.Add(this.cbxS10_ProyectosVecinos);
             this.groupBox90.Controls.Add(this.label124);
             this.groupBox90.Location = new System.Drawing.Point(1337, 399);
-            this.groupBox90.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox90.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox90.Name = "groupBox90";
-            this.groupBox90.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox90.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox90.Size = new System.Drawing.Size(400, 191);
             this.groupBox90.TabIndex = 14;
             this.groupBox90.TabStop = false;
@@ -5759,7 +5168,7 @@
             // 
             this.txtS10_ProyectosVecinosC.Enabled = false;
             this.txtS10_ProyectosVecinosC.Location = new System.Drawing.Point(68, 155);
-            this.txtS10_ProyectosVecinosC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ProyectosVecinosC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ProyectosVecinosC.Multiline = true;
             this.txtS10_ProyectosVecinosC.Name = "txtS10_ProyectosVecinosC";
             this.txtS10_ProyectosVecinosC.Size = new System.Drawing.Size(296, 24);
@@ -5779,7 +5188,7 @@
             // 
             this.txtS10_ProyectosVecinosB.Enabled = false;
             this.txtS10_ProyectosVecinosB.Location = new System.Drawing.Point(68, 126);
-            this.txtS10_ProyectosVecinosB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ProyectosVecinosB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ProyectosVecinosB.Multiline = true;
             this.txtS10_ProyectosVecinosB.Name = "txtS10_ProyectosVecinosB";
             this.txtS10_ProyectosVecinosB.Size = new System.Drawing.Size(296, 24);
@@ -5799,7 +5208,7 @@
             // 
             this.txtS10_ProyectosVecinosA.Enabled = false;
             this.txtS10_ProyectosVecinosA.Location = new System.Drawing.Point(68, 96);
-            this.txtS10_ProyectosVecinosA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ProyectosVecinosA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ProyectosVecinosA.Multiline = true;
             this.txtS10_ProyectosVecinosA.Name = "txtS10_ProyectosVecinosA";
             this.txtS10_ProyectosVecinosA.Size = new System.Drawing.Size(296, 24);
@@ -5813,7 +5222,7 @@
             "No estaría dispuesto",
             "NS/NR"});
             this.cbxS10_ProyectosVecinos.Location = new System.Drawing.Point(32, 65);
-            this.cbxS10_ProyectosVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_ProyectosVecinos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_ProyectosVecinos.Name = "cbxS10_ProyectosVecinos";
             this.cbxS10_ProyectosVecinos.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_ProyectosVecinos.TabIndex = 2;
@@ -5842,9 +5251,9 @@
             this.groupBox89.Controls.Add(this.cbxS10_NecesidadCom);
             this.groupBox89.Controls.Add(this.label120);
             this.groupBox89.Location = new System.Drawing.Point(1337, 208);
-            this.groupBox89.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox89.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox89.Name = "groupBox89";
-            this.groupBox89.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox89.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox89.Size = new System.Drawing.Size(400, 190);
             this.groupBox89.TabIndex = 13;
             this.groupBox89.TabStop = false;
@@ -5863,7 +5272,7 @@
             // 
             this.txtS10_NecesidadComC.Enabled = false;
             this.txtS10_NecesidadComC.Location = new System.Drawing.Point(59, 154);
-            this.txtS10_NecesidadComC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadComC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_NecesidadComC.Multiline = true;
             this.txtS10_NecesidadComC.Name = "txtS10_NecesidadComC";
             this.txtS10_NecesidadComC.Size = new System.Drawing.Size(295, 24);
@@ -5883,7 +5292,7 @@
             // 
             this.txtS10_NecesidadComB.Enabled = false;
             this.txtS10_NecesidadComB.Location = new System.Drawing.Point(59, 123);
-            this.txtS10_NecesidadComB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadComB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_NecesidadComB.Multiline = true;
             this.txtS10_NecesidadComB.Name = "txtS10_NecesidadComB";
             this.txtS10_NecesidadComB.Size = new System.Drawing.Size(295, 24);
@@ -5903,7 +5312,7 @@
             // 
             this.txtS10_NecesidadComA.Enabled = false;
             this.txtS10_NecesidadComA.Location = new System.Drawing.Point(59, 94);
-            this.txtS10_NecesidadComA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadComA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_NecesidadComA.Multiline = true;
             this.txtS10_NecesidadComA.Name = "txtS10_NecesidadComA";
             this.txtS10_NecesidadComA.Size = new System.Drawing.Size(295, 24);
@@ -5917,7 +5326,7 @@
             "No existen problemas en mi comunidad",
             "NS/NR"});
             this.cbxS10_NecesidadCom.Location = new System.Drawing.Point(21, 63);
-            this.cbxS10_NecesidadCom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_NecesidadCom.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_NecesidadCom.Name = "cbxS10_NecesidadCom";
             this.cbxS10_NecesidadCom.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_NecesidadCom.TabIndex = 2;
@@ -5945,9 +5354,9 @@
             this.groupBox82.Controls.Add(this.cbxS10_Necesidad);
             this.groupBox82.Controls.Add(this.label116);
             this.groupBox82.Location = new System.Drawing.Point(1337, 18);
-            this.groupBox82.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox82.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox82.Name = "groupBox82";
-            this.groupBox82.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox82.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox82.Size = new System.Drawing.Size(400, 188);
             this.groupBox82.TabIndex = 12;
             this.groupBox82.TabStop = false;
@@ -5966,7 +5375,7 @@
             // 
             this.txtS10_NecesidadC.Enabled = false;
             this.txtS10_NecesidadC.Location = new System.Drawing.Point(55, 153);
-            this.txtS10_NecesidadC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_NecesidadC.Multiline = true;
             this.txtS10_NecesidadC.Name = "txtS10_NecesidadC";
             this.txtS10_NecesidadC.Size = new System.Drawing.Size(300, 24);
@@ -5986,7 +5395,7 @@
             // 
             this.txtS10_NecesidadB.Enabled = false;
             this.txtS10_NecesidadB.Location = new System.Drawing.Point(55, 123);
-            this.txtS10_NecesidadB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_NecesidadB.Multiline = true;
             this.txtS10_NecesidadB.Name = "txtS10_NecesidadB";
             this.txtS10_NecesidadB.Size = new System.Drawing.Size(300, 24);
@@ -6006,7 +5415,7 @@
             // 
             this.txtS10_NecesidadA.Enabled = false;
             this.txtS10_NecesidadA.Location = new System.Drawing.Point(55, 94);
-            this.txtS10_NecesidadA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_NecesidadA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_NecesidadA.Multiline = true;
             this.txtS10_NecesidadA.Name = "txtS10_NecesidadA";
             this.txtS10_NecesidadA.Size = new System.Drawing.Size(300, 24);
@@ -6020,7 +5429,7 @@
             "No existen problemas en mi familia",
             "NS/NR"});
             this.cbxS10_Necesidad.Location = new System.Drawing.Point(23, 63);
-            this.cbxS10_Necesidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_Necesidad.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_Necesidad.Name = "cbxS10_Necesidad";
             this.cbxS10_Necesidad.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_Necesidad.TabIndex = 2;
@@ -6053,9 +5462,9 @@
             this.gbxS1008_Com.Controls.Add(this.groupBox86);
             this.gbxS1008_Com.Controls.Add(this.groupBox87);
             this.gbxS1008_Com.Location = new System.Drawing.Point(841, 20);
-            this.gbxS1008_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxS1008_Com.Margin = new System.Windows.Forms.Padding(4);
             this.gbxS1008_Com.Name = "gbxS1008_Com";
-            this.gbxS1008_Com.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxS1008_Com.Padding = new System.Windows.Forms.Padding(4);
             this.gbxS1008_Com.Size = new System.Drawing.Size(483, 501);
             this.gbxS1008_Com.TabIndex = 11;
             this.gbxS1008_Com.TabStop = false;
@@ -6068,9 +5477,9 @@
             this.groupBox91.Controls.Add(this.rbtS1008_Ejercito_S);
             this.groupBox91.Controls.Add(this.label125);
             this.groupBox91.Location = new System.Drawing.Point(23, 297);
-            this.groupBox91.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox91.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox91.Name = "groupBox91";
-            this.groupBox91.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox91.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox91.Size = new System.Drawing.Size(440, 37);
             this.groupBox91.TabIndex = 16;
             this.groupBox91.TabStop = false;
@@ -6079,7 +5488,7 @@
             // 
             this.rbtS1008_Ejercito_NS.AutoSize = true;
             this.rbtS1008_Ejercito_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Ejercito_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Ejercito_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Ejercito_NS.Name = "rbtS1008_Ejercito_NS";
             this.rbtS1008_Ejercito_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Ejercito_NS.TabIndex = 4;
@@ -6090,7 +5499,7 @@
             // 
             this.rbtS1008_Ejercito_N.AutoSize = true;
             this.rbtS1008_Ejercito_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Ejercito_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Ejercito_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Ejercito_N.Name = "rbtS1008_Ejercito_N";
             this.rbtS1008_Ejercito_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Ejercito_N.TabIndex = 3;
@@ -6101,7 +5510,7 @@
             // 
             this.rbtS1008_Ejercito_I.AutoSize = true;
             this.rbtS1008_Ejercito_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Ejercito_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Ejercito_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Ejercito_I.Name = "rbtS1008_Ejercito_I";
             this.rbtS1008_Ejercito_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Ejercito_I.TabIndex = 2;
@@ -6112,7 +5521,7 @@
             // 
             this.rbtS1008_Ejercito_S.AutoSize = true;
             this.rbtS1008_Ejercito_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Ejercito_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Ejercito_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Ejercito_S.Name = "rbtS1008_Ejercito_S";
             this.rbtS1008_Ejercito_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Ejercito_S.TabIndex = 1;
@@ -6137,9 +5546,9 @@
             this.groupBox88.Controls.Add(this.rbtS1008_Vecinos_S);
             this.groupBox88.Controls.Add(this.label113);
             this.groupBox88.Location = new System.Drawing.Point(23, 105);
-            this.groupBox88.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox88.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox88.Name = "groupBox88";
-            this.groupBox88.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox88.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox88.Size = new System.Drawing.Size(440, 37);
             this.groupBox88.TabIndex = 10;
             this.groupBox88.TabStop = false;
@@ -6148,7 +5557,7 @@
             // 
             this.rbtS1008_Vecinos_NS.AutoSize = true;
             this.rbtS1008_Vecinos_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Vecinos_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Vecinos_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Vecinos_NS.Name = "rbtS1008_Vecinos_NS";
             this.rbtS1008_Vecinos_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Vecinos_NS.TabIndex = 4;
@@ -6159,7 +5568,7 @@
             // 
             this.rbtS1008_Vecinos_N.AutoSize = true;
             this.rbtS1008_Vecinos_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Vecinos_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Vecinos_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Vecinos_N.Name = "rbtS1008_Vecinos_N";
             this.rbtS1008_Vecinos_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Vecinos_N.TabIndex = 3;
@@ -6170,7 +5579,7 @@
             // 
             this.rbtS1008_Vecinos_I.AutoSize = true;
             this.rbtS1008_Vecinos_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Vecinos_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Vecinos_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Vecinos_I.Name = "rbtS1008_Vecinos_I";
             this.rbtS1008_Vecinos_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Vecinos_I.TabIndex = 2;
@@ -6181,7 +5590,7 @@
             // 
             this.rbtS1008_Vecinos_S.AutoSize = true;
             this.rbtS1008_Vecinos_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Vecinos_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Vecinos_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Vecinos_S.Name = "rbtS1008_Vecinos_S";
             this.rbtS1008_Vecinos_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Vecinos_S.TabIndex = 1;
@@ -6206,9 +5615,9 @@
             this.groupBox92.Controls.Add(this.rbtS1008_Iglesia_S);
             this.groupBox92.Controls.Add(this.label126);
             this.groupBox92.Location = new System.Drawing.Point(21, 450);
-            this.groupBox92.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox92.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox92.Name = "groupBox92";
-            this.groupBox92.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox92.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox92.Size = new System.Drawing.Size(440, 37);
             this.groupBox92.TabIndex = 20;
             this.groupBox92.TabStop = false;
@@ -6217,7 +5626,7 @@
             // 
             this.rbtS1008_Iglesia_NS.AutoSize = true;
             this.rbtS1008_Iglesia_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Iglesia_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Iglesia_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Iglesia_NS.Name = "rbtS1008_Iglesia_NS";
             this.rbtS1008_Iglesia_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Iglesia_NS.TabIndex = 4;
@@ -6228,7 +5637,7 @@
             // 
             this.rbtS1008_Iglesia_N.AutoSize = true;
             this.rbtS1008_Iglesia_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Iglesia_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Iglesia_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Iglesia_N.Name = "rbtS1008_Iglesia_N";
             this.rbtS1008_Iglesia_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Iglesia_N.TabIndex = 3;
@@ -6239,7 +5648,7 @@
             // 
             this.rbtS1008_Iglesia_I.AutoSize = true;
             this.rbtS1008_Iglesia_I.Location = new System.Drawing.Point(280, 16);
-            this.rbtS1008_Iglesia_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Iglesia_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Iglesia_I.Name = "rbtS1008_Iglesia_I";
             this.rbtS1008_Iglesia_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Iglesia_I.TabIndex = 2;
@@ -6250,7 +5659,7 @@
             // 
             this.rbtS1008_Iglesia_S.AutoSize = true;
             this.rbtS1008_Iglesia_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Iglesia_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Iglesia_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Iglesia_S.Name = "rbtS1008_Iglesia_S";
             this.rbtS1008_Iglesia_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Iglesia_S.TabIndex = 1;
@@ -6275,9 +5684,9 @@
             this.groupBox93.Controls.Add(this.rbtS1008_Comunicacion_S);
             this.groupBox93.Controls.Add(this.label127);
             this.groupBox93.Location = new System.Drawing.Point(23, 411);
-            this.groupBox93.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox93.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox93.Name = "groupBox93";
-            this.groupBox93.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox93.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox93.Size = new System.Drawing.Size(440, 37);
             this.groupBox93.TabIndex = 19;
             this.groupBox93.TabStop = false;
@@ -6286,7 +5695,7 @@
             // 
             this.rbtS1008_Comunicacion_NS.AutoSize = true;
             this.rbtS1008_Comunicacion_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Comunicacion_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Comunicacion_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Comunicacion_NS.Name = "rbtS1008_Comunicacion_NS";
             this.rbtS1008_Comunicacion_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Comunicacion_NS.TabIndex = 4;
@@ -6297,7 +5706,7 @@
             // 
             this.rbtS1008_Comunicacion_N.AutoSize = true;
             this.rbtS1008_Comunicacion_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Comunicacion_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Comunicacion_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Comunicacion_N.Name = "rbtS1008_Comunicacion_N";
             this.rbtS1008_Comunicacion_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Comunicacion_N.TabIndex = 3;
@@ -6308,7 +5717,7 @@
             // 
             this.rbtS1008_Comunicacion_I.AutoSize = true;
             this.rbtS1008_Comunicacion_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Comunicacion_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Comunicacion_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Comunicacion_I.Name = "rbtS1008_Comunicacion_I";
             this.rbtS1008_Comunicacion_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Comunicacion_I.TabIndex = 2;
@@ -6319,7 +5728,7 @@
             // 
             this.rbtS1008_Comunicacion_S.AutoSize = true;
             this.rbtS1008_Comunicacion_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Comunicacion_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Comunicacion_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Comunicacion_S.Name = "rbtS1008_Comunicacion_S";
             this.rbtS1008_Comunicacion_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Comunicacion_S.TabIndex = 1;
@@ -6354,9 +5763,9 @@
             this.groupBox94.Controls.Add(this.rbtS1008_Techo_S);
             this.groupBox94.Controls.Add(this.label128);
             this.groupBox94.Location = new System.Drawing.Point(23, 373);
-            this.groupBox94.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox94.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox94.Name = "groupBox94";
-            this.groupBox94.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox94.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox94.Size = new System.Drawing.Size(440, 37);
             this.groupBox94.TabIndex = 18;
             this.groupBox94.TabStop = false;
@@ -6365,7 +5774,7 @@
             // 
             this.rbtS1008_Techo_NS.AutoSize = true;
             this.rbtS1008_Techo_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Techo_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Techo_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Techo_NS.Name = "rbtS1008_Techo_NS";
             this.rbtS1008_Techo_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Techo_NS.TabIndex = 4;
@@ -6376,7 +5785,7 @@
             // 
             this.rbtS1008_Techo_N.AutoSize = true;
             this.rbtS1008_Techo_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Techo_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Techo_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Techo_N.Name = "rbtS1008_Techo_N";
             this.rbtS1008_Techo_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Techo_N.TabIndex = 3;
@@ -6387,7 +5796,7 @@
             // 
             this.rbtS1008_Techo_I.AutoSize = true;
             this.rbtS1008_Techo_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Techo_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Techo_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Techo_I.Name = "rbtS1008_Techo_I";
             this.rbtS1008_Techo_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Techo_I.TabIndex = 2;
@@ -6398,7 +5807,7 @@
             // 
             this.rbtS1008_Techo_S.AutoSize = true;
             this.rbtS1008_Techo_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Techo_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Techo_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Techo_S.Name = "rbtS1008_Techo_S";
             this.rbtS1008_Techo_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Techo_S.TabIndex = 1;
@@ -6423,9 +5832,9 @@
             this.groupBox76.Controls.Add(this.rbtS1008_OrgGobierno_S);
             this.groupBox76.Controls.Add(this.label84);
             this.groupBox76.Location = new System.Drawing.Point(23, 258);
-            this.groupBox76.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox76.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox76.Name = "groupBox76";
-            this.groupBox76.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox76.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox76.Size = new System.Drawing.Size(440, 37);
             this.groupBox76.TabIndex = 14;
             this.groupBox76.TabStop = false;
@@ -6434,7 +5843,7 @@
             // 
             this.rbtS1008_OrgGobierno_NS.AutoSize = true;
             this.rbtS1008_OrgGobierno_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_OrgGobierno_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_OrgGobierno_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_OrgGobierno_NS.Name = "rbtS1008_OrgGobierno_NS";
             this.rbtS1008_OrgGobierno_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_OrgGobierno_NS.TabIndex = 4;
@@ -6445,7 +5854,7 @@
             // 
             this.rbtS1008_OrgGobierno_N.AutoSize = true;
             this.rbtS1008_OrgGobierno_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_OrgGobierno_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_OrgGobierno_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_OrgGobierno_N.Name = "rbtS1008_OrgGobierno_N";
             this.rbtS1008_OrgGobierno_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_OrgGobierno_N.TabIndex = 3;
@@ -6456,7 +5865,7 @@
             // 
             this.rbtS1008_OrgGobierno_I.AutoSize = true;
             this.rbtS1008_OrgGobierno_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_OrgGobierno_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_OrgGobierno_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_OrgGobierno_I.Name = "rbtS1008_OrgGobierno_I";
             this.rbtS1008_OrgGobierno_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_OrgGobierno_I.TabIndex = 2;
@@ -6467,7 +5876,7 @@
             // 
             this.rbtS1008_OrgGobierno_S.AutoSize = true;
             this.rbtS1008_OrgGobierno_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_OrgGobierno_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_OrgGobierno_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_OrgGobierno_S.Name = "rbtS1008_OrgGobierno_S";
             this.rbtS1008_OrgGobierno_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_OrgGobierno_S.TabIndex = 1;
@@ -6492,9 +5901,9 @@
             this.groupBox95.Controls.Add(this.rbtS1008_Politicos_S);
             this.groupBox95.Controls.Add(this.label129);
             this.groupBox95.Location = new System.Drawing.Point(23, 335);
-            this.groupBox95.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox95.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox95.Name = "groupBox95";
-            this.groupBox95.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox95.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox95.Size = new System.Drawing.Size(440, 37);
             this.groupBox95.TabIndex = 17;
             this.groupBox95.TabStop = false;
@@ -6503,7 +5912,7 @@
             // 
             this.rbtS1008_Politicos_NS.AutoSize = true;
             this.rbtS1008_Politicos_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Politicos_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Politicos_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Politicos_NS.Name = "rbtS1008_Politicos_NS";
             this.rbtS1008_Politicos_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Politicos_NS.TabIndex = 4;
@@ -6514,7 +5923,7 @@
             // 
             this.rbtS1008_Politicos_N.AutoSize = true;
             this.rbtS1008_Politicos_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Politicos_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Politicos_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Politicos_N.Name = "rbtS1008_Politicos_N";
             this.rbtS1008_Politicos_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Politicos_N.TabIndex = 3;
@@ -6525,7 +5934,7 @@
             // 
             this.rbtS1008_Politicos_I.AutoSize = true;
             this.rbtS1008_Politicos_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Politicos_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Politicos_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Politicos_I.Name = "rbtS1008_Politicos_I";
             this.rbtS1008_Politicos_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Politicos_I.TabIndex = 2;
@@ -6536,7 +5945,7 @@
             // 
             this.rbtS1008_Politicos_S.AutoSize = true;
             this.rbtS1008_Politicos_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Politicos_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Politicos_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Politicos_S.Name = "rbtS1008_Politicos_S";
             this.rbtS1008_Politicos_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Politicos_S.TabIndex = 1;
@@ -6561,9 +5970,9 @@
             this.groupBox77.Controls.Add(this.rbtS1008_Muni_S);
             this.groupBox77.Controls.Add(this.label85);
             this.groupBox77.Location = new System.Drawing.Point(23, 220);
-            this.groupBox77.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox77.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox77.Name = "groupBox77";
-            this.groupBox77.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox77.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox77.Size = new System.Drawing.Size(440, 37);
             this.groupBox77.TabIndex = 13;
             this.groupBox77.TabStop = false;
@@ -6572,7 +5981,7 @@
             // 
             this.rbtS1008_Muni_NS.AutoSize = true;
             this.rbtS1008_Muni_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Muni_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Muni_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Muni_NS.Name = "rbtS1008_Muni_NS";
             this.rbtS1008_Muni_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Muni_NS.TabIndex = 4;
@@ -6583,7 +5992,7 @@
             // 
             this.rbtS1008_Muni_N.AutoSize = true;
             this.rbtS1008_Muni_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Muni_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Muni_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Muni_N.Name = "rbtS1008_Muni_N";
             this.rbtS1008_Muni_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Muni_N.TabIndex = 3;
@@ -6594,7 +6003,7 @@
             // 
             this.rbtS1008_Muni_I.AutoSize = true;
             this.rbtS1008_Muni_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Muni_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Muni_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Muni_I.Name = "rbtS1008_Muni_I";
             this.rbtS1008_Muni_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Muni_I.TabIndex = 2;
@@ -6605,7 +6014,7 @@
             // 
             this.rbtS1008_Muni_S.AutoSize = true;
             this.rbtS1008_Muni_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Muni_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Muni_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Muni_S.Name = "rbtS1008_Muni_S";
             this.rbtS1008_Muni_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Muni_S.TabIndex = 1;
@@ -6630,9 +6039,9 @@
             this.groupBox78.Controls.Add(this.rbtS1008_Policia_S);
             this.groupBox78.Controls.Add(this.label86);
             this.groupBox78.Location = new System.Drawing.Point(23, 182);
-            this.groupBox78.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox78.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox78.Name = "groupBox78";
-            this.groupBox78.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox78.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox78.Size = new System.Drawing.Size(440, 37);
             this.groupBox78.TabIndex = 12;
             this.groupBox78.TabStop = false;
@@ -6641,7 +6050,7 @@
             // 
             this.rbtS1008_Policia_NS.AutoSize = true;
             this.rbtS1008_Policia_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_Policia_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Policia_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Policia_NS.Name = "rbtS1008_Policia_NS";
             this.rbtS1008_Policia_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Policia_NS.TabIndex = 4;
@@ -6652,7 +6061,7 @@
             // 
             this.rbtS1008_Policia_N.AutoSize = true;
             this.rbtS1008_Policia_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_Policia_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Policia_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Policia_N.Name = "rbtS1008_Policia_N";
             this.rbtS1008_Policia_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Policia_N.TabIndex = 3;
@@ -6663,7 +6072,7 @@
             // 
             this.rbtS1008_Policia_I.AutoSize = true;
             this.rbtS1008_Policia_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_Policia_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Policia_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Policia_I.Name = "rbtS1008_Policia_I";
             this.rbtS1008_Policia_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Policia_I.TabIndex = 2;
@@ -6674,7 +6083,7 @@
             // 
             this.rbtS1008_Policia_S.AutoSize = true;
             this.rbtS1008_Policia_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_Policia_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Policia_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Policia_S.Name = "rbtS1008_Policia_S";
             this.rbtS1008_Policia_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Policia_S.TabIndex = 1;
@@ -6699,9 +6108,9 @@
             this.groupBox79.Controls.Add(this.rbtS1008_LiderCom_S);
             this.groupBox79.Controls.Add(this.label105);
             this.groupBox79.Location = new System.Drawing.Point(23, 143);
-            this.groupBox79.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox79.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox79.Name = "groupBox79";
-            this.groupBox79.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox79.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox79.Size = new System.Drawing.Size(440, 37);
             this.groupBox79.TabIndex = 11;
             this.groupBox79.TabStop = false;
@@ -6710,7 +6119,7 @@
             // 
             this.rbtS1008_LiderCom_NS.AutoSize = true;
             this.rbtS1008_LiderCom_NS.Location = new System.Drawing.Point(396, 16);
-            this.rbtS1008_LiderCom_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_LiderCom_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_LiderCom_NS.Name = "rbtS1008_LiderCom_NS";
             this.rbtS1008_LiderCom_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_LiderCom_NS.TabIndex = 4;
@@ -6721,7 +6130,7 @@
             // 
             this.rbtS1008_LiderCom_N.AutoSize = true;
             this.rbtS1008_LiderCom_N.Location = new System.Drawing.Point(340, 16);
-            this.rbtS1008_LiderCom_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_LiderCom_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_LiderCom_N.Name = "rbtS1008_LiderCom_N";
             this.rbtS1008_LiderCom_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_LiderCom_N.TabIndex = 3;
@@ -6732,7 +6141,7 @@
             // 
             this.rbtS1008_LiderCom_I.AutoSize = true;
             this.rbtS1008_LiderCom_I.Location = new System.Drawing.Point(281, 16);
-            this.rbtS1008_LiderCom_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_LiderCom_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_LiderCom_I.Name = "rbtS1008_LiderCom_I";
             this.rbtS1008_LiderCom_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_LiderCom_I.TabIndex = 2;
@@ -6743,7 +6152,7 @@
             // 
             this.rbtS1008_LiderCom_S.AutoSize = true;
             this.rbtS1008_LiderCom_S.Location = new System.Drawing.Point(229, 16);
-            this.rbtS1008_LiderCom_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_LiderCom_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_LiderCom_S.Name = "rbtS1008_LiderCom_S";
             this.rbtS1008_LiderCom_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_LiderCom_S.TabIndex = 1;
@@ -6768,9 +6177,9 @@
             this.groupBox86.Controls.Add(this.rbtS1008_Familia_S);
             this.groupBox86.Controls.Add(this.label107);
             this.groupBox86.Location = new System.Drawing.Point(23, 66);
-            this.groupBox86.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox86.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox86.Name = "groupBox86";
-            this.groupBox86.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox86.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox86.Size = new System.Drawing.Size(440, 37);
             this.groupBox86.TabIndex = 9;
             this.groupBox86.TabStop = false;
@@ -6779,7 +6188,7 @@
             // 
             this.rbtS1008_Familia_NS.AutoSize = true;
             this.rbtS1008_Familia_NS.Location = new System.Drawing.Point(395, 16);
-            this.rbtS1008_Familia_NS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Familia_NS.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Familia_NS.Name = "rbtS1008_Familia_NS";
             this.rbtS1008_Familia_NS.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Familia_NS.TabIndex = 4;
@@ -6790,7 +6199,7 @@
             // 
             this.rbtS1008_Familia_N.AutoSize = true;
             this.rbtS1008_Familia_N.Location = new System.Drawing.Point(340, 15);
-            this.rbtS1008_Familia_N.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Familia_N.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Familia_N.Name = "rbtS1008_Familia_N";
             this.rbtS1008_Familia_N.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Familia_N.TabIndex = 3;
@@ -6801,7 +6210,7 @@
             // 
             this.rbtS1008_Familia_I.AutoSize = true;
             this.rbtS1008_Familia_I.Location = new System.Drawing.Point(280, 16);
-            this.rbtS1008_Familia_I.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Familia_I.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Familia_I.Name = "rbtS1008_Familia_I";
             this.rbtS1008_Familia_I.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Familia_I.TabIndex = 2;
@@ -6812,7 +6221,7 @@
             // 
             this.rbtS1008_Familia_S.AutoSize = true;
             this.rbtS1008_Familia_S.Location = new System.Drawing.Point(229, 15);
-            this.rbtS1008_Familia_S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtS1008_Familia_S.Margin = new System.Windows.Forms.Padding(4);
             this.rbtS1008_Familia_S.Name = "rbtS1008_Familia_S";
             this.rbtS1008_Familia_S.Size = new System.Drawing.Size(17, 16);
             this.rbtS1008_Familia_S.TabIndex = 1;
@@ -6836,9 +6245,9 @@
             this.groupBox87.Controls.Add(this.label110);
             this.groupBox87.Controls.Add(this.label111);
             this.groupBox87.Location = new System.Drawing.Point(23, 28);
-            this.groupBox87.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox87.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox87.Name = "groupBox87";
-            this.groupBox87.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox87.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox87.Size = new System.Drawing.Size(440, 37);
             this.groupBox87.TabIndex = 8;
             this.groupBox87.TabStop = false;
@@ -6890,9 +6299,9 @@
             this.groupBox75.Controls.Add(this.txtS1007_Especificar);
             this.groupBox75.Controls.Add(this.label104);
             this.groupBox75.Location = new System.Drawing.Point(427, 370);
-            this.groupBox75.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox75.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox75.Name = "groupBox75";
-            this.groupBox75.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox75.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox75.Size = new System.Drawing.Size(400, 183);
             this.groupBox75.TabIndex = 10;
             this.groupBox75.TabStop = false;
@@ -6908,7 +6317,7 @@
             "Otro (especificar)\t",
             "NS/NR"});
             this.cklS1007_Com.Location = new System.Drawing.Point(27, 31);
-            this.cklS1007_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS1007_Com.Margin = new System.Windows.Forms.Padding(4);
             this.cklS1007_Com.Name = "cklS1007_Com";
             this.cklS1007_Com.Size = new System.Drawing.Size(332, 106);
             this.cklS1007_Com.TabIndex = 5;
@@ -6927,7 +6336,7 @@
             // 
             this.txtS1007_Especificar.Enabled = false;
             this.txtS1007_Especificar.Location = new System.Drawing.Point(24, 153);
-            this.txtS1007_Especificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS1007_Especificar.Margin = new System.Windows.Forms.Padding(4);
             this.txtS1007_Especificar.Multiline = true;
             this.txtS1007_Especificar.Name = "txtS1007_Especificar";
             this.txtS1007_Especificar.Size = new System.Drawing.Size(332, 24);
@@ -6949,9 +6358,9 @@
             this.groupBox74.Controls.Add(this.cklS1006_Com);
             this.groupBox74.Controls.Add(this.label92);
             this.groupBox74.Location = new System.Drawing.Point(429, 119);
-            this.groupBox74.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox74.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox74.Name = "groupBox74";
-            this.groupBox74.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox74.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox74.Size = new System.Drawing.Size(400, 249);
             this.groupBox74.TabIndex = 9;
             this.groupBox74.TabStop = false;
@@ -6960,7 +6369,7 @@
             // 
             this.txtS1006_Especificar.Enabled = false;
             this.txtS1006_Especificar.Location = new System.Drawing.Point(21, 213);
-            this.txtS1006_Especificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS1006_Especificar.Margin = new System.Windows.Forms.Padding(4);
             this.txtS1006_Especificar.Multiline = true;
             this.txtS1006_Especificar.Name = "txtS1006_Especificar";
             this.txtS1006_Especificar.Size = new System.Drawing.Size(332, 24);
@@ -6980,7 +6389,7 @@
             "Otra (especificar)",
             "NS/NR"});
             this.cklS1006_Com.Location = new System.Drawing.Point(25, 34);
-            this.cklS1006_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS1006_Com.Margin = new System.Windows.Forms.Padding(4);
             this.cklS1006_Com.Name = "cklS1006_Com";
             this.cklS1006_Com.Size = new System.Drawing.Size(332, 157);
             this.cklS1006_Com.TabIndex = 9;
@@ -7001,9 +6410,9 @@
             this.groupBox73.Controls.Add(this.cbxS10_ParticipacionGrupo);
             this.groupBox73.Controls.Add(this.label91);
             this.groupBox73.Location = new System.Drawing.Point(429, 18);
-            this.groupBox73.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox73.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox73.Name = "groupBox73";
-            this.groupBox73.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox73.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox73.Size = new System.Drawing.Size(400, 100);
             this.groupBox73.TabIndex = 8;
             this.groupBox73.TabStop = false;
@@ -7016,7 +6425,7 @@
             "No\t\t\t► (7)",
             "NS/NR"});
             this.cbxS10_ParticipacionGrupo.Location = new System.Drawing.Point(21, 63);
-            this.cbxS10_ParticipacionGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_ParticipacionGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_ParticipacionGrupo.Name = "cbxS10_ParticipacionGrupo";
             this.cbxS10_ParticipacionGrupo.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_ParticipacionGrupo.TabIndex = 2;
@@ -7044,9 +6453,9 @@
             this.groupBox70.Controls.Add(this.cbxS10_OrganizarVecinos);
             this.groupBox70.Controls.Add(this.label83);
             this.groupBox70.Location = new System.Drawing.Point(12, 370);
-            this.groupBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox70.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox70.Name = "groupBox70";
-            this.groupBox70.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox70.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox70.Size = new System.Drawing.Size(400, 183);
             this.groupBox70.TabIndex = 7;
             this.groupBox70.TabStop = false;
@@ -7065,7 +6474,7 @@
             // 
             this.txtS10_OrganizarC.Enabled = false;
             this.txtS10_OrganizarC.Location = new System.Drawing.Point(57, 142);
-            this.txtS10_OrganizarC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_OrganizarC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_OrganizarC.Multiline = true;
             this.txtS10_OrganizarC.Name = "txtS10_OrganizarC";
             this.txtS10_OrganizarC.Size = new System.Drawing.Size(303, 24);
@@ -7085,7 +6494,7 @@
             // 
             this.txtS10_OrganizarB.Enabled = false;
             this.txtS10_OrganizarB.Location = new System.Drawing.Point(57, 108);
-            this.txtS10_OrganizarB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_OrganizarB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_OrganizarB.Multiline = true;
             this.txtS10_OrganizarB.Name = "txtS10_OrganizarB";
             this.txtS10_OrganizarB.Size = new System.Drawing.Size(303, 24);
@@ -7105,7 +6514,7 @@
             // 
             this.txtS10_OrganizarA.Enabled = false;
             this.txtS10_OrganizarA.Location = new System.Drawing.Point(57, 79);
-            this.txtS10_OrganizarA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_OrganizarA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_OrganizarA.Multiline = true;
             this.txtS10_OrganizarA.Name = "txtS10_OrganizarA";
             this.txtS10_OrganizarA.Size = new System.Drawing.Size(303, 24);
@@ -7119,7 +6528,7 @@
             "No me organizo con mis vecinos",
             "NS/NR"});
             this.cbxS10_OrganizarVecinos.Location = new System.Drawing.Point(28, 49);
-            this.cbxS10_OrganizarVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_OrganizarVecinos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_OrganizarVecinos.Name = "cbxS10_OrganizarVecinos";
             this.cbxS10_OrganizarVecinos.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_OrganizarVecinos.TabIndex = 2;
@@ -7143,9 +6552,9 @@
             this.groupBox71.Controls.Add(this.cbxS10_RelacionVecinos);
             this.groupBox71.Controls.Add(this.label87);
             this.groupBox71.Location = new System.Drawing.Point(13, 220);
-            this.groupBox71.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox71.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox71.Name = "groupBox71";
-            this.groupBox71.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox71.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox71.Size = new System.Drawing.Size(400, 149);
             this.groupBox71.TabIndex = 4;
             this.groupBox71.TabStop = false;
@@ -7164,7 +6573,7 @@
             // 
             this.txtS10_CometarioRelacion.Enabled = false;
             this.txtS10_CometarioRelacion.Location = new System.Drawing.Point(27, 86);
-            this.txtS10_CometarioRelacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_CometarioRelacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_CometarioRelacion.Multiline = true;
             this.txtS10_CometarioRelacion.Name = "txtS10_CometarioRelacion";
             this.txtS10_CometarioRelacion.Size = new System.Drawing.Size(332, 48);
@@ -7181,7 +6590,7 @@
             "Muy mala",
             "NS/NR"});
             this.cbxS10_RelacionVecinos.Location = new System.Drawing.Point(27, 31);
-            this.cbxS10_RelacionVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_RelacionVecinos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_RelacionVecinos.Name = "cbxS10_RelacionVecinos";
             this.cbxS10_RelacionVecinos.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_RelacionVecinos.TabIndex = 2;
@@ -7202,9 +6611,9 @@
             this.groupBox72.Controls.Add(this.txtS10_AyudaVecinos);
             this.groupBox72.Controls.Add(this.label88);
             this.groupBox72.Location = new System.Drawing.Point(13, 119);
-            this.groupBox72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox72.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox72.Name = "groupBox72";
-            this.groupBox72.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox72.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox72.Size = new System.Drawing.Size(400, 98);
             this.groupBox72.TabIndex = 3;
             this.groupBox72.TabStop = false;
@@ -7212,7 +6621,7 @@
             // txtS10_AyudaVecinos
             // 
             this.txtS10_AyudaVecinos.Location = new System.Drawing.Point(27, 37);
-            this.txtS10_AyudaVecinos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_AyudaVecinos.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_AyudaVecinos.Multiline = true;
             this.txtS10_AyudaVecinos.Name = "txtS10_AyudaVecinos";
             this.txtS10_AyudaVecinos.Size = new System.Drawing.Size(332, 48);
@@ -7233,9 +6642,9 @@
             this.groupBox97.Controls.Add(this.txtS10_Ayudo);
             this.groupBox97.Controls.Add(this.label89);
             this.groupBox97.Location = new System.Drawing.Point(13, 20);
-            this.groupBox97.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox97.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox97.Name = "groupBox97";
-            this.groupBox97.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox97.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox97.Size = new System.Drawing.Size(400, 98);
             this.groupBox97.TabIndex = 0;
             this.groupBox97.TabStop = false;
@@ -7243,7 +6652,7 @@
             // txtS10_Ayudo
             // 
             this.txtS10_Ayudo.Location = new System.Drawing.Point(27, 37);
-            this.txtS10_Ayudo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_Ayudo.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_Ayudo.Multiline = true;
             this.txtS10_Ayudo.Name = "txtS10_Ayudo";
             this.txtS10_Ayudo.Size = new System.Drawing.Size(332, 48);
@@ -7265,9 +6674,9 @@
             this.tbpS10Cont.Controls.Add(this.pbS10Cont_Siguiente);
             this.tbpS10Cont.Controls.Add(this.groupBox98);
             this.tbpS10Cont.Location = new System.Drawing.Point(4, 25);
-            this.tbpS10Cont.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS10Cont.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS10Cont.Name = "tbpS10Cont";
-            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(4);
             this.tbpS10Cont.Size = new System.Drawing.Size(1779, 679);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
@@ -7277,7 +6686,7 @@
             // 
             this.pbS10Cont_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS10Cont_Siguiente.Location = new System.Drawing.Point(1171, 599);
-            this.pbS10Cont_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS10Cont_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS10Cont_Siguiente.Name = "pbS10Cont_Siguiente";
             this.pbS10Cont_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS10Cont_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7299,9 +6708,9 @@
             this.groupBox98.Controls.Add(this.groupBox101);
             this.groupBox98.Controls.Add(this.groupBox109);
             this.groupBox98.Location = new System.Drawing.Point(11, 10);
-            this.groupBox98.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox98.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox98.Name = "groupBox98";
-            this.groupBox98.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox98.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox98.Size = new System.Drawing.Size(1735, 602);
             this.groupBox98.TabIndex = 5;
             this.groupBox98.TabStop = false;
@@ -7314,9 +6723,9 @@
             this.groupBox108.Controls.Add(this.cbxS10_estadoFuturo);
             this.groupBox108.Controls.Add(this.label150);
             this.groupBox108.Location = new System.Drawing.Point(829, 342);
-            this.groupBox108.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox108.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox108.Name = "groupBox108";
-            this.groupBox108.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox108.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox108.Size = new System.Drawing.Size(400, 169);
             this.groupBox108.TabIndex = 20;
             this.groupBox108.TabStop = false;
@@ -7335,7 +6744,7 @@
             // 
             this.txtS10_ComentarioEstadoFuturo.Enabled = false;
             this.txtS10_ComentarioEstadoFuturo.Location = new System.Drawing.Point(32, 103);
-            this.txtS10_ComentarioEstadoFuturo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ComentarioEstadoFuturo.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ComentarioEstadoFuturo.Multiline = true;
             this.txtS10_ComentarioEstadoFuturo.Name = "txtS10_ComentarioEstadoFuturo";
             this.txtS10_ComentarioEstadoFuturo.Size = new System.Drawing.Size(332, 48);
@@ -7350,7 +6759,7 @@
             "Peor",
             "NS/NR"});
             this.cbxS10_estadoFuturo.Location = new System.Drawing.Point(32, 50);
-            this.cbxS10_estadoFuturo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_estadoFuturo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_estadoFuturo.Name = "cbxS10_estadoFuturo";
             this.cbxS10_estadoFuturo.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_estadoFuturo.TabIndex = 2;
@@ -7374,9 +6783,9 @@
             this.groupBox107.Controls.Add(this.cbxS10_EstadoPasado);
             this.groupBox107.Controls.Add(this.label147);
             this.groupBox107.Location = new System.Drawing.Point(831, 172);
-            this.groupBox107.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox107.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox107.Name = "groupBox107";
-            this.groupBox107.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox107.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox107.Size = new System.Drawing.Size(400, 169);
             this.groupBox107.TabIndex = 18;
             this.groupBox107.TabStop = false;
@@ -7395,7 +6804,7 @@
             // 
             this.txtS10_ComentarioEstadoPasado.Enabled = false;
             this.txtS10_ComentarioEstadoPasado.Location = new System.Drawing.Point(33, 106);
-            this.txtS10_ComentarioEstadoPasado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ComentarioEstadoPasado.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ComentarioEstadoPasado.Multiline = true;
             this.txtS10_ComentarioEstadoPasado.Name = "txtS10_ComentarioEstadoPasado";
             this.txtS10_ComentarioEstadoPasado.Size = new System.Drawing.Size(332, 48);
@@ -7410,7 +6819,7 @@
             "Peor",
             "NS/NR"});
             this.cbxS10_EstadoPasado.Location = new System.Drawing.Point(33, 48);
-            this.cbxS10_EstadoPasado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_EstadoPasado.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_EstadoPasado.Name = "cbxS10_EstadoPasado";
             this.cbxS10_EstadoPasado.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_EstadoPasado.TabIndex = 2;
@@ -7438,9 +6847,9 @@
             this.groupBox106.Controls.Add(this.txtS10_LiderA);
             this.groupBox106.Controls.Add(this.label145);
             this.groupBox106.Location = new System.Drawing.Point(831, 16);
-            this.groupBox106.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox106.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox106.Name = "groupBox106";
-            this.groupBox106.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox106.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox106.Size = new System.Drawing.Size(400, 154);
             this.groupBox106.TabIndex = 16;
             this.groupBox106.TabStop = false;
@@ -7449,7 +6858,7 @@
             // 
             this.ckbS10_Lider.AutoSize = true;
             this.ckbS10_Lider.Location = new System.Drawing.Point(36, 129);
-            this.ckbS10_Lider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbS10_Lider.Margin = new System.Windows.Forms.Padding(4);
             this.ckbS10_Lider.Name = "ckbS10_Lider";
             this.ckbS10_Lider.Size = new System.Drawing.Size(69, 21);
             this.ckbS10_Lider.TabIndex = 12;
@@ -7469,7 +6878,7 @@
             // txtS10_LiderC
             // 
             this.txtS10_LiderC.Location = new System.Drawing.Point(67, 102);
-            this.txtS10_LiderC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_LiderC.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_LiderC.Multiline = true;
             this.txtS10_LiderC.Name = "txtS10_LiderC";
             this.txtS10_LiderC.Size = new System.Drawing.Size(299, 24);
@@ -7488,7 +6897,7 @@
             // txtS10_LiderB
             // 
             this.txtS10_LiderB.Location = new System.Drawing.Point(67, 64);
-            this.txtS10_LiderB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_LiderB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_LiderB.Multiline = true;
             this.txtS10_LiderB.Name = "txtS10_LiderB";
             this.txtS10_LiderB.Size = new System.Drawing.Size(299, 24);
@@ -7507,7 +6916,7 @@
             // txtS10_LiderA
             // 
             this.txtS10_LiderA.Location = new System.Drawing.Point(67, 31);
-            this.txtS10_LiderA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_LiderA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_LiderA.Multiline = true;
             this.txtS10_LiderA.Name = "txtS10_LiderA";
             this.txtS10_LiderA.Size = new System.Drawing.Size(299, 24);
@@ -7530,9 +6939,9 @@
             this.groupBox105.Controls.Add(this.cbxS10_ConfiazaOrganizacion);
             this.groupBox105.Controls.Add(this.label135);
             this.groupBox105.Location = new System.Drawing.Point(421, 388);
-            this.groupBox105.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox105.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox105.Name = "groupBox105";
-            this.groupBox105.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox105.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox105.Size = new System.Drawing.Size(400, 176);
             this.groupBox105.TabIndex = 14;
             this.groupBox105.TabStop = false;
@@ -7551,7 +6960,7 @@
             // 
             this.txtS10_ComentarioConfianza.Enabled = false;
             this.txtS10_ComentarioConfianza.Location = new System.Drawing.Point(44, 107);
-            this.txtS10_ComentarioConfianza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ComentarioConfianza.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ComentarioConfianza.Multiline = true;
             this.txtS10_ComentarioConfianza.Name = "txtS10_ComentarioConfianza";
             this.txtS10_ComentarioConfianza.Size = new System.Drawing.Size(332, 48);
@@ -7565,7 +6974,7 @@
             "No",
             "NS/NR"});
             this.cbxS10_ConfiazaOrganizacion.Location = new System.Drawing.Point(48, 55);
-            this.cbxS10_ConfiazaOrganizacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_ConfiazaOrganizacion.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_ConfiazaOrganizacion.Name = "cbxS10_ConfiazaOrganizacion";
             this.cbxS10_ConfiazaOrganizacion.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_ConfiazaOrganizacion.TabIndex = 2;
@@ -7586,9 +6995,9 @@
             this.groupBox99.Controls.Add(this.txtS10_TipoOrganizaciones);
             this.groupBox99.Controls.Add(this.label137);
             this.groupBox99.Location = new System.Drawing.Point(421, 271);
-            this.groupBox99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox99.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox99.Name = "groupBox99";
-            this.groupBox99.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox99.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox99.Size = new System.Drawing.Size(400, 116);
             this.groupBox99.TabIndex = 12;
             this.groupBox99.TabStop = false;
@@ -7596,7 +7005,7 @@
             // txtS10_TipoOrganizaciones
             // 
             this.txtS10_TipoOrganizaciones.Location = new System.Drawing.Point(44, 49);
-            this.txtS10_TipoOrganizaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_TipoOrganizaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_TipoOrganizaciones.Multiline = true;
             this.txtS10_TipoOrganizaciones.Name = "txtS10_TipoOrganizaciones";
             this.txtS10_TipoOrganizaciones.Size = new System.Drawing.Size(332, 48);
@@ -7618,9 +7027,9 @@
             this.groupBox104.Controls.Add(this.cbxS10_Discriminacion);
             this.groupBox104.Controls.Add(this.label143);
             this.groupBox104.Location = new System.Drawing.Point(421, 16);
-            this.groupBox104.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox104.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox104.Name = "groupBox104";
-            this.groupBox104.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox104.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox104.Size = new System.Drawing.Size(400, 154);
             this.groupBox104.TabIndex = 8;
             this.groupBox104.TabStop = false;
@@ -7629,7 +7038,7 @@
             // 
             this.txtS10_TipoDiscriminacion.Enabled = false;
             this.txtS10_TipoDiscriminacion.Location = new System.Drawing.Point(33, 86);
-            this.txtS10_TipoDiscriminacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_TipoDiscriminacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_TipoDiscriminacion.Multiline = true;
             this.txtS10_TipoDiscriminacion.Name = "txtS10_TipoDiscriminacion";
             this.txtS10_TipoDiscriminacion.Size = new System.Drawing.Size(332, 48);
@@ -7643,7 +7052,7 @@
             "No",
             "NS/NR"});
             this.cbxS10_Discriminacion.Location = new System.Drawing.Point(33, 50);
-            this.cbxS10_Discriminacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_Discriminacion.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_Discriminacion.Name = "cbxS10_Discriminacion";
             this.cbxS10_Discriminacion.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_Discriminacion.TabIndex = 2;
@@ -7669,9 +7078,9 @@
             this.groupBox103.Controls.Add(this.txtS10_ApectosNegativosA);
             this.groupBox103.Controls.Add(this.label142);
             this.groupBox103.Location = new System.Drawing.Point(12, 165);
-            this.groupBox103.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox103.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox103.Name = "groupBox103";
-            this.groupBox103.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox103.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox103.Size = new System.Drawing.Size(400, 138);
             this.groupBox103.TabIndex = 4;
             this.groupBox103.TabStop = false;
@@ -7680,7 +7089,7 @@
             // 
             this.ckbS10_Negativo.AutoSize = true;
             this.ckbS10_Negativo.Location = new System.Drawing.Point(29, 112);
-            this.ckbS10_Negativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbS10_Negativo.Margin = new System.Windows.Forms.Padding(4);
             this.ckbS10_Negativo.Name = "ckbS10_Negativo";
             this.ckbS10_Negativo.Size = new System.Drawing.Size(69, 21);
             this.ckbS10_Negativo.TabIndex = 11;
@@ -7700,7 +7109,7 @@
             // txtS10_ApectosNegativosB
             // 
             this.txtS10_ApectosNegativosB.Location = new System.Drawing.Point(61, 84);
-            this.txtS10_ApectosNegativosB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosNegativosB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ApectosNegativosB.Multiline = true;
             this.txtS10_ApectosNegativosB.Name = "txtS10_ApectosNegativosB";
             this.txtS10_ApectosNegativosB.Size = new System.Drawing.Size(299, 24);
@@ -7719,7 +7128,7 @@
             // txtS10_ApectosNegativosA
             // 
             this.txtS10_ApectosNegativosA.Location = new System.Drawing.Point(61, 47);
-            this.txtS10_ApectosNegativosA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosNegativosA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ApectosNegativosA.Multiline = true;
             this.txtS10_ApectosNegativosA.Name = "txtS10_ApectosNegativosA";
             this.txtS10_ApectosNegativosA.Size = new System.Drawing.Size(299, 24);
@@ -7745,9 +7154,9 @@
             this.groupBox100.Controls.Add(this.txtS10_ApectosPositivosA);
             this.groupBox100.Controls.Add(this.label134);
             this.groupBox100.Location = new System.Drawing.Point(12, 16);
-            this.groupBox100.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox100.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox100.Name = "groupBox100";
-            this.groupBox100.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox100.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox100.Size = new System.Drawing.Size(400, 142);
             this.groupBox100.TabIndex = 2;
             this.groupBox100.TabStop = false;
@@ -7756,7 +7165,7 @@
             // 
             this.ckbS10_Positivo.AutoSize = true;
             this.ckbS10_Positivo.Location = new System.Drawing.Point(28, 112);
-            this.ckbS10_Positivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbS10_Positivo.Margin = new System.Windows.Forms.Padding(4);
             this.ckbS10_Positivo.Name = "ckbS10_Positivo";
             this.ckbS10_Positivo.Size = new System.Drawing.Size(69, 21);
             this.ckbS10_Positivo.TabIndex = 10;
@@ -7776,7 +7185,7 @@
             // txtS10_ApectosPositivosB
             // 
             this.txtS10_ApectosPositivosB.Location = new System.Drawing.Point(61, 82);
-            this.txtS10_ApectosPositivosB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosPositivosB.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ApectosPositivosB.Multiline = true;
             this.txtS10_ApectosPositivosB.Name = "txtS10_ApectosPositivosB";
             this.txtS10_ApectosPositivosB.Size = new System.Drawing.Size(299, 24);
@@ -7795,7 +7204,7 @@
             // txtS10_ApectosPositivosA
             // 
             this.txtS10_ApectosPositivosA.Location = new System.Drawing.Point(61, 49);
-            this.txtS10_ApectosPositivosA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS10_ApectosPositivosA.Margin = new System.Windows.Forms.Padding(4);
             this.txtS10_ApectosPositivosA.Multiline = true;
             this.txtS10_ApectosPositivosA.Name = "txtS10_ApectosPositivosA";
             this.txtS10_ApectosPositivosA.Size = new System.Drawing.Size(299, 24);
@@ -7818,9 +7227,9 @@
             this.groupBox101.Controls.Add(this.cklS1014_Com);
             this.groupBox101.Controls.Add(this.label138);
             this.groupBox101.Location = new System.Drawing.Point(12, 310);
-            this.groupBox101.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox101.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox101.Name = "groupBox101";
-            this.groupBox101.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox101.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox101.Size = new System.Drawing.Size(400, 266);
             this.groupBox101.TabIndex = 6;
             this.groupBox101.TabStop = false;
@@ -7829,7 +7238,7 @@
             // 
             this.txtS1014_Especificar.Enabled = false;
             this.txtS1014_Especificar.Location = new System.Drawing.Point(41, 229);
-            this.txtS1014_Especificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS1014_Especificar.Margin = new System.Windows.Forms.Padding(4);
             this.txtS1014_Especificar.Multiline = true;
             this.txtS1014_Especificar.Name = "txtS1014_Especificar";
             this.txtS1014_Especificar.Size = new System.Drawing.Size(299, 24);
@@ -7849,7 +7258,7 @@
             "Otro (especificar)\t\t",
             "NS/NR"});
             this.cklS1014_Com.Location = new System.Drawing.Point(28, 47);
-            this.cklS1014_Com.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cklS1014_Com.Margin = new System.Windows.Forms.Padding(4);
             this.cklS1014_Com.Name = "cklS1014_Com";
             this.cklS1014_Com.Size = new System.Drawing.Size(332, 157);
             this.cklS1014_Com.TabIndex = 4;
@@ -7871,9 +7280,9 @@
             this.groupBox109.Controls.Add(this.cbxS10_OrganizacionComunitaria);
             this.groupBox109.Controls.Add(this.label139);
             this.groupBox109.Location = new System.Drawing.Point(421, 177);
-            this.groupBox109.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox109.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox109.Name = "groupBox109";
-            this.groupBox109.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox109.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox109.Size = new System.Drawing.Size(400, 82);
             this.groupBox109.TabIndex = 10;
             this.groupBox109.TabStop = false;
@@ -7886,7 +7295,7 @@
             "No\t►(19)",
             "NS/NR"});
             this.cbxS10_OrganizacionComunitaria.Location = new System.Drawing.Point(32, 48);
-            this.cbxS10_OrganizacionComunitaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS10_OrganizacionComunitaria.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS10_OrganizacionComunitaria.Name = "cbxS10_OrganizacionComunitaria";
             this.cbxS10_OrganizacionComunitaria.Size = new System.Drawing.Size(332, 24);
             this.cbxS10_OrganizacionComunitaria.TabIndex = 2;
@@ -7907,7 +7316,7 @@
             this.tbpS11.Controls.Add(this.pbS11_Siguiente);
             this.tbpS11.Controls.Add(this.groupBox102);
             this.tbpS11.Location = new System.Drawing.Point(4, 25);
-            this.tbpS11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpS11.Margin = new System.Windows.Forms.Padding(4);
             this.tbpS11.Name = "tbpS11";
             this.tbpS11.Size = new System.Drawing.Size(1779, 679);
             this.tbpS11.TabIndex = 12;
@@ -7918,7 +7327,7 @@
             // 
             this.pbS11_Siguiente.Image = global::TechoCeiva.Properties.Resources.Next;
             this.pbS11_Siguiente.Location = new System.Drawing.Point(795, 599);
-            this.pbS11_Siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbS11_Siguiente.Margin = new System.Windows.Forms.Padding(4);
             this.pbS11_Siguiente.Name = "pbS11_Siguiente";
             this.pbS11_Siguiente.Size = new System.Drawing.Size(71, 73);
             this.pbS11_Siguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -7935,9 +7344,9 @@
             this.groupBox102.Controls.Add(this.groupBox113);
             this.groupBox102.Controls.Add(this.groupBox114);
             this.groupBox102.Location = new System.Drawing.Point(11, 10);
-            this.groupBox102.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox102.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox102.Name = "groupBox102";
-            this.groupBox102.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox102.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox102.Size = new System.Drawing.Size(1771, 586);
             this.groupBox102.TabIndex = 3;
             this.groupBox102.TabStop = false;
@@ -7948,9 +7357,9 @@
             this.groupBox1.Controls.Add(this.txt_S11_ComentarioFinal);
             this.groupBox1.Controls.Add(this.label140);
             this.groupBox1.Location = new System.Drawing.Point(436, 110);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(400, 257);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -7958,7 +7367,7 @@
             // txt_S11_ComentarioFinal
             // 
             this.txt_S11_ComentarioFinal.Location = new System.Drawing.Point(29, 54);
-            this.txt_S11_ComentarioFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_S11_ComentarioFinal.Margin = new System.Windows.Forms.Padding(4);
             this.txt_S11_ComentarioFinal.Multiline = true;
             this.txt_S11_ComentarioFinal.Name = "txt_S11_ComentarioFinal";
             this.txt_S11_ComentarioFinal.Size = new System.Drawing.Size(332, 184);
@@ -7979,9 +7388,9 @@
             this.groupBox110.Controls.Add(this.cbxS11_4_ViviedaActual);
             this.groupBox110.Controls.Add(this.label153);
             this.groupBox110.Location = new System.Drawing.Point(436, 21);
-            this.groupBox110.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox110.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox110.Name = "groupBox110";
-            this.groupBox110.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox110.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox110.Size = new System.Drawing.Size(400, 86);
             this.groupBox110.TabIndex = 7;
             this.groupBox110.TabStop = false;
@@ -7994,7 +7403,7 @@
             "No",
             "NS/NR"});
             this.cbxS11_4_ViviedaActual.Location = new System.Drawing.Point(29, 49);
-            this.cbxS11_4_ViviedaActual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS11_4_ViviedaActual.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS11_4_ViviedaActual.Name = "cbxS11_4_ViviedaActual";
             this.cbxS11_4_ViviedaActual.Size = new System.Drawing.Size(332, 24);
             this.cbxS11_4_ViviedaActual.TabIndex = 2;
@@ -8017,9 +7426,9 @@
             this.groupBox112.Controls.Add(this.label161);
             this.groupBox112.Controls.Add(this.label157);
             this.groupBox112.Location = new System.Drawing.Point(16, 214);
-            this.groupBox112.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox112.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox112.Name = "groupBox112";
-            this.groupBox112.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox112.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox112.Size = new System.Drawing.Size(400, 153);
             this.groupBox112.TabIndex = 4;
             this.groupBox112.TabStop = false;
@@ -8027,7 +7436,7 @@
             // txtS11_3a_AñoTraslado
             // 
             this.txtS11_3a_AñoTraslado.Location = new System.Drawing.Point(96, 48);
-            this.txtS11_3a_AñoTraslado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS11_3a_AñoTraslado.Margin = new System.Windows.Forms.Padding(4);
             this.txtS11_3a_AñoTraslado.Mask = "0000";
             this.txtS11_3a_AñoTraslado.Name = "txtS11_3a_AñoTraslado";
             this.txtS11_3a_AñoTraslado.Size = new System.Drawing.Size(57, 22);
@@ -8046,7 +7455,7 @@
             // txtS11_3b_Porque
             // 
             this.txtS11_3b_Porque.Location = new System.Drawing.Point(96, 80);
-            this.txtS11_3b_Porque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS11_3b_Porque.Margin = new System.Windows.Forms.Padding(4);
             this.txtS11_3b_Porque.Multiline = true;
             this.txtS11_3b_Porque.Name = "txtS11_3b_Porque";
             this.txtS11_3b_Porque.Size = new System.Drawing.Size(257, 54);
@@ -8078,9 +7487,9 @@
             this.groupBox113.Controls.Add(this.txtS11_2_DireccionPasada);
             this.groupBox113.Controls.Add(this.label158);
             this.groupBox113.Location = new System.Drawing.Point(16, 110);
-            this.groupBox113.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox113.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox113.Name = "groupBox113";
-            this.groupBox113.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox113.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox113.Size = new System.Drawing.Size(400, 102);
             this.groupBox113.TabIndex = 3;
             this.groupBox113.TabStop = false;
@@ -8088,7 +7497,7 @@
             // txtS11_2_DireccionPasada
             // 
             this.txtS11_2_DireccionPasada.Location = new System.Drawing.Point(27, 38);
-            this.txtS11_2_DireccionPasada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtS11_2_DireccionPasada.Margin = new System.Windows.Forms.Padding(4);
             this.txtS11_2_DireccionPasada.Multiline = true;
             this.txtS11_2_DireccionPasada.Name = "txtS11_2_DireccionPasada";
             this.txtS11_2_DireccionPasada.Size = new System.Drawing.Size(332, 48);
@@ -8109,9 +7518,9 @@
             this.groupBox114.Controls.Add(this.cbxS11_1_VidaFamiliar);
             this.groupBox114.Controls.Add(this.label159);
             this.groupBox114.Location = new System.Drawing.Point(16, 21);
-            this.groupBox114.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox114.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox114.Name = "groupBox114";
-            this.groupBox114.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox114.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox114.Size = new System.Drawing.Size(400, 86);
             this.groupBox114.TabIndex = 0;
             this.groupBox114.TabStop = false;
@@ -8125,7 +7534,7 @@
             "No\t\t\t\t",
             "NS/NR"});
             this.cbxS11_1_VidaFamiliar.Location = new System.Drawing.Point(24, 47);
-            this.cbxS11_1_VidaFamiliar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxS11_1_VidaFamiliar.Margin = new System.Windows.Forms.Padding(4);
             this.cbxS11_1_VidaFamiliar.Name = "cbxS11_1_VidaFamiliar";
             this.cbxS11_1_VidaFamiliar.Size = new System.Drawing.Size(332, 24);
             this.cbxS11_1_VidaFamiliar.TabIndex = 2;
@@ -8143,6 +7552,639 @@
             this.label159.Text = "1. ¿Usted junto a los miembros de su familia han vivido en \r\n    esta comunidad d" +
                 "urante toda su VIDA FAMILIAR?\r\n";
             // 
+            // dgvS2
+            // 
+            this.dgvS2.AllowUserToAddRows = false;
+            this.dgvS2.AllowUserToOrderColumns = true;
+            this.dgvS2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvS2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewComboBoxColumn3,
+            this.dataGridViewComboBoxColumn4,
+            this.dataGridViewTextBoxColumn8,
+            this.dgvCmbDepto,
+            this.dgvCmbMuni,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvS2.Location = new System.Drawing.Point(4, 19);
+            this.dgvS2.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvS2.Name = "dgvS2";
+            this.dgvS2.RowHeadersWidth = 25;
+            this.dgvS2.Size = new System.Drawing.Size(1755, 551);
+            this.dgvS2.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 274.1117F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.FillWeight = 15.52687F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "¿A qué núcleo pertenece?";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.FillWeight = 24.889F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "¿Me podría indicar el DPI?";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 200;
+            // 
+            // dataGridViewComboBoxColumn3
+            // 
+            this.dataGridViewComboBoxColumn3.FillWeight = 33.88592F;
+            this.dataGridViewComboBoxColumn3.HeaderText = "¿Cuál es el estado civil?";
+            this.dataGridViewComboBoxColumn3.Items.AddRange(new object[] {
+            "Casado/a",
+            "Unido/a de hecho",
+            "Divorciado/a",
+            "Separado/a de hecho",
+            "Viudo/a",
+            "Soltero/a\t",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
+            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn3.Width = 200;
+            // 
+            // dataGridViewComboBoxColumn4
+            // 
+            this.dataGridViewComboBoxColumn4.FillWeight = 46.82311F;
+            this.dataGridViewComboBoxColumn4.HeaderText = "¿Cuál es la relación de parentesco con el jefe del hogar?";
+            this.dataGridViewComboBoxColumn4.Items.AddRange(new object[] {
+            "Jefe/a de Hogar",
+            "Cónyuge o pareja",
+            "Hijo/a, hijastro/a",
+            "Padre o madre",
+            "Suegro/a",
+            "Yerno o nuera",
+            "Nieto/a",
+            "Hermano/a",
+            "Cuñado/a",
+            "Sobrino/a",
+            "Tío/a",
+            "Otro familiar (especificar)",
+            "No familiar (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn4.Name = "dataGridViewComboBoxColumn4";
+            this.dataGridViewComboBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn4.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.FillWeight = 44.22726F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 200;
+            // 
+            // dgvCmbDepto
+            // 
+            this.dgvCmbDepto.FillWeight = 82.89245F;
+            this.dgvCmbDepto.HeaderText = "¿Cuál es el lugar de orígen (nacimiento - Departamento)?";
+            this.dgvCmbDepto.Name = "dgvCmbDepto";
+            this.dgvCmbDepto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCmbDepto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvCmbDepto.Width = 220;
+            // 
+            // dgvCmbMuni
+            // 
+            this.dgvCmbMuni.FillWeight = 117.2924F;
+            this.dgvCmbMuni.HeaderText = "¿Cuál es el lugar de orígen (nacimiento - Municipio)?";
+            this.dgvCmbMuni.Name = "dgvCmbMuni";
+            this.dgvCmbMuni.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.FillWeight = 260.3514F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "¿Cuál es la nacionalidad?";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 197;
+            // 
+            // dgvS3
+            // 
+            this.dgvS3.AllowUserToAddRows = false;
+            this.dgvS3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvS3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewComboBoxColumn5,
+            this.dataGridViewComboBoxColumn6,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewComboBoxColumn7,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewComboBoxColumn8,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewComboBoxColumn9,
+            this.dataGridViewComboBoxColumn10,
+            this.Column26,
+            this.dataGridViewComboBoxColumn11,
+            this.Column27});
+            this.dgvS3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvS3.Location = new System.Drawing.Point(4, 19);
+            this.dgvS3.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvS3.Name = "dgvS3";
+            this.dgvS3.RowHeadersWidth = 25;
+            this.dgvS3.Size = new System.Drawing.Size(1759, 552);
+            this.dgvS3.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 60;
+            // 
+            // dataGridViewComboBoxColumn5
+            // 
+            this.dataGridViewComboBoxColumn5.HeaderText = "¿Sabe leer y escribir?";
+            this.dataGridViewComboBoxColumn5.Items.AddRange(new object[] {
+            "Si",
+            "No, sólo lee",
+            "No, sólo escribe",
+            "No, ninguno",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn5.Name = "dataGridViewComboBoxColumn5";
+            this.dataGridViewComboBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn5.Width = 117;
+            // 
+            // dataGridViewComboBoxColumn6
+            // 
+            this.dataGridViewComboBoxColumn6.HeaderText = "¿Cuál es el grado más alto de educación que completó?\t\t";
+            this.dataGridViewComboBoxColumn6.Items.AddRange(new object[] {
+            "Ninguno",
+            "Pre-primaria",
+            "Primero primaria",
+            "Segundo primaria",
+            "Tercero primaria",
+            "Cuarto primaria",
+            "Quinto primaria",
+            "Sexto primaria",
+            "Primero Básico",
+            "Segundo Básico",
+            "Tercero Básico",
+            "Diversificado",
+            "Técnico (especificar)",
+            "Superior incompleto",
+            "Superior completo",
+            "Otro (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn6.Name = "dataGridViewComboBoxColumn6";
+            this.dataGridViewComboBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn6.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewComboBoxColumn7
+            // 
+            this.dataGridViewComboBoxColumn7.HeaderText = "Actualmente, ¿Asiste a algún establecimiento educativo?";
+            this.dataGridViewComboBoxColumn7.Items.AddRange(new object[] {
+            "Si asiste",
+            "No asiste",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn7.Name = "dataGridViewComboBoxColumn7";
+            this.dataGridViewComboBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn7.Width = 113;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "¿Cuál es el nombre del centro educativo al que asiste?";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 150;
+            // 
+            // dataGridViewComboBoxColumn8
+            // 
+            this.dataGridViewComboBoxColumn8.HeaderText = "¿Qué tipo de establecimiento es el centro educativo donde estudia?\n";
+            this.dataGridViewComboBoxColumn8.Items.AddRange(new object[] {
+            "Público",
+            "Privado",
+            "Por cooperativa",
+            "Otro (especificar)",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn8.Name = "dataGridViewComboBoxColumn8";
+            this.dataGridViewComboBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Especificar";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewComboBoxColumn9
+            // 
+            this.dataGridViewComboBoxColumn9.HeaderText = "¿Dónde se ubica el establecimiento educativo al que asiste?\t\t\t";
+            this.dataGridViewComboBoxColumn9.Items.AddRange(new object[] {
+            "Dentro de la comunidad",
+            "Cerca de la comunidad (menos de 1 kilómetro)",
+            "Lejos de la comunidad pero en el municipio",
+            "Fuera del municipio",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn9.Name = "dataGridViewComboBoxColumn9";
+            this.dataGridViewComboBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn9.Width = 170;
+            // 
+            // dataGridViewComboBoxColumn10
+            // 
+            this.dataGridViewComboBoxColumn10.HeaderText = "¿Cuál es la principal razón por la cual no asistió, no asiste o dejo de ir a un c" +
+                "entro educativo?\t\t\t\t\t\t";
+            this.dataGridViewComboBoxColumn10.Items.AddRange(new object[] {
+            "Actualmente asiste",
+            "No está en edad escolar aún",
+            "Problemas económicos",
+            "Preferencia o necesidad de trabajar",
+            "Quehaceres domésticos",
+            "Requiere educación especial",
+            "Maternidad o paternidad",
+            "Dificultad de acceso o movilización",
+            "Falta de interés personal o de padres",
+            "Problemas de rendimiento o conducta",
+            "Otra razón (especificar)\t\t\t",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn10.Name = "dataGridViewComboBoxColumn10";
+            this.dataGridViewComboBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn10.Width = 250;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "Especificar";
+            this.Column26.Name = "Column26";
+            // 
+            // dataGridViewComboBoxColumn11
+            // 
+            this.dataGridViewComboBoxColumn11.HeaderText = "¿Ha recibido algún tipo de formación complementaria?\t\t";
+            this.dataGridViewComboBoxColumn11.Items.AddRange(new object[] {
+            "Si (especificar)",
+            "No",
+            "NS/NR"});
+            this.dataGridViewComboBoxColumn11.Name = "dataGridViewComboBoxColumn11";
+            this.dataGridViewComboBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn11.Width = 120;
+            // 
+            // Column27
+            // 
+            this.Column27.HeaderText = "Especificar";
+            this.Column27.Name = "Column27";
+            // 
+            // dgvS4
+            // 
+            this.dgvS4.AllowUserToAddRows = false;
+            this.dgvS4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvS4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Columna1,
+            this.Column2,
+            this.Column1,
+            this.Column3,
+            this.Column8,
+            this.Column4,
+            this.Column9,
+            this.Column5,
+            this.Column6,
+            this.Especificar,
+            this.Column7,
+            this.Column28});
+            this.dgvS4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvS4.Location = new System.Drawing.Point(4, 19);
+            this.dgvS4.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvS4.Name = "dgvS4";
+            this.dgvS4.RowHeadersWidth = 25;
+            this.dgvS4.Size = new System.Drawing.Size(1768, 552);
+            this.dgvS4.TabIndex = 2;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Código";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 60;
+            // 
+            // Columna1
+            // 
+            this.Columna1.FillWeight = 50F;
+            this.Columna1.HeaderText = "¿Cada cuánto asiste a un centro de salud?";
+            this.Columna1.Items.AddRange(new object[] {
+            "Cada mes",
+            "Cada 3 meses",
+            "Cada 6 meses",
+            "Cada año",
+            "Nunca",
+            "NS/NR"});
+            this.Columna1.Name = "Columna1";
+            this.Columna1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Columna1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Columna1.Width = 130;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "¿Cuál es el nombre del centro de salud al que asiste regularmente?";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.Width = 140;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "¿Dónde se ubica el centro de salud donde asiste?";
+            this.Column1.Items.AddRange(new object[] {
+            "Dentro de la comunidad",
+            "Cerca de la comunidad (menos de 1 kilómetro)",
+            "Lejos de la comunidad pero en el municipio",
+            "Fuera del municipio",
+            "NS/NR"});
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 157;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Recientemente ha tenido algún problema de salud o enfermedad importante de mencio" +
+                "nar?";
+            this.Column3.Items.AddRange(new object[] {
+            "Si (especificar)",
+            "No",
+            "NS/NR"});
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column3.Width = 157;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Especificar";
+            this.Column8.Name = "Column8";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Recientemente, ¿ha sufrido algún accidente importante de mencionar?";
+            this.Column4.Items.AddRange(new object[] {
+            "Si (especificar)",
+            "No",
+            "NS/NR"});
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column4.Width = 155;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Especificar";
+            this.Column9.Name = "Column9";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "¿Con qué tipo de seguro de salud cuenta?";
+            this.Column5.Items.AddRange(new object[] {
+            "IGSS",
+            "Público",
+            "Privado",
+            "No posee",
+            "NS/NR"});
+            this.Column5.Name = "Column5";
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "¿Tiene alguna de las siguientes discapacidades?";
+            this.Column6.Items.AddRange(new object[] {
+            "Ceguera o dificultad para ver",
+            "Sordera o dificultad para oír",
+            "Mudez o dificultad en el habla",
+            "Dificultad física y/o movilidad",
+            "Retraso mental",
+            "Otra (especificar)",
+            "No tiene ninguna de estas condiciones de larga duración",
+            "NS/NR"});
+            this.Column6.Name = "Column6";
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column6.Width = 240;
+            // 
+            // Especificar
+            // 
+            this.Especificar.HeaderText = "Especificar";
+            this.Especificar.Name = "Especificar";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "¿Cuál es el orígen de esta discapacidad?";
+            this.Column7.Items.AddRange(new object[] {
+            "De nacimiendo",
+            "Por enfermedad",
+            "Por accidente",
+            "Por edad",
+            "Hereditaria",
+            "Otra (especificar)",
+            "NS/NR"});
+            this.Column7.Name = "Column7";
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column7.Width = 150;
+            // 
+            // Column28
+            // 
+            this.Column28.HeaderText = "Especificar";
+            this.Column28.Name = "Column28";
+            // 
+            // dgvS5
+            // 
+            this.dgvS5.AllowUserToAddRows = false;
+            this.dgvS5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvS5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column25,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21,
+            this.Column22,
+            this.Column23,
+            this.Column24});
+            this.dgvS5.Location = new System.Drawing.Point(6, 28);
+            this.dgvS5.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvS5.Name = "dgvS5";
+            this.dgvS5.RowHeadersWidth = 25;
+            this.dgvS5.Size = new System.Drawing.Size(1768, 535);
+            this.dgvS5.TabIndex = 2;
+            // 
+            // Column25
+            // 
+            this.Column25.HeaderText = "Código";
+            this.Column25.Name = "Column25";
+            this.Column25.Width = 60;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = " ¿Cuenta actualmente con trabajo remunerado o por cuenta propia?";
+            this.Column11.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "NS/NR"});
+            this.Column11.Name = "Column11";
+            this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column11.Width = 120;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "¿Actualmente está buscando trabajo remunerado o por cuenta propia?";
+            this.Column12.Items.AddRange(new object[] {
+            "Si",
+            "No",
+            "NS/NR"});
+            this.Column12.Name = "Column12";
+            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column12.Width = 120;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "¿Cuál es la razón o razones por la que no buscó trabajo remunerado o por cuenta p" +
+                "ropia recientemente?";
+            this.Column13.Items.AddRange(new object[] {
+            "Que haceres domésticos",
+            "Cuidado de los hijo/as",
+            "Enfermedad/discapacidad",
+            "Actualmente estudia",
+            "Trabaja actualmente",
+            "Desistió en la búsqueda",
+            "Menor de edad",
+            "Edad avanzada",
+            "Otro (Especificar)",
+            "NS/NR"});
+            this.Column13.Name = "Column13";
+            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column13.Width = 175;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Especificar";
+            this.Column14.Name = "Column14";
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "¿Cuál es la ocupación u oficio principal?";
+            this.Column15.Items.AddRange(new object[] {
+            "Ama de casa",
+            "Estudiante",
+            "Productor/a agrícola",
+            "Jornalero/a",
+            "Trabajo doméstico",
+            "Vendedor/a",
+            "Albañil",
+            "Mecánico/a",
+            "Obrero/a",
+            "Otro (Especificar)",
+            "NS/NR"});
+            this.Column15.Name = "Column15";
+            this.Column15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column15.Width = 150;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Especificar";
+            this.Column16.Name = "Column16";
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "¿Cuál el es tipo de contrato que tiene en su trabajo actual?";
+            this.Column17.Items.AddRange(new object[] {
+            "Permanente",
+            "Por temporada",
+            "Ocasional",
+            "Por tarea",
+            "Por plazo (o tiempo determinado)",
+            "NS/NR"});
+            this.Column17.Name = "Column17";
+            this.Column17.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column17.Width = 150;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "¿Cuál es la condición laboral de en su empleo actual?";
+            this.Column18.Items.AddRange(new object[] {
+            "Empleado con prestaciones",
+            "Empleado sin prestaciones",
+            "Trabajo por cuenta propia",
+            "Empleador",
+            "NS/NR"});
+            this.Column18.Name = "Column18";
+            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column18.Width = 155;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "¿Dónde se ubica el lugar de trabajo?";
+            this.Column19.Items.AddRange(new object[] {
+            "Dentro de la comunidad",
+            "Cerca de la comunidad (menos de 1 kilómetro)",
+            "Lejos de la comunidad pero en el municipio",
+            "En otro municipio",
+            "NS/NR"});
+            this.Column19.Name = "Column19";
+            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column19.Width = 160;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "¿Tiene otros trabajos, empleos, actividades o negocios además de su trabajo princ" +
+                "ipal?";
+            this.Column20.Items.AddRange(new object[] {
+            "Si (especificar)",
+            "No",
+            "NS/NR"});
+            this.Column20.Name = "Column20";
+            this.Column20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column20.Width = 150;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "Especificar";
+            this.Column21.Name = "Column21";
+            // 
+            // Column22
+            // 
+            this.Column22.HeaderText = "¿Cuántos días trabaja a la semana?";
+            this.Column22.Name = "Column22";
+            // 
+            // Column23
+            // 
+            this.Column23.HeaderText = "¿Cuántas horas trabaja al día?";
+            this.Column23.Name = "Column23";
+            // 
+            // Column24
+            // 
+            this.Column24.HeaderText = "¿Me podría decir cuál es el ingreso mensual de por el o los trabajos que realiza?" +
+                "";
+            this.Column24.Name = "Column24";
+            this.Column24.Width = 120;
+            // 
             // frmEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -8150,7 +8192,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1340, 805);
             this.Controls.Add(this.tbcDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEncuesta";
             this.Text = "frmEncuesta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEncuesta_FormClosing);
@@ -8173,19 +8215,15 @@
             this.tbpS2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS2)).EndInit();
             this.gbS2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).EndInit();
             this.tbpS3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNextS3)).EndInit();
             this.gbS3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS3)).EndInit();
             this.tbpS4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS4_Siguiente)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS4)).EndInit();
             this.tbpS5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbS5_Siguiente)).EndInit();
             this.gbS5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).EndInit();
             this.tbpS6.ResumeLayout(false);
             this.gbS6.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
@@ -8407,6 +8445,10 @@
             this.groupBox113.PerformLayout();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvS5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -8468,7 +8510,6 @@
         private System.Windows.Forms.DataGridView dgvS1;
         private System.Windows.Forms.GroupBox gbS2;
         private System.Windows.Forms.GroupBox gbS3;
-        private System.Windows.Forms.DataGridView dgvS3;
         private System.Windows.Forms.TabPage tbpS11;
         private System.Windows.Forms.GroupBox groupBox102;
         private System.Windows.Forms.Label label140;
@@ -8985,7 +9026,38 @@
         private System.Windows.Forms.TextBox txtS1014_Especificar;
 
         private System.Windows.Forms.MaskedTextBox txtS11_3a_AñoTraslado;
-
+        private System.Windows.Forms.MaskedTextBox txtHoraF;
+        private System.Windows.Forms.MaskedTextBox txtHoraI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.DataGridView dgvS2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgvCmbDepto;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgvCmbMuni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridView dgvS3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.DataGridView dgvS4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewComboBoxColumn Columna1;
@@ -9016,37 +9088,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn5;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn9;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
-        private System.Windows.Forms.DataGridView dgvS2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgvCmbDepto;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgvCmbMuni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.MaskedTextBox txtHoraF;
-        private System.Windows.Forms.MaskedTextBox txtHoraI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
 
 
     }
