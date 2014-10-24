@@ -259,10 +259,5 @@ namespace TechoCeiva
             else
                 lblExistencia.Content = "";
         }
-
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 	}
 }
