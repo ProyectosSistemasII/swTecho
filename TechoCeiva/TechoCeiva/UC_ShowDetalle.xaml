@@ -18,7 +18,7 @@
 		<DataGrid x:Name="DataGridDetalle" Height="361.483" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" Width="660.8" Margin="0,37,0,0" Background="White" BorderBrush="{x:Null}" Foreground="#FF333333" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" FontSize="14.667" MouseDoubleClick="DataGridDetalle_MouseDoubleClick">
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Herramienta" Width="300" Binding="{Binding Herramientas_idHerramientas}"/>
-				<DataGridTextColumn Header="Cantidad" Width="150" Binding="{Binding CantidadPrestada}"/>
+				<DataGridTextColumn Header="Cantidad" Width="300" Binding="{Binding CantidadPrestada}"/>
 			</DataGrid.Columns>
 		</DataGrid>
 		<Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
