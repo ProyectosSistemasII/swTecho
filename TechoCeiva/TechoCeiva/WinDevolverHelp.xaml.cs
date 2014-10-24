@@ -80,6 +80,7 @@ namespace TechoCeiva
                 verificar(1);
                 update(1);
                 txtPerdidas.Focus();
+                txtPerdidas.SelectAll();
             }
         }
 
@@ -90,6 +91,7 @@ namespace TechoCeiva
                 verificar(2);
                 update(2);
                 txtPendientes.Focus();
+                txtPendientes.SelectAll();
             }
         }
 
