@@ -23,6 +23,7 @@ namespace TechoCeiva
 	public partial class UC_Manage : UserControl
 	{
         public UsuarioLN currentUser { get; set; }
+        private int existenciaActual { get; set; }
 
         private ObservableCollection<_HerramientasLN> detalle = new ObservableCollection<_HerramientasLN>();
 		
@@ -227,6 +228,11 @@ namespace TechoCeiva
             }
         }
 
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            clearContent();
+        }
+
         private void clearContent()
         {
             DataGridPrestamo.Items.Clear();
@@ -235,6 +241,23 @@ namespace TechoCeiva
             cbxVoluntario.SelectedIndex = -1;
             cbxHerramienta.SelectedIndex = -1;
             cbxVoluntario.IsDropDownOpen = true;
+            cbxVoluntario.IsEditable = true;
+        }
+
+        private void cbxHerramienta_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateExistencia();
+        }
+
+        private void UpdateExistencia()
+        {
+            if (cbxHerramienta.SelectedIndex != -1)
+            {
+                _Herramientas chosenTool = cbxHerramienta.SelectedItem as _Herramientas;
+                lblExistencia.Content = chosenTool.Existencia + " unidades actualmente";
+            }
+            else
+                lblExistencia.Content = "";
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)

@@ -263,24 +263,26 @@
 			<Label x:Name="lblFech" Content="Fecha de préstamo:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" RenderTransformOrigin="0.493,0.461" Canvas.Left="304.5"/>
 			<Label x:Name="lblHerramienta" Content="Herramienta:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Top="81.507"/>
 			<Label x:Name="lblCantidad" Content="Cantidad:" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Canvas.Top="81.507" Canvas.Left="304.5"/>
-			<ComboBox x:Name="cbxVoluntario" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="19.507" ToolTip="Nombre de voluntario" Height="26.5" Foreground="#FF333333" KeyDown="cbxVoluntario_KeyDown" />
+			<ComboBox x:Name="cbxVoluntario" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="19.507" IsEditable="True" IsTextSearchEnabled="True" ToolTip="Nombre de voluntario" Height="26.5" Foreground="#FF333333" KeyDown="cbxVoluntario_KeyDown" />
 			<DatePicker x:Name="dpFecha" Width="270" FontSize="14.667" Canvas.Left="304.5" Canvas.Top="19.507" ToolTip="Seleccionar una fecha" Height="26.5" Foreground="#FF333333"/>
-			<ComboBox x:Name="cbxHerramienta" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="101.014" ToolTip="Nombre de Herramienta" Height="26.5" Foreground="#FF333333" KeyDown="cbxHerramienta_KeyDown" />
+			<ComboBox x:Name="cbxHerramienta" Style="{DynamicResource SimpleComboBox}" Width="270" FontSize="14.667" Canvas.Top="101.014" IsEditable="True" IsTextSearchEnabled="True" ToolTip="Nombre de Herramienta" Height="26.5" Foreground="#FF333333" KeyDown="cbxHerramienta_KeyDown" SelectionChanged="cbxHerramienta_SelectionChanged" />
 			<TextBox x:Name="txbxCantidad" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Width="270" Canvas.Left="304.5" Canvas.Top="101.014" Height="26.5" Foreground="#FF333333" KeyDown="txbxCantidad_KeyDown" />
 			<Button x:Name="btnAdd" Content="+" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="97.014" Width="41.959" Height="36" BorderBrush="{x:Null}" FontSize="14.667" Background="#FF0092DD" Foreground="White" ToolTip="Agregar a detalle" Click="btnAdd_Click" />
-			<DataGrid x:Name="DataGridPrestamo" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" Height="147.193" Width="574.5" Canvas.Top="160.021" BorderBrush="{x:Null}" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" FontSize="14.667" Background="White" Foreground="#FF333333">
+			<DataGrid x:Name="DataGridPrestamo" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" Height="147.193" Width="574.5" Canvas.Top="180.467" BorderBrush="{x:Null}" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" FontSize="14.667" Background="White" Foreground="#FF333333">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Herramienta" Binding="{Binding Nombre}" Width="372.3"/>
 					<DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="177.3"/>
 				</DataGrid.Columns>
 			</DataGrid>
-			<TextBox x:Name="txtObservaciones" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="344.06" FontSize="14.667" Height="66.494" Width="574.5" Foreground="#FF333333"/>
-			<Button x:Name="btnGuardar" Content="Guardar" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="378.554" Width="133" Height="36" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" Click="btnGuardar_Click" ToolTip="Guardar préstamo" />
-			<Button x:Name="btnCancelar" Content="Cancelar" Canvas.Left="749.401" Style="{DynamicResource SimpleButton}" Canvas.Top="378.554" Width="133" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667" ToolTip="Cancelar" Click="btnCancelar_Click" />
-			<Label x:Name="lblDetallePrestamo" Content="Detalle del préstamo:" Style="{DynamicResource SimpleLabel}" Canvas.Top="140.514" FontSize="14.667"/>
-			<Label Content="Observaciones:" Style="{DynamicResource SimpleLabel}" Canvas.Top="324.553" FontSize="14.667"/>
+			<TextBox x:Name="txtObservaciones" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Canvas.Top="364.506" FontSize="14.667" Height="66.494" Width="574.5" Foreground="#FF333333"/>
+			<Button x:Name="btnGuardar" Content="Guardar" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="377.754" Width="133" Height="36" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" Click="btnGuardar_Click" ToolTip="Guardar préstamo" />
+			<Button x:Name="btnCancelar" Content="Cancelar" Canvas.Left="751.801" Style="{DynamicResource SimpleButton}" Canvas.Top="377.754" Width="133" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667" ToolTip="Cancelar" Click="btnCancelar_Click" />
+			<Label x:Name="lblDetallePrestamo" Content="Detalle del préstamo:" Style="{DynamicResource SimpleLabel}" Canvas.Top="160.959" FontSize="14.667"/>
+			<Label Content="Observaciones:" Style="{DynamicResource SimpleLabel}" Canvas.Top="344.998" FontSize="14.667"/>
+
 			<Separator Height="0.5" Margin="0" Style="{DynamicResource SimpleSeparator}" Canvas.Top="68.507" Width="626.059" Background="#FFA0A0A0" Opacity="0.85"/>
-			<Button x:Name="btnQuit" Content="-" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="160.021" Width="41.959" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667" Click="btnQuit_Click" ToolTip="Quitar de detalle" />
+			<Button x:Name="btnQuit" Content="-" Canvas.Left="597.5" Style="{DynamicResource SimpleButton}" Canvas.Top="177.22" Width="41.959" Height="36" BorderBrush="{x:Null}" Background="#FFC52023" Foreground="White" FontSize="14.667" Click="btnQuit_Click" ToolTip="Quitar de detalle" />
+			<Label x:Name="lblExistencia" Content="" Style="{DynamicResource SimpleLabel}" Canvas.Top="131.514" FontSize="13.333" Canvas.Left="5"/>
 		</Canvas>
 	</Grid>
 </UserControl>

@@ -143,5 +143,9 @@ namespace Capa_Datos
             }
             return listaDetallesEspecificos;
         }
+
+        public void devolver()
+        {
+        }
     }
 }

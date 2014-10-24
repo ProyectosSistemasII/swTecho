@@ -40,17 +40,27 @@ namespace TechoCeiva
 
         private void btnDevolver_Click(object sender, RoutedEventArgs e)
         {
-            devolver();
+            showWinDevolver();
         }
 
-        private void devolver()
+        private void showWinDevolver()
         {
-            _DetallePrestamo detalle = DataGridDetalle.SelectedItem as _DetallePrestamo;
-            WinDevolverHelp nDevolucion = new WinDevolverHelp();
-            nDevolucion.txtHerramienta.Text = detalle.Herramientas_idHerramientas.ToString();
-            nDevolucion.txtFechaPrestamo.Text = this.date.ToShortDateString();
-            nDevolucion.txtCantidad.Text = detalle.CantidadPrestada.ToString();
-            nDevolucion.ShowDialog();
+            try
+            {
+                _DetallePrestamo detalle = DataGridDetalle.SelectedItem as _DetallePrestamo;
+                WinDevolverHelp nDevolucion = new WinDevolverHelp();
+                nDevolucion.txtHerramienta.Text = detalle.Herramientas_idHerramientas.ToString();
+                nDevolucion.txtFechaPrestamo.Text = this.date.ToShortDateString();
+                nDevolucion.txtCantidad.Text = detalle.CantidadPrestada.ToString();
+                nDevolucion.txtBuenEstado.Text = detalle.CantidadPrestada.ToString();
+                nDevolucion.ShowDialog();
+
+                saveContent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Debe seleccionar un campo para proseguir", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void fillGrid()
@@ -60,7 +70,11 @@ namespace TechoCeiva
 
         private void DataGridDetalle_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            devolver();
+            showWinDevolver();
+        }
+
+        private void saveContent()
+        {
         }
 	}
 }

@@ -39,11 +39,18 @@ namespace TechoCeiva
 
         private void verDetalle()
         {
-            btnVerDetalle.IsEnabled = false;
-            btnBack.IsEnabled = true;
-            _Prestamo detalle = prestamos.DataGridListadoPrestamos.SelectedItem as _Prestamo;
-            CanvasDevTool.Children.Clear();
-            CanvasDevTool.Children.Add(new UC_ShowDetalle(detalle.iDPrestamo, detalle.fechaPrestamo));
+            try
+            {
+                btnVerDetalle.IsEnabled = false;
+                btnBack.IsEnabled = true;
+                _Prestamo detalle = prestamos.DataGridListadoPrestamos.SelectedItem as _Prestamo;
+                CanvasDevTool.Children.Clear();
+                CanvasDevTool.Children.Add(new UC_ShowDetalle(detalle.iDPrestamo, detalle.fechaPrestamo));
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar un campo para seguir", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
