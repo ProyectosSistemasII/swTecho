@@ -37,15 +37,8 @@
 		<TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="23,181.5,0,234" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Width="220" FontSize="14.667" Height="26.5"/>
 		<TextBox x:Name="txtNombreEmergencia" Margin="23,271.5,396,144" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
 		<TextBox x:Name="txtTelEmergencia" Margin="23,339,396,76.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
-		<Button Content="" Height="32" Margin="287,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" d:LayoutOverrides="HorizontalAlignment" Name="btnGuardar" Width="32" BorderBrush="{x:Null}" >
-			<Button.Background>
-                <ImageBrush ImageSource="save.png" Stretch="None" TileMode="Tile"/>
-			</Button.Background>
-		</Button>
-        <Button Content="" HorizontalAlignment="Right" Height="32" Margin="0,0,243,35" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="32" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" >
-			<Button.Background>
-				<ImageBrush Stretch="None" ImageSource="save.png"/>
-			</Button.Background>
-		</Button>
+		<Button Content="Guardar" Height="26" Margin="320,0,239,88" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" Name="btnGuardar" Width="80" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" />
+        <Button Content="Guardar" HorizontalAlignment="Left" Height="26" Margin="314,0,0,88" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="80" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" Background="#FF0091DC" Foreground="White" d:LayoutOverrides="HorizontalAlignment" />
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Right" Height="26" Margin="0,0,147,88" VerticalAlignment="Bottom" Width="80" Foreground="White" Background="#FFC52023" FontSize="14.667" Click="btnCancelar_Click" />
     </Grid>
 </Window>

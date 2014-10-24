@@ -73,6 +73,8 @@ namespace TechoCeiva
             nWinAddVoluntario.txtCorreo.Text = selec.correo;
             nWinAddVoluntario.txtNombreEmergencia.Text = selec.personaEmergencia;
             nWinAddVoluntario.txtTelEmergencia.Text = selec.telefonoEmergencia;
+            nWinAddVoluntario.cmbDepartamento.Text = selec.nombreD;
+            nWinAddVoluntario.cmbMunicipio.Text = selec.nombreM;
             nWinAddVoluntario.btnGuardar.Visibility = Visibility.Hidden;
             nWinAddVoluntario.getId(idVol);
             nWinAddVoluntario.ShowDialog();

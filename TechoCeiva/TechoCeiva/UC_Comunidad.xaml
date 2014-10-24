@@ -3,19 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="428" d:DesignWidth="512" Loaded="UserControl_Loaded">
-    <Grid Height="406" Width="491">
-        <Label Content="Nombre:" FontSize="14.667" Margin="12,56,382,317" Name="lblNombreC" Style="{DynamicResource SimpleLabel}" />
-        <ComboBox FontSize="14.667" Margin="130,95,21,289" Name="cmbDepartamento" Style="{DynamicResource SimpleComboBox}" Width="324" SelectionChanged="cmbDepartamento_SelectionChanged" />
-        <Label Content="Departamento:" FontSize="14.667" Margin="12,86,0,289" Name="lblDepartamento" Style="{DynamicResource SimpleLabel}" HorizontalAlignment="Left" Width="112" />
-        <ComboBox FontSize="14.667" Margin="138,127,29,257" Name="cmbMunicipio" Style="{DynamicResource SimpleComboBox}" Width="324" />
-        <Label Content="Municipio:" FontSize="14.667" HorizontalAlignment="Left" Margin="12,118,0,257" Name="label1" Style="{DynamicResource SimpleLabel}" Width="112" />
-        <Label Content="Mantenimiento comunidades" FontSize="26.667" Foreground="#FF626465" Margin="10,10,101,356" Name="lblTitle" Style="{DynamicResource SimpleLabel}" />
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="26" Margin="93,368,315,12" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" />
-        <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="Eliminar" FontSize="14.667" Foreground="White" Height="26" Margin="0,368,205,12" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Width="88" HorizontalAlignment="Right" Click="btnCancelar_Click" />
-        <TextBox FontSize="14.667" Margin="138,61,29,317" Name="txtNombre" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" />
-        <DataGrid x:Name="dataGridComn" Margin="12,174,29,74" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" AutoGenerateColumns="false" IsReadOnly="True" FontSize="14.667" MouseDoubleClick="dataGridComn_MouseDoubleClick">
+             mc:Ignorable="d" d:DesignWidth="512" Loaded="UserControl_Loaded" Height="577">
+    <Grid Width="491" Margin="10.5,8,10.5,0" Height="577">
+        <Label Content="Nombre:" FontSize="14.667" Margin="23,91,403,464" Name="lblNombreC" Style="{DynamicResource SimpleLabel}" Height="22" Width="65" />
+        <ComboBox FontSize="14.667" Margin="23,171,144,379.5" Name="cmbDepartamento" Style="{DynamicResource SimpleComboBox}" Width="324" SelectionChanged="cmbDepartamento_SelectionChanged" Height="26.5" />
+        <Label Content="Departamento:" FontSize="14.667" Margin="23,149,0,406" Name="lblDepartamento" Style="{DynamicResource SimpleLabel}" HorizontalAlignment="Left" Width="112" Height="22" />
+        <ComboBox FontSize="14.667" Margin="23,229.5,144,321" Name="cmbMunicipio" Style="{DynamicResource SimpleComboBox}" Width="324" Height="26.5" />
+        <Label Content="Municipio:" FontSize="14.667" HorizontalAlignment="Left" Margin="23,207.5,0,347.5" Name="label1" Style="{DynamicResource SimpleLabel}" Width="112" Height="22" />
+        <Label Content="Mantenimiento comunidades" FontSize="26.667" Foreground="#FF626465" Margin="23,23,88,514" Name="lblTitle" Style="{DynamicResource SimpleLabel}" Height="40" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="26" Margin="379,113,32,438" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" Width="80" />
+        <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="Eliminar" FontSize="14.667" Foreground="White" Height="26" Margin="0,171,32,380" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Width="80" HorizontalAlignment="Right" Click="btnCancelar_Click" d:LayoutOverrides="HorizontalAlignment" />
+        <TextBox FontSize="14.667" Margin="23,113,144,437.5" Name="txtNombre" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Height="26.5" />
+        <DataGrid x:Name="dataGridComn" Margin="23,296,0,17" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" AutoGenerateColumns="false" IsReadOnly="True" FontSize="14.667" MouseDoubleClick="dataGridComn_MouseDoubleClick" Width="439">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre de Comunidad" Binding="{Binding Nombre}"/>
                 <DataGridTextColumn Header="Municipio" Binding="{Binding MunicipioNombre}"/>

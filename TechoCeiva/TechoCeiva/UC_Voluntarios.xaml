@@ -337,8 +337,11 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombres" Binding="{Binding nombres}"/>
                 <DataGridTextColumn Header="Apellidos" Binding="{Binding apellidos}"/>
-                <DataGridTextColumn Header="Dirección" Binding="{Binding direccion}"/>
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}"/>
+                <DataGridTextColumn Header="Correo" Binding="{Binding correo}"/>
+                <DataGridTextColumn Header="Dirección" Binding="{Binding direccion}"/>
+                <DataGridTextColumn Header="Municipio" Binding="{Binding nombreM}"/>
+                <DataGridTextColumn Header="Departamento" Binding="{Binding nombreD}"/>
                 <DataGridTextColumn Header="Contacto de Emergencia" Binding="{Binding personaEmergencia}"/>
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefonoEmergencia}"/>
             </DataGrid.Columns>            

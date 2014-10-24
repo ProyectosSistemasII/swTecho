@@ -16,7 +16,9 @@ namespace Capa_Datos
         public string correo{get; set;}
         public bool activo{get; set;}
         public int departamento { get; set; }
+        public string nombreD { get; set; }
         public int municipio { get; set; }
+        public string nombreM { get; set; }
         public string personaEmergencia{get; set;}
         public string telefonoEmergencia{get; set;}
         public List<Error> errores { get; set; }
@@ -32,9 +34,27 @@ namespace Capa_Datos
             this.correo = "";
             this.activo = false;
             this.departamento = 0;
+            this.nombreD = "";
             this.municipio = 0;
+            this.nombreM = "";
             this.personaEmergencia = "";
             this.telefonoEmergencia = "";
+        }
+
+        public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, string personaEmergencia, string telefonoEmergencia, string municipio, string departamento)
+        {
+            this.idVoluntarios = idVoluntarios;
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.correo = correo;
+            this.personaEmergencia = personaEmergencia;
+            this.telefonoEmergencia = telefonoEmergencia;
+            this.nombreM = municipio;
+            this.nombreD = departamento;
+
+            this.errores = new List<Error>();
         }
 
         public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, bool activo, int municipio, int departamento, string personaEmergencia, string telefonoEmergencia)
@@ -87,7 +107,7 @@ namespace Capa_Datos
         public List<_Voluntarios> Obtener_V()
         {
             List<_Voluntarios> Lista_V = new List<_Voluntarios>();
-            MySqlCommand _comando = new MySqlCommand("SELECT * FROM VOLUNTARIOS WHERE Activo=true", _conexion);
+            MySqlCommand _comando = new MySqlCommand("SELECT  Voluntarios.idVoluntarios, Voluntarios.Nombres, Voluntarios.Apellidos, Voluntarios.Telefono, Voluntarios.Correo, Voluntarios.Direccion, municipio.NombreM, departamento.NombreD, Voluntarios.PersonaEmergencia, Voluntarios.TelEmergencia FROM Voluntarios  inner join Departamento on Departamento_idDepartamento = idDepartamento  inner join Municipio  on Municipio_idMunicipio = idMunicipio where activo=true group by voluntarios.Nombres ", _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();
@@ -98,7 +118,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Voluntarios _propiedad = new _Voluntarios(Convert.ToInt32(_row["idVoluntarios"]), Convert.ToString(_row["Nombres"]), Convert.ToString(_row["Apellidos"]), Convert.ToString(_row["Telefono"]), Convert.ToString(_row["Direccion"]), Convert.ToString(_row["Correo"]), Convert.ToBoolean(_row["Activo"]), Convert.ToInt32(_row["Departamento_idDepartamento"]), Convert.ToInt32(_row["Municipio_idMunicipio"]), Convert.ToString(_row["PersonaEmergencia"]), Convert.ToString(_row["TelEmergencia"]));
+                _Voluntarios _propiedad = new _Voluntarios(Convert.ToInt32(_row["idVoluntarios"]), Convert.ToString(_row["Nombres"]), Convert.ToString(_row["Apellidos"]), Convert.ToString(_row["Telefono"]), Convert.ToString(_row["Direccion"]), Convert.ToString(_row["Correo"]), Convert.ToString(_row["PersonaEmergencia"]), Convert.ToString(_row["TelEmergencia"]), Convert.ToString(_row["NombreM"]),Convert.ToString(_row["NombreD"]));
                 Lista_V.Add(_propiedad);
             }
             return Lista_V;
