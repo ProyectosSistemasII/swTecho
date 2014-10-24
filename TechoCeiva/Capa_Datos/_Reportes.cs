@@ -46,7 +46,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT count(idS1_Integr) as Total from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad;";
+                string consulta = "SELECT count(idS1_Integr) as Total from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad union SELECT count(idS1_Integr) AS Hombres from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Hombre'AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();
@@ -70,10 +70,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT idS1_Integr AS 'Mujeres no embarazadas' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Mujer' AND Embarazo = 'No' AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17;"
-                                + "SELECT idS1_Integr AS 'Mujeres embarazadas' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Mujer' AND Embarazo = 'Si' AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17;"
-                                + "SELECT idS1_Integr AS 'Hombres' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Hombre'AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17;"
-                                + "SELECT idS1_Integr AS 'Niños' from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 < 18;";
+                string consulta = "SELECT if(Genero = 'Mujer' AND Embarazo = 'No' AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17, 'Mujeres no embarazadas',if(Genero = 'Mujer' AND Embarazo = 'Si' AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17,'Mujeres embarazadas',if(Genero = 'Hombre'AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17,'Hombres','Niños'))) as Total from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();

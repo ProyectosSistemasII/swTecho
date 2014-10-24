@@ -3722,14 +3722,6 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnTotal;
             
-            private global::System.Data.DataColumn columnMujeres_no_embarazadas;
-            
-            private global::System.Data.DataColumn columnMujeres_embarazadas;
-            
-            private global::System.Data.DataColumn columnHombres;
-            
-            private global::System.Data.DataColumn columnNiños;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public S1_IntegrantesDataTable() {
@@ -3773,38 +3765,6 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Mujeres_no_embarazadasColumn {
-                get {
-                    return this.columnMujeres_no_embarazadas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Mujeres_embarazadasColumn {
-                get {
-                    return this.columnMujeres_embarazadas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HombresColumn {
-                get {
-                    return this.columnHombres;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NiñosColumn {
-                get {
-                    return this.columnNiños;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3840,14 +3800,10 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public S1_IntegrantesRow AddS1_IntegrantesRow(string Total, string Mujeres_no_embarazadas, string Mujeres_embarazadas, string Hombres, string Niños) {
+            public S1_IntegrantesRow AddS1_IntegrantesRow(string Total) {
                 S1_IntegrantesRow rowS1_IntegrantesRow = ((S1_IntegrantesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Total,
-                        Mujeres_no_embarazadas,
-                        Mujeres_embarazadas,
-                        Hombres,
-                        Niños};
+                        Total};
                 rowS1_IntegrantesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowS1_IntegrantesRow);
                 return rowS1_IntegrantesRow;
@@ -3871,10 +3827,6 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnTotal = base.Columns["Total"];
-                this.columnMujeres_no_embarazadas = base.Columns["Mujeres no embarazadas"];
-                this.columnMujeres_embarazadas = base.Columns["Mujeres embarazadas"];
-                this.columnHombres = base.Columns["Hombres"];
-                this.columnNiños = base.Columns["Niños"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3882,14 +3834,6 @@ namespace TechoCeiva {
             private void InitClass() {
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
-                this.columnMujeres_no_embarazadas = new global::System.Data.DataColumn("Mujeres no embarazadas", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMujeres_no_embarazadas);
-                this.columnMujeres_embarazadas = new global::System.Data.DataColumn("Mujeres embarazadas", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMujeres_embarazadas);
-                this.columnHombres = new global::System.Data.DataColumn("Hombres", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHombres);
-                this.columnNiños = new global::System.Data.DataColumn("Niños", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNiños);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6204,72 +6148,6 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Mujeres_no_embarazadas {
-                get {
-                    try {
-                        return ((string)(this[this.tableS1_Integrantes.Mujeres_no_embarazadasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mujeres no embarazadas\' de la tabla \'S1_Integrantes\' es D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableS1_Integrantes.Mujeres_no_embarazadasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Mujeres_embarazadas {
-                get {
-                    try {
-                        return ((string)(this[this.tableS1_Integrantes.Mujeres_embarazadasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mujeres embarazadas\' de la tabla \'S1_Integrantes\' es DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tableS1_Integrantes.Mujeres_embarazadasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Hombres {
-                get {
-                    try {
-                        return ((string)(this[this.tableS1_Integrantes.HombresColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Hombres\' de la tabla \'S1_Integrantes\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableS1_Integrantes.HombresColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Niños {
-                get {
-                    try {
-                        return ((string)(this[this.tableS1_Integrantes.NiñosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Niños\' de la tabla \'S1_Integrantes\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableS1_Integrantes.NiñosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTotalNull() {
                 return this.IsNull(this.tableS1_Integrantes.TotalColumn);
             }
@@ -6278,54 +6156,6 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTotalNull() {
                 this[this.tableS1_Integrantes.TotalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMujeres_no_embarazadasNull() {
-                return this.IsNull(this.tableS1_Integrantes.Mujeres_no_embarazadasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMujeres_no_embarazadasNull() {
-                this[this.tableS1_Integrantes.Mujeres_no_embarazadasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMujeres_embarazadasNull() {
-                return this.IsNull(this.tableS1_Integrantes.Mujeres_embarazadasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMujeres_embarazadasNull() {
-                this[this.tableS1_Integrantes.Mujeres_embarazadasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHombresNull() {
-                return this.IsNull(this.tableS1_Integrantes.HombresColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHombresNull() {
-                this[this.tableS1_Integrantes.HombresColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNiñosNull() {
-                return this.IsNull(this.tableS1_Integrantes.NiñosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNiñosNull() {
-                this[this.tableS1_Integrantes.NiñosColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -142,10 +142,6 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
-              <xs:element name="Mujeres_x0020_no_x0020_embarazadas" msprop:Generator_ColumnVarNameInTable="columnMujeres_no_embarazadas" msprop:Generator_ColumnPropNameInRow="Mujeres_no_embarazadas" msprop:Generator_ColumnPropNameInTable="Mujeres_no_embarazadasColumn" msprop:Generator_UserColumnName="Mujeres no embarazadas" type="xs:string" minOccurs="0" />
-              <xs:element name="Mujeres_x0020_embarazadas" msprop:Generator_ColumnVarNameInTable="columnMujeres_embarazadas" msprop:Generator_ColumnPropNameInRow="Mujeres_embarazadas" msprop:Generator_ColumnPropNameInTable="Mujeres_embarazadasColumn" msprop:Generator_UserColumnName="Mujeres embarazadas" type="xs:string" minOccurs="0" />
-              <xs:element name="Hombres" msprop:Generator_ColumnVarNameInTable="columnHombres" msprop:Generator_ColumnPropNameInRow="Hombres" msprop:Generator_ColumnPropNameInTable="HombresColumn" msprop:Generator_UserColumnName="Hombres" type="xs:string" minOccurs="0" />
-              <xs:element name="Niños" msprop:Generator_ColumnVarNameInTable="columnNiños" msprop:Generator_ColumnPropNameInRow="Niños" msprop:Generator_ColumnPropNameInTable="NiñosColumn" msprop:Generator_UserColumnName="Niños" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

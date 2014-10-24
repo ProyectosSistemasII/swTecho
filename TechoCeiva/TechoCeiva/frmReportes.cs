@@ -42,7 +42,7 @@ namespace TechoCeiva
             {
                 //S8_ServiciosLN NReporte = new S8_ServiciosLN();
                 rptS1_Integrantes rpt = new rptS1_Integrantes();
-                rpt.SetDataSource(generar.NumeroTotalPersonas(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                rpt.SetDataSource(generar.ClasificacionTotalPersonas(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
 
