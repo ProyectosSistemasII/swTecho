@@ -152,6 +152,12 @@
       <DependentUpon>RptS5_Trabajo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RptS7_Vivienda.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptS7_Vivienda.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RptS8_Servicios.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -318,6 +324,10 @@
     <EmbeddedResource Include="RptS5_Trabajo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptS5_Trabajo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptS7_Vivienda.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptS7_Vivienda.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RptS8_Servicios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -42,6 +42,30 @@ namespace Capa_Datos
             }
         }
 
+        public DataTable GenerarVivienda(int idComunidad)
+        {
+            try
+            {
+                string consulta = "SELECT Cuartos, Camas FROM s7_Viv INNER JOIN Encuestas ON Comunidad_idComunidad = @idComunidad AND Encuestas_idEncuestas = s7_Viv.Encuestas_idEncuestas";
+                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         public DataTable ClasificacionTotalPersonas(int idComunidad)
         {
             try

@@ -60,6 +60,14 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpts5;
             }
 
+            if (cmbSeleccionReporte.SelectedItem == "Vivienda")
+            {
+                RptS7_Vivienda rpts7 = new RptS7_Vivienda();
+                rpts7.SetDataSource(generar.GenerarVivienda(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                rpts7.SetParameterValue("Comunidad", NombreComunidad);
+                crvReportes.ReportSource = rpts7;
+            }
+
             if (cmbSeleccionReporte.SelectedItem == "Servicios") // se ejecuta se selecciona servicio el el combox
             {
                 S8_ServiciosLN NReporte = new S8_ServiciosLN(); // se instancia una nueva clase de servcios y tambien el reporte de servicios
