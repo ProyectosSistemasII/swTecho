@@ -42,30 +42,6 @@ namespace Capa_Datos
             }
         }
 
-        public DataTable NumeroTotalPersonas(int idComunidad)
-        {
-            try
-            {
-                string consulta = "SELECT count(idS1_Integr) as Total from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad union SELECT count(idS1_Integr) AS Hombres from s1_Integr inner join Encuestas on Encuestas.idEncuestas = s1_Integr.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad WHERE Genero = 'Hombre'AND DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(STR_TO_DATE(FechaNac,'%d/%m/%Y'))), '%Y')+0 > 17";
-                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
-                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
-                comando.Connection.Open();
-                comando.ExecuteNonQuery();
-                comando.Connection.Close();
-
-                DataSet ds = new DataSet();
-                MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                da.Fill(ds);
-
-                return ds.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
         public DataTable ClasificacionTotalPersonas(int idComunidad)
         {
             try
@@ -89,11 +65,11 @@ namespace Capa_Datos
             }
         }
 
-        public DataTable EstadoCiviles(int idComunidad)
+        public DataTable Demografico(int idComunidad)
         {
             try
             {
-                string consulta = "SELECT EstadoCivil from s2_dem inner join Encuestas on Encuestas.idEncuestas = s2_dem.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
+                string consulta = "SELECT EstadoCivil, Departamento from s2_dem inner join Encuestas on Encuestas.idEncuestas = s2_dem.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();

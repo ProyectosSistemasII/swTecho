@@ -51,9 +51,10 @@ namespace TechoCeiva
             if (cmbSeleccionReporte.SelectedItem == "Datos demográficos")
             {
                 //S8_ServiciosLN NReporte = new S8_ServiciosLN();
-                RptS5_Trabajo rpts5 = new RptS5_Trabajo();
-                rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
-                crvReportes.ReportSource = rpts5;
+                rptS2_Demograficos rpt = new rptS2_Demograficos();
+                rpt.SetDataSource(generar.Demografico(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                rpt.SetParameterValue("Comunidad", NombreComunidad);
+                crvReportes.ReportSource = rpt;
 
             }
 
