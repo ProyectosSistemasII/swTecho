@@ -52,30 +52,30 @@ namespace TechoCeiva
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
             }
-
+            // Se ejecuta si selecciona Trabajo en el combobox
             if (cmbSeleccionReporte.SelectedItem == "Trabajo")
             {
                 RptS5_Trabajo rpts5 = new RptS5_Trabajo();
                 rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpts5.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpts5;
+                crvReportes.ReportSource = rpts5; // se agrega el reporte al crystalview para su visualizacion
             }
-
+            // Se ejecuta si selecciona Vivienda en el combobox
             if (cmbSeleccionReporte.SelectedItem == "Vivienda")
             {
                 RptS7_Vivienda rpts7 = new RptS7_Vivienda();
                 rpts7.SetDataSource(generar.GenerarVivienda(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpts7.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpts7;
+                crvReportes.ReportSource = rpts7; // se agrega el reporte al crystalview para su visualizacion
             }
 
-            if (cmbSeleccionReporte.SelectedItem == "Servicios") // se ejecuta se selecciona servicio el el combox
+            if (cmbSeleccionReporte.SelectedItem == "Servicios") // se ejecuta se selecciona servicio en el combobox
             {
-                S8_ServiciosLN NReporte = new S8_ServiciosLN(); // se instancia una nueva clase de servcios y tambien el reporte de servicios
+                S8_ServiciosLN NReporte = new S8_ServiciosLN(); // se instancia una nueva clase de servicios y tambien el reporte de servicios
                 RptS8_Servicios rpt = new RptS8_Servicios();
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));// se toma el id de la comunidad, y se le envia para la capa de logica y datos para hacer el query
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt; // se agrega el reporte a al crystalview para su visualizacion.
+                crvReportes.ReportSource = rpt; // se agrega el reporte al crystalview para su visualizacion
             }
             else if (cmbSeleccionReporte.SelectedItem == "Propiedad")
             {

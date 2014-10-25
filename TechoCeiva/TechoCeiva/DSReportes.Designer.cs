@@ -4372,6 +4372,38 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnCamas;
             
+            private global::System.Data.DataColumn columnConcreto;
+            
+            private global::System.Data.DataColumn columnTejaBarro;
+            
+            private global::System.Data.DataColumn columnLamina;
+            
+            private global::System.Data.DataColumn columnTejaDuralita;
+            
+            private global::System.Data.DataColumn columnPaja;
+            
+            private global::System.Data.DataColumn columnDesechos;
+            
+            private global::System.Data.DataColumn columnBlockLadrilloPrefabr;
+            
+            private global::System.Data.DataColumn columnMadera;
+            
+            private global::System.Data.DataColumn columnAdobe;
+            
+            private global::System.Data.DataColumn columnLaminaP;
+            
+            private global::System.Data.DataColumn columnBaharequeBambu;
+            
+            private global::System.Data.DataColumn columnDesechosP;
+            
+            private global::System.Data.DataColumn columnEncementado;
+            
+            private global::System.Data.DataColumn columnLadrillosBarro;
+            
+            private global::System.Data.DataColumn columnMaderaPi;
+            
+            private global::System.Data.DataColumn columnTierra;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public S7_ViviendaDataTable() {
@@ -4423,6 +4455,134 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ConcretoColumn {
+                get {
+                    return this.columnConcreto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TejaBarroColumn {
+                get {
+                    return this.columnTejaBarro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LaminaColumn {
+                get {
+                    return this.columnLamina;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TejaDuralitaColumn {
+                get {
+                    return this.columnTejaDuralita;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PajaColumn {
+                get {
+                    return this.columnPaja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DesechosColumn {
+                get {
+                    return this.columnDesechos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BlockLadrilloPrefabrColumn {
+                get {
+                    return this.columnBlockLadrilloPrefabr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaderaColumn {
+                get {
+                    return this.columnMadera;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AdobeColumn {
+                get {
+                    return this.columnAdobe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LaminaPColumn {
+                get {
+                    return this.columnLaminaP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BaharequeBambuColumn {
+                get {
+                    return this.columnBaharequeBambu;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DesechosPColumn {
+                get {
+                    return this.columnDesechosP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EncementadoColumn {
+                get {
+                    return this.columnEncementado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LadrillosBarroColumn {
+                get {
+                    return this.columnLadrillosBarro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaderaPiColumn {
+                get {
+                    return this.columnMaderaPi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TierraColumn {
+                get {
+                    return this.columnTierra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4458,11 +4618,45 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public S7_ViviendaRow AddS7_ViviendaRow(string Cuartos, string Camas) {
+            public S7_ViviendaRow AddS7_ViviendaRow(
+                        string Cuartos, 
+                        string Camas, 
+                        string Concreto, 
+                        string TejaBarro, 
+                        string Lamina, 
+                        string TejaDuralita, 
+                        string Paja, 
+                        string Desechos, 
+                        string BlockLadrilloPrefabr, 
+                        string Madera, 
+                        string Adobe, 
+                        string LaminaP, 
+                        string BaharequeBambu, 
+                        string DesechosP, 
+                        string Encementado, 
+                        string LadrillosBarro, 
+                        string MaderaPi, 
+                        string Tierra) {
                 S7_ViviendaRow rowS7_ViviendaRow = ((S7_ViviendaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cuartos,
-                        Camas};
+                        Camas,
+                        Concreto,
+                        TejaBarro,
+                        Lamina,
+                        TejaDuralita,
+                        Paja,
+                        Desechos,
+                        BlockLadrilloPrefabr,
+                        Madera,
+                        Adobe,
+                        LaminaP,
+                        BaharequeBambu,
+                        DesechosP,
+                        Encementado,
+                        LadrillosBarro,
+                        MaderaPi,
+                        Tierra};
                 rowS7_ViviendaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowS7_ViviendaRow);
                 return rowS7_ViviendaRow;
@@ -4487,6 +4681,22 @@ namespace TechoCeiva {
             internal void InitVars() {
                 this.columnCuartos = base.Columns["Cuartos"];
                 this.columnCamas = base.Columns["Camas"];
+                this.columnConcreto = base.Columns["Concreto"];
+                this.columnTejaBarro = base.Columns["TejaBarro"];
+                this.columnLamina = base.Columns["Lamina"];
+                this.columnTejaDuralita = base.Columns["TejaDuralita"];
+                this.columnPaja = base.Columns["Paja"];
+                this.columnDesechos = base.Columns["Desechos"];
+                this.columnBlockLadrilloPrefabr = base.Columns["BlockLadrilloPrefabr"];
+                this.columnMadera = base.Columns["Madera"];
+                this.columnAdobe = base.Columns["Adobe"];
+                this.columnLaminaP = base.Columns["LaminaP"];
+                this.columnBaharequeBambu = base.Columns["BaharequeBambu"];
+                this.columnDesechosP = base.Columns["DesechosP"];
+                this.columnEncementado = base.Columns["Encementado"];
+                this.columnLadrillosBarro = base.Columns["LadrillosBarro"];
+                this.columnMaderaPi = base.Columns["MaderaPi"];
+                this.columnTierra = base.Columns["Tierra"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4496,6 +4706,38 @@ namespace TechoCeiva {
                 base.Columns.Add(this.columnCuartos);
                 this.columnCamas = new global::System.Data.DataColumn("Camas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCamas);
+                this.columnConcreto = new global::System.Data.DataColumn("Concreto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnConcreto);
+                this.columnTejaBarro = new global::System.Data.DataColumn("TejaBarro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTejaBarro);
+                this.columnLamina = new global::System.Data.DataColumn("Lamina", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLamina);
+                this.columnTejaDuralita = new global::System.Data.DataColumn("TejaDuralita", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTejaDuralita);
+                this.columnPaja = new global::System.Data.DataColumn("Paja", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaja);
+                this.columnDesechos = new global::System.Data.DataColumn("Desechos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDesechos);
+                this.columnBlockLadrilloPrefabr = new global::System.Data.DataColumn("BlockLadrilloPrefabr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBlockLadrilloPrefabr);
+                this.columnMadera = new global::System.Data.DataColumn("Madera", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMadera);
+                this.columnAdobe = new global::System.Data.DataColumn("Adobe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdobe);
+                this.columnLaminaP = new global::System.Data.DataColumn("LaminaP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLaminaP);
+                this.columnBaharequeBambu = new global::System.Data.DataColumn("BaharequeBambu", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBaharequeBambu);
+                this.columnDesechosP = new global::System.Data.DataColumn("DesechosP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDesechosP);
+                this.columnEncementado = new global::System.Data.DataColumn("Encementado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEncementado);
+                this.columnLadrillosBarro = new global::System.Data.DataColumn("LadrillosBarro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLadrillosBarro);
+                this.columnMaderaPi = new global::System.Data.DataColumn("MaderaPi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaderaPi);
+                this.columnTierra = new global::System.Data.DataColumn("Tierra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTierra);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7080,6 +7322,263 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Concreto {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.ConcretoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Concreto\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.ConcretoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TejaBarro {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.TejaBarroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TejaBarro\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.TejaBarroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Lamina {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.LaminaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Lamina\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.LaminaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TejaDuralita {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.TejaDuralitaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TejaDuralita\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.TejaDuralitaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Paja {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.PajaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Paja\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.PajaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Desechos {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.DesechosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Desechos\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.DesechosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BlockLadrilloPrefabr {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.BlockLadrilloPrefabrColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BlockLadrilloPrefabr\' de la tabla \'S7_Vivienda\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.BlockLadrilloPrefabrColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Madera {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.MaderaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Madera\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.MaderaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Adobe {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.AdobeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Adobe\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.AdobeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LaminaP {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.LaminaPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LaminaP\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.LaminaPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BaharequeBambu {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.BaharequeBambuColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BaharequeBambu\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.BaharequeBambuColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DesechosP {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.DesechosPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DesechosP\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.DesechosPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Encementado {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.EncementadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Encementado\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.EncementadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LadrillosBarro {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.LadrillosBarroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LadrillosBarro\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.LadrillosBarroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MaderaPi {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.MaderaPiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MaderaPi\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.MaderaPiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tierra {
+                get {
+                    try {
+                        return ((string)(this[this.tableS7_Vivienda.TierraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tierra\' de la tabla \'S7_Vivienda\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableS7_Vivienda.TierraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCuartosNull() {
                 return this.IsNull(this.tableS7_Vivienda.CuartosColumn);
             }
@@ -7100,6 +7599,198 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCamasNull() {
                 this[this.tableS7_Vivienda.CamasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsConcretoNull() {
+                return this.IsNull(this.tableS7_Vivienda.ConcretoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetConcretoNull() {
+                this[this.tableS7_Vivienda.ConcretoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTejaBarroNull() {
+                return this.IsNull(this.tableS7_Vivienda.TejaBarroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTejaBarroNull() {
+                this[this.tableS7_Vivienda.TejaBarroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLaminaNull() {
+                return this.IsNull(this.tableS7_Vivienda.LaminaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLaminaNull() {
+                this[this.tableS7_Vivienda.LaminaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTejaDuralitaNull() {
+                return this.IsNull(this.tableS7_Vivienda.TejaDuralitaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTejaDuralitaNull() {
+                this[this.tableS7_Vivienda.TejaDuralitaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPajaNull() {
+                return this.IsNull(this.tableS7_Vivienda.PajaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPajaNull() {
+                this[this.tableS7_Vivienda.PajaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDesechosNull() {
+                return this.IsNull(this.tableS7_Vivienda.DesechosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDesechosNull() {
+                this[this.tableS7_Vivienda.DesechosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBlockLadrilloPrefabrNull() {
+                return this.IsNull(this.tableS7_Vivienda.BlockLadrilloPrefabrColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBlockLadrilloPrefabrNull() {
+                this[this.tableS7_Vivienda.BlockLadrilloPrefabrColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaderaNull() {
+                return this.IsNull(this.tableS7_Vivienda.MaderaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaderaNull() {
+                this[this.tableS7_Vivienda.MaderaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAdobeNull() {
+                return this.IsNull(this.tableS7_Vivienda.AdobeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAdobeNull() {
+                this[this.tableS7_Vivienda.AdobeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLaminaPNull() {
+                return this.IsNull(this.tableS7_Vivienda.LaminaPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLaminaPNull() {
+                this[this.tableS7_Vivienda.LaminaPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBaharequeBambuNull() {
+                return this.IsNull(this.tableS7_Vivienda.BaharequeBambuColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBaharequeBambuNull() {
+                this[this.tableS7_Vivienda.BaharequeBambuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDesechosPNull() {
+                return this.IsNull(this.tableS7_Vivienda.DesechosPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDesechosPNull() {
+                this[this.tableS7_Vivienda.DesechosPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEncementadoNull() {
+                return this.IsNull(this.tableS7_Vivienda.EncementadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEncementadoNull() {
+                this[this.tableS7_Vivienda.EncementadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLadrillosBarroNull() {
+                return this.IsNull(this.tableS7_Vivienda.LadrillosBarroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLadrillosBarroNull() {
+                this[this.tableS7_Vivienda.LadrillosBarroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaderaPiNull() {
+                return this.IsNull(this.tableS7_Vivienda.MaderaPiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaderaPiNull() {
+                this[this.tableS7_Vivienda.MaderaPiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTierraNull() {
+                return this.IsNull(this.tableS7_Vivienda.TierraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTierraNull() {
+                this[this.tableS7_Vivienda.TierraColumn] = global::System.Convert.DBNull;
             }
         }
         

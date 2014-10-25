@@ -18,6 +18,9 @@ namespace Capa_Datos
         
         }
 
+        /*
+         * Metodo para generar reporte de la seccion 5 de la encuesta
+         */ 
         public DataTable GenerarTrabajo(int idComunidad)
         {
             try
@@ -42,11 +45,14 @@ namespace Capa_Datos
             }
         }
 
+        /*
+         * Metodo para generar reporte de seccion 7 de la encuesta
+         */ 
         public DataTable GenerarVivienda(int idComunidad)
         {
             try
             {
-                string consulta = "SELECT Cuartos, Camas FROM s7_Viv INNER JOIN Encuestas ON Comunidad_idComunidad = @idComunidad AND Encuestas_idEncuestas = s7_Viv.Encuestas_idEncuestas";
+                string consulta = "SELECT Cuartos, Camas, Concreto, TejaBarro, s706_Viv.Lamina, TejaDuralita, Paja, s706_Viv.Desechos, BlockLadrilloPrefabr, s707_Viv.Madera, Adobe, s707_Viv.Lamina as LaminaP, BaharequeBambu, s707_Viv.Desechos as DesechosP, Encementado, LadrillosBarro, s708_Viv.Madera as MaderaPi, Tierra FROM S7_Viv INNER JOIN S706_viv ON S706_Viv_idS706_Viv = idS706_Viv INNER JOIN S707_Viv ON S707_Viv_idS707_Viv = idS707_Viv INNER JOIN S708_Viv ON S708_Viv_idS708_Viv = idS708_Viv INNER JOIN Encuestas ON Comunidad_idComunidad = @idComunidad AND Encuestas_idEncuestas = s7_Viv.Encuestas_idEncuestas";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();

@@ -150,6 +150,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptS3_Educacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="RptS5_Trabajo.cs">
       <AutoGen>True</AutoGen>
