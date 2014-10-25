@@ -29,6 +29,7 @@ namespace TechoCeiva
             //Clase donde se encuentran las consultas de los reportes
             _Reportes generar = new _Reportes();
 
+            // Generar reporte estadistica de personas
             if (cmbSeleccionReporte.SelectedItem == "Estadísticas de personas")
             {
                 rptS1_Integrantes rpt = new rptS1_Integrantes();
@@ -37,6 +38,7 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpt;
             }
 
+            // Generar reporte datos demograficos
             if (cmbSeleccionReporte.SelectedItem == "Datos demográficos")
             {
                 rptS2_Demograficos rpt = new rptS2_Demograficos();
@@ -45,6 +47,7 @@ namespace TechoCeiva
                 crvReportes.ReportSource = rpt;
             }
 
+            // Generar reporte educacion
             if (cmbSeleccionReporte.SelectedItem == "Educación")
             {
                 rptS3_Educacion rpt = new rptS3_Educacion();
