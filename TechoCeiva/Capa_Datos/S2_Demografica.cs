@@ -24,6 +24,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S2_Demografica()
         {
             this.CodigoS2 = 0;
@@ -38,6 +39,7 @@ namespace Capa_Datos
             this.Municipio = "";
         }
 
+        // Seteo de variables
         public S2_Demografica(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar, string Nacionalidad, int Encuestas_idEncuestas, string Departamento, string Municipio)
         {
             this.CodigoS2 = CodigoS2;
@@ -53,6 +55,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Insertar seccion 2 de la encuesta
         public void InsertarS2()
         {
             if (this.errores.Count == 0)

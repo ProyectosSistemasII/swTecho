@@ -18,6 +18,7 @@ namespace Capa_Logica
             this.Desechos = 0;
         }
 
+        // seteo de variables
         public S707_ViviendaLN(int BlockLadrilloPrefarbr, int Madera, int Adobe, int Lamina, int BaharequeBambu, int Desechos)
         {
             this.BlockLadrilloPrefabr = BlockLadrilloPrefarbr;
@@ -29,6 +30,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // insertar seccion 7 pregunta 7
         public Boolean Insertar_EncuS707()
         {
             Boolean correcto = true;

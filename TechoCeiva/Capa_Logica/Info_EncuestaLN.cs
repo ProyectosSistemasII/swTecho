@@ -9,6 +9,7 @@ namespace Capa_Logica
 {
     public class Info_EncuestaLN : Info_Encuesta
     {
+        // setear las variables
         public Info_EncuestaLN()
         {
             this.CodigoHogar = "";
@@ -33,6 +34,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // se validan los campos de la encuesta para la seccion de informacion
         public Boolean Insertar_InfoEncuesta(string CodigoHogar, int idVoluntario1, int idVoluntario2, DateTime FechaEncuesta, string HoraInicio,
                 string HoraFin, string DatosEncuestado, string EstadoEncuesta, string ObservacionesEstado, string AldeaRuralNoZonaUrbana, string CantonCaserioSector,
                    string XGPS, string YGPS, string JefeFamilia, string PrimerTelefono, string SegundoTelefono, string Direccion, string Especificaciones,
@@ -59,11 +61,11 @@ namespace Capa_Logica
             this.Direccion = Direccion;
             this.Especificaciones = Especificaciones;
             this.idComunidad = idComunidad;
-            this.verificarDatos();
+            this.verificarDatos(); // verifica los datos
 
             if (errores.Count > 0)
             {
-                return correcto = false;
+                return correcto = false; // devuelve false si encuentra algun error
             }
 
             Info_Encuesta info = new Info_Encuesta(CodigoHogar, idVoluntario1, idVoluntario2, FechaEncuesta, HoraInicio,
@@ -84,6 +86,7 @@ namespace Capa_Logica
             return correcto;
         }
 
+        // verificacion de los campos requeridos en la encuesta
         public void verificarDatos()
         {
             if (this.CodigoHogar == "")

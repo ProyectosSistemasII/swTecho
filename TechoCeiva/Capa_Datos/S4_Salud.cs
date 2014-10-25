@@ -27,6 +27,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S4_Salud()
         {
             this.CodigoS4 = 0;
@@ -45,6 +46,7 @@ namespace Capa_Datos
             this.Encuestas_idEncuestas = 0;
         }
 
+        // Setear las variables
         public S4_Salud(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
             string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas)
         {
@@ -65,6 +67,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Insertar la seccion 4 de la encuesta
         public void InsertarS4()
         {
             if (this.errores.Count == 0)

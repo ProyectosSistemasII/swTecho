@@ -26,6 +26,7 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
+        // setear las variables
         public S4_SaludLN(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
             string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas)
         {
@@ -46,6 +47,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // validacion de los campos de la seccion 4
         public Boolean validacion(int CodigoS4, string AsistenciaSalud, string NombreCentro, string UbicacionCentro, Boolean ProblemaSalud, string EspecificarProblemaSalud, Boolean Accidente, string TipoAccidente,
             string Seguro, string Discapacidad, string OtraDiscapacidad, string OrigenDiscapacidad, string OtroOrigen, int Encuestas_idEncuestas, int filas)
         {
@@ -67,11 +69,12 @@ namespace Capa_Logica
             this.verificarDatos(filas);
             if (errores.Count > 0)
             {
-                return false;
+                return false; // retorna falso si hay error
             }
             return true;
         }
 
+        // inserta la seccion 4 en la base de datos
         public Boolean Insertar_EncuS4()
         {
             Boolean correcto = true;
@@ -91,6 +94,7 @@ namespace Capa_Logica
             return error.mensaje;
         }
 
+        // verifica los campos de la encuesta validos
         public void verificarDatos(int filas)
         {
             if (this.AsistenciaSalud.Equals("Nunca") || this.AsistenciaSalud.Equals("NS/NR"))

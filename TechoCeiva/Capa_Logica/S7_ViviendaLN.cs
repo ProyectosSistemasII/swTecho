@@ -25,6 +25,7 @@ namespace Capa_Logica
             this.S708_Viv_idS708 = 0;
         }
 
+        // seteo de variables
         public S7_ViviendaLN(int Ancho, int Largo, String Cuartos, String Dormitorio, String Camas, String ProblemaVivienda, String ProblemaA, String ProblemaB, String ProblemaC, int idEncuesta, int idS706, int idS707, int idS708)
         {
             this.Ancho = Ancho;
@@ -43,6 +44,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // insertar seccion 7 en la base de datos
         public Boolean Insertar_EncuS7()
         {
             Boolean correcto = true;
@@ -55,6 +57,7 @@ namespace Capa_Logica
             return correcto;
         }
 
+        // verificar campos de la seccion 7
         public Boolean VerificarCampos()
         {
             Boolean correcto = true;
@@ -66,6 +69,7 @@ namespace Capa_Logica
             return correcto;
         }
 
+        // verificacion de campos nulos en la seccion 7
         public void verificarDatos()
         {
             if (this.Ancho.Equals(0))

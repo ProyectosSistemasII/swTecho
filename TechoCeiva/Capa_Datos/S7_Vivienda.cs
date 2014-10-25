@@ -26,6 +26,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S7_Vivienda()
         {
             this.Ancho = 0;
@@ -43,6 +44,7 @@ namespace Capa_Datos
             this.S708_Viv_idS708 = 0;
         }
 
+        // Setear variables
         public S7_Vivienda(int Ancho, int Largo, string Cuartos, string Dormitorio, string Camas, string ProblemaVivienda,
             string ProblemaA, string ProblemaB, string Problemac, int Encuents_idEncuestas, int S706_Viv_ids706, int S707_Viv_ids707, int S708_Viv_ids708)
         {
@@ -62,6 +64,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Insertar seccion 7 de la encuesta
         public void InsertarS7()
         {
             if (this.errores.Count == 0)

@@ -27,6 +27,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S6_Ingresos()
         {
             this.ApoyoEstado = "";
@@ -45,6 +46,7 @@ namespace Capa_Datos
             this.S611_Ingre_idS611_Ingre = 0;
         }
 
+        // Setear variables
         public S6_Ingresos(string ApoyoEstado, float CantidadApoyo, string Remesas, float CantidadRemesas, string Deuda, float DineroDeuda, string TiempoPagoDeuda,
             float IngresoTotal, string CubreGastos, string Ahorro, float MontoAhorro, float DineroGasto, int Encuestas_idEncuestas, int S611_Ingre_idS611_Ingre)
         {
@@ -65,6 +67,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Insertar seccion 6 de la encuesta
         public void InsertarS()
         {
             if (this.errores.Count == 0)

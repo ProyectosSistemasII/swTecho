@@ -32,6 +32,7 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
+        // seteo de las variables
         public S3_EducacionLN(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
             string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas)
@@ -53,6 +54,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // validacion de los datos para la seccion 3
         public Boolean validacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
             string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas, int Filas)
@@ -76,90 +78,92 @@ namespace Capa_Logica
 
             if (errores.Count > 0)
             {
-                return false;
+                return false; //retorna false si hay error
             }
             return true;
         }
 
+        // Validacion de los campos de la seccion 3
         public void verificarDatos(int filas)
         {
             if (this.LeerEscribir == "")
             {
-                Error error = new Error("¿Sabe leer y escribir? Fila:" + filas.ToString(), 5000, 1);
+                Error error = new Error("¿Sabe leer y escribir? Fila: " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.GradoEducacion == "")
             {
-                Error error = new Error("¿Cuál es el grado más alto de educación que completó? " + filas.ToString(), 5000, 1);
+                Error error = new Error("¿Cuál es el grado más alto de educación que completó? Fila: " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.GradoEducacion == "Técnico (especificar)" || this.GradoEducacion == "Otro (especificar)")
             {
                 if (this.OtroGrado == "")
                 {
-                    Error error = new Error("Especificar grado de educación" + filas.ToString(), 5000, 1);
+                    Error error = new Error("Especificar grado de educación Fila: " + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
             }
             if (this.AsistenciaEstablecimiento == "")
             {
-                Error error = new Error("Actualmente ¿Asiste a algún establecimiento educativo?" + filas.ToString(), 5000, 1);
+                Error error = new Error("Actualmente ¿Asiste a algún establecimiento educativo? Fila: " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.AsistenciaEstablecimiento == "Si asiste")// || this.AsistenciaEstablecimiento == "NR/NR")
             {
                 if (this.NombreEstablecimiento == "")
                 {
-                    Error error = new Error("¿Cuál es el nombre del centro educativo al que asiste?" + filas.ToString(), 5000, 1);
+                    Error error = new Error("¿Cuál es el nombre del centro educativo al que asiste? Fila: " + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
                 if (this.TipoEstablecimiento == "")
                 {
-                    Error error = new Error("¿Qué tipo de establecimiento es el centro educativo donde estudia?" + filas.ToString(), 5000, 1);
+                    Error error = new Error("¿Qué tipo de establecimiento es el centro educativo donde estudia? Fila: " + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
                 if (this.TipoEstablecimiento == "Otro (especificar)")
                 {
                     if (this.OtroTipoEstablecimiento == "")
                     {
-                        Error error = new Error("Especificar otro tipo de establecimiento" + filas.ToString(), 5000, 1);
+                        Error error = new Error("Especificar otro tipo de establecimiento Fila: " + filas.ToString(), 5000, 1);
                         errores.Add(error);
                     }
                 }
                 if (this.UbicacionEstablecimiento == "")
                 {
-                    Error error = new Error("¿Dónde se ubica el establecimiento educativo al que asiste?" + filas.ToString(), 5000, 1);
+                    Error error = new Error("¿Dónde se ubica el establecimiento educativo al que asiste? Fila: " + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
             }
             if (this.RazonNoAsistencia == "")
             {
-                Error error = new Error("¿Cuál es la razón principal por la cual no asistió, no asiste o dejo de ir a un centro educativo?" + filas.ToString(), 5000, 1);
+                Error error = new Error("¿Cuál es la razón principal por la cual no asistió, no asiste o dejo de ir a un centro educativo? Fila: " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.RazonNoAsistencia == "Otra razón (especificar)")
             {
                 if (this.OtraRazon == "")
                 {
-                    Error error = new Error("Especificar otra razón de no asistencia" + filas.ToString(), 5000, 1);
+                    Error error = new Error("Especificar otra razón de no asistencia Fila: " + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
             }
             if (this.FormacionComplementaria == "")
             {
-                Error error = new Error("¿Ha recibido algún tipo de formación complementaria?" + filas.ToString(), 5000, 1);
+                Error error = new Error("¿Ha recibido algún tipo de formación complementaria? Fila: " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.FormacionComplementaria == "Si (especificar)")
             {
                 if (this.TipoFormacion == "")
                 {
-                    Error error = new Error("Especificar otro tipo de formación" + filas.ToString(), 5000, 1);
+                    Error error = new Error("Especificar otro tipo de formación Fila: " + filas.ToString(), 5000, 1);
                     errores.Add(error);
                 }
             }
         }
 
+        // insertar seccion 3 en la encuesta
         public Boolean Insertar_EncuS3()
         {
             Boolean correcto = true;

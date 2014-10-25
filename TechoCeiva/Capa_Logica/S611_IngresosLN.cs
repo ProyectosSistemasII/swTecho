@@ -22,6 +22,7 @@ namespace Capa_Logica
             this.NSNR = false;
         }
 
+        //seteo de variables
         public S611_IngresosLN(Boolean RecorteGastos, Boolean Prestamo, Boolean VentaMaterial, Boolean TrabajoOcasional, Boolean Ahorros, Boolean AyudaFamiliar, Boolean ApoyoEstado, Boolean Otro, String Especificar, Boolean NSNR)
         {
             this.RecorteGastos = RecorteGastos;
@@ -37,6 +38,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // Insertar seccion 611
         public Boolean Insertar_EncuS611()
         {
             Boolean correcto = true;
@@ -64,6 +66,7 @@ namespace Capa_Logica
             return error.mensaje;
         }
 
+        // verficacion de pregunta 11 de seccion 6
         public void verificarDatos()
         {
             if (this.Otro == true && this.Especificar.Equals(""))
@@ -73,6 +76,7 @@ namespace Capa_Logica
             }
         }
 
+        // validacion de datos 
         public void Validar11()
         {
             if (this.RecorteGastos == false && this.Prestamo == false && this.VentaMaterial == false && this.TrabajoOcasional == false && this.Ahorros == false && this.AyudaFamiliar == false && this.ApoyoEstado == false && this.Otro == false && this.NSNR == false)

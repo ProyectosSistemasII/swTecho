@@ -21,6 +21,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S1_Integrantes()
         {
             this.CodigoS1 = 0;
@@ -32,6 +33,7 @@ namespace Capa_Datos
             this.Encuestas_idEncuestas = 0;
         }
 
+        // Seteo de variables
         public S1_Integrantes(int CodigoS1, string NombreCompleto, string ApellidosCompleto, string FechaNac, string Genero, string Embarazo, int Encuestas_idEncuestas)
         {
             this.CodigoS1 = CodigoS1;
@@ -44,6 +46,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Inserta la seccion 1 de la encuesta
         public void InsertarS1()
         {
             if (this.errores.Count == 0)

@@ -22,6 +22,7 @@ namespace Capa_Logica
             this.Desechos = 0;
          }
 
+        // seteo de variables
         public S706_ViviendaLN(int Concreto, int TejaBarro, int Lamina, int TejaDuralita, int Paja, int Desechos)
         {
             this.Concreto = Concreto;
@@ -33,6 +34,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // insertar seccion 7 pregunta 6
         public Boolean Insertar_EncuS706()
         {
             Boolean correcto = true;

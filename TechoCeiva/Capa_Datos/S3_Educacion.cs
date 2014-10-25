@@ -27,7 +27,8 @@ namespace Capa_Datos
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
-
+        
+        // Constructor
         public S3_Educacion()
         {
             this.CodigoS3 = 0;
@@ -46,6 +47,7 @@ namespace Capa_Datos
             this.Encuestas_idEncuestas = 0;
         }
 
+        // Seteo de variables
         public S3_Educacion(int CodigoS3, string LeerEscribir, string GradoEducacion, string OtroGrado,
             string AsistenciaEstablecimiento, string NombreEstablecimiento, string TipoEstablecimiento, string OtroTipoEstablecimiento,
             string UbicacionEstablecimiento, string RazonNoAsistencia, string OtraRazon, string FormacionComplementaria, string TipoFormacion, int Encuestas_idEncuestas)
@@ -68,6 +70,7 @@ namespace Capa_Datos
             this.InsertarS3();
         }
 
+        // Insertar seccion 3 de la encuesta
         public void InsertarS3()
         {
             if (this.errores.Count == 0)

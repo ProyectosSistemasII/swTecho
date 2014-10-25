@@ -16,6 +16,7 @@ namespace Capa_Logica
             this.Tierra = 0;
         }
 
+        // seteo de variables
         public S708_ViviendaLN(int Encementado, int LadrilloBarro, int Madera, int Tierra)
         {
             this.Encementado = Encementado;
@@ -25,6 +26,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // insertar seccion 7 pregunta 8
         public Boolean Insertar_EncuS708()
         {
             Boolean correcto = true;

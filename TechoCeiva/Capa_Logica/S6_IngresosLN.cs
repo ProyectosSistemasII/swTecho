@@ -26,6 +26,7 @@ namespace Capa_Logica
             this.S611_Ingre_idS611_Ingre = 0;
         }
 
+        // seteo de variables
         public S6_IngresosLN(string ApoyoEstado, float CantidadApoyo, string Remesas, float CantidadRemesas, string Deuda, float DineroDeuda, string TiempoPagoDeuda, float IngresoTotal, string CubreGastos, string Ahorro, float MontoAhorro, float DineroGasto, int idEncuesta, int idS611)
         {
             this.ApoyoEstado = ApoyoEstado;
@@ -45,6 +46,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // verficacion de campos
         public Boolean VerificarCampos()
         {
             Boolean correcto = true;
@@ -56,6 +58,7 @@ namespace Capa_Logica
             return correcto;
         }
 
+        // insertar seccion 6 en la base de datos
         public Boolean Insertar_EncuS6()
         {
             Boolean correcto = true;
@@ -69,6 +72,7 @@ namespace Capa_Logica
             return correcto;            
         }
 
+        // verificar los campos de la seccion 6
         public void verificarDatos()
         {
             if (this.ApoyoEstado.Equals("null"))

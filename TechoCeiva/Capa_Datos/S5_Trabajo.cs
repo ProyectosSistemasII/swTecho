@@ -29,6 +29,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S5_Trabajo()
         {
             this.CodigoS5 = 0;
@@ -49,6 +50,7 @@ namespace Capa_Datos
             this.Encuestas_idEncuestas = 0;
         }
 
+        // Setear las variables
         public S5_Trabajo(int CodigoS5, Boolean Trabajo, Boolean Buscando, string RazonNoBusqueda, string OtraRazonNoBusqueda, string Ocupacion,
             string OtraOcupacion, string ContratoTrabajo, string CondicionLaboral, string UbicacionTrabajo, Boolean OtrosTrabajos, string EspecificarOtrosTrabajos,
             int DiasTrabajo, float HorasTrabajo, float IngresoMensual, int Encuestas_idEncuestas)
@@ -72,6 +74,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Insertar seccion 5 de la encuesta
         public void InsertarS5()
         {
             if (this.errores.Count == 0)

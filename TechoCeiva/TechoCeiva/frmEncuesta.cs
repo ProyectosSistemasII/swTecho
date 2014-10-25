@@ -170,7 +170,7 @@ namespace TechoCeiva
                     codVoluntario2 = 0;
                 else
                     codVoluntario2 = Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString());
-                if (transaccion = tran.IniciarTransaccion())
+                if (transaccion = tran.IniciarTransaccion()) // inicia transaccion e inserta la informacion de la encuesta
                 {
                     Boolean correcto = InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, codVoluntario1, codVoluntario2, Convert.ToDateTime(dtpFecha.Value.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, cmbEstadoEn.Text, txtObservaciones.Text,
                            txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
@@ -178,7 +178,7 @@ namespace TechoCeiva
                     {
                         tbpInfo.Parent = null;
                         tbpS1.Parent = tbcDatos;
-                        idEncu = InfoEnc.UltimoId();
+                        idEncu = InfoEnc.UltimoId(); // obtiene el ultimo id de la encuesta ingresada
                     }
                     else
                         MessageBox.Show(InfoEnc.obtenerError());
@@ -198,7 +198,7 @@ namespace TechoCeiva
             S1_IntegrantesLN S1 = new S1_IntegrantesLN();
             Boolean correcto = false;
             int Filas = 0;
-            //Recorrer para validar
+            //Recorrer para validar todos los campos del grid
             foreach (DataGridViewRow row in dgvS1.Rows)
             {
                 dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
@@ -214,13 +214,13 @@ namespace TechoCeiva
             }
             if (correcto)
             {
-                //Recorrer para insertar
+                //Recorrer para insertar, valida en capa logica
                 Filas = 0;
                 foreach (DataGridViewRow row in dgvS1.Rows)
                 {
                     dgvS1.CurrentCell = dgvS1.Rows[Filas].Cells[0];
                     S1_IntegrantesLN SIn = new S1_IntegrantesLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), idEncu);
-                    correcto = SIn.Insertar_EncuS1();
+                    correcto = SIn.Insertar_EncuS1(); // se insertan las filas del datagrid
                     if (correcto)
                         Filas++;
                     else
@@ -230,14 +230,14 @@ namespace TechoCeiva
                         break;
                     }
                 }
-                tbpS1.Parent = null;
+                tbpS1.Parent = null; // muestra la seccion 2 de la encuesta
                 tbpS2.Parent = tbcDatos;
 
                 //para s2
                 int iS2 = 1;
                 for (iS2 = 1; iS2 < iS1; iS2++)
                 {
-                    dgvS2.Rows.Add();
+                    dgvS2.Rows.Add(); // se cargan las filas
                     dgvS2.Rows[iS2 - 1].Cells[0].Value = iS2;
                     for (int i = 1; i < 8; i++)
                         dgvS2.Rows[iS2 - 1].Cells[i].Value = "";
@@ -312,7 +312,7 @@ namespace TechoCeiva
             S3_EducacionLN S3 = new S3_EducacionLN();
             Boolean correcto = false;
             int Filas = 0;
-            //Recorrer para validar
+            //Recorrer para validar las filas del datagrid
             foreach (DataGridViewRow row in dgvS3.Rows)
             {
                 dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
@@ -331,13 +331,14 @@ namespace TechoCeiva
             if (correcto)
             {
                 Filas = 0;
+                //recorrer para insertar las filas del datagrid
                 foreach (DataGridViewRow row in dgvS3.Rows)
                 {
                     dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
                     S3_EducacionLN SIn = new S3_EducacionLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
                     row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
                     row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu);
-                    correcto = S3.Insertar_EncuS3();
+                    correcto = S3.Insertar_EncuS3(); // inserts de las filas del datagrid
                     if (correcto)
                         Filas++;
                     else
@@ -347,7 +348,7 @@ namespace TechoCeiva
                         break;
                     }
                 }
-                tbpS3.Parent = null;
+                tbpS3.Parent = null;// muestra seccion 4 de la encuesta
                 tbpS4.Parent = tbcDatos;
 
                 //para s4
@@ -2082,7 +2083,7 @@ namespace TechoCeiva
         int iS1 = 1;
         private void btnAddS1_Click(object sender, EventArgs e)
         {
-            dgvS1.Rows.Add();
+            dgvS1.Rows.Add();//Agregar filas en datagrid de seccion 1
             dgvS1.Rows[iS1 - 1].Cells[0].Value = iS1;
             dgvS1.Rows[iS1 - 1].Cells[1].Value = "";
             dgvS1.Rows[iS1 - 1].Cells[2].Value = "";
@@ -2098,6 +2099,7 @@ namespace TechoCeiva
             {
                 dgvS1.Rows.RemoveAt(dgvS1.Rows.Count - 1);
                 iS1--;
+                // remover filas del datagrid de seccion 1
             }
             catch (Exception ex)
             { }
@@ -2262,7 +2264,7 @@ namespace TechoCeiva
         {
             if (transaccion == true) //se recodifico por si da error al cerrar la ventana.
             {
-                tran.Deshacer();
+                tran.Deshacer(); // si se cierra la encuesta antes de terminar hace un rollback de la transaccion
                 return;
             }
             else

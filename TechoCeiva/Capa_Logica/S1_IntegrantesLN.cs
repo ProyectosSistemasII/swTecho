@@ -19,6 +19,7 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
+        // seteo de variables
         public S1_IntegrantesLN(int CodigoS1, string NombreCompleto, string ApellidosCompleto, string FechaNac, string Genero,
             string Embarazo, int Encuestas_idEncuestas)
         {
@@ -32,6 +33,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // insertar seccion 1 en la base de datos
         public Boolean Insertar_EncuS1()
         {
             Boolean correcto = true;
@@ -39,11 +41,12 @@ namespace Capa_Logica
             integrantes.InsertarS1();
             if (errores.Count > 0)
             {
-                return correcto = false;
+                return correcto = false; // devuelve false en caso de un error
             }
             return correcto;
         }
 
+        // verfica los datos del datagrid
         public void verificarDatos(int filas)
         {
             if (this.NombreCompleto == "")
@@ -63,6 +66,7 @@ namespace Capa_Logica
             }
         }
 
+        // validacion de campos de la seccion 1
         public Boolean validacion(int CodigoS1, string NombreCompleto, string ApellidosCompleto, string FechaNac, string Genero,
             string Embarazo, int Encuestas_idEncuestas, int filas)
         {

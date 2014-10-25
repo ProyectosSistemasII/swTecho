@@ -22,6 +22,7 @@ namespace Capa_Logica
             this.Municipio = "";
         }
 
+        // setea las variables
         public S2_DemograficaLN(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar,
             string Nacionalidad, int Encuestas_idEncuestas, string Departamento, string Municipio)
         {
@@ -38,6 +39,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // inserta la seccion 2 en la base de datos
         public Boolean Insertar_EncuS2()
         {
             Boolean correcto = true;
@@ -50,6 +52,7 @@ namespace Capa_Logica
             return correcto;
         }
 
+        // se validan los campos de la seccion 2
         public Boolean validacion(int CodigoS2, string Nucleo, string DPICedula, string EstadoCivil, string Parentesco, string OtroFamiliar,
             string Nacionalidad, int Encuestas_idEncuestas, string Departamento, string Municipio, int filas)
         {
@@ -72,6 +75,7 @@ namespace Capa_Logica
             return true;
         }
 
+        // validacion de datos de informacion de la seccion 2
         public void verificarDatos(int filas)
         {
             if (this.Nucleo.Equals(""))

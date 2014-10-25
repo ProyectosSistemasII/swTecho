@@ -28,6 +28,7 @@ namespace Capa_Logica
             this.Encuestas_idEncuestas = 0;
         }
 
+        // seteo de variables
         public S5_TrabajoLN(int CodigoS5, Boolean Trabajo, Boolean Buscando, string RazonNoBusqueda, string OtraRazonNoBusqueda, string Ocupacion,
             string OtraOcupacion, string ContratoTrabajo, string CondicionLaboral, string UbicacionTrabajo, Boolean OtrosTrabajos, string EspecificarOtrosTrabajos,
             int DiasTrabajo, float HorasTrabajo, float IngresoMensual, int Encuestas_idEncuestas)
@@ -51,6 +52,7 @@ namespace Capa_Logica
             this.errores = new List<Error>();
         }
 
+        // insertar la seccion 5 en la base de datos
         public Boolean Insertar_EncuS5()
         {
             Boolean correcto = true;
@@ -63,6 +65,7 @@ namespace Capa_Logica
             return correcto;
         }
 
+        // validacion de datos de seccion 5
         public Boolean validacion(int CodigoS5, Boolean Trabajo, Boolean Buscando, string RazonNoBusqueda, string OtraRazonNoBusqueda, string Ocupacion,
             string OtraOcupacion, string ContratoTrabajo, string CondicionLaboral, string UbicacionTrabajo, Boolean OtrosTrabajos, string EspecificarOtrosTrabajos,
             int DiasTrabajo, float HorasTrabajo, float IngresoMensual, int Encuestas_idEncuestas, int filas)
@@ -92,6 +95,7 @@ namespace Capa_Logica
             return true;
         }
 
+        // verificacion de los datos de la seccion 5
         public void verificarDatos(int filas)
         {
             if (this.Buscando.Equals("No") && this.RazonNoBusqueda.Equals(""))

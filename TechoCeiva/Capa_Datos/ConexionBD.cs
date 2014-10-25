@@ -13,7 +13,7 @@ namespace Capa_Datos
            "Server=localhost;" +
            "Database=techo;" +
            "UID=root;" +
-           "Password=1303";
+           "Password=1610";
         //public static String ConexionDireccion = 
             //"Server=" + Properties.Settings.Default.server + ";" + 
             //"Database=" + Properties.Settings.Default.database + ";" + 

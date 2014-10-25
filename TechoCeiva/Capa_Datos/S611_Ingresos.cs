@@ -23,6 +23,7 @@ namespace Capa_Datos
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
 
+        // Constructor
         public S611_Ingresos()
         {
             this.RecorteGastos = false;
@@ -37,6 +38,7 @@ namespace Capa_Datos
             this.NSNR = false;
         }
 
+        // Setear las variables
         public S611_Ingresos(Boolean RecorteGastos, Boolean Prestamo, Boolean VentaMaterial, Boolean TrabajoOcasional, Boolean Ahorros, Boolean AyudaFamiliar, Boolean ApoyoEstado, Boolean Otro, string Especificar, Boolean NSNR)
         {
             this.RecorteGastos = RecorteGastos;
@@ -52,6 +54,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        // Insertar seccion s611_ingresos de la encuesta
         public void InsertarS611()
         {
             if (this.errores.Count == 0)
@@ -82,6 +85,7 @@ namespace Capa_Datos
             }
         }
 
+        // Obtener el ultimo id de la tabla s611_Ingre
         public int UltimoId()
         {
             int id = 0;

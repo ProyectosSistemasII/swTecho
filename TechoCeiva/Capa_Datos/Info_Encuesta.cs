@@ -32,7 +32,8 @@ namespace Capa_Datos
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
-       
+        
+        // Constructor
         public Info_Encuesta()
         {
             this.CodigoHogar = "";
@@ -55,6 +56,8 @@ namespace Capa_Datos
             this.Especificaciones = "";
             this.idComunidad = 0;
         }
+
+        // Seteo de variables
         public Info_Encuesta(string CodigoHogar, int idVoluntario1, int idVoluntario2, DateTime FechaEncuesta, string HoraInicio, string HoraFin,
             string DatosEncuestado, string EstadoEncuesta, string ObservacionesEstado, string AldeaRuralNoZonaUrbana, string CantonCaserioSector, string XGPS, string YGPS,
             string JefeFamilia, string PrimerTelefono, string SegundoTelefono, string Direccion, string Especificaciones, int idComunidad)
@@ -82,7 +85,8 @@ namespace Capa_Datos
             this.InsertarInfoEncuesta();
         }
 
-        // Ingreso de informacion de encuesta
+        //Ingreso de informacion de encuesta 
+
         public void InsertarInfoEncuesta()
         {
 

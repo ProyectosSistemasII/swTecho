@@ -15,18 +15,22 @@ namespace Capa_Datos
             this.tran = null;
         }
 
-
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
         MySqlCommand comando = new MySqlCommand();
 
+        /*
+         * Inicia la transaccion de la encuesta
+         * Recibe: ---
+         * Devuelve: true si inicio la transaccion, false si hay problema de conexion
+         */ 
         public Boolean IniciarTransaccion()
         {
             try
             {
                 comando.Connection = conex;
                 comando.Connection.Open();
-                tran = comando.Connection.BeginTransaction();
+                tran = comando.Connection.BeginTransaction(); // inicia transaccion
                 comando.Transaction = tran;
                 return true;
             }
@@ -37,6 +41,11 @@ namespace Capa_Datos
             }
         }
 
+        /*
+         * Termina la transaccion de la encuesta
+         * Recibe: ---
+         * Devuelve: false si termino la transaccion, true si hay problema de conexion
+         */
         public Boolean TerminarTransaccion()
         {
             try
@@ -51,6 +60,11 @@ namespace Capa_Datos
             }
         }
 
+        /*
+         * Rollback de la transaccion de la encuesta
+         * Recibe: ---
+         * Devuelve: ---
+         */
         public void Deshacer()
         {
             tran.Rollback();
