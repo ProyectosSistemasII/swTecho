@@ -17,9 +17,8 @@ namespace TechoCeiva
             InitializeComponent();
             _Comunidad Comunidades = new _Comunidad();
             cmbComunidad.DataSource =  Comunidades.ObtenerComunidadesEncuesta();
-            cmbComunidad.DisplayMember = "Nombre";//.ToString();
-            cmbComunidad.ValueMember = "idComunidad";//.ToString();
-            
+            cmbComunidad.DisplayMember = "Nombre";
+            cmbComunidad.ValueMember = "idComunidad";          
         }
         
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -29,54 +28,38 @@ namespace TechoCeiva
 
             //Clase donde se encuentran las consultas de los reportes
             _Reportes generar = new _Reportes();
-            //El reporte hecho en crystal reports
-            /*
-             * El dataSet lo tuve que agregar en la vista porque a la hora de enlazar el informe con el dataset no lo encuentra 
-             */ 
-           /* RptDepto rpt = new RptDepto();
-            rpt.SetDataSource(llenar.Generar());
-            crvReportes.ReportSource = rpt;
-            */
 
             if (cmbSeleccionReporte.SelectedItem == "Estadísticas de personas")
             {
-                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
                 rptS1_Integrantes rpt = new rptS1_Integrantes();
                 rpt.SetDataSource(generar.ClasificacionTotalPersonas(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
-
             }
 
             if (cmbSeleccionReporte.SelectedItem == "Datos demográficos")
             {
-                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
                 rptS2_Demograficos rpt = new rptS2_Demograficos();
                 rpt.SetDataSource(generar.Demografico(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
-
             }
 
             if (cmbSeleccionReporte.SelectedItem == "Educación")
             {
-                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
                 RptS5_Trabajo rpts5 = new RptS5_Trabajo();
                 rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 crvReportes.ReportSource = rpts5;
-
             }
 
-
-            //// Reporte S8_Servicios
             if (cmbSeleccionReporte.SelectedItem == "Trabajo")
             {
-                //S8_ServiciosLN NReporte = new S8_ServiciosLN();
                 RptS5_Trabajo rpts5 = new RptS5_Trabajo();
                 rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                rpts5.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpts5;
-
             }
+
             if (cmbSeleccionReporte.SelectedItem == "Servicios") // se ejecuta se selecciona servicio el el combox
             {
                 S8_ServiciosLN NReporte = new S8_ServiciosLN(); // se instancia una nueva clase de servcios y tambien el reporte de servicios
@@ -84,7 +67,6 @@ namespace TechoCeiva
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));// se toma el id de la comunidad, y se le envia para la capa de logica y datos para hacer el query
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt; // se agrega el reporte a al crystalview para su visualizacion.
-
             }
             else if (cmbSeleccionReporte.SelectedItem == "Propiedad")
             {
@@ -93,7 +75,6 @@ namespace TechoCeiva
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
-
             }
             else if (cmbSeleccionReporte.SelectedItem == "Comunidad")
             {
@@ -102,7 +83,6 @@ namespace TechoCeiva
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
-
             }
             else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 6")
             {
@@ -118,7 +98,7 @@ namespace TechoCeiva
                  S1007_Comunidad rpt2 = new S1007_Comunidad();
                  rpt2.SetDataSource(NReporte07.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                  rpt2.SetParameterValue("Comunidad", NombreComunidad); 
-                crvReportes.ReportSource = rpt2;
+                 crvReportes.ReportSource = rpt2;
             }
             else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 8")
             {
@@ -143,7 +123,6 @@ namespace TechoCeiva
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt;
-
             }
             this.btnGenerar.Enabled = true;
         }

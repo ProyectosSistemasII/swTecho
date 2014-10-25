@@ -10,19 +10,19 @@ namespace Capa_Datos
 {
     public class _Reportes
     {
+        private static ConexionBD _datos = new ConexionBD();
+        private static MySqlConnection _conexion = ConexionBD.conexion;
+
         public _Reportes()
         {
         
         }
 
-        private static ConexionBD _datos = new ConexionBD();
-        private static MySqlConnection _conexion = ConexionBD.conexion;
-
         public DataTable GenerarTrabajo(int idComunidad)
         {
             try
             {
-                string consulta = "SELECT IF(Trabajo = 1, 'Si Trabaja','No Trabaja') as Trabajo from s5_tra inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas";
+                string consulta = "SELECT IF(Trabajo = 1, 'Si Trabaja','No Trabaja') as Trabajo, Ocupacion, ContratoTrabajo, CondicionLaboral, UbicacionTrabajo, IF(OtrosTrabajos = 1,'Si Otros', 'No Otros') as OtrosTrabajos FROM s5_tra INNER JOIN Encuestas ON Comunidad_idComunidad = @idComunidad AND Encuestas_idEncuestas = s5_Tra.Encuestas_idEncuestas";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();
@@ -110,7 +110,6 @@ namespace Capa_Datos
                 return null;
             }
         }
-
 
         public DataTable LeerEscribir(int idComunidad)
         {
