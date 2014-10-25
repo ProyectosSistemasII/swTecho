@@ -47,9 +47,10 @@ namespace TechoCeiva
 
             if (cmbSeleccionReporte.SelectedItem == "Educación")
             {
-                RptS5_Trabajo rpts5 = new RptS5_Trabajo();
-                rpts5.SetDataSource(generar.GenerarTrabajo(Convert.ToInt32(cmbComunidad.SelectedValue)));
-                crvReportes.ReportSource = rpts5;
+                rptS3_Educacion rpt = new rptS3_Educacion();
+                rpt.SetDataSource(generar.Educacion(Convert.ToInt32(cmbComunidad.SelectedValue)));
+                rpt.SetParameterValue("Comunidad", NombreComunidad);
+                crvReportes.ReportSource = rpt;
             }
 
             if (cmbSeleccionReporte.SelectedItem == "Trabajo")

@@ -112,57 +112,11 @@ namespace Capa_Datos
             }
         }
 
-        public DataTable DepartamentoOrigen(int idComunidad)
+        public DataTable Educacion(int idComunidad)
         {
             try
             {
-                string consulta = "SELECT Departamento from s2_dem inner join Encuestas on Encuestas.idEncuestas = s2_dem.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
-                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
-                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
-                comando.Connection.Open();
-                comando.ExecuteNonQuery();
-                comando.Connection.Close();
-
-                DataSet ds = new DataSet();
-                MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                da.Fill(ds);
-                return ds.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
-        public DataTable LeerEscribir(int idComunidad)
-        {
-            try
-            {
-                string consulta = "SELECT IF(LeerEscribir = 'Si', 'Sabe leer y escribir','No sabe leer y escribir') as Total from s3_edu inner join Encuestas on Encuestas.idEncuestas = s3_edu.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
-                MySqlCommand comando = new MySqlCommand(consulta, _conexion);
-                comando.Parameters.AddWithValue("@idComunidad", idComunidad);
-                comando.Connection.Open();
-                comando.ExecuteNonQuery();
-                comando.Connection.Close();
-
-                DataSet ds = new DataSet();
-                MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                da.Fill(ds);
-                return ds.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
-        public DataTable GradoEducacion(int idComunidad)
-        {
-            try
-            {
-                string consulta = "SELECT GradoEducacion from s3_edu inner join Encuestas on Encuestas.idEncuestas = s3_edu.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
+                string consulta = "SELECT GradoEducacion, IF(LeerEscribir = 'Si', 'Sabe leer y escribir','No sabe leer y escribir') as Total from s3_edu inner join Encuestas on Encuestas.idEncuestas = s3_edu.Encuestas_idEncuestas and Comunidad_idComunidad = @idComunidad";
                 MySqlCommand comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idComunidad", idComunidad);
                 comando.Connection.Open();

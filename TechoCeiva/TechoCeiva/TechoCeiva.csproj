@@ -146,6 +146,11 @@
       <DependentUpon>rptS2_Demograficos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptS3_Educacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptS3_Educacion.rpt</DependentUpon>
+    </Compile>
     <Compile Include="RptS5_Trabajo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -320,6 +325,10 @@
     <EmbeddedResource Include="rptS2_Demograficos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptS2_Demograficos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptS3_Educacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptS3_Educacion.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RptS5_Trabajo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -16,14 +16,14 @@ namespace TechoCeiva {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptS2_Demograficos : ReportClass {
+    public class rptS3_Educacion : ReportClass {
         
-        public rptS2_Demograficos() {
+        public rptS3_Educacion() {
         }
         
         public override string ResourceName {
             get {
-                return "rptS2_Demograficos.rpt";
+                return "rptS3_Educacion.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace TechoCeiva {
         
         public override string FullResourceName {
             get {
-                return "TechoCeiva.rptS2_Demograficos.rpt";
+                return "TechoCeiva.rptS3_Educacion.rpt";
             }
             set {
                 // Do nothing
@@ -98,9 +98,9 @@ namespace TechoCeiva {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptS2_Demograficos : Component, ICachedReport {
+    public class CachedrptS3_Educacion : Component, ICachedReport {
         
-        public CachedrptS2_Demograficos() {
+        public CachedrptS3_Educacion() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace TechoCeiva {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptS2_Demograficos rpt = new rptS2_Demograficos();
+            rptS3_Educacion rpt = new rptS3_Educacion();
             rpt.Site = this.Site;
             return rpt;
         }
