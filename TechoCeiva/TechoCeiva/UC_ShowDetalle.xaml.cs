@@ -55,11 +55,14 @@ namespace TechoCeiva
                 nDevolucion.txtBuenEstado.Text = detalle.CantidadPrestada.ToString();
                 nDevolucion.ShowDialog();
 
-                saveContent();
+                saveContent(detalle, nDevolucion);
+                fillGrid();
+                //update();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Debe seleccionar un campo para proseguir", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(ex.Message);
+                //MessageBox.Show("Debe seleccionar un campo para proseguir", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -73,7 +76,22 @@ namespace TechoCeiva
             showWinDevolver();
         }
 
-        private void saveContent()
+        private void saveContent(_DetallePrestamo varDetalle, WinDevolverHelp win)
+        {
+            if (win.getPending() == 0)
+            {
+                varDetalle.devolverTodo(win.getGoodState(), win.getDamaged(), win.getLost(), 0, System.DateTime.Now.Date, varDetalle.idDetallePrestamo);
+                MessageBox.Show("Valores guardados correctamente", "Guardado Correcto", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+            else
+                if (win.getPending() > 0)
+                {
+                    varDetalle.devolverParte(win.getGoodState(), win.getDamaged(), win.getLost(), win.getPending(),System.DateTime.Now.Date, varDetalle.idDetallePrestamo);
+                    MessageBox.Show("Valores guardados correctamente", "Guardado Correcto", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                }
+        }
+
+        private void update()
         {
         }
 	}
