@@ -55,9 +55,11 @@ namespace TechoCeiva
                 nDevolucion.txtBuenEstado.Text = detalle.CantidadPrestada.ToString();
                 nDevolucion.ShowDialog();
 
-                saveContent(detalle, nDevolucion);
-                fillGrid();
-                //update();
+                if (nDevolucion.getIsClose())
+                {
+                    saveContent(detalle, nDevolucion);
+                    fillGrid();
+                }
             }
             catch (Exception ex)
             {
@@ -80,19 +82,15 @@ namespace TechoCeiva
         {
             if (win.getPending() == 0)
             {
-                varDetalle.devolverTodo(win.getGoodState(), win.getDamaged(), win.getLost(), 0, System.DateTime.Now.Date, varDetalle.idDetallePrestamo);
+                varDetalle.devolverTodo(win.getGoodState(), win.getDamaged(), win.getLost(), 0, System.DateTime.Now.Date, varDetalle.idDetallePrestamo, varDetalle.Prestamo_idPrestamo,varDetalle.Herramientas_idHerramientas);
                 MessageBox.Show("Valores guardados correctamente", "Guardado Correcto", MessageBoxButton.OK, MessageBoxImage.Asterisk);
             }
             else
                 if (win.getPending() > 0)
                 {
-                    varDetalle.devolverParte(win.getGoodState(), win.getDamaged(), win.getLost(), win.getPending(),System.DateTime.Now.Date, varDetalle.idDetallePrestamo);
+                    varDetalle.devolverParte(win.getGoodState(), win.getDamaged(), win.getLost(), win.getPending(),System.DateTime.Now.Date, varDetalle.idDetallePrestamo, varDetalle.Herramientas_idHerramientas);
                     MessageBox.Show("Valores guardados correctamente", "Guardado Correcto", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                 }
-        }
-
-        private void update()
-        {
         }
 	}
 }

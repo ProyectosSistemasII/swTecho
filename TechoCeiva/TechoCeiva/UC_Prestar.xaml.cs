@@ -215,6 +215,7 @@ namespace TechoCeiva
                     detallesPrestamo.insertarDetalle(listTools,idPrestamo);
                     MessageBox.Show("Préstmo asignado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
                     clearContent();
+                    fillCboxHerramientas(contenido);
                 }
                 else
                 {

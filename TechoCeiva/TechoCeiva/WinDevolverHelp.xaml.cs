@@ -21,6 +21,7 @@ namespace TechoCeiva
         private int lost { get; set; }
         private int pending { get; set; }
         private int goodState { get; set; }
+        private Boolean isClose { get; set; }
 
 		public WinDevolverHelp()
 		{
@@ -29,6 +30,7 @@ namespace TechoCeiva
             this.lost = 0;
             this.pending = 0;
             this.goodState = 0;
+            this.isClose = false;
             txtDañadas.Focus();
             txtDañadas.SelectAll();
 		}
@@ -53,6 +55,11 @@ namespace TechoCeiva
             this.goodState = GoodState;
         }
 
+        private void setIsClose(Boolean close)
+        {
+            this.isClose = close;
+        }
+
         public int getDamaged()
         {
             return this.damaged;
@@ -70,6 +77,11 @@ namespace TechoCeiva
         public int getGoodState()
         {
             return this.goodState;
+        }
+
+        public Boolean getIsClose()
+        {
+            return this.isClose;
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -120,6 +132,7 @@ namespace TechoCeiva
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {
             save();
+            setIsClose(true);
             this.Close();
         }
 

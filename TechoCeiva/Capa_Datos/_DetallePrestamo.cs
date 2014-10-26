@@ -51,6 +51,11 @@ namespace Capa_Datos
             //this.Devolucion = DateTime.MaxValue;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<_DetallePrestamo> obtenerDetalles()
         {
             string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1";
@@ -76,12 +81,19 @@ namespace Capa_Datos
             return listaPrestamos;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="listado"></param>
+        /// <param name="idPrestamo"></param>
         public void insertarDetalle(List<_Herramientas> listado, int idPrestamo)
         {
             _conexion.Open();
 
             MySqlTransaction transaction = _conexion.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
             MySqlCommand comando = _conexion.CreateCommand();
+            MySqlCommand comando2 = _conexion.CreateCommand();
 
             try
             {
@@ -103,6 +115,12 @@ namespace Capa_Datos
                     comando.Parameters.AddWithValue("@fechaDevolucion", this.Devolucion);
                     comando.ExecuteNonQuery();
                     comando.Parameters.Clear();
+
+                    comando2.CommandText = "update herramientas SET Existencia = @nExistencia WHERE idHerramientas = @idH";
+                    comando2.Parameters.AddWithValue("@nExistencia", herramienta.nuevaExistencia(herramienta.idHerramientas, herramienta.Existencia));
+                    comando2.Parameters.AddWithValue("@idH", herramienta.idHerramientas);
+                    comando2.ExecuteNonQuery();
+                    comando2.Parameters.Clear();
                 }
                 transaction.Commit();
             }
@@ -110,17 +128,26 @@ namespace Capa_Datos
             {
                 transaction.Rollback();
                 comando.Dispose();
+                comando2.Dispose();
                 transaction.Dispose();
                 _conexion.Close();
             }
             finally
             {
                 comando.Dispose();
+                comando2.Dispose();
                 transaction.Dispose();
                 _conexion.Close();
             }
         }
 
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idPrestamo"></param>
+        /// <returns></returns>
         public List<_DetallePrestamo> buscarDetallesPor(int idPrestamo)
         {
             string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1 AND Prestamo_idPrestamo = "+ idPrestamo;
@@ -144,41 +171,91 @@ namespace Capa_Datos
             return listaDetallesEspecificos;
         }
 
-        public void devolverTodo(int buenas, int malas, int perdidas, int activo, DateTime devolucion, int idP)
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="buenas"></param>
+        /// <param name="malas"></param>
+        /// <param name="perdidas"></param>
+        /// <param name="activo"></param>
+        /// <param name="devolucion"></param>
+        /// <param name="idDetalle"></param>
+        /// <param name="idPrestamo"></param>
+        /// <param name="idH"></param>
+        public void devolverTodo(int buenas, int malas, int perdidas, int activo, DateTime devolucion, int idDetalle, int idPrestamo, int idH)
         {
                 string query = "update DetallePrestamo SET CantidadBuenEstado = @cantidadBuena, CantidadMalEstado = @cantidadMala," +
                                                           "CantidadPerdida = @cantidadPerdida, Activo = @activo," +
                                                           "FechaDevolucion = @fechaDev "+
-                                                    "where idDetallePrestamo = @idPrestamo";
+                                                    "where idDetallePrestamo = @idDetalle";
+
+                string query2 = "update Herramientas SET Existencia = @existencia where idHerramientas = @idH";
+                _Herramientas h = new _Herramientas();
+
+
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
+                MySqlCommand _comando2 = new MySqlCommand(query2, ConexionBD.conexion);
+
                 _comando.Parameters.AddWithValue("@cantidadBuena", buenas);
                 _comando.Parameters.AddWithValue("@cantidadMala", malas);
                 _comando.Parameters.AddWithValue("@cantidadPerdida", perdidas);
-                _comando.Parameters.AddWithValue("@activo", activo);
+                _comando.Parameters.AddWithValue("@activo", 0);
                 _comando.Parameters.AddWithValue("@fechaDev", devolucion);
-                _comando.Parameters.AddWithValue("@idPrestamo", idP);
+                _comando.Parameters.AddWithValue("@idDetalle", idDetalle);
+
+                _comando2.Parameters.AddWithValue("@existencia", h.cargarInventario(idH, buenas));
+                _comando2.Parameters.AddWithValue("@idH",idH);
 
                 try
                 {
                     _comando.Connection.Open();
                     _comando.ExecuteNonQuery();
                     _comando.Connection.Close();
+
+                    _comando2.Connection.Open();
+                    _comando2.ExecuteNonQuery();
+                    _comando2.Connection.Close();
+
+                    evaluarPrestamo(cantidadRegistros(idPrestamo), idPrestamo);
                 }
                 catch (MySqlException ex)
                 {
                     _comando.Connection.Close();
+                    _comando2.Connection.Close();
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
         }
 
-        public void devolverParte(int buenas, int malas, int perdidas, int pendintes, DateTime devolucion, int idP)
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="buenas"></param>
+        /// <param name="malas"></param>
+        /// <param name="perdidas"></param>
+        /// <param name="pendintes"></param>
+        /// <param name="devolucion"></param>
+        /// <param name="idP"></param>
+        /// <param name="idH"></param>
+        public void devolverParte(int buenas, int malas, int perdidas, int pendintes, DateTime devolucion, int idP, int idH)
         {
                 string query = "update DetallePrestamo SET CantidadPrestada = @cantidadPrestada, CantidadBuenEstado = @cantidadBuena," +
                                                           "CantidadMalEstado = @cantidadMala, CantidadPerdida = @cantidadPerdida," +
                                                           "FechaDevolucion = @fechaDev " +
                                                     "where idDetallePrestamo = @idPrestamo";
+
+                string query2 = "update Herramientas SET Existencia = @existencia WHERE idHerramientas = @idH";
+                _Herramientas h = new _Herramientas();
+
+
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
+                MySqlCommand _comando2 = new MySqlCommand(query2, ConexionBD.conexion);
+
                 _comando.Parameters.AddWithValue("@cantidadPrestada",pendintes);
                 _comando.Parameters.AddWithValue("@cantidadBuena", buenas);
                 _comando.Parameters.AddWithValue("@cantidadMala", malas);
@@ -186,6 +263,63 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@fechaDev", devolucion);
                 _comando.Parameters.AddWithValue("@idPrestamo", idP);
 
+                _comando2.Parameters.AddWithValue("@existencia", h.cargarInventario(idH, buenas));
+                _comando2.Parameters.AddWithValue("@idH", idH);
+
+                try
+                {
+                    _comando.Connection.Open();
+                    _comando.ExecuteNonQuery();
+                    _comando.Connection.Close();
+
+                    _comando2.Connection.Open();
+                    _comando2.ExecuteNonQuery();
+                    _comando2.Connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    _comando.Connection.Close();
+                    _comando2.Connection.Close();
+                    Error _error = new Error(ex.Message + " " + ex.Number, 2);
+                    _errores.Add(_error);
+                }
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idPrestamo"></param>
+        /// <returns></returns>
+        private int cantidadRegistros(int idPrestamo)
+        {
+            string contar = "select count(*) from DetallePrestamo WHERE Activo = 1 AND Prestamo_idPrestamo = " + idPrestamo;
+            MySqlCommand comando = new MySqlCommand(contar, _conexion);
+            comando.CommandTimeout = 12280;
+
+            comando.Connection.Open();
+            int cantidad = Convert.ToInt32(comando.ExecuteScalar());
+            comando.Connection.Close();
+            return cantidad;
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cantidadRegistros"></param>
+        /// <param name="idPrestamo"></param>
+        private void evaluarPrestamo(int cantidadRegistros, int idPrestamo)
+        {
+            if (cantidadRegistros == 0)
+            {
+                string query = "update Prestamo SET Activo = 0 " +
+                                                "WHERE idPrestamo = @idPrestamo";
+                MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
+                _comando.Parameters.AddWithValue("@idPrestamo", idPrestamo);
+
                 try
                 {
                     _comando.Connection.Open();
@@ -198,14 +332,7 @@ namespace Capa_Datos
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-        }
-
-        private void descargarInventario()
-        {
-        }
-
-        private void cargarInventario()
-        {
+            }
         }
     }
 }

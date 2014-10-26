@@ -46,6 +46,8 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
+
+
         /// <summary>
         /// para --> Realizar inserción en tabla Herramientas
         /// 
@@ -81,6 +83,7 @@ namespace Capa_Datos
         }
 
  
+
         /// <summary>
         /// para --> Obtener listado de todas las herrameintas ingresadas
         /// 
@@ -114,6 +117,8 @@ namespace Capa_Datos
             return _listHerramientas;
         }
 
+
+
         /// <summary>
         /// para --> Realiza eliminación "setea activo = false"
         /// 
@@ -144,6 +149,8 @@ namespace Capa_Datos
 
             return true;
         }
+
+
 
         /// <summary>
         /// para --> Realizar UPDATE de la información modificada por el usuario
@@ -177,6 +184,13 @@ namespace Capa_Datos
             }
         }
 
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cantidad"></param>
+        /// <returns></returns>
         public Boolean verificarExistencia(int cantidad)
         {
             if (this.Existencia > cantidad)
@@ -189,6 +203,68 @@ namespace Capa_Datos
             }
         }
 
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="valor"></param>
+        /// <returns></returns>
+        public int nuevaExistencia(int id, int valor)
+        {
+            string query = "Select * FROM Herramientas WHERE Activo = true AND idHerramientas = " + id;
+            _Herramientas _tool;
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+                DataRow _row = _tabla.Rows[0];
+                _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
+
+            return _tool.Existencia - valor;
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="valor"></param>
+        /// <returns></returns>
+        public int cargarInventario(int id, int valor)
+        {
+            string query = "Select * FROM Herramientas WHERE Activo = true AND idHerramientas = " + id;
+            _Herramientas _tool;
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            DataRow _row = _tabla.Rows[0];
+            _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
+
+            return _tool.Existencia + valor;
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Boolean verificarUso()
         {
             Boolean usada = true;
@@ -196,6 +272,11 @@ namespace Capa_Datos
             return usada;
         }
 
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         public void eliminar()
         {
             string query = "UPDATE Herramientas SET Activo = false WHERE idHerramientas = " + this.idHerramientas;
