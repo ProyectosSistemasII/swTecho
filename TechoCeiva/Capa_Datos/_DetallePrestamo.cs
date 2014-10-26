@@ -177,14 +177,14 @@ namespace Capa_Datos
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="buenas"></param>
-        /// <param name="malas"></param>
-        /// <param name="perdidas"></param>
+        /// <param name="buenas">Cantidad de herramientas que estan en buen estado</param>
+        /// <param name="malas">Cantidad de herramientas que estan en mal estado / Dañadas</param>
+        /// <param name="perdidas">Catidad de herramientas que se perdieron</param>
         /// <param name="activo"></param>
-        /// <param name="devolucion"></param>
-        /// <param name="idDetalle"></param>
-        /// <param name="idPrestamo"></param>
-        /// <param name="idH"></param>
+        /// <param name="devolucion">Fecha en que se están devolviendo las herramientas</param>
+        /// <param name="idDetalle">id del Detalle </param>
+        /// <param name="idPrestamo">id del Prestamo en cuestión</param>
+        /// <param name="idH">id de la herramienta a devolver</param>
         public void devolverTodo(int buenas, int malas, int perdidas, int activo, DateTime devolucion, int idDetalle, int idPrestamo, int idH)
         {
                 string query = "update DetallePrestamo SET CantidadBuenEstado = @cantidadBuena, CantidadMalEstado = @cantidadMala," +
@@ -235,19 +235,19 @@ namespace Capa_Datos
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="buenas"></param>
-        /// <param name="malas"></param>
-        /// <param name="perdidas"></param>
-        /// <param name="pendintes"></param>
-        /// <param name="devolucion"></param>
-        /// <param name="idP"></param>
-        /// <param name="idH"></param>
-        public void devolverParte(int buenas, int malas, int perdidas, int pendintes, DateTime devolucion, int idP, int idH)
+        /// <param name="buenas">Cantidad de herramientas que estan en buen estado</param>
+        /// <param name="malas">Cantidad de herramientas que estan el mal estado </param>
+        /// <param name="perdidas">Cantidad de herramientas que re reportaron perdidas</param>
+        /// <param name="pendintes">Cantidad de herramientas que estan pendientes por devolver</param>
+        /// <param name="devolucion">Fecha de la devolución (Siempre será la fecha del dían en cuestión)</param>
+        /// <param name="idP">id del detalle en cuestión</param>
+        /// <param name="idH">id de la herramienta a devolver</param>
+        public void devolverParte(int buenas, int malas, int perdidas, int pendintes, DateTime devolucion, int idDetalleP, int idH)
         {
                 string query = "update DetallePrestamo SET CantidadPrestada = @cantidadPrestada, CantidadBuenEstado = @cantidadBuena," +
                                                           "CantidadMalEstado = @cantidadMala, CantidadPerdida = @cantidadPerdida," +
                                                           "FechaDevolucion = @fechaDev " +
-                                                    "where idDetallePrestamo = @idPrestamo";
+                                                    "where idDetallePrestamo = @idDetalleP";
 
                 string query2 = "update Herramientas SET Existencia = @existencia WHERE idHerramientas = @idH";
                 _Herramientas h = new _Herramientas();
@@ -261,7 +261,7 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@cantidadMala", malas);
                 _comando.Parameters.AddWithValue("@cantidadPerdida", perdidas);
                 _comando.Parameters.AddWithValue("@fechaDev", devolucion);
-                _comando.Parameters.AddWithValue("@idPrestamo", idP);
+                _comando.Parameters.AddWithValue("@idDetalleP", idDetalleP);
 
                 _comando2.Parameters.AddWithValue("@existencia", h.cargarInventario(idH, buenas));
                 _comando2.Parameters.AddWithValue("@idH", idH);

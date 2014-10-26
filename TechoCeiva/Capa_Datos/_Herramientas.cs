@@ -268,7 +268,19 @@ namespace Capa_Datos
         public Boolean verificarUso()
         {
             Boolean usada = true;
+            string contar = "select count(*) from DetallePrestamo WHERE Activo = 1 " +
+                                                                 "AND Herramientas_idHerramientas = " + this.idHerramientas;
+            MySqlCommand comando = new MySqlCommand(contar, _conexion);
+            comando.CommandTimeout = 12280;
 
+            comando.Connection.Open();
+            int cantidad = Convert.ToInt32(comando.ExecuteScalar());
+            comando.Connection.Close();
+
+            if (cantidad > 0)
+                usada = true;
+            else
+                usada = false;
             return usada;
         }
 

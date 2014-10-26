@@ -85,14 +85,15 @@ namespace TechoCeiva
 
                 if (estado)
                 {
-                    MessageBox.Show(row.Nombre + " no se puede eliminar porque se encuentra actualmente en uso", "", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(row.Nombre + " no se puede eliminar porque se encuentra actualmente en uso", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
                 else
                 {
-                    if (MessageBox.Show("¿Está seguro que sedea eliminar " + row.Nombre + "del inventario?", "", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    if (MessageBox.Show("¿Está seguro que sedea eliminar " + row.Nombre + " del inventario?", "", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                     {
                         row.eliminar();
-                        MessageBox.Show("Herramienta eliminada del inventario con éxito", "", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                        fillDataGrid();
+                        MessageBox.Show("Herramienta eliminada del inventario", "", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                     }
                 }
             }
