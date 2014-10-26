@@ -146,8 +146,6 @@ namespace Capa_Datos
 
         public void devolverTodo(int buenas, int malas, int perdidas, int activo, DateTime devolucion, int idP)
         {
-            //if (this._errores.Count == 0)
-            //{
                 string query = "update DetallePrestamo SET CantidadBuenEstado = @cantidadBuena, CantidadMalEstado = @cantidadMala," +
                                                           "CantidadPerdida = @cantidadPerdida, Activo = @activo," +
                                                           "FechaDevolucion = @fechaDev "+
@@ -172,13 +170,10 @@ namespace Capa_Datos
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-            //}
         }
 
         public void devolverParte(int buenas, int malas, int perdidas, int pendintes, DateTime devolucion, int idP)
         {
-            //if (this._errores.Count == 0)
-            //{
                 string query = "update DetallePrestamo SET CantidadPrestada = @cantidadPrestada, CantidadBuenEstado = @cantidadBuena," +
                                                           "CantidadMalEstado = @cantidadMala, CantidadPerdida = @cantidadPerdida," +
                                                           "FechaDevolucion = @fechaDev " +
@@ -203,7 +198,14 @@ namespace Capa_Datos
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
-           // }
+        }
+
+        private void descargarInventario()
+        {
+        }
+
+        private void cargarInventario()
+        {
         }
     }
 }

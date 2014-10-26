@@ -188,5 +188,31 @@ namespace Capa_Datos
                 return false;
             }
         }
+
+        public Boolean verificarUso()
+        {
+            Boolean usada = true;
+
+            return usada;
+        }
+
+        public void eliminar()
+        {
+            string query = "UPDATE Herramientas SET Activo = false WHERE idHerramientas = " + this.idHerramientas;
+            MySqlCommand _comandoEliminar = new MySqlCommand(query, _conexion);
+
+            try
+            {
+                _comandoEliminar.Connection.Open();
+                _comandoEliminar.ExecuteNonQuery();
+                _comandoEliminar.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                _comandoEliminar.Connection.Close();
+                Error _error = new Error(ex.Message + " " + ex.Number, 2);
+                _errores.Add(_error);
+            }
+        }
     }
 }

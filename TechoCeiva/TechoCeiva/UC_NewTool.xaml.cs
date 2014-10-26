@@ -42,16 +42,64 @@ namespace TechoCeiva
 
         private void DataGridHerramientas_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            _Herramientas row = DataGridHerramientas.SelectedItem as _Herramientas;
-            WinModifyTool modificar = new WinModifyTool();
+            modificarHerramienta();
+        }
 
-            modificar.id = row.idHerramientas;
-            modificar.txtHerramienta.Text = row.Nombre;
-            modificar.txtCantidad.Text = Convert.ToString(row.Existencia);
+        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            modificarHerramienta();
+        }
 
-            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(modificar);
-            modificar.ShowDialog();
-            fillDataGrid();
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            eliminarHerramienta();
+        }
+
+        private void modificarHerramienta()
+        {
+            try
+            {
+                _Herramientas row = DataGridHerramientas.SelectedItem as _Herramientas;
+                WinModifyTool modificar = new WinModifyTool();
+
+                modificar.id = row.idHerramientas;
+                modificar.txtHerramienta.Text = row.Nombre;
+                modificar.txtCantidad.Text = Convert.ToString(row.Existencia);
+
+                System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(modificar);
+                modificar.ShowDialog();
+                fillDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccione una herramienta para editar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void eliminarHerramienta()
+        {
+            try
+            {
+                _Herramientas row = DataGridHerramientas.SelectedItem as _Herramientas;
+                Boolean estado = row.verificarUso();
+
+                if (estado)
+                {
+                    MessageBox.Show(row.Nombre + " no se puede eliminar porque se encuentra actualmente en uso", "", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    if (MessageBox.Show("¿Está seguro que sedea eliminar " + row.Nombre + "del inventario?", "", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    {
+                        row.eliminar();
+                        MessageBox.Show("Herramienta eliminada del inventario con éxito", "", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Seleccione una herramienta para eliminar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 	}
 }
