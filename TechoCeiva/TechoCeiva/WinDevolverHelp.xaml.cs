@@ -25,6 +25,10 @@ namespace TechoCeiva
 		public WinDevolverHelp()
 		{
 			this.InitializeComponent();
+            this.damaged = 0;
+            this.lost = 0;
+            this.pending = 0;
+            this.goodState = 0;
             txtDañadas.Focus();
             txtDañadas.SelectAll();
 		}
@@ -183,7 +187,7 @@ namespace TechoCeiva
             setDamaged(Convert.ToInt32(txtDañadas.Text));
             setLost(Convert.ToInt32(txtPerdidas.Text));
             setPending(Convert.ToInt32(txtPendientes.Text));
-            setGoogState(Convert.ToInt32(txtBuenEstado));
+            setGoogState(Convert.ToInt32(txtBuenEstado.Text));
         }
 	}
 }

@@ -144,8 +144,66 @@ namespace Capa_Datos
             return listaDetallesEspecificos;
         }
 
-        public void devolver()
+        public void devolverTodo(int buenas, int malas, int perdidas, int activo, DateTime devolucion, int idP)
         {
+            //if (this._errores.Count == 0)
+            //{
+                string query = "update DetallePrestamo SET CantidadBuenEstado = @cantidadBuena, CantidadMalEstado = @cantidadMala," +
+                                                          "CantidadPerdida = @cantidadPerdida, Activo = @activo," +
+                                                          "FechaDevolucion = @fechaDev "+
+                                                    "where idDetallePrestamo = @idPrestamo";
+                MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
+                _comando.Parameters.AddWithValue("@cantidadBuena", buenas);
+                _comando.Parameters.AddWithValue("@cantidadMala", malas);
+                _comando.Parameters.AddWithValue("@cantidadPerdida", perdidas);
+                _comando.Parameters.AddWithValue("@activo", activo);
+                _comando.Parameters.AddWithValue("@fechaDev", devolucion);
+                _comando.Parameters.AddWithValue("@idPrestamo", idP);
+
+                try
+                {
+                    _comando.Connection.Open();
+                    _comando.ExecuteNonQuery();
+                    _comando.Connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    _comando.Connection.Close();
+                    Error _error = new Error(ex.Message + " " + ex.Number, 2);
+                    _errores.Add(_error);
+                }
+            //}
+        }
+
+        public void devolverParte(int buenas, int malas, int perdidas, int pendintes, DateTime devolucion, int idP)
+        {
+            //if (this._errores.Count == 0)
+            //{
+                string query = "update DetallePrestamo SET CantidadPrestada = @cantidadPrestada, CantidadBuenEstado = @cantidadBuena," +
+                                                          "CantidadMalEstado = @cantidadMala, CantidadPerdida = @cantidadPerdida," +
+                                                          "FechaDevolucion = @fechaDev " +
+                                                    "where idDetallePrestamo = @idPrestamo";
+                MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
+                _comando.Parameters.AddWithValue("@cantidadPrestada",pendintes);
+                _comando.Parameters.AddWithValue("@cantidadBuena", buenas);
+                _comando.Parameters.AddWithValue("@cantidadMala", malas);
+                _comando.Parameters.AddWithValue("@cantidadPerdida", perdidas);
+                _comando.Parameters.AddWithValue("@fechaDev", devolucion);
+                _comando.Parameters.AddWithValue("@idPrestamo", idP);
+
+                try
+                {
+                    _comando.Connection.Open();
+                    _comando.ExecuteNonQuery();
+                    _comando.Connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    _comando.Connection.Close();
+                    Error _error = new Error(ex.Message + " " + ex.Number, 2);
+                    _errores.Add(_error);
+                }
+           // }
         }
     }
 }
