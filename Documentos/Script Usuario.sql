@@ -1,4 +1,3 @@
-﻿INSERT INTO Voluntarios (Nombres, Apellidos,Telefono,Direccion,Correo,Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia)VALUES ('Administrador','Sistemas','77843233','Colonia bla bla','Administrador@root.com',true,1,2,'Gabriela','56789324');
-INSERT INTO Voluntarios (Nombres, Apellidos,Telefono,Direccion,Correo,Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia)VALUES ('Encuestador','Techo','77843233','Colonia bla bla','Encuestador@root.com',true,1,2,'Jose','54821452');
-INSERT INTO TipoUsuarios (NombreTipo)VALUES ('Administrador');
+﻿INSERT INTO Voluntarios (Nombres, Apellidos,Telefono,Direccion,Correo,Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia)VALUES ('Fransis','Martinez','77843233','Ciudad','Administrador@root.com',true,1,2,'Gabriela','56789324');
+INSERT INTO Voluntarios (Nombres, Apellidos,Telefono,Direccion,Correo,Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia)VALUES ('Tibu','Gomez','77843233','Ciudad','Encuestador@root.com',true,1,2,'Jose','54821452');
 INSERT INTO Usuarios (Username, Password,TipoUsuarios_idTipoUsuarios,Voluntarios_idVoluntarios,PreguntaSecreta,Respuesta)VALUES ('ROOT',SHA2('Root123',512),1,1,'alguna pregunta','respuesta uno');

@@ -575,54 +575,7 @@
 	
 								</Button.Resources>
 							</Button>
-							<Button x:Name="btnUsuariosReportes" Content="Reportes" Style="{DynamicResource btn_Usuarios_Reportes}" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" Height="26" Click="btnUsuariosReportes_Click">
-								<Button.Resources>
-<!-- Button simple: este control establece pinceles en cada estado. Tenga en cuenta que estos pinceles deben aparecer en la lista de arriba, ya que son recursos estáticos -->
-									<Style x:Key="btn_Usuarios_Reportes" TargetType="{x:Type Button}" BasedOn="{x:Null}">
-										<Setter Property="FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}"/>
-										<Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
-										<Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
-										<Setter Property="Template">
-											<Setter.Value>
-												<ControlTemplate TargetType="{x:Type Button}">
-					
-					<!-- Grid se usa como raíz porque resulta sencillo agregarle más elementos para personalizar el botón -->
-													<Grid x:Name="Grid">
-												<!-- Content Presenter es donde el control coloca el contenido de texto, etc. -->
-														<Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
-						
-												<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
-														<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
-													</Grid>
-					
-					<!--Cada estado establece un pincel en el elemento Border de la plantilla -->
-													<ControlTemplate.Triggers>
-														<Trigger Property="IsKeyboardFocused" Value="true">
-															<Setter Property="BorderBrush" Value="{DynamicResource DefaultedBorderBrush}" TargetName="Border"/>
-														</Trigger>
-														<Trigger Property="IsMouseOver" Value="true">
-															<Setter Property="Background" TargetName="Border" Value="#FF747B7E"/>
-															<Setter Property="Opacity" TargetName="Border" Value="0.85"/>
-														</Trigger>
-														<Trigger Property="IsPressed" Value="true">
-															<Setter Property="Background" Value="{DynamicResource PressedBrush}" TargetName="Border"/>
-															<Setter Property="BorderBrush" Value="{DynamicResource PressedBorderBrush}" TargetName="Border"/>
-														</Trigger>
-														<Trigger Property="IsEnabled" Value="true"/>
-														<Trigger Property="IsEnabled" Value="false">
-															<Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border"/>
-															<Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border"/>
-															<Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
-														</Trigger>
-													</ControlTemplate.Triggers>
-												</ControlTemplate>
-											</Setter.Value>
-										</Setter>
-									</Style>
-	
-								</Button.Resources>
-							</Button>
-						</StackPanel>
+                        </StackPanel>
 					</Expander>
 					
 				</StackPanel>
