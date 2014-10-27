@@ -54,7 +54,7 @@ namespace TechoCeiva
         private void fillComboBox()
         {
             _InsumosLN insumos = new _InsumosLN();
-            cbxInsumos.ItemsSource = insumos._Obtener_I();
+            cbxInsumos.ItemsSource = insumos._Obtener_In();
             cbxInsumos.SelectedValuePath = "idAlimentos";
             cbxInsumos.DisplayMemberPath = "Nombre";
 
@@ -64,7 +64,7 @@ namespace TechoCeiva
             cbxVoluntarios.DisplayMemberPath = "nombres";
         }
 
-        private void acctionAdd(int valor)
+        private void actionAdd(int valor)
         {
             _InsumosLN Insumos = new _InsumosLN();
             Insumos._Modificar(this.cbxInsumos.SelectedIndex,int.Parse(txtCantidad.Text));
@@ -120,11 +120,11 @@ namespace TechoCeiva
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             Guardar();
+            dgdDetalle.Items.Clear();
         }
 
         private void btnX_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 deleteFromGrid();
@@ -148,8 +148,11 @@ namespace TechoCeiva
 
                 if (correcto)
                 {
-                    datosSalida._InsertarSalida();
-                    MessageBox.Show("Datos Guardados");
+                    //datosSalida._InsertarSalida();
+
+                    _Insumos modificado = new _Insumos();
+                    modificado._Modificar(25, 10000);
+                    MessageBox.Show("Datos Modificados");
                 }
                 else
                 {
@@ -170,9 +173,9 @@ namespace TechoCeiva
                     dgdDetalle.Items.Add(h);
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Error al borrar datos: Debe seleccionar una herramienta para eliminar", "Error al borrar datos", MessageBoxButton.OK, MessageBoxImage.Error);
+                
             }
         }
 

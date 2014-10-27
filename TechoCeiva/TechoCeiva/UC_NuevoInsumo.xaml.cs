@@ -47,8 +47,10 @@ namespace TechoCeiva
 
             modificar.id = row.idAlimentos;
             modificar.comboBoxInsumos.Text = row.Nombre;
+            modificar.cmxPresentacion.Text = row.Presentacion;
             modificar.txtCantida.Text = Convert.ToString(row.Existencia);
             modificar.cbxRangoFecha.Text = row.Rango;
+            modificar.txtAni.Text = Convert.ToString(row.AnioCaducidad);
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(modificar);
             modificar.ShowDialog();
             fillDataGrid();

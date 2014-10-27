@@ -60,7 +60,7 @@ namespace Capa_Datos
             
              public List<_Presentacion> _Obtener_P()
         {
-            string query = "Select * FROM Presentacion WHERE Activo = true";
+            string query = "Select * FROM Presentacion WHERE Activo = true Order By Nombre";
             List<_Presentacion> _listPresentacion = new List<_Presentacion>();
 
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
@@ -108,7 +108,7 @@ namespace Capa_Datos
             MySqlCommand comando = new MySqlCommand("SELECT COUNT(idPresentacion) AS Contador, idPresentacion FROM Presentacion WHERE Nombre = @Presentacion", _conexion);
             comando.Parameters.AddWithValue("@Presentacion", this.Nombre);
             comando.CommandTimeout = 12280;
-
+            
             int i = 0;
             int id = 0;
             DataSet ds = new DataSet();
@@ -121,13 +121,30 @@ namespace Capa_Datos
             i = Convert.ToInt32(row["Contador"]);
             if (i == 0)
             {
-                return id;
+                return i;
             }
             else
             {
                 id = Convert.ToInt32(row["idPresentacion"]);
                 return id;
             }
+        }
+
+        public int devolver_ultimo()
+        {
+            MySqlCommand comando2 = new MySqlCommand("SELECT MAX(idPresentacion) AS Total From Presentacion", _conexion);
+            comando2.CommandTimeout = 12280;
+
+            int id;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando2;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            id = Convert.ToInt32(row["total"]);
+            return id;
         }
     
     }

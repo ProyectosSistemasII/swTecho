@@ -17,7 +17,15 @@
 
 	<Grid x:Name="LayoutRoot">
 		<Label x:Name="lblInsumos" Content="Insumos" HorizontalAlignment="Left" Margin="23,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="26.667"/>
-		<DataGrid x:Name="dgInsumos" Margin="23,68,475.125,47" MouseDoubleClick="dgInsumos_MouseDoubleClick" />
-		<Button x:Name="btnMas" Content="+" HorizontalAlignment="Left" Margin="315,18.168,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" FontSize="14.667" Width="36" Height="25.07" Foreground="White" Background="#FF0092DD" BorderBrush="{x:Null}" Click="btnMas_Click" />
+        <DataGrid x:Name="dgInsumos" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" FontSize="14.667" Background="White" Foreground="#FF333333" Margin="23,68,475.125,47" MouseDoubleClick="dgInsumos_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" Width="140" />
+                <DataGridTextColumn Binding="{Binding Presentacion}" Header="Presentacion" Width="120" />
+                <DataGridTextColumn Header="Existencias" Binding="{Binding Existencia}" Width="120" />
+                <DataGridTextColumn Binding="{Binding Rango}" Header="Caducidad" Width="180" />
+                <DataGridTextColumn Binding="{Binding AnioCaducidad}" Header="Año" Width="62" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnMas" Content="+" HorizontalAlignment="Left" Margin="315,18.168,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" FontSize="14.667" Width="36" Height="25.07" Foreground="White" Background="#FF0092DD" BorderBrush="{x:Null}" Click="btnMas_Click" />
 	</Grid>
 </UserControl>

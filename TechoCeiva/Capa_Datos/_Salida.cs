@@ -40,10 +40,11 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
-        public void _InsertarSalida()
+        public int _InsertarSalida()
         {
             if (this._errores.Count == 0)
             {
+                int lastID = 0;
                 string query = "INSERT INTO Salida (idSalida,FechaSalida,Usuarios_idUsuarios, Activo, Descripcion) VALUES (@idSalida,@FechaSalida,@Usuarios_idUsuarios, @Activo, @Descripcion)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@idSalida", this.idSalida);
@@ -56,7 +57,9 @@ namespace Capa_Datos
                 {
                     _comando.Connection.Open();
                     _comando.ExecuteNonQuery();
+                    lastID = Convert.ToInt32(_comando.LastInsertedId);
                     _comando.Connection.Close();
+                    return lastID;
                 }
                 catch (MySqlException ex)
                 {
@@ -65,6 +68,7 @@ namespace Capa_Datos
                     _errores.Add(_error);
                 }
             }
+            return 0;
         }
 
         public int ultimaInsercion()

@@ -17,6 +17,7 @@ namespace Capa_Datos
         public Boolean Activo { get; set; }
         public int Presentacion_idPresentacion { get; set; }
         public List<Error> _errores { get; set; }
+        public String Presentacion { get; set; }
 
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;
@@ -46,6 +47,17 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
+        public _Insumos(int _idAlimentos,String _nombre, String Presentacion, int _existencia, String _rango, int _anioCaducidad)
+        {
+            this.idAlimentos = _idAlimentos;
+            this.Nombre = _nombre;
+            this.Presentacion = Presentacion;
+            this.Existencia = _existencia;
+            this.Rango = _rango;
+            this.AnioCaducidad = _anioCaducidad;
+            this._errores = new List<Error>();
+        }
+
         public void _Insertar_I()
         {
             if (this._errores.Count == 0)
@@ -57,7 +69,7 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@Existencia", this.Existencia);
                 _comando.Parameters.AddWithValue("@Rango", this.Rango);
                 _comando.Parameters.AddWithValue("@Anio", this.AnioCaducidad);
-                _comando.Parameters.AddWithValue("@Activo", this.Activo);
+                _comando.Parameters.AddWithValue("@Activo", this.Activo);//select id presentacion
                 _comando.Parameters.AddWithValue("@Presentacion_idPresentacion", this.Presentacion_idPresentacion);
 
                 try
@@ -78,7 +90,7 @@ namespace Capa_Datos
             
              public List<_Insumos> _Obtener_I()
         {
-            string query = "Select * FROM Alimentos WHERE Activo = true";
+            string query = "Select idAlimentos,Alimentos.Nombre,Presentacion.Nombre As Presentacion,Existencia, Rango, AnioCaducidad FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion) and (Existencia > 0)";
             List<_Insumos> _listInsumos = new List<_Insumos>();
 
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
@@ -93,12 +105,84 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]),Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]), Convert.ToBoolean(_row["Activo"]), Convert.ToInt32(_row["Presentacion_idPresentacion"]));
+                _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]),Convert.ToString(_row["Nombre"]), Convert.ToString(_row["Presentacion"]),Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]));
                 _listInsumos.Add(_insumos);
             }
 
             return _listInsumos;
         }
+
+             public List<String> _Obtener_Distinto()
+             {
+                 string query = "Select Distinct Nombre AS Nombres from Alimentos Order by(Nombre)";
+                 List<String> _listInsumos = new List<String>();
+
+                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                 _comando.CommandTimeout = 12280;
+                 DataSet _ds = new DataSet();
+                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
+                 _adapter.SelectCommand = _comando;
+                 _adapter.Fill(_ds);
+                 DataTable _tabla = new DataTable();
+                 _tabla = _ds.Tables[0];
+
+                 for (int i = 0; i < _tabla.Rows.Count; i++)
+                 {
+                     DataRow _row = _tabla.Rows[i];
+                     String _insumos = Convert.ToString(_row["Nombres"]);
+                     _listInsumos.Add(_insumos);
+                 }
+
+                 return _listInsumos;
+             }
+
+             public List<_Insumos> _Obtener_In()
+             {
+                 string query = "Select idAlimentos,CONCAT(Alimentos.Nombre,' ',Presentacion.Nombre) AS Nombre, Existencia, Rango, AnioCaducidad,Alimentos.Activo, Presentacion_idPresentacion FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion)";
+                 List<_Insumos> _listInsumos = new List<_Insumos>();
+
+                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                 _comando.CommandTimeout = 12280;
+                 DataSet _ds = new DataSet();
+                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
+                 _adapter.SelectCommand = _comando;
+                 _adapter.Fill(_ds);
+                 DataTable _tabla = new DataTable();
+                 _tabla = _ds.Tables[0];
+
+                 for (int i = 0; i < _tabla.Rows.Count; i++)
+                 {
+                     DataRow _row = _tabla.Rows[i];
+                     _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]),Convert.ToBoolean(_row["Activo"]),Convert.ToInt32(_row["Presentacion_idPresentacion"]));
+                     _listInsumos.Add(_insumos);
+                 }
+
+                 return _listInsumos;
+             }
+
+             /*public List<_Insumos> _Obtener_In()
+             {
+                 string query = "Select idAlimentos, CONCAT(Alimentos.Nombre,' ',Presentacion.Nombre) AS Nombre,Existencia,Rango,AnioCaducidad,Alimentos.Activo,Presentacion_idPresentacion FROM Alimentos INNER JOIN Presentacion on (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion)";
+                 List<_Insumos> _listInsumos = new List<_Insumos>();
+
+                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                 _comando.CommandTimeout = 12280;
+                 DataSet _ds = new DataSet();
+                 MySqlDataAdapter _adapter = new MySqlDataAdapter();
+                 _adapter.SelectCommand = _comando;
+                 _adapter.Fill(_ds);
+                 DataTable _tabla = new DataTable();
+                 _tabla = _ds.Tables[0];
+
+                 for (int i = 0; i < _tabla.Rows.Count; i++)
+                 {
+                     DataRow _row = _tabla.Rows[i];
+                     _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]), Convert.ToBoolean(_row["Activo"]), Convert.ToInt32(_row["Presentacion_idPresentacion"]));
+                     _listInsumos.Add(_insumos);
+                 }
+
+                 return _listInsumos;
+             }*/
             
         public Boolean _Eliminar(int _id)
         {

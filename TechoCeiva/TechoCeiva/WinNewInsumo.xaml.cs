@@ -19,13 +19,17 @@ namespace TechoCeiva
 	public partial class WinNewInsumo : Window
 	{
         public int id = 0;
+        public DateTime moment = DateTime.Today;
 
 		public WinNewInsumo()
 		{
 			this.InitializeComponent();
+            
             cbxRangoFecha.Items.Add("Enero - Abril");
             cbxRangoFecha.Items.Add("Mayo - Agosto");
             cbxRangoFecha.Items.Add("Septiembre - Diciembre");
+            
+            txtAni.Text = Convert.ToString(moment.Year);
             fillComboBox();
 			
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
@@ -36,24 +40,35 @@ namespace TechoCeiva
             _PresentacionLN nPresentacion = new _PresentacionLN(Convert.ToString(cmxPresentacion.Text));
             Boolean correcto2 = nPresentacion.Ingresar_Presentacion();
             int verificarPresentacion = nPresentacion.verificarPresentacion(Convert.ToString(cmxPresentacion.Text));
+            int UltimoID = nPresentacion.devolver_ultimo();
 
-            _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text),Convert.ToInt32(txtCantida.Text),Convert.ToString(cbxRangoFecha.Text),Convert.ToInt32(txtAni.Text),verificarPresentacion);
-            Boolean correcto = nInsumo.Ingresar_Insumo();
-            int verificarInsumo = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), verificarPresentacion);
             if (verificarPresentacion == 0)
             {
                 nPresentacion._Insertar_P();
+                _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text), Convert.ToInt32(txtCantida.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), UltimoID);
+                Boolean correcto = nInsumo.Ingresar_Insumo();
+                int verificarInsumo = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), UltimoID);
+            
+                
                 if (correcto && correcto2)
                 {
-                    nInsumo._Insertar_I();
-                    if (MessageBox.Show("Insumo guardado. ¿Desea agregar uno nuevo?", "Guardado Exitoso", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.No)
+                    if (Convert.ToInt32(txtAni.Text) > Convert.ToInt32(moment.Year) - 1)
                     {
-                        this.Close();
+                        nInsumo._Insertar_I();
+                        if (MessageBox.Show("Insumo guardado. ¿Desea agregar uno nuevo?", "Guardado Exitoso", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.No)
+                        {
+                            this.Close();
+                        }
+                        else
+                        {
+                            comboBoxInsumos.Focus();
+                        }
                     }
                     else
                     {
-                        comboBoxInsumos.Focus();
+                        MessageBox.Show("Año incorrecto");
                     }
+                
                 }
                 else
                 {
@@ -63,9 +78,13 @@ namespace TechoCeiva
             }
             else
             {
+                _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text), Convert.ToInt32(txtCantida.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), verificarPresentacion);
+                Boolean correcto = nInsumo.Ingresar_Insumo();
+                int verificarInsumo = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), verificarPresentacion);
+            
                 if (verificarInsumo != 0)
                 {
-                    nInsumo._Modificar(verificarInsumo, verificarPresentacion);
+                    nInsumo._Modificar(verificarInsumo, Convert.ToInt32(txtCantida.Text));
                     MessageBox.Show("Insumo existente Modificado");
                 }
                 else
@@ -95,10 +114,8 @@ namespace TechoCeiva
         private void fillComboBox()
         {
             _InsumosLN insumos = new _InsumosLN();
-            comboBoxInsumos.ItemsSource = insumos._Obtener_I();
-            comboBoxInsumos.SelectedValuePath = "idInsumos";
-            comboBoxInsumos.DisplayMemberPath = "Nombre";
-
+            comboBoxInsumos.ItemsSource = insumos._Obtener_Distinto();
+           
             _PresentacionLN presentacion = new _PresentacionLN();
             cmxPresentacion.ItemsSource = presentacion._Obtener_P();
             cmxPresentacion.SelectedValuePath = "idPresentacion";
