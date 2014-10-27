@@ -23,7 +23,6 @@ namespace TechoCeiva
     public partial class UC_Comunidad : UserControl
     {
         int idComn = 0;
-        bool mod = false;
 
         public UC_Comunidad()
         {
@@ -78,10 +77,7 @@ namespace TechoCeiva
 
                 if (MessageBox.Show("¿Desea eliminar esta comunidad?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    /*comunidad.eliminarComunidad(sele.idComunidad);
-                    txtNombre.Text = "";
-                    cmbDepartamento.Text = "";
-                    fillDataGrid(comunidad);*/
+                    comunidad.eliminarComunidad(sele.idComunidad);
                     fillDataGrid();
                 }
                 else

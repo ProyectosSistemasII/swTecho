@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" Loaded="UserControl_Loaded" Height="576" Width="595">
     <Grid Margin="10.5,8,-79.5,0" d:LayoutOverrides="VerticalMargin">
-        <Label Content="Mantenimiento comunidades" FontSize="26.667" Foreground="#FF626465" Margin="23,23,283,505" Name="lblTitle" Style="{DynamicResource SimpleLabel}" Height="40" />
-        <Button BorderBrush="{x:Null}" Content="" FontSize="14.667" Foreground="White" Height="32" Margin="400,23,232,513" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" Width="32" >
+        <Label Content="Comunidades" FontSize="26.667" Foreground="#FF626465" Margin="23,23,432,505" Name="lblTitle" Style="{DynamicResource SimpleLabel}" Height="40" />
+        <Button BorderBrush="{x:Null}" Content="" FontSize="14.667" Foreground="White" Height="32" Margin="320,31,312,505" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" Width="32" >
         	<Button.Background>
         		<ImageBrush Stretch="None" ImageSource="add.png"/>
         	</Button.Background>
         </Button>
-        <Button BorderBrush="{x:Null}" Content="" FontSize="14.667" Foreground="White" Height="32" Margin="436,23,196,513" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Click="btnCancelar_Click" >
+        <Button BorderBrush="{x:Null}" Content="" FontSize="14.667" Foreground="White" Height="32" Margin="358,31,274,505" Name="btnCancelar" Style="{DynamicResource SimpleButton}" Click="btnCancelar_Click" >
         	<Button.Background>
         		<ImageBrush ImageSource="waste.png" Stretch="None"/>
         	</Button.Background>

@@ -78,8 +78,8 @@ namespace TechoCeiva
                     }
                     else
                     {
-                        this.Close();
-                        comun.fillDataGrid();                        
+                        comun.fillDataGrid();
+                        this.Close();   
                     }
                 }
                 else
@@ -92,10 +92,8 @@ namespace TechoCeiva
                 if (correcto)
                 {
                     comunidad.ModificarComunidad(idComn);
-                    txtNombre.Text = "";
-                    cmbDpto.Text = "";
-                    mod = false;
                     comun.fillDataGrid();
+                    mod = false;
                     this.Close();
                 }
                 else
@@ -108,16 +106,7 @@ namespace TechoCeiva
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
-            if (MessageBox.Show("¿Desea salir?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                comun.fillDataGrid();
-                this.Close();
-            }
-            else
-            {
-                txtNombre.Focus();
-            }
+            this.Close();
         }
 	}
 }
