@@ -28,116 +28,43 @@ namespace TechoCeiva
         public UC_Comunidad()
         {
             InitializeComponent();
-            
+            fillDataGrid();            
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            _ComunidadLN comn = new _ComunidadLN();
-            _DepartamentoLN depto = new _DepartamentoLN();
-            List<_Departamento> lista = new List<_Departamento>();
-            lista = depto.Obtener_D();
-            cmbDepartamento.ItemsSource = depto.Obtener_D();
-            cmbDepartamento.SelectedValuePath = "idDepartamento";
-            cmbDepartamento.DisplayMemberPath = "nombre";
-
-            fillDataGrid(comn);
+            fillDataGrid();
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            String nombre=txtNombre.Text;
-            int departamento=Convert.ToInt32(cmbDepartamento.SelectedValue);
-            int municipio=Convert.ToInt32(cmbMunicipio.SelectedValue);
-
-            _ComunidadLN comunidad = new _ComunidadLN(nombre,true, departamento, municipio);
-            Boolean correcto = comunidad.Ingresar_C();
-
-            if (mod==false)
-            {
-                if (correcto)
-                {
-                    comunidad.InsertarComunidad();
-                    txtNombre.Text = "";
-                    cmbDepartamento.Text = "";
-                    fillDataGrid(comunidad);
-                }
-                else
-                {
-                    MessageBox.Show(comunidad._obtenerError());
-                }
-            }
-            else
-            {
-                if (correcto)
-                {
-                    comunidad.ModificarComunidad(idComn);
-                    txtNombre.Text = "";
-                    cmbDepartamento.Text = "";
-                    fillDataGrid(comunidad);
-                    mod = false;
-                }
-                else
-                {
-                    MessageBox.Show(comunidad._obtenerError());
-                }
-            }
-            
-            
+            WinAddComunidad newComunidad = new WinAddComunidad();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(newComunidad);
+            newComunidad.ShowDialog();
+            fillDataGrid();
         }
 
-        private void fillDataGrid(_ComunidadLN comunidad)
+        public void fillDataGrid()
         {
-            List<_Comunidad> comn = new List<_Comunidad>();
-            comn = comunidad.ObtenerComunidades();
-            dataGridComn.ItemsSource = comn;
-            
-            
-        }
-
-        private void cmbDepartamento_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            _MunicipioLN mun = new _MunicipioLN();
-
-            cmbMunicipio.ItemsSource = mun.Obtener_M(Convert.ToInt32(cmbDepartamento.SelectedValue));
-            cmbMunicipio.SelectedValuePath = "idMunicipio";
-            cmbMunicipio.DisplayMemberPath = "nombre";
-        }
-
-        private void btnModificar_Click(object sender, RoutedEventArgs e)
-        {
-            String nombre = txtNombre.Text;
-            int departamento = Convert.ToInt32(cmbDepartamento.SelectedValue);
-            int municipio = Convert.ToInt32(cmbMunicipio.SelectedValue);
-
-            _ComunidadLN comunidad = new _ComunidadLN(nombre, true, departamento, municipio);
-            Boolean correcto = comunidad.Ingresar_C();
-
-
-            if (correcto)
-            {
-                comunidad.ModificarComunidad(idComn);
-                MessageBox.Show("Modificación Exitosa","",MessageBoxButton.OK,MessageBoxImage.Information);
-                txtNombre.Text = "";
-                cmbDepartamento.Text = "";
-                fillDataGrid(comunidad);
-            }
-            else
-            {
-                MessageBox.Show(comunidad._obtenerError());
-            }
-            
-               
+            _ComunidadLN comunidad = new _ComunidadLN();
+            dataGridComn.ItemsSource = comunidad.ObtenerComunidades();               
         }
 
         private void dataGridComn_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             _Comunidad sele = dataGridComn.SelectedItem as _Comunidad;
-            mod = true;
-            txtNombre.Text = sele.Nombre;
-            cmbDepartamento.Text = sele.DepartamentoNombre;
-            cmbMunicipio.Text = sele.MunicipioNombre;
+            _ComunidadLN comunidad = new _ComunidadLN();
             idComn = sele.idComunidad;
+
+            WinAddComunidad nWinAddComunidad = new WinAddComunidad();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(nWinAddComunidad);
+
+            nWinAddComunidad.txtNombre.Text = sele.Nombre;
+            nWinAddComunidad.cmbDpto.Text = sele.DepartamentoNombre;
+            nWinAddComunidad.cmbMun.Text = sele.MunicipioNombre;
+            nWinAddComunidad.getId(idComn);
+            nWinAddComunidad.Show();
+            fillDataGrid();
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -151,14 +78,15 @@ namespace TechoCeiva
 
                 if (MessageBox.Show("¿Desea eliminar esta comunidad?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    comunidad.eliminarComunidad(sele.idComunidad);
+                    /*comunidad.eliminarComunidad(sele.idComunidad);
                     txtNombre.Text = "";
                     cmbDepartamento.Text = "";
-                    fillDataGrid(comunidad);
+                    fillDataGrid(comunidad);*/
+                    fillDataGrid();
                 }
                 else
                 {
-                    fillDataGrid(comunidad);
+                    fillDataGrid();
                 }
             }
             else

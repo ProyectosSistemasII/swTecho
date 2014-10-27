@@ -251,6 +251,9 @@
     <Compile Include="UC_Voluntarios.xaml.cs">
       <DependentUpon>UC_Voluntarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinAddComunidad.xaml.cs">
+      <DependentUpon>WinAddComunidad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAddInsumos.xaml.cs">
       <DependentUpon>WinAddInsumos.xaml</DependentUpon>
     </Compile>
@@ -462,6 +465,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UC_Voluntarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WinAddComunidad.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -25,7 +25,9 @@ namespace Capa_Datos
             this.Nombre = "";
             this.Activo = false;
             this.Departamento_idDepartamento = 0;
+            this.DepartamentoNombre = "";
             this.Municipio_idMunicipio = 0;
+            this.MunicipioNombre = "";
         }
 
         public _Comunidad(int idComunidad, string Nombre)
@@ -51,6 +53,8 @@ namespace Capa_Datos
             this.Nombre = Nombre;
             this.DepartamentoNombre = Departamento;
             this.MunicipioNombre = Municipio;
+
+            this.errores = new List<Error>();
         }
 
 
