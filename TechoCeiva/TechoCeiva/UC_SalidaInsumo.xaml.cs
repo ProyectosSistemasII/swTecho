@@ -149,9 +149,8 @@ namespace TechoCeiva
                 if (correcto)
                 {
                     //datosSalida._InsertarSalida();
-
-                    _Insumos modificado = new _Insumos();
-                    modificado._Modificar(25, 10000);
+                    //_Insumos modificado = new _Insumos();
+                    //modificado._Modificar(25, 10000);
                     MessageBox.Show("Datos Modificados");
                 }
                 else
