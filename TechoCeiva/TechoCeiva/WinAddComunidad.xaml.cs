@@ -63,53 +63,80 @@ namespace TechoCeiva
             idComn = idComunidad;
             mod = true;
         }
-
+        public bool verificar()
+        {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Nombre para la comunidad");
+                txtNombre.Focus();
+                return true;                
+            }
+            else
+            if (cmbDpto.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un departamento para la comunidad");
+                cmbDpto.Focus();
+                return true;
+            }
+            else
+            if (cmbMun.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un municipio para la comunidad");
+                cmbMun.Focus();
+                return true;
+            }
+            return false;
+        }
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            String nombre = txtNombre.Text;
-            int departamento = Convert.ToInt32(cmbDpto.SelectedValue);
-            int municipio = Convert.ToInt32(cmbMun.SelectedValue);
-
-            _ComunidadLN comunidad = new _ComunidadLN(nombre, true, departamento, municipio);
-            Boolean correcto = comunidad.Ingresar_C();
-
-            if (mod == false)
+            bool bandera = verificar();
+            if (!bandera)
             {
-                if (correcto)
+                String nombre = txtNombre.Text;
+                int departamento = Convert.ToInt32(cmbDpto.SelectedValue);
+                int municipio = Convert.ToInt32(cmbMun.SelectedValue);
+
+                _ComunidadLN comunidad = new _ComunidadLN(nombre, true, departamento, municipio);
+                Boolean correcto = comunidad.Ingresar_C();
+
+                if (mod == false)
                 {
-                    comunidad.InsertarComunidad();
-                    txtNombre.Text = "";
-                    cmbDpto.Text = "";
-                    if (MessageBox.Show("¿Desea agregar otra comunidad?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                    if (correcto)
                     {
-                        txtNombre.Focus();
+                        comunidad.InsertarComunidad();
+                        txtNombre.Text = "";
+                        cmbDpto.Text = "";
+                        if (MessageBox.Show("¿Desea agregar otra comunidad?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                        {
+                            txtNombre.Focus();
+                        }
+                        else
+                        {
+                            comun.fillDataGrid();
+                            this.Close();
+                        }
                     }
                     else
                     {
-                        comun.fillDataGrid();
-                        this.Close();   
+                        MessageBox.Show(comunidad._obtenerError());
                     }
                 }
                 else
                 {
-                    MessageBox.Show(comunidad._obtenerError());
+                    if (correcto)
+                    {
+                        comunidad.ModificarComunidad(idComn);
+                        comun.fillDataGrid();
+                        mod = false;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(comunidad._obtenerError());
+                    }
                 }
+
             }
-            else
-            {
-                if (correcto)
-                {
-                    comunidad.ModificarComunidad(idComn);
-                    comun.fillDataGrid();
-                    mod = false;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show(comunidad._obtenerError());
-                }
-            }
-            
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)

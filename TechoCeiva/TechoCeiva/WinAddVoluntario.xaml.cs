@@ -43,31 +43,34 @@ namespace TechoCeiva
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String nombres = txtNombres.Text;
-            String apellidos = txtApellidos.Text;
-            String direccion = txtDireccion.Text;
-            String telefono = txtTelefono.Text;
-            String correo = txtCorreo.Text;
-            int dpto = Convert.ToInt32(cmbDepartamento.SelectedValue);
-            int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
-            String persEm = txtNombreEmergencia.Text;
-            String telEm = txtTelEmergencia.Text;
-
-            _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
-            Boolean correcto = voluntario.Ingresar_V();
-
-
-            if (correcto)
+            bool bandera=verificar();
+            if (!bandera)
             {
-                voluntario.Insertar_V();
-                this.Close();               
-            }
-            else
-            {
-                MessageBox.Show(voluntario._obtenerError());
-            }
+                String nombres = txtNombres.Text;
+                String apellidos = txtApellidos.Text;
+                String direccion = txtDireccion.Text;
+                String telefono = txtTelefono.Text;
+                String correo = txtCorreo.Text;
+                int dpto = Convert.ToInt32(cmbDepartamento.SelectedValue);
+                int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
+                String persEm = txtNombreEmergencia.Text;
+                String telEm = txtTelEmergencia.Text;
+
+                _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
+                Boolean correcto = voluntario.Ingresar_V();
 
 
+                if (correcto)
+                {
+                    voluntario.Insertar_V();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(voluntario._obtenerError());
+                }
+
+            }
         }
 
         private void Button_Loaded(object sender, RoutedEventArgs e)
@@ -87,30 +90,33 @@ namespace TechoCeiva
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-            String nombres = txtNombres.Text;
-            String apellidos = txtApellidos.Text;
-            String direccion = txtDireccion.Text;
-            String telefono = txtTelefono.Text;
-            String correo = txtCorreo.Text;
-            int dpto = Convert.ToInt32(cmbDepartamento.SelectedValue);
-            int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
-            String persEm = txtNombreEmergencia.Text;
-            String telEm = txtTelEmergencia.Text;
-
-            _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
-            Boolean correcto = voluntario.Ingresar_V();
-
-
-            if (correcto)
+            bool bandera=verificar();
+            if (!bandera)
             {
-                voluntario.Modificar_V(currentid);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show(voluntario._obtenerError());
-            }
+                String nombres = txtNombres.Text;
+                String apellidos = txtApellidos.Text;
+                String direccion = txtDireccion.Text;
+                String telefono = txtTelefono.Text;
+                String correo = txtCorreo.Text;
+                int dpto = Convert.ToInt32(cmbDepartamento.SelectedValue);
+                int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
+                String persEm = txtNombreEmergencia.Text;
+                String telEm = txtTelEmergencia.Text;
 
+                _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
+                Boolean correcto = voluntario.Ingresar_V();
+
+
+                if (correcto)
+                {
+                    voluntario.Modificar_V(currentid);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(voluntario._obtenerError());
+                }
+            }
         }
 
         public void getId(int idVol) 
@@ -142,10 +148,77 @@ namespace TechoCeiva
             }
         }
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        private bool verificar() 
+        {
+            if(txtNombres.Text=="")
+            {
+                MessageBox.Show("Debe ingresar un Nombre para el voluntario");
+                txtNombres.Focus();
+                return true;
+            }
+            else
+            if (txtApellidos.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Apellido para el voluntario");
+                txtApellidos.Focus();
+                return true;
+            }
+            else
+            if (txtDireccion.Text == "")
+            {
+                MessageBox.Show("Debe ingresar una Direccion para el voluntario");
+                txtDireccion.Focus();
+                return true;
+            }
+            else
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Correo para el voluntario");
+                txtCorreo.Focus();
+                return true;
+            }
+            else
+            if (txtTelefono.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Teléfono para el voluntario");
+                txtTelefono.Focus();
+                return true;
+            }
+            else
+            if (txtNombreEmergencia.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Contacto de Emergencia para el voluntario");
+                txtNombreEmergencia.Focus();
+                return true;
+            }
+            else
+            if (txtTelEmergencia.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Teléfono de Emergencia para el voluntario");
+                txtTelEmergencia.Focus();
+                return true;
+            }
+            else
+            if (cmbDepartamento.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Departamento y Municipio para el voluntario");
+                cmbDepartamento.Focus();
+                return true;
+            }
+            else
+            if (cmbMunicipio.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Municipio para el voluntario");
+                cmbMunicipio.Focus();
+                return true;
+            }
+
+            return false;
+        }
 	}
 }

@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddVoluntario"
 	x:Name="Window"
 	Title="Añadir Voluntario"
-	Width="655" Height="480" Background="#FFC4C2C2" WindowStyle="None" WindowStartupLocation="CenterScreen">
+	Width="655" Height="480" Background="#FFC4C2C2" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -39,6 +39,6 @@
 		<TextBox x:Name="txtTelEmergencia" Margin="23,339,396,76.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
 		<Button Content="Guardar" Height="26" Margin="320,0,239,88" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" Name="btnGuardar" Width="80" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" />
         <Button Content="Guardar" HorizontalAlignment="Left" Height="26" Margin="320,0,0,88" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="80" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" Background="#FF0091DC" Foreground="White" d:LayoutOverrides="HorizontalAlignment" />
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Right" Height="26" Margin="0,0,147,88" VerticalAlignment="Bottom" Width="80" Foreground="White" Background="#FFC52023" FontSize="14.667" Click="btnCancelar_Click" />
+        <Button x:Name="btnCancel" Content="Cancelar" Height="26" Margin="0,0,147,88" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="80" FontSize="14.667" BorderBrush="{x:Null}" Foreground="White" Background="#FFC52023" HorizontalAlignment="Right" d:LayoutOverrides="Width" Click="btnCancel_Click" />
     </Grid>
 </Window>
