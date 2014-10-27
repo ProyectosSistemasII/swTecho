@@ -29,10 +29,9 @@ namespace TechoCeiva
 
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
         {
-            //inicializacion de los componentes
-            //
-            //carga de datos a datagrid
-           // refrescar();
+           //inicializacion de los componentes
+           //carga de datos a datagrid
+           refrescar();
         }
 
         private void refrescar()
@@ -61,7 +60,8 @@ namespace TechoCeiva
         {
             WinAddUsuario usuario = new WinAddUsuario();
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(usuario);
-            usuario.Show();
+            usuario.ShowDialog();
+            refrescar();
         }
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
