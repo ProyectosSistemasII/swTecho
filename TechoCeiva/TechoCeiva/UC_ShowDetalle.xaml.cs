@@ -49,7 +49,7 @@ namespace TechoCeiva
             {
                 _DetallePrestamo detalle = DataGridDetalle.SelectedItem as _DetallePrestamo;
                 WinDevolverHelp nDevolucion = new WinDevolverHelp();
-                nDevolucion.txtHerramienta.Text = detalle.Herramientas_idHerramientas.ToString();
+                nDevolucion.txtHerramienta.Text = detalle.nombreHerramienta;
                 nDevolucion.txtFechaPrestamo.Text = this.date.ToShortDateString();
                 nDevolucion.txtCantidad.Text = detalle.CantidadPrestada.ToString();
                 nDevolucion.txtBuenEstado.Text = detalle.CantidadPrestada.ToString();
