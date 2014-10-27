@@ -33,6 +33,6 @@
         <TextBox Height="27" HorizontalAlignment="Left" Margin="307,296,0,0" Name="txtRespuesta" VerticalAlignment="Top" Width="221" Text="" />
         <Label Content="Pregunta secreta:" FontSize="14.667" Height="22" HorizontalAlignment="Left" Margin="307,195,0,0" Name="label3" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" />
         <Label Content="Respuesta:" FontSize="14.667" Height="22" HorizontalAlignment="Left" Margin="307,268,0,0" Name="label4" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" />
-        <Button Content="Cancelar" FontSize="14.667" Height="36" Margin="140,0,390,43" Name="button1" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Foreground="White" Background="#FFC52023" />
+        <Button Content="Cancelar" FontSize="14.667" Height="36" Margin="140,0,390,43" Name="button1" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Foreground="White" Background="#FFC52023" Click="button1_Click" />
     </Grid>
 </Window>
