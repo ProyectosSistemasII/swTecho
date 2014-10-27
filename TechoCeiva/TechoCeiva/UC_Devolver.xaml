@@ -35,7 +35,7 @@
 	<Grid x:Name="LayoutRoot">
 		<Label x:Name="lblHeader" Content="Devolver Herramienta" HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="17.333" Margin="23,23,0,0"/>
 		<Canvas x:Name="CanvasDevTool" Margin="23,46.053,0,34.8" HorizontalAlignment="Left" Width="669"/>
-		<Button x:Name="btnBack" Content="&lt;- Back" Style="{DynamicResource SimpleButton}" Width="109" Height="25" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" HorizontalAlignment="Right" Margin="0,121.253,318.501,0" VerticalAlignment="Top" Click="btnBack_Click" IsEnabled="False" />
-		<Button x:Name="btnVerDetalle" Content="Ver detalle..." Style="{DynamicResource SimpleButton}" Height="25" BorderBrush="{x:Null}" Foreground="White" Background="#FF0092DD" Click="btnVerDetalle_Click" HorizontalAlignment="Right" Margin="0,84.853,318.501,0" VerticalAlignment="Top" Width="109" />
+		<Button x:Name="btnBack" Content="&lt;- Back" Style="{DynamicResource SimpleButton}" Width="109" Height="25" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" HorizontalAlignment="Right" Margin="0,121.253,318.501,0" VerticalAlignment="Top" Click="btnBack_Click" IsEnabled="False" FontSize="14.667" />
+		<Button x:Name="btnVerDetalle" Content="Ver detalle..." Style="{DynamicResource SimpleButton}" Height="25" BorderBrush="{x:Null}" Foreground="White" Background="#FF0092DD" Click="btnVerDetalle_Click" HorizontalAlignment="Right" Margin="0,84.853,318.501,0" VerticalAlignment="Top" Width="109" FontSize="14.667" />
 	</Grid>
 </UserControl>

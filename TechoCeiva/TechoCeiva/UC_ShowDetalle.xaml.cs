@@ -29,12 +29,12 @@ namespace TechoCeiva
 			this.InitializeComponent();
 		}
 
-        public UC_ShowDetalle(int id, DateTime fecha)
+        public UC_ShowDetalle(int id, DateTime fecha, string nombreVol)
         {
             this.InitializeComponent();
             this.idPrestamo = id;
             this.date = fecha;
-            lblFecha.Content = "de fecha " + this.date.ToShortDateString();
+            lblNombre.Content = "Préstamos por " + nombreVol + " en fecha " + this.date.ToShortDateString();
             fillGrid();
         }
 

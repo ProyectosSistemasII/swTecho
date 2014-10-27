@@ -45,7 +45,7 @@ namespace TechoCeiva
                 btnBack.IsEnabled = true;
                 _Prestamo detalle = prestamos.DataGridListadoPrestamos.SelectedItem as _Prestamo;
                 CanvasDevTool.Children.Clear();
-                CanvasDevTool.Children.Add(new UC_ShowDetalle(detalle.iDPrestamo, detalle.fechaPrestamo));
+                CanvasDevTool.Children.Add(new UC_ShowDetalle(detalle.iDPrestamo, detalle.fechaPrestamo, detalle.nombreVoluntario));
             }
             catch
             {

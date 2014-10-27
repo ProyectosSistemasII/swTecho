@@ -21,8 +21,7 @@
 				<DataGridTextColumn Header="Cantidad" Width="300" Binding="{Binding CantidadPrestada}"/>
 			</DataGrid.Columns>
 		</DataGrid>
-		<Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<Label x:Name="lblFecha" Content="Fecha:" HorizontalAlignment="Left" Margin="140.8,0,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" Margin="0,13.493,0,0"/>
 		<Button x:Name="btnDevolver" Content="Devolver" HorizontalAlignment="Left" Margin="529.583,8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="25" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" FontSize="14.667" Click="btnDevolver_Click" />
 	</Grid>
 </UserControl>
