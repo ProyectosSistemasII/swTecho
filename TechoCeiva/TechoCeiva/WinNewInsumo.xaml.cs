@@ -86,6 +86,7 @@ namespace TechoCeiva
                 {
                     nInsumo._Modificar(verificarInsumo, Convert.ToInt32(txtCantida.Text));
                     MessageBox.Show("Insumo existente Modificado");
+                    this.Close();
                 }
                 else
                 {

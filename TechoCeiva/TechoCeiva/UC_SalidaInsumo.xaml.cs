@@ -149,8 +149,12 @@ namespace TechoCeiva
                 if (correcto)
                 {
                     //datosSalida._InsertarSalida();
-                    //_Insumos modificado = new _Insumos();
+                    _Insumos modificado = new _Insumos();
+                    //txtCantidad.Text = Convert.ToString(); 
                     //modificado._Modificar(25, 10000);
+   
+
+                 
                     MessageBox.Show("Datos Modificados");
                 }
                 else
@@ -176,6 +180,12 @@ namespace TechoCeiva
             {
                 
             }
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            dgdDetalle.Items.Clear();
+            deleteFromGrid();
         }
 
 	}

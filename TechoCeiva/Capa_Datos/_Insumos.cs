@@ -90,9 +90,8 @@ namespace Capa_Datos
             
              public List<_Insumos> _Obtener_I()
         {
-            string query = "Select idAlimentos,Alimentos.Nombre,Presentacion.Nombre As Presentacion,Existencia, Rango, AnioCaducidad FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion) and (Existencia > 0)";
+            string query = "Select idAlimentos,Alimentos.Nombre,Presentacion.Nombre As Presentacion,Existencia, Rango, AnioCaducidad FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion) and (Existencia > 0) order by Nombre";
             List<_Insumos> _listInsumos = new List<_Insumos>();
-
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
