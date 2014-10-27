@@ -18,6 +18,7 @@ namespace Capa_Datos
         public int CantidadMalEstado { get; set; }
         public int CantidadPerdida { get; set; }
         public int Activo { get; set; }
+        public string nombreHerramienta { get; set; }
         public DateTime Devolucion { get; set; }
 
         public List<Error> _errores { get; set; }
@@ -51,6 +52,20 @@ namespace Capa_Datos
             //this.Devolucion = DateTime.MaxValue;
         }
 
+        public _DetallePrestamo(int idDetalle, int idHerramienta, int idPrestamo, int cantidadPrestada, int cantidadBuena, int cantidadMala, int cantidadPerdida, int activo, String nombreHerramienta)
+        {
+            this.idDetallePrestamo = idDetalle;
+            this.Herramientas_idHerramientas = idHerramienta;
+            this.Prestamo_idPrestamo = idPrestamo;
+            this.CantidadPrestada = cantidadPrestada;
+            this.CantidadBuenEtsado = cantidadBuena;
+            this.CantidadMalEstado = cantidadMala;
+            this.CantidadPerdida = cantidadPerdida;
+            this.Activo = activo;
+            this.nombreHerramienta = nombreHerramienta;
+            //this.Devolucion = DateTime.MaxValue;
+        }
+
 
         /// <summary>
         /// 
@@ -58,10 +73,16 @@ namespace Capa_Datos
         /// <returns></returns>
         public List<_DetallePrestamo> obtenerDetalles()
         {
-            string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1";
+            //string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1";
+            string consulta = "select detalleprestamo.idDetallePrestamo, detalleprestamo.Herramientas_idHerramientas,"+
+                                     "detalleprestamo.Prestamo_idPrestamo, detalleprestamo.CantidadPrestada,"+
+                                     "detalleprestamo.CantidadBuenEstado, detalleprestamo.CantidadMalEstado,"+
+                                     "detalleprestamo.CantidadPerdida, detalleprestamo.Activo, Herramientas.Nombre as nombreH"+
+                               " from detalleprestamo"+
+                         " inner join Herramientas on Herramientas_idHerramientas = idHerramientas where detalleprestamo.Activo = 1";
             List<_DetallePrestamo> listaPrestamos = new List<_DetallePrestamo>();
 
-            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            MySqlCommand _comando = new MySqlCommand(consulta, _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();
@@ -74,7 +95,7 @@ namespace Capa_Datos
             {
                 DataRow _row = _tabla.Rows[i];
                 //_DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]), Convert.ToDateTime(_row["FechaDevolucion"]));
-                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]));
+                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["nombreH"]));
                 listaPrestamos.Add(detallePrestamo);
             }
 
@@ -150,10 +171,17 @@ namespace Capa_Datos
         /// <returns></returns>
         public List<_DetallePrestamo> buscarDetallesPor(int idPrestamo)
         {
-            string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1 AND Prestamo_idPrestamo = "+ idPrestamo;
+            //string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1 AND Prestamo_idPrestamo = "+ idPrestamo;
+            string consulta = "select detalleprestamo.idDetallePrestamo, detalleprestamo.Herramientas_idHerramientas," +
+                                     "detalleprestamo.Prestamo_idPrestamo, detalleprestamo.CantidadPrestada," +
+                                     "detalleprestamo.CantidadBuenEstado, detalleprestamo.CantidadMalEstado," +
+                                     "detalleprestamo.CantidadPerdida, detalleprestamo.Activo, Herramientas.Nombre as nombreH" +
+                               " from detalleprestamo" +
+                         " inner join Herramientas on Herramientas_idHerramientas = idHerramientas where detalleprestamo.Activo = 1"+
+                                                                      " and detalleprestamo.Prestamo_idPrestamo = " + idPrestamo;
             List<_DetallePrestamo> listaDetallesEspecificos = new List<_DetallePrestamo>();
 
-            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            MySqlCommand _comando = new MySqlCommand(consulta, _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();
@@ -165,7 +193,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]));
+                _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["nombreH"]));
                 listaDetallesEspecificos.Add(detallePrestamo);
             }
             return listaDetallesEspecificos;
