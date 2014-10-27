@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddComunidad"
 	x:Name="Window"
 	Title="WinAddComunidad"
-	Width="379" Height="300" Background="#FFC4C2C2" WindowStyle="None" Loaded="Window_Loaded">
+	Width="379" Height="300" Background="#FFC4C2C2" WindowStyle="None" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>

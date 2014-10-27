@@ -62,7 +62,7 @@ namespace TechoCeiva
             nWinAddComunidad.cmbDpto.Text = sele.DepartamentoNombre;
             nWinAddComunidad.cmbMun.Text = sele.MunicipioNombre;
             nWinAddComunidad.getId(idComn);
-            nWinAddComunidad.Show();
+            nWinAddComunidad.ShowDialog();
             fillDataGrid();
         }
 

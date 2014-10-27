@@ -26,7 +26,15 @@ namespace TechoCeiva
 		public WinAddComunidad()
 		{
 			this.InitializeComponent();
-			
+
+            // esto fue lo que cambie del window_loaded
+            _ComunidadLN comn = new _ComunidadLN();
+            _DepartamentoLN depto = new _DepartamentoLN();
+            List<_Departamento> lista = new List<_Departamento>();
+            lista = depto.Obtener_D();
+            cmbDpto.ItemsSource = depto.Obtener_D();
+            cmbDpto.SelectedValuePath = "idDepartamento";
+            cmbDpto.DisplayMemberPath = "nombre";
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
@@ -41,13 +49,13 @@ namespace TechoCeiva
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            _ComunidadLN comn = new _ComunidadLN();
+            /*_ComunidadLN comn = new _ComunidadLN();
             _DepartamentoLN depto = new _DepartamentoLN();
             List<_Departamento> lista = new List<_Departamento>();
             lista = depto.Obtener_D();
             cmbDpto.ItemsSource = depto.Obtener_D();
             cmbDpto.SelectedValuePath = "idDepartamento";
-            cmbDpto.DisplayMemberPath = "nombre";
+            cmbDpto.DisplayMemberPath = "nombre";*/
         }
 
         public void getId(int idComunidad)
