@@ -2,7 +2,7 @@
 	x:Class="TechoCeiva.WinNewInsumo"
 	x:Name="Window"
 	Title="WinNewInsumo"
-	Width="586" Height="408">
+	Width="586" Height="408" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#FFC4C2C2" ResizeMode="NoResize">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>

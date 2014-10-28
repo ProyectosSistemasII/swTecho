@@ -45,6 +45,7 @@ namespace TechoCeiva
             _Insumos row = dgInsumos.SelectedItem as _Insumos;
             WinNewInsumo modificar = new WinNewInsumo();
 
+            modificar.mod = true;
             modificar.comboBoxInsumos.IsEnabled= false;
             modificar.cmxPresentacion.IsEnabled = false;
             modificar.id = row.idAlimentos;
