@@ -31,7 +31,7 @@ namespace TechoCeiva
             this.pending = 0;
             this.goodState = 0;
             this.isClose = false;
-            txtDañadas.Focus();
+            //txtDañadas.Focus();
             txtDañadas.SelectAll();
 		}
 
@@ -100,6 +100,19 @@ namespace TechoCeiva
             }
         }
 
+        private void txtDañadas_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                verificar(1);
+                update(1);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
         private void txtPerdidas_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -111,6 +124,19 @@ namespace TechoCeiva
             }
         }
 
+        private void txtPerdidas_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                verificar(2);
+                update(2);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
         private void txtPendientes_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -118,6 +144,18 @@ namespace TechoCeiva
                 verificar(3);
                 update(3);
                 btnAceptar.Focus();
+            }
+        }
+
+        private void txtPendientes_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                verificar(3);
+                update(3);
+            }
+            catch (Exception ex)
+            {
             }
         }
 
@@ -164,35 +202,84 @@ namespace TechoCeiva
 
         private void update(int caseSwitch)
         {
+            int flag = 0;
             try
             {
                 switch (caseSwitch)
                 {
                     case 1:
-                        operar(Convert.ToInt32(txtBuenEstado.Text), Convert.ToInt32(txtDañadas.Text));
+                        flag = 1;
+                        operar(Convert.ToInt32(txtCantidad.Text), Convert.ToInt32(txtDañadas.Text), Convert.ToInt32(txtPerdidas.Text), Convert.ToInt32(txtPendientes.Text), 1);
                         break;
                     case 2:
-                        operar(Convert.ToInt32(txtBuenEstado.Text), Convert.ToInt32(txtPerdidas.Text));
+                        flag = 2;
+                        operar(Convert.ToInt32(txtCantidad.Text), Convert.ToInt32(txtDañadas.Text), Convert.ToInt32(txtPerdidas.Text), Convert.ToInt32(txtPendientes.Text), 2);
                         break;
                     case 3:
-                        operar(Convert.ToInt32(txtBuenEstado.Text), Convert.ToInt32(txtPendientes.Text));
+                        flag = 3;
+                        operar(Convert.ToInt32(txtCantidad.Text), Convert.ToInt32(txtDañadas.Text), Convert.ToInt32(txtPerdidas.Text), Convert.ToInt32(txtPendientes.Text), 3);
                         break;
+                }
+                flag = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                switch (flag)
+                {
+                    case 1:
+                        flag = 0;
+                        txtDañadas.SelectAll();
+                        break;
+                    case 2:
+                        flag = 0;
+                        txtPerdidas.SelectAll();
+                        break;
+                    case 3:
+                        flag = 0;
+                        txtPendientes.SelectAll();
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="val1">txtCantidad</param>
+        /// <param name="val2">txtDañadas</param>
+        /// <param name="val3">txtPerdidas</param>
+        /// <param name="val4">txtPendientes</param>
+        /// <param name="caseSwitch">para saber en que txt se encuentran. Esto ayuda al focus</param>
+        private void operar(int val1, int val2, int val3, int val4, int caseSwitch)
+        {
+            try
+            {
+                if ((val1 - val2 - val3 - val4) >= 0)
+                    txtBuenEstado.Text = Convert.ToString(val1 - val2 - val3 - val4);
+                else
+                {
+                    MessageBox.Show("La cantidad en herramientas en buen estado no puede ser negativa", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                    switch (caseSwitch)
+                    {
+                        case 1:
+                            txtDañadas.SelectAll();
+                            break;
+                        case 2:
+                            txtPerdidas.SelectAll();
+                            break;
+                        case 3:
+                            txtPendientes.SelectAll();
+                            break;
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void operar(int val1, int val2)
-        {
-            if ((val1 - val2) >= 0)
-            {
-                txtBuenEstado.Text = Convert.ToString(val1 - val2);
-            }
-            else
-                MessageBox.Show("La cantidad en herramientas en buen estado no puede ser negativa", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         private void save()
