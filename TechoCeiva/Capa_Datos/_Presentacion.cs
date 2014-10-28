@@ -132,19 +132,26 @@ namespace Capa_Datos
 
         public int devolver_ultimo()
         {
-            MySqlCommand comando2 = new MySqlCommand("SELECT MAX(idPresentacion) AS Total From Presentacion", _conexion);
-            comando2.CommandTimeout = 12280;
+            try
+            {
+                MySqlCommand comando2 = new MySqlCommand("SELECT MAX(idPresentacion) AS Total From Presentacion", _conexion);
+                comando2.CommandTimeout = 12280;
 
-            int id;
-            DataSet ds = new DataSet();
-            MySqlDataAdapter Adapter = new MySqlDataAdapter();
-            Adapter.SelectCommand = comando2;
-            Adapter.Fill(ds);
-            DataTable tabla = new DataTable();
-            tabla = ds.Tables[0];
-            DataRow row = tabla.Rows[0];
-            id = Convert.ToInt32(row["total"]);
-            return id;
+                int id;
+                DataSet ds = new DataSet();
+                MySqlDataAdapter Adapter = new MySqlDataAdapter();
+                Adapter.SelectCommand = comando2;
+                Adapter.Fill(ds);
+                DataTable tabla = new DataTable();
+                tabla = ds.Tables[0];
+                DataRow row = tabla.Rows[0];
+                id = Convert.ToInt32(row["total"]);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
         }
     
     }
