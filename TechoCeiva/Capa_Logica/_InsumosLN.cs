@@ -18,7 +18,7 @@ namespace Capa_Logica
             this.Nombre = "";
             this.Existencia= 0;
             this.Rango = "";
-            this.AnioCaducidad = 2014;
+            this.AnioCaducidad = DateTime.Now.Year;
             this.Activo = true;
             this.Presentacion_idPresentacion = 1;
             this._errores = new List<Error>();

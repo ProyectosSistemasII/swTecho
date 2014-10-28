@@ -45,6 +45,7 @@ namespace TechoCeiva
             if (verificarPresentacion == 0)
             {
                 nPresentacion._Insertar_P();
+                UltimoID = nPresentacion.devolver_ultimo();
                 _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text), Convert.ToInt32(txtCantida.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), UltimoID);
                 Boolean correcto = nInsumo.Ingresar_Insumo();
                 int verificarInsumo = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), UltimoID);
