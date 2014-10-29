@@ -161,6 +161,7 @@ namespace TechoCeiva
             UC_SalidaInsumo sInsumo = new UC_SalidaInsumo();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(sInsumo);
+            canvasMenu.Children.Add(new UC_SalidaInsumo(this.currentUser));
         }
 	}
 }
