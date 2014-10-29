@@ -17,38 +17,54 @@ using Capa_Logica_Negocio;
 
 namespace TechoCeiva
 {
-	/// <summary>
-	/// Lógica de interacción para UC_SalidaInsumo.xaml
-	/// </summary>
-	public partial class UC_SalidaInsumo : UserControl
-
-	{
+    /// <summary>
+    /// Lógica de interacción para UC_SalidaInsumo.xaml
+    /// </summary>
+    public partial class UC_SalidaInsumo : UserControl
+    {
         public UsuarioLN currentUser { get; set; }
+        private int existenciaActual { get; set; }
 
         private ObservableCollection<_InsumosLN> detalle = new ObservableCollection<_InsumosLN>();
 
-		public UC_SalidaInsumo()
-		{
+        public UC_SalidaInsumo()
+        {
             this.InitializeComponent();
             fillComboBox();
-		}
+        }
+
+        /*
+         * Con este metodo obtengo el id del usuario que esta logueado
+         */
+        public UC_SalidaInsumo(UsuarioLN user)
+        {
+            this.InitializeComponent();
+            this.currentUser = user;
+            fillComboBox();
+            cbxVoluntarios.IsDropDownOpen = true;
+            cbxVoluntarios.Focus();
+        }
+
+        public void setUser(UsuarioLN user)
+        {
+            this.currentUser = user;
+        }
 
         private void cbxInsumos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            updateExistencia();
         }
 
-        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        // Se despliega cuanto hay de existencia para cada alimento
+        private void updateExistencia()
         {
-            if (cbxInsumos.Text.Equals("") || txtCantidad.Text.Equals(""))
+            if (cbxInsumos.SelectedIndex != -1)
             {
-                MessageBox.Show("Debe seleccionar un Insumo y asignar una cantidad para agregar", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
+                _Insumos chosenI = cbxInsumos.SelectedItem as _Insumos;
+                lblExistencia.Content = chosenI.Existencia + " unidades actualmente";
             }
             else
-            {
-                _Insumos seleccion = cbxInsumos.SelectedItem as _Insumos;
-                addToGrid(seleccion);
-            }
+                lblExistencia.Content = "";
         }
 
         private void fillComboBox()
@@ -64,13 +80,6 @@ namespace TechoCeiva
             cbxVoluntarios.DisplayMemberPath = "nombres";
         }
 
-        private void actionAdd(int valor)
-        {
-            _InsumosLN Insumos = new _InsumosLN();
-            Insumos._Modificar(this.cbxInsumos.SelectedIndex,int.Parse(txtCantidad.Text));
-
-        }
-
         private void addToGrid(_Insumos seleccion)
         {
             try
@@ -81,7 +90,7 @@ namespace TechoCeiva
                 {
                     if (Convert.ToInt32(txtCantidad.Text) > 0)
                     {
-                        _InsumosLN insumo = new _InsumosLN(seleccion.idAlimentos,seleccion.Nombre, Convert.ToInt32(txtCantidad.Text),seleccion.Rango,seleccion.AnioCaducidad,seleccion.Presentacion_idPresentacion);
+                        _InsumosLN insumo = new _InsumosLN(seleccion.idAlimentos, seleccion.Nombre, Convert.ToInt32(txtCantidad.Text), seleccion.Rango, seleccion.AnioCaducidad, seleccion.Presentacion_idPresentacion);
                         Boolean existe = insumo.buscarElemento(detalle);
 
                         if (!existe)
@@ -106,7 +115,6 @@ namespace TechoCeiva
                 else
                 {
                     MessageBox.Show("No puede prestar más de lo que tiene en inventario", "Error en préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
-                    MessageBox.Show(seleccion.Nombre + " tiene " + seleccion.Existencia + " unidades actualmente", "Existencia actual", MessageBoxButton.OK, MessageBoxImage.Information);
                     txtCantidad.Focus();
                     txtCantidad.SelectAll();
                 }
@@ -123,46 +131,48 @@ namespace TechoCeiva
             dgdDetalle.Items.Clear();
         }
 
-        private void btnX_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                deleteFromGrid();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ingrese datos válidos", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
+        /*
+         * Método para guardar el detalle como la salida del alimento y actualizar su existencia
+         */ 
         private void Guardar()
         {
             int idSalida = 0;
             _DetalleSalidaLN detalleSalida = new _DetalleSalidaLN();
             _InsumosLN contenido = new _InsumosLN();
-            List<_Insumos> listaInsumos = new List<_Insumos>();
-            listaInsumos = contenido.obtenerListado(detalle);
-
-                _SalidaLN datosSalida = new _SalidaLN(DateTime.Today,1,true,Convert.ToString(txtDescripcion.Text));
+            List<_Insumos> listInsumos = new List<_Insumos>();
+            listInsumos = contenido.obtenerListado(detalle);
+            try
+            {
+                _SalidaLN datosSalida = new _SalidaLN(DateTime.Now.Date, currentUser.idUsuarios, false, txtDescripcion.Text);
                 Boolean correcto = datosSalida.ingresarSalida();
-
                 if (correcto)
                 {
-                    //datosSalida._InsertarSalida();
-                    _Insumos modificado = new _Insumos();
-                    //txtCantidad.Text = Convert.ToString(); 
-                    //modificado._Modificar(25, 10000);
-   
-
-                 
-                    MessageBox.Show("Datos Modificados");
+                    idSalida = datosSalida._InsertarSalida();
+                    detalleSalida.insertarDetalle(listInsumos, idSalida);
+                    MessageBox.Show("Salida exito", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    clearContent();
                 }
                 else
                 {
                     MessageBox.Show(datosSalida.obtenerError());
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Debe completar la información para poder guardar", "Cuidado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
-        
+
+        private void clearContent()
+        {
+            dgdDetalle.Items.Clear();
+            txtDescripcion.Clear();
+            txtCantidad.Clear();
+            cbxVoluntarios.SelectedIndex = -1;
+            cbxInsumos.SelectedIndex = -1;
+            cbxVoluntarios.IsDropDownOpen = true;
+            cbxVoluntarios.IsEditable = true;
+        }
 
         private void deleteFromGrid()
         {
@@ -176,17 +186,50 @@ namespace TechoCeiva
                     dgdDetalle.Items.Add(h);
                 }
             }
-            catch 
+            catch
             {
-                
+
             }
         }
 
+        /*
+         * Cancelar toda la salida de alimentos
+         */ 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             dgdDetalle.Items.Clear();
             deleteFromGrid();
         }
 
-	}
+        /*
+         * Para agregar una salida de alimento en el datagrid
+         */ 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbxInsumos.Text.Equals("") || txtCantidad.Text.Equals(""))
+            {
+                MessageBox.Show("Debe seleccionar un Insumo y asignar una cantidad para agregar", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                _Insumos seleccion = cbxInsumos.SelectedItem as _Insumos;
+                addToGrid(seleccion);
+            }
+        }
+
+        /*
+         * Para eliminar una salida de alimento en el datagrid
+         */ 
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                deleteFromGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese datos válidos", "Error en datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+    }
 }

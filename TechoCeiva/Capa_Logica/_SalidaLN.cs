@@ -13,10 +13,9 @@ namespace Capa_Logica
             this.idSalida = 0;
             this.FechaSalida =  DateTime.Parse("YYYY/MM/DD");
             this.Usuarios_idUsuarios = 0;
-            this.Activo = true;
+            this.Activo = false;
             this.Descripcion = "";
             this._errores = new List<Error>();
-
         }
 
         public _SalidaLN(DateTime fechaSalida, int Usuario, Boolean Activo, String descripcion)

@@ -45,12 +45,11 @@ namespace Capa_Datos
             if (this._errores.Count == 0)
             {
                 int lastID = 0;
-                string query = "INSERT INTO Salida (idSalida,FechaSalida,Usuarios_idUsuarios, Activo, Descripcion) VALUES (@idSalida,@FechaSalida,@Usuarios_idUsuarios, @Activo, @Descripcion)";
+                string query = "INSERT INTO Salida (FechaSalida,Usuarios_idUsuarios, Activo, Descripcion) VALUES (@FechaSalida,@Usuarios_idUsuarios, @Activo, @Descripcion)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@idSalida", this.idSalida);
                 _comando.Parameters.AddWithValue("@FechaSalida", this.FechaSalida);
                 _comando.Parameters.AddWithValue("@Usuarios_idUsuarios", this.Usuarios_idUsuarios);
-                _comando.Parameters.AddWithValue("@Activo", this.Activo);
+                _comando.Parameters.AddWithValue("@Activo", 1);
                 _comando.Parameters.AddWithValue("@Descripcion", this.Descripcion);
 
                 try

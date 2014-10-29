@@ -1,7 +1,7 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
 	x:Class="TechoCeiva.WinNewInsumo"
 	x:Name="Window"
-	Title="WinNewInsumo"
+	Title="Agregar Insumo"
 	Width="586" Height="408" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#FFC4C2C2" ResizeMode="NoResize">
 	<Window.Resources>
 		<ResourceDictionary>
@@ -59,7 +59,7 @@
 	
 			</Button.Resources>
 		</Button>
-		<TextBox x:Name="txtCantida" HorizontalAlignment="Left" Margin="175,175,0,168" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="1" Width="80.553" FontSize="14.667" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" d:LayoutOverrides="Height"/>
+		<TextBox x:Name="txtCantida" HorizontalAlignment="Left" Margin="175,175,0,168" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="1" Width="80.553" FontSize="14.667" />
 		<Label x:Name="lblCaduca" Content="Caduca:" HorizontalAlignment="Left" Margin="108,0,0,134" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontSize="14.667"/>
 		<ComboBox x:Name="cbxRangoFecha" Margin="175,0,125,134" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Bottom" FontSize="14.667" IsEditable="False" />
 		<Label x:Name="lblInsumo1" Content="Insumo:" HorizontalAlignment="Left" Margin="108.139,99,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>

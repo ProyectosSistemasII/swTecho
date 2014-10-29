@@ -67,27 +67,42 @@ namespace Capa_Datos
 
             MySqlTransaction transaction = _conexion.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
             MySqlCommand comando = _conexion.CreateCommand();
+            MySqlCommand comando2 = _conexion.CreateCommand();
 
             try
             {
                 foreach (_Insumos Insumos in listado)
                 {
                     comando.CommandText = "INSERT INTO DetalleSalida (Cantidad, Alimentos_idAlimentos,Activo, Salida_idSalida) VALUES (@Cantidad, @idAlimentos, @activo, @idSalida)";
-                    comando.Parameters.AddWithValue("@Cantidad", Cantidad);
-                    comando.Parameters.AddWithValue("@idAlimentos", 0);
+                    comando.Parameters.AddWithValue("@Cantidad", Insumos.Existencia);
+                    comando.Parameters.AddWithValue("@idAlimentos", Insumos.idAlimentos);
                     comando.Parameters.AddWithValue("@activo", true);
-                    comando.Parameters.AddWithValue("@idSalida", 0);
+                    comando.Parameters.AddWithValue("@idSalida", idSalida);
+                    comando.ExecuteNonQuery();
+                    comando.Parameters.Clear();
+
+                    comando2.CommandText = "update alimentos SET Existencia = @nExistencia WHERE idAlimentos = @idA";
+                    comando2.Parameters.AddWithValue("@nExistencia", Insumos.nuevaExistencia(Insumos.idAlimentos,Insumos.Existencia));
+                    comando2.Parameters.AddWithValue("@idA", Insumos.idAlimentos);
+                    comando2.ExecuteNonQuery();
+                    comando2.Parameters.Clear();
                 }
                 transaction.Commit();
             }
             catch (Exception e)
             {
                 transaction.Rollback();
+                comando.Dispose();
+                comando2.Dispose();
+                transaction.Dispose();
+                _conexion.Close();
             }
             finally
             {
                 comando.Dispose();
+                comando2.Dispose();
                 transaction.Dispose();
+                _conexion.Close();
             }
         }
     }
