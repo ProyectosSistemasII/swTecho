@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace Capa_Datos
 {
@@ -14,11 +15,10 @@ namespace Capa_Datos
            "Database=dbtecho;" +
            "UID=root;" +
            "Password=Mysql123.";
-        //public static String ConexionDireccion = 
-            //"Server=" + Properties.Settings.Default.server + ";" + 
-            //"Database=" + Properties.Settings.Default.database + ";" + 
-            //"UID=" + Properties.Settings.Default.user + ";" + 
-            //"Password=" + Properties.Settings.Default.password + ";";
+        //public static String ConexionDireccion =
+        //    "Server=" + Properties.Settings.Default.server + ";" + "Database=" + Properties.Settings.Default.database + ";" +
+        //    "UID=" + Properties.Settings.Default.user + ";" +
+        //    "Password=" + Properties.Settings.Default.password;
         public static MySqlConnection conexion = new MySqlConnection(ConexionDireccion);
 
         public static void modificarParamentrosServer(String server, String database, String user, String password)
@@ -34,10 +34,8 @@ namespace Capa_Datos
         {
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=" + Properties.Settings.Default.server + ";" +
-            "Database=" + Properties.Settings.Default.database + ";" +
-            "UID=" + Properties.Settings.Default.user + ";" +
-            "Password=" + Properties.Settings.Default.password + ";");
+                string cadena = ConexionDireccion;
+                MySqlConnection conexion = new MySqlConnection(cadena);
                 conexion.Open();
                 conexion.Close();
                 return "Conexion existosa :)";

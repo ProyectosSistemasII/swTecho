@@ -43,7 +43,7 @@ namespace TechoCeiva
             dtgUsuarios.Columns[1].Header = "Nombres";
             dtgUsuarios.Columns[2].Header = "Apellidos";
             dtgUsuarios.Columns[3].Header = "Tipo de usuario";
-            dtgUsuarios.Columns[0].Width = 120;
+            dtgUsuarios.Columns[0].Width = 150;
             dtgUsuarios.Columns[1].Width = 120;
             dtgUsuarios.Columns[2].Width = 120;
             dtgUsuarios.Columns[3].Width = 120;

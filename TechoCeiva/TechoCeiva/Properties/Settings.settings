@@ -5,5 +5,8 @@
     <Setting Name="passwordSettings" Type="System.String" Scope="User">
       <Value Profile="(Default)">Techo123.</Value>
     </Setting>
+    <Setting Name="database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbTecho</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

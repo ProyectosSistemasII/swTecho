@@ -96,7 +96,7 @@ namespace Capa_Datos
             }
             catch
             {
-                return null;
+                return new List<DatosUsuario>();
             }
             return usuarios;
         }

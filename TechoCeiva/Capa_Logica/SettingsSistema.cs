@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using Capa_Datos.Properties;
 using Capa_Datos;
 
 namespace Capa_Logica
@@ -26,7 +27,12 @@ namespace Capa_Logica
         }
         public static String saveParametros(String server, String database, String user, String password)
         {
-            ConexionBD.modificarParamentrosServer(server, database, user, password);
+            Capa_Datos.Properties.Settings.Default.server = server;
+            Capa_Datos.Properties.Settings.Default.database = database;
+            Capa_Datos.Properties.Settings.Default.user = user;
+            Capa_Datos.Properties.Settings.Default.password = password;
+            Capa_Datos.Properties.Settings.Default.Save();
+            //ConexionBD.modificarParamentrosServer(server, database, user, password);
             return ConexionBD.conConexion();
         }
     }
