@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddUsuario"
 	x:Name="Window"
 	Title="Añadir Usuario"
-	Width="655" Height="480" Loaded="Window_Loaded" Background="#FFC4C2C2">
+	Width="655" Height="480" Loaded="Window_Loaded" Background="#FFC4C2C2" ResizeMode="NoResize">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -23,7 +23,7 @@
 		<Label x:Name="lblTelefono" Content="Contraseña:" HorizontalAlignment="Left" Height="22" Margin="23,268,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="87" FontSize="14.667"/>
         <Label x:Name="lblCorreo" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="307,64,0,0" Style="{DynamicResource SimpleLabel}" Width="155" Height="22" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
         <ComboBox x:Name="cmbTipo" Margin="307,154,106,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220" />
-        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="26.5" Margin="23,228,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" TextAlignment="Center" IsEnabled="True" Text="" />
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="26.5" Margin="23,228,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" IsEnabled="True" Text="" />
         <Button Content="Guardar" Height="36" Margin="23,0,0,43" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" FontSize="12" d:LayoutOverrides="HorizontalAlignment" Name="btnGuardar" Background="#FF0092DD" Foreground="White" HorizontalAlignment="Left" Width="103" />
         <Label Content="Tipo de usuario:" Height="28" HorizontalAlignment="Left" Margin="307,120,0,0" Name="label1" VerticalAlignment="Top" FontSize="15" />
         <PasswordBox Height="27" HorizontalAlignment="Left" Margin="23,296,0,0" Name="pswPassword" VerticalAlignment="Top" Width="220" IsEnabled="True" />
