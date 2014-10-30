@@ -28,7 +28,7 @@ namespace Capa_Datos
             this.Nombre = "";
             this.Existencia = 0;
             this.Rango = "";
-            this.AnioCaducidad = 2014;
+            this.AnioCaducidad = DateTime.Today.Year;
             this.Activo = true;
             this.Presentacion_idPresentacion = 0;
         }
@@ -107,10 +107,10 @@ namespace Capa_Datos
             return _listInsumos;
         }
         
-        public List<String> _Obtener_Distinto()
+        public List<_Insumos> _Obtener_Distinto()
         {
-            string query = "Select Distinct Nombre AS Nombres from Alimentos Order by(Nombre)";
-            List<String> _listInsumos = new List<String>();
+            string query = "Select Distinct Nombre AS Nombres, idAlimentos, Existencia, Rango, AnioCaducidad, Activo, Presentacion_idPresentacion from Alimentos Group by(Nombre)";
+            List<_Insumos> _listInsumos = new List<_Insumos>();
 
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
             _comando.CommandTimeout = 12280;
@@ -124,7 +124,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                String _insumos = Convert.ToString(_row["Nombres"]);
+                _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]), Convert.ToString(_row["Nombres"]), Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]), Convert.ToBoolean(_row["Activo"]), Convert.ToInt32(_row["Presentacion_idPresentacion"]));
                 _listInsumos.Add(_insumos);
             }
             return _listInsumos;
@@ -186,6 +186,36 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@Activo", this.Activo);
                 _comando.Parameters.AddWithValue("@Presentacion_idPresentacion", this.Presentacion_idPresentacion);
               
+                try
+                {
+                    _comando.Connection.Open();
+                    _comando.ExecuteNonQuery();
+                    _comando.Connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    _comando.Connection.Close();
+                    Error _error = new Error(ex.Message + " " + ex.Number, 2);
+                    _errores.Add(_error);
+                }
+            }
+        }
+
+        public void _ModificarInsumo(int _id, int _cantidad, string _rango, string _anio)
+        {
+            if (this._errores.Count == 0)
+            {
+                string query = "UPDATE Alimentos SET Existencia = @Existencia, Rango = @Rango, AnioCaducidad = @AnioCaducidad WHERE idAlimentos = " + _id;
+                MySqlCommand _comando = new MySqlCommand(query, _conexion);
+                _comando.Parameters.AddWithValue("@idAlimentos", this.idAlimentos);
+                _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
+                _comando.Parameters.AddWithValue("@Existencia", _cantidad);
+                _comando.Parameters.AddWithValue("@Rango", _rango);
+                _comando.Parameters.AddWithValue("@AnioCaducidad", _anio);
+                _comando.Parameters.AddWithValue("@Activo", this.Activo);
+                _comando.Parameters.AddWithValue("@Presentacion_idPresentacion", this.Presentacion_idPresentacion);
+
+
                 try
                 {
                     _comando.Connection.Open();
