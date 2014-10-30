@@ -149,8 +149,17 @@ namespace TechoCeiva
                 {
                     idSalida = datosSalida._InsertarSalida();
                     detalleSalida.insertarDetalle(listInsumos, idSalida);
-                    MessageBox.Show("Salida exito", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (MessageBox.Show("Salida exitosa, ¿Desea imprimir reporte?", "Éxito", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                    {
+                        //Generar reporte
+                        frmReportesSalidas MostrarRpt = new frmReportesSalidas();
+                        MostrarRpt.idSalida = idSalida;
+                        MostrarRpt.ShowDialog();
+                    }
                     clearContent();
+                    fillComboBox();
+                    correcto = false;
+
                 }
                 else
                 {

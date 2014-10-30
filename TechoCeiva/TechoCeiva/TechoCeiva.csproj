@@ -102,6 +102,12 @@
     <Compile Include="frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportesSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportesSalidas.Designer.cs">
+      <DependentUpon>frmReportesSalidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptS9_Propiedad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_SalidaInsumos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_SalidaInsumos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="S1006_Comunidad.cs">
@@ -294,6 +306,9 @@
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportesSalidas.resx">
+      <DependentUpon>frmReportesSalidas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +364,10 @@
     <EmbeddedResource Include="RptS9_Propiedad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptS9_Propiedad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_SalidaInsumos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_SalidaInsumos.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="S1006_Comunidad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
