@@ -31,6 +31,8 @@
             this.canvasSettings = new System.Windows.Forms.Integration.ElementHost();
             this.button1 = new System.Windows.Forms.Button();
             this.txtAcceso = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // canvasSettings
@@ -59,22 +61,46 @@
             // 
             // txtAcceso
             // 
+            this.txtAcceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcceso.Location = new System.Drawing.Point(75, 139);
             this.txtAcceso.Name = "txtAcceso";
             this.txtAcceso.PasswordChar = '*';
-            this.txtAcceso.Size = new System.Drawing.Size(140, 20);
+            this.txtAcceso.Size = new System.Drawing.Size(142, 26);
             this.txtAcceso.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 32);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Ajustes del sistema";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(71, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Contraseña:";
             // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.ClientSize = new System.Drawing.Size(284, 408);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAcceso);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.canvasSettings);
             this.Name = "frmSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paramentos del servidor";
             this.Load += new System.EventHandler(this.frmSettings_Load);
             this.ResumeLayout(false);
@@ -87,5 +113,7 @@
         private System.Windows.Forms.Integration.ElementHost canvasSettings;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtAcceso;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

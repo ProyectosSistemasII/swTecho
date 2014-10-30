@@ -6,15 +6,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="282" Width="280" Height="400" Loaded="UserControl_Loaded">
     <Grid>
-        <Label Content="Servidor" Height="28" HorizontalAlignment="Left" Margin="26,103,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="Usuario" Height="28" HorizontalAlignment="Left" Margin="30,189,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Content="Base de datos" Height="28" HorizontalAlignment="Left" Margin="26,147,0,0" Name="label3" VerticalAlignment="Top" />
-        <Label Content="Contraseña" Height="28" HorizontalAlignment="Left" Margin="30,235,0,0" Name="label4" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="116,103,0,0" Name="txtServer" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="116,152,0,0" Name="txtDatabase" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="116,189,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="116,235,0,0" Name="pswPassword" VerticalAlignment="Top" Width="120" />
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="30" Margin="90,0,74,73" Name="btn_Login" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" Click="btn_Login_Click">
+        <Label Content="Servidor:" Height="28" HorizontalAlignment="Left" Margin="55,82,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Usuario:" Height="28" HorizontalAlignment="Left" Margin="55,208,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Base de datos:" Height="28" HorizontalAlignment="Left" Margin="55,145,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Contraseña:" Height="28" HorizontalAlignment="Left" Margin="55,271,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="55,116,0,0" Name="txtServer" VerticalAlignment="Top" Width="164" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="55,179,0,0" Name="txtDatabase" VerticalAlignment="Top" Width="164" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="55,242,0,0" Name="txtUser" VerticalAlignment="Top" Width="164" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="55,305,0,0" Name="pswPassword" VerticalAlignment="Top" Width="164" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="30" Margin="84,0,80,27" Name="btn_Login" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" Click="btn_Login_Click">
             <Button.Resources>
                 <Style BasedOn="{x:Null}" x:Key="btnLogin" TargetType="{x:Type Button}">
                     <Setter Property="FrameworkElement.FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}" />
@@ -51,6 +51,5 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Label Content="Ajustes del sistema" FontSize="26.667" Foreground="#FF626465" Margin="10,10,26,334" Style="{DynamicResource SimpleLabel}" />
     </Grid>
 </UserControl>

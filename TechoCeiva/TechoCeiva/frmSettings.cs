@@ -29,6 +29,7 @@ namespace TechoCeiva
                 canvasSettings.Visible = true;
                 button1.Visible = false;
                 txtAcceso.Visible = false;
+                label2.Visible = false;
             }
             else
             {

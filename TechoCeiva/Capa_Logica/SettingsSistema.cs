@@ -33,7 +33,7 @@ namespace Capa_Logica
             Capa_Datos.Properties.Settings.Default.password = password;
             Capa_Datos.Properties.Settings.Default.Save();
             //ConexionBD.modificarParamentrosServer(server, database, user, password);
-            return ConexionBD.conConexion();
+            return "Debe reiniciar el sistema";
         }
     }
 }
