@@ -416,11 +416,11 @@
 		<Label x:Name="lblTitulo" Content="Salida de Insumo" HorizontalAlignment="Left" Margin="28,18,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="17.333" Background="#00000000" Foreground="Gray"/>
         <Label x:Name="lblVoluntario" Content="Voluntario:" HorizontalAlignment="Left" Margin="32,48,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<Label x:Name="lblCantidad" Content="Cantidad:" HorizontalAlignment="Left" Margin="360,112,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
-		<Label x:Name="Descripcion" Content="Observaciones:" HorizontalAlignment="Left" Margin="45,449,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
+		<Label x:Name="Descripcion" Content="Observaciones:" HorizontalAlignment="Left" Margin="45,449,0,134.493" Style="{DynamicResource SimpleLabel}" FontSize="14.667" d:LayoutOverrides="Height"/>
 		<Label x:Name="lblInsumo" Content="Insumo:" HorizontalAlignment="Left" Margin="32,112,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbxVoluntarios" HorizontalAlignment="Left" Margin="34,72,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="281" FontSize="14.667"/>
-		<ComboBox x:Name="cbxInsumos" HorizontalAlignment="Left" Margin="32,135,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="281" FontSize="14.667" SelectionChanged="cbxInsumos_SelectionChanged" />
-        <TextBox x:Name="txtCantidad" Margin="360,135,512,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667"/>
+        <ComboBox x:Name="cbxVoluntarios" HorizontalAlignment="Left" Margin="34,72,0,505.493" Style="{DynamicResource SimpleComboBox}" Width="281" FontSize="14.667" d:LayoutOverrides="Height"/>
+		<ComboBox x:Name="cbxInsumos" HorizontalAlignment="Left" Margin="32,135,0,442.493" Style="{DynamicResource SimpleComboBox}" Width="281" FontSize="14.667" SelectionChanged="cbxInsumos_SelectionChanged" d:LayoutOverrides="Height" />
+        <TextBox x:Name="txtCantidad" Margin="360,135,512,442.493" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" d:LayoutOverrides="Height"/>
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="36,472,0,63" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Width="473" FontSize="14.667" />
         <Label x:Name="lblExistencia" Content="" Style="{DynamicResource SimpleLabel}" FontSize="13.333" Margin="36,167,834,417" />
         <Separator Background="#FFA0A0A0" Height="0.5" Margin="28,105,451,497" Opacity="0.85" Style="{DynamicResource SimpleSeparator}" Width="626.059" />
@@ -431,9 +431,9 @@
                 <DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="256.3" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="+" FontSize="14.667" Foreground="White" Height="36" Margin="614,130,449,437" Name="btnAdd" Style="{DynamicResource SimpleButton}" ToolTip="Agregar a detalle" Width="41.959" Click="btnAdd_Click" />
-        <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="-" FontSize="14.667" Foreground="White" Height="36" Margin="614,235,449,332" Name="btnQuit" Style="{DynamicResource SimpleButton}" ToolTip="Quitar de detalle" Width="41.959" Click="btnQuit_Click" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="+" FontSize="14.667" Foreground="White" Height="36" Margin="614.02,130,449.02,437" Name="btnAdd" Style="{DynamicResource SimpleButton}" ToolTip="Agregar a detalle" Width="41.959" Click="btnAdd_Click" d:LayoutOverrides="HorizontalMargin" />
+        <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="-" FontSize="14.667" Foreground="White" Height="36" Margin="614.02,235,449.02,332" Name="btnQuit" Style="{DynamicResource SimpleButton}" ToolTip="Quitar de detalle" Width="41.959" Click="btnQuit_Click" d:LayoutOverrides="HorizontalMargin" />
         <Button x:Name="btnGuardar" Style="{DynamicResource SimpleButton}" Content="Guardar" FontSize="14.667" Background="#FF0092DD" Foreground="White" Click="btnGuardar_Click" Margin="524,490,451,77" />
-        <Button x:Name="btnCancelar" Style="{DynamicResource SimpleButton}" Content="Cancelar" FontSize="14.667" Background="#FFC52023" Foreground="White" Click="btnCancelar_Click" Margin="669,0,306,77" Height="36" VerticalAlignment="Bottom" />
+        <Button x:Name="btnCancelar" Style="{DynamicResource SimpleButton}" Content="Cancelar" FontSize="14.667" Background="#FFC52023" Foreground="White" Click="btnCancelar_Click" Margin="669,490,306,77" />
     </Grid>
 </UserControl>
