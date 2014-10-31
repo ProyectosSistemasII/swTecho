@@ -80,61 +80,61 @@ namespace TechoCeiva
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
                 crvReportes.ReportSource = rpt; // se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Propiedad")
+            else if (cmbSeleccionReporte.SelectedItem == "Propiedad")// se ejecuta se selecciona servicio en el combobox
             {
                 S9_PropiedadLN NReporte = new S9_PropiedadLN();
                 RptS9_Propiedad rpt = new RptS9_Propiedad();
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt;
+                crvReportes.ReportSource = rpt;// se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Comunidad")
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad")// se ejecuta se selecciona servicio en el combobox
             {
                 S10_ComunidadLN NReporte = new S10_ComunidadLN();
                 rptS10_Comunidad rpt = new rptS10_Comunidad();
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt;
+                crvReportes.ReportSource = rpt;// se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 6")
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad ¿En que grupos participa?")// se ejecuta se selecciona servicio en el combobox
             {
                 S1006_ComunidadLN NReporte06 = new S1006_ComunidadLN();
                 S1006_Comunidad rpt1 = new S1006_Comunidad();
                 rpt1.SetDataSource(NReporte06.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt1.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt1;
+                crvReportes.ReportSource = rpt1;// se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 7")
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad ¿Por qué razones no participa?")// se ejecuta se selecciona servicio en el combobox
             {
                  S1007_ComunidadLN NReporte07 = new S1007_ComunidadLN();
                  S1007_Comunidad rpt2 = new S1007_Comunidad();
                  rpt2.SetDataSource(NReporte07.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
-                 rpt2.SetParameterValue("Comunidad", NombreComunidad); 
-                 crvReportes.ReportSource = rpt2;
+                 rpt2.SetParameterValue("Comunidad", NombreComunidad);
+                 crvReportes.ReportSource = rpt2;// se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 8")
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad ¿Confía en personas y/o instituciones?")// se ejecuta se selecciona servicio en el combobox
             {
                 S1008_ComunidadLN NReporte08 = new S1008_ComunidadLN();
                 S1008_Comunidad rpt3 = new S1008_Comunidad();
                 rpt3.SetDataSource(NReporte08.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt3.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt3;
+                crvReportes.ReportSource = rpt3;// se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Comunidad Pregunta 14")
+            else if (cmbSeleccionReporte.SelectedItem == "Comunidad ¿Cuál es el grupo más afectado por los problemas de la comunidad?")// se ejecuta se selecciona servicio en el combobox
             {
                 S1014_ComunidadLN NReporte14 = new S1014_ComunidadLN();
                 S1014_Comunidad rpt4 = new S1014_Comunidad();
                 rpt4.SetDataSource(NReporte14.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt4.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt4;
+                crvReportes.ReportSource = rpt4;// se agrega el reporte al crystalview para su visualizacion
             }
-            else if (cmbSeleccionReporte.SelectedItem == "Movilidad")
+            else if (cmbSeleccionReporte.SelectedItem == "Movilidad")// se ejecuta se selecciona servicio en el combobox
             {
                 S11_MovilidadLN NReporte = new S11_MovilidadLN();
                 RptS11_Movilidad rpt = new RptS11_Movilidad();
                 rpt.SetDataSource(NReporte.GenerarReporte(Convert.ToInt32(cmbComunidad.SelectedValue)));
                 rpt.SetParameterValue("Comunidad", NombreComunidad);
-                crvReportes.ReportSource = rpt;
+                crvReportes.ReportSource = rpt;// se agrega el reporte al crystalview para su visualizacion
             }
             this.btnGenerar.Enabled = true;
         }

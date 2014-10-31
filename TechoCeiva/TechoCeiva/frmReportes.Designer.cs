@@ -98,10 +98,10 @@
             "Servicios",
             "Propiedad",
             "Comunidad",
-            "Comunidad Pregunta 6",
-            "Comunidad Pregunta 7",
-            "Comunidad Pregunta 8",
-            "Comunidad Pregunta 14",
+            "Comunidad ¿En que grupos participa?",
+            "Comunidad ¿Por qué razones no participa?",
+            "Comunidad ¿Confía en personas y/o instituciones?",
+            "Comunidad ¿Cuál es el grupo más afectado por los problemas de la comunidad?",
             "Movilidad"});
             this.cmbSeleccionReporte.Location = new System.Drawing.Point(12, 163);
             this.cmbSeleccionReporte.Name = "cmbSeleccionReporte";

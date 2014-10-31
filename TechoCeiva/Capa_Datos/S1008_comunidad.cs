@@ -137,7 +137,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT Familiar, Vecinos, LideresComunitarios,Policia, Municipalidad,OrganizacionGobierno,Ejercito,PartidosPoliticos, Techo, MedioComunicacion,IglesiasReligiosos    FROM S1008_com   inner join S10_Com on S1008_com_idS1008_com = idS1008_Com inner join Encuestas on Comunidad_idComunidad = 1 and Encuestas_idEncuestas = idencuestas Order by Familiar";
+                string consulta = "SELECT Familiar, Vecinos, LideresComunitarios,Policia, Municipalidad,OrganizacionGobierno,Ejercito,PartidosPoliticos, Techo, MedioComunicacion,IglesiasReligiosos    FROM S1008_com   inner join S10_Com on S1008_com_idS1008_com = idS1008_Com inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by Familiar";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
                 comando.CommandTimeout = 12280;
