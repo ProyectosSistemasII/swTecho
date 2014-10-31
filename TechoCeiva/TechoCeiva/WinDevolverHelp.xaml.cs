@@ -25,13 +25,20 @@ namespace TechoCeiva
 
 		public WinDevolverHelp()
 		{
+            /*
+            txtBuenEstado.Text = "0";
+            txtDañadas.Text = "0";
+            txtPerdidas.Text = "0";
+            txtPendientes.Text = "0";
+             * */
+
 			this.InitializeComponent();
             this.damaged = 0;
             this.lost = 0;
             this.pending = 0;
             this.goodState = 0;
             this.isClose = false;
-            //txtDañadas.Focus();
+            txtDañadas.Focus();
             txtDañadas.SelectAll();
 		}
 
@@ -181,15 +188,15 @@ namespace TechoCeiva
                 switch (caseSwitch)
                 {
                     case 1:
-                        if (txtDañadas.Text == "")
+                        if (txtDañadas.Text == "" || txtDañadas.Text.Equals(null))
                             txtDañadas.Text = "0";
                         break;
                     case 2:
-                        if (txtPerdidas.Text == "")
+                        if (txtPerdidas.Text == "" || txtPerdidas.Text.Equals(null))
                             txtPerdidas.Text = "0";
                         break;
                     case 3:
-                        if (txtPendientes.Text == "")
+                        if (txtPendientes.Text == "" || txtPendientes.Text.Equals(null))
                             txtPendientes.Text = "0";
                         break;
                 }

@@ -31,6 +31,39 @@ namespace TechoCeiva
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
+            logueo();   
+        }
+
+        private void label1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            new frmSettings().ShowDialog();
+        }
+
+        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            WinRecuperarPassword usuario = new WinRecuperarPassword();
+            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(usuario);
+            usuario.ShowDialog();
+        }
+
+        private void txt_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txt_password.Focus();
+            }
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btn_Login.Focus();
+            }
+        }
+
+        private void logueo()
+        {
             UsuarioLN usuario = new UsuarioLN();
             Boolean correcto = usuario.iniciarSesion(txt_username.Text, txt_password.Password);
             if (correcto)
@@ -47,20 +80,6 @@ namespace TechoCeiva
             {
                 MessageBox.Show(usuario.obtenerError());
             }
-
-            
-        }
-
-        private void label1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            new frmSettings().ShowDialog();
-        }
-
-        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            WinRecuperarPassword usuario = new WinRecuperarPassword();
-            System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(usuario);
-            usuario.ShowDialog();
         }
 	}
 }
