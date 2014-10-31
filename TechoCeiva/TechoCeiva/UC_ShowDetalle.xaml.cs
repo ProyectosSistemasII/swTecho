@@ -53,6 +53,9 @@ namespace TechoCeiva
                 nDevolucion.txtFechaPrestamo.Text = this.date.ToShortDateString();
                 nDevolucion.txtCantidad.Text = detalle.CantidadPrestada.ToString();
                 nDevolucion.txtBuenEstado.Text = detalle.CantidadPrestada.ToString();
+                nDevolucion.txtDañadas.Text = "0";
+                nDevolucion.txtPerdidas.Text = "0";
+                nDevolucion.txtPendientes.Text = "0";
                 nDevolucion.ShowDialog();
 
                 if (nDevolucion.getIsClose())

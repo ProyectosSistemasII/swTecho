@@ -158,10 +158,11 @@ namespace TechoCeiva
 
         private void btnInsumosReportes_Click(object sender, RoutedEventArgs e)
         {
-            UC_SalidaInsumo sInsumo = new UC_SalidaInsumo();
+            //UC_SalidaInsumo sInsumo = new UC_SalidaInsumo();
             canvasMenu.Children.Clear();
-            canvasMenu.Children.Add(sInsumo);
-            canvasMenu.Children.Add(new UC_SalidaInsumo(this.currentUser));
+            canvasMenu.Children.Add(new UC_Insumo(this.currentUser));
+            //canvasMenu.Children.Add(sInsumo);
+            //canvasMenu.Children.Add(new UC_SalidaInsumo(this.currentUser));
         }
 	}
 }
