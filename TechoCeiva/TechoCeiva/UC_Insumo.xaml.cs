@@ -36,6 +36,7 @@ namespace TechoCeiva
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
             canvasContent.Children.Clear();
+            canvasContent.Children.Add(new UC_ShowModificarSalida());
         }
 	}
 }

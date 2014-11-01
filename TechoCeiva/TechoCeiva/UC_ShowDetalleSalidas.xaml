@@ -1,0 +1,28 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TechoCeiva.UC_ShowDetalleSalidas"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="669" Height="404.2">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Simple Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<DataGrid Margin="0,31.507,0,0" FontSize="14.667">
+			<DataGrid.Columns>
+					<DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding }"/>
+					<DataGridTextColumn Header="Fecha Salida" Width="150" Binding="{Binding }"/>
+					<DataGridTextColumn Header="Observaciones" Width="300" Binding="{Binding }"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Label Content="Salidas del &quot;Voluntario&quot; en &quot;fehca&quot;" HorizontalAlignment="Left" Margin="8,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+	</Grid>
+</UserControl>

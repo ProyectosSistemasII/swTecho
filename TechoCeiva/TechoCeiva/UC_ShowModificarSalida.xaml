@@ -1,0 +1,24 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TechoCeiva.UC_ShowModificarSalida"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Height="533.53" Width="1100.501">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Simple Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Canvas x:Name="CanvasSalidas" Margin="23,46,0,0" HorizontalAlignment="Left" Width="669" Height="404.2" VerticalAlignment="Top"/>
+		<Label x:Name="lblHeader" Content="Modificar Salida" HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF626465" FontSize="17.333" Margin="23,23,0,0"/>
+		<Button x:Name="btnVerDetalle" Content="Ver detalle" HorizontalAlignment="Left" Margin="710.6,155.4,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="25" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" Click="btnVerDetalle_Click" />
+		<Button x:Name="btnBack" Content="&lt;-- Back" HorizontalAlignment="Left" Margin="710.6,188.2,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="25" FontSize="14.667" Background="#FF0092DD" BorderBrush="{x:Null}" Foreground="White" Click="btnBack_Click" IsEnabled="False" />
+	</Grid>
+</UserControl>
