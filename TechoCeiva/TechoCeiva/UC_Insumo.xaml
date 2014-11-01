@@ -123,7 +123,7 @@
 	</UserControl.Resources>
 	<Grid x:Name="LayoutRoot">
 		<Label x:Name="lblTitle" Content="Gestión de Insumos" Style="{DynamicResource SimpleLabel}" Foreground="#FF626465" FontSize="26.667" Margin="23,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-		<Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="288.2,17.47,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="26" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" Click="btnModificar_Click" />
-		<Canvas x:Name="canvasContent" Margin="0,43.47,0,0"/>
+		<Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="288.2,17.47,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="26" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" Click="btnModificar_Click" FontSize="14.667" />
+		<Canvas x:Name="canvasContent" Margin="23,43.47,0,0"/>
 	</Grid>
 </UserControl>

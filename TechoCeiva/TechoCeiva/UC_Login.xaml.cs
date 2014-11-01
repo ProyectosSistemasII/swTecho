@@ -58,7 +58,7 @@ namespace TechoCeiva
         {
             if (e.Key == Key.Enter)
             {
-                btn_Login.Focus();
+                logueo();
             }
         }
 
