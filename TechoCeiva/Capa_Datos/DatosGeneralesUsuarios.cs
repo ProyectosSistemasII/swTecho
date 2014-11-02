@@ -77,7 +77,7 @@ namespace Capa_Datos
                 MySqlCommand comando = new MySqlCommand(
                    "Select Usuarios.UserName,Voluntarios.Nombres, Voluntarios.Apellidos,TipoUsuarios.NombreTipo,Voluntarios.idVoluntarios,TipoUsuarios.idTipoUsuarios, Usuarios.PreguntaSecreta, Usuarios.Respuesta from Usuarios " +
                    "inner join Voluntarios on Voluntarios.idVoluntarios=Usuarios.Voluntarios_idVoluntarios " +
-                   "inner join TipoUsuarios on TipoUsuarios.idTipoUsuarios=Usuarios.TipoUsuarios_idTipoUsuarios where Usuarios.Activo=true;", conexion);
+                   "inner join TipoUsuarios on TipoUsuarios.idTipoUsuarios=Usuarios.TipoUsuarios_idTipoUsuarios where Usuarios.Activo=true and Usuario.UserName<>'root';", conexion);
                 conexion.Open();
                 MySqlDataReader datos = comando.ExecuteReader();
                 while (datos.Read())
@@ -357,6 +357,28 @@ namespace Capa_Datos
                 return null;
             }
             return tipos;
+        }
+
+        //Metodo que devuelve el nombre de tipo de usuario
+        public String getNombreTipoUsuario(int idTipoUsuario)
+        {
+            String nombretipo = "";
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection(ConexionBD.ConexionDireccion);
+                MySqlCommand comando = new MySqlCommand("select NombreTipo from TipoUsuarios where Activo=true and idTipoUsuarios=@id;", conexion);
+                comando.Parameters.AddWithValue("@id",idTipoUsuario);
+                conexion.Open();
+                MySqlDataReader datos = comando.ExecuteReader();
+                datos.Read();
+                nombretipo = datos["NombreTipo"].ToString();
+                
+            }
+            catch
+            {
+                return null;
+            }
+            return nombretipo;
         }
 
         //Metodo que devuelve una lista con los tipos de usuarios en el sistema

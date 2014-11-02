@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica_Negocio;
+using Capa_Datos;
 
 namespace TechoCeiva
 {
@@ -20,6 +21,7 @@ namespace TechoCeiva
 	public partial class UC_Menu : UserControl
 	{
         public UsuarioLN currentUser { get; set; }
+        private String tipoUsuario;
 
 		public UC_Menu()
 		{
@@ -31,6 +33,7 @@ namespace TechoCeiva
             this.InitializeComponent();
             this.currentUser = user;
             this.lblUser.Content = user.username;
+            this.tipoUsuario = new DatosTipoUsuario().getNombreTipoUsuario(currentUser.idTiposUsuarios);
         }
 
         public void setUser(UsuarioLN user)
@@ -48,6 +51,8 @@ namespace TechoCeiva
 
         private void btnToolsPrestamos_Click(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             ///
             /// Se necesita parámetro this.currentUser
             ///
@@ -59,6 +64,8 @@ namespace TechoCeiva
 
         private void btnToolsIngresar_Click_1(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             UC_NewTool nTool = new UC_NewTool();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nTool);
@@ -118,6 +125,8 @@ namespace TechoCeiva
 
         private void btnVoluntariosIngresar_Click(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             UC_Voluntarios nVoluntarios = new UC_Voluntarios();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nVoluntarios);
@@ -132,6 +141,8 @@ namespace TechoCeiva
 
         private void btnUsuariosIngresar_Click(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             UC_User nUser = new UC_User();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nUser);
@@ -144,6 +155,8 @@ namespace TechoCeiva
 
         private void btnInsumosIngresar_Click(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             UC_NuevoInsumo nInsumo = new UC_NuevoInsumo();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nInsumo);
@@ -151,14 +164,28 @@ namespace TechoCeiva
 
         private void btnEncuentaReportes_Click(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             frmReportes GenerarRpt = new frmReportes();
             GenerarRpt.ShowDialog();
         }
 
         private void btnInsumosReportes_Click(object sender, RoutedEventArgs e)
         {
+            if (tipoUsuario != "Administrador")
+                return;
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(new UC_Insumo(this.currentUser));
+        }
+
+        private void btnReportesInsumos_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnToolsReportes_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 	}
 }
