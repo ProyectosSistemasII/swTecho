@@ -168,7 +168,35 @@ namespace Capa_Datos
             MySqlCommand comando = null;
             try
             {
-                string consulta = "SELECT FechaSalida, Descripcion, UserName, Cantidad, Alimentos.Nombre AS Alimento, Presentacion.Nombre AS Presentacion FROM Salida INNER JOIN Usuarios ON Usuarios.idUsuarios = Salida.Usuarios_idUsuarios INNER JOIN DetalleSalida ON DetalleSalida.Salida_idSalida = Salida.idSalida INNER JOIN Alimentos ON Alimentos.idAlimentos = DetalleSalida.Alimentos_idAlimentos INNER JOIN Presentacion ON Presentacion.idPresentacion = Alimentos.Presentacion_idPresentacion WHERE Salida.idSalida = @idSalida";
+                string consulta = "SELECT Concat(Nombres,' ',Apellidos) AS Voluntario, DATE_FORMAT(FechaSalida, '%d/%m/%Y') AS FechaSalida, Descripcion, UserName, Cantidad, Alimentos.Nombre AS Alimento, CONCAT(Alimentos.Rango, ' ', Alimentos.AnioCaducidad) AS Caducidad, Presentacion.Nombre AS Presentacion FROM Salida INNER JOIN Usuarios ON Usuarios.idUsuarios = Salida.Usuarios_idUsuarios INNER JOIN DetalleSalida ON DetalleSalida.Salida_idSalida = Salida.idSalida INNER JOIN Alimentos ON Alimentos.idAlimentos = DetalleSalida.Alimentos_idAlimentos INNER JOIN Presentacion ON Presentacion.idPresentacion = Alimentos.Presentacion_idPresentacion INNER JOIN Voluntarios ON Voluntarios.idVoluntarios = Salida.Voluntarios_idVoluntarios WHERE Salida.idSalida = @idSalida";
+                comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@idSalida", idSalida);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                comando.Connection.Close();
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        /*
+         * Metodo para generar reporte de salidas de herramientas
+         */
+        public DataTable SalidasHerramientas(int idSalida)
+        {
+            MySqlCommand comando = null;
+            try
+            {
+                string consulta = "SELECT Concat(Nombres,' ',Apellidos) AS Voluntario, DATE_FORMAT(FechaSalida, '%d/%m/%Y') AS FechaSalida, Descripcion, UserName, Cantidad, Alimentos.Nombre AS Alimento, CONCAT(Alimentos.Rango, ' ', Alimentos.AnioCaducidad) AS Caducidad, Presentacion.Nombre AS Presentacion FROM Salida INNER JOIN Usuarios ON Usuarios.idUsuarios = Salida.Usuarios_idUsuarios INNER JOIN DetalleSalida ON DetalleSalida.Salida_idSalida = Salida.idSalida INNER JOIN Alimentos ON Alimentos.idAlimentos = DetalleSalida.Alimentos_idAlimentos INNER JOIN Presentacion ON Presentacion.idPresentacion = Alimentos.Presentacion_idPresentacion INNER JOIN Voluntarios ON Voluntarios.idVoluntarios = Salida.Voluntarios_idVoluntarios WHERE Salida.idSalida = @idSalida";
                 comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@idSalida", idSalida);
                 comando.Connection.Open();

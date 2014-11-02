@@ -4918,6 +4918,10 @@ namespace TechoCeiva {
             
             private global::System.Data.DataColumn columnPresentacion;
             
+            private global::System.Data.DataColumn columnVoluntario;
+            
+            private global::System.Data.DataColumn columnCaducidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SalidaInsumosDataTable() {
@@ -5001,6 +5005,22 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VoluntarioColumn {
+                get {
+                    return this.columnVoluntario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CaducidadColumn {
+                get {
+                    return this.columnCaducidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5036,7 +5056,7 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SalidaInsumosRow AddSalidaInsumosRow(string FechaSalida, string Descripcion, string UserName, string Cantidad, string Alimento, string Presentacion) {
+            public SalidaInsumosRow AddSalidaInsumosRow(string FechaSalida, string Descripcion, string UserName, string Cantidad, string Alimento, string Presentacion, string Voluntario, string Caducidad) {
                 SalidaInsumosRow rowSalidaInsumosRow = ((SalidaInsumosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FechaSalida,
@@ -5044,7 +5064,9 @@ namespace TechoCeiva {
                         UserName,
                         Cantidad,
                         Alimento,
-                        Presentacion};
+                        Presentacion,
+                        Voluntario,
+                        Caducidad};
                 rowSalidaInsumosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSalidaInsumosRow);
                 return rowSalidaInsumosRow;
@@ -5073,6 +5095,8 @@ namespace TechoCeiva {
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnAlimento = base.Columns["Alimento"];
                 this.columnPresentacion = base.Columns["Presentacion"];
+                this.columnVoluntario = base.Columns["Voluntario"];
+                this.columnCaducidad = base.Columns["Caducidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5090,6 +5114,10 @@ namespace TechoCeiva {
                 base.Columns.Add(this.columnAlimento);
                 this.columnPresentacion = new global::System.Data.DataColumn("Presentacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPresentacion);
+                this.columnVoluntario = new global::System.Data.DataColumn("Voluntario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVoluntario);
+                this.columnCaducidad = new global::System.Data.DataColumn("Caducidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaducidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8258,6 +8286,38 @@ namespace TechoCeiva {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Voluntario {
+                get {
+                    try {
+                        return ((string)(this[this.tableSalidaInsumos.VoluntarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Voluntario\' de la tabla \'SalidaInsumos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSalidaInsumos.VoluntarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Caducidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableSalidaInsumos.CaducidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Caducidad\' de la tabla \'SalidaInsumos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSalidaInsumos.CaducidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaSalidaNull() {
                 return this.IsNull(this.tableSalidaInsumos.FechaSalidaColumn);
             }
@@ -8326,6 +8386,30 @@ namespace TechoCeiva {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPresentacionNull() {
                 this[this.tableSalidaInsumos.PresentacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVoluntarioNull() {
+                return this.IsNull(this.tableSalidaInsumos.VoluntarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVoluntarioNull() {
+                this[this.tableSalidaInsumos.VoluntarioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCaducidadNull() {
+                return this.IsNull(this.tableSalidaInsumos.CaducidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCaducidadNull() {
+                this[this.tableSalidaInsumos.CaducidadColumn] = global::System.Convert.DBNull;
             }
         }
         

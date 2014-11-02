@@ -191,6 +191,8 @@
               <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
               <xs:element name="Alimento" msprop:Generator_ColumnVarNameInTable="columnAlimento" msprop:Generator_ColumnPropNameInRow="Alimento" msprop:Generator_ColumnPropNameInTable="AlimentoColumn" msprop:Generator_UserColumnName="Alimento" type="xs:string" minOccurs="0" />
               <xs:element name="Presentacion" msprop:Generator_ColumnVarNameInTable="columnPresentacion" msprop:Generator_ColumnPropNameInRow="Presentacion" msprop:Generator_ColumnPropNameInTable="PresentacionColumn" msprop:Generator_UserColumnName="Presentacion" type="xs:string" minOccurs="0" />
+              <xs:element name="Voluntario" msprop:Generator_ColumnVarNameInTable="columnVoluntario" msprop:Generator_ColumnPropNameInRow="Voluntario" msprop:Generator_ColumnPropNameInTable="VoluntarioColumn" msprop:Generator_UserColumnName="Voluntario" type="xs:string" minOccurs="0" />
+              <xs:element name="Caducidad" msprop:Generator_ColumnVarNameInTable="columnCaducidad" msprop:Generator_ColumnPropNameInRow="Caducidad" msprop:Generator_ColumnPropNameInTable="CaducidadColumn" msprop:Generator_UserColumnName="Caducidad" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
