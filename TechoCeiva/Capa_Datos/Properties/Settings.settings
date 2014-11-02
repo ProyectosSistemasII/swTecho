@@ -6,13 +6,13 @@
       <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="database" Type="System.String" Scope="User">
-      <Value Profile="(Default)">swtecho</Value>
+      <Value Profile="(Default)">dbtecho</Value>
     </Setting>
     <Setting Name="user" Type="System.String" Scope="User">
       <Value Profile="(Default)">root</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">12345</Value>
+      <Value Profile="(Default)">1303</Value>
     </Setting>
   </Settings>
 </SettingsFile>

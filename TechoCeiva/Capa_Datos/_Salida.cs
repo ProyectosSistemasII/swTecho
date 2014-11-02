@@ -12,6 +12,7 @@ namespace Capa_Datos
         public int idSalida { get; set; }
         public DateTime FechaSalida { get; set; }
         public int Usuarios_idUsuarios { get; set; }
+        public int Voluntarios_idVoluntarios { get; set; }
         public Boolean Activo { get; set; }
         public String Descripcion { get; set; }
 
@@ -25,18 +26,20 @@ namespace Capa_Datos
             this.idSalida = 0;
             this.FechaSalida =  DateTime.Today;
             this.Usuarios_idUsuarios = 0;
+            this.Voluntarios_idVoluntarios = 0;
             this.Activo = true;
             this.Descripcion = "";
 
         }
 
-        public _Salida(int _idSalida, DateTime _FechaSalida, int _Usuario, Boolean _activo, String _descripcion)
+        public _Salida(int _idSalida, DateTime _FechaSalida, int _Usuario, Boolean _activo, String _descripcion, int _voluntarios)
         {
             this.idSalida = _idSalida;
             this.FechaSalida = _FechaSalida;
             this.Usuarios_idUsuarios = _Usuario;
             this.Activo = _activo;
             this.Descripcion = _descripcion;
+            this.Voluntarios_idVoluntarios = _voluntarios;
             this._errores = new List<Error>();
         }
 
@@ -45,13 +48,13 @@ namespace Capa_Datos
             if (this._errores.Count == 0)
             {
                 int lastID = 0;
-                string query = "INSERT INTO Salida (FechaSalida,Usuarios_idUsuarios, Activo, Descripcion) VALUES (@FechaSalida,@Usuarios_idUsuarios, @Activo, @Descripcion)";
+                string query = "INSERT INTO Salida (FechaSalida,Usuarios_idUsuarios, Activo, Descripcion, Voluntarios_idVoluntarios) VALUES (@FechaSalida,@Usuarios_idUsuarios, @Activo, @Descripcion,@Voluntarios_idVoluntarios)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@FechaSalida", this.FechaSalida);
                 _comando.Parameters.AddWithValue("@Usuarios_idUsuarios", this.Usuarios_idUsuarios);
                 _comando.Parameters.AddWithValue("@Activo", 1);
                 _comando.Parameters.AddWithValue("@Descripcion", this.Descripcion);
-
+                _comando.Parameters.AddWithValue("@Voluntarios_idVoluntarios", this.Voluntarios_idVoluntarios);
                 try
                 {
                     _comando.Connection.Open();
@@ -85,7 +88,7 @@ namespace Capa_Datos
             _tabla = _ds.Tables[0];
 
             DataRow _row = _tabla.Rows[0];
-            ultimaSalida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToBoolean(_row["Activo"]), Convert.ToString(_row["Descripcion"]));
+            ultimaSalida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToBoolean(_row["Activo"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]));
 
             return ultimaSalida.idSalida;
         }

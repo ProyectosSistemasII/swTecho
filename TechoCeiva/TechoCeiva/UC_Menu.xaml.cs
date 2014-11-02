@@ -111,10 +111,8 @@ namespace TechoCeiva
         private void btnEncuestaIngresar_Click(object sender, RoutedEventArgs e)
         {
             var sComunidad = new UC_SelecComunidad();
-            //frmEncuesta nEncuenta = new frmEncuesta();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(sComunidad);
-            //nEncuenta.Show();
         }
 
         private void btnVoluntariosIngresar_Click(object sender, RoutedEventArgs e)
@@ -158,11 +156,8 @@ namespace TechoCeiva
 
         private void btnInsumosReportes_Click(object sender, RoutedEventArgs e)
         {
-            //UC_SalidaInsumo sInsumo = new UC_SalidaInsumo();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(new UC_Insumo(this.currentUser));
-            //canvasMenu.Children.Add(sInsumo);
-            //canvasMenu.Children.Add(new UC_SalidaInsumo(this.currentUser));
         }
 	}
 }

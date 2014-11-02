@@ -275,9 +275,6 @@
     <Compile Include="WinAddComunidad.xaml.cs">
       <DependentUpon>WinAddComunidad.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WinAddInsumos.xaml.cs">
-      <DependentUpon>WinAddInsumos.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WinAddTool.xaml.cs">
       <DependentUpon>WinAddTool.xaml</DependentUpon>
     </Compile>
@@ -509,10 +506,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="WinAddComunidad.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="WinAddInsumos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

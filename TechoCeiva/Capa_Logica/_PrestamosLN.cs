@@ -32,7 +32,6 @@ namespace Capa_Logica
         public Boolean ingresarPrestamo()
         {
             Boolean correcto = true;
-            //_Prestamo nPrestamo = new _Prestamo(this.iDPrestamo, this.idUsuario, this.idVoluntario, this.fechaPrestamo, this.Observaciones, this.Activo, this.fechaFinPrestamo);
             _Prestamo nPrestamo = new _Prestamo(this.iDPrestamo, this.idUsuario, this.idVoluntario, this.fechaPrestamo, this.Observaciones, this.Activo);
 
             this.iDPrestamo = nPrestamo.iDPrestamo;
@@ -47,7 +46,6 @@ namespace Capa_Logica
             {
                 correcto = false;
             }
-
             return correcto;
         }
 

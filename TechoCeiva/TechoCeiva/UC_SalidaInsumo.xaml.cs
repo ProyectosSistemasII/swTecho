@@ -69,7 +69,7 @@ namespace TechoCeiva
 
         private void fillComboBox()
         {
-            _InsumosLN insumos = new _InsumosLN();
+            _Insumos insumos = new _Insumos();
             cbxInsumos.ItemsSource = insumos._Obtener_In();
             cbxInsumos.SelectedValuePath = "idAlimentos";
             cbxInsumos.DisplayMemberPath = "Nombre";
@@ -143,7 +143,8 @@ namespace TechoCeiva
             listInsumos = contenido.obtenerListado(detalle);
             try
             {
-                _SalidaLN datosSalida = new _SalidaLN(DateTime.Now.Date, currentUser.idUsuarios, false, txtDescripcion.Text);
+                _Voluntarios voluntario = cbxVoluntarios.SelectedItem as _Voluntarios;
+                _SalidaLN datosSalida = new _SalidaLN(DateTime.Now.Date, currentUser.idUsuarios, false, txtDescripcion.Text, voluntario.idVoluntarios);
                 Boolean correcto = datosSalida.ingresarSalida();
                 if (correcto)
                 {

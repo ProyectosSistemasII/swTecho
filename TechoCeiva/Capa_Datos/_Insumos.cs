@@ -132,7 +132,7 @@ namespace Capa_Datos
         
         public List<_Insumos> _Obtener_In()
         {
-            string query = "Select idAlimentos,CONCAT(Alimentos.Nombre,' ',Presentacion.Nombre) AS Nombre, Existencia, Rango, AnioCaducidad,Alimentos.Activo, Presentacion_idPresentacion FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion)";
+            string query = "SELECT idAlimentos, CONCAT(Alimentos.Nombre,' ',Presentacion.Nombre) AS Nombre, Existencia,Rango,AnioCaducidad,CONCAT(AnioCaducidad,' ',Rango) as vencimiento,Alimentos.Activo, Presentacion_idPresentacion FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion) WHERE Existencia > 0 ORDER BY vencimiento asc";
             List<_Insumos> _listInsumos = new List<_Insumos>();
 
             MySqlCommand _comando = new MySqlCommand(query, _conexion);

@@ -13,24 +13,26 @@ namespace Capa_Logica
             this.idSalida = 0;
             this.FechaSalida =  DateTime.Parse("YYYY/MM/DD");
             this.Usuarios_idUsuarios = 0;
+            this.Voluntarios_idVoluntarios = 0;
             this.Activo = false;
             this.Descripcion = "";
             this._errores = new List<Error>();
         }
 
-        public _SalidaLN(DateTime fechaSalida, int Usuario, Boolean Activo, String descripcion)
+        public _SalidaLN(DateTime fechaSalida, int Usuario, Boolean Activo, String descripcion, int idVoluntario)
         {
             this.FechaSalida = fechaSalida;
             this.Usuarios_idUsuarios = Usuario;
             this.Activo = Activo;
             this.Descripcion = descripcion;
+            this.Voluntarios_idVoluntarios = idVoluntario;
             this._errores = new List<Error>();
         }
 
         public Boolean ingresarSalida()
         {
             Boolean correcto = true;
-            _Salida nSalida = new _Salida(this.idSalida, this.FechaSalida, this.Usuarios_idUsuarios, this.Activo, this.Descripcion);
+            _Salida nSalida = new _Salida(this.idSalida, this.FechaSalida, this.Usuarios_idUsuarios, this.Activo, this.Descripcion, this.Voluntarios_idVoluntarios);
             this.idSalida = nSalida.idSalida;
             this.FechaSalida = nSalida.FechaSalida;
             this.Usuarios_idUsuarios = nSalida.Usuarios_idUsuarios;
@@ -41,7 +43,6 @@ namespace Capa_Logica
             {
                 correcto = false;
             }
-
             return correcto;
         }
 
