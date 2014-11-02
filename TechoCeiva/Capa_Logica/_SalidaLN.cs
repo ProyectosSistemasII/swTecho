@@ -11,15 +11,15 @@ namespace Capa_Logica
         public _SalidaLN()
         {
             this.idSalida = 0;
-            this.FechaSalida =  DateTime.Parse("YYYY/MM/DD");
+            this.FechaSalida =  DateTime.Today;
             this.Usuarios_idUsuarios = 0;
             this.Voluntarios_idVoluntarios = 0;
-            this.Activo = false;
+            this.Activo = 0;
             this.Descripcion = "";
             this._errores = new List<Error>();
         }
 
-        public _SalidaLN(DateTime fechaSalida, int Usuario, Boolean Activo, String descripcion, int idVoluntario)
+        public _SalidaLN(DateTime fechaSalida, int Usuario, int Activo, String descripcion, int idVoluntario)
         {
             this.FechaSalida = fechaSalida;
             this.Usuarios_idUsuarios = Usuario;
@@ -32,17 +32,16 @@ namespace Capa_Logica
         public Boolean ingresarSalida()
         {
             Boolean correcto = true;
-            _Salida nSalida = new _Salida(this.idSalida, this.FechaSalida, this.Usuarios_idUsuarios, this.Activo, this.Descripcion, this.Voluntarios_idVoluntarios);
-            this.idSalida = nSalida.idSalida;
-            this.FechaSalida = nSalida.FechaSalida;
-            this.Usuarios_idUsuarios = nSalida.Usuarios_idUsuarios;
-            this.Activo = nSalida.Activo;
-            this.Descripcion = nSalida.Descripcion;
+            _Salida nSalida = new _Salida(this.idSalida, this.Usuarios_idUsuarios, this.Voluntarios_idVoluntarios, this.FechaSalida, this.Descripcion, this.Activo);
 
+            this.idSalida = nSalida.idSalida;
+            this.Usuarios_idUsuarios = nSalida.Usuarios_idUsuarios;
+            this.Voluntarios_idVoluntarios = nSalida.Voluntarios_idVoluntarios;
+            this.FechaSalida = nSalida.FechaSalida;
+            this.Descripcion = nSalida.Descripcion;
+            this.Activo = nSalida.Activo;
             if (_errores.Count > 0)
-            {
                 correcto = false;
-            }
             return correcto;
         }
 

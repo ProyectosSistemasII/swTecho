@@ -16,15 +16,15 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<DataGrid Margin="0,112.8,0,0" FontSize="14.667">
+        <DataGrid Margin="0,112.8,0,0" FontSize="14.667" Name="dgSalidasInsumos" AutoGenerateColumns="False">
 			<DataGrid.Columns>
-					<DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding }"/>
-					<DataGridTextColumn Header="Fecha Salida" Width="150" Binding="{Binding }"/>
-					<DataGridTextColumn Header="Observaciones" Width="300" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding nombreVoluntario}"/>
+			    <DataGridTextColumn Header="Fecha Salida" Width="170" Binding="{Binding FechaSalida}"/>
+				<DataGridTextColumn Header="Descripcion" Width="290" Binding="{Binding Descripcion}"/>
 			</DataGrid.Columns>
 		</DataGrid>
 		<Button Content="Volver" HorizontalAlignment="Left" Margin="532.6,83.8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="25" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" FontSize="14.667" Opacity="0.85"/>
-		<ComboBox HorizontalAlignment="Left" Margin="0,45,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="252.8" Height="25" FontSize="14.667"/>
+		<ComboBox HorizontalAlignment="Left" Margin="0,45,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="252.8" Height="25" FontSize="14.667" SelectionChanged="ComboBox_SelectionChanged" Name="cbxVoluntarios" />
 		<Label Content="Por voluntario:" HorizontalAlignment="Left" Margin="0,25.493,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<DatePicker Margin="388.8,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="252.8" Height="25" FontSize="14.667"/>
 		<Label Content="Por fecha:" Margin="388.8,25.493,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left"/>

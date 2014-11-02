@@ -16,13 +16,12 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<DataGrid Margin="0,31.507,0,0" FontSize="14.667">
+        <DataGrid Margin="0,31.507,0,0" FontSize="14.667" Name="dgDetalleSalidas" AutoGenerateColumns="False">
 			<DataGrid.Columns>
-					<DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding }"/>
-					<DataGridTextColumn Header="Fecha Salida" Width="150" Binding="{Binding }"/>
-					<DataGridTextColumn Header="Observaciones" Width="300" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Alimento" Width="300" Binding="{Binding NombreAlimento}"/>
+				<DataGridTextColumn Header="Cantidad" Width="300" Binding="{Binding Cantidad}"/>
 			</DataGrid.Columns>
 		</DataGrid>
-		<Label Content="Salidas del &quot;Voluntario&quot; en &quot;fehca&quot;" HorizontalAlignment="Left" Margin="8,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
+		<Label Content="Salidas del &quot;Voluntario&quot; en &quot;fecha&quot;" HorizontalAlignment="Left" Margin="8,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" Name="lblNombre" />
 	</Grid>
 </UserControl>

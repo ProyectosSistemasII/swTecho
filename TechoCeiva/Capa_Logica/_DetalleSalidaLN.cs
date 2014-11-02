@@ -13,11 +13,11 @@ namespace Capa_Logica
             this.idDetalleSalida = 0;
             this.Cantidad = 0;
             this.Alimentos_idAlimentos = 0;
-            this.Activo = true;
+            this.Activo = 1;
             this.Salida_idSalida = 0;
         }
 
-        public _DetalleSalidaLN(int idDetalle, int cantidad, int idAlimentos, Boolean activo, int idSalida)
+        public _DetalleSalidaLN(int idDetalle, int cantidad, int idAlimentos, int activo, int idSalida)
         {
             this.idDetalleSalida = idDetalle;
             this.Cantidad = cantidad;
