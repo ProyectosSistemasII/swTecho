@@ -160,7 +160,7 @@ namespace TechoCeiva
                     clearContent();
                     fillComboBox();
                     correcto = false;
-
+                    detalle = new ObservableCollection<_InsumosLN>();
                 }
                 else
                 {

@@ -422,10 +422,10 @@
 		<ComboBox x:Name="cbxInsumos" HorizontalAlignment="Left" Margin="1,130,0,0" Style="{DynamicResource SimpleComboBox}" Width="281" FontSize="14.667" SelectionChanged="cbxInsumos_SelectionChanged" VerticalAlignment="Top" />
         <TextBox x:Name="txtCantidad" Margin="341.5,130,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" VerticalAlignment="Top" HorizontalAlignment="Left" Width="233"/>
         <TextBox x:Name="txtDescripcion" Margin="0,399.553,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="66.494" VerticalAlignment="Top" Width="574.5" HorizontalAlignment="Left" d:LayoutOverrides="Width" />
-        <Label x:Name="lblExistencia" Content="" Style="{DynamicResource SimpleLabel}" FontSize="13.333" Margin="0,155.507,847,0" Height="17.733" VerticalAlignment="Top" Width="0" HorizontalAlignment="Left" />
+        <Label x:Name="lblExistencia" Content="" Style="{DynamicResource SimpleLabel}" FontSize="13.333" Margin="5,161,0,0" Height="26" VerticalAlignment="Top" Width="258" HorizontalAlignment="Left" />
         <Separator Background="#FFA0A0A0" Height="0.5" Margin="0,106.993,488.192,0" Opacity="0.85" Style="{DynamicResource SimpleSeparator}" Width="626.059" VerticalAlignment="Top" />
-        <Label Content="Detalle del préstamo:" FontSize="14.667" Margin="0,183.8,0,0" Name="lblDetallePrestamo" Style="{DynamicResource SimpleLabel}" HorizontalAlignment="Left" Width="144" Height="25" VerticalAlignment="Top" />
-        <DataGrid x:Name="dgdDetalle" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" FontSize="14.667" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" Background="White" Foreground="#FF333333" Margin="0,208.8,0,0" Height="147.193" VerticalAlignment="Top" HorizontalAlignment="Left" Width="574.5">
+        <Label Content="Detalle del préstamo:" FontSize="14.667" Margin="0,191,0,0" Name="lblDetallePrestamo" Style="{DynamicResource SimpleLabel}" HorizontalAlignment="Left" Width="144" Height="25" VerticalAlignment="Top" />
+        <DataGrid x:Name="dgdDetalle" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" FontSize="14.667" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" RenderTransformOrigin="0,0" Background="White" Foreground="#FF333333" Margin="0,216,0,0" Height="147.193" VerticalAlignment="Top" HorizontalAlignment="Left" Width="574.5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Insumo" Binding="{Binding Nombre}" Width="250.3" />
                 <DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="256.3" />
