@@ -144,7 +144,7 @@ namespace TechoCeiva
             try
             {
                 _Voluntarios voluntario = cbxVoluntarios.SelectedItem as _Voluntarios;
-                _SalidaLN datosSalida = new _SalidaLN(DateTime.Now.Date, currentUser.idUsuarios, false, txtDescripcion.Text, voluntario.idVoluntarios);
+                _SalidaLN datosSalida = new _SalidaLN(DateTime.Now.Date, currentUser.idUsuarios, 0, txtDescripcion.Text, voluntario.idVoluntarios);
                 Boolean correcto = datosSalida.ingresarSalida();
                 if (correcto)
                 {

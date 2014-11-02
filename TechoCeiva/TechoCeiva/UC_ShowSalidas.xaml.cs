@@ -53,5 +53,10 @@ namespace TechoCeiva
             dgSalidasInsumos.ItemsSource = null;
             dgSalidasInsumos.ItemsSource = new _Salida().buscarSalidasPor(voluntario.idVoluntarios);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            fillGrid();
+        }
 	}
 }
