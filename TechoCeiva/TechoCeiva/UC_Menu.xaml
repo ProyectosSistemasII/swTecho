@@ -703,11 +703,11 @@
 			<Image Source="img/o.png" Stretch="Fill" Width="57" Height="58.947" Canvas.Left="21.5" Canvas.Top="8"/>
 			<Label Content="- CEIVA" Style="{DynamicResource SimpleLabel}" Width="308.993" Foreground="#FF0092DD" FontSize="48" Canvas.Left="96" Canvas.Top="8"/>
 		</Canvas>
-		<Canvas x:Name="canvasUser" HorizontalAlignment="Left" Margin="858.4,0,0,0" Width="425.6" Height="75.147" VerticalAlignment="Top">
-			<Image Height="46.67" Canvas.Left="8" Source="img/User_Azul_2.png" Stretch="Fill" Canvas.Top="19.2" Width="36.8" ToolTip="Usuario Logueado"/>
-			<Label x:Name="lblUser" Content="Label" Canvas.Left="48.8" Style="{DynamicResource SimpleLabel}" Canvas.Top="30.4" FontSize="26.667" FontFamily="Segoe UI Light"/>
-			<Menu Height="46.67" Canvas.Left="298.8" Style="{DynamicResource SimpleMenu}" Canvas.Top="21.2" Width="58.4" BorderBrush="{x:Null}" Background="{x:Null}">
-				<MenuItem x:Name="menuConf" Header="" Margin="0" Style="{DynamicResource DiseñoMenuConf}" Width="58.4" ToolTip="Configuración" FontSize="14.667" FontFamily="Segoe UI Light">
+		<Canvas x:Name="canvasUser" HorizontalAlignment="Left" Margin="1051.2,0,0,0" Width="232.8" Height="75.147" VerticalAlignment="Top">
+			<Image Height="19.507" Canvas.Left="2" Source="img/User_Azul_2.png" Stretch="Fill" Canvas.Top="15.2" Width="14.4" ToolTip="Usuario Logueado"/>
+			<Label x:Name="lblUser" Content="Label" Canvas.Left="20.4" Style="{DynamicResource SimpleLabel}" Canvas.Top="15.2" FontSize="14.667" FontFamily="Segoe UI Light"/>
+			<Menu Height="24.507" Style="{DynamicResource SimpleMenu}" Canvas.Top="38.707" Width="20.4" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="-1">
+				<MenuItem x:Name="menuConf" Header="" Margin="0" Style="{DynamicResource DiseñoMenuConf}" Width="20.4" ToolTip="Configuración" FontSize="14.667" FontFamily="Segoe UI Light" Height="20.44" VerticalAlignment="Top">
 					<MenuItem.Resources>
 <!-- MenuItem simple: la plantilla usa desencadenadores para proporcionar cuatro disposiciones distintas de los elementos de menú que se establecen a través de la propiedad Role --> 
 						<Style x:Key="DiseñoMenuConf" TargetType="{x:Type MenuItem}">
@@ -842,7 +842,7 @@
 					<MenuItem x:Name="menuAcercaDe" Header="Acerca de Ceiva" Style="{DynamicResource menuAlignment}"/>
 				</MenuItem>
 			</Menu>
-			<Label Content="Usuario" Canvas.Left="48.8" Style="{DynamicResource SimpleLabel}" Canvas.Top="19.2" FontFamily="Segoe UI Light" FontSize="14.667"/>
+			<Label Content="Configuración" Canvas.Left="20.4" Style="{DynamicResource SimpleLabel}" Canvas.Top="38.707" FontFamily="Segoe UI Light" FontSize="14.667"/>
 		</Canvas>
     </Grid>
 </UserControl>
