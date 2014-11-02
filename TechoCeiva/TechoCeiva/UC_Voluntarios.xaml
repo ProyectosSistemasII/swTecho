@@ -346,12 +346,12 @@
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefonoEmergencia}"/>
             </DataGrid.Columns>            
         </DataGrid>
-		<Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Height="32" Margin="190,18,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnPlus_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+		<Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Height="32" Margin="190,18,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnPlus_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="None" >
 			<Button.Background>
 				<ImageBrush ImageSource="add.png" Stretch="None"/>
 			</Button.Background>
 		</Button>
-		<Button x:Name="btnDelet" Content="" HorizontalAlignment="Left" Height="32" Margin="226,18,0,0" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnDelet_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+		<Button x:Name="btnDelet" Content="" HorizontalAlignment="Left" Height="32" Margin="226,18,0,0" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnDelet_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="None" >
 			<Button.Background>
 				<ImageBrush ImageSource="waste.png" Stretch="None"/>
 			</Button.Background>
