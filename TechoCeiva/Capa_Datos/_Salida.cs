@@ -131,13 +131,67 @@ namespace Capa_Datos
             return listadoSalidas;
         }
 
-        public List<_Salida> buscarSalidasPor(int idVoluntario)
+        public List<_Salida> buscarSalidasPorV(int idVoluntario)
         {
             string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
                                      "salida.FechaSalida, salida.Descripcion, salida.Activo," +
                                      "Voluntarios.Nombres as NombreVoluntarios from salida" +
                          " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
                          " where salida.Activo = 1 and salida.Voluntarios_idVoluntarios = " + idVoluntario;
+            List<_Salida> listadoSalidasEspecificas = new List<_Salida>();
+
+            MySqlCommand _comando = new MySqlCommand(consulta, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            for (int i = 0; i < _tabla.Rows.Count; i++)
+            {
+                DataRow _row = _tabla.Rows[i];
+                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+                listadoSalidasEspecificas.Add(salida);
+            }
+            return listadoSalidasEspecificas;
+        }
+
+        public List<_Salida> buscarSalidasPorF(String FechaSalida)
+        {
+            string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
+                                     "salida.FechaSalida, salida.Descripcion, salida.Activo," +
+                                     "Voluntarios.Nombres as NombreVoluntarios from salida" +
+                         " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
+                         " where salida.Activo = 1 and salida.FechaSalida = '" + FechaSalida + "'";
+            List<_Salida> listadoSalidasEspecificas = new List<_Salida>();
+
+            MySqlCommand _comando = new MySqlCommand(consulta, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            for (int i = 0; i < _tabla.Rows.Count; i++)
+            {
+                DataRow _row = _tabla.Rows[i];
+                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+                listadoSalidasEspecificas.Add(salida);
+            }
+            return listadoSalidasEspecificas;
+        }
+
+        public List<_Salida> buscarSalidasPorVF(int idVoluntario, String FechaSalida)
+        {
+            string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
+                                     "salida.FechaSalida, salida.Descripcion, salida.Activo," +
+                                     "Voluntarios.Nombres as NombreVoluntarios from salida" +
+                         " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
+                         " where salida.Activo = 1 and salida.Voluntarios_idVoluntarios = " + idVoluntario + " and salida.FechaSalida = '" + FechaSalida + "'";
             List<_Salida> listadoSalidasEspecificas = new List<_Salida>();
 
             MySqlCommand _comando = new MySqlCommand(consulta, _conexion);

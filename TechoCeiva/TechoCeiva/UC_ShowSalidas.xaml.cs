@@ -21,6 +21,7 @@ namespace TechoCeiva
 	public partial class UC_ShowSalidas : UserControl
 	{
         private _Voluntarios voluntario = new _Voluntarios();
+        private String fecha;
 
 		public UC_ShowSalidas()
 		{
@@ -45,18 +46,44 @@ namespace TechoCeiva
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             voluntario = cbxVoluntarios.SelectedItem as _Voluntarios;
-            filtrarPrestamo();
+            filtrarPrestamoV();
         }
 
-        private void filtrarPrestamo()
+        private void filtrarPrestamoV()
         {
             dgSalidasInsumos.ItemsSource = null;
-            dgSalidasInsumos.ItemsSource = new _Salida().buscarSalidasPor(voluntario.idVoluntarios);
+            dgSalidasInsumos.ItemsSource = new _Salida().buscarSalidasPorV(voluntario.idVoluntarios);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             fillGrid();
+        }
+
+        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (voluntario.idVoluntarios.Equals(0))
+            {
+                fecha = String.Format("{0:yyyy-M-d}", dpfechaSalida.SelectedDate);
+                filtrarPrestamoF();
+            }
+            else 
+            {
+                fecha = String.Format("{0:yyyy-M-d}", dpfechaSalida.SelectedDate);
+                filtrarPrestamoVF();
+            }
+        }
+
+        private void filtrarPrestamoF()
+        {
+            dgSalidasInsumos.ItemsSource = null;
+            dgSalidasInsumos.ItemsSource = new _Salida().buscarSalidasPorF(fecha);
+        }
+
+        private void filtrarPrestamoVF()
+        {
+            dgSalidasInsumos.ItemsSource = null;
+            dgSalidasInsumos.ItemsSource = new _Salida().buscarSalidasPorVF(voluntario.idVoluntarios, fecha);
         }
 	}
 }

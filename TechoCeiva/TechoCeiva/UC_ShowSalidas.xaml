@@ -26,7 +26,7 @@
 		<Button Content="Volver" HorizontalAlignment="Left" Margin="532.6,83.8,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" Height="25" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" FontSize="14.667" Opacity="0.85" Click="Button_Click" Name="btnVolver" />
 		<ComboBox HorizontalAlignment="Left" Margin="0,45,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="252.8" Height="25" FontSize="14.667" SelectionChanged="ComboBox_SelectionChanged" Name="cbxVoluntarios" />
 		<Label Content="Por voluntario:" HorizontalAlignment="Left" Margin="0,25.493,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
-		<DatePicker Margin="388.8,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="252.8" Height="25" FontSize="14.667"/>
+		<DatePicker Margin="388.8,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="252.8" Height="25" FontSize="14.667" SelectedDateChanged="DatePicker_SelectedDateChanged" Name="dpfechaSalida" />
 		<Label Content="Por fecha:" Margin="388.8,25.493,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" HorizontalAlignment="Left"/>
 		<Label Content="Filtrar" HorizontalAlignment="Left" Margin="0,3.478,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="17.333"/>
 	</Grid>
