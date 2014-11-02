@@ -73,6 +73,7 @@ namespace Capa_Datos
             this.errores = new List<Error>();
         }
 
+        //Inserta un nuevo voluntario
         public void Insertar_V()
         {
             if (this.errores.Count == 0)
@@ -98,12 +99,14 @@ namespace Capa_Datos
                 }
                 catch (MySqlException ex)
                 {
+                    _comando.Connection.Close();
                     Error _error = new Error(ex.Message + "" + ex.Number, 2);
                     errores.Add(_error);
                 }
             }
         }
 
+        //Obtiene una lista de todos los voluntarios que se encuentren activos
         public List<_Voluntarios> Obtener_V()
         {
             List<_Voluntarios> Lista_V = new List<_Voluntarios>();
@@ -124,6 +127,7 @@ namespace Capa_Datos
             return Lista_V;
         }
 
+        //Da de baja los datos de un voluntario
         public Boolean Eliminar_V(int id)
         {
             MySqlCommand _comando = new MySqlCommand("update  Voluntarios set Activo=false where idVoluntarios="+id, _conexion);
@@ -136,6 +140,7 @@ namespace Capa_Datos
             }
             catch (MySqlException ex)
             {
+                _comando.Connection.Close();
                 Error _error = new Error(ex.Message + "" + ex.Number, 2);
                 errores.Add(_error);
             }
@@ -143,6 +148,7 @@ namespace Capa_Datos
             return true;
         }
 
+        //Modifica los datos de un voluntario, tomando como referencia su id
         public void Modificar_V(int id) 
         {
             string _query = "UPDATE Voluntarios set Nombres=@Nombres, Apellidos=@Apellidos, Telefono=@Telefono, Direccion=@Direccion, Correo=@Correo, Activo=@Activo,Departamento_idDepartamento=@Departamento_idDepartamento, Municipio_idMunicipio=@Municipio_idMunicipio, PersonaEmergencia=@PersonaEmergencia,TelEmergencia=@TelEmergencia where idVoluntarios="+id;
@@ -166,6 +172,7 @@ namespace Capa_Datos
             }
             catch (MySqlException ex)
             {
+                _comando.Connection.Close();
                 Error _error = new Error(ex.Message + "" + ex.Number, 2);
                 errores.Add(_error);
             }

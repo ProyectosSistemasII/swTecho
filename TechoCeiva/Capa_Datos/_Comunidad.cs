@@ -117,6 +117,7 @@ namespace Capa_Datos
                 }
                 catch (MySqlException ex)
                 {
+                    comando.Connection.Close();
                     Error error = new Error(ex.Message + "   " + ex.Number, 2);
                     errores.Add(error);
                 }
@@ -140,6 +141,7 @@ namespace Capa_Datos
             }
             catch (MySqlException ex)
             {
+                comando.Connection.Close();
                 Error error = new Error(ex.Message + "   " + ex.Number, 2);
                 errores.Add(error);
             }
