@@ -30,6 +30,7 @@ namespace TechoCeiva
         {
             this.InitializeComponent();
             this.currentUser = user;
+            this.lblUser.Content = user.username;
         }
 
         public void setUser(UsuarioLN user)
