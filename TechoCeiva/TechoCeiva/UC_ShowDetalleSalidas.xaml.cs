@@ -42,5 +42,48 @@ namespace TechoCeiva
         {
             dgDetalleSalidas.ItemsSource = new _DetalleSalida().buscarDetallesPor(this.idSalida);
         }
+
+        private void dgDetalleSalidas_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            showWinModify();
+        }
+
+        private void showWinModify()
+        {
+            try
+            {
+                _DetalleSalida detalle = dgDetalleSalidas.SelectedItem as _DetalleSalida;
+                WinModifyInsumos nModificarS = new WinModifyInsumos();
+                nModificarS.txAlimento.Text = detalle.NombreAlimento;
+                nModificarS.txtCantidad.Text = detalle.Cantidad.ToString();
+                nModificarS.ShowDialog();
+
+                if (nModificarS.getIsClose())
+                {
+                    saveContent(detalle, nModificarS);
+                    fillGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void saveContent(_DetalleSalida varDetalle, WinModifyInsumos win)
+        {
+            int cantN = win.getCantidad();
+            int cant = varDetalle.Cantidad;
+            if (varDetalle.Cantidad > win.getCantidad())
+            {
+                cant = cant - cantN;
+                varDetalle.Devolver(cant, cantN, varDetalle.idDetalleSalida, varDetalle.Alimentos_idAlimentos);
+            }
+            if (varDetalle.Cantidad < win.getCantidad())
+            {
+                cant = cantN - cant;
+                varDetalle.Sacar(cant, cantN, varDetalle.idDetalleSalida, varDetalle.Alimentos_idAlimentos);
+            }
+        }
 	}
 }

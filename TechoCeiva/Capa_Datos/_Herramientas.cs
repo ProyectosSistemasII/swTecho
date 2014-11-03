@@ -21,8 +21,6 @@ namespace Capa_Datos
         /// <summary>
         /// variable utilizada para el método verificarExistencia()
         /// </summary>
-        //public int ExistenciaActual { get; set; }
-
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;        
 
@@ -46,16 +44,13 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
-
-
         /// <summary>
         /// para --> Realizar inserción en tabla Herramientas
         /// 
         /// value --> no values
         /// 
         /// query --> INSERT INTO herramientas (Nombre, Existencia, Activo) VALUES (@Nombre, @Existencia, @Activo)
-        /// </summary>
-        
+        /// </summary>        
         public void _Insertar_H()
         {
             if (this._errores.Count == 0)
@@ -70,8 +65,7 @@ namespace Capa_Datos
                 {
                     _comando.Connection.Open();
                     _comando.ExecuteNonQuery();
-                    _comando.Connection.Close();
-                     
+                    _comando.Connection.Close();                     
                 }
                 catch (MySqlException ex)
                 {
@@ -80,9 +74,7 @@ namespace Capa_Datos
                     _errores.Add(_error);
                 }
             }
-        }
-
- 
+        } 
 
         /// <summary>
         /// para --> Obtener listado de todas las herrameintas ingresadas
@@ -91,8 +83,7 @@ namespace Capa_Datos
         /// 
         /// query --> "Select * FROM Herramientas WHERE Activo = true"
         /// </summary>
-        /// <returns> _listaHerramientas </_Herramientas> </returns>
-        
+        /// <returns> _listaHerramientas </_Herramientas> </returns>        
         public List<_Herramientas> _Obtener_H()
         {
             string query = "Select * FROM Herramientas WHERE Activo = true";
@@ -113,11 +104,8 @@ namespace Capa_Datos
                 _Herramientas _herramientas = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
                 _listHerramientas.Add(_herramientas);
             }
-
             return _listHerramientas;
         }
-
-
 
         /// <summary>
         /// para --> Realiza eliminación "setea activo = false"
@@ -128,7 +116,6 @@ namespace Capa_Datos
         /// </summary>
         /// <param name="_id"></param>
         /// <returns></returns>
-
         public Boolean _Eliminar(int _id)
         {
             string query = "UPDATE Herramientas SET Activo = false WHERE idHerramientas = " + _id;
@@ -146,11 +133,8 @@ namespace Capa_Datos
                 Error _error = new Error(ex.Message + " " + ex.Number, 2);
                 _errores.Add(_error);
             }
-
             return true;
         }
-
-
 
         /// <summary>
         /// para --> Realizar UPDATE de la información modificada por el usuario
@@ -158,7 +142,6 @@ namespace Capa_Datos
         /// query --> "UPDATE Herramientas SET Existencia = @Existencia WHERE idHerramientas = " + _id;
         /// </summary>
         /// <param name="_id"></param>
-
         public void _Modificar(int _id)
         {
             if (this._errores.Count == 0)
@@ -184,8 +167,6 @@ namespace Capa_Datos
             }
         }
 
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -194,16 +175,10 @@ namespace Capa_Datos
         public Boolean verificarExistencia(int cantidad)
         {
             if (this.Existencia > cantidad)
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
-
-
 
         /// <summary>
         /// 
@@ -225,13 +200,11 @@ namespace Capa_Datos
             DataTable _tabla = new DataTable();
             _tabla = _ds.Tables[0];
 
-                DataRow _row = _tabla.Rows[0];
-                _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
+            DataRow _row = _tabla.Rows[0];
+            _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
 
             return _tool.Existencia - valor;
         }
-
-
 
         /// <summary>
         /// 
@@ -259,8 +232,6 @@ namespace Capa_Datos
             return _tool.Existencia + valor;
         }
 
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -283,8 +254,6 @@ namespace Capa_Datos
                 usada = false;
             return usada;
         }
-
-
 
         /// <summary>
         /// 

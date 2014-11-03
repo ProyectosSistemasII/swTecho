@@ -142,6 +142,90 @@ namespace Capa_Datos
             }
             return listaDetallesEspecificos;
         }
+
+        public void Devolver(int devolver, int cantdetalle, int idDetalle, int idAlimentos)
+        {
+            _Insumos insumo = new _Insumos();
+            _conexion.Open();
+
+            MySqlTransaction transaction = _conexion.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+            MySqlCommand comando = _conexion.CreateCommand();
+            MySqlCommand comando2 = _conexion.CreateCommand();
+
+            try
+            {
+                comando.CommandText = "UPDATE DetalleSalida SET Cantidad = @nCantidad WHERE idDetalleSalida = @idD";
+                comando.Parameters.AddWithValue("@nCantidad", cantdetalle);
+                comando.Parameters.AddWithValue("@idD", idDetalle);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+                
+                comando2.CommandText = "UPDATE alimentos SET Existencia = @nExistencia WHERE idAlimentos = @idA";
+                comando2.Parameters.AddWithValue("@nExistencia", insumo.sumarExistencia(idAlimentos, devolver));
+                comando2.Parameters.AddWithValue("@idA", idAlimentos);
+                comando2.ExecuteNonQuery();
+                comando2.Parameters.Clear();
+                
+                transaction.Commit();
+            }
+            catch (Exception e)
+            {
+                transaction.Rollback();
+                comando.Dispose();
+                comando2.Dispose();
+                transaction.Dispose();
+                _conexion.Close();
+            }
+            finally
+            {
+                comando.Dispose();
+                comando2.Dispose();
+                transaction.Dispose();
+                _conexion.Close();
+            }
+        }
+
+        public void Sacar(int sacar, int cantdetalle, int idDetalle, int idAlimentos)
+        {
+            _Insumos insumo = new _Insumos();
+            _conexion.Open();
+
+            MySqlTransaction transaction = _conexion.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+            MySqlCommand comando = _conexion.CreateCommand();
+            MySqlCommand comando2 = _conexion.CreateCommand();
+
+            try
+            {
+                comando.CommandText = "UPDATE DetalleSalida SET Cantidad = @nCantidad WHERE idDetalleSalida = @idD";
+                comando.Parameters.AddWithValue("@nCantidad", cantdetalle);
+                comando.Parameters.AddWithValue("@idD", idDetalle);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+
+                comando2.CommandText = "UPDATE alimentos SET Existencia = @nExistencia WHERE idAlimentos = @idA";
+                comando2.Parameters.AddWithValue("@nExistencia", insumo.nuevaExistencia(idAlimentos, sacar));
+                comando2.Parameters.AddWithValue("@idA", idAlimentos);
+                comando2.ExecuteNonQuery();
+                comando2.Parameters.Clear();
+
+                transaction.Commit();
+            }
+            catch (Exception e)
+            {
+                transaction.Rollback();
+                comando.Dispose();
+                comando2.Dispose();
+                transaction.Dispose();
+                _conexion.Close();
+            }
+            finally
+            {
+                comando.Dispose();
+                comando2.Dispose();
+                transaction.Dispose();
+                _conexion.Close();
+            }
+        }
     }
 }
 
