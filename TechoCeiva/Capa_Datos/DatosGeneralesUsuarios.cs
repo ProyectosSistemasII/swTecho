@@ -77,7 +77,7 @@ namespace Capa_Datos
                 MySqlCommand comando = new MySqlCommand(
                    "Select Usuarios.UserName,Voluntarios.Nombres, Voluntarios.Apellidos,TipoUsuarios.NombreTipo,Voluntarios.idVoluntarios,TipoUsuarios.idTipoUsuarios, Usuarios.PreguntaSecreta, Usuarios.Respuesta from Usuarios " +
                    "inner join Voluntarios on Voluntarios.idVoluntarios=Usuarios.Voluntarios_idVoluntarios " +
-                   "inner join TipoUsuarios on TipoUsuarios.idTipoUsuarios=Usuarios.TipoUsuarios_idTipoUsuarios where Usuarios.Activo=true and Usuario.UserName<>'root';", conexion);
+                   "inner join TipoUsuarios on TipoUsuarios.idTipoUsuarios=Usuarios.TipoUsuarios_idTipoUsuarios where Usuarios.Activo=true and Usuarios.UserName<>'root';", conexion);
                 conexion.Open();
                 MySqlDataReader datos = comando.ExecuteReader();
                 while (datos.Read())
