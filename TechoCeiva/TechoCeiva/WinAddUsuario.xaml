@@ -5,7 +5,7 @@
 	x:Class="TechoCeiva.WinAddUsuario"
 	x:Name="Window"
 	Title="Añadir Usuario"
-	Width="655" Height="480" Loaded="Window_Loaded" Background="#FFC4C2C2" ResizeMode="NoResize" WindowStyle="None">
+	Width="655" Height="480" Loaded="Window_Loaded" Background="#FFC4C2C2" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>

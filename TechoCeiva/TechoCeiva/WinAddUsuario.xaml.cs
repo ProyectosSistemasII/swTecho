@@ -47,6 +47,7 @@ namespace TechoCeiva
                 return;
             }
             MessageBox.Show(ValidarDatosUsuarios.insertarUsuario(txtUsername.Text, pswPassword.Password, pswPassworConfirm.Password, Convert.ToInt16(cmbTipo.SelectedValue), Convert.ToInt16(lstVoluntarios.SelectedValue), Convert.ToString(cmbPregunta.SelectedValue), txtRespuesta.Text));
+            this.Close();
         }
 
 
