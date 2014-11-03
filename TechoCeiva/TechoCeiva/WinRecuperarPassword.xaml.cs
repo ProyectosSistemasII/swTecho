@@ -22,6 +22,12 @@ namespace TechoCeiva
         public WinRecuperarPassword()
         {
             InitializeComponent();
+            txtUsername.Focus();
+            label3.Visibility = Visibility.Hidden;
+            label4.Visibility = Visibility.Hidden;
+            label5.Visibility = Visibility.Hidden;
+            txtRespuesta.Visibility = Visibility.Hidden;
+            btnVerificar.Visibility = Visibility.Hidden;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -29,6 +35,12 @@ namespace TechoCeiva
             DatosUsuario usuario = new DatosUsuario();
             if (usuario.buscarUsuario(txtUsername.Text))
             {
+                label3.Visibility = Visibility.Visible;
+                label4.Visibility = Visibility.Visible;
+                label5.Visibility = Visibility.Visible;
+                txtRespuesta.Visibility = Visibility.Visible;
+                btnVerificar.Visibility = Visibility.Visible;
+
                 lblPregunta.Content = usuario.getPregunta(txtUsername.Text);
                 txtRespuesta.IsEnabled = true;
                 btnVerificar.IsEnabled = true;
@@ -51,6 +63,11 @@ namespace TechoCeiva
             }
             else
                 MessageBox.Show("La respuesta no es correcta");
+        }
+
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -227,6 +227,5 @@
 				<ImageBrush ImageSource="img/pencil.png" Stretch="Uniform"/>
 			</Button.Background>
 		</Button>
-		<Button Content="123" HorizontalAlignment="Right" Margin="0,33.87,439.701,0" Style="{DynamicResource btnMarco2}" VerticalAlignment="Top" Width="30" Height="20" BorderBrush="{x:Null}" Foreground="Black" Background="{x:Null}"/>
 	</Grid>
 </UserControl>

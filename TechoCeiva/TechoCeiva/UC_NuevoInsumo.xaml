@@ -3,6 +3,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
 	mc:Ignorable="d"
 	x:Class="TechoCeiva.UC_NuevoInsumo"
 	x:Name="UserControl"
@@ -12,6 +13,57 @@
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="Simple Styles.xaml"/>
 			</ResourceDictionary.MergedDictionaries>
+			<Style x:Key="ButtonFocusVisual">
+				<Setter Property="Control.Template">
+					<Setter.Value>
+						<ControlTemplate>
+							<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+				<GradientStop Color="#F3F3F3" Offset="0"/>
+				<GradientStop Color="#EBEBEB" Offset="0.5"/>
+				<GradientStop Color="#DDDDDD" Offset="0.5"/>
+				<GradientStop Color="#CDCDCD" Offset="1"/>
+			</LinearGradientBrush>
+			<SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+			<Style x:Key="btnDiseñoAñadir" TargetType="{x:Type Button}">
+				<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+				<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+				<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+				<Setter Property="BorderThickness" Value="1"/>
+				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+				<Setter Property="HorizontalContentAlignment" Value="Center"/>
+				<Setter Property="VerticalContentAlignment" Value="Center"/>
+				<Setter Property="Padding" Value="1"/>
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Microsoft_Windows_Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true">
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Microsoft_Windows_Themes:ButtonChrome>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsKeyboardFocused" Value="true">
+									<Setter Property="RenderDefaulted" TargetName="Chrome" Value="true"/>
+								</Trigger>
+								<Trigger Property="ToggleButton.IsChecked" Value="true">
+									<Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>
+								</Trigger>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition Property="IsMouseOver" Value="True"/>
+										<Condition Property="IsCancel" Value="False"/>
+									</MultiTrigger.Conditions>
+									<Setter
+							Property="Foreground" Value="#ADADAD"/>
+								</MultiTrigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
 		</ResourceDictionary>
 	</UserControl.Resources>
 
@@ -26,6 +78,10 @@
                 <DataGridTextColumn Binding="{Binding AnioCaducidad}" Header="Año" Width="62" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnMas" Content="+" HorizontalAlignment="Left" Margin="315,18.168,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" FontSize="14.667" Width="36" Height="25.07" Foreground="White" Background="#FF0092DD" BorderBrush="{x:Null}" Click="btnMas_Click" />
+        <Button x:Name="btnMas" Content="" HorizontalAlignment="Left" Margin="315,18.168,0,0" Style="{DynamicResource btnDiseñoAñadir}" VerticalAlignment="Top" FontSize="14.667" Width="36" Height="25.07" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnMas_Click" >
+        	<Button.Background>
+        		<ImageBrush ImageSource="add.png" Stretch="Uniform"/>
+        	</Button.Background>
+        </Button>
 	</Grid>
 </UserControl>
