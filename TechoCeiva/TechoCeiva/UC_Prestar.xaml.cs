@@ -213,7 +213,7 @@ namespace TechoCeiva
                 {
                     idPrestamo = datosPrestamo._InsertarPrestamo();
                     detallesPrestamo.insertarDetalle(listTools,idPrestamo);
-                    MessageBox.Show("Préstamo asignado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Préstamo asignado exitosamente, generando reporte", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
                     //Reporte
                     frmPrestamoHerramientas MostrarRpt = new frmPrestamoHerramientas();
                     MostrarRpt.idPrestamo = idPrestamo;
