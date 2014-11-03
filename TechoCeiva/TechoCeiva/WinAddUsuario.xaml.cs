@@ -46,8 +46,10 @@ namespace TechoCeiva
                     MessageBox.Show(ValidarDatosUsuarios.modificarUsuario(txtUsername.Text,pswPassword.Password,pswPassworConfirm.Password,Convert.ToInt16(cmbTipo.SelectedValue),cmbPregunta.Text,txtRespuesta.Text));
                 return;
             }
-            MessageBox.Show(ValidarDatosUsuarios.insertarUsuario(txtUsername.Text, pswPassword.Password, pswPassworConfirm.Password, Convert.ToInt16(cmbTipo.SelectedValue), Convert.ToInt16(lstVoluntarios.SelectedValue), Convert.ToString(cmbPregunta.SelectedValue), txtRespuesta.Text));
-            this.Close();
+            String respuestInsertar = ValidarDatosUsuarios.insertarUsuario(txtUsername.Text, pswPassword.Password, pswPassworConfirm.Password, Convert.ToInt16(cmbTipo.SelectedValue), Convert.ToInt16(lstVoluntarios.SelectedValue), Convert.ToString(cmbPregunta.SelectedValue), txtRespuesta.Text);
+            MessageBox.Show(respuestInsertar);
+            if (respuestInsertar == "Registro agregado")
+                this.Close();
         }
 
 
