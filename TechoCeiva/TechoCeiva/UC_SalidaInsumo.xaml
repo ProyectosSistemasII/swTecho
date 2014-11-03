@@ -418,10 +418,10 @@
 		<Label x:Name="lblCantidad" Content="Cantidad:" HorizontalAlignment="Left" Margin="341.5,111.493,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
 		<Label x:Name="Descripcion" Content="Observaciones:" HorizontalAlignment="Left" Margin="0,380.046,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
 		<Label x:Name="lblInsumo" Content="Insumo:" HorizontalAlignment="Left" Margin="8,111.493,0,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbxVoluntarios" HorizontalAlignment="Left" Margin="0,65.558,0,0" Style="{DynamicResource SimpleComboBox}" Width="281" FontSize="14.667" VerticalAlignment="Top"/>
-		<ComboBox x:Name="cbxInsumos" HorizontalAlignment="Left" Margin="1,130,0,0" Style="{DynamicResource SimpleComboBox}" Width="280" FontSize="14.667" SelectionChanged="cbxInsumos_SelectionChanged" VerticalAlignment="Top" />
-        <TextBox x:Name="txtCantidad" Margin="341.5,130,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" VerticalAlignment="Top" HorizontalAlignment="Left" Width="233"/>
-        <TextBox x:Name="txtDescripcion" Margin="0,399.553,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="66.494" VerticalAlignment="Top" Width="574.5" HorizontalAlignment="Left" d:LayoutOverrides="Width" />
+        <ComboBox x:Name="cbxVoluntarios" HorizontalAlignment="Left" Margin="0,65.558,0,0" Style="{DynamicResource SimpleComboBox}" Width="281" FontSize="14.667" VerticalAlignment="Top" TabIndex="1" />
+		<ComboBox x:Name="cbxInsumos" HorizontalAlignment="Left" Margin="1,130,0,0" Style="{DynamicResource SimpleComboBox}" Width="280" FontSize="14.667" SelectionChanged="cbxInsumos_SelectionChanged" VerticalAlignment="Top" TabIndex="2" />
+        <TextBox x:Name="txtCantidad" Margin="341.5,130,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" VerticalAlignment="Top" HorizontalAlignment="Left" Width="233" TabIndex="3" />
+        <TextBox x:Name="txtDescripcion" Margin="0,399.553,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="66.494" VerticalAlignment="Top" Width="574.5" HorizontalAlignment="Left" d:LayoutOverrides="Width" MaxLines="8" TabIndex="10" />
         <Label x:Name="lblExistencia" Content="" Style="{DynamicResource SimpleLabel}" FontSize="13.333" Margin="5,161,0,0" Height="26" VerticalAlignment="Top" Width="443" HorizontalAlignment="Left" />
         <Separator Background="#FFA0A0A0" Height="0.5" Margin="0,106.993,488.192,0" Opacity="0.85" Style="{DynamicResource SimpleSeparator}" Width="626.059" VerticalAlignment="Top" />
         <Label Content="Detalle del préstamo:" FontSize="14.667" Margin="0,191,0,0" Name="lblDetallePrestamo" Style="{DynamicResource SimpleLabel}" HorizontalAlignment="Left" Width="144" Height="25" VerticalAlignment="Top" />
@@ -431,9 +431,9 @@
                 <DataGridTextColumn Header="Cantidad" Binding="{Binding Existencia}" Width="256.3" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="+" FontSize="14.667" Foreground="White" Height="36" Margin="595.62,125.507,0,0" Name="btnAdd" Style="{DynamicResource SimpleButton}" ToolTip="Agregar a detalle" Width="41.959" Click="btnAdd_Click" VerticalAlignment="Top" HorizontalAlignment="Left" d:LayoutOverrides="Width" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="+" FontSize="14.667" Foreground="White" Height="36" Margin="595.62,125.507,0,0" Name="btnAdd" Style="{DynamicResource SimpleButton}" ToolTip="Agregar a detalle" Width="41.959" Click="btnAdd_Click" VerticalAlignment="Top" HorizontalAlignment="Left" d:LayoutOverrides="Width" TabIndex="4" />
         <Button Background="#FFC52023" BorderBrush="{x:Null}" Content="-" FontSize="14.667" Foreground="White" Height="36" Margin="595.62,208.8,0,0" Name="btnQuit" Style="{DynamicResource SimpleButton}" ToolTip="Quitar de detalle" Width="41.959" Click="btnQuit_Click" d:LayoutOverrides="Width, Height" VerticalAlignment="Top" HorizontalAlignment="Left" />
-        <Button x:Name="btnGuardar" Style="{DynamicResource SimpleButton}" Content="Guardar" FontSize="14.667" Background="#FF0092DD" Foreground="White" Click="btnGuardar_Click" Margin="0,430.047,388.631,0" Height="36" VerticalAlignment="Top" HorizontalAlignment="Right" Width="130" BorderBrush="{x:Null}" />
+        <Button x:Name="btnGuardar" Style="{DynamicResource SimpleButton}" Content="Guardar" FontSize="14.667" Background="#FF0092DD" Foreground="White" Click="btnGuardar_Click" Margin="0,430.047,388.631,0" Height="36" VerticalAlignment="Top" HorizontalAlignment="Right" Width="130" BorderBrush="{x:Null}" TabIndex="11" />
         <Button x:Name="btnCancelar" Style="{DynamicResource SimpleButton}" Content="Cancelar" FontSize="14.667" Background="#FFC52023" Foreground="White" Click="btnCancelar_Click" Margin="750.2,430.047,224.8,0" Height="36" VerticalAlignment="Top" BorderBrush="{x:Null}" />
     </Grid>
 </UserControl>
