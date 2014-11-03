@@ -840,7 +840,7 @@
 					<MenuItem x:Name="menuAcercaDe" Header="Acerca de Ceiva" Style="{DynamicResource menuAlignment}" Click="menuAcercaDe_Click" />
 				</MenuItem>
 			</Menu>
-			<Label Content="Copy Right" Canvas.Left="20.4" Style="{DynamicResource SimpleLabel}" Canvas.Top="38.707" FontFamily="Segoe UI Light" FontSize="14.667"/>
+			<Label Content="CopyRight" Canvas.Left="20.4" Style="{DynamicResource SimpleLabel}" Canvas.Top="38.707" FontFamily="Segoe UI Light" FontSize="14.667"/>
 		</Canvas>
     </Grid>
 </UserControl>

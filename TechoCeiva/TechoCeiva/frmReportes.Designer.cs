@@ -41,6 +41,7 @@
             this.crvReportes.ActiveViewIndex = -1;
             this.crvReportes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.crvReportes.CachedPageNumberPerDoc = 10;
+            this.crvReportes.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvReportes.Location = new System.Drawing.Point(0, 0);
             this.crvReportes.Name = "crvReportes";
@@ -125,7 +126,7 @@
             this.Controls.Add(this.crvReportes);
             this.Name = "frmReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReportes";
+            this.Text = "Reporte de encuestas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();

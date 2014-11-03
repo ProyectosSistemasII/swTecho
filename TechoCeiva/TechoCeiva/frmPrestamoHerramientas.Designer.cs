@@ -52,7 +52,7 @@
             this.Controls.Add(this.crvReportePrestamo);
             this.Name = "frmPrestamoHerramientas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrestamoHerramientas";
+            this.Text = "Prestámo de herramientas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrestamoHerramientas_Load);
             this.ResumeLayout(false);

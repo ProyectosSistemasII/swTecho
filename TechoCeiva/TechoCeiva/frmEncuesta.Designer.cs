@@ -841,7 +841,7 @@
             this.tbpInfo.Controls.Add(this.lblCodigoHogar);
             this.tbpInfo.Location = new System.Drawing.Point(4, 22);
             this.tbpInfo.Name = "tbpInfo";
-            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tbpInfo.Size = new System.Drawing.Size(1332, 549);
             this.tbpInfo.TabIndex = 0;
             this.tbpInfo.Text = "Información";
@@ -1236,7 +1236,7 @@
             this.tbpS1.Controls.Add(this.gbS1);
             this.tbpS1.Location = new System.Drawing.Point(4, 22);
             this.tbpS1.Name = "tbpS1";
-            this.tbpS1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS1.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS1.Size = new System.Drawing.Size(1332, 549);
             this.tbpS1.TabIndex = 1;
             this.tbpS1.Text = "Sección 1";
@@ -1352,7 +1352,7 @@
             this.tbpS2.Controls.Add(this.gbS2);
             this.tbpS2.Location = new System.Drawing.Point(4, 22);
             this.tbpS2.Name = "tbpS2";
-            this.tbpS2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS2.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS2.Size = new System.Drawing.Size(1332, 549);
             this.tbpS2.TabIndex = 2;
             this.tbpS2.Text = "Sección 2";
@@ -1396,7 +1396,7 @@
             this.dataGridViewTextBoxColumn10});
             this.dgvS2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvS2.Location = new System.Drawing.Point(3, 16);
-            this.dgvS2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvS2.Margin = new System.Windows.Forms.Padding(4);
             this.dgvS2.Name = "dgvS2";
             this.dgvS2.RowHeadersWidth = 25;
             this.dgvS2.Size = new System.Drawing.Size(1316, 447);
@@ -1500,7 +1500,7 @@
             this.tbpS3.Controls.Add(this.gbS3);
             this.tbpS3.Location = new System.Drawing.Point(4, 22);
             this.tbpS3.Name = "tbpS3";
-            this.tbpS3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS3.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS3.Size = new System.Drawing.Size(1332, 549);
             this.tbpS3.TabIndex = 3;
             this.tbpS3.Text = "Sección 3";
@@ -1704,7 +1704,7 @@
             this.tbpS4.Controls.Add(this.groupBox4);
             this.tbpS4.Location = new System.Drawing.Point(4, 22);
             this.tbpS4.Name = "tbpS4";
-            this.tbpS4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS4.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS4.Size = new System.Drawing.Size(1332, 549);
             this.tbpS4.TabIndex = 4;
             this.tbpS4.Text = "Sección 4";
@@ -1897,7 +1897,7 @@
             this.tbpS5.Controls.Add(this.gbS5);
             this.tbpS5.Location = new System.Drawing.Point(4, 22);
             this.tbpS5.Name = "tbpS5";
-            this.tbpS5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS5.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS5.Size = new System.Drawing.Size(1332, 549);
             this.tbpS5.TabIndex = 5;
             this.tbpS5.Text = "Sección 5";
@@ -2114,7 +2114,7 @@
             this.tbpS6.Controls.Add(this.pbS6_Siguiente);
             this.tbpS6.Location = new System.Drawing.Point(4, 22);
             this.tbpS6.Name = "tbpS6";
-            this.tbpS6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS6.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS6.Size = new System.Drawing.Size(1332, 549);
             this.tbpS6.TabIndex = 6;
             this.tbpS6.Text = "Sección 6";
@@ -2613,7 +2613,7 @@
             this.tbpS7.Controls.Add(this.gbS7);
             this.tbpS7.Location = new System.Drawing.Point(4, 22);
             this.tbpS7.Name = "tbpS7";
-            this.tbpS7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS7.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS7.Size = new System.Drawing.Size(1332, 549);
             this.tbpS7.TabIndex = 7;
             this.tbpS7.Text = "Sección 7";
@@ -4088,7 +4088,7 @@
             this.tbpS8.Controls.Add(this.groupBox47);
             this.tbpS8.Location = new System.Drawing.Point(4, 22);
             this.tbpS8.Name = "tbpS8";
-            this.tbpS8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS8.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS8.Size = new System.Drawing.Size(1332, 549);
             this.tbpS8.TabIndex = 8;
             this.tbpS8.Text = "Sección 8";
@@ -4964,7 +4964,7 @@
             this.tbpS9.Controls.Add(this.groupBox67);
             this.tbpS9.Location = new System.Drawing.Point(4, 22);
             this.tbpS9.Name = "tbpS9";
-            this.tbpS9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS9.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS9.Size = new System.Drawing.Size(1332, 549);
             this.tbpS9.TabIndex = 9;
             this.tbpS9.Text = "Sección 9";
@@ -5291,7 +5291,7 @@
             this.tbpS10.Controls.Add(this.groupBox68);
             this.tbpS10.Location = new System.Drawing.Point(4, 22);
             this.tbpS10.Name = "tbpS10";
-            this.tbpS10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS10.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10.TabIndex = 10;
             this.tbpS10.Text = "Sección 10";
@@ -6712,7 +6712,7 @@
             this.tbpS10Cont.Controls.Add(this.groupBox98);
             this.tbpS10Cont.Location = new System.Drawing.Point(4, 22);
             this.tbpS10Cont.Name = "tbpS10Cont";
-            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpS10Cont.Padding = new System.Windows.Forms.Padding(3);
             this.tbpS10Cont.Size = new System.Drawing.Size(1332, 549);
             this.tbpS10Cont.TabIndex = 11;
             this.tbpS10Cont.Text = "Cont. Sección 10";
@@ -7505,7 +7505,7 @@
             this.Controls.Add(this.tbcDatos);
             this.Name = "frmEncuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEncuesta";
+            this.Text = "Encuesta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEncuesta_FormClosing);
             this.Load += new System.EventHandler(this.frmEncuesta_Load);
             this.tbcDatos.ResumeLayout(false);

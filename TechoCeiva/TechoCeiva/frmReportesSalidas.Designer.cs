@@ -52,7 +52,7 @@
             this.Controls.Add(this.crvReportesSalidas);
             this.Name = "frmReportesSalidas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReportesSalidas";
+            this.Text = "Reportes de salidas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReportesSalidas_Load);
             this.ResumeLayout(false);
