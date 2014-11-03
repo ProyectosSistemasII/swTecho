@@ -96,6 +96,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrestamoHerramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamoHerramientas.Designer.cs">
+      <DependentUpon>frmPrestamoHerramientas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptS9_Propiedad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_PrestamoHerramientas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_PrestamoHerramientas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rpt_SalidaInsumos.cs">
@@ -303,11 +315,17 @@
       <DependentUpon>frmEncuesta.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHerramientas.resx">
+      <DependentUpon>frmHerramientas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamoHerramientas.resx">
+      <DependentUpon>frmPrestamoHerramientas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
@@ -370,6 +388,10 @@
     <EmbeddedResource Include="RptS9_Propiedad.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptS9_Propiedad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_PrestamoHerramientas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_PrestamoHerramientas.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rpt_SalidaInsumos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
