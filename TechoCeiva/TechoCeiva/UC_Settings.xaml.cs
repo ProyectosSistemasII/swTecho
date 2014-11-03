@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Capa_Logica;
 using System.Collections;
+using System.Windows.Interop;
+
 namespace TechoCeiva
 {
     /// <summary>
@@ -29,6 +31,10 @@ namespace TechoCeiva
         {
             String salida = SettingsSistema.saveParametros(txtServer.Text, txtDatabase.Text, txtUser.Text, pswPassword.Password);
             MessageBox.Show(salida, "Mensaje");
+            HwndSource source = (HwndSource)PresentationSource.FromVisual(sender as Button);
+            System.Windows.Forms.Control ctl = System.Windows.Forms.Control.FromChildHandle(source.Handle);
+            ctl.FindForm().Close();
+
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
