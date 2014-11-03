@@ -200,5 +200,11 @@ namespace TechoCeiva
             WinAboutUs nWin = new WinAboutUs();
             nWin.ShowDialog();
         }
+
+        private void menuProyecto_Click(object sender, RoutedEventArgs e)
+        {
+            WinProyecto nWinPro = new WinProyecto();
+            nWinPro.ShowDialog();
+        }
 	}
 }

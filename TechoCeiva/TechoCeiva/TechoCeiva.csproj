@@ -327,6 +327,9 @@
     <Compile Include="WinNewInsumo.xaml.cs">
       <DependentUpon>WinNewInsumo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinProyecto.xaml.cs">
+      <DependentUpon>WinProyecto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinRecuperarPassword.xaml.cs">
       <DependentUpon>WinRecuperarPassword.xaml</DependentUpon>
     </Compile>
@@ -593,6 +596,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="WinProyecto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="WinRecuperarPassword.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -604,7 +611,9 @@
     <Resource Include="img\copyright_128x128.png" />
     <Resource Include="img\delete.png" />
     <Resource Include="img\figura.png" />
+    <Resource Include="img\figuraRoja.png" />
     <Resource Include="img\logo-techo.png" />
+    <Resource Include="img\logourlNegro.png" />
     <Resource Include="img\o.png" />
     <Resource Include="img\pencil.png" />
     <Resource Include="img\search.png" />

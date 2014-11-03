@@ -836,9 +836,7 @@
 					<MenuItem.Background>
 						<ImageBrush ImageSource="img/Tool_Azul_2.png" Stretch="Uniform"/>
 					</MenuItem.Background>
-					<MenuItem x:Name="menuPerfil" Header="Perfil" Style="{DynamicResource menuAlignment}"/>
-					<MenuItem x:Name="menuSeguridad" Header="Seguridad" Style="{DynamicResource menuAlignment}"/>
-					<MenuItem x:Name="menuAyuda" Header="Ayuda" Style="{DynamicResource menuAlignment}"/>
+					<MenuItem x:Name="menuProyecto" Header="Proyecto" Style="{DynamicResource menuAlignment}" Click="menuProyecto_Click" />
 					<MenuItem x:Name="menuAcercaDe" Header="Acerca de Ceiva" Style="{DynamicResource menuAlignment}" Click="menuAcercaDe_Click" />
 				</MenuItem>
 			</Menu>
