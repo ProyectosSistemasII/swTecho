@@ -76,6 +76,9 @@
       <DependentUpon>rpt_CaducidadInsumos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WinAboutUs.xaml.cs">
+      <DependentUpon>WinAboutUs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinModifyInsumos.xaml.cs">
       <DependentUpon>WinModifyInsumos.xaml</DependentUpon>
     </Compile>
@@ -461,6 +464,10 @@
     <None Include="img\Logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="WinAboutUs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="WinModifyInsumos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -594,7 +601,9 @@
   <ItemGroup>
     <Resource Include="add.png" />
     <Resource Include="img\check_mark.png" />
+    <Resource Include="img\copyright_128x128.png" />
     <Resource Include="img\delete.png" />
+    <Resource Include="img\figura.png" />
     <Resource Include="img\logo-techo.png" />
     <Resource Include="img\o.png" />
     <Resource Include="img\pencil.png" />
