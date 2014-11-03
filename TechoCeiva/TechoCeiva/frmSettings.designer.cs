@@ -38,8 +38,9 @@
             // canvasSettings
             // 
             this.canvasSettings.Location = new System.Drawing.Point(0, 0);
+            this.canvasSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.canvasSettings.Name = "canvasSettings";
-            this.canvasSettings.Size = new System.Drawing.Size(280, 400);
+            this.canvasSettings.Size = new System.Drawing.Size(373, 492);
             this.canvasSettings.TabIndex = 0;
             this.canvasSettings.Text = "elementHost1";
             this.canvasSettings.Visible = false;
@@ -51,9 +52,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(87, 177);
+            this.button1.Location = new System.Drawing.Point(116, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 36);
+            this.button1.Size = new System.Drawing.Size(153, 44);
             this.button1.TabIndex = 1;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -62,19 +64,22 @@
             // txtAcceso
             // 
             this.txtAcceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAcceso.Location = new System.Drawing.Point(75, 139);
+            this.txtAcceso.Location = new System.Drawing.Point(100, 171);
+            this.txtAcceso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAcceso.Name = "txtAcceso";
             this.txtAcceso.PasswordChar = '*';
-            this.txtAcceso.Size = new System.Drawing.Size(142, 26);
+            this.txtAcceso.Size = new System.Drawing.Size(188, 30);
             this.txtAcceso.TabIndex = 2;
+            this.txtAcceso.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAcceso_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 32);
+            this.label1.Size = new System.Drawing.Size(270, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ajustes del sistema";
             // 
@@ -82,23 +87,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 116);
+            this.label2.Location = new System.Drawing.Point(95, 143);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(112, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña:";
             // 
             // frmSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.ClientSize = new System.Drawing.Size(284, 408);
+            this.ClientSize = new System.Drawing.Size(379, 502);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAcceso);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.canvasSettings);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paramentos del servidor";

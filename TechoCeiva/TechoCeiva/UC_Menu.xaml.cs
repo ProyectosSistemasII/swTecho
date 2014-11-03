@@ -31,6 +31,7 @@ namespace TechoCeiva
         public UC_Menu(UsuarioLN user)
         {
             this.InitializeComponent();
+            this.btnToolsReportes.Visibility = Visibility.Hidden;
             this.currentUser = user;
             this.lblUser.Content = user.username;
             this.tipoUsuario = new DatosTipoUsuario().getNombreTipoUsuario(currentUser.idTiposUsuarios);

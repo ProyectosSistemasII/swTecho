@@ -24,6 +24,19 @@ namespace TechoCeiva
 
         private void button1_Click(object sender, EventArgs e)
         {
+            action();
+        }
+
+        private void txtAcceso_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                action();
+            }
+        }
+
+        private void action()
+        {
             if (txtAcceso.Text == Properties.Settings.Default.passwordSettings)
             {
                 canvasSettings.Visible = true;
@@ -33,7 +46,7 @@ namespace TechoCeiva
             }
             else
             {
-                MessageBox.Show("Contraseña incorrecta","Error");
+                MessageBox.Show("Contraseña incorrecta", "Error");
             }
         }
     }
