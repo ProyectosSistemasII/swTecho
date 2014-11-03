@@ -185,21 +185,13 @@ namespace TechoCeiva
         {
             try
             {
-                switch (caseSwitch)
-                {
-                    case 1:
                         if (txtDañadas.Text == "" || txtDañadas.Text.Equals(null))
                             txtDañadas.Text = "0";
-                        break;
-                    case 2:
-                        if (txtPerdidas.Text == "" || txtPerdidas.Text.Equals(null))
-                            txtPerdidas.Text = "0";
-                        break;
-                    case 3:
-                        if (txtPendientes.Text == "" || txtPendientes.Text.Equals(null))
+                         if (txtPerdidas.Text.Equals(null))
+                             txtPerdidas.Text = "0";
+                        if (txtPendientes.Text.Equals(null) || txtPendientes.Text == "")
                             txtPendientes.Text = "0";
-                        break;
-                }
+                
             }
             catch (Exception ex)
             {
