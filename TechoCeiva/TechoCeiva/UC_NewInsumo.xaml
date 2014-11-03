@@ -473,7 +473,7 @@
 		<TextBox x:Name="txtCantida" HorizontalAlignment="Left" Margin="163.273,173,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="80.553" FontSize="14.667" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 		<Label x:Name="lblCaduca" Content="Caduca:" HorizontalAlignment="Left" Margin="108.376,211,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<ComboBox x:Name="cbxRangoFecha" HorizontalAlignment="Left" Margin="163.273,210.506,0,0" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Top" Width="314" FontSize="14.667" SelectionChanged="cbxRangoFecha_SelectionChanged" />
-        <DataGrid x:Name="dgInsumos" Margin="53,327,0,46" Width="559" AutoGenerateColumns="False" SelectionChanged="dgInsumos_SelectionChanged" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" FontSize="14.667">
+        <DataGrid x:Name="dgInsumos" Margin="53,327,0,46" Width="559" IsReadOnly="True" AutoGenerateColumns="False" SelectionChanged="dgInsumos_SelectionChanged" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" FontSize="14.667">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
                 <DataGridTextColumn Header="Presentacion" Binding="{Binding Presentacion_idPresentacion}"/>

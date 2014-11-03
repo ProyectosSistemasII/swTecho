@@ -16,7 +16,7 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-        <DataGrid Margin="0,112.8,0,0" FontSize="14.667" Name="dgSalidasInsumos" AutoGenerateColumns="False">
+        <DataGrid Margin="0,112.8,0,0" FontSize="14.667" Name="dgSalidasInsumos" AlternatingRowBackground="#FFE7E6E6" IsReadOnly="True" AutoGenerateColumns="False" BorderBrush="{x:Null}" Background="White">
 			<DataGrid.Columns>
                 <DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding nombreVoluntario}"/>
 			    <DataGridTextColumn Header="Fecha Salida" Width="170" Binding="{Binding Fecha}"/>

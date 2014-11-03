@@ -16,7 +16,7 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-        <DataGrid Margin="0,31.507,0,0" FontSize="14.667" Name="dgDetalleSalidas" AutoGenerateColumns="False" MouseDoubleClick="dgDetalleSalidas_MouseDoubleClick">
+        <DataGrid Margin="0,31.507,0,0" FontSize="14.667" Name="dgDetalleSalidas" AlternatingRowBackground="#FFE7E6E6" IsReadOnly="True" AutoGenerateColumns="False" MouseDoubleClick="dgDetalleSalidas_MouseDoubleClick" BorderBrush="{x:Null}" Background="White">
 			<DataGrid.Columns>
                 <DataGridTextColumn Header="Alimento" Width="300" Binding="{Binding NombreAlimento}"/>
 				<DataGridTextColumn Header="Cantidad" Width="300" Binding="{Binding Cantidad}"/>
