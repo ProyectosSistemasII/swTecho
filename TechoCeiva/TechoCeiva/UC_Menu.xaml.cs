@@ -194,5 +194,11 @@ namespace TechoCeiva
                 expndrVoluntarios.Visibility = System.Windows.Visibility.Hidden;
             }
         }
+
+        private void menuAcercaDe_Click(object sender, RoutedEventArgs e)
+        {
+            WinAboutUs nWin = new WinAboutUs();
+            nWin.ShowDialog();
+        }
 	}
 }

@@ -839,7 +839,7 @@
 					<MenuItem x:Name="menuPerfil" Header="Perfil" Style="{DynamicResource menuAlignment}"/>
 					<MenuItem x:Name="menuSeguridad" Header="Seguridad" Style="{DynamicResource menuAlignment}"/>
 					<MenuItem x:Name="menuAyuda" Header="Ayuda" Style="{DynamicResource menuAlignment}"/>
-					<MenuItem x:Name="menuAcercaDe" Header="Acerca de Ceiva" Style="{DynamicResource menuAlignment}"/>
+					<MenuItem x:Name="menuAcercaDe" Header="Acerca de Ceiva" Style="{DynamicResource menuAlignment}" Click="menuAcercaDe_Click" />
 				</MenuItem>
 			</Menu>
 			<Label Content="Configuración" Canvas.Left="20.4" Style="{DynamicResource SimpleLabel}" Canvas.Top="38.707" FontFamily="Segoe UI Light" FontSize="14.667"/>
