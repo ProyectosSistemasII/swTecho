@@ -318,6 +318,103 @@
 					</Setter.Value>
 				</Setter>
 			</Style>
+			<Style x:Key="btnDiseñoPlus" TargetType="{x:Type Button}" BasedOn="{x:Null}">
+				<Setter Property="FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}"/>
+				<Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
+				<Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+					
+					<!-- Grid se usa como raíz porque resulta sencillo agregarle más elementos para personalizar el botón -->
+							<Grid x:Name="Grid">
+								<Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
+						
+								<!-- Content Presenter es donde el control coloca el contenido de texto, etc. -->
+						<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+								<Border x:Name="border" BorderBrush="{x:Null}" BorderThickness="1" HorizontalAlignment="Stretch" Height="Auto" Margin="0" VerticalAlignment="Stretch" Width="Auto"/>
+							</Grid>
+					
+					<!--Cada estado establece un pincel en el elemento Border de la plantilla -->
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsKeyboardFocused" Value="true">
+									<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
+								</Trigger>
+								<Trigger Property="IsMouseOver" Value="true">
+									<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
+									<Setter Property="BorderBrush" TargetName="border" Value="#FF0092DD"/>
+									<Setter Property="Background" TargetName="border">
+										<Setter.Value>
+											<ImageBrush ImageSource="add.png" Stretch="Uniform"/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="true">
+									<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
+									<Setter Property="BorderBrush" TargetName="border" Value="{x:Null}"/>
+									<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
+								</Trigger>
+								<Trigger Property="IsEnabled" Value="true"/>
+								<Trigger Property="IsEnabled" Value="false">
+									<Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+									<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
+									<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnDiseñoTrash" TargetType="{x:Type Button}" BasedOn="{x:Null}">
+				<Setter Property="FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}"/>
+				<Setter Property="Background" Value="{DynamicResource NormalBrush}"/>
+				<Setter Property="BorderBrush" Value="{DynamicResource NormalBorderBrush}"/>
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+					
+					<!-- Grid se usa como raíz porque resulta sencillo agregarle más elementos para personalizar el botón -->
+							<Grid x:Name="Grid">
+						
+								<!-- Content Presenter es donde el control coloca el contenido de texto, etc. -->
+								<Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>
+						
+								<!-- Los enlaces sirven para que el control se pueda parametrizar sin editar la plantilla -->
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+								<Border x:Name="border" BorderBrush="{x:Null}" BorderThickness="1" HorizontalAlignment="Stretch" Height="Auto" Margin="0" VerticalAlignment="Stretch" Width="Auto"/>
+							</Grid>
+					
+					<!--Cada estado establece un pincel en el elemento Border de la plantilla -->
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsKeyboardFocused" Value="true">
+									<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
+								</Trigger>
+								<Trigger Property="IsMouseOver" Value="true">
+									<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
+									<Setter Property="BorderBrush" TargetName="border" Value="#FF0092DD"/>
+									<Setter Property="Background" TargetName="border">
+										<Setter.Value>
+											<ImageBrush ImageSource="waste.png" Stretch="Uniform"/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="true">
+									<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
+									<Setter Property="BorderBrush" TargetName="border" Value="{x:Null}"/>
+									<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
+								</Trigger>
+								<Trigger Property="IsEnabled" Value="true"/>
+								<Trigger Property="IsEnabled" Value="false">
+									<Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+									<Setter Property="BorderBrush" TargetName="Border" Value="{x:Null}"/>
+									<Setter Property="Background" TargetName="Border" Value="{x:Null}"/>
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
 	
 		</ResourceDictionary>
 	
@@ -346,14 +443,14 @@
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefonoEmergencia}"/>
             </DataGrid.Columns>            
         </DataGrid>
-		<Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Height="32" Margin="190,18,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnPlus_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="None" >
+		<Button x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Height="20" Margin="192,33.47,0,0" Style="{DynamicResource btnDiseñoPlus}" VerticalAlignment="Top" Width="30" FontSize="14.667" Click="btnPlus_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="None" >
 			<Button.Background>
-				<ImageBrush ImageSource="add.png" Stretch="None"/>
+				<ImageBrush ImageSource="add.png" Stretch="Uniform"/>
 			</Button.Background>
 		</Button>
-		<Button x:Name="btnDelet" Content="" HorizontalAlignment="Left" Height="32" Margin="226,18,0,0" VerticalAlignment="Top" Width="32" FontSize="14.667" Click="btnDelet_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="None" Style="{DynamicResource SimpleButton}" >
+		<Button x:Name="btnDelet" Content="" HorizontalAlignment="Left" Height="20" Margin="226,33.47,0,0" VerticalAlignment="Top" Width="30" FontSize="14.667" Click="btnDelet_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="None" Style="{DynamicResource btnDiseñoTrash}" >
 			<Button.Background>
-				<ImageBrush ImageSource="waste.png" Stretch="None"/>
+				<ImageBrush ImageSource="waste.png" Stretch="Uniform"/>
 			</Button.Background>
 		</Button>
     </Grid>
