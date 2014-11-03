@@ -189,5 +189,20 @@ namespace TechoCeiva
         {
 
         }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (tipoUsuario != "Administrador")
+            {
+                btnEncuentaReportes.Visibility = System.Windows.Visibility.Hidden;
+                btnInsumosIngresar.Visibility = System.Windows.Visibility.Hidden;
+                btnInsumosReportes.Visibility = System.Windows.Visibility.Hidden;
+                btnReportesInsumos.Visibility = System.Windows.Visibility.Hidden;
+                btnToolsIngresar.Visibility = System.Windows.Visibility.Hidden;
+                btnToolsPrestamos.Visibility = System.Windows.Visibility.Hidden;
+                btnVoluntariosIngresar.Visibility = System.Windows.Visibility.Hidden;
+                btnUsuariosIngresar.Visibility = System.Windows.Visibility.Hidden;
+            }
+        }
 	}
 }
