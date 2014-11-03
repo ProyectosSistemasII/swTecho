@@ -24,7 +24,7 @@
         <Label x:Name="lblCorreo" Content="Confirmar contraseña:" HorizontalAlignment="Left" Margin="307,64,0,0" Style="{DynamicResource SimpleLabel}" Width="155" Height="22" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
         <ComboBox x:Name="cmbTipo" Margin="307,152,128,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220" TabIndex="4" />
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="26.5" Margin="23,228,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667" IsEnabled="True" Text="" TabIndex="1" />
-        <Button Content="Guardar" Height="26" Margin="307,0,0,60" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Click="Button_Click" FontSize="14.667" Name="btnGuardar" Background="#FF0092DD" Foreground="White" HorizontalAlignment="Left" Width="80" BorderBrush="{x:Null}" />
+        <Button Content="Guardar" Height="36" Margin="307,394,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Click="Button_Click" FontSize="14.667" Name="btnGuardar" Background="#FF0092DD" Foreground="White" HorizontalAlignment="Left" Width="109" BorderBrush="{x:Null}" />
         <Label Content="Tipo de usuario:" Height="28" HorizontalAlignment="Left" Margin="307,120,0,0" Name="label1" VerticalAlignment="Top" FontSize="15" />
         <PasswordBox Height="27" HorizontalAlignment="Left" Margin="23,296,0,0" Name="pswPassword" VerticalAlignment="Top" Width="220" IsEnabled="True" TabIndex="2" />
         <PasswordBox Height="26" HorizontalAlignment="Left" Margin="307,91,0,0" Name="pswPassworConfirm" VerticalAlignment="Top" Width="220" TabIndex="3" />
@@ -33,6 +33,6 @@
         <TextBox Height="27" HorizontalAlignment="Left" Margin="307,296,0,0" Name="txtRespuesta" VerticalAlignment="Top" Width="221" Text="" TabIndex="6" />
         <Label Content="Pregunta secreta:" FontSize="14.667" Height="22" HorizontalAlignment="Left" Margin="307,195,0,0" Name="label3" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" />
         <Label Content="Respuesta:" FontSize="14.667" Height="22" HorizontalAlignment="Left" Margin="307,268,0,0" Name="label4" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="139" />
-        <Button Content="Cancelar" FontSize="14.667" Height="26" Margin="423.5,0,151.5,60" Name="button1" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Foreground="White" Background="#FFC52023" Click="button1_Click" Width="80" BorderBrush="{x:Null}" />
+        <Button Content="Cancelar" FontSize="14.667" Height="36" Margin="423.5,394,0,0" Name="button1" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Foreground="White" Background="#FFC52023" Click="button1_Click" Width="109" BorderBrush="{x:Null}" HorizontalAlignment="Left" />
     </Grid>
 </Window>

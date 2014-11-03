@@ -7,7 +7,7 @@
     <Grid Height="205">
         <ComboBox FontSize="14.667" Margin="110,66,51,117" Name="cmbComunidad" Style="{DynamicResource SimpleComboBox}" DisplayMemberPath="" />
         <Label Content="Comunidad:" FontSize="14.667" HorizontalAlignment="Left" Margin="16,64,0,110" Name="lblComunidad" Style="{DynamicResource SimpleLabel}" Width="112" />
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Continuar" FontSize="14.667" Foreground="White" Height="26" Margin="340,106,51,73" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" />
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Continuar" FontSize="14.667" Foreground="White" Height="36" Margin="340,106,0,0" Name="btnGuardar" Style="{DynamicResource SimpleButton}" Click="btnGuardar_Click" HorizontalAlignment="Left" Width="109" VerticalAlignment="Top" />
         <Label Content="Seleccione comunidad" FontSize="26.667" Foreground="#FF626465" Margin="10,10,193,155" Name="lblTitle" Style="{DynamicResource SimpleLabel}" />
     </Grid>
 </UserControl>

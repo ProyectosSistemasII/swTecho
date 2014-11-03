@@ -14,7 +14,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="55,179,0,0" Name="txtDatabase" VerticalAlignment="Top" Width="164" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="55,242,0,0" Name="txtUser" VerticalAlignment="Top" Width="164" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="55,305,0,0" Name="pswPassword" VerticalAlignment="Top" Width="164" />
-        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="30" Margin="84,0,80,27" Name="btn_Login" Style="{DynamicResource btnLogin}" VerticalAlignment="Bottom" Click="btn_Login_Click">
+        <Button Background="#FF0092DD" BorderBrush="{x:Null}" Content="Guardar" FontSize="14.667" Foreground="White" Height="36" Margin="87.5,341,0,0" Name="btn_Login" Style="{DynamicResource btnLogin}" VerticalAlignment="Top" Click="btn_Login_Click" Width="109" HorizontalAlignment="Left" d:LayoutOverrides="Width">
             <Button.Resources>
                 <Style BasedOn="{x:Null}" x:Key="btnLogin" TargetType="{x:Type Button}">
                     <Setter Property="FrameworkElement.FocusVisualStyle" Value="{DynamicResource SimpleButtonFocusVisual}" />

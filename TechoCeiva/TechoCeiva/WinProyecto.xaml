@@ -15,11 +15,11 @@
 	</Window.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<Image Margin="-8.6,0,-29.4,0" Source="img/figuraRoja.png" Stretch="Fill" Height="173" VerticalAlignment="Top"/>
 		<Label Content="Proyecto realizado por alumnos de" Margin="0,127.2,0,0" Style="{DynamicResource SimpleLabel}" FontFamily="Segoe UI Light" FontSize="29.333" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 		<Label Content="Quetzaltenango, Promción 2014" HorizontalAlignment="Center" Margin="0,0,0,91.8" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontFamily="Segoe UI Light" FontSize="29.333"/>
 		<Button x:Name="btnCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="366.93,474,0,0" Style="{DynamicResource SimpleButton}" Width="109" Height="30" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" Background="#FFC52023" FontSize="14.667" FontFamily="Segoe UI Light" Click="btnCerrar_Click" />
 		<Label Content="Ingeniería en Informática y Sistemas" HorizontalAlignment="Center" Margin="0,0,0,134.816" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" FontFamily="Segoe UI Light" FontSize="29.333"/>
 		<Image Margin="0,187.4,0,186.2" Source="img/logourlNegro.png" Stretch="Fill" HorizontalAlignment="Center" Width="422.4"/>
+		<Image Height="173" Margin="-9.6,-2,-26.8,0" Source="img/figura3.png" Stretch="Fill" VerticalAlignment="Top"/>
 	</Grid>
 </Window>
