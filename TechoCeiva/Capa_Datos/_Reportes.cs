@@ -215,5 +215,35 @@ namespace Capa_Datos
                 return null;
             }
         }
+
+
+        /*
+         * Metodo para generar reporte de insumos por caducidad
+         */
+        public DataTable CaducidadInsumos(string Rango, int Anio)
+        {
+            MySqlCommand comando = null;
+            try
+            {
+                string consulta = "SELECT Nombre, Existencia, Rango, AnioCaducidad FROM alimentos WHERE Rango = @Rango AND AnioCaducidad = @Anio AND Activo = true ORDER BY Nombre, Existencia, Rango, AnioCaducidad ASC";
+                comando = new MySqlCommand(consulta, _conexion);
+                comando.Parameters.AddWithValue("@Rango", Rango);
+                comando.Parameters.AddWithValue("@Anio", Anio);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                comando.Connection.Close();
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }

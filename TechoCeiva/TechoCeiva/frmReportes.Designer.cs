@@ -41,7 +41,6 @@
             this.crvReportes.ActiveViewIndex = -1;
             this.crvReportes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.crvReportes.CachedPageNumberPerDoc = 10;
-            this.crvReportes.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvReportes.Location = new System.Drawing.Point(0, 0);
             this.crvReportes.Name = "crvReportes";
@@ -50,6 +49,7 @@
             // 
             // btnGenerar
             // 
+            this.btnGenerar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Location = new System.Drawing.Point(53, 208);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
@@ -60,6 +60,7 @@
             // 
             // cmbComunidad
             // 
+            this.cmbComunidad.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbComunidad.FormattingEnabled = true;
             this.cmbComunidad.Location = new System.Drawing.Point(12, 79);
             this.cmbComunidad.Name = "cmbComunidad";
@@ -70,9 +71,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Seleccione Comunidad";
             // 
@@ -80,14 +82,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 13);
+            this.label2.Size = new System.Drawing.Size(167, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Seleccione sección de encuesta";
             // 
             // cmbSeleccionReporte
             // 
+            this.cmbSeleccionReporte.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSeleccionReporte.FormattingEnabled = true;
             this.cmbSeleccionReporte.Items.AddRange(new object[] {
             "Estadísticas de personas",

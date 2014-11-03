@@ -180,7 +180,8 @@ namespace TechoCeiva
 
         private void btnReportesInsumos_Click(object sender, RoutedEventArgs e)
         {
-
+            frmReporteInsumos frm = new frmReporteInsumos();
+            frm.ShowDialog();
         }
 
         private void btnToolsReportes_Click(object sender, RoutedEventArgs e)
