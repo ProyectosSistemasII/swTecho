@@ -42,8 +42,14 @@ namespace TechoCeiva
             if (isModificar)
             {
                 MessageBoxResult result = MessageBox.Show("¿Esta seguro de modificar los datos?", "", MessageBoxButton.YesNo);
+                String respuesta;
                 if (result == MessageBoxResult.Yes)
-                    MessageBox.Show(ValidarDatosUsuarios.modificarUsuario(txtUsername.Text,pswPassword.Password,pswPassworConfirm.Password,Convert.ToInt16(cmbTipo.SelectedValue),cmbPregunta.Text,txtRespuesta.Text));
+                {
+                    respuesta = ValidarDatosUsuarios.modificarUsuario(txtUsername.Text, pswPassword.Password, pswPassworConfirm.Password, Convert.ToInt16(cmbTipo.SelectedValue), cmbPregunta.Text, txtRespuesta.Text);
+                    MessageBox.Show(respuesta);
+                    if (respuesta == "Datos modificados, la contraseña no cambio" || respuesta == "Datos modificados")
+                        this.Close();
+                }
                 return;
             }
             String respuestInsertar = ValidarDatosUsuarios.insertarUsuario(txtUsername.Text, pswPassword.Password, pswPassworConfirm.Password, Convert.ToInt16(cmbTipo.SelectedValue), Convert.ToInt16(lstVoluntarios.SelectedValue), Convert.ToString(cmbPregunta.SelectedValue), txtRespuesta.Text);

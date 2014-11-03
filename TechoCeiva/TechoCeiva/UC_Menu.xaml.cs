@@ -52,8 +52,6 @@ namespace TechoCeiva
 
         private void btnToolsPrestamos_Click(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             ///
             /// Se necesita parámetro this.currentUser
             ///
@@ -65,8 +63,6 @@ namespace TechoCeiva
 
         private void btnToolsIngresar_Click_1(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             UC_NewTool nTool = new UC_NewTool();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nTool);
@@ -126,8 +122,6 @@ namespace TechoCeiva
 
         private void btnVoluntariosIngresar_Click(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             UC_Voluntarios nVoluntarios = new UC_Voluntarios();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nVoluntarios);
@@ -142,8 +136,6 @@ namespace TechoCeiva
 
         private void btnUsuariosIngresar_Click(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             UC_User nUser = new UC_User();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nUser);
@@ -156,8 +148,6 @@ namespace TechoCeiva
 
         private void btnInsumosIngresar_Click(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             UC_NuevoInsumo nInsumo = new UC_NuevoInsumo();
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(nInsumo);
@@ -165,16 +155,12 @@ namespace TechoCeiva
 
         private void btnEncuentaReportes_Click(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             frmReportes GenerarRpt = new frmReportes();
             GenerarRpt.ShowDialog();
         }
 
         private void btnInsumosReportes_Click(object sender, RoutedEventArgs e)
         {
-            if (tipoUsuario != "Administrador")
-                return;
             canvasMenu.Children.Clear();
             canvasMenu.Children.Add(new UC_Insumo(this.currentUser));
         }
@@ -202,6 +188,10 @@ namespace TechoCeiva
                 btnToolsPrestamos.Visibility = System.Windows.Visibility.Hidden;
                 btnVoluntariosIngresar.Visibility = System.Windows.Visibility.Hidden;
                 btnUsuariosIngresar.Visibility = System.Windows.Visibility.Hidden;
+                expndrHerramientas.Visibility = System.Windows.Visibility.Hidden;
+                expndrInsumos.Visibility = System.Windows.Visibility.Hidden;
+                expndrUsuarios.Visibility = System.Windows.Visibility.Hidden;
+                expndrVoluntarios.Visibility = System.Windows.Visibility.Hidden;
             }
         }
 	}
