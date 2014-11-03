@@ -106,7 +106,7 @@
 	</UserControl.Resources>
     <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="Canvas_Loaded">
         <Label Canvas.Left="0" Canvas.Top="23" Content="Usuarios" FontSize="26.667" Foreground="#FF626465" Style="{DynamicResource SimpleLabel}" Margin="38.15,0,0,23" />
-        <DataGrid AutoGenerateColumns="True" Margin="12,89.437,33.501,24.053" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" IsReadOnly="True" FontSize="14.667" Canvas.Top="-18" Height="304" Name="dtgUsuarios" Width="541" MouseDoubleClick="dtgUsuarios_MouseDoubleClick" Canvas.Left="0">
+        <DataGrid AutoGenerateColumns="True" IsReadOnly="True" Margin="12,89.437,33.501,24.053" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" Background="White" FontSize="14.667" Canvas.Top="-18" Height="304" Name="dtgUsuarios" Width="541" MouseDoubleClick="dtgUsuarios_MouseDoubleClick" Canvas.Left="0">
         </DataGrid>        
         <Button Canvas.Left="187.8" Canvas.Top="33.47" Content="+" FontSize="14.667" Height="20" Name="btnPlus" Style="{DynamicResource btnDiseñoPlus}" Width="30" Click="btnPlus_Click" Foreground="{x:Null}" BorderBrush="{x:Null}" >
         	<Button.Background>
