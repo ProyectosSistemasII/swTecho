@@ -21,6 +21,7 @@ namespace TechoCeiva
 	{
         private _Voluntarios voluntario = new _Voluntarios();
         private UC_ShowSalidas varSalidas;
+        private int idSalida = 0;
 
 		public UC_ShowModificarSalida()
 		{
@@ -44,6 +45,7 @@ namespace TechoCeiva
                 _Salida detalle = varSalidas.dgSalidasInsumos.SelectedItem as _Salida;
                 CanvasSalidas.Children.Clear();
                 CanvasSalidas.Children.Add(new UC_ShowDetalleSalidas(detalle.idSalida, detalle.FechaSalida, detalle.nombreVoluntario));
+                idSalida = detalle.idSalida;
             }
             catch
             {
@@ -53,6 +55,14 @@ namespace TechoCeiva
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("¿Desea imprimir reporte?", "Éxito", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+            {
+            //Generar reporte
+                frmReportesSalidas MostrarRpt = new frmReportesSalidas();
+                MostrarRpt.idSalida = idSalida;
+                MostrarRpt.ShowDialog();
+            }
+
             CanvasSalidas.Children.Clear();
             btnBack.IsEnabled = false;
             btnVerDetalle.IsEnabled = true;
