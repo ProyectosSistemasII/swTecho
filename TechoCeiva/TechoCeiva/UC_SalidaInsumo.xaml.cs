@@ -61,7 +61,7 @@ namespace TechoCeiva
             if (cbxInsumos.SelectedIndex != -1)
             {
                 _Insumos chosenI = cbxInsumos.SelectedItem as _Insumos;
-                lblExistencia.Content = chosenI.Existencia + " unidades actualmente";
+                lblExistencia.Content = chosenI.Existencia + " unidades actualmente y vence en " + chosenI.Rango + " del " + chosenI.AnioCaducidad ;
             }
             else
                 lblExistencia.Content = "";
