@@ -19,9 +19,8 @@ namespace Capa_Datos
         public List<Error> errores { get; set; }
         private static ConexionBD datos = new ConexionBD();
         private static MySqlConnection conex = ConexionBD.conexion;
-       // public Usuario(){ }
         
-       public Usuario()
+        public Usuario()
         {
             this.idUsuarios = 0;
             this.idVoluntarios = 0;
@@ -29,12 +28,13 @@ namespace Capa_Datos
             this.username = "";
             this.password = "";
             this.activado = true;
-           // this.errores = new List<Error>();
         }
-        public Usuario(String username, String password) {
+
+        public Usuario(String username, String password) 
+        {
             this.username = username;
             this.password = password;
-          this.errores = new List<Error>();
+            this.errores = new List<Error>();
             this.existeUsuario();
             if (errores.Count > 0)
             {
@@ -43,21 +43,19 @@ namespace Capa_Datos
             }
             else
             {
-               // this.errores.RemoveAt(0);
                 this.VerficarDatosSesion();
                 if (errores.Count > 0)
                 {
                     Error error = new Error("", 5);
-                    this.errores.Add(error);
-                    
+                    this.errores.Add(error);        
                 }
                 else
                 {
                     this.buscarUsuario();
                 }
-                
             }
         }
+
         public void VerficarDatosSesion()
         {
             int contador = 0;
@@ -74,20 +72,21 @@ namespace Capa_Datos
             tabla = ds.Tables[0];
             DataRow row = tabla.Rows[0];
             contador = Convert.ToInt32(row["Contra"]);
-           if (contador == 0)
+            if (contador == 0)
             {
                 Error error = new Error("" + this.username, 5);
                 errores.Add(error);
             }
         }
-         public void existeUsuario()
+
+        public void existeUsuario()
         {
             int i = 0;
             MySqlCommand comando = new MySqlCommand("SELECT COUNT(idUsuarios) AS Contador FROM Usuarios WHERE username = @usuario", conex);
             comando.Parameters.AddWithValue("@usuario", this.username);
             comando.CommandTimeout = 12280;
             
-             DataSet ds = new DataSet();
+            DataSet ds = new DataSet();
             MySqlDataAdapter Adapter = new MySqlDataAdapter();
             Adapter.SelectCommand = comando;
             Adapter.Fill(ds);
@@ -101,26 +100,25 @@ namespace Capa_Datos
                 errores.Add(error);
             }
         }
-         public void buscarUsuario()
-         {
-             MySqlCommand comando = new MySqlCommand("SELECT idUsuarios,TipoUsuarios_idTipoUsuarios,Username,Voluntarios_idVoluntarios,activo FROM Usuarios WHERE username = @Username", conex);
-             comando.Parameters.AddWithValue("@Username", this.username);
-             comando.CommandTimeout = 12280;
-            
-             DataSet ds = new DataSet();
-             MySqlDataAdapter Adapter = new MySqlDataAdapter();
-             Adapter.SelectCommand = comando;
-             Adapter.Fill(ds);
-             DataTable tabla = new DataTable();
-             tabla = ds.Tables[0];
-             DataRow row = tabla.Rows[0];
-             this.idUsuarios = Convert.ToInt32(row["idUsuarios"]);
-             this.idTiposUsuarios = Convert.ToInt32(row["TipoUsuarios_idTipoUsuarios"]);
-             this.idVoluntarios = Convert.ToInt32(row["Voluntarios_idVoluntarios"]);
-             this.username = Convert.ToString(row["username"]);
-             this.activado = Convert.ToBoolean(row["activo"]);
-         }
 
+        public void buscarUsuario()
+        {
+            MySqlCommand comando = new MySqlCommand("SELECT idUsuarios,TipoUsuarios_idTipoUsuarios,Username,Voluntarios_idVoluntarios,activo FROM Usuarios WHERE username = @Username", conex);
+            comando.Parameters.AddWithValue("@Username", this.username);
+            comando.CommandTimeout = 12280;
+
+            DataSet ds = new DataSet();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            Adapter.SelectCommand = comando;
+            Adapter.Fill(ds);
+            DataTable tabla = new DataTable();
+            tabla = ds.Tables[0];
+            DataRow row = tabla.Rows[0];
+            this.idUsuarios = Convert.ToInt32(row["idUsuarios"]);
+            this.idTiposUsuarios = Convert.ToInt32(row["TipoUsuarios_idTipoUsuarios"]);
+            this.idVoluntarios = Convert.ToInt32(row["Voluntarios_idVoluntarios"]);
+            this.username = Convert.ToString(row["username"]);
+            this.activado = Convert.ToBoolean(row["activo"]);
+        }
     }
-    
 }

@@ -16,6 +16,7 @@ namespace Capa_Datos
         public string nombreVoluntario { get; set; }
         public int Activo { get; set; }
         public String Descripcion { get; set; }
+        public String Fecha { get; set; }
 
         public List<Error> _errores { get; set; }
 
@@ -43,12 +44,12 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
-        public _Salida(int _idSalida, int _idUsuario, int _idVoluntario, DateTime _fechaSalida, String _Descripcion, int _Activo, String nombreVoluntario)
+        public _Salida(int _idSalida, int _idUsuario, int _idVoluntario, String _fechaSalida, String _Descripcion, int _Activo, String nombreVoluntario)
         {
             this.idSalida = _idSalida;
             this.Usuarios_idUsuarios = _idUsuario;
             this.Voluntarios_idVoluntarios = _idVoluntario;
-            this.FechaSalida = _fechaSalida;
+            this.Fecha = _fechaSalida;
             this.Descripcion = _Descripcion;
             this.Activo = _Activo;
             this.nombreVoluntario = nombreVoluntario;
@@ -99,7 +100,7 @@ namespace Capa_Datos
             _tabla = _ds.Tables[0];
 
             DataRow _row = _tabla.Rows[0];
-            ultimaSalida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+            ultimaSalida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToString(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
 
             return ultimaSalida.idSalida;
         }
@@ -107,7 +108,7 @@ namespace Capa_Datos
         public List<_Salida> obtenerTodasSalidas()
         {
             string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
-                                     "salida.FechaSalida, salida.Descripcion, salida.Activo," +
+                                     "DATE_FORMAT(salida.FechaSalida, '%d/%m/%Y' ) as FechaSalida, salida.Descripcion, salida.Activo," +
                                      "Voluntarios.Nombres as NombreVoluntarios from salida" +
                          " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
                          " where salida.Activo = 1";
@@ -125,7 +126,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToString(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
                 listadoSalidas.Add(salida);
             }
             return listadoSalidas;
@@ -134,7 +135,7 @@ namespace Capa_Datos
         public List<_Salida> buscarSalidasPorV(int idVoluntario)
         {
             string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
-                                     "salida.FechaSalida, salida.Descripcion, salida.Activo," +
+                                     "DATE_FORMAT(salida.FechaSalida, '%d/%m/%Y' ) as FechaSalida, salida.Descripcion, salida.Activo," +
                                      "Voluntarios.Nombres as NombreVoluntarios from salida" +
                          " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
                          " where salida.Activo = 1 and salida.Voluntarios_idVoluntarios = " + idVoluntario;
@@ -152,7 +153,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToString(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
                 listadoSalidasEspecificas.Add(salida);
             }
             return listadoSalidasEspecificas;
@@ -161,7 +162,7 @@ namespace Capa_Datos
         public List<_Salida> buscarSalidasPorF(String FechaSalida)
         {
             string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
-                                     "salida.FechaSalida, salida.Descripcion, salida.Activo," +
+                                     "DATE_FORMAT(salida.FechaSalida, '%d/%m/%Y' ) as FechaSalida, salida.Descripcion, salida.Activo," +
                                      "Voluntarios.Nombres as NombreVoluntarios from salida" +
                          " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
                          " where salida.Activo = 1 and salida.FechaSalida = '" + FechaSalida + "'";
@@ -179,7 +180,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToString(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
                 listadoSalidasEspecificas.Add(salida);
             }
             return listadoSalidasEspecificas;
@@ -188,7 +189,7 @@ namespace Capa_Datos
         public List<_Salida> buscarSalidasPorVF(int idVoluntario, String FechaSalida)
         {
             string consulta = "select salida.idSalida, salida.Usuarios_idUsuarios, salida.Voluntarios_idVoluntarios," +
-                                     "salida.FechaSalida, salida.Descripcion, salida.Activo," +
+                                     "DATE_FORMAT(salida.FechaSalida, '%d/%m/%Y' ) as FechaSalida, salida.Descripcion, salida.Activo," +
                                      "Voluntarios.Nombres as NombreVoluntarios from salida" +
                          " inner join voluntarios on Voluntarios_idVoluntarios = idVoluntarios" +
                          " where salida.Activo = 1 and salida.Voluntarios_idVoluntarios = " + idVoluntario + " and salida.FechaSalida = '" + FechaSalida + "'";
@@ -206,7 +207,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToDateTime(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
+                _Salida salida = new _Salida(Convert.ToInt32(_row["idSalida"]), Convert.ToInt32(_row["Usuarios_idUsuarios"]), Convert.ToInt32(_row["Voluntarios_idVoluntarios"]), Convert.ToString(_row["FechaSalida"]), Convert.ToString(_row["Descripcion"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["NombreVoluntarios"]));
                 listadoSalidasEspecificas.Add(salida);
             }
             return listadoSalidasEspecificas;

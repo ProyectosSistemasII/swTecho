@@ -19,7 +19,7 @@
         <DataGrid Margin="0,112.8,0,0" FontSize="14.667" Name="dgSalidasInsumos" AutoGenerateColumns="False">
 			<DataGrid.Columns>
                 <DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding nombreVoluntario}"/>
-			    <DataGridTextColumn Header="Fecha Salida" Width="170" Binding="{Binding FechaSalida}"/>
+			    <DataGridTextColumn Header="Fecha Salida" Width="170" Binding="{Binding Fecha}"/>
 				<DataGridTextColumn Header="Descripcion" Width="290" Binding="{Binding Descripcion}"/>
 			</DataGrid.Columns>
 		</DataGrid>

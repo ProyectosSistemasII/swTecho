@@ -32,11 +32,8 @@ namespace TechoCeiva
                 try
                 {
                     _Reportes rptSalidas = new _Reportes();
-                    //rptSalidas.CaducidadInsumos(cmbRango.Text, Convert.ToInt32(txtAnio.Text));
-
                     rpt_CaducidadInsumos rpt = new rpt_CaducidadInsumos();
                     rpt.SetDataSource(rptSalidas.CaducidadInsumos(cmbRango.Text, Convert.ToInt32(txtAnio.Text)));
-                    //rpt.SetParameterValue("Comunidad", NombreComunidad);
                     crvReporteInsumos.ReportSource = rpt;
                 }
                 catch (Exception ex)

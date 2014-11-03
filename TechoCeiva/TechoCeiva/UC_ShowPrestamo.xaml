@@ -18,7 +18,7 @@
 		<DataGrid x:Name="DataGridListadoPrestamos" AlternatingRowBackground="#FFE7E6E6" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,36,0,0" FontSize="14.667" Background="White" BorderBrush="{x:Null}" Foreground="#FF333333" HorizontalGridLinesBrush="#FFCCC9C9" VerticalGridLinesBrush="#FFCCC9C9" HorizontalAlignment="Left" Width="665.783">
 			<DataGrid.Columns>
 					<DataGridTextColumn Header="Voluntario" Width="200" Binding="{Binding nombreVoluntario}"/>
-					<DataGridTextColumn Header="Fecha Préstamo" Width="150" Binding="{Binding fechaPrestamo}"/>
+					<DataGridTextColumn Header="Fecha Préstamo" Width="130" Binding="{Binding Fecha}"/>
 					<DataGridTextColumn Header="Observaciones" Width="300" Binding="{Binding Observaciones}"/>
 				</DataGrid.Columns>
 		</DataGrid>

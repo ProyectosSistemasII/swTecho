@@ -49,7 +49,6 @@ namespace Capa_Datos
             this.CantidadMalEstado = cantidadMala;
             this.CantidadPerdida = cantidadPerdida;
             this.Activo = activo;
-            //this.Devolucion = DateTime.MaxValue;
         }
 
         public _DetallePrestamo(int idDetalle, int idHerramienta, int idPrestamo, int cantidadPrestada, int cantidadBuena, int cantidadMala, int cantidadPerdida, int activo, String nombreHerramienta)
@@ -63,17 +62,14 @@ namespace Capa_Datos
             this.CantidadPerdida = cantidadPerdida;
             this.Activo = activo;
             this.nombreHerramienta = nombreHerramienta;
-            //this.Devolucion = DateTime.MaxValue;
         }
-
-
+        
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         public List<_DetallePrestamo> obtenerDetalles()
         {
-            //string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1";
             string consulta = "select detalleprestamo.idDetallePrestamo, detalleprestamo.Herramientas_idHerramientas,"+
                                      "detalleprestamo.Prestamo_idPrestamo, detalleprestamo.CantidadPrestada,"+
                                      "detalleprestamo.CantidadBuenEstado, detalleprestamo.CantidadMalEstado,"+
@@ -94,14 +90,11 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                //_DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]), Convert.ToDateTime(_row["FechaDevolucion"]));
                 _DetallePrestamo detallePrestamo = new _DetallePrestamo(Convert.ToInt32(_row["idDetallePrestamo"]), Convert.ToInt32(_row["Herramientas_idHerramientas"]), Convert.ToInt32(_row["Prestamo_idPrestamo"]), Convert.ToInt32(_row["CantidadPrestada"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToInt32(_row["Activo"]), Convert.ToString(_row["nombreH"]));
                 listaPrestamos.Add(detallePrestamo);
             }
-
             return listaPrestamos;
         }
-
 
         /// <summary>
         /// 
@@ -162,8 +155,6 @@ namespace Capa_Datos
             }
         }
 
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -171,7 +162,6 @@ namespace Capa_Datos
         /// <returns></returns>
         public List<_DetallePrestamo> buscarDetallesPor(int idPrestamo)
         {
-            //string query = "SELECT * FROM DetallePrestamo WHERE Activo = 1 AND Prestamo_idPrestamo = "+ idPrestamo;
             string consulta = "select detalleprestamo.idDetallePrestamo, detalleprestamo.Herramientas_idHerramientas," +
                                      "detalleprestamo.Prestamo_idPrestamo, detalleprestamo.CantidadPrestada," +
                                      "detalleprestamo.CantidadBuenEstado, detalleprestamo.CantidadMalEstado," +
@@ -199,9 +189,6 @@ namespace Capa_Datos
             return listaDetallesEspecificos;
         }
 
-
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -222,8 +209,7 @@ namespace Capa_Datos
 
                 string query2 = "update Herramientas SET Existencia = @existencia where idHerramientas = @idH";
                 _Herramientas h = new _Herramientas();
-
-
+            
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
                 MySqlCommand _comando2 = new MySqlCommand(query2, ConexionBD.conexion);
 
@@ -258,8 +244,6 @@ namespace Capa_Datos
                 }
         }
 
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -279,8 +263,7 @@ namespace Capa_Datos
 
                 string query2 = "update Herramientas SET Existencia = @existencia WHERE idHerramientas = @idH";
                 _Herramientas h = new _Herramientas();
-
-
+            
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
                 MySqlCommand _comando2 = new MySqlCommand(query2, ConexionBD.conexion);
 
@@ -313,8 +296,6 @@ namespace Capa_Datos
                 }
         }
 
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -331,8 +312,6 @@ namespace Capa_Datos
             comando.Connection.Close();
             return cantidad;
         }
-
-
 
         /// <summary>
         /// 
