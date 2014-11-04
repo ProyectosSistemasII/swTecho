@@ -30,11 +30,11 @@ namespace TechoCeiva
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
             String salida = SettingsSistema.saveParametros(txtServer.Text, txtDatabase.Text, txtUser.Text, pswPassword.Password);
-            MessageBox.Show(salida, "Mensaje");
+            MessageBox.Show(salida, "Mensaje", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             HwndSource source = (HwndSource)PresentationSource.FromVisual(sender as Button);
             System.Windows.Forms.Control ctl = System.Windows.Forms.Control.FromChildHandle(source.Handle);
             ctl.FindForm().Close();
-
+            System.Windows.Forms.Application.Restart();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
