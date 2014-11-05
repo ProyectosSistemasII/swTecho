@@ -132,7 +132,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT Niños as Ninos , Jovenes, Mujeres,TerceraEdad, Discapacitados,GruposEtnicos,NoGruposVulnerables,Otros,NSNR    FROM S1014_com   inner join S10_Com on S1014_com_idS1014_com = idS1014_Com inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by Jovenes";
+                string consulta = "SELECT IF(Niños = 1, 'Niños','No Responde') as Ninos , IF(Jovenes = 1, 'Jovenes','No Responde') as Jovenes, IF(Mujeres = 1, 'Mujeres','No Responde') as Mujeres,IF(TerceraEdad = 1, 'TerceraEdad','No Responde') as TerceraEdad, IF(Discapacitados = 1, 'Discapacitados','No Responde') as Discapacitados,IF(GruposEtnicos = 1, 'Grupos Etnicos','No Responde') as GruposEtnicos,IF(NoGruposVulnerables = 1, 'No Existe Grupos Vulnerables','No Responde') as NoGruposVulnerables,IF(Otros = 1, 'Otros','No Responde') as Otros,IF(NSNR = 1, 'No Sabe','No Responde') as NSNR FROM S1014_com   inner join S10_Com on S1014_com_idS1014_com = idS1014_Com inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by Jovenes";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
                 comando.CommandTimeout = 12280;

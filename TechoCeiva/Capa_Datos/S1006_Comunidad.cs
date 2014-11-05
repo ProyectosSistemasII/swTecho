@@ -131,7 +131,7 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT GrupoPolitico, GrupoDeportivo, GrupoReligioso,GrupoJovenes, GrupoMujeres,S1006_com.OrganizacionComunitaria,MesaTrabajo,S1006_com.Otro   FROM S1006_com   inner join S10_Com on S1006_com_idS1006_com = idS1006_Com inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by GrupoPolitico";
+                string consulta = "SELECT IF(GrupoPolitico = 1, 'Grupos Politicos','No Responde') as GrupoPolitico, IF(GrupoDeportivo = 1, 'Grupos Deportivos','No Responde') as GrupoDeportivo, IF(GrupoReligioso = 1, 'Grupos Religiosos','No Responde') as GrupoReligioso,IF(GrupoJovenes = 1, 'Grupo de Jovenes','No Responde') as GrupoJovenes, IF(GrupoMujeres = 1, 'Grupo de Mujeres','No Responde') as GrupoMujeres,IF(MesaTrabajo = 1, 'Mesa de Trabajos','No Responde') as MesaTrabajo,IF(Otro = 1, 'Otros Grupos','No Responde') as Otro, IF(s1006_com.OrganizacionComunitaria = 1, 'Organizacion Comunitaria','No Responde') as OrganizacionComunitaria FROM S1006_com   inner join S10_Com on S1006_com_idS1006_com = idS1006_Com inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by GrupoPolitico";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
                 comando.CommandTimeout = 12280;

@@ -100,9 +100,10 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT S11_mov.VidaFamiliar, S11_mov.DireccionPasada, S11_mov.AnioTraslado ,S11_mov.ViviendaActual   FROM S11_mov    inner join Encuestas on Comunidad_idComunidad = 1 and Encuestas_idEncuestas = idencuestas Order by VidaFamiliar";
+                string consulta = "SELECT S11_mov.VidaFamiliar, if(S11_mov.DireccionPasada=@vacio, null,DireccionPasada)as DireccionPasada, if(AnioTraslado=@vacio,null,AnioTraslado)as  AnioTraslado ,S11_mov.ViviendaActual   FROM S11_mov    inner join Encuestas on Comunidad_idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by VidaFamiliar";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
+                comando.Parameters.AddWithValue("@vacio", "");
                 comando.CommandTimeout = 12280;
                 DataSet ds = new DataSet();
                 MySqlDataAdapter da = new MySqlDataAdapter(comando);

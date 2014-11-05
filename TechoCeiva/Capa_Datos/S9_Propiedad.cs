@@ -123,9 +123,10 @@ namespace Capa_Datos
         {
             try
             {
-                string consulta = "SELECT S9_prop.Propio, S9_prop.Propietario, S9_prop.TipoPropiedad, Comunidad.nombre FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad Inner Join Comunidad on idComunidad = @idComunidad and Encuestas_idEncuestas = idencuestas Order by Propio";
+                string consulta = "SELECT S9_prop.Propio, if(S9_prop.Propietario=@vacio,null,Propietario)as Propietario , if(S9_prop.TipoPropiedad = @vacio ,null,TipoPropiedad) as TipoPropiedad FROM S9_prop    inner join Encuestas on Comunidad_idComunidad = @idComunidad  and Encuestas_idEncuestas = idencuestas Order by Propio";
                 MySqlCommand comando = new MySqlCommand(consulta, conex);
                 comando.Parameters.AddWithValue("@idComunidad", comunidad);
+                comando.Parameters.AddWithValue("@vacio", "");
                 comando.CommandTimeout = 12280;
                 DataSet ds = new DataSet();
                 MySqlDataAdapter da = new MySqlDataAdapter(comando);
