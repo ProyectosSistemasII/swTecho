@@ -131,13 +131,17 @@ namespace Capa_Logica
         }
         public Boolean Insertar_EncuS10()
         {
-            Boolean correcto = true;
+            
             //verificar sintaxis de los datos y comprobar errores antes de ser enviado a la capa de datos
-           this.verificarDatos();
+            this.verificarDatos();
             if (errores.Count > 0)
             {
                 return false;
             }
+            return true;
+        }
+        public Boolean Ingresar_encuestaS10()
+        {
             // se ingresa los datos a la capa de datos            
             NuevaComS10 = new S10_Comunidad(0, this.Ayudo, this.AyudaVecinos, this.RelacionVecinos, this.ComentarioRelacion, this.OrganizarVecinos, this.OrganizarA, this.OrganizarB, this.OrganizarC, this.ParticipacionGrupo, this.Necesidad, this.NecesidadA, this.NecesidadB, this.NecesidadC, this.NecesidadCom, this.NecesidadComA, this.NecesidadComB, this.NecesidadComC, this.ProyectosVecinos, this.ProyectoA, this.ProyectoB, this.ProyectoC,  this.idEncuestas, this.idS1006, this.idS1007, this.idS1008);
             this.errores = NuevaComS10.errores;
@@ -145,9 +149,9 @@ namespace Capa_Logica
             //Comprobar errores para la capa de datos
             if (errores.Count > 0)
             {
-                correcto = false;
+                return false;
             }
-            return correcto;
+            return true;
         }
         public Boolean Insertar_EncuS10Cont(int caso)
         {

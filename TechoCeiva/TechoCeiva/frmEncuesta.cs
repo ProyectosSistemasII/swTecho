@@ -1675,10 +1675,17 @@ namespace TechoCeiva
                 this.Comprobar_S10(NuevaS10_Comunidad.errores[i].NumeroPregunta);
             goto fin;
 
-        Avanzar: // se activa la siguiente seccion y se oculta el actual.
-            tbpS10.Parent = null;
-            tbpS10Cont.Parent = tbcDatos;
-
+        Avanzar:
+               NuevaS10_Comunidad.idS1006 =  NuevaS1006.idS1006_com ;
+               NuevaS10_Comunidad.idS1007 =  NuevaS1007.idS1007_com;
+               NuevaS10_Comunidad.idS1008 = NuevaS1008.idS1008_Com;
+               if (!NuevaS10_Comunidad.Ingresar_encuestaS10() == true) { goto Errores; }
+               // se activa la siguiente seccion y se oculta el actual.
+               else
+               {
+                   tbpS10.Parent = null;
+                    tbpS10Cont.Parent = tbcDatos;
+               }
         fin:
             return; // finaliza el envento no envia nada
         }
