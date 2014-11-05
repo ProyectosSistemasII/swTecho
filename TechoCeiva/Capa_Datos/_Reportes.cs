@@ -225,7 +225,7 @@ namespace Capa_Datos
             MySqlCommand comando = null;
             try
             {
-                string consulta = "SELECT Nombre, Existencia, Rango, AnioCaducidad FROM alimentos WHERE Rango = @Rango AND AnioCaducidad = @Anio AND Activo = true ORDER BY Nombre, Existencia, Rango, AnioCaducidad ASC";
+                string consulta = "SELECT Nombre, Existencia, Rango, AnioCaducidad FROM alimentos WHERE Rango = @Rango AND AnioCaducidad = @Anio AND Activo = true AND Existencia > 0 ORDER BY Nombre, Existencia, Rango, AnioCaducidad ASC";
                 comando = new MySqlCommand(consulta, _conexion);
                 comando.Parameters.AddWithValue("@Rango", Rango);
                 comando.Parameters.AddWithValue("@Anio", Anio);
