@@ -19,6 +19,7 @@ namespace TechoCeiva
 	public partial class WinNewInsumo : Window
 	{
         public int id = 0;
+        public int idPresentacion = 0;
         public DateTime moment = DateTime.Today;
         public bool mod = false;
 
@@ -43,11 +44,23 @@ namespace TechoCeiva
             else
             {
                 _PresentacionLN nPresentacion = new _PresentacionLN(Convert.ToString(cmxPresentacion.Text));
-                Boolean correcto2 = nPresentacion.Ingresar_Presentacion();
+                Boolean correcto2 = false;
+                int UltimoID = idPresentacion;
                 int verificarPresentacion = nPresentacion.verificarPresentacion(Convert.ToString(cmxPresentacion.Text));
-                int UltimoID = nPresentacion.devolver_ultimo();
 
-                if (verificarPresentacion == 0)
+                if (verificarPresentacion == 0 && mod == true)
+                {
+                    correcto2 = nPresentacion.Actualizar_Presentacion(idPresentacion);
+                    if (correcto2)
+                        nPresentacion._ActualizarPresentacion(idPresentacion, Convert.ToString(cmxPresentacion.Text));
+                }
+                else
+                {
+                    correcto2 = nPresentacion.Ingresar_Presentacion();
+                    UltimoID = nPresentacion.devolver_ultimo();
+                }
+
+                if (verificarPresentacion == 0 && mod == false)
                 {
                     nPresentacion._Insertar_P();
                     UltimoID = nPresentacion.devolver_ultimo();
@@ -140,7 +153,7 @@ namespace TechoCeiva
 
                         if (verificarInsumo != 0)
                         {
-                            nInsumo._ModificarInsumo(verificarInsumo, Convert.ToInt32(txtCantida.Text), cbxRangoFecha.Text, txtAni.Text);
+                            nInsumo._ModificarInsumo(verificarInsumo, comboBoxInsumos.Text, Convert.ToInt32(txtCantida.Text), cbxRangoFecha.Text, txtAni.Text);
                             mod = true;
                             MessageBox.Show("Insumo existente Modificado");
                             this.Close();
@@ -148,7 +161,7 @@ namespace TechoCeiva
                         else
                         {
                             //MessageBox.Show(comboBoxInsumos.SelectedValue.ToString());
-                            nInsumo._ModificarInsumo(Convert.ToInt32(comboBoxInsumos.SelectedValue.ToString()), Convert.ToInt32(txtCantida.Text), cbxRangoFecha.Text, txtAni.Text);
+                            nInsumo._ModificarInsumo(id, comboBoxInsumos.Text, Convert.ToInt32(txtCantida.Text), cbxRangoFecha.Text, txtAni.Text);
                             mod = true;
                             MessageBox.Show("Insumo existente Modificado");
                             this.Close();

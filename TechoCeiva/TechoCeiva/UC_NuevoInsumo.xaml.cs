@@ -46,14 +46,15 @@ namespace TechoCeiva
             WinNewInsumo modificar = new WinNewInsumo();
 
             modificar.mod = true;
-            modificar.comboBoxInsumos.IsEnabled= false;
-            modificar.cmxPresentacion.IsEnabled = false;
+            //modificar.comboBoxInsumos.IsEnabled= false;
+            //modificar.cmxPresentacion.IsEnabled = false;
             modificar.id = row.idAlimentos;
             modificar.comboBoxInsumos.Text = row.Nombre;
             modificar.cmxPresentacion.Text = row.Presentacion;
             modificar.txtCantida.Text = Convert.ToString(row.Existencia);
             modificar.cbxRangoFecha.Text = row.Rango;
             modificar.txtAni.Text = Convert.ToString(row.AnioCaducidad);
+            modificar.idPresentacion = row.Presentacion_idPresentacion;
             System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop(modificar);
             modificar.ShowDialog();
             fillDataGrid();

@@ -42,6 +42,23 @@ namespace Capa_Logica
             return _correcto;
         }
 
+        public Boolean Actualizar_Presentacion(int idPresentacion)
+        {
+            Boolean _correcto = true;
+            _Presentacion nPresentacion = new _Presentacion(idPresentacion, this.Nombre, this.Activo);
+            this.idPresentacion = idPresentacion;
+            this.Nombre = nPresentacion.Nombre;
+            this.Activo = nPresentacion.Activo;
+            this._errores = nPresentacion._errores;
+
+            if (_errores.Count > 0)
+            {
+                _correcto = false;
+            }
+            
+            return _correcto;
+        }
+
         public void InsertarEn_BD()
         {
             this._Insertar_P();

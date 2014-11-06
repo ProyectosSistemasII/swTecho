@@ -45,7 +45,7 @@ namespace Capa_Datos
             this._errores = new List<Error>();
         }
 
-        public _Insumos(int _idAlimentos,String _nombre, String Presentacion, int _existencia, String _rango, int _anioCaducidad)
+        public _Insumos(int _idAlimentos,String _nombre, String Presentacion, int _existencia, String _rango, int _anioCaducidad, int _idPresentacion)
         {
             this.idAlimentos = _idAlimentos;
             this.Nombre = _nombre;
@@ -53,6 +53,7 @@ namespace Capa_Datos
             this.Existencia = _existencia;
             this.Rango = _rango;
             this.AnioCaducidad = _anioCaducidad;
+            this.Presentacion_idPresentacion = _idPresentacion;
             this._errores = new List<Error>();
         }
 
@@ -96,7 +97,7 @@ namespace Capa_Datos
         
         public List<_Insumos> _Obtener_I()
         {
-            string query = "Select idAlimentos,Alimentos.Nombre,Presentacion.Nombre As Presentacion,Existencia, Rango, AnioCaducidad FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion) and (Existencia > 0) order by Nombre";
+            string query = "Select idAlimentos,Alimentos.Nombre,Presentacion.Nombre As Presentacion,Existencia, Rango, AnioCaducidad, Presentacion_idPresentacion FROM Alimentos INNER JOIN Presentacion ON (Alimentos.Presentacion_idPresentacion = Presentacion.idPresentacion) and (Existencia > 0) order by Nombre";
             List<_Insumos> _listInsumos = new List<_Insumos>();
             MySqlCommand _comando = new MySqlCommand(query, _conexion);
             _comando.CommandTimeout = 12280;
@@ -110,7 +111,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]),Convert.ToString(_row["Nombre"]), Convert.ToString(_row["Presentacion"]),Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]));
+                _Insumos _insumos = new _Insumos(Convert.ToInt32(_row["idAlimentos"]),Convert.ToString(_row["Nombre"]), Convert.ToString(_row["Presentacion"]),Convert.ToInt32(_row["Existencia"]), Convert.ToString(_row["Rango"]), Convert.ToInt32(_row["AnioCaducidad"]), Convert.ToInt32(_row["Presentacion_idPresentacion"]));
                 _listInsumos.Add(_insumos);
             }
             return _listInsumos;
@@ -210,14 +211,14 @@ namespace Capa_Datos
             }
         }
 
-        public void _ModificarInsumo(int _id, int _cantidad, string _rango, string _anio)
+        public void _ModificarInsumo(int _id, string _nombre, int _cantidad, string _rango, string _anio)
         {
             if (this._errores.Count == 0)
             {
-                string query = "UPDATE Alimentos SET Existencia = @Existencia, Rango = @Rango, AnioCaducidad = @AnioCaducidad WHERE idAlimentos = " + _id;
+                string query = "UPDATE Alimentos SET Nombre = @Nombre, Presentacion_idPresentacion = @Presentacion_idPresentacion, Existencia = @Existencia, Rango = @Rango, AnioCaducidad = @AnioCaducidad WHERE idAlimentos = " + _id;
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
-                _comando.Parameters.AddWithValue("@idAlimentos", this.idAlimentos);
-                _comando.Parameters.AddWithValue("@Nombre", this.Nombre);
+                _comando.Parameters.AddWithValue("@idAlimentos", _id);
+                _comando.Parameters.AddWithValue("@Nombre", _nombre);
                 _comando.Parameters.AddWithValue("@Existencia", _cantidad);
                 _comando.Parameters.AddWithValue("@Rango", _rango);
                 _comando.Parameters.AddWithValue("@AnioCaducidad", _anio);

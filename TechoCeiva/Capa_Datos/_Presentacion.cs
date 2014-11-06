@@ -52,6 +52,7 @@ namespace Capa_Datos
                 }
                 catch (MySqlException ex)
                 {
+                    _comando.Connection.Close();
                     Error _error = new Error(ex.Message + " " + ex.Number, 2);
                     _errores.Add(_error);
                 }
@@ -96,6 +97,7 @@ namespace Capa_Datos
             }
             catch (MySqlException ex)
             {
+                _comandoEliminar.Connection.Close();
                 Error _error = new Error(ex.Message + " " + ex.Number, 2);
                 _errores.Add(_error);
             }
@@ -152,6 +154,29 @@ namespace Capa_Datos
             {
                 return 0;
             }
+        }
+
+        public Boolean _ActualizarPresentacion(int _id, string _nombre)
+        {
+            string query = "UPDATE Presentacion SET Nombre = @Nombre WHERE idPresentacion = " + _id;
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.Parameters.AddWithValue("@Nombre", _nombre);
+
+
+            try
+            {
+                _comando.Connection.Open();
+                _comando.ExecuteNonQuery();
+                _comando.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                _comando.Connection.Close();
+                Error _error = new Error(ex.Message + " " + ex.Number, 2);
+                _errores.Add(_error);
+            }
+
+            return true;
         }
     
     }
