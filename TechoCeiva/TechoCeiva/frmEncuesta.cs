@@ -521,6 +521,7 @@ namespace TechoCeiva
                 // Se pasa a la siguiente pestaña de la encuesta
                 tbpS5.Parent = null;
                 tbpS6.Parent = tbcDatos;
+                cbxS6_1_IngEstado.Focus();
             }
         }
 
@@ -613,6 +614,7 @@ namespace TechoCeiva
                     { // si los campos fueron ingresados con exito se pasa a la siguiente pestaña de la encuesta
                         tbpS6.Parent = null;
                         tbpS7.Parent = tbcDatos;
+                        txtS7_1_AnchoViv.Focus();
                     }
                     else
                         MessageBox.Show(S6.obtenerError());
@@ -631,6 +633,7 @@ namespace TechoCeiva
                         { // si los campos fueron ingresados con exito se pasa a la siguiente pestaña de la encuesta
                             tbpS6.Parent = null;
                             tbpS7.Parent = tbcDatos;
+                            txtS7_1_AnchoViv.Focus();
                         }
                         else
                             MessageBox.Show(S6.obtenerError());
@@ -893,6 +896,7 @@ namespace TechoCeiva
                 { // Si la insercion se completo se pasa a la siguiente pestaña de la encuesta
                     tbpS7.Parent = null;
                     tbpS8.Parent = tbcDatos;
+                    cbxS8_AccesoAgua.Focus();
                 }
                 else
                     MessageBox.Show(S7.obtenerError());
@@ -1143,7 +1147,7 @@ namespace TechoCeiva
             }//se avanza a la siguiente seccion
             tbpS8.Parent = null;
             tbpS9.Parent = tbcDatos;
-
+            cbxS9_1_Propio.Focus();
         Fin:
             return; // termina el evento y no retorna nada.
         }
@@ -1241,6 +1245,7 @@ namespace TechoCeiva
             {
                 tbpS9.Parent = null;
                 tbpS10.Parent = tbcDatos;
+                txtS10_Ayudo.Focus();
             }
             else
             { // se recorre el lsita de errores posibles que tengan la preguntas.
@@ -1628,6 +1633,7 @@ namespace TechoCeiva
             {
                 tbpS10Cont.Parent = null; // se avanza a la siguiente seccion.
                 tbpS11.Parent = tbcDatos;
+                cbxS11_1_VidaFamiliar.Focus();
             }
         Fin:
             return; // sirve para terminar el evento y no retorna nada.
@@ -1684,7 +1690,8 @@ namespace TechoCeiva
                else
                {
                    tbpS10.Parent = null;
-                    tbpS10Cont.Parent = tbcDatos;
+                   tbpS10Cont.Parent = tbcDatos;
+                   txtS10_ApectosPositivosA.Focus();
                }
         fin:
             return; // finaliza el envento no envia nada
@@ -1762,6 +1769,7 @@ namespace TechoCeiva
                     {
                         transaccion = false; // la transaccion a sido existosa y se reinicia la ventana para ingresar una nueva encuesta
                         Reiniciar = true;
+                        txtCodigoHogar.Focus();
                         this.Close();
                     }
                     else if (pregunta == DialogResult.No)
@@ -2276,6 +2284,44 @@ namespace TechoCeiva
             }
             else
                 return;
+        }
+
+        // Controlar los saltos de la seccion 6
+        private void cbxS6_3_Deuda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxS6_3_Deuda.SelectedIndex == 2 || cbxS6_3_Deuda.SelectedIndex == 3)
+            {
+                txtS6_4_CantiDeuda.Text = "0";
+                txtS6_6_IngresoTotal.Focus();
+            }
+            if (cbxS6_3_Deuda.SelectedIndex == 0)
+            {
+                txtS6_4_CantiDeuda.Focus();
+            }
+        }
+
+        private void cbxS6_7_CubrenGasto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbxS6_7_CubrenGasto.SelectedIndex == 1)
+            {
+                txtS6_10_CantiGastosaIngresos.Focus();
+            }
+            if (cbxS6_7_CubrenGasto.SelectedIndex == 2 || cbxS6_7_CubrenGasto.SelectedIndex == 3)
+            {
+                pbS6_Siguiente.Focus();
+            }
+            if (cbxS6_7_CubrenGasto.SelectedIndex == 0)
+            {
+                cbxS6_8_AhorroMensual.Focus();
+            }
+        }
+
+        private void txtS6_9_CantiAhorro_TextChanged(object sender, EventArgs e)
+        {
+            if (txtS6_9_CantiAhorro.Text != "")
+            {
+                pbS6_Siguiente.Focus();
+            }
         }
     }
 }

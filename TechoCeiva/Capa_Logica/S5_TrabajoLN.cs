@@ -113,6 +113,9 @@ namespace Capa_Logica
                 this.ContratoTrabajo = "";
                 this.CondicionLaboral = "";
                 this.UbicacionTrabajo = "";
+                this.DiasTrabajo = 0;
+                this.HorasTrabajo = 0;
+                this.IngresoMensual = 0;
             }
             else if (this.ContratoTrabajo.Equals(""))
             {
@@ -139,17 +142,17 @@ namespace Capa_Logica
                 Error error = new Error("Debe especificar si posee otros trabajos en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.DiasTrabajo == 0)
+            if (!(this.Ocupacion.Equals("Ama de casa") || this.Ocupacion.Equals("Estudiante")) && this.DiasTrabajo == 0)
             {
                 Error error = new Error("Colocar los dias que trabaja en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.HorasTrabajo == 0)
+            if (!(this.Ocupacion.Equals("Ama de casa") || this.Ocupacion.Equals("Estudiante")) && this.HorasTrabajo == 0)
             {
                 Error error = new Error("Colocar las horas de trabajo en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.IngresoMensual == 0)
+            if (!(this.Ocupacion.Equals("Ama de casa") || this.Ocupacion.Equals("Estudiante")) && this.IngresoMensual == 0)
             {
                 Error error = new Error("Colocar el ingreso mensual en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
