@@ -2188,8 +2188,8 @@ namespace TechoCeiva
 
         private void dgvS1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvS1.CurrentRow.Cells[3].Value.ToString() == "DD/MM/AAAA")
-                dgvS1.CurrentRow.Cells[3].Value = "";
+            /*if (dgvS1.CurrentRow.Cells[3].Value.ToString() == "DD/MM/AAAA")
+                dgvS1.CurrentRow.Cells[3].Value = "";*/
         }        
 
         private void cklS1007_Com_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -2359,5 +2359,6 @@ namespace TechoCeiva
                 pbS6_Siguiente.Focus();
             }
         }
+
     }
 }
