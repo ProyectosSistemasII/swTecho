@@ -59,7 +59,7 @@ namespace Capa_Logica
                 Error error = new Error("Apellidos en fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
-            if (this.FechaNac == "")
+            if (this.FechaNac == "DD/MM/AAAA")
             {
                 Error error = new Error("Fecha nacimiento en fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);

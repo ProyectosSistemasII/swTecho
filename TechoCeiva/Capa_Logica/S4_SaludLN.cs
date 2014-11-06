@@ -66,7 +66,7 @@ namespace Capa_Logica
             this.OtroOrigen = OtroOrigen;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
             this.errores = new List<Error>();
-            this.verificarDatos(filas);
+            this.verificarDatos(filas+1);
             if (errores.Count > 0)
             {
                 return false; // retorna falso si hay error
@@ -97,6 +97,11 @@ namespace Capa_Logica
         // verifica los campos de la encuesta validos
         public void verificarDatos(int filas)
         {
+            if (this.AsistenciaSalud.Equals(""))
+            {
+                Error error = new Error("Colocar cada cuanto asiste a un centro de salud en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
             if (this.AsistenciaSalud.Equals("Nunca") || this.AsistenciaSalud.Equals("NS/NR"))
             {
                 this.NombreCentro = "";
@@ -105,6 +110,11 @@ namespace Capa_Logica
             else if (this.NombreCentro.Equals(""))
             {
                 Error error = new Error("Colocar el nombre del centro de salud en la fila " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            else if (this.UbicacionCentro.Equals(""))
+            {
+                Error error = new Error("Colocar la ubicacion del centro de salud en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
             if (this.ProblemaSalud == true && this.EspecificarProblemaSalud == "")

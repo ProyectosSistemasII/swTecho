@@ -108,6 +108,16 @@ namespace Capa_Logica
                 Error error = new Error("Debe especificar la relacion de parentesco en la fila " + filas.ToString(), 5000, 1);
                 errores.Add(error);
             }
+            if (this.Departamento == "")
+            {
+                Error error = new Error("Debe colocar el departamento de su origen " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
+            if (this.Municipio == "")
+            {
+                Error error = new Error("Debe colocar el municipio de su origen " + filas.ToString(), 5000, 1);
+                errores.Add(error);
+            }
             if (this.Nacionalidad == "")
             {
                 Error error = new Error("Colocar la nacionalidad en la fila " + filas.ToString(), 5000, 1);

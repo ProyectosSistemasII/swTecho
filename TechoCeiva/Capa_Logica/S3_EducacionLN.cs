@@ -74,7 +74,7 @@ namespace Capa_Logica
             this.TipoFormacion = TipoFormacion;
             this.Encuestas_idEncuestas = Encuestas_idEncuestas;
             this.errores = new List<Error>();
-            this.verificarDatos(Filas);
+            this.verificarDatos(Filas+1);
 
             if (errores.Count > 0)
             {
