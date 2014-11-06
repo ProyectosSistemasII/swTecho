@@ -159,32 +159,39 @@ namespace TechoCeiva
             Info_EncuestaLN InfoEnc = new Info_EncuestaLN();
             int codVoluntario1 = 0, codVoluntario2 = 0;
             if (cmbEncuestador1.Text == cmbEncuestador2.Text)
-                MessageBox.Show("no puede ser igual");
+                MessageBox.Show("Los voluntarios no pueden ser iguales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                if (cmbEncuestador1.Text == "")
-                    codVoluntario1 = 0;
-                else
-                    codVoluntario1 = Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString());
-                if (cmbEncuestador2.Text == "" || cmbEncuestador2.Text == null)
-                    codVoluntario2 = 0;
-                else
-                    codVoluntario2 = Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString());
-                if (transaccion = tran.IniciarTransaccion()) // inicia transaccion e inserta la informacion de la encuesta
+                try
                 {
-                    Boolean correcto = InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, codVoluntario1, codVoluntario2, Convert.ToDateTime(dtpFecha.Value.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, cmbEstadoEn.Text, txtObservaciones.Text,
-                           txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
-                    if (correcto)
+                    if (cmbEncuestador1.Text == "")
+                        codVoluntario1 = 0;
+                    else
+                        codVoluntario1 = Convert.ToInt32(cmbEncuestador1.SelectedValue.ToString());
+                    if (cmbEncuestador2.Text == "" || cmbEncuestador2.Text == null)
+                        codVoluntario2 = 0;
+                    else
+                        codVoluntario2 = Convert.ToInt32(cmbEncuestador2.SelectedValue.ToString());
+                    if (transaccion = tran.IniciarTransaccion()) // inicia transaccion e inserta la informacion de la encuesta
                     {
-                        tbpInfo.Parent = null;
-                        tbpS1.Parent = tbcDatos;
-                        idEncu = InfoEnc.UltimoId(); // obtiene el ultimo id de la encuesta ingresada
+                        Boolean correcto = InfoEnc.Insertar_InfoEncuesta(txtCodigoHogar.Text, codVoluntario1, codVoluntario2, Convert.ToDateTime(dtpFecha.Value.ToString()), txtHoraI.Text, txtHoraF.Text, txtNombreEn.Text, cmbEstadoEn.Text, txtObservaciones.Text,
+                               txtAldea.Text, txtCanton.Text, txtXGPS.Text, txtYGPS.Text, txtJefe.Text, txtTelefono1.Text, txtTelefono2.Text, txtDireccion.Text, txtEspecificaciones.Text, idComuni);
+                        if (correcto)
+                        {
+                            tbpInfo.Parent = null;
+                            tbpS1.Parent = tbcDatos;
+                            idEncu = InfoEnc.UltimoId(); // obtiene el ultimo id de la encuesta ingresada
+                        }
+                        else
+                            MessageBox.Show(InfoEnc.obtenerError());
                     }
                     else
-                        MessageBox.Show(InfoEnc.obtenerError());
+                        MessageBox.Show("Ha ocurrido un error, intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("Ha ocurrido un error, intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception)
+                {
+                    MessageBox.Show("Voluntario no registrado","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }                
             }
         }
 
@@ -259,45 +266,60 @@ namespace TechoCeiva
             foreach (DataGridViewRow row in dgvS2.Rows)
             {
                 dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), Filas);
-                if (correcto)
-                    Filas++;
-                else
+                try
                 {
-                    Filas = 0;
-                    MessageBox.Show(S2.obtenerError());
-                    break;
+                    correcto = S2.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), Filas);
+                    if (correcto)
+                        Filas++;
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(S2.obtenerError());
+                        break;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se han completado todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             if (correcto)
             {
                 //Recorrer para insertar
                 Filas = 0;
-                foreach (DataGridViewRow row in dgvS2.Rows)
+                try
                 {
-                    dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
-                    S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString());
-                    correcto = SIn.Insertar_EncuS2();
-                    if (correcto)
-                        Filas++;
-                    else
+                    foreach (DataGridViewRow row in dgvS2.Rows)
                     {
-                        Filas = 0;
-                        MessageBox.Show(SIn.obtenerError());
-                        break;
+                        dgvS2.CurrentCell = dgvS2.Rows[Filas].Cells[0];
+                        S2_DemograficaLN SIn = new S2_DemograficaLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[8].Value.ToString(), idEncu, row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString());
+                        correcto = SIn.Insertar_EncuS2();
+                        if (correcto)
+                            Filas++;
+                        else
+                        {
+                            Filas = 0;
+                            MessageBox.Show(SIn.obtenerError());
+                            break;
+                        }
+                    }
+                    tbpS2.Parent = null;
+                    tbpS3.Parent = tbcDatos;
+
+                    //para s3
+                    int iS3 = 1;
+                    for (iS3 = 1; iS3 < iS1; iS3++)
+                    {
+                        dgvS3.Rows.Add();
+                        dgvS3.Rows[iS3 - 1].Cells[0].Value = iS3;
+                        for (int i = 1; i < 13; i++)
+                            dgvS3.Rows[iS3 - 1].Cells[i].Value = "";
                     }
                 }
-                tbpS2.Parent = null;
-                tbpS3.Parent = tbcDatos;
 
-                //para s3
-                int iS3 = 1;
-                for (iS3 = 1; iS3 < iS1; iS3++)
+                catch (Exception)
                 {
-                    dgvS3.Rows.Add();
-                    dgvS3.Rows[iS3 - 1].Cells[0].Value = iS3;
-                    for (int i = 1; i < 13; i++)
-                        dgvS3.Rows[iS3 - 1].Cells[i].Value = "";
+                    MessageBox.Show("No se han completado todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -316,49 +338,63 @@ namespace TechoCeiva
             foreach (DataGridViewRow row in dgvS3.Rows)
             {
                 dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
-                correcto = S3.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
-                    row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
-                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas);
-                if (correcto)
-                    Filas++;
-                else
+                try
                 {
-                    Filas = 0;
-                    MessageBox.Show(S3.obtenerError());
-                    break;
+                    correcto = S3.validacion(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
+                        row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
+                        row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu, Filas);
+                    if (correcto)
+                        Filas++;
+                    else
+                    {
+                        Filas = 0;
+                        MessageBox.Show(S3.obtenerError());
+                        break;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se han completado todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             if (correcto)
             {
                 Filas = 0;
                 //recorrer para insertar las filas del datagrid
-                foreach (DataGridViewRow row in dgvS3.Rows)
+                try
                 {
-                    dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
-                    S3_EducacionLN SIn = new S3_EducacionLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
-                    row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
-                    row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu);
-                    correcto = S3.Insertar_EncuS3(); // inserts de las filas del datagrid
-                    if (correcto)
-                        Filas++;
-                    else
+                    foreach (DataGridViewRow row in dgvS3.Rows)
                     {
-                        Filas = 0;
-                        MessageBox.Show(SIn.obtenerError());
-                        break;
+                        dgvS3.CurrentCell = dgvS3.Rows[Filas].Cells[0];
+                        S3_EducacionLN SIn = new S3_EducacionLN(Convert.ToInt32(row.Cells[0].Value.ToString()), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[4].Value.ToString(),
+                        row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(), row.Cells[7].Value.ToString(), row.Cells[8].Value.ToString(), row.Cells[9].Value.ToString(), row.Cells[10].Value.ToString(),
+                        row.Cells[11].Value.ToString(), row.Cells[12].Value.ToString(), idEncu);
+                        correcto = S3.Insertar_EncuS3(); // inserts de las filas del datagrid
+                        if (correcto)
+                            Filas++;
+                        else
+                        {
+                            Filas = 0;
+                            MessageBox.Show(SIn.obtenerError());
+                            break;
+                        }
+                    }
+                    tbpS3.Parent = null;// muestra seccion 4 de la encuesta
+                    tbpS4.Parent = tbcDatos;
+
+                    //para s4
+                    int iS4 = 1;
+                    for (iS4 = 1; iS4 < iS1; iS4++)
+                    {
+                        dgvS4.Rows.Add();
+                        dgvS4.Rows[iS4 - 1].Cells[0].Value = iS4;
+                        for (int i = 1; i < 13; i++)
+                            dgvS4.Rows[iS4 - 1].Cells[i].Value = "";
                     }
                 }
-                tbpS3.Parent = null;// muestra seccion 4 de la encuesta
-                tbpS4.Parent = tbcDatos;
-
-                //para s4
-                int iS4 = 1;
-                for (iS4 = 1; iS4 < iS1; iS4++)
+                catch (Exception)
                 {
-                    dgvS4.Rows.Add();
-                    dgvS4.Rows[iS4 - 1].Cells[0].Value = iS4;
-                    for (int i = 1; i < 13; i++)
-                        dgvS4.Rows[iS4 - 1].Cells[i].Value = "";
+                    MessageBox.Show("No se han completado todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
