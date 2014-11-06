@@ -245,5 +245,32 @@ namespace Capa_Datos
                 return null;
             }
         }
+
+        /*
+         * Metodo para generar reporte de herramientas en inventario
+         */
+        public DataTable Herramientas()
+        {
+            MySqlCommand comando = null;
+            try
+            {
+                string consulta = "SELECT Nombre, Existencia, CantidadBuenEstado, CantidadMalEstado, CantidadPerdida FROM herramientas WHERE Activo = true AND Existencia > 0 ORDER BY Nombre ASC";
+                comando = new MySqlCommand(consulta, _conexion);
+                comando.Connection.Open();
+                comando.ExecuteNonQuery();
+                comando.Connection.Close();
+
+                DataSet ds = new DataSet();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                comando.Connection.Close();
+                MessageBox.Show("No se ha podido generar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }

@@ -173,7 +173,8 @@ namespace TechoCeiva
 
         private void btnToolsReportes_Click(object sender, RoutedEventArgs e)
         {
-
+            frmReporteHerramientas frm = new frmReporteHerramientas();
+            frm.ShowDialog();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

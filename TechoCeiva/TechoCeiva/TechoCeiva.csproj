@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_close.cs" />
+    <Compile Include="frmReporteHerramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteHerramientas.Designer.cs">
+      <DependentUpon>frmReporteHerramientas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_CaducidadInsumos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_Herramientas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_Herramientas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WinAboutUs.xaml.cs">
@@ -352,6 +364,9 @@
     <EmbeddedResource Include="frmPrestamoHerramientas.resx">
       <DependentUpon>frmPrestamoHerramientas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteHerramientas.resx">
+      <DependentUpon>frmReporteHerramientas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteInsumos.resx">
       <DependentUpon>frmReporteInsumos.cs</DependentUpon>
     </EmbeddedResource>
@@ -420,6 +435,10 @@
     <EmbeddedResource Include="rpt_CaducidadInsumos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_CaducidadInsumos1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_Herramientas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_Herramientas.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rpt_PrestamoHerramientas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
