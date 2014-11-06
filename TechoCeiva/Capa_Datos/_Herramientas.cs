@@ -16,6 +16,7 @@ namespace Capa_Datos
         public int malEstado { get; set; }
         public int perdidas { get; set; }
         public Boolean Activo { get; set; }
+        public int Total { get; set; }
         public List<Error> _errores { get; set; }
 
         /// <summary>
@@ -33,6 +34,7 @@ namespace Capa_Datos
             this.perdidas = 0;
             this.Existencia = 0;
             this.Activo = true;
+            this.Total = 0;
         }
 
         public _Herramientas(int _idHerramienta, String _nombre, int _existencia, Boolean _activo)
@@ -41,6 +43,20 @@ namespace Capa_Datos
             this.Nombre = _nombre;
             this.Existencia = _existencia;
             this.Activo = _activo;
+            this.Total = 0;
+            this._errores = new List<Error>();
+        }
+
+        public _Herramientas(int _idHerramienta, String _nombre, int _existencia, int buenEstado, int malEstado, int perdidas, Boolean _activo)
+        {
+            this.idHerramientas = _idHerramienta;
+            this.Nombre = _nombre;
+            this.Existencia = _existencia;
+            this.buenEstado = buenEstado;
+            this.malEstado = malEstado;
+            this.perdidas = perdidas;
+            this.Activo = _activo;
+            this.Total = Existencia + malEstado + perdidas;
             this._errores = new List<Error>();
         }
 
@@ -101,7 +117,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Herramientas _herramientas = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
+                _Herramientas _herramientas = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToBoolean(_row["Activo"]));
                 _listHerramientas.Add(_herramientas);
             }
             return _listHerramientas;
@@ -230,6 +246,69 @@ namespace Capa_Datos
             _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToBoolean(_row["Activo"]));
 
             return _tool.Existencia + valor;
+        }
+
+
+        public int getBuenEstado(int id, int cantidadBuena)
+        {
+            string query = "Select * FROM Herramientas WHERE Activo = true AND idHerramientas = " + id;
+            _Herramientas _tool;
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            DataRow _row = _tabla.Rows[0];
+            _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToBoolean(_row["Activo"]));
+
+            return _tool.buenEstado + cantidadBuena;
+        }
+
+
+        public int getMalEstado(int id, int cantidadMala)
+        {
+            string query = "Select * FROM Herramientas WHERE Activo = true AND idHerramientas = " + id;
+            _Herramientas _tool;
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            DataRow _row = _tabla.Rows[0];
+            _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToBoolean(_row["Activo"]));
+
+            return _tool.buenEstado + cantidadMala;
+        }
+
+
+        public int getPerdidas(int id, int cantidadPerdida)
+        {
+            string query = "Select * FROM Herramientas WHERE Activo = true AND idHerramientas = " + id;
+            _Herramientas _tool;
+
+            MySqlCommand _comando = new MySqlCommand(query, _conexion);
+            _comando.CommandTimeout = 12280;
+            DataSet _ds = new DataSet();
+            MySqlDataAdapter _adapter = new MySqlDataAdapter();
+            _adapter.SelectCommand = _comando;
+            _adapter.Fill(_ds);
+            DataTable _tabla = new DataTable();
+            _tabla = _ds.Tables[0];
+
+            DataRow _row = _tabla.Rows[0];
+            _tool = new _Herramientas(Convert.ToInt32(_row["idHerramientas"]), Convert.ToString(_row["Nombre"]), Convert.ToInt32(_row["Existencia"]), Convert.ToInt32(_row["CantidadBuenEstado"]), Convert.ToInt32(_row["CantidadMalEstado"]), Convert.ToInt32(_row["CantidadPerdida"]), Convert.ToBoolean(_row["Activo"]));
+
+            return _tool.buenEstado + cantidadPerdida;
         }
 
         /// <summary>

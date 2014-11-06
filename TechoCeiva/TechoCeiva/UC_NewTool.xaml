@@ -206,10 +206,13 @@
 	<Grid x:Name="LayoutRoot">
 		<Label Content="Herramientas" HorizontalAlignment="Left" Margin="23,8,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Foreground="#FF020202" FontSize="26.667"/>
         
-		<DataGrid Margin="23,56.27,0,41.23" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" Width="562.2" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" MouseDoubleClick="DataGridHerramientas_MouseDoubleClick" Background="White">
+		<DataGrid Margin="23,56.27,0,41.23" AlternatingRowBackground="#FFE7E6E6" HorizontalAlignment="Left" Width="791.4" Name="DataGridHerramientas" FontSize="14.667" AutoGenerateColumns="False" IsReadOnly="True" VerticalGridLinesBrush="#FFCCC9C9" HorizontalGridLinesBrush="#FFCCC9C9" BorderBrush="{x:Null}" MouseDoubleClick="DataGridHerramientas_MouseDoubleClick" Background="White">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="360" FontSize="14"/>           
-                <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="177.3" FontSize="14"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="240" FontSize="14"/>           
+                <DataGridTextColumn Header="Existencia" Binding="{Binding Existencia}" Width="130.3" FontSize="14"/>
+				<DataGridTextColumn Header="Perdidas" Binding="{Binding malEstado}" Width="130.3" FontSize="14"/>
+				<DataGridTextColumn Header="Dañadas" Binding="{Binding perdidas}" Width="130.3" FontSize="14"/>
+				<DataGridTextColumn Header="Total" Binding="{Binding Total}" Width="130.3" FontSize="14"/>
             </DataGrid.Columns>
         </DataGrid>
 		<Button x:Name="btnPlus" Content="" Margin="291.6,18.168,0,0" Style="{DynamicResource btnDiseñoPlus}" VerticalAlignment="Top" Height="20" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="30" FontSize="14.667" Click="btnPlus_Click" ToolTip="Nueva Herrameinta" Foreground="{x:Null}" >

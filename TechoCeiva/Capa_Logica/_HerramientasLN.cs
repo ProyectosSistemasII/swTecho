@@ -18,6 +18,7 @@ namespace Capa_Logica
             this.Nombre = "";
             this.Existencia = 0;
             this.Activo = true;
+            this.Total = 0;
             this._errores = new List<Error>();
         }
 

@@ -207,7 +207,9 @@ namespace Capa_Datos
                                                           "FechaDevolucion = @fechaDev "+
                                                     "where idDetallePrestamo = @idDetalle";
 
-                string query2 = "update Herramientas SET Existencia = @existencia where idHerramientas = @idH";
+                string query2 = "update Herramientas SET Existencia = @existencia, CantidadBuenEstado = @buenas,"+
+                                                        "CantidadMalEstado = @malas, CantidadPerdida = @perdidas"+
+                                                 " where idHerramientas = @idH";
                 _Herramientas h = new _Herramientas();
             
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
@@ -221,6 +223,9 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@idDetalle", idDetalle);
 
                 _comando2.Parameters.AddWithValue("@existencia", h.cargarInventario(idH, buenas));
+                _comando2.Parameters.AddWithValue("@buenas", h.getBuenEstado(idH, buenas));
+                _comando2.Parameters.AddWithValue("@malas", h.getMalEstado(idH, malas));
+                _comando2.Parameters.AddWithValue("@perdidas", h.getPerdidas(idH, perdidas));
                 _comando2.Parameters.AddWithValue("@idH",idH);
 
                 try
@@ -261,7 +266,9 @@ namespace Capa_Datos
                                                           "FechaDevolucion = @fechaDev " +
                                                     "where idDetallePrestamo = @idDetalleP";
 
-                string query2 = "update Herramientas SET Existencia = @existencia WHERE idHerramientas = @idH";
+                string query2 = "update Herramientas SET Existencia = @existencia, CantidadBuenEstado = @buenas," +
+                                                        "CantidadMalEstado = @malas, CantidadPerdida = @perdidas" +
+                                                 " where idHerramientas = @idH";
                 _Herramientas h = new _Herramientas();
             
                 MySqlCommand _comando = new MySqlCommand(query, ConexionBD.conexion);
@@ -275,6 +282,9 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@idDetalleP", idDetalleP);
 
                 _comando2.Parameters.AddWithValue("@existencia", h.cargarInventario(idH, buenas));
+                _comando2.Parameters.AddWithValue("@buenas", h.getBuenEstado(idH, buenas));
+                _comando2.Parameters.AddWithValue("@malas", h.getMalEstado(idH, malas));
+                _comando2.Parameters.AddWithValue("@perdidas", h.getPerdidas(idH, perdidas));
                 _comando2.Parameters.AddWithValue("@idH", idH);
 
                 try
