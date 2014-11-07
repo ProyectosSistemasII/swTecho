@@ -57,7 +57,7 @@ namespace TechoCeiva
                 else
                 {
                     correcto2 = nPresentacion.Ingresar_Presentacion();
-                    UltimoID = nPresentacion.devolver_ultimo();
+                    //UltimoID = nPresentacion.devolver_ultimo();
                 }
 
                 if (verificarPresentacion == 0 && mod == false)
@@ -105,7 +105,7 @@ namespace TechoCeiva
                 {
                     if (verificarPresentacion != 0 && mod == false)
                     {
-                        UltimoID = nPresentacion.devolver_ultimo();
+                        UltimoID = verificarPresentacion;
                         _InsumosLN nInsumo = new _InsumosLN(Convert.ToString(comboBoxInsumos.Text), Convert.ToInt32(txtCantida.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), UltimoID);
                         Boolean correcto = nInsumo.Ingresar_Insumo();
                         int verificarInsumo = nInsumo.verificarduplicado(Convert.ToString(comboBoxInsumos.Text), Convert.ToString(cbxRangoFecha.Text), Convert.ToInt32(txtAni.Text), UltimoID);
