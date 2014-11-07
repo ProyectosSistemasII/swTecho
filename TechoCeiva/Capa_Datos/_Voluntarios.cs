@@ -21,6 +21,7 @@ namespace Capa_Datos
         public string nombreM { get; set; }
         public string personaEmergencia{get; set;}
         public string telefonoEmergencia{get; set;}
+        public string universidad { get; set; }
         public List<Error> errores { get; set; }
         private static ConexionBD _datos = new ConexionBD();
         private static MySqlConnection _conexion = ConexionBD.conexion;
@@ -39,9 +40,10 @@ namespace Capa_Datos
             this.nombreM = "";
             this.personaEmergencia = "";
             this.telefonoEmergencia = "";
+            this.universidad = "";
         }
 
-        public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, string personaEmergencia, string telefonoEmergencia, string municipio, string departamento)
+        public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, string personaEmergencia, string telefonoEmergencia,string universidad, string municipio, string departamento)
         {
             this.idVoluntarios = idVoluntarios;
             this.nombres = nombres;
@@ -51,13 +53,14 @@ namespace Capa_Datos
             this.correo = correo;
             this.personaEmergencia = personaEmergencia;
             this.telefonoEmergencia = telefonoEmergencia;
+            this.universidad = universidad;
             this.nombreM = municipio;
             this.nombreD = departamento;
 
             this.errores = new List<Error>();
         }
 
-        public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, bool activo, int municipio, int departamento, string personaEmergencia, string telefonoEmergencia)
+        public _Voluntarios(int idVoluntarios, string nombres, string apellidos, string telefono, string direccion, string correo, bool activo, int municipio, int departamento, string personaEmergencia, string telefonoEmergencia,string universidad)
         {
             this.idVoluntarios = idVoluntarios;
             this.nombres = nombres;
@@ -68,6 +71,7 @@ namespace Capa_Datos
             this.activo = activo;
             this.personaEmergencia = personaEmergencia;
             this.telefonoEmergencia = telefonoEmergencia;
+            this.universidad = universidad;
             this.municipio = municipio;
             this.departamento = departamento;
             this.errores = new List<Error>();
@@ -78,7 +82,7 @@ namespace Capa_Datos
         {
             if (this.errores.Count == 0)
             {
-                string query = "INSERT INTO Voluntarios(Nombres, Apellidos, Telefono, Direccion, Correo, Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia) VALUES(@Nombres, @Apellidos, @Telefono, @Direccion, @Correo, @Activo, @Departamento_idDepartamento, @Municipio_idMunicipio, @PersonaEmergencia, @TelEmergencia)";
+                string query = "INSERT INTO Voluntarios(Nombres, Apellidos, Telefono, Direccion, Correo, Activo, Departamento_idDepartamento, Municipio_idMunicipio, PersonaEmergencia, TelEmergencia,Universidad) VALUES(@Nombres, @Apellidos, @Telefono, @Direccion, @Correo, @Activo, @Departamento_idDepartamento, @Municipio_idMunicipio, @PersonaEmergencia, @TelEmergencia, @Universidad)";
                 MySqlCommand _comando = new MySqlCommand(query, _conexion);
                 _comando.Parameters.AddWithValue("@Nombres", this.nombres);
                 _comando.Parameters.AddWithValue("@Apellidos",this.apellidos);
@@ -90,6 +94,7 @@ namespace Capa_Datos
                 _comando.Parameters.AddWithValue("@Municipio_idMunicipio",this.municipio);
                 _comando.Parameters.AddWithValue("@PersonaEmergencia", this.personaEmergencia);
                 _comando.Parameters.AddWithValue("@TelEmergencia",this.telefonoEmergencia);
+                _comando.Parameters.AddWithValue("@Universidad",this.universidad);
 
                 try
                 {
@@ -110,7 +115,7 @@ namespace Capa_Datos
         public List<_Voluntarios> Obtener_V()
         {
             List<_Voluntarios> Lista_V = new List<_Voluntarios>();
-            MySqlCommand _comando = new MySqlCommand("SELECT  Voluntarios.idVoluntarios, Voluntarios.Nombres, Voluntarios.Apellidos, Voluntarios.Telefono, Voluntarios.Correo, Voluntarios.Direccion, municipio.NombreM, departamento.NombreD, Voluntarios.PersonaEmergencia, Voluntarios.TelEmergencia FROM Voluntarios  inner join Departamento on Departamento_idDepartamento = idDepartamento  inner join Municipio  on Municipio_idMunicipio = idMunicipio where activo=true group by voluntarios.Nombres ", _conexion);
+            MySqlCommand _comando = new MySqlCommand("SELECT  Voluntarios.idVoluntarios, Voluntarios.Nombres, Voluntarios.Apellidos, Voluntarios.Telefono, Voluntarios.Correo, Voluntarios.Direccion, municipio.NombreM, departamento.NombreD, Voluntarios.PersonaEmergencia, Voluntarios.TelEmergencia, Voluntarios.Universidad FROM Voluntarios  inner join Departamento on Departamento_idDepartamento = idDepartamento  inner join Municipio  on Municipio_idMunicipio = idMunicipio where activo=true group by voluntarios.Nombres ", _conexion);
             _comando.CommandTimeout = 12280;
             DataSet _ds = new DataSet();
             MySqlDataAdapter _adapter = new MySqlDataAdapter();
@@ -121,7 +126,7 @@ namespace Capa_Datos
             for (int i = 0; i < _tabla.Rows.Count; i++)
             {
                 DataRow _row = _tabla.Rows[i];
-                _Voluntarios _propiedad = new _Voluntarios(Convert.ToInt32(_row["idVoluntarios"]), Convert.ToString(_row["Nombres"]), Convert.ToString(_row["Apellidos"]), Convert.ToString(_row["Telefono"]), Convert.ToString(_row["Direccion"]), Convert.ToString(_row["Correo"]), Convert.ToString(_row["PersonaEmergencia"]), Convert.ToString(_row["TelEmergencia"]), Convert.ToString(_row["NombreM"]),Convert.ToString(_row["NombreD"]));
+                _Voluntarios _propiedad = new _Voluntarios(Convert.ToInt32(_row["idVoluntarios"]), Convert.ToString(_row["Nombres"]), Convert.ToString(_row["Apellidos"]), Convert.ToString(_row["Telefono"]), Convert.ToString(_row["Direccion"]), Convert.ToString(_row["Correo"]), Convert.ToString(_row["PersonaEmergencia"]), Convert.ToString(_row["TelEmergencia"]), Convert.ToString(_row["Universidad"]), Convert.ToString(_row["NombreM"]),Convert.ToString(_row["NombreD"]));
                 Lista_V.Add(_propiedad);
             }
             return Lista_V;
@@ -151,7 +156,7 @@ namespace Capa_Datos
         //Modifica los datos de un voluntario, tomando como referencia su id
         public void Modificar_V(int id) 
         {
-            string _query = "UPDATE Voluntarios set Nombres=@Nombres, Apellidos=@Apellidos, Telefono=@Telefono, Direccion=@Direccion, Correo=@Correo, Activo=@Activo,Departamento_idDepartamento=@Departamento_idDepartamento, Municipio_idMunicipio=@Municipio_idMunicipio, PersonaEmergencia=@PersonaEmergencia,TelEmergencia=@TelEmergencia where idVoluntarios="+id;
+            string _query = "UPDATE Voluntarios set Nombres=@Nombres, Apellidos=@Apellidos, Telefono=@Telefono, Direccion=@Direccion, Correo=@Correo, Activo=@Activo,Departamento_idDepartamento=@Departamento_idDepartamento, Municipio_idMunicipio=@Municipio_idMunicipio, PersonaEmergencia=@PersonaEmergencia,TelEmergencia=@TelEmergencia Universidad=@Universidad where idVoluntarios="+id;
             MySqlCommand _comando = new MySqlCommand(_query, _conexion);
             _comando.Parameters.AddWithValue("@Nombres", this.nombres);
             _comando.Parameters.AddWithValue("@Apellidos", this.apellidos);
@@ -163,6 +168,7 @@ namespace Capa_Datos
             _comando.Parameters.AddWithValue("@Municipio_idMunicipio", this.municipio);
             _comando.Parameters.AddWithValue("@PersonaEmergencia", this.personaEmergencia);
             _comando.Parameters.AddWithValue("@TelEmergencia", this.telefonoEmergencia);
+            _comando.Parameters.AddWithValue("@Universidad",this.universidad);
 
             try
             {

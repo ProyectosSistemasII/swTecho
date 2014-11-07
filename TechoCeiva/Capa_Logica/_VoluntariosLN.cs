@@ -19,12 +19,13 @@ namespace Capa_Logica
             this.activo = true;
             this.personaEmergencia = "";
             this.telefonoEmergencia = "";
+            this.universidad = "";
             this.municipio = 0;
             this.departamento = 0;
             this.errores = new List<Error>();
         }
 
-        public _VoluntariosLN(string nombres, string apellidos, string telefon, string direccion, string correo, bool activo, int departamento, int municipio, string personaEm, string telefonoEm)
+        public _VoluntariosLN(string nombres, string apellidos, string telefon, string direccion, string correo, bool activo, int departamento, int municipio, string personaEm, string telefonoEm, string universidad)
         {
             this.nombres = nombres;
             this.apellidos = apellidos;
@@ -36,14 +37,14 @@ namespace Capa_Logica
             this.municipio = municipio;
             this.personaEmergencia = personaEm;
             this.telefonoEmergencia = telefonoEm;
-
+            this.universidad = universidad;
             this.errores = new List<Error>();
         
         }
         public Boolean Ingresar_V()
         {
             Boolean _correcto = true;
-            _Voluntarios _voluntario = new _Voluntarios(0,nombres, apellidos, telefono, direccion, correo, activo, municipio, departamento, personaEmergencia, telefonoEmergencia);
+            _Voluntarios _voluntario = new _Voluntarios(0,nombres, apellidos, telefono, direccion, correo, activo, municipio, departamento, personaEmergencia, telefonoEmergencia,universidad);
             this.idVoluntarios = _voluntario.idVoluntarios;
             this.nombres = _voluntario.nombres;
             this.apellidos = _voluntario.apellidos;

@@ -23,13 +23,13 @@
 		<Label x:Name="lblTelefono" Content="Teléfono:" HorizontalAlignment="Left" Height="22" Margin="23,91,0,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Width="75" FontSize="14.667"/>
 		<Label x:Name="lblDireccion" Content="Dirección:" Height="22" Margin="320,91,243,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667"/>
 		<Label x:Name="lblCorreo" Content="Correo:" HorizontalAlignment="Left" Margin="23,159.5,0,0" Style="{DynamicResource SimpleLabel}" Width="68" Height="22" VerticalAlignment="Top" FontSize="14.667" d:LayoutOverrides="VerticalAlignment"/>
-		<Label x:Name="lblDepartamento" Content="Departamento:" Margin="320,159.5,213,0" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Height="22" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
-		<Label x:Name="lblMunicipio" Content="Municipio:" Margin="320,222,260,236" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Height="22"/>
+		<Label x:Name="lblDepartamento" Content="Departamento:" Margin="320,220,213,238" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Height="22"/>
+		<Label x:Name="lblMunicipio" Content="Municipio:" Margin="320,288.5,260,169.5" Style="{DynamicResource SimpleLabel}" FontSize="14.667" Height="22"/>
 		<Label x:Name="lblContactoEmergencia" Content="Contacto de Emergencia:" HorizontalAlignment="Left" Margin="23,222,0,236" Style="{DynamicResource SimpleLabel}" Width="189" FontSize="14.667" FontWeight="Bold" Height="22"/>
 		<Label x:Name="lblNombreEm" Content="Nombre:" HorizontalAlignment="Left" Margin="23,248,0,210" Style="{DynamicResource SimpleLabel}" Width="76" FontSize="14.667" Height="22"/>
 		<Label x:Name="lblTelEm" Content="Teléfono:" HorizontalAlignment="Left" Margin="23,316,0,142" Style="{DynamicResource SimpleLabel}" Width="59" FontSize="14.667" Height="22"/>
-		<ComboBox x:Name="cmbDepartamento" Margin="320,181.5,115,0" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" VerticalAlignment="Top" Width="220" SelectionChanged="cmbDepartamento_SelectionChanged" d:LayoutOverrides="HorizontalAlignment" />
-		<ComboBox x:Name="cmbMunicipio" Margin="320,248,115,205.5" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" Width="220" SelectionChanged="cmbMunicipio_SelectionChanged" d:LayoutOverrides="HorizontalAlignment" />
+		<ComboBox x:Name="cmbDepartamento" Margin="320,242,115,211.5" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Width="220" SelectionChanged="cmbDepartamento_SelectionChanged" d:LayoutOverrides="HorizontalAlignment" />
+		<ComboBox x:Name="cmbMunicipio" Margin="320,310.5,115,143" Style="{DynamicResource SimpleComboBox}" FontSize="14.667" Height="26.5" Width="220" SelectionChanged="cmbMunicipio_SelectionChanged" d:LayoutOverrides="HorizontalAlignment" />
 		<TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="26.5" Margin="23,45,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667"/>
 		<TextBox x:Name="txtApellidos" Height="26.5" Margin="320,45,99,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Width="220" HorizontalAlignment="Left"/>
 		<TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="26.5" Margin="23,113,0,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="14.667"/>
@@ -37,8 +37,10 @@
 		<TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="23,181.5,0,272" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" Width="220" FontSize="14.667" Height="26.5"/>
 		<TextBox x:Name="txtNombreEmergencia" Margin="23,270,0,183.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
 		<TextBox x:Name="txtTelEmergencia" Margin="23,338,0,115.5" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" FontSize="14.667" Height="26.5" Width="220" HorizontalAlignment="Left"/>
-		<Button Content="Guardar" Height="36" Margin="303,333,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" Name="btnGuardar" Width="109" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" d:LayoutOverrides="Width" HorizontalAlignment="Left" />
-        <Button Content="Guardar" HorizontalAlignment="Left" Height="36" Margin="303,333,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" Background="#FF0091DC" Foreground="White" />
-        <Button x:Name="btnCancel" Content="Cancelar" Height="36" Margin="431,333,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" FontSize="14.667" BorderBrush="{x:Null}" Foreground="White" Background="#FFC52023" HorizontalAlignment="Left" Click="btnCancel_Click" />
+		<Button Content="Guardar" Height="36" Margin="324,422,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Click="Button_Click" Loaded="Button_Loaded" FontSize="14.667" Name="btnGuardar" Width="109" BorderBrush="{x:Null}" Background="#FF0092DD" Foreground="White" d:LayoutOverrides="Width" HorizontalAlignment="Left" />
+        <Button Content="Guardar" HorizontalAlignment="Left" Height="36" Margin="324,422,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" FontSize="14.667" Name="btnModificar" Click="btnModificar_Click" BorderBrush="{x:Null}" Background="#FF0091DC" Foreground="White" />
+        <Button x:Name="btnCancel" Content="Cancelar" Height="36" Margin="452,422,0,0" Style="{DynamicResource SimpleButton}" VerticalAlignment="Top" Width="109" FontSize="14.667" BorderBrush="{x:Null}" Foreground="White" Background="#FFC52023" HorizontalAlignment="Left" Click="btnCancel_Click" />
+        <Label x:Name="lblUniversidad" Content="Universidad:" Height="22" Margin="320,159.5,243,0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" FontSize="14.667" Width="92"/>
+        <TextBox x:Name="txtUniversidad" Height="26.5" Margin="320,181.5,115,0" Style="{DynamicResource SimpleTextBox}" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
     </Grid>
 </Window>

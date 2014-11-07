@@ -55,8 +55,9 @@ namespace TechoCeiva
                 int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
                 String persEm = txtNombreEmergencia.Text;
                 String telEm = txtTelEmergencia.Text;
+                String Univ = txtUniversidad.Text;
 
-                _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
+                _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm,Univ);
                 Boolean correcto = voluntario.Ingresar_V();
 
 
@@ -102,8 +103,9 @@ namespace TechoCeiva
                 int mun = Convert.ToInt32(cmbMunicipio.SelectedValue);
                 String persEm = txtNombreEmergencia.Text;
                 String telEm = txtTelEmergencia.Text;
+                String Univ = txtUniversidad.Text; 
 
-                _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm);
+                _VoluntariosLN voluntario = new _VoluntariosLN(nombres, apellidos, telefono, direccion, correo, true, dpto, mun, persEm, telEm,Univ);
                 Boolean correcto = voluntario.Ingresar_V();
 
 

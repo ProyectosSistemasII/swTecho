@@ -436,6 +436,7 @@
                 <DataGridTextColumn Header="Apellidos" Binding="{Binding apellidos}"/>
                 <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}"/>
                 <DataGridTextColumn Header="Correo" Binding="{Binding correo}"/>
+                <DataGridTextColumn Header="Universidad" Binding="{Binding universidad}"/>
                 <DataGridTextColumn Header="Dirección" Binding="{Binding direccion}"/>
                 <DataGridTextColumn Header="Municipio" Binding="{Binding nombreM}"/>
                 <DataGridTextColumn Header="Departamento" Binding="{Binding nombreD}"/>
