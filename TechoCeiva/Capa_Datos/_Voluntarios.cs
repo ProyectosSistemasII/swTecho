@@ -156,7 +156,7 @@ namespace Capa_Datos
         //Modifica los datos de un voluntario, tomando como referencia su id
         public void Modificar_V(int id) 
         {
-            string _query = "UPDATE Voluntarios set Nombres=@Nombres, Apellidos=@Apellidos, Telefono=@Telefono, Direccion=@Direccion, Correo=@Correo, Activo=@Activo,Departamento_idDepartamento=@Departamento_idDepartamento, Municipio_idMunicipio=@Municipio_idMunicipio, PersonaEmergencia=@PersonaEmergencia,TelEmergencia=@TelEmergencia Universidad=@Universidad where idVoluntarios="+id;
+            string _query = "UPDATE Voluntarios set Nombres=@Nombres, Apellidos=@Apellidos, Telefono=@Telefono, Direccion=@Direccion, Correo=@Correo, Activo=@Activo,Departamento_idDepartamento=@Departamento_idDepartamento, Municipio_idMunicipio=@Municipio_idMunicipio, PersonaEmergencia=@PersonaEmergencia,TelEmergencia=@TelEmergencia, Universidad=@Universidad where idVoluntarios="+id;
             MySqlCommand _comando = new MySqlCommand(_query, _conexion);
             _comando.Parameters.AddWithValue("@Nombres", this.nombres);
             _comando.Parameters.AddWithValue("@Apellidos", this.apellidos);

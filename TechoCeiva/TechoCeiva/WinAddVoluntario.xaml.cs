@@ -219,6 +219,13 @@ namespace TechoCeiva
                 cmbMunicipio.Focus();
                 return true;
             }
+            else
+                if (txtUniversidad.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar una Universidad para el voluntario");
+                    txtUniversidad.Focus();
+                    return true;
+                }
 
             return false;
         }
