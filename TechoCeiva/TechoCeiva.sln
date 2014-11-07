@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Datos", "Capa_Datos\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Logica", "Capa_Logica\Capa_Logica.csproj", "{C1B31C74-A276-430D-B8E6-0B4E3A4D3B3A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador - Techo", "Instalador - Techo\Instalador - Techo.vdproj", "{8040108D-368E-47A5-B959-FB463BB21A00}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador - Techo", "Instalador - Techo\Instalador - Techo.vdproj", "{A677B4F5-9A8F-49BB-B945-BB1CD831AD5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +27,8 @@ Global
 		{C1B31C74-A276-430D-B8E6-0B4E3A4D3B3A}.Debug|x86.Build.0 = Debug|x86
 		{C1B31C74-A276-430D-B8E6-0B4E3A4D3B3A}.Release|x86.ActiveCfg = Release|x86
 		{C1B31C74-A276-430D-B8E6-0B4E3A4D3B3A}.Release|x86.Build.0 = Release|x86
-		{8040108D-368E-47A5-B959-FB463BB21A00}.Debug|x86.ActiveCfg = Debug
-		{8040108D-368E-47A5-B959-FB463BB21A00}.Release|x86.ActiveCfg = Release
+		{A677B4F5-9A8F-49BB-B945-BB1CD831AD5F}.Debug|x86.ActiveCfg = Debug
+		{A677B4F5-9A8F-49BB-B945-BB1CD831AD5F}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
